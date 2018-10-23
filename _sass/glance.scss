@@ -1,0 +1,29 @@
+/******************************************************************
+	
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here is where you import
+all of your Sass files so they can compile into one
+CSS file. 
+
+******************************************************************/
+
+// Import local Foundation overrides
+@import "settings";
+
+// Import foundation.scss from vendor files
+@import "../modules/foundation-sites/scss/foundation";
+
+// Select the components you want to use
+@include foundation-global-styles;
+@include foundation-xy-grid-classes;
+@include foundation-flex-classes;
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-table;
+@include foundation-visibility-classes;
+
+// Import your custom styles
+@import "main";

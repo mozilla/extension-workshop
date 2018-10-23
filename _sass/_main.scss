@@ -1,0 +1,315 @@
+/************************************************
+
+Stylesheet: Main Stylesheet
+
+*************************************************/
+
+
+
+
+// TYPOGRAPHY
+// -------------------------------------------------------------------------------------------------------------------
+
+
+h1, h2, h3, h4, h5 {
+    &:first-child {}
+}
+
+h6 {}
+
+li {margin-bottom: $list-margin-bottom;}
+
+
+// Highlight Text
+// ------
+
+.highlight {color: $primary-color;}
+
+
+
+// Lead Text
+// ------
+
+.lead {font-size: $lead-font-size;}
+
+
+
+// Blockquote
+// ------
+
+blockquote {
+    p {margin-bottom: 0;}
+    cite {}
+}
+
+
+// Horizontal List
+// ------
+
+.horizontal-list {@include horizontal_list();}
+
+
+
+
+
+
+
+// IMAGES, VIDEOS & GALLERIES
+// -------------------------------------------------------------------------------------------------------------------
+
+
+.img {position: relative; display: block; background: $lighter-gray no-repeat center/cover;}
+
+
+
+// Slideshow
+// ------
+
+.slideshow {position: relative; 
+    .slides {z-index: 1; position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;}
+    .slide {opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0; background: transparent no-repeat center/cover; list-style: none !important; list-style-type: none !important;}
+
+    .next_prev {display: none; position: absolute; z-index: 2; top: calc(50% - #{rem-calc(16)}); left: 0; width: 100%; height: rem-calc(32); pointer-events: none; 
+        > * {position: absolute; top: 0; height: rem-calc(32); width: rem-calc(32); pointer-events: auto; cursor: pointer; font-size: rem-calc(32); color: $white; opacity: .7; text-shadow: #{rem-calc(0 1 8)} rgba($black, .33); transition: opacity .3s ease-in-out;
+            &:first-child {left: rem-calc(20);}
+            &:last-child {right: rem-calc(20);}
+            &:hover {opacity: 1;}
+        }
+
+        @include breakpoint(medium) {display: block;}
+        @include breakpoint(large) {
+            > *:first-child {left: rem-calc(30);}
+            > *:last-child {right: rem-calc(30);}
+        }
+    }
+
+    .index {position: absolute; z-index: 2; bottom: rem-calc(20); width: 100%; text-align: left; pointer-events: none;
+        span {display: inline-block; pointer-events: auto; height: rem-calc(10); width: rem-calc(10); margin: 0 rem-calc(5); border-radius: rem-calc(5); background-color: $white; transition: background-color .3s ease-in-out, transform .3s ease-in-out; cursor: pointer;
+            &:hover {transform: scale(1.1);}
+            &.active {background-color: $primary-color; cursor: default; pointer-events: none;}
+        }
+
+        @include breakpoint(medium) {bottom: rem-calc(30); text-align: right;
+            span {height: rem-calc(16); width: rem-calc(16); border-radius: rem-calc(8); margin: 0 rem-calc(10);}
+        }
+    }
+
+    &.overlay .slide {
+        &:before {content: ''; display: block; position: absolute; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.333);}
+        > * {position: relative; z-index: 2;}
+    }
+
+    &.background {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+    &.empty {
+        .next_prev,
+        .index {display: none;}
+    }
+}
+
+
+
+
+
+// FORM STYLES
+// -------------------------------------------------------------------------------------------------------------------
+
+.gform_validation_container {display: none !important;}
+.validation_error {display: none;}
+
+.validation_message {}
+.gform_confirmation_message {}
+.gform_ajax_spinner {}
+
+.gform_body {}
+.gfield {margin-bottom: 0;}
+
+.hide_label {
+    .gfield_label {display: none;}
+}
+
+input[type=checkbox],
+input[type="radio"] {display: none;
+
+    + label {position: relative; margin: 0; clear: none; cursor: pointer; line-height: rem-calc(24);
+        &:before {content: ""; display: inline-block; width: rem-calc(24); height: rem-calc(24); border: #{rem-calc(4) solid $white}; margin-right: 1em; background-color: $white; vertical-align: top;}
+    }
+    &:checked + label:before {background-color: $black;}
+}
+
+@include breakpoint(medium) {
+
+    .gform_fields {display: flex; flex-flow: row wrap; justify-content: space-between;
+        > li {flex: 0 0 100%; width: 100%;
+            &.gf_half {flex: 0 0 calc(50% - #{rem-calc(10)}); width: calc(50% - #{rem-calc(10)});}
+        }
+    }
+
+    .ginput_container_name {display: flex; flex-flow: row nowrap; justify-content: space-between;
+        > span {flex: 0 0 calc(50% - #{rem-calc(10)}); width: calc(50% - #{rem-calc(10)});}
+    }
+
+    .gfield_checkbox {display: flex; flex-flow: row wrap; justify-content: space-between;
+        li {flex: 0 0 calc(50% - #{rem-calc(10)}); width: calc(50% - #{rem-calc(10)});}
+    }
+}
+
+
+
+
+
+// FRAMEWORK
+// -------------------------------------------------------------------------------------------------------------------
+
+
+// Sticky Footer
+// ------
+
+html {height: 100%;}
+.site {display: flex; flex-direction: column; height: 100%;}
+.site-header,
+.site-footer {flex: none;}
+.site-content {flex: 1 0 auto; width: 100%;}
+
+
+// Header
+// ------
+
+.site-header {height: rem-calc(120); position: relative; z-index: 10; width: 100%; background-color: $white; transition: height .4s ease-in-out, box-shadow .4s ease-in-out;
+    
+    &.minimize {height: rem-calc(60); box-shadow: #{rem-calc(0 2 3)} rgba(0,0,0,.1);}    
+    
+    .cell {display: flex; flex-flow: row nowrap; justify-content: space-between;}
+}
+
+// Logo
+// ------
+
+$logo_w : rem-calc(108);
+$logo_h : rem-calc(20);
+
+.logo {position: relative; width: $logo_w; height: $logo_h; margin: 0 !important; line-height: 0; font-size: 0; transition: width .4s ease-in-out, height .4s ease-in-out;
+    a {display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: transparent url(../images/logo.svg) no-repeat center/contain;}
+}
+
+
+
+// Top Navigation
+// ------
+
+.topNav {
+
+    ul {list-style: none; margin: 0; text-align: center;
+        li {margin-bottom: 0;}
+        a {color: $black;}
+
+        .current-menu-item a,
+        .current-menu-ancestor a,
+        .current_page_parent a {color: $primary-color; font-weight: $global-weight-bold;}
+    }
+
+
+    @include breakpoint(medium) {flex: 1 1 auto; text-align: right; display: flex; flex-flow: column nowrap; justify-content: flex-end;
+        ul {@include horizontal_list($margin: .5em, $align: right); flex: 0 0 auto;}
+    }
+
+    @include breakpoint(small down) {display: none; position: absolute; left: 0; top: rem-calc(120); width: 100%; background-color: $lighter-gray; transition: top .4s ease-in-out, box-shadow .4s ease-in-out;
+        .minimize & {top: rem-calc(60);}
+        .open & {box-shadow: #{rem-calc(0 2 3)} rgba(0,0,0,.1);}
+
+        ul {padding: rem-calc(15 0);
+            a {display: block; margin: rem-calc(15 0);}
+        }
+    }
+}
+
+
+// Body
+// ------
+
+.site-content {}
+
+
+
+
+// Footer
+// ------
+
+.site-footer {}
+
+
+
+
+
+
+
+
+
+
+// COMPONENT STYLES
+// -------------------------------------------------------------------------------------------------------------------
+
+
+
+// Transition Elements
+// ------
+
+body:not(.archive) {
+    .showOnView {opacity: 0; box-shadow: 0 0 1px rgba(0, 0, 0, 0);} // box shadow hack to remove redraw pixels
+}
+
+
+
+// Panel
+// -------
+
+.panel {position: relative; padding-top: rem-calc(20); padding-bottom: rem-calc(20); 
+    @include breakpoint(medium) {padding-top: rem-calc(60); padding-bottom: rem-calc(60);}
+}
+
+
+
+// Loading Animation
+// ------
+
+#paginateNav {
+    .load-more {}
+    .label {display: none;}
+    .spinner {visibility: hidden; text-align: center;
+        > div {width: rem-calc(12); height: rem-calc(12); margin: rem-calc(0 3); background-color: $medium-gray; border-radius: 100%; display: inline-block; animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+            &.bounce1 {animation-delay: -0.32s;}
+            &.bounce2 {animation-delay: -0.16s;}
+        }
+    }
+    &.loading {
+        .spinner {visibility: visible;}
+    }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    transform: scale(0);
+  } 40% { 
+    transform: scale(1.0);
+  }
+}   
+
+
+
+
+
+
+
+
+
+
+// VIEWS
+// -------------------------------------------------------------------------------------------------------------------
+
+
+// Front Page (Home)
+// ------
+
+
+
+
