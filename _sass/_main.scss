@@ -121,45 +121,17 @@ blockquote {
 // FORM STYLES
 // -------------------------------------------------------------------------------------------------------------------
 
-.gform_validation_container {display: none !important;}
-.validation_error {display: none;}
 
-.validation_message {}
-.gform_confirmation_message {}
-.gform_ajax_spinner {}
+// input[type=checkbox] {display: none;
 
-.gform_body {}
-.gfield {margin-bottom: 0;}
+//     + label {position: relative; margin: 0; clear: none; cursor: pointer; line-height: rem-calc(24);
+//         &:before {content: ""; display: inline-block; width: rem-calc(24); height: rem-calc(24); border: #{rem-calc(4) solid $white}; margin-right: 1em; background-color: $white; vertical-align: top;}
+//     }
+//     &:checked + label:before {background-color: $black;}
+// }
 
-.hide_label {
-    .gfield_label {display: none;}
-}
-
-input[type=checkbox],
-input[type="radio"] {display: none;
-
-    + label {position: relative; margin: 0; clear: none; cursor: pointer; line-height: rem-calc(24);
-        &:before {content: ""; display: inline-block; width: rem-calc(24); height: rem-calc(24); border: #{rem-calc(4) solid $white}; margin-right: 1em; background-color: $white; vertical-align: top;}
-    }
-    &:checked + label:before {background-color: $black;}
-}
-
-@include breakpoint(medium) {
-
-    .gform_fields {display: flex; flex-flow: row wrap; justify-content: space-between;
-        > li {flex: 0 0 100%; width: 100%;
-            &.gf_half {flex: 0 0 calc(50% - #{rem-calc(10)}); width: calc(50% - #{rem-calc(10)});}
-        }
-    }
-
-    .ginput_container_name {display: flex; flex-flow: row nowrap; justify-content: space-between;
-        > span {flex: 0 0 calc(50% - #{rem-calc(10)}); width: calc(50% - #{rem-calc(10)});}
-    }
-
-    .gfield_checkbox {display: flex; flex-flow: row wrap; justify-content: space-between;
-        li {flex: 0 0 calc(50% - #{rem-calc(10)}); width: calc(50% - #{rem-calc(10)});}
-    }
-}
+.newsletter_errors {display: none;}
+.newsletter_thanks {display: none;}
 
 
 
@@ -261,10 +233,7 @@ $logo_h : rem-calc(20);
 // Transition Elements
 // ------
 
-body:not(.archive) {
-    .showOnView {opacity: 0; box-shadow: 0 0 1px rgba(0, 0, 0, 0);} // box shadow hack to remove redraw pixels
-}
-
+.showOnView {opacity: 0; box-shadow: 0 0 1px rgba(0, 0, 0, 0);} // box shadow hack to remove redraw pixels
 
 
 // Panel
@@ -273,37 +242,6 @@ body:not(.archive) {
 .panel {position: relative; padding-top: rem-calc(20); padding-bottom: rem-calc(20); 
     @include breakpoint(medium) {padding-top: rem-calc(60); padding-bottom: rem-calc(60);}
 }
-
-
-
-// Loading Animation
-// ------
-
-#paginateNav {
-    .load-more {}
-    .label {display: none;}
-    .spinner {visibility: hidden; text-align: center;
-        > div {width: rem-calc(12); height: rem-calc(12); margin: rem-calc(0 3); background-color: $medium-gray; border-radius: 100%; display: inline-block; animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-            &.bounce1 {animation-delay: -0.32s;}
-            &.bounce2 {animation-delay: -0.16s;}
-        }
-    }
-    &.loading {
-        .spinner {visibility: visible;}
-    }
-}
-
-@keyframes sk-bouncedelay {
-  0%, 80%, 100% { 
-    transform: scale(0);
-  } 40% { 
-    transform: scale(1.0);
-  }
-}   
-
-
-
-
 
 
 
