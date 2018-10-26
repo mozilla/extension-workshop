@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5 {
     &:first-child {}
 }
 
-h6 {}
+h2 {font-weight: 500;}
 
 li {margin-bottom: $list-margin-bottom;}
 
@@ -31,6 +31,13 @@ li {margin-bottom: $list-margin-bottom;}
 // ------
 
 .lead {font-size: $lead-font-size;}
+
+
+
+// Centered Text
+// ------
+
+.text-center {text-align: center;}
 
 
 

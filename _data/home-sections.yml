@@ -1,0 +1,14 @@
+- id: "about"
+  description: "about.md"
+
+- id: "build"
+  description: "build.md"
+
+- id: "tips"
+  description: "tips.md"
+
+- id: "connect"
+  description: "connect.md"
+
+- id: "news"
+  description: "news.md"
