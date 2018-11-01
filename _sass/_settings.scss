@@ -27,13 +27,13 @@ $global-font-size: 93.75%;
 $global-width: rem-calc(1320);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2199e8,
+  primary: #0060df,
   secondary: #777,
   success: #3adb76,
   warning: #ffae00,
   alert: #ec5840,
 );
-$primary-color-hover: #2199e8;
+$primary-color-hover: #4B98FF;
 $lighter-gray: #f3f3f3;
 $light-gray: #eee;
 $medium-gray: #cacaca;
@@ -42,14 +42,14 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Fira Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$body-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; // -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; // 'Fira Sans',
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: 600;
-$global-radius: 0;
+$global-radius: rem-calc(4);
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -67,6 +67,16 @@ $print-transparent-backgrounds: true;
 
 @mixin icon_font($char:"") {font-family:'icomoon'; content: $char; speak:none; font-style:normal; font-weight:normal; font-variant:normal; text-transform:none; line-height:1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
 
+$icon-play: "\e900";
+$icon-download: "\e901";
+$icon-arrow-down: "\e902";
+$icon-arrow-right: "\e903";
+$icon-irc: "\e904";
+$icon-mail: "\e905";
+$icon-telegram: "\e906";
+$icon-twitter: "\e907";
+$icon-github: "\e908";
+
 
 // 3. Breakpoints
 // --------------
@@ -74,7 +84,7 @@ $print-transparent-backgrounds: true;
 $breakpoints: (
   small: 0,
   medium: 640px,
-  large: 1024px,
+  large: 960px, // 1024px,
   xlarge: 1320px,
   xxlarge: 1920px,
 );
@@ -99,21 +109,21 @@ $xy-block-grid-max: 8;
 // 5. Base Typography
 // ------------------
 
-$header-font-family: 'Fira Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$header-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; // -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; // 'Fira Sans',
 $header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1;
-$header-margin-bottom: 0.75rem;
+$header-margin-bottom: .6em;
 $header-styles: (
   'small': (
-    'h1': ('font-size': 36, 'line-height': $header-lineheight, 'margin-top': 0.05em, 'margin-bottom': $header-margin-bottom),
-    'h2': ('font-size': 28, 'line-height': $header-lineheight, 'margin-top': 0.05em, 'margin-bottom': $header-margin-bottom),
-    'h3': ('font-size': 22, 'line-height': $header-lineheight, 'margin-top': 0.05em, 'margin-bottom': $header-margin-bottom),
-    'h4': ('font-size': 17, 'line-height': $header-lineheight * 1.1, 'margin-top': 0.05em, 'margin-bottom': $header-margin-bottom),
-    'h5': ('font-size': 15, 'line-height': $header-lineheight * 1.1, 'margin-top': 0.05em, 'margin-bottom': $header-margin-bottom),
-    'h6': ('font-size': 13, 'line-height': $header-lineheight * 1.1, 'margin-top': 0.05em, 'margin-bottom': $header-margin-bottom)
+    'h1': ('font-size': 36, 'line-height': $header-lineheight, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
+    'h2': ('font-size': 28, 'line-height': $header-lineheight, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
+    'h3': ('font-size': 22, 'line-height': $header-lineheight, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
+    'h4': ('font-size': 17, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
+    'h5': ('font-size': 15, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
+    'h6': ('font-size': 13, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom)
   ),
   'medium': (
     'h1': ('font-size': 36),
@@ -140,7 +150,7 @@ $header-styles: (
 }
 
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 80%;
+$small-font-size: 86.6666666666667%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
@@ -210,19 +220,19 @@ $stat-font-size: 2.5rem;
 // ----------
 
 $button-font-family: inherit;
-$button-padding: 0.85em 1em;
+$button-padding: 0.666em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: $primary-color-hover;
 $button-color: $white;
 $button-color-alt: $black;
-$button-radius: $global-radius;
+$button-radius: rem-calc(2);
 $button-hollow-border-width: 1px;
 $button-sizes: (
   tiny: 0.6rem,
-  small: 0.75rem,
-  default: 0.9rem,
+  small: 0.733333333333333rem,
+  default: 0.866666666666667rem,
   large: 1.25rem,
 );
 $button-palette: $foundation-palette;
@@ -286,7 +296,7 @@ $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
 $input-radius: $global-radius;
-$form-button-radius: $global-radius;
+$form-button-radius: rem-calc(2);
 
 // 11. Pagination
 // --------------

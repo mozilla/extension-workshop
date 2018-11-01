@@ -1,5 +1,5 @@
 <!-- Section Intro -->
-<div class="section-intro">
+<div class="panel section-intro bg-dark bg-alt2">
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
@@ -10,7 +10,8 @@
 <div class="grid-container grid-x grid-padding-x tiles-container">
 
 <!-- Tile 1 -->
-<div class="cell small-12 medium-6 tile-compact block-link" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Web-Ext](assets/img/icons/web-ext.svg "Web-Ext")
 
@@ -19,10 +20,12 @@
 Accelerate development with this Firefox command line tool. See real-time code changes and easily package your extension.<https://www.google.com>
 
 </div>
+</div>
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<div class="cell small-12 medium-6 tile-compact block-link" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Web-Ext Webpack Plugin](assets/img/icons/plugin.svg "Web-Ext Webpack Plugin")
 
@@ -31,10 +34,12 @@ Accelerate development with this Firefox command line tool. See real-time code c
 This plug-in makes webpack aware of extensions so you can easily bundle your JavaScript.<https://www.google.com>
 
 </div>
+</div>
 <!-- END: Tile 2 -->
 
 <!-- Tile 3 -->
-<div class="cell small-12 medium-6 tile-compact block-link" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Browser API Polyfill](assets/img/icons/browser-api.svg "Browser API Polyfill")
 
@@ -43,17 +48,20 @@ This plug-in makes webpack aware of extensions so you can easily bundle your Jav
 Create your extension using the Firefox promise-based API, and the polyfill library will get your extension running on multiple browsers in no time.<https://www.google.com>
 
 </div>
+</div>
 <!-- END: Tile 3 -->
 
 <!-- Tile 4 -->
-<div class="cell small-12 medium-6 tile-compact block-link" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
-![Debug Your Extension](assets/img/icons/plugin.svg "Debug Your Extension")
+![Debug Your Extension](assets/img/icons/debug.svg "Debug Your Extension")
 
 #### Debug Your Extension
 
 Check your extension for errors, and modify the code as needed.<https://www.google.com>
 
+</div>
 </div>
 <!-- END: Tile 4 -->
 
@@ -70,18 +78,22 @@ Check your extension for errors, and modify the code as needed.<https://www.goog
 
 
 <!-- Section Tiles -->
-<div class="section-tiles">
-<div class="grid-container grid-x grid-padding-x align-center tiles-outside">
+<div class="section-tiles bg-grey">
+<div class="tiles-outside">
+<div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
 ## Distribute Your Extension
 
 </div>
 </div>
-<div class="grid-container grid-x grid-padding-x align-center tiles-container">
+</div>
+<div class="tiles-container">
+<div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<div class="cell small-12 medium-6 tile-compact block-link" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Publish on Firefox](assets/img/icons/publish-on-firefox.svg "Publish on Firefox")
 
@@ -90,10 +102,12 @@ Check your extension for errors, and modify the code as needed.<https://www.goog
 With millions of monthly users and Firefox integration, publishing your extension on addons.mozilla.org is the easiest way to get maximum exposure.<https://www.google.com>
 
 </div>
+</div>
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<div class="cell small-12 medium-6 tile-compact block-link" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Publish on Your Own](assets/img/icons/publish-on-own.svg "Publish on Your Own")
 
@@ -102,15 +116,17 @@ With millions of monthly users and Firefox integration, publishing your extensio
 Publish your signed extension on your own, and explore alternate installation methods in Firefox.<https://www.google.com>
 
 </div>
+</div>
 <!-- END: Tile 2 -->
 
+</div>
 </div>
 </div>
 <!-- END: Section Tiles -->
 
 
 <!-- Section More -->
-<div class="section-more">
+<div class="section-more panel bg-grey">
 <div class="grid-container grid-x grid-padding-x align-center more-intro">
 <div class="cell small-12 medium-10 large-8 text-center" markdown="1">
 

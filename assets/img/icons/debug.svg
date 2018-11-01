@@ -6,8 +6,8 @@
     <mask id="debug-b" fill="#fff">
       <use xlink:href="#debug-a"/>
     </mask>
-    <use fill="#0C0C0D" fill-rule="nonzero" xlink:href="#debug-a"/>
-    <g fill="#0C0C0D" fill-rule="nonzero" mask="url(#debug-b)">
+    <use fill="#0060df" fill-rule="nonzero" xlink:href="#debug-a"/>
+    <g fill="#0060df" fill-rule="nonzero" mask="url(#debug-b)">
       <rect width="24" height="24"/>
     </g>
   </g>

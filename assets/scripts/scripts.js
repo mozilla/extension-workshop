@@ -31,13 +31,13 @@ jQuery(document).ready(function($) {
 
 
     // 1. Top Header Nav
-    if ($('.site-header').length) {
-        $('.site-header').switchNav();
+    if ($('.page-nav-container').length) {
+        $('.page-nav-container').switchNav();
     }
 
 
     // 2. Anchor Link Scroll
-    $("a[href^='#']").scrollto({offset_lg: 1, offset_sm: 2});
+    $("a[href^='#']").scrollto({offset_lg: 50, offset_sm: 50});
 
 
     // 3. Show in View
@@ -46,16 +46,10 @@ jQuery(document).ready(function($) {
     }
 
 
-    // 4. Import RSS feed
-    if ($('#news').length) {
-        // $('#news').importrssfeed({feedurl: 'https://blog.mozilla.org/addons/feed/'});
-    }
-
-
-    // 5. Banner Image Parallax
+    // 4. Banner Image Parallax
 
     // ******                                        ******
-    // ** the plugin code is found in parallax.js    **
+    // ** the plugin code is found in parallax.js        **
     // *****                                         ******
 
     if ($('.parallax').length) {
@@ -63,14 +57,14 @@ jQuery(document).ready(function($) {
     }
 
 
-    // 6. Video Popup  
+    // 5. Video Popup  
 
     // ******                                        ******
     // ** the plugin code is found in youtubeplayer.js   **
     // *****                                         ******
 
 
-    // 7. Slick slider
+    // 6. Slick slider
 
     // ******                                        ******
     // ** the plugin code is found in /assets/slick/     **
@@ -117,8 +111,8 @@ jQuery(document).ready(function($) {
             breakpoint : 'atleast_large'
         }, options);
 
-        var $top = this;
-        var nav_all = $top.allMenu();
+        var $container = this;
+        var nav_all = $container.allMenu();
         var nav_desk = null;
         var nav_mobile = null;
 
@@ -132,7 +126,7 @@ jQuery(document).ready(function($) {
                     nav_mobile = null;
                 }
                 if (nav_desk == null) {
-                    nav_desk = $top.desktopMenu();
+                    nav_desk = $container.desktopMenu();
                 }
 
             // Set Mobile Nav 
@@ -143,7 +137,7 @@ jQuery(document).ready(function($) {
                     nav_desk = null;
                 }
                 if (nav_mobile == null) {
-                    nav_mobile = $top.mobileMenu();
+                    nav_mobile = $container.mobileMenu();
                 }
             }
         }
@@ -305,34 +299,6 @@ jQuery(document).ready(function($) {
     }
 
 
-
-    // 4. Import RSS Feed
-    // ------
-
-    $.fn.importrssfeed = function(options) {
-        var settings = $.extend( {
-            feedurl : ''
-        }, options);
-
-        $.get(settings.feedurl, function(data) {
-            var $xml = $(data);
-            $xml.find("item").each(function() {
-                var $this = $(this),
-                    item = {
-                        title: $this.find("title").text(),
-                        link: $this.find("link").text(),
-                        description: $this.find("description").text(),
-                        pubDate: $this.find("pubDate").text(),
-                        author: $this.find("author").text()
-                }
-                console.log('----------------');
-                console.log(item);
-            });
-        });
-
-        return this;
-    }
-    
 
 
 

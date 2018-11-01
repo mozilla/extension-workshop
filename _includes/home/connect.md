@@ -1,5 +1,5 @@
 <!-- Section Intro -->
-<div class="section-intro">
+<div class="panel section-intro">
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-10 large-8 text-center" markdown="1">
 
@@ -14,8 +14,9 @@ When you build on Firefox, you build with a community of extension developers. A
 
 
 <!-- Section Tiles -->
-<div class="section-tiles">
-<div class="grid-container grid-x grid-padding-x align-center tiles-container">
+<div class="section-tiles bg-grey">
+<div class="tiles-container">
+<div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
 <div class="cell small-12 medium-6 tile-compact" markdown="1">
@@ -40,13 +41,13 @@ Discuss extension development and get support.
 
 Connect with thousands of developers and contribute to the extension ecosystem.
 
-[Learn about enhancing the API](https://www.google.com)
-
+[Learn about enhancing the API](https://www.google.com)  
 [Learn more about the community](https://www.google.com)
 
 </div>
 <!-- END: Tile 2 -->
 
+</div>
 </div>
 </div>
 <!-- END: Section Tiles -->

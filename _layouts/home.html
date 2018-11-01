@@ -4,22 +4,36 @@ layout: default
 
 <div class="home">
 
-    <header id="top" class="banner intro">
-        <div class="grid-container grid-x grid-padding-x align-center">
-            <div class="cell small-12 medium-8 large-6 text-center">
+    <header id="top" class="banner intro parallax"> <!-- style="background-image: url({{ "/assets/img/fpo-banner.png" | relative_url }});" -->
+        
+        <div class="grid-container grid-x grid-padding-x align-center align-middle banner-content">
+            <div class="cell small-12 medium-6 text-center">
                 {{ content }}
+                <a href="#about" class="cta-down"></a>
+            </div>
+        </div>
+
+        <div class="page-nav-container">
+            <div class="page-nav">
+                <div class="grid-container grid-x grid-padding-x">
+                    <div class="cell small-12">
+                        <nav>
+                            <div class="group-a">
+                                <a class="" href="#about">About Extensions</a>
+                                <a class="" href="#build">Build Extensions</a>
+                                <a class="" href="#tips">Tips for Better Extensions</a>
+                                <a class="" href="#connect">Connect</a>
+                                <a class="" href="#news">Developer News</a>
+                            </div>
+                            <div class="group-b">
+                                <a class="button" href="register">Register or Log in</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
-
-    <nav class="page-nav grid-x grid-container fluid grid-padding-x">
-        <a class="cell auto" href="#about">About Extensions</a>
-        <a class="cell auto" href="#build">Build Extensions</a>
-        <a class="cell auto" href="#tips">Tips for Better Extensions</a>
-        <a class="cell auto" href="#connect">Connect</a>
-        <a class="cell auto" href="#news">Developer News</a>
-        <a class="cell auto button" href="register">Register or Log in</a>
-    </nav>
 
     {% for section in site.data.home-sections %}
 
@@ -30,22 +44,23 @@ layout: default
 
     {% endfor %}
 
-    <section id="community" class="panel">
-        iframe
+    <section id="community" class="panel bg-grey">
+        <iframe style="width: 100%; height: 600px; border: 0;" border="0" class="hub-mgmt-preview-iframe splash-page-iframe is-splash-resize-active" src="//splashthat.com/sites/view/addonscommunityevent.splashthat.com?partial=101626845,534610062&amp;screenshotHash=494156500dffa3d9" id="iFrameResizer0" scrolling="no"></iframe>
     </section>
 
-    <section id="news" class="panel">
+    <section id="news" class="panel bg-grey">
         <div class="grid-container grid-x grid-padding-x align-center">
             <div class="cell small-12 text-center">
                 <h2>Latest Developer News</h2>
             </div>
             <div id="rssincl-box-container-1196929"></div>
             <script type="text/javascript">
-            (function() {
-              var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
-              s.src = 'http://output89.rssinclude.com/output?type=asyncjs&id=1196929&hash=0f86aff93a142b0157ab984bce858bee';
-              document.getElementsByTagName('head')[0].appendChild(s);
-            })();
+                // Tool: https://www.rssinclude.com/my_rssboxes
+                (function() {
+                  var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+                  s.src = 'http://output87.rssinclude.com/output?type=asyncjs&id=1196929&hash=0f86aff93a142b0157ab984bce858bee';
+                  document.getElementsByTagName('head')[0].appendChild(s);
+                })();
             </script>
             <div class="cell small-12 text-center">
                 <p><a href="https://blog.mozilla.org/addons/">Visit add-ons blog</a></p>
@@ -91,7 +106,7 @@ layout: default
                             <label for="privacy">I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.</label>
                         </div>
                         <div id="newsletter_submit">
-                            <button id="newsletter_submit" type="submit" class="btn btn-success">Sign up</button>
+                            <button id="newsletter_submit" type="submit" class="button btn btn-success">Sign up</button>
                         </div>
                     </form>
                     <div id="newsletter_thanks" class="newsletter_thanks">

@@ -1,5 +1,5 @@
 <!-- Section Intro -->
-<div class="section-intro">
+<div class="panel section-intro bg-dark bg-alt1">
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-10 large-8 text-center" markdown="1">
 
@@ -30,8 +30,9 @@ Firefox extensions are made with the same technologies used to build the web. Th
 
 
 <!-- Section Tiles -->
-<div class="section-tiles">
-<div class="grid-container grid-x grid-padding-x align-center tiles-container">
+<div class="section-tiles bg-grey">
+<div class="tiles-container">
+<div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
 <div class="cell small-12 medium-6 tile" markdown="1">
@@ -63,11 +64,12 @@ For a more interactive and dynamic extension, use the WebExtensions JavaScript A
 
 </div>
 </div>
+</div>
 <!-- END: Section Tiles -->
 
 
 <!-- Section More -->
-<div class="section-more">
+<div class="section-more bg-grey panel">
 <div class="grid-container grid-x grid-padding-x align-center more-intro">
 <div class="cell small-12 medium-10 large-8 text-center" markdown="1">
 
@@ -96,10 +98,8 @@ Already have an extension that works in Chrome? Bring your app to Firefox in a f
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
 
-Top Resources
-
-[Differences between Chrome and Firefox](https://www.google.com)
-
+Top Resources  
+[Differences between Chrome and Firefox](https://www.google.com)  
 [Port a Google Chrome extension](https://www.google.com)
 
 </div>
@@ -121,10 +121,8 @@ Starting from scratch? It’s easy and fast to create your cross-browser extensi
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
 
-Top Resources
-
-[Best practices for cross-browser extensions](https://www.google.com)
-
+Top Resources  
+[Best practices for cross-browser extensions](https://www.google.com)  
 [Introduction to developing in Firefox](https://www.google.com)
 
 </div>
@@ -138,11 +136,11 @@ Top Resources
 
 
 <!-- Section CTA -->
-<div class="section-cta img" style="background-image: url(assets/img/cta-banner.png);">
+<div class="section-cta bg-dark img" style="background-image: url(assets/img/cta-banner.png);">
 <div class="grid-container grid-x grid-padding-x">
-<div class="cell small-12 medium-6 large-4 large-offset-1" markdown="1">
+<div class="cell small-12 medium-5 large-3 large-offset-1" markdown="1">
 
-#### Your extension might already be compatible!
+### Your extension might already be compatible!
 
 See if your extension works in Firefox. Simply upload your .crx file.
 

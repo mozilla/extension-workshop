@@ -1,9 +1,9 @@
 <!-- Section Intro -->
-<div class="section-intro">
+<div class="panel section-intro extra-space bg-dark">
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-6 large-5" markdown="1">
 
-## Why Create Extensions on Firefox?
+## Why Create Extensions on&nbsp;Firefox?
 
 </div>
 <div class="cell small-12 medium-6 large-5" markdown="1">
@@ -19,22 +19,25 @@ Build on the web’s most customizable browser. Get your great idea into the han
 
 
 <!-- Section Tiles -->
-<div class="section-tiles">
-<div class="grid-container grid-x grid-padding-x align-center tiles-outside">
+<div class="section-tiles bg-grey">
+<div class="tiles-outside">
+<div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
 ## Cool Things Extensions Can Do
 
 </div>
 </div>
-<div class="grid-container grid-x grid-padding-x align-center tiles-container">
+</div>
+<div class="tiles-container">
+<div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
 <div class="cell small-12 medium-4 tile" markdown="1">
 
 ![Tinker with Tabs](assets/img/billboard-more-power.f83d248d8724.png "Tinker with Tabs")
 
-### Tinker with Tabs
+#### Tinker with Tabs
 
 Your extension can control browser tabs. Use the API to open, close, move, hide, and perform other tab management actions.
 
@@ -48,7 +51,7 @@ Your extension can control browser tabs. Use the API to open, close, move, hide,
 
 ![Transform Web Content](assets/img/billboard-more-power.f83d248d8724.png "Transform Web Content")
 
-### Transform Web Content
+#### Transform Web Content
 
 Inject JavaScript into web pages and your extension can change page colors, augment text, remove distractions, and much more.
 
@@ -62,7 +65,7 @@ Inject JavaScript into web pages and your extension can change page colors, augm
 
 ![Add Innovative Features](assets/img/billboard-more-power.f83d248d8724.png "Add Innovative Features")
 
-### Add Innovative Features
+#### Add Innovative Features
 
 Think the browser is missing a feature, such as a built-in calculator, music streaming, or language translation? Add a toolbar button to expose your extension's new capabilities.
 
@@ -72,12 +75,15 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 <!-- END: Tile 3 -->
 
 </div>
-<div class="grid-container grid-x grid-padding-x align-center tiles-outside">
+</div>
+<div class="tiles-outside">
+<div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
-[View more extension code examples](https://www.google.com)
+[View more extension code examples](https://www.google.com)  
 [Explore live extensions](https://www.google.com)
 
+</div>
 </div>
 </div>
 </div>
@@ -85,7 +91,7 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 
 
 <!-- Section Anatomy of an Extension -->
-<div class="section-anatomy">
+<div class="section-anatomy panel bg-grey">
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-6 large-5" markdown="1">
 
@@ -101,9 +107,9 @@ An extension is a simple collection of files that modify the browser’s appeara
 </div>
 </div>
 <div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-12 medium-6 large-5" markdown="1">
+<div id="" class="cell small-12 medium-6 large-5">
 
-Interactive Illustration
+<h4 class="panel" style="text-align: center;">Interactive Illustration</h4>
 
 </div>
 </div>
