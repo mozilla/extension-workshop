@@ -145,9 +145,15 @@ html {height: 100%;}
 // Logo
 // ------
 
-.logo {position: relative; margin: 0; font-size: rem-calc(20); line-height: 1; 
-    a {position: relative; display: block; padding: rem-calc(15 0 14 58); color: $body-font-color;
-        &:before {content: ""; position: absolute; left:0; top:0; display: block; width: rem-calc(48); height: rem-calc(49); background: transparent url(img/firefox-logo.png) no-repeat center/contain;}
+.logo {position: relative; margin: 0; font-size: rem-calc(15); line-height: 1; 
+    a {position: relative; display: block; padding: rem-calc(15 0 14 41); color: $body-font-color;
+        &:before {content: ""; position: absolute; left: 0; top: rem-calc(7); display: block; width: rem-calc(31); height: rem-calc(32); background: transparent url(img/firefox-logo.png) no-repeat center/contain;}
+    }
+
+    @include breakpoint(medium) {font-size: rem-calc(20);
+        a {padding: rem-calc(15 0 14 58);
+            &:before {top: 0; width: rem-calc(48); height: rem-calc(49);}
+        }
     }
 }
 
@@ -156,33 +162,97 @@ html {height: 100%;}
 // Top Navigation
 // ------
 
-.site-nav {padding: rem-calc(9 0 8);}
+.site-nav {padding: rem-calc(9 0 8);
+    @include breakpoint(small down) {display: none;}
+}
 
 .page-nav-container {position: absolute; z-index: 10; top: calc(100% - #{rem-calc(50)}); left: 0; width: 100%;
     .page-nav {position: absolute; left: 0; top: 0; width: 100%;}
 
-    nav {display: flex; flex-flow: row nowrap; justify-content: space-between; width: 100%; background-color: $white; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); border-radius: $global-radius; padding: rem-calc(10); margin: rem-calc(24 0); overflow: hidden;
+    nav {position: relative; width: 100%; height: rem-calc(52); background-color: $white; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); border-radius: $global-radius; margin: rem-calc(24 0); overflow: hidden;
 
-        > div {display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center; 
-            &.group-a {flex: 1 1 auto; 
-                a {padding: rem-calc(5 20); color: $body-font-color; margin: 0; transition: font-size .3s ease-in-out;}
-            }
-            &.group-b {flex: 0 0 #{rem-calc(165)}; width: rem-calc(165); display: flex; flex-flow: row nowrap; justify-content: flex-end; overflow: hidden; opacity: 0; margin-right: rem-calc(-165); transition: opacity .3s ease-in-out, margin .3s ease-in-out; 
-                a.button {margin: rem-calc(0 0 0 24);}
-            }
-        }
-    }
+        .group-a, .group-b {position: absolute; left: 0; top: 0; height: 100%; padding: rem-calc(0 10); display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: stretch;}
 
-    &.sticky .page-nav {position: fixed; top: 0;
-        nav {
-            > div {
-                &.group-a {
-                    a {font-size: rem-calc(13);}
+        .group-a {width: 100%; transition: width .3s ease-in-out; 
+            a {position: relative; padding: rem-calc(15 20); color: $body-font-color; margin: 0; line-height: rem-calc(22); white-space: nowrap; transition: font-size .3s ease-in-out;
+                &:hover {color: $primary-color;}
+                &.active {color: $primary-color;
+                    &:after {content: ""; display: block; position: absolute; left: rem-calc(20); bottom: rem-calc(14); width: calc(100% - #{rem-calc(40)}); height: rem-calc(2); background-color: $primary-color;}
                 }
-                &.group-b {opacity: 1; margin-right: 0;}
+            }
+        }
+
+        .group-b {width: rem-calc(155); left: auto; right: 0; display: flex; flex-flow: row nowrap; justify-content: flex-end; overflow: hidden; opacity: 0; margin-right: rem-calc(-155); padding: rem-calc(10 10 10 0); background-color: $white; transition: opacity .3s ease-in-out, margin .3s ease-in-out; 
+            a.button {margin: rem-calc(0); margin-left: auto;}
+        }
+
+        .fwd, .bak {display: none;}
+        
+    }
+
+    &.sticky .page-nav {position: fixed; top: 0;}
+
+    @include breakpoint(medium) {
+
+        nav {
+            .jump-link {display: none;}
+
+            .group-a {overflow-x: scroll;}
+
+            .fwd, .bak {visibility: hidden; pointer-events: none; position: absolute; z-index: 2; top: 0; height: 100%; width: rem-calc(64); display: flex; flex-flow: column nowrap; justify-content: center; align-items: center; cursor: pointer; font-size: rem-calc(16); text-align: center; color: $body-font-color; transition: left .3s ease-in-out, right .3s ease-in-out; 
+                &:after {display: block; flex: 0 0 auto; padding: rem-calc(0 16);}
+                &:hover {color: $primary-color;}
+            }
+            .fwd {right: 0; background-image: linear-gradient(to right, rgba($white, 0) 0, rgba($white, 1) 50%); align-items: flex-end;
+                &:after {@include icon_font($char: $icon-arrow-right);}
+            }
+            .bak {left: 0; background-image: linear-gradient(to right, rgba($white, 1) 50%, rgba($white, 0) 100%); align-items: flex-start;
+                &:after {@include icon_font($char: $icon-arrow-left);}
+            }
+
+            &.scrollable {
+                .fwd, .bak {visibility: visible; pointer-events: auto;}
+                &.start .bak {visibility: hidden; pointer-events: none;}
+                &.end .fwd {visibility: hidden; pointer-events: none;}
+            }
+        }
+
+        &.sticky nav {
+            .group-a {width: calc(100% - #{rem-calc(155)});
+                a {font-size: rem-calc(13);
+                    &.active:after {bottom: rem-calc(15);}
+                }
+            }
+            .group-b {opacity: 1; margin-right: 0;}
+
+            .fwd {right: rem-calc(150);}
+        }
+    }
+
+    @include breakpoint(small down) {
+        nav {height: auto; min-height: rem-calc(52);
+            .jump-link {position: absolute; z-index: 2; left: 0; top: 0; height: rem-calc(52); display: flex; flex-flow: row nowrap; justify-content: center; align-items: center; padding: rem-calc(10); width: calc(100% - #{rem-calc(155)}); font-weight: $global-weight-normal; background-color: $white; margin: 0; cursor: pointer;
+                &:after {@include icon_font($char: $icon-arrow-down); display: block; flex: 0 1 #{rem-calc(22)}; width: rem-calc(22); padding: rem-calc(3 0 3 6); font-size: rem-calc(16);}
+            }
+
+            .group-a {display: none; z-index: 1; height: auto; position: relative; margin-top: rem-calc(54); padding: rem-calc(12 10); border-top: 1px solid $medium-gray; 
+                a {display: block; padding: rem-calc(8 0 8 25); font-size: rem-calc(15);
+                    &.active {color: $body-font-color;
+                        &:after {content: ""; display: block; position: absolute; left: rem-calc(4); top: rem-calc(16); bottom: auto; width: rem-calc(6); height: rem-calc(6); border-radius: 50%; background-color: $primary-color;}
+                    }
+                }
+            }
+            .group-b {z-index: 2; opacity: 1; margin-right: 0; height: rem-calc(52);}
+
+            &.open {
+                .jump-link {
+                    &:after {@include icon_font($char: $icon-arrow-up);}
+                }
             }
         }
     }
+
+    
 }
 
 
@@ -226,8 +296,10 @@ html {height: 100%;}
 // Into Banner
 // ------
 
-.banner.intro {position: relative; background: $lighter-gray no-repeat center/cover; height: calc(100vh - #{rem-calc(50)}); max-height: 75vw; min-height: rem-calc(300);
+.banner.intro {position: relative; background: $lighter-gray no-repeat center/cover; height: calc(100vh - #{rem-calc(120)}); min-height: rem-calc(300);
     
+    @include breakpoint(medium) {height: calc(100vh - #{rem-calc(50)}); max-height: 75vw;}
+
     .banner-content {height: 100%;
         .cell {
             > * {max-width: rem-calc(400); margin-left: auto; margin-right: auto;}
@@ -247,9 +319,13 @@ html {height: 100%;}
 // Section Intro
 // ------
 
-.section-intro {padding-top: rem-calc(30); padding-bottom: rem-calc(20); background-color: #f8e71c;
+.section-intro {padding-top: rem-calc(45); padding-bottom: rem-calc(20); background-color: #f8e71c;
     @include breakpoint (medium) {padding-top: rem-calc(60); padding-bottom: rem-calc(30);}
     @include breakpoint (large) {padding-top: rem-calc(100); padding-bottom: rem-calc(40);}
+    @include breakpoint(small down) {
+        > .tiles-outside:first-child {padding-top: rem-calc(0);}
+        > .tiles-outside:last-child {padding-bottom: rem-calc(0);}
+    }
 
     &.extra-space {padding-bottom: rem-calc(30);
         @include breakpoint (medium) {padding-bottom: rem-calc(45);}
@@ -266,13 +342,13 @@ html {height: 100%;}
     }
 
     &.bg-dark {background-color: $primary-color; color: $white; 
-        > .grid-container > .cell > p > a, 
+        > .grid-container > .cell:not(.tile):not(.tile-compact) > p > a, 
         .tiles-outside a {color: $white;
             &:last-child {
                 &:after {display: inline-block; margin-left: .3em; font-size: .8em; transition: margin .2s ease-in-out;
                     @include icon_font($char: $icon-arrow-right);
                 }
-                &:hover:after {margin-left: .4em; margin-right: -.1em;}
+                &:hover:after {margin-left: .5em; margin-right: -.2em;}
             }
         }
     
@@ -325,9 +401,10 @@ html {height: 100%;}
 // Tiles
 // ------
 
-.cell.tile {position: relative; z-index: 3; padding: rem-calc(20 30) !important; margin: rem-calc(10 0); color: $body-font-color;
-    &:before {content:""; display: block; position: absolute; left: rem-calc(10); width: calc(100% - #{rem-calc(20)}); top: 0; height: 100%; background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1);}
-    
+.cell.tile {position: relative; z-index: 3; padding: rem-calc(20 26) !important; margin: rem-calc(8 0); color: $body-font-color;
+    &:before {content:""; display: block; position: absolute; left: rem-calc(6); width: calc(100% - #{rem-calc(12)}); top: 0; height: 100%; background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); transition: box-shadow .2s ease-in-out;}
+    &:hover:not(.no-link):before {box-shadow: #{rem-calc(0 4 20)} rgba(12,12,13,0.2);}
+
     > * {position: relative; z-index: 2;}
 
     img {display: block; max-height: rem-calc(108); margin: 0 auto;}
@@ -347,41 +424,52 @@ html {height: 100%;}
     }
 }
 
-.tile-compact {position: relative; z-index: 3; padding: rem-calc(20 30) !important; margin: rem-calc(10 0); color: $body-font-color;
-    &:before {content:""; display: block; position: absolute; left: rem-calc(10); width: calc(100% - #{rem-calc(20)}); top: 0; height: 100%; background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); transition: box-shadow .2s ease-in-out;}
-    
+.tile-compact {position: relative; z-index: 3; padding: rem-calc(20 26) !important; margin: rem-calc(8 0); color: $body-font-color;
+    &:before {content:""; display: block; position: absolute; left: rem-calc(6); width: calc(100% - #{rem-calc(12)}); top: 0; height: 100%; background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); transition: box-shadow .2s ease-in-out;}
+    &:hover:not(.no-link):before {box-shadow: #{rem-calc(0 4 20)} rgba(12,12,13,0.2);}
+
     > * {position: relative; z-index: 2;
         &:last-child {margin-bottom: 0;}
     }
 
-    &:not(.tile-block-link) > * {max-width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
-        &:first-child {position: absolute; top: rem-calc(24); left: rem-calc(34); width: rem-calc(32);
+    &:not(.tile-block-link) > * {
+        &:first-child {position: absolute; top: rem-calc(12); right: rem-calc(24); width: rem-calc(32);
             img {width: rem-calc(32);}
         }
     }
 
-    @include breakpoint(medium) {padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0);
-        &:before {left: rem-calc(12); width: calc(100% - #{rem-calc(24)});}
-    }
-
     &.tile-block-link {padding: 0 !important;
         .block-link {padding: rem-calc(20 30);
-            > * {max-width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
-                &:first-child {position: absolute; top: rem-calc(24); left: rem-calc(34); width: rem-calc(32);
+            > * {
+                &:first-child {position: absolute; top: rem-calc(12); right: rem-calc(24); width: rem-calc(32);
                     img {width: rem-calc(32);}
                 }
                 &:last-child {margin-bottom: 0;}
             }
             a {position: absolute; z-index: 9; display: block; left: 0; top: 0; bottom: 0; right: 0; max-width: 100%; font-size: 0; opacity: 0;}
         }
-        @include breakpoint(medium) {padding: 0 !important;
-            .block-link {padding: rem-calc(24 34 30);}
+    }
+
+    @include breakpoint(medium) {padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0);
+        &:before {left: rem-calc(12); width: calc(100% - #{rem-calc(24)});}
+
+        &:not(.tile-block-link) {display: flex; flex-flow: column nowrap; justify-content: stretch;
+            > * {flex: 0 0 auto; width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
+                &:first-child {width: rem-calc(32); top: rem-calc(24); left: rem-calc(34); right: auto;}
+                &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-end; margin-bottom: 0;}
+            }
         }
 
-        &:hover {
-            &:before {box-shadow: #{rem-calc(0 4 20)} rgba(12,12,13,0.2);}
+        &.tile-block-link {
+            .block-link {padding: rem-calc(24 34 30);
+                > * {max-width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
+                    &:first-child {top: rem-calc(24); left: rem-calc(34); right: auto;}
+                }
+            }
         }
     }
+
+    @include breakpoint(small down) {}
 }
 
 .tile-borderless {position: relative; z-index: 3; padding: rem-calc(20 30) !important; margin: rem-calc(10 0); color: $body-font-color; text-align: center;
@@ -402,20 +490,60 @@ html {height: 100%;}
 
 .tile-extended {
     > p a {@include button(); font-size: 0.733333333333333rem; padding: rem-calc(6 8);}
-    .secondary-actions {font-size: $small-font-size;}
+    .secondary-actions {font-size: $small-font-size;
+        a {display: block; padding-top: rem-calc(6);}
+    }
 }
 
-.tiles-outside {padding-top: rem-calc(20); padding-bottom: rem-calc(20); 
+.tiles-outside {padding-top: rem-calc(10); padding-bottom: rem-calc(20); 
+    &:first-child {
+        @include breakpoint(small down) {padding-top: rem-calc(24); padding-bottom: rem-calc(6);}
+    }
     @include breakpoint(medium) {padding-top: rem-calc(24); padding-bottom: rem-calc(24);}
 }
+
+
+
+// Mobile slideshow tiles
+// ------
+
+.slick-dots {position: relative; z-index: 3; list-style: none; display: flex; flex-flow: row nowrap; justify-content: center; margin: rem-calc(10 0); height: rem-calc(8);
+    > * {flex: 0 0 #{rem-calc(20)}; width: rem-calc(20); height: rem-calc(8); margin: 0; display: flex; flex-flow: row nowrap; justify-content: center;
+        button {flex: 0 0 #{rem-calc(8)}; width: rem-calc(8); height: rem-calc(8);  font-size: 0; border-radius: 50%; text-align: center; background-color: #99b8dc; cursor: pointer; transition: transform .2s ease-in-out;
+            &:hover {transform: scale(1.3);}
+        }
+        &.slick-active button {background-color: $primary-color; pointer-events: none;}
+    }
+}
+
+.mobile-slider {
+    @include breakpoint(small down) {padding: rem-calc(0 0 1); margin-bottom: calc(#{5.6652083333333vw * 5} + #{rem-calc(96)}) !important;
+
+        .grid-container {padding: rem-calc(0 0 1); margin-bottom: calc(#{-5.6652083333333vw * 5} + #{rem-calc(-96)}) !important;
+
+            .slick-list {position: relative; z-index: 2;}
+
+            .slick-track {display: flex; align-items: stretch;
+                .slick-slide {display: flex; flex-flow: column nowrap; justify-content: stretch; height: auto; padding: rem-calc(20 28) !important; margin: rem-calc(16 0 20 0);
+                    &:before {content:""; display: block; position: absolute; left: rem-calc(8); width: calc(100% - #{rem-calc(16)}); }
+
+                    > * {flex: 0 0 auto; width: 100%;
+                        &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-end; margin-bottom: 0;}
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 
 // Section cta
 // ------
 
-.section-cta {padding-top: rem-calc(30); padding-bottom: rem-calc(30); 
-    @include breakpoint(medium) {padding-top: rem-calc(45); padding-bottom: rem-calc(45);}
+.section-cta {padding-top: rem-calc(45); padding-bottom: rem-calc(45); 
+    // @include breakpoint(medium) {padding-top: rem-calc(45); padding-bottom: rem-calc(45);}
 
     .cell > *:last-child {margin-bottom: 0;}
 
@@ -423,7 +551,7 @@ html {height: 100%;}
         &:after {display: inline-block; margin-left: .3em; font-size: .8em; transition: margin .2s ease-in-out;
             @include icon_font($char: $icon-arrow-right);
         }
-        &:hover:after {margin-left: .4em; margin-right: -.1em;}
+        &:hover:after {margin-left: .5em; margin-right: -.2em;}
     }
 
     &.bg-dark {color: $white; 
@@ -436,14 +564,66 @@ html {height: 100%;}
 // Video Box
 // ------
 
-.video-box {position: relative; height: 0; padding-bottom: 56.25%; margin: rem-calc(20 0 10); box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); border-radius: $global-radius; overflow: hidden;
-    .video-cta {position: absolute; z-index: 2; left: 0; top: 0; width: 70%; height: 100%; padding: 10%; display: flex; flex-flow: column nowrap; justify-content: center;}
-    .video-play {display: block; width: rem-calc(48); height: rem-calc(48); margin: 1em 0; text-align: center; line-height: rem-calc(48); font-size: rem-calc(26); color: $primary-color; background-color: $white; border-radius: 50%; box-shadow: #{rem-calc(0 2 8)} rgba(12,12,13,0.1); cursor: pointer; transition: transform .2s ease-in-out;
-        &:before {@include icon_font($char: $icon-play);}
+#stdVideo {opacity: 0; pointer-events: none; position: absolute; z-index: 11; overflow: hidden; left: 0; top: calc(100% + 1px); width: 100%; height: 1px; background: rgba(0,0,0,.85); transition: left .3s ease-in-out, top .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out, opacity .3s ease-in-out; 
+    iframe, object, embed, video {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+    .flex-video {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+    #stdVideo-close {z-index: 3; position: absolute; top: rem-calc(15); right: rem-calc(15); font-size: rem-calc(22); color: $white; background-color: $secondary-color; width: rem-calc(32); height: rem-calc(32); border-radius: 50%; box-shadow: #{rem-calc(0 1 3)} rgba($black,.3); cursor: pointer; text-align: center; transition: transform .15s ease-in-out;
+        &:before {@include icon_font($char: $icon-close); display: block; line-height: rem-calc(32);}
         &:hover {transform: scale(1.1);}
+        @include breakpoint(large) {top: rem-calc(30); right: rem-calc(30); font-size: rem-calc(36); width: rem-calc(48); height: rem-calc(48);
+            &:before {line-height: rem-calc(48);}
+        }
     }
 
-    @include breakpoint(medium) {margin: rem-calc(24 0 12);}
+    &.playing {opacity: 1; left: 0; top: 0; width: 100%; height: 100%; pointer-events: auto;}
+}
+
+.video-box {position: relative; 
+
+    .h1 {
+        @include breakpoint(small down) {font-size: rem-calc(17); margin-top: rem-calc(24);}
+    }
+    
+    .video-play {display: block; position: relative; overflow: hidden; display: block; width: rem-calc(48); height: rem-calc(48); margin: 1em 0; text-align: center; line-height: rem-calc(48); font-size: rem-calc(26); color: $primary-color; background-color: $white; border-radius: 50%; box-shadow: #{rem-calc(0 2 8)} rgba(12,12,13,0.1); cursor: pointer; transition: transform .2s ease-in-out;
+        &:before {@include icon_font($char: $icon-play);}
+        &:hover {transform: scale(1.1);}
+
+        &.loading {background-color: $primary-color; color: $white;
+            &:before {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: transparent url(img/ajax-loader.svg) no-repeat center/86%;}
+        }
+    }
+
+    .img {position: relative; z-index: 1; height: 0; padding-bottom: 56.25%; margin: rem-calc(20 0 10); box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); border-radius: $global-radius; overflow: hidden;
+
+        .video-play {position: absolute; top: calc(50% - #{rem-calc(16)}); left: calc(50% - #{rem-calc(16)}); width: rem-calc(32); height: rem-calc(32); line-height: rem-calc(32); font-size: rem-calc(16); margin: 0;
+            @include breakpoint(medium) {display: none;}
+        }
+        .video-link {position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
+
+        &.loading {
+            @include breakpoint(small down) {
+                .video-play {background-color: $primary-color; color: $white;
+                    &:before {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: transparent url(img/ajax-loader.svg) no-repeat center/86%;}
+                }
+            }
+        }
+    }
+
+    @include breakpoint(medium) {margin: rem-calc(24 0 12);
+        .video-cta {position: absolute; z-index: 2; left: 0; top: 0; width: 70%; height: 100%; padding: 10%; display: flex; flex-flow: column nowrap; justify-content: center;}
+    }
+}
+
+#video-popup {display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 100; background: rgba(0,0,0,.8);
+    .bg {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+    .grid-container {height: 100%; position: relative; z-index: 3;}
+    #stdVideo {position: relative; height: 0; padding: 0; background: $white; transition: left .3s ease-in-out, top .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out, padding .3s ease-in-out, opacity .3s ease-in-out; 
+        &.playing {opacity: 1; height: auto; padding-bottom: 56.25%;}
+    }
+    &.loading {
+        &:before {content: ""; position: absolute; z-index: 2; left: calc(50% - #{rem-calc(32)}); top: calc(50% - #{rem-calc(32)}); width: rem-calc(64); height: rem-calc(64); background: transparent url(img/ajax-loader.svg) no-repeat center/100%;}
+    }
 }
 
 
@@ -452,10 +632,21 @@ html {height: 100%;}
 // ------
 
 .resources-inline-list {
-    p {display: flex; flex-flow: row wrap; justify-content: space-between;
-
+    @include breakpoint(medium) {
+        p {display: flex; flex-flow: row wrap; justify-content: space-between;}
+    }
+    @include breakpoint(small down) {
+        p a {display: block; padding-top: rem-calc(6);}
     }
 }
+
+
+
+// RSS Feed
+// ------
+
+#rss-feed-source {display: none;}
+#rss-feed {}
 
 
 
@@ -478,4 +669,3 @@ html {height: 100%;}
         &:hover {color: $primary-color-hover;}
     }
 }
-

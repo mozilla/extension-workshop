@@ -42,12 +42,24 @@ Discuss extension development and get support.
 Connect with thousands of developers and contribute to the extension ecosystem.
 
 [Learn about enhancing the API](https://www.google.com)  
-[Learn more about the community](https://www.google.com)
 
 </div>
 <!-- END: Tile 2 -->
 
 </div>
 </div>
+<div class="grid-container grid-x grid-padding-x align-center tiles-outside">
+<div class="cell small-12 medium-8 large-6 text-center" markdown="1">
+
+[Learn more about the community](https://www.google.com)
+
+</div>
+</div>
 </div>
 <!-- END: Section Tiles -->
+
+<!-- Events iframe -->
+<div id="events">
+<iframe style="width: 100%; height: 600px; border: 0;" border="0" class="hub-mgmt-preview-iframe splash-page-iframe is-splash-resize-active" src="//splashthat.com/sites/view/addonscommunityevent.splashthat.com?partial=101626845,534610062&amp;screenshotHash=494156500dffa3d9" id="iFrameResizer0" scrolling="no"></iframe>
+</div>
+<!-- END: Events iframe -->

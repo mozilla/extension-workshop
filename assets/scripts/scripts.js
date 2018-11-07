@@ -70,22 +70,31 @@ jQuery(document).ready(function($) {
     // ** the plugin code is found in /assets/slick/     **
     // *****                                         ******
 
-    if ($('.slider.mobile').length) {
-        $('.slider.mobile').slick({
+    if ($('.mobile-slider .grid-container').length) {
+        $('.mobile-slider .grid-container').slick({
             mobileFirst: true,
             dots: true,
             arrows: false,
             centerMode: true,
-            centerPadding: '40px',
+            centerPadding: '0',
             slidesToShow: 1,
             responsive: [
                 {
-                    breakpoint: 760,
+                    breakpoint: 640,
                     settings: 'unslick'
                 }
             ]
         });
     }
+
+
+
+    // 7. RSS Feed
+    if ($('#rss-feed').length && $('#rss-feed-source').length) {
+        $('#rss-feed').rss_feed({source: $('#rss-feed-source')});
+    }
+
+
 
 
     // Init Breakpoint Listeners
@@ -149,9 +158,48 @@ jQuery(document).ready(function($) {
 
     $.fn.mobileMenu = function() {
         var $container = this;
+        var $nav = $container.find('nav');
+        var $jump = $container.find('.jump-link');
+        var $links = $container.find('#page-nav-links');
+        var open = $nav.hasClass('open');
+        var $window = $(window);
+
+        if (!open) {
+            $links.velocity('slideUp', {duration: 0});
+        }
+
+        $jump.on('click', function() {
+            if (open) {
+                $nav.removeClass('open');
+                $links.velocity('slideUp');
+            } else {
+                $nav.addClass('open');
+                $links.velocity('slideDown', {complete: function() {
+
+                    if ($nav.outerHeight() + $nav.offset().top > $window.height() + $window.scrollTop()) {
+                        $nav.velocity('scroll', {duration: 900, offset: -($nav.outerHeight() - 16)});
+                    }
+                }});
+            }
+            open = !open;
+        });
+
+        $.subscribe("scrollto", function(obj, anchor) {
+
+            if (anchor.parent().attr('id') == 'page-nav-links') {
+                $nav.removeClass('open');
+                $links.velocity('slideUp');
+                open = false;
+            }
+        });
 
         return {
-            kill: function() {}
+            kill: function() {
+                $jump.off('click');
+                $nav.removeClass('open');
+                $links.velocity('slideDown', {duration: 0});
+                 $window.off('resize.mobileMenu');
+            }
         };
     }
 
@@ -160,9 +208,14 @@ jQuery(document).ready(function($) {
 
     $.fn.desktopMenu = function() {
         var $container = this;
+        var $anchors = $container.find("a[href^='#']");
+
+        var overflow_scroll = $anchors.overflow_x_scroll();
 
         return { 
-            kill: function() { } 
+            kill: function() {
+                overflow_scroll.kill();
+            } 
         };
     }
 
@@ -172,6 +225,7 @@ jQuery(document).ready(function($) {
     $.fn.allMenu = function() {
         var $window = $(window);
         var $container = this;
+        var $anchors = $container.find("a[href^='#']");
 
         $window.on('scroll.persistant', function() {
             if ($window.scrollTop() >= $container.offset().top ) {
@@ -179,7 +233,130 @@ jQuery(document).ready(function($) {
             } else {
                 $container.removeClass('sticky');
             }
+
+            updateAnchorActive();
         });
+
+        function updateAnchorActive() {
+            var len = 0;
+            $anchors.each(function() {
+              var $self = $(this);
+              var $el = $($self.attr('href'));
+              if ($el.length && isInFocus($el, .75)) {
+                  $anchors.removeClass('active');
+                  $self.addClass('active');
+                  len++;
+              }
+            });
+            if (!len) {$anchors.removeClass('active');}
+        }
+    }
+
+
+    // 1.d Overflow X scroll
+    // ------
+    
+    $.fn.overflow_x_scroll = function(options) {
+        var $links = this;
+        var $container = $links.parent();
+        var $container_parent = $container.parent();
+        $container.after('<div class="fwd"></div>');
+        $container.before('<div class="bak"></div>');
+        var track_w = w();
+        var container_w = $container.outerWidth();
+        var padding = 32;
+        var btn_lock = false;
+
+        function w() {
+            var len = 0; 
+            $links.each(function() {
+                len += $(this).outerWidth(true);
+            });
+            return len;
+        }
+
+        function update() {
+            var position = $links.first().position();
+            container_w = $container.outerWidth();
+            track_w = w();
+
+            if (track_w > container_w) {
+                $container_parent.addClass('scrollable').removeClass('end start');
+                if (position.left >= 0) {
+                    $container_parent.addClass('start');
+                } else if (track_w + position.left <= container_w) {
+                    $container_parent.addClass('end');
+                }
+
+            } else {
+                $container.attr('style','');
+                $container_parent.removeClass('scrollable end start');
+            }
+
+        }
+
+        function scroll(dir) {
+            if (!btn_lock) {
+                btn_lock = true;
+                var offset = 0;
+                var $scroll_to = dir < 0 ? $links.first() : $links.last(); // default if loop below doesn't work out
+
+                $links.each(function() {
+                    var $this = $(this);
+                    if (dir < 0 && $this.position().left < 0) {
+                        $scroll_to = $this;
+                    // } else if (dir < 0 && $this.position().left >= 0) {
+                        return false;
+                    } else if (dir > 0 && $this.position().left + $this.outerWidth() > container_w - $links.first().position().left) {
+                        $scroll_to = $this;
+                        return false;
+                    }
+                });
+
+                if (dir > 0 && $scroll_to != $links.last()) {
+                    offset -= padding;
+                } else if (dir < 0 && $scroll_to != $links.first()) {
+                    offset -= padding;
+                }
+
+                if ($scroll_to) {
+                    $scroll_to.velocity('scroll', {
+                        container: $container,
+                        duration: 600,
+                        offset: offset,
+                        axis: 'x',
+                        easing: 'easeInOutSine',
+                        complete: function() {
+                            btn_lock = false;
+                        }
+                    });
+                } else {
+                    btn_lock = false;
+                }
+            }
+        }
+
+        $container_parent.find('.fwd').on('click', function() {
+            scroll(1);
+        });
+
+        $container_parent.find('.bak').on('click', function() {
+            scroll(-1);
+        });
+        
+        $container.on('scroll.xscroll', update);
+        $(window).on('resize.xscroll', update).on('scroll.xscroll', update);
+        setTimeout(update, 500);
+
+        return { 
+            kill: function() {
+                $container_parent.find('.fwd').off('click').remove();
+                $container_parent.find('.bak').off('click').remove();
+                $container.off('scroll.xscroll');
+                $(window).off('resize.xscroll').off('scroll.xscroll');
+                $container_parent.removeClass('scrollable end start');
+            } 
+        };
     }
 
 
@@ -201,10 +378,12 @@ jQuery(document).ready(function($) {
         });
 
         this.on('click.scrollto', function(event) {
-            var id = $(this).attr('href').split('#')[1];
+            var $anchor = $(this);
+            var id = $anchor.attr('href').split('#')[1];
 
-            if ($('#'+id).length && !$(this).hasClass(settings.exclude)) {
+            if ($('#'+id).length && !$anchor.hasClass(settings.exclude)) {
                 event.preventDefault();
+                $.publish("scrollto", [ $anchor ]);
                 var $el = $('#'+id);
                 var top = id == 'top' ? $el.offset().top : $el.offset().top - offset;
                 $('html').velocity('scroll', {duration: 900, offset: top});
@@ -296,6 +475,43 @@ jQuery(document).ready(function($) {
                 activate();
             }
         });
+    }
+
+
+
+    // 7. RSS Feed
+    // ------
+
+    $.fn.rss_feed = function(options) {
+        var settings = $.extend( {
+            source : null,
+            container : '<div class="cell small-12 medium-4 tile"></div>',
+        }, options);
+
+        var $container = this;
+
+        // console.log(settings.source.html()); // <h4 class="feed-item-title"><a href="https://blog.mozilla.org/addons/2018/10/26/firefox-chrome-and-the-future-of-trustworthy-extensions/" target="_blank">Firefox, Chrome and the Future of Trustworthy Extensions</a></h4><p class="feed-item-desc"></p><p>Browser extensions are wonderful. Nearly every day I come across a new Firefox extension that customizes my browser in some creative way I’d never even considered. Some provide amusement for a short time, while others have become indispensable to my … <a class="go" href="https://blog.mozilla.org/addons/2018/10/26/firefox-chrome-and-the-future-of-trustworthy-extensions/">Continue reading</a></p><p>The post <a rel="nofollow" href="https://blog.mozilla.org/addons/2018/10/26/firefox-chrome-and-the-future-of-trustworthy-extensions/">Firefox, Chrome and the Future of Trustworthy Extensions</a> appeared first on <a rel="nofollow" href="https://blog.mozilla.org/addons">Mozilla Add-ons Blog</a>.</p><p></p><h4 class="feed-item-title"><a href="https://blog.mozilla.org/addons/2018/10/15/apply-to-join-the-featured-extensions-advisory-board-2/" target="_blank">Apply to Join the Featured Extensions Advisory Board</a></h4><p class="feed-item-desc"></p><p>Do you love extensions? Do you have a keen sense of what makes a great extension? Want to help users discover extensions that will improve how they experience the web? If so, please consider applying to join our Featured Extensions … <a class="go" href="https://blog.mozilla.org/addons/2018/10/15/apply-to-join-the-featured-extensions-advisory-board-2/">Continue reading</a></p><p>The post <a rel="nofollow" href="https://blog.mozilla.org/addons/2018/10/15/apply-to-join-the-featured-extensions-advisory-board-2/">Apply to Join the Featured Extensions Advisory Board</a> appeared first on <a rel="nofollow" href="https://blog.mozilla.org/addons">Mozilla Add-ons Blog</a>.</p><p></p><h4 class="feed-item-title"><a href="https://blog.mozilla.org/addons/2018/10/01/octobers-featured-extensions-2/" target="_blank">October’s Featured Extensions</a></h4><p class="feed-item-desc"></p><p>Pick of the Month: Default Bookmark Folder by Teddy Gustiaux Do you keep multiple bookmark folders? This extension makes it simple to add new bookmarks to specific folders. “So useful and powerful. I no longer have to change bookmark locations … <a class="go" href="https://blog.mozilla.org/addons/2018/10/01/octobers-featured-extensions-2/">Continue reading</a></p><p>The post <a rel="nofollow" href="https://blog.mozilla.org/addons/2018/10/01/octobers-featured-extensions-2/">October’s Featured Extensions</a> appeared first on <a rel="nofollow" href="https://blog.mozilla.org/addons">Mozilla Add-ons Blog</a>.</p><p></p><div class="rss2html-note" style="float: right;"><a href="https://rss.bloople.net/" style="color: #000000;">Powered by rss2html</a></div><div class="rss2html-note-clear" style="clear: right; height: 0;"></div>
+        var items = settings.source.html().split('<p></p>');
+        $.each(items, function(i, item) {
+            if (item.indexOf('rss2html-note') !== -1) {
+                return true;
+            }
+            var elements = item.split('<p class="feed-item-desc"></p>');
+            var title = elements[0];
+            var description = elements[1];
+            var title_elements = $($.parseHTML(title)).text();
+            var $description_elements = $(description);
+            var $cell = $(settings.container);
+            
+            $cell.append($('<h4>'+title_elements+'</h4>')).append($description_elements);
+            $description_elements.last().remove();
+
+            $cell.append($('<p class="continue"></p>'));
+            $cell.find('p a:last-child').appendTo($cell.find('.continue'));
+            $container.append($cell);
+        });
+
+        return this;
     }
 
 

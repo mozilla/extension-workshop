@@ -68,9 +68,12 @@ $print-transparent-backgrounds: true;
 @mixin icon_font($char:"") {font-family:'icomoon'; content: $char; speak:none; font-style:normal; font-weight:normal; font-variant:normal; text-transform:none; line-height:1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
 
 $icon-play: "\e900";
+$icon-close: "\e909";
 $icon-download: "\e901";
-$icon-arrow-down: "\e902";
-$icon-arrow-right: "\e903";
+$icon-arrow-up: "\e902";
+$icon-arrow-down: "\e90b";
+$icon-arrow-left: "\e903";
+$icon-arrow-right: "\e90a";
 $icon-irc: "\e904";
 $icon-mail: "\e905";
 $icon-telegram: "\e906";
@@ -98,7 +101,7 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
+  small: 12px,
   medium: 24px
 );
 $grid-padding-gutters: $grid-margin-gutters;
@@ -118,11 +121,11 @@ $header-lineheight: 1;
 $header-margin-bottom: .6em;
 $header-styles: (
   'small': (
-    'h1': ('font-size': 36, 'line-height': $header-lineheight, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
-    'h2': ('font-size': 28, 'line-height': $header-lineheight, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
-    'h3': ('font-size': 22, 'line-height': $header-lineheight, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
-    'h4': ('font-size': 17, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
-    'h5': ('font-size': 15, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
+    'h1': ('font-size': 28, 'line-height': $header-lineheight, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
+    'h2': ('font-size': 24, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
+    'h3': ('font-size': 17, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
+    'h4': ('font-size': 15, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
+    'h5': ('font-size': 13, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
     'h6': ('font-size': 13, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom)
   ),
   'medium': (

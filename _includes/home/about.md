@@ -29,7 +29,7 @@ Build on the web’s most customizable browser. Get your great idea into the han
 </div>
 </div>
 </div>
-<div class="tiles-container">
+<div class="tiles-container mobile-slider">
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->

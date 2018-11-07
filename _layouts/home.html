@@ -18,12 +18,13 @@ layout: default
                 <div class="grid-container grid-x grid-padding-x">
                     <div class="cell small-12">
                         <nav>
-                            <div class="group-a">
-                                <a class="" href="#about">About Extensions</a>
-                                <a class="" href="#build">Build Extensions</a>
-                                <a class="" href="#tips">Tips for Better Extensions</a>
-                                <a class="" href="#connect">Connect</a>
-                                <a class="" href="#news">Developer News</a>
+                            <h6 class="jump-link">Jump to...</h6>
+                            <div class="group-a" id="page-nav-links">
+                                <a href="#about">About Extensions</a>
+                                <a href="#build">Build Extensions</a>
+                                <a href="#tips">Tips for Better Extensions</a>
+                                <a href="#connect">Connect</a>
+                                <a href="#news">Developer News</a>
                             </div>
                             <div class="group-b">
                                 <a class="button" href="register">Register or Log in</a>
@@ -44,26 +45,21 @@ layout: default
 
     {% endfor %}
 
-    <section id="community" class="panel bg-grey">
-        <iframe style="width: 100%; height: 600px; border: 0;" border="0" class="hub-mgmt-preview-iframe splash-page-iframe is-splash-resize-active" src="//splashthat.com/sites/view/addonscommunityevent.splashthat.com?partial=101626845,534610062&amp;screenshotHash=494156500dffa3d9" id="iFrameResizer0" scrolling="no"></iframe>
-    </section>
-
     <section id="news" class="panel bg-grey">
-        <div class="grid-container grid-x grid-padding-x align-center">
-            <div class="cell small-12 text-center">
+        <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
+            <div class="cell small-12 medium-8 large-6 text-center">
                 <h2>Latest Developer News</h2>
             </div>
-            <script src="//rss.bloople.net/?url=https%3A%2F%2Fblog.mozilla.org%2Faddons%2Ffeed%2F&detail=140&limit=3&showtitle=false&type=js"></script>
-            <!-- <div id="rssincl-box-container-1196929"></div> -->
-            <!-- <script type="text/javascript">
-                // Tool: https://www.rssinclude.com/my_rssboxes
-                // (function() {
-                //   var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
-                //   s.src = 'http://output87.rssinclude.com/output?type=asyncjs&id=1196929&hash=0f86aff93a142b0157ab984bce858bee';
-                //   document.getElementsByTagName('head')[0].appendChild(s);
-                // })();
-            </script> -->
-            <div class="cell small-12 text-center">
+        </div>
+
+        <div id="rss-feed-source"><script src="//rss.bloople.net/?url=https%3A%2F%2Fblog.mozilla.org%2Faddons%2Ffeed%2F&detail=140&limit=3&showtitle=false&type=js"></script></div>
+        
+        <div class="tiles-container mobile-slider">
+            <div id="rss-feed" class="grid-container grid-x grid-padding-x align-center"></div>
+        </div>
+        
+        <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
+            <div class="cell small-12 medium-8 large-6 text-center">
                 <p><a href="https://blog.mozilla.org/addons/">Visit add-ons blog</a></p>
             </div>
         </div>
@@ -94,7 +90,7 @@ layout: default
                 <div class="newsletter" id="newsletter_wrap">
                     <form id="newsletter_form" name="newsletter_form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
                         <input type="hidden" id="fmt" name="fmt" value="H">
-                        <input type="hidden" id="newsletters" name="newsletters" value="mozilla-and-you">
+                        <input type="hidden" id="newsletters" name="newsletters" value="about-addons">
 
                         <div id="newsletter_errors" class="newsletter_errors"></div>
 
@@ -111,7 +107,7 @@ layout: default
                         </div>
                     </form>
                     <div id="newsletter_thanks" class="newsletter_thanks">
-                        <h2>Thanks!</h2>
+                        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
                         <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.</p>
                     </div>
                 </div>

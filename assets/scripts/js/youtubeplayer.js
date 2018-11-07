@@ -28,9 +28,9 @@
 		// whenever youtube callback was called = deferred resolved your custom function will be executed with YT as an argument
 		YTdeferred.done(function(YT) {
 
-			$(document).video_cta({yt_object: YT, cta: '.video-cta'});
-			$(document).video_cta({yt_object: YT, cta: '.video-button'});
 			$(document).video_cta({yt_object: YT, cta: '.video-link'});
+
+			$(document).video_cta({yt_object: YT, cta: 'a[title|="Open Popup Video"]', youtube_id_data: 'href', target: $('#video-popup')});
 
 		    if ($('.video-banner').length) {
 				$('.video-banner').each(function() {
@@ -52,10 +52,14 @@
             container : '<div id="stdVideo"><div id="stdVideo-player"></div></div>',
             close : '<div id="stdVideo-close"></div>',
             cta : '.video-cta',
+            youtube_id_data : 'youtube_id',
+            target_data : 'youtube_target',
+            target : null,
         }, options);
 
 		var yt_player;
 		var $container;
+		var $target = settings.target;
 		var $close;
 		var done = false;
 		var playing = false;
@@ -63,12 +67,18 @@
         var is_android = /(android)/i.test(navigator.userAgent);
         var mobileOS = is_ios || is_android;
 
+        if (settings.target) {
+        	settings.target.find('.bg').on('click', closeVideo);
+        }
 
 		this.on('click', settings.cta, function(e) {
         	e.preventDefault();
         	var $link = $(this);
+        	$target = settings.target == null ? $('#' + $link.data(settings.target_data)) : settings.target;
         	$link.addClass('loading');
-        	loadVideo($link.data('id'));
+        	$target.addClass('loading');
+        	var id = settings.youtube_id_data == 'href' ? $link.attr('href') : $link.data(settings.youtube_id_data);
+        	loadVideo(id);
         });
 
 
@@ -81,7 +91,7 @@
 			CUED
 		*/
 		function onPlayerStateChange(event) {
-
+			console.log(event.data);
 			// Open video player when playing
 			if (event.data == settings.yt_object.PlayerState.PLAYING && !playing) {
 				openVideo();
@@ -107,8 +117,14 @@
 			if (!done) {
 				$container = $(settings.container);
 				$close = $(settings.close);
-				$container.appendTo($('body'));
 				$close.appendTo($container);
+
+				if (settings.target) {
+					$container.appendTo($target.find('.cell'));
+					$target.velocity('fadeIn');
+				} else {
+					$container.appendTo($target);
+				}
 
 				// creating a player: https://developers.google.com/youtube/iframe_api_reference#Getting_Started
 				yt_player = new settings.yt_object.Player('stdVideo-player', {
@@ -133,9 +149,7 @@
 				$close.on('click', closeVideo);
 
 			} else {
-
 				yt_player.loadVideoById({'videoId': id});
-
 			}
 		}
 
@@ -144,6 +158,7 @@
 			playing = true;
 			$container.addClass('playing');
 			$(settings.cta).removeClass('loading');
+			$target.removeClass('loading');
 		}
 
 
@@ -151,6 +166,12 @@
 			yt_player.stopVideo();
 			playing = false;
 			$container.removeClass('playing');
+			if (settings.target) {$target.velocity('fadeOut');}
+			setTimeout(function() {
+				done = false;
+				yt_player = null;
+				$container.remove();
+			},1000);
 		}
 
 	}

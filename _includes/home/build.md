@@ -10,10 +10,14 @@ Firefox extensions are made with the same technologies used to build the web. Th
 </div>
 <div class="cell small-12 large-10">
 	<!-- Video Box -->
-	<div id="how-to-build-an-extension-video" class="img video-box" style="background-image: url(assets/img/rawpixel-771301-unsplash.jpg);">
+	<div class="video-box">
 		<div class="video-cta">
 			<h2 class="h1">Build an Extension in Less Than 5 Minutes</h2>
-			<button class="video-play" data-youtube_id="DAl0tOYDHxg" data-target="how-to-build-an-extension-video"></button>
+			<button class="show-for-medium video-play video-link" data-youtube_id="DAl0tOYDHxg" data-youtube_target="how-to-build-an-extension-video"></button>
+		</div>
+		<div id="how-to-build-an-extension-video" class="img" style="background-image: url(assets/img/rawpixel-771301-unsplash.jpg);">
+			<span class="video-play"></span>
+			<button class="show-for-small-only video-link" data-youtube_id="DAl0tOYDHxg" data-youtube_target="how-to-build-an-extension-video"></button>
 		</div>
 	</div>
 	<!-- END: Video Box -->
@@ -99,7 +103,7 @@ Already have an extension that works in Chrome? Bring your app to Firefox in a f
 <div class="secondary-actions" markdown="1">
 
 Top Resources  
-[Differences between Chrome and Firefox](https://www.google.com)  
+[Differences between Chrome and Firefox](https://www.google.com)
 [Port a Google Chrome extension](https://www.google.com)
 
 </div>
@@ -122,7 +126,7 @@ Starting from scratch? It’s easy and fast to create your cross-browser extensi
 <div class="secondary-actions" markdown="1">
 
 Top Resources  
-[Best practices for cross-browser extensions](https://www.google.com)  
+[Best practices for cross-browser extensions](https://www.google.com)
 [Introduction to developing in Firefox](https://www.google.com)
 
 </div>
