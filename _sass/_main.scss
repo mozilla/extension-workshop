@@ -167,9 +167,11 @@ html {height: 100%;}
 }
 
 .page-nav-container {position: absolute; z-index: 10; top: calc(100% - #{rem-calc(50)}); left: 0; width: 100%;
-    .page-nav {position: absolute; left: 0; top: 0; width: 100%;}
+    .page-nav {position: absolute; left: 0; top: 0; width: 100%;
 
-    nav {position: relative; width: 100%; height: rem-calc(52); background-color: $white; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); border-radius: $global-radius; margin: rem-calc(24 0); overflow: hidden;
+    }
+
+    nav {position: relative; width: 100%; height: rem-calc(52); background-color: $white; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); border-radius: $global-radius; margin: rem-calc(12 0); overflow: hidden;
 
         .group-a, .group-b {position: absolute; left: 0; top: 0; height: 100%; padding: rem-calc(0 10); display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: stretch;}
 
@@ -194,7 +196,7 @@ html {height: 100%;}
 
     @include breakpoint(medium) {
 
-        nav {
+        nav {margin: rem-calc(24 0);
             .jump-link {display: none;}
 
             .group-a {overflow-x: scroll;}
@@ -298,7 +300,7 @@ html {height: 100%;}
 
 .banner.intro {position: relative; background: $lighter-gray no-repeat center/cover; height: calc(100vh - #{rem-calc(120)}); min-height: rem-calc(300);
     
-    @include breakpoint(medium) {height: calc(100vh - #{rem-calc(50)}); max-height: 75vw;}
+    @include breakpoint(medium) {height: calc(100vh - #{rem-calc(50)}); max-height: 60vw;}
 
     .banner-content {height: 100%;
         .cell {
@@ -662,7 +664,7 @@ html {height: 100%;}
         &.irc:before {@include icon_font($char: $icon-irc); font-size: rem-calc(24); vertical-align: middle; margin-right: .3em;}
         &.mailinglist:before {@include icon_font($char: $icon-mail); font-size: rem-calc(24); vertical-align: middle; margin-right: .3em;}
     }
-    input[type=text], input[type=email] {background-color: rgba(#b1b1b3,.2); border: 0;
+    input[type=text], input[type=email] {background-color: rgba(#b1b1b3,.2); border: 0; color: $white;
         &::placeholder {color: #b1b1b3;}
     }
     .button {background-color: $white; color: $primary-color; margin-top: rem-calc(16);

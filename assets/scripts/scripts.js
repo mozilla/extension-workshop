@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
             dots: true,
             arrows: false,
             centerMode: true,
-            centerPadding: '0',
+            centerPadding: '16px',
             slidesToShow: 1,
             responsive: [
                 {
@@ -90,9 +90,16 @@ jQuery(document).ready(function($) {
 
 
     // 7. RSS Feed
-    if ($('#rss-feed').length && $('#rss-feed-source').length) {
-        $('#rss-feed').rss_feed({source: $('#rss-feed-source')});
-    }
+
+    // ******                                        ******
+    // ** the code is found in rssfeed.js                **
+    // ** it must be compiled with Browserfy:            **
+    // ** $ browserify rssfeed.js -o rssfeed.pkg.js      **
+    // *****                                         ******
+    
+    // if ($('#rss-feed').length && $('#rss-feed-source').length) {
+    //     $('#rss-feed').rss_feed({source: $('#rss-feed-source')});
+    // }
 
 
 
@@ -117,7 +124,7 @@ jQuery(document).ready(function($) {
 
     $.fn.switchNav = function(options) {
         var settings = $.extend( {
-            breakpoint : 'atleast_large'
+            breakpoint : 'atleast_medium'
         }, options);
 
         var $container = this;
@@ -197,8 +204,8 @@ jQuery(document).ready(function($) {
             kill: function() {
                 $jump.off('click');
                 $nav.removeClass('open');
-                $links.velocity('slideDown', {duration: 0});
-                 $window.off('resize.mobileMenu');
+                $links.attr('style', '');
+                $window.off('resize.mobileMenu');
             }
         };
     }
