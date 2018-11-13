@@ -628,7 +628,7 @@ html {height: 100%;}
 .video-box {position: relative; 
 
     .h1 {
-        @include breakpoint(small down) {font-size: rem-calc(17); margin-top: rem-calc(24);}
+        @include breakpoint(small down) {text-align: center; font-size: rem-calc(15); margin-top: rem-calc(24);}
     }
     
     .video-play {display: block; position: relative; overflow: hidden; display: block; width: rem-calc(48); height: rem-calc(48); margin: 1em 0; text-align: center; line-height: rem-calc(48); font-size: rem-calc(26); color: $primary-color; background-color: $white; border-radius: 50%; box-shadow: #{rem-calc(0 2 8)} rgba(12,12,13,0.1); cursor: pointer; transition: color .2s ease-in-out, box-shadow .2s ease-in-out, transform .2s ease-in-out;
