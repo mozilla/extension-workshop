@@ -6,8 +6,8 @@
     <mask id="background-scripts-b" fill="#fff">
       <use xlink:href="#background-scripts-a"/>
     </mask>
-    <use fill="#000" fill-rule="nonzero" xlink:href="#background-scripts-a"/>
-    <g fill="#0C0C0D" fill-rule="nonzero" mask="url(#background-scripts-b)">
+    <use fill="#0060DF" fill-rule="nonzero" xlink:href="#background-scripts-a"/>
+    <g fill="#0060DF" fill-rule="nonzero" mask="url(#background-scripts-b)">
       <rect width="24" height="24"/>
     </g>
   </g>

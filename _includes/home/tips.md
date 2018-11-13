@@ -10,7 +10,8 @@
 <div class="grid-container grid-x grid-padding-x tiles-container">
 
 <!-- Tile 1 -->
-<div class="cell small-12 medium-6 tile-compact" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Web-Ext](assets/img/icons/web-ext.svg "Web-Ext")
 
@@ -18,13 +19,14 @@
 
 Accelerate development with this Firefox command line tool. See real-time code changes and easily package your extension.
 
-[Web-Ext Tool](https://www.google.com)
-
+</div>
+<a href="https://www.firefox.com"></a>
 </div>
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<div class="cell small-12 medium-6 tile-compact" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Web-Ext Webpack Plugin](assets/img/icons/plugin.svg "Web-Ext Webpack Plugin")
 
@@ -32,13 +34,14 @@ Accelerate development with this Firefox command line tool. See real-time code c
 
 This plug-in makes webpack aware of extensions so you can easily bundle your JavaScript.
 
-[Web-Ext Webpack Plugin](https://www.google.com)
-
+</div>
+<a href="https://www.firefox.com"></a>
 </div>
 <!-- END: Tile 2 -->
 
 <!-- Tile 3 -->
-<div class="cell small-12 medium-6 tile-compact" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Browser API Polyfill](assets/img/icons/browser-api.svg "Browser API Polyfill")
 
@@ -46,13 +49,14 @@ This plug-in makes webpack aware of extensions so you can easily bundle your Jav
 
 Create your extension using the Firefox promise-based API, and the polyfill library will get your extension running on multiple browsers in no time.
 
-[Browser API Polyfill Library](https://www.google.com)
-
+</div>
+<a href="https://www.firefox.com"></a>
 </div>
 <!-- END: Tile 3 -->
 
 <!-- Tile 4 -->
-<div class="cell small-12 medium-6 tile-compact" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Debug Your Extension](assets/img/icons/debug.svg "Debug Your Extension")
 
@@ -60,8 +64,8 @@ Create your extension using the Firefox promise-based API, and the polyfill libr
 
 Check your extension for errors, and modify the code as needed.
 
-[Debug Tool](https://www.google.com)
-
+</div>
+<a href="https://www.firefox.com"></a>
 </div>
 <!-- END: Tile 4 -->
 
@@ -69,7 +73,7 @@ Check your extension for errors, and modify the code as needed.
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
-[More development tools](https://www.google.com)
+[More development tools](https://www.firefox.com)
 
 </div>
 </div>
@@ -92,7 +96,8 @@ Check your extension for errors, and modify the code as needed.
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<div class="cell small-12 medium-6 tile-compact no-link" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Publish on Firefox](assets/img/icons/publish-on-firefox.svg "Publish on Firefox")
 
@@ -101,10 +106,13 @@ Check your extension for errors, and modify the code as needed.
 With millions of monthly users and Firefox integration, publishing your extension on addons.mozilla.org is the easiest way to get maximum exposure.
 
 </div>
+<a href="https://www.firefox.com"></a>
+</div>
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<div class="cell small-12 medium-6 tile-compact no-link" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Publish on Your Own](assets/img/icons/publish-on-own.svg "Publish on Your Own")
 
@@ -112,6 +120,8 @@ With millions of monthly users and Firefox integration, publishing your extensio
 
 Publish your signed extension on your own, and explore alternate installation methods in Firefox.
 
+</div>
+<a href="https://www.firefox.com"></a>
 </div>
 <!-- END: Tile 2 -->
 
@@ -136,7 +146,7 @@ You’ll want users! The shortest route to getting, and keeping them, is creatin
 <div class="grid-container grid-x grid-padding-x align-center tiles-container">
 
 <!-- Tile 1 -->
-<div class="cell small-12 medium-4 tile-borderless" markdown="1">
+<div class="cell small-12 large-4 tile-borderless" markdown="1">
 
 ![What’s Great Content and Design?](assets/img/billboard-more-power.f83d248d8724.png "What’s Great Content and Design?")
 
@@ -150,7 +160,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<div class="cell small-12 medium-4 tile-borderless" markdown="1">
+<div class="cell small-12 large-4 tile-borderless" markdown="1">
 
 ![Optimize Your Product Page](assets/img/billboard-more-power.f83d248d8724.png "Optimize Your Product Page")
 
@@ -158,13 +168,13 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 
 People spend just seconds on your product page. Make those seconds count with stellar content and visuals.
 
-[Find out how](https://www.google.com)
+[Find out how](https://www.firefox.com)
 
 </div>
 <!-- END: Tile 2 -->
 
 <!-- Tile 3 -->
-<div class="cell small-12 medium-4 tile-borderless" markdown="1">
+<div class="cell small-12 large-4 tile-borderless" markdown="1">
 
 ![Focus on Usability](assets/img/billboard-more-power.f83d248d8724.png "Focus on Usability")
 
@@ -172,7 +182,7 @@ People spend just seconds on your product page. Make those seconds count with st
 
 Build in UX best practices and  the positive reviews and ratings  will follow.
 
-[Learn more about usability](https://www.google.com)
+[Learn more about usability](https://www.firefox.com)
 
 </div>
 <!-- END: Tile 3 -->

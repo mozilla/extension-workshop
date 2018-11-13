@@ -6,8 +6,8 @@
     <mask id="content-script-b" fill="#fff">
       <use xlink:href="#content-script-a"/>
     </mask>
-    <use fill="#0C0C0D" fill-rule="nonzero" xlink:href="#content-script-a"/>
-    <g fill="#0C0C0D" fill-rule="nonzero" mask="url(#content-script-b)">
+    <use fill="#0060DF" fill-rule="nonzero" xlink:href="#content-script-a"/>
+    <g fill="#0060DF" fill-rule="nonzero" mask="url(#content-script-b)">
       <rect width="24" height="24"/>
     </g>
   </g>

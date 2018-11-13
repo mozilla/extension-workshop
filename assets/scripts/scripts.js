@@ -80,7 +80,7 @@ jQuery(document).ready(function($) {
             slidesToShow: 1,
             responsive: [
                 {
-                    breakpoint: 640,
+                    breakpoint: 960,
                     settings: 'unslick'
                 }
             ]
@@ -97,9 +97,16 @@ jQuery(document).ready(function($) {
     // ** $ browserify rssfeed.js -o rssfeed.pkg.js      **
     // *****                                         ******
     
-    // if ($('#rss-feed').length && $('#rss-feed-source').length) {
-    //     $('#rss-feed').rss_feed({source: $('#rss-feed-source')});
-    // }
+    if ($('#rss-feed').length && $('#rss-feed-source').length) {
+        $('#rss-feed').rss_feed({source: $('#rss-feed-source')});
+    }
+
+
+
+    // 8. Anatomy of an extension
+    if ($('#anatomy-of-an-extension-graphic').length) {
+        $('#anatomy-of-an-extension-graphic').extenstionAnatomy();
+    }
 
 
 
@@ -492,7 +499,7 @@ jQuery(document).ready(function($) {
     $.fn.rss_feed = function(options) {
         var settings = $.extend( {
             source : null,
-            container : '<div class="cell small-12 medium-4 tile"></div>',
+            container : '<div class="cell small-12 medium-4 tile no-link"></div>',
         }, options);
 
         var $container = this;
@@ -508,17 +515,54 @@ jQuery(document).ready(function($) {
             var description = elements[1];
             var title_elements = $($.parseHTML(title)).text();
             var $description_elements = $(description);
-            var $cell = $(settings.container);
+            var $cell = $(settings.container); // $container.find('.cell').eq(i);
             
             $cell.append($('<h4>'+title_elements+'</h4>')).append($description_elements);
             $description_elements.last().remove();
 
             $cell.append($('<p class="continue"></p>'));
             $cell.find('p a:last-child').appendTo($cell.find('.continue'));
-            $container.append($cell);
+            // $container.append($cell);
+            $container.slick('slickAdd',$cell);
+
         });
 
         return this;
+    }
+
+
+    // 8. Anatomy of an extenstion
+    // ------
+    $.fn.extenstionAnatomy = function() {
+        var $this = this;
+
+        var $tile_ui = $('#tile-ui');
+        var $tile_cs = $('#tile-cs');
+        var $tile_bs = $('#tile-bs');
+
+        $tile_ui.on('mouseenter', function() {
+            $tile_ui.addClass('hover');
+        }).on('mouseleave', function() {
+            $tile_ui.removeClass('hover');
+        });
+
+        $tile_cs.on('mouseenter', function() {
+            $tile_cs.addClass('hover');
+        }).on('mouseleave', function() {
+            $tile_cs.removeClass('hover');
+        });
+
+        $tile_bs.on('mouseenter', function() {
+            $tile_bs.addClass('hover');
+        }).on('mouseleave', function() {
+            $tile_bs.removeClass('hover');
+        });
+
+        $this.one('inview', function(event, isInView) {
+            if (isInView) {
+                $this.addClass('running');
+            }
+        });
     }
 
 

@@ -6,8 +6,8 @@
     <mask id="publish-on-own-b" fill="#fff">
       <use xlink:href="#publish-on-own-a"/>
     </mask>
-    <use fill="#0a0a0a" fill-rule="nonzero" xlink:href="#publish-on-own-a"/>
-    <g fill="#0a0a0a" fill-rule="nonzero" mask="url(#publish-on-own-b)">
+    <use fill="#0060DF" fill-rule="nonzero" xlink:href="#publish-on-own-a"/>
+    <g fill="#0060DF" fill-rule="nonzero" mask="url(#publish-on-own-b)">
       <rect width="24" height="24"/>
     </g>
   </g>

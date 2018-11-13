@@ -6,8 +6,8 @@
     <mask id="extension-b" fill="#fff">
       <use xlink:href="#extension-a"/>
     </mask>
-    <use fill="#0C0C0D" fill-opacity=".8" xlink:href="#extension-a"/>
-    <g fill="#0C0C0D" fill-rule="nonzero" mask="url(#extension-b)">
+    <use fill="#0060DF" fill-opacity=".8" xlink:href="#extension-a"/>
+    <g fill="#0060DF" fill-rule="nonzero" mask="url(#extension-b)">
       <rect width="24" height="24"/>
     </g>
   </g>

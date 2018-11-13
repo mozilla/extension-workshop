@@ -19,7 +19,8 @@ When you build on Firefox, you build with a community of extension developers. A
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<div class="cell small-12 medium-6 tile-compact" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Community Forums](assets/img/icons/community-forums.svg "Community Forums")
 
@@ -27,13 +28,16 @@ When you build on Firefox, you build with a community of extension developers. A
 
 Discuss extension development and get support. 
 
-[Join the conversation](https://www.google.com)
+[Join the conversation](https://www.firefox.com)
 
+</div>
+<a href="https://www.firefox.com"></a>
 </div>
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<div class="cell small-12 medium-6 tile-compact" markdown="1">
+<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Get Involved](assets/img/icons/get-involved.svg "Get Involved")
 
@@ -41,8 +45,10 @@ Discuss extension development and get support.
 
 Connect with thousands of developers and contribute to the extension ecosystem.
 
-[Learn about enhancing the API](https://www.google.com)  
+[Learn about enhancing the API](https://www.firefox.com)  
 
+</div>
+<a href="https://www.firefox.com"></a>
 </div>
 <!-- END: Tile 2 -->
 
@@ -51,7 +57,7 @@ Connect with thousands of developers and contribute to the extension ecosystem.
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
-[Learn more about the community](https://www.google.com)
+[Learn more about the community](https://www.firefox.com)
 
 </div>
 </div>
@@ -60,6 +66,6 @@ Connect with thousands of developers and contribute to the extension ecosystem.
 
 <!-- Events iframe -->
 <div id="events">
-<iframe style="width: 100%; height: 600px; border: 0;" border="0" class="hub-mgmt-preview-iframe splash-page-iframe is-splash-resize-active" src="//splashthat.com/sites/view/addonscommunityevent.splashthat.com?partial=101626845,534610062&amp;screenshotHash=494156500dffa3d9" id="iFrameResizer0" scrolling="no"></iframe>
+<iframe style="width: 100%; border: 0;" border="0" class="hub-mgmt-preview-iframe splash-page-iframe is-splash-resize-active" src="//splashthat.com/sites/view/addonscommunityevent.splashthat.com?partial=101626845,534610062&amp;screenshotHash=494156500dffa3d9" id="iFrameResizer0" scrolling="no"></iframe>
 </div>
 <!-- END: Events iframe -->

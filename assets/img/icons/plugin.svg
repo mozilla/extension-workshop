@@ -6,7 +6,7 @@
     <mask id="plugin-b" fill="#fff">
       <use xlink:href="#plugin-a"/>
     </mask>
-    <use fill="#000" xlink:href="#plugin-a"/>
+    <use fill="#0060DF" xlink:href="#plugin-a"/>
     <g fill="#0060DF" fill-rule="nonzero" mask="url(#plugin-b)">
       <rect width="24" height="24"/>
     </g>

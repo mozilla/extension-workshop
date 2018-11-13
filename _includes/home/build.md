@@ -22,10 +22,9 @@ Firefox extensions are made with the same technologies used to build the web. Th
 	</div>
 	<!-- END: Video Box -->
 </div>
-<div class="cell small-12 large-10 resources-inline-list" markdown="1">
+<div class="cell small-12 medium-8 large-6 over-dark text-center" markdown="1">
 
-[Get files for the video's example extension](https://www.google.com)
-[View on Github](https://www.google.com "View on Github")
+[Get example extension files](https://www.firefox.com "View on Github")
 
 </div>
 </div>
@@ -39,7 +38,8 @@ Firefox extensions are made with the same technologies used to build the web. Th
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<div class="cell small-12 medium-6 tile" markdown="1">
+<div class="cell small-12 medium-6 tile tile-block-link">
+<div class="block-link" markdown="1">
 
 ![Manifest Keys](assets/img/billboard-more-power.f83d248d8724.png "Manifest Keys")
 
@@ -47,13 +47,15 @@ Firefox extensions are made with the same technologies used to build the web. Th
 
 Every extension contains manifest keys, which define what your extension is and does. They include basic information like extension name and description, as well as features like browser buttons and menu items.
 
-[Learn more about manifest keys](https://www.google.com)
-
+[Learn more about manifest keys](https://www.firefox.com)
+</div>
+<a href="https://www.firefox.com"></a>
 </div>
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<div class="cell small-12 medium-6 tile" markdown="1">
+<div class="cell small-12 medium-6 tile tile-block-link">
+<div class="block-link" markdown="1">
 
 ![JavaScript API](assets/img/billboard-more-power.f83d248d8724.png "JavaScript API")
 
@@ -61,8 +63,10 @@ Every extension contains manifest keys, which define what your extension is and 
 
 For a more interactive and dynamic extension, use the WebExtensions JavaScript API. Give your app advanced capabilities like tab manipulation, user input response, and configuration data management. 
 
-[Learn more about Javascript API](https://www.google.com)
+[Learn more about Javascript API](https://www.firefox.com)
 
+</div>
+<a href="https://www.firefox.com"></a>
 </div>
 <!-- END: Tile 2 -->
 
@@ -81,7 +85,7 @@ For a more interactive and dynamic extension, use the WebExtensions JavaScript A
 
 Firefox is at the forefront of cross-browser compatibility. Firefox extensions are built using the WebExtensions API, so your creation will be accessible to users no matter what browser they use. 
 
-[Learn about browser differences](https://www.google.com)
+[Learn about browser differences](https://www.firefox.com)
 
 </div>
 </div>
@@ -97,14 +101,14 @@ Firefox is at the forefront of cross-browser compatibility. Firefox extensions a
 
 Already have an extension that works in Chrome? Bring your app to Firefox in a few easy steps.
 
-[Get Started](https://www.google.com)
+[Get Started](https://www.firefox.com)
 
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
 
 Top Resources  
-[Differences between Chrome and Firefox](https://www.google.com)
-[Port a Google Chrome extension](https://www.google.com)
+[Differences between Chrome and Firefox](https://www.firefox.com)
+[Port a Google Chrome extension](https://www.firefox.com)
 
 </div>
 
@@ -120,14 +124,14 @@ Top Resources
 
 Starting from scratch? It’s easy and fast to create your cross-browser extension in Firefox.
 
-[Get Started](https://www.google.com)
+[Get Started](https://www.firefox.com)
 
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
 
 Top Resources  
-[Best practices for cross-browser extensions](https://www.google.com)
-[Introduction to developing in Firefox](https://www.google.com)
+[Best practices for cross-browser extensions](https://www.firefox.com)
+[Introduction to developing in Firefox](https://www.firefox.com)
 
 </div>
 
@@ -148,7 +152,7 @@ Top Resources
 
 See if your extension works in Firefox. Simply upload your .crx file.
 
-[Test your extension](https://www.google.com)
+[Test your extension](https://www.firefox.com)
 
 </div>
 </div>
