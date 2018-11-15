@@ -1,5 +1,5 @@
 <!-- Section Intro -->
-<div class="panel section-intro bg-dark bg-alt2">
+<div class="panel section-intro">
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
@@ -142,13 +142,13 @@ You’ll want users! The shortest route to getting, and keeping them, is creatin
 <!-- Tile 1 -->
 <div class="cell small-12 large-4 tile-borderless" markdown="1">
 
-[![What’s Great Content and Design?](assets/img/content_video_thumbnail.png)](DAl0tOYDHxg "Open Popup Video")
+[![What’s Great Content and Design?](assets/img/content_video_thumbnail.jpg)](a0_OsLGI0k4 "Open Popup Video")
 
 #### What’s Great Content and Design?
 
 Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
 
-[Watch the video](DAl0tOYDHxg "Open Popup Video")
+[Watch the video](a0_OsLGI0k4 "Open Popup Video")
 
 </div>
 <!-- END: Tile 1 -->

@@ -329,7 +329,7 @@ html {height: 100%;}
         }
     }
 
-    .banner-content {height: 100%; position: relative; z-index: 2;
+    .banner-content {height: 80%; position: relative; z-index: 2;
         .cell {
             > * {max-width: rem-calc(400); margin-left: auto; margin-right: auto;}
             > h1 {max-width: rem-calc(280);}
@@ -362,6 +362,7 @@ html {height: 100%;}
     }
 
     + .section-tiles {padding-bottom: 1px;
+        .tiles-outside:first-child {background-color: #f8e71c;}
         .tiles-container {position: relative; padding-bottom: 1px; margin-bottom: calc(5.6652083333333vw * 2); background-color: #f8e71c;
             .grid-container {margin-bottom: calc(-5.6652083333333vw * 2);}
 
@@ -440,25 +441,59 @@ html {height: 100%;}
 
     img {display: block; max-height: rem-calc(120); margin: 0 auto;}
 
-    &.tile-block-link {
-        &:before {will-change: transform; backface-visibility: hidden; transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;}
+    &:not(.tile-block-link) {
+        a img {border-radius: $global-radius; transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;}
+        a:hover img {box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); transform: scale(1.01);}
+    }
+
+    &.tile-block-link {cursor: pointer;
 
         .block-link-inline {color: $primary-color;}
 
         &:hover {color: $body-font-color; text-decoration: none;
-            &:before {box-shadow: #{rem-calc(0 4 20)} rgba(12,12,13,0.33); transform: scale(1.01);}
             .block-link-inline {text-decoration: underline;}
         }
     }
 
-    @include breakpoint(medium) {padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0); display: flex; flex-flow: column nowrap; justify-content: stretch;
+    @include breakpoint(medium) {padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0);
         &:before {left: rem-calc(12); width: calc(100% - #{rem-calc(24)});}
 
-        &:not(.tile-block-link) {
+        &:not(.tile-block-link) { display: flex; flex-flow: column nowrap; justify-content: stretch;
             > * {flex: 0 0 auto; width: 100%;
                 &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-end; margin-bottom: 0;}
             }
+        }
 
+        &.tile-block-link {
+            .block-link {height: 100%; display: flex; flex-flow: column nowrap; justify-content: stretch;
+                > * {flex: 0 0 auto; width: 100%;
+                    &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-end; margin-bottom: 0;}
+                }
+            }
+        }
+    }
+
+    @include breakpoint(medium only) {
+
+        &:not(.tile-block-link) {
+            &:not(.medium-6) {
+                > * {max-width: 70%;
+                    &:first-child {position: absolute; top: rem-calc(12); right: rem-calc(12); max-width: 24%;}
+                }
+            }
+        }
+
+        &.tile-block-link {
+            &:not(.medium-6) .block-link {
+                > * {max-width: 70%;
+                    &:first-child {position: absolute; top: rem-calc(12); right: rem-calc(12); max-width: 24%;}
+                }
+            }
+        }
+    }   
+
+    @include breakpoint(large) {
+        &:not(.tile-block-link) {
             &.medium-6 {
                 > * {max-width: 70%;
                     &:first-child {position: absolute; top: rem-calc(12); right: rem-calc(12); max-width: 24%;}
@@ -467,11 +502,9 @@ html {height: 100%;}
         }
 
         &.tile-block-link {
-            .block-link {
-                > * {flex: 0 0 auto; width: 100%;
-                    &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-end; margin-bottom: 0;}
-                }
-            }
+            &:before {will-change: transform; transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;}
+            &:hover:before {box-shadow: #{rem-calc(0 4 20)} rgba(12,12,13,0.33); transform: scale(1.01);}
+
             &.medium-6 .block-link {
                 > * {max-width: 70%;
                     &:first-child {position: absolute; top: rem-calc(12); right: rem-calc(12); max-width: 24%;}
@@ -479,6 +512,7 @@ html {height: 100%;}
             }
         }
     }
+
 }
 
 .tile-compact {position: relative; z-index: 3; padding: rem-calc(20 26) !important; margin: rem-calc(8 0); color: $body-font-color;
@@ -495,7 +529,6 @@ html {height: 100%;}
     }
 
     &.tile-block-link {padding: 0 !important;
-        &:before {will-change: transform; backface-visibility: hidden; transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;}
 
         .block-link {padding: rem-calc(20 26) !important;
             > * {
@@ -509,7 +542,6 @@ html {height: 100%;}
         .block-link-inline {color: $primary-color;}
 
         &:hover {color: $body-font-color; text-decoration: none;
-            &:before {box-shadow: #{rem-calc(0 4 20)} rgba(12,12,13,0.33); transform: scale(1.01);}
             .block-link-inline {text-decoration: underline;}
         }
     }
@@ -518,19 +550,26 @@ html {height: 100%;}
         &:before {left: rem-calc(12); width: calc(100% - #{rem-calc(24)});}
 
         &:not(.tile-block-link) {display: flex; flex-flow: column nowrap; justify-content: stretch;
-            > * {flex: 0 0 auto; width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
+            > * {flex: 0 0 auto; align-items: flex-end; width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
                 &:first-child {width: rem-calc(32); top: rem-calc(24); left: rem-calc(34); right: auto;}
                 &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-end; margin-bottom: 0;}
             }
         }
 
         &.tile-block-link {padding: 0 !important;
-            .block-link {padding: rem-calc(24 34 30) !important;
-                > * {max-width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
+            .block-link {height: 100%; display: flex; flex-flow: column nowrap; justify-content: stretch; padding: rem-calc(24 34 30) !important; 
+                > * {flex: 0 0 auto; align-items: flex-end; width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
                     &:first-child {top: rem-calc(24); left: rem-calc(34); right: auto;}
-                    &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-end; margin-bottom: 0;}
+                    &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-end; align-items: flex-start; margin-bottom: 0;}
                 }
             }
+        }
+    }
+
+    @include breakpoint(large) {
+        &.tile-block-link {
+            &:before {will-change: transform; transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;}
+            &:hover:before {box-shadow: #{rem-calc(0 4 20)} rgba(12,12,13,0.33); transform: scale(1.01);}
         }
     }
 
@@ -539,6 +578,8 @@ html {height: 100%;}
 .tile-borderless {position: relative; z-index: 3; padding: rem-calc(20 30) !important; margin: rem-calc(10 0); color: $body-font-color; text-align: center;
 
     img {display: block; max-height: rem-calc(108); margin: 0 auto;}
+    a img {border-radius: $global-radius; transition: box-shadow .2s ease-in-out;}
+    a:hover img {box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.33);}
 
     @include breakpoint(medium) {padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0); display: flex; flex-flow: column nowrap; justify-content: stretch;
         > * {flex: 0 0 auto; width: 100%;
@@ -612,7 +653,7 @@ html {height: 100%;}
 // ------
 
 .section-cta {
-    .grid-container {min-height: 25vw; padding-top: rem-calc(45); padding-bottom: rem-calc(45);}
+    .grid-container {min-height: 24vw; padding-top: rem-calc(45); padding-bottom: rem-calc(45);}
     .cell {max-width: rem-calc(360);
         > *:last-child {margin-bottom: 0;}
     }
@@ -726,7 +767,7 @@ html {height: 100%;}
     .anatomy-description {position: relative; display: flex; flex-flow: column nowrap; justify-content: center; 
         #anatomy-of-an-extension-graphic-mobile {display: none;}
 
-        button {position: relative; display: block; padding: rem-calc(16 24); text-align: left; color: $primary-color; cursor: pointer;
+        button {position: relative; display: block; padding: rem-calc(16 24); margin: rem-calc(15 0); text-align: left; color: $primary-color; cursor: pointer;
 
             &:after {display: inline-block; margin-left: .3em; font-size: .8em; transition: margin .2s ease-in-out;
                 @include icon_font($char: $icon-arrow-right);
@@ -740,15 +781,12 @@ html {height: 100%;}
     }
 
     .manifest {text-align: center;
-        a {color: $black;
-            img {display: inline-block; margin-right: .3em;}
-            &:hover img {text-decoration: none;}
-        }
+        img {display: inline-block; margin-right: .3em;}
     }
 
     @include breakpoint(medium) {display: flex; flex-flow: row nowrap; justify-content: stretch;
         .anatomy-illustration {flex: 0 0 70%;
-            #anatomy-of-an-extension-graphic {display: block; margin: #{rem-calc(32)} auto #{rem-calc(24)}; max-width: 100%;
+            #anatomy-of-an-extension-graphic {display: block; margin: #{rem-calc(32)} auto 0; max-width: 100%;
                 .tile {cursor: pointer; transition: transform .3s ease-in-out, opacity .3s ease-in-out;
                     &.hover {transform: translate(#{rem-calc(8)},0);}
                 }
@@ -783,7 +821,6 @@ html {height: 100%;}
     @include breakpoint(small down) {
         .anatomy-description {min-height: calc(157.037037037037vw - 24px); padding: 39.2592592592593% 0; margin: rem-calc(16 0 8); align-items: center; justify-content: space-between;
             #anatomy-of-an-extension-graphic-mobile {display: block; position: absolute; left: 0; top: 0;}
-            // button {margin-top: rem-calc(55);}
         }
     }
 }
