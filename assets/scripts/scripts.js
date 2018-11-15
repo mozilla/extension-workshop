@@ -558,31 +558,38 @@ jQuery(document).ready(function($) {
     $.fn.extenstionAnatomy = function() {
         var $this = this;
 
-        var $tile_ui = $('#tile-ui');
-        var $tile_cs = $('#tile-cs');
-        var $tile_bs = $('#tile-bs');
+        var $tile_interface = $('#interface');
+        var $tile_content = $('#content');
+        var $tile_background = $('#background');
 
-        $tile_ui.on('mouseenter', function() {
-            $tile_ui.addClass('hover');
+        $tile_interface.on('mouseenter', function() {
+            $tile_interface.addClass('hover');
         }).on('mouseleave', function() {
-            $tile_ui.removeClass('hover');
+            $tile_interface.removeClass('hover');
         });
 
-        $tile_cs.on('mouseenter', function() {
-            $tile_cs.addClass('hover');
+        $tile_content.on('mouseenter', function() {
+            $tile_content.addClass('hover');
         }).on('mouseleave', function() {
-            $tile_cs.removeClass('hover');
+            $tile_content.removeClass('hover');
         });
 
-        $tile_bs.on('mouseenter', function() {
-            $tile_bs.addClass('hover');
+        $tile_background.on('mouseenter', function() {
+            $tile_background.addClass('hover');
         }).on('mouseleave', function() {
-            $tile_bs.removeClass('hover');
+            $tile_background.removeClass('hover');
         });
 
-        $this.one('inview', function(event, isInView) {
+        $this.on('inview', function(event, isInView) {
             if (isInView) {
-                $this.addClass('running');
+                setTimeout(function() {
+                    $this.addClass('step-one');
+                }, 700);
+                setTimeout(function() {
+                    $this.addClass('step-two');
+                }, 900);
+            } else {
+                $this.removeClass('step-one step-two');
             }
         });
     }
