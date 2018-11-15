@@ -87,7 +87,7 @@ $icon-github: "\e908";
 $breakpoints: (
   small: 0,
   medium: 640px,
-  large: 960px, // 1024px,
+  large: 960px, 
   xlarge: 1320px,
   xxlarge: 1920px,
 );
@@ -146,9 +146,6 @@ $header-styles: (
   }
   @include breakpoint(large) {
     font-size: rem-calc(map_get(map_get(map_get($header-styles, 'large'),$type),'font-size'));
-  }
-  @include breakpoint(xxlarge) {
-    font-size: rem-calc(map_get(map_get(map_get($header-styles, 'xxlarge'),$type),'font-size'));
   }
 }
 

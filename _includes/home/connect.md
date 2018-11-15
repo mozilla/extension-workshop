@@ -19,7 +19,7 @@ When you build on Firefox, you build with a community of extension developers. A
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://www.firefox.com" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Community Forums](assets/img/icons/community-forums.svg "Community Forums")
@@ -28,15 +28,14 @@ When you build on Firefox, you build with a community of extension developers. A
 
 Discuss extension development and get support. 
 
-[Join the conversation](https://www.firefox.com)
+<span class="block-link-inline">Join the conversation</span>
 
 </div>
-<a href="https://www.firefox.com"></a>
-</div>
+</a>
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<div class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://www.firefox.com" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Get Involved](assets/img/icons/get-involved.svg "Get Involved")
@@ -45,11 +44,10 @@ Discuss extension development and get support.
 
 Connect with thousands of developers and contribute to the extension ecosystem.
 
-[Learn about enhancing the API](https://www.firefox.com)  
+<span class="block-link-inline">Learn about enhancing the API</span>
 
 </div>
-<a href="https://www.firefox.com"></a>
-</div>
+</a>
 <!-- END: Tile 2 -->
 
 </div>

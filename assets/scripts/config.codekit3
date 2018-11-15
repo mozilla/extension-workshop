@@ -49,6 +49,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js/parallaxFG.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js/parallaxFG-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js/tinypubsub.js": {
 		"ft": 64,
 		"ma": 0,

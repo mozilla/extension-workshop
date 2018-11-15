@@ -38,36 +38,35 @@ Firefox extensions are made with the same technologies used to build the web. Th
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<div class="cell small-12 medium-6 tile tile-block-link">
+<a href="https://www.firefox.com" class="cell small-12 medium-6 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Manifest Keys](assets/img/billboard-more-power.f83d248d8724.png "Manifest Keys")
+![Manifest Keys](assets/img/Manifest-Keys.svg "Manifest Keys")
 
 #### Manifest Keys
 
 Every extension contains manifest keys, which define what your extension is and does. They include basic information like extension name and description, as well as features like browser buttons and menu items.
 
-[Learn more about manifest keys](https://www.firefox.com)
+<span class="block-link-inline">Learn more about manifest keys</span>
+
 </div>
-<a href="https://www.firefox.com"></a>
-</div>
+</a>
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<div class="cell small-12 medium-6 tile tile-block-link">
+<a href="https://www.firefox.com" class="cell small-12 medium-6 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![JavaScript API](assets/img/billboard-more-power.f83d248d8724.png "JavaScript API")
+![JavaScript API](assets/img/Javascript-API.svg "JavaScript API")
 
 #### JavaScript API
 
 For a more interactive and dynamic extension, use the WebExtensions JavaScript API. Give your app advanced capabilities like tab manipulation, user input response, and configuration data management. 
 
-[Learn more about Javascript API](https://www.firefox.com)
+<span class="block-link-inline">Learn more about Javascript API</span>
 
 </div>
-<a href="https://www.firefox.com"></a>
-</div>
+</a>
 <!-- END: Tile 2 -->
 
 </div>
@@ -95,7 +94,7 @@ Firefox is at the forefront of cross-browser compatibility. Firefox extensions a
 <!-- Tile 1 -->
 <div class="cell small-12 medium-6 large-5 tile-borderless tile-extended" markdown="1">
 
-![Bring Your Extension to Firefox](assets/img/billboard-more-power.f83d248d8724.png "Bring Your Extension to Firefox")
+![Bring Your Extension to Firefox](assets/img/Bring-Extension-Firefox.svg "Bring Your Extension to Firefox")
 
 #### Bring Your Extension to Firefox
 
@@ -118,7 +117,7 @@ Top Resources
 <!-- Tile 2 -->
 <div class="cell small-12 medium-6 large-5 tile-borderless tile-extended" markdown="1">
 
-![Create a New Extension](assets/img/billboard-more-power.f83d248d8724.png "Create a New Extension")
+![Create a New Extension](assets/img/Create-New-Extension.svg "Create a New Extension")
 
 #### Create a New Extension
 
@@ -144,9 +143,9 @@ Top Resources
 
 
 <!-- Section CTA -->
-<div class="section-cta bg-dark img" style="background-image: url(assets/img/cta-banner.png);">
-<div class="grid-container grid-x grid-padding-x">
-<div class="cell small-12 medium-5 large-3 large-offset-1" markdown="1">
+<div class="section-cta bg-dark img" style="background-image: url(assets/img/extension.svg);">
+<div class="grid-container grid-x grid-padding-x align-middle">
+<div class="cell small-10 large-3 large-offset-1" markdown="1">
 
 ### Your extension might already be compatible!
 

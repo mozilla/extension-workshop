@@ -1,4 +1,4 @@
-// @codekit-prepend "js/tinypubsub.js", "js/breakpoints.js", "js/velocity.js", "js/velocity.ui.js", "js/parallax.js", "js/inview.js", "js/youtubeplayer.js";
+// @codekit-prepend "js/tinypubsub.js", "js/breakpoints.js", "js/velocity.js", "js/velocity.ui.js", "js/parallax.js", "js/parallaxFG.js", "js/inview.js", "js/youtubeplayer.js";
 
 /*!
  * Glance Digital Custom JavaScript Programing
@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
 
 
     // 2. Anchor Link Scroll
-    $("a[href^='#']").scrollto({offset_lg: 50, offset_sm: 50});
+    $("a[href^='#']").scrollto({offset_lg: 38, offset_sm: 38});
 
 
     // 3. Show in View
@@ -53,7 +53,13 @@ jQuery(document).ready(function($) {
     // *****                                         ******
 
     if ($('.parallax').length) {
-        $('.parallax').parallax({offsetIntertia: -.2});
+        $('.parallax').parallax({offsetIntertia: -.15});
+    }
+    if ($('.parallaxFG-right').length) {
+        $('.parallaxFG-right').parallaxFG({offsetIntertia: .075, axis: 'x'});
+    }
+    if ($('.parallaxFG-left').length) {
+        $('.parallaxFG-left').parallaxFG({offsetIntertia: -.075, axis: 'x'});
     }
 
 
@@ -499,7 +505,8 @@ jQuery(document).ready(function($) {
     $.fn.rss_feed = function(options) {
         var settings = $.extend( {
             source : null,
-            container : '<div class="cell small-12 medium-4 tile no-link"></div>',
+            container : '<div class="cell small-12 large-4 tile no-link"></div>',
+            breakpoint : 'atleast_large',
         }, options);
 
         var $container = this;
@@ -522,17 +529,32 @@ jQuery(document).ready(function($) {
 
             $cell.append($('<p class="continue"></p>'));
             $cell.find('p a:last-child').appendTo($cell.find('.continue'));
-            // $container.append($cell);
-            $container.slick('slickAdd',$cell);
+            $container.append($cell);
+        });
 
+        $container.slick({
+            mobileFirst: true,
+            dots: true,
+            arrows: false,
+            centerMode: true,
+            centerPadding: '16px',
+            slidesToShow: 1,
+            responsive: [
+                {
+                    breakpoint: 960,
+                    settings: 'unslick'
+                }
+            ]
         });
 
         return this;
     }
 
 
+    
     // 8. Anatomy of an extenstion
     // ------
+
     $.fn.extenstionAnatomy = function() {
         var $this = this;
 

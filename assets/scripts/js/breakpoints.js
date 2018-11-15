@@ -25,11 +25,8 @@
                 {label:'small', match:"(max-width: 639px)"},
                 {label:'medium', match:"(min-width: 640px) and (max-width: 1079px)"},
                 {label:'atleast_medium', match:"(min-width: 640px)"},
-                {label:'large', match:"(min-width: 1080px) and (max-width: 1199px)"},
-                {label:'atleast_large', match:"(min-width: 1080px)"},
-                {label:'xlarge', match:"(min-width: 1320px) and (max-width: 1919px)"},
-                {label:'atleast_xlarge', match:"(min-width: 1320px)"},
-                {label:'xxlarge', match:"(min-width: 1920px)"}
+                {label:'large', match:"(min-width: 960px) and (max-width: 1319px)"},
+                {label:'atleast_large', match:"(min-width: 960px)"}
             )
         }, options);
          
