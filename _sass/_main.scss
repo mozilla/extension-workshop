@@ -616,7 +616,7 @@ html {height: 100%;}
 // Popup Panel
 // ------
 
-.popup-panel {display: none; position: fixed; z-index: 9; padding: rem-calc(20 26) !important; margin: rem-calc(8 0); color: $body-font-color;
+.popup-panel {display: none; max-width: rem-calc(460); position: fixed; z-index: 9; padding: rem-calc(20 26) !important; margin: rem-calc(8 0); color: $body-font-color;
     &:before {content:""; display: block; position: absolute; left: rem-calc(6); width: calc(100% - #{rem-calc(12)}); top: 0; height: 100%; background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1);}
 
     > * {position: relative; z-index: 2;
@@ -630,7 +630,7 @@ html {height: 100%;}
         }
     }
 
-    @include breakpoint(medium) { padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0); 
+    @include breakpoint(medium) {padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0); 
         &:before {left: rem-calc(12); width: calc(100% - #{rem-calc(24)});}
 
         > *:not(:last-child) {width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
@@ -830,12 +830,12 @@ html {height: 100%;}
                 #box_sides {transition: transform .3s ease-in-out;}
 
                 &:not(.step-one) {
-                    #box_bottom_back {transform: translateY(calc(50% - #{rem-calc(115)})) scale(1, 0.424920127795527); opacity: 0;}
-                    #box_bottom_front {transform: translateY(#{rem-calc(-90)});}
-                    #box_top_back {transform: translateY(#{rem-calc(90)});}
-                    #box_top_front_transparent {transform: translateY(#{rem-calc(90)});}
-                    #box_top_front_solid {transform: translateY(#{rem-calc(90)}); opacity: 1;}
-                    #box_sides {transform: translateY(calc(50% - #{rem-calc(110)})) scale(1, 0.424920127795527);}
+                    #box_bottom_back {transform: translateY(calc(50% - #{rem-calc(115)})) scale(1, 0.294871794871795); opacity: 0;}
+                    #box_bottom_front {transform: translateY(#{rem-calc(-110)});}
+                    #box_top_back {transform: translateY(#{rem-calc(110)});}
+                    #box_top_front_transparent {transform: translateY(#{rem-calc(110)});}
+                    #box_top_front_solid {transform: translateY(#{rem-calc(110)}); opacity: 1;}
+                    #box_sides {transform: translateY(calc(50% - #{rem-calc(74)})) scale(1, 0.294871794871795);}
                 }
                 &:not(.step-two) {
                     #background {transform: translateY(#{rem-calc(-30)}); opacity: 0;}
@@ -846,6 +846,15 @@ html {height: 100%;}
         }
         .anatomy-description {flex: 0 0 30%;
             button {margin: rem-calc(15 0);}
+        }
+        #anatomy-control {
+            button {transition: opacity .3s .15s ease-in-out, transform .3s ease-in-out;}
+            &:not(.step-two) {
+                button {opacity: 0;
+                    &:first-of-type {transform: translateY(#{rem-calc(30)});}
+                    &:last-of-type {transform: translateY(#{rem-calc(-30)});}
+                }
+            }
         }
     }
 
