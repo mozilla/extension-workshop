@@ -10,7 +10,7 @@
 
 Build on the web’s most customizable browser. Get your great idea into the hands of millions of users. Join an international community of developers in the movement to put people in control of their online lives. __(P.S. There’s no cost to participate!)__
 
-[Learn more about extensions](https://www.firefox.com)
+[Learn more about extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
 
 </div>
 </div>
@@ -86,7 +86,7 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
-[View more extension code examples](https://www.firefox.com)
+[View more extension code examples](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
 
 [Explore live extensions](https://www.firefox.com)
 
@@ -109,7 +109,7 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 	
 An extension is a simple collection of files that modify the browser’s appearance and behavior. It can add user interface elements, alter content, or perform background tasks that enhance browsing.
 
-[Learn more about extension anatomy](https://www.firefox.com)
+[Learn more about extension anatomy](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 
 </div>
 </div>

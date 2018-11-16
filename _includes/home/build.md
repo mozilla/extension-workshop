@@ -38,7 +38,7 @@ Firefox extensions are made with the same technologies used to build the web. Th
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<a href="https://www.firefox.com" class="cell small-12 medium-6 tile tile-block-link">
+<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json" class="cell small-12 medium-6 tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Manifest Keys](assets/img/Manifest-Keys.svg "Manifest Keys")
@@ -54,7 +54,7 @@ Every extension contains manifest keys, which define what your extension is and 
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://www.firefox.com" class="cell small-12 medium-6 tile tile-block-link">
+<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API" class="cell small-12 medium-6 tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![JavaScript API](assets/img/Javascript-API.svg "JavaScript API")
@@ -84,7 +84,7 @@ For a more interactive and dynamic extension, use the WebExtensions JavaScript A
 
 Firefox is at the forefront of cross-browser compatibility. Firefox extensions are built using the WebExtensions API, so your creation will be accessible to users no matter what browser they use. 
 
-[Learn about browser differences](https://www.firefox.com)
+[Learn about browser differences](https://docs.google.com/document/d/1c8UOweEPigU-acWR74Xv6VelJuZvB0JTD3cvASaZYNE/edit%23heading%3Dh.hrrn5237ns60&sa=D&ust=1537825804932000&usg=AFQjCNGGw0CwN2K2INIjLHWu_pE3CnH4_w)
 
 </div>
 </div>
@@ -106,8 +106,8 @@ Already have an extension that works in Chrome? Bring your app to Firefox in a f
 <div class="secondary-actions" markdown="1">
 
 Top Resources  
-[Differences between Chrome and Firefox](https://www.firefox.com)
-[Port a Google Chrome extension](https://www.firefox.com)
+[Differences between Chrome and Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
+[Port a Google Chrome extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting)
 
 </div>
 
@@ -130,7 +130,7 @@ Starting from scratch? It’s easy and fast to create your cross-browser extensi
 
 Top Resources  
 [Best practices for cross-browser extensions](https://www.firefox.com)
-[Introduction to developing in Firefox](https://www.firefox.com)
+[Introduction to developing in Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 
 </div>
 
@@ -151,7 +151,7 @@ Top Resources
 
 See if your extension works in Firefox. Simply upload your .crx file.
 
-[Test your extension](https://www.firefox.com)
+[Test your extension](https://www.extensiontest.com/)
 
 </div>
 </div>

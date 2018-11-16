@@ -1,5 +1,5 @@
 <!-- Section Intro -->
-<div class="panel section-intro bg-dark bg-alt2">
+<div class="panel section-intro">
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-10 large-8 text-center" markdown="1">
 
@@ -19,7 +19,7 @@ When you build on Firefox, you build with a community of extension developers. A
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<a href="https://www.firefox.com" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://discourse.mozilla.org/c/add-ons" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Community Forums](assets/img/icons/community-forums.svg "Community Forums")
@@ -35,7 +35,7 @@ Discuss extension development and get support.
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://www.firefox.com" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://wiki.mozilla.org/Add-ons/Community/" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Get Involved](assets/img/icons/get-involved.svg "Get Involved")
@@ -55,7 +55,7 @@ Connect with thousands of developers and contribute to the extension ecosystem.
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
-[Learn more about the community](https://www.firefox.com)
+[Learn more about the community](https://wiki.mozilla.org/WebExtensions/policy)
 
 </div>
 </div>
@@ -63,7 +63,7 @@ Connect with thousands of developers and contribute to the extension ecosystem.
 <!-- END: Section Tiles -->
 
 <!-- Events iframe -->
-<div id="events">
-<iframe style="width: 100%; border: 0;" border="0" class="hub-mgmt-preview-iframe splash-page-iframe is-splash-resize-active" src="//splashthat.com/sites/view/addonscommunityevent.splashthat.com?partial=101626845,534610062&amp;screenshotHash=494156500dffa3d9" id="iFrameResizer0" scrolling="no"></iframe>
+<div id="events" class="bg-grey">
+<iframe style="width: 100%; height: 100%; border: 0; overflow: hidden;" class="hub-mgmt-preview-iframe splash-page-iframe is-splash-resize-active" src="//splashthat.com/sites/view/addonscommunityevent.splashthat.com?partial=823525519,495830716&amp;screenshotHash=494156500dffa3d9" id="iFrameResizer1" scrolling="no"></iframe><script type="text/javascript" src="//splashthat.com/v2/js/splash/bundles/splash-js-1.0.min.js"></script>
 </div>
 <!-- END: Events iframe -->

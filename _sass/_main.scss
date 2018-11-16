@@ -476,7 +476,7 @@ html {height: 100%;}
     @include breakpoint(medium only) {
 
         &:not(.tile-block-link) {
-            &:not(.medium-6) {
+            &:not(.medium-6):not(.no-img) {
                 > * {max-width: 70%;
                     &:first-child {position: absolute; top: rem-calc(12); right: rem-calc(12); max-width: 24%;}
                 }
@@ -484,7 +484,7 @@ html {height: 100%;}
         }
 
         &.tile-block-link {
-            &:not(.medium-6) .block-link {
+            &:not(.medium-6):not(.no-img) .block-link {
                 > * {max-width: 70%;
                     &:first-child {position: absolute; top: rem-calc(12); right: rem-calc(12); max-width: 24%;}
                 }
@@ -494,7 +494,7 @@ html {height: 100%;}
 
     @include breakpoint(large) {
         &:not(.tile-block-link) {
-            &.medium-6 {
+            &.medium-6:not(.no-img) {
                 > * {max-width: 70%;
                     &:first-child {position: absolute; top: rem-calc(12); right: rem-calc(12); max-width: 24%;}
                 }
@@ -505,7 +505,7 @@ html {height: 100%;}
             &:before {will-change: transform; transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;}
             &:hover:before {box-shadow: #{rem-calc(0 4 20)} rgba(12,12,13,0.33); transform: scale(1.01);}
 
-            &.medium-6 .block-link {
+            &.medium-6:not(.no-img) .block-link {
                 > * {max-width: 70%;
                     &:first-child {position: absolute; top: rem-calc(12); right: rem-calc(12); max-width: 24%;}
                 }
@@ -830,9 +830,7 @@ html {height: 100%;}
 // Events
 // ------
 
-#events .splash-page-iframe {height: 650px;
-    @include breakpoint(medium) {height: 550px;}
-}
+#events {margin-bottom: -1px; overflow: hidden;}
 
 
 

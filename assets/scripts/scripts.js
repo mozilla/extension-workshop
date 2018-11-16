@@ -505,7 +505,7 @@ jQuery(document).ready(function($) {
     $.fn.rss_feed = function(options) {
         var settings = $.extend( {
             source : null,
-            container : '<div class="cell small-12 large-4 tile no-link"></div>',
+            container : '<div class="cell small-12 large-4 tile no-link no-img"></div>',
             breakpoint : 'atleast_large',
         }, options);
 
@@ -557,7 +557,9 @@ jQuery(document).ready(function($) {
 
     $.fn.extenstionAnatomy = function() {
         var $this = this;
-
+        var first = true;
+        var timer1 = null;
+        var timer2 = null;
         var $tile_interface = $('#interface');
         var $tile_content = $('#content');
         var $tile_background = $('#background');
@@ -581,13 +583,17 @@ jQuery(document).ready(function($) {
         });
 
         $this.on('inview', function(event, isInView) {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
             if (isInView) {
-                setTimeout(function() {
+                var delay = first ? 700 : 100;
+                timer1 = setTimeout(function() {
                     $this.addClass('step-one');
-                }, 700);
-                setTimeout(function() {
+                }, delay);
+                timer2 = setTimeout(function() {
                     $this.addClass('step-two');
-                }, 900);
+                }, delay+200);
+                first = false;
             } else {
                 $this.removeClass('step-one step-two');
             }

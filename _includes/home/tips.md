@@ -1,5 +1,5 @@
 <!-- Section Intro -->
-<div class="panel section-intro">
+<div class="panel section-intro bg-dark bg-alt2">
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
@@ -10,7 +10,7 @@
 <div class="grid-container grid-x grid-padding-x tiles-container">
 
 <!-- Tile 1 -->
-<a href="https://www.firefox.com" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Web-Ext](assets/img/icons/web-ext.svg "Web-Ext")
@@ -24,7 +24,7 @@ Accelerate development with this Firefox command line tool. See real-time code c
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://www.firefox.com" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://github.com/hiikezoe/web-ext-webpack-plugin/blob/master/README.md" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Web-Ext Webpack Plugin](assets/img/icons/plugin.svg "Web-Ext Webpack Plugin")
@@ -38,7 +38,7 @@ This plug-in makes webpack aware of extensions so you can easily bundle your Jav
 <!-- END: Tile 2 -->
 
 <!-- Tile 3 -->
-<a href="https://www.firefox.com" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://github.com/mozilla/webextension-polyfill" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Browser API Polyfill](assets/img/icons/browser-api.svg "Browser API Polyfill")
@@ -52,7 +52,7 @@ Create your extension using the Firefox promise-based API, and the polyfill libr
 <!-- END: Tile 3 -->
 
 <!-- Tile 4 -->
-<a href="https://www.firefox.com" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Debugging" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Debug Your Extension](assets/img/icons/debug.svg "Debug Your Extension")
@@ -92,7 +92,7 @@ Check your extension for errors, and modify the code as needed.
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<a href="https://www.firefox.com" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Publish on Firefox](assets/img/icons/publish-on-firefox.svg "Publish on Firefox")
@@ -106,7 +106,7 @@ With millions of monthly users and Firefox integration, publishing your extensio
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://www.firefox.com" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Publish on Your Own](assets/img/icons/publish-on-own.svg "Publish on Your Own")
@@ -176,7 +176,7 @@ People spend just seconds on your product page. Make those seconds count with st
 
 Build in UX best practices and  the positive reviews and ratings  will follow.
 
-[Learn more about usability](https://www.firefox.com)
+[Learn more about usability](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)
 
 </div>
 <!-- END: Tile 3 -->
