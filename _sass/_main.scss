@@ -212,7 +212,7 @@ html {height: 100%;}
         nav {margin: rem-calc(12 0);
             .jump-link {display: none;}
 
-            .group-a {overflow-x: scroll;}
+            .group-a {overflow-x: scroll; -ms-overflow-style: -ms-autohiding-scrollbar;}
 
             .fwd, .bak {visibility: hidden; pointer-events: none; position: absolute; z-index: 2; top: 0; height: 100%; width: rem-calc(64); display: flex; flex-flow: column nowrap; justify-content: center; align-items: center; cursor: pointer; font-size: rem-calc(16); text-align: center; color: $body-font-color; transition: left .3s ease-in-out, right .3s ease-in-out; 
                 &:after {display: block; flex: 0 0 auto; padding: rem-calc(0 16);}
