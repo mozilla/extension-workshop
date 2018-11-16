@@ -613,6 +613,37 @@ html {height: 100%;}
 
 
 
+// Popup Panel
+// ------
+
+.popup-panel {display: none; position: fixed; z-index: 9; padding: rem-calc(20 26) !important; margin: rem-calc(8 0); color: $body-font-color;
+    &:before {content:""; display: block; position: absolute; left: rem-calc(6); width: calc(100% - #{rem-calc(12)}); top: 0; height: 100%; background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1);}
+
+    > * {position: relative; z-index: 2;
+        &:first-child {display: none;}
+        &:nth-last-child(2) {margin-bottom: 0;}
+        &:last-child {position: absolute; top: rem-calc(12); right: rem-calc(20);
+            button {color: $medium-gray; font-size: rem-calc(24); cursor: pointer;
+                &:before {@include icon_font($char: $icon-close);}
+                &:hover {color: $primary-color;}
+            }
+        }
+    }
+
+    @include breakpoint(medium) { padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0); 
+        &:before {left: rem-calc(12); width: calc(100% - #{rem-calc(24)});}
+
+        > *:not(:last-child) {width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
+            &:first-child {display: block; position: absolute; width: rem-calc(32); top: rem-calc(24); left: rem-calc(34); 
+                img {width: rem-calc(32);}
+            }
+        }
+    }
+
+}
+
+
+
 // Mobile slideshow tiles
 // ------
 
@@ -767,7 +798,7 @@ html {height: 100%;}
     .anatomy-description {position: relative; display: flex; flex-flow: column nowrap; justify-content: center; 
         #anatomy-of-an-extension-graphic-mobile {display: none;}
 
-        button {position: relative; display: block; padding: rem-calc(16 24); margin: rem-calc(15 0); text-align: left; color: $primary-color; cursor: pointer;
+        button {position: relative; display: block; padding: rem-calc(16 24); text-align: left; color: $primary-color; cursor: pointer;
 
             &:after {display: inline-block; margin-left: .3em; font-size: .8em; transition: margin .2s ease-in-out;
                 @include icon_font($char: $icon-arrow-right);
@@ -813,14 +844,19 @@ html {height: 100%;}
                 }
             }
         }
-        .anatomy-description {flex: 0 0 30%; 
-            #anatomy-of-an-extension-graphic-mobile {display: none;}
+        .anatomy-description {flex: 0 0 30%;
+            button {margin: rem-calc(15 0);}
         }
     }
 
     @include breakpoint(small down) {
-        .anatomy-description {min-height: calc(157.037037037037vw - 24px); padding: 39.2592592592593% 0; margin: rem-calc(16 0 8); align-items: center; justify-content: space-between;
-            #anatomy-of-an-extension-graphic-mobile {display: block; position: absolute; left: 0; top: 0;}
+        .anatomy-description {height: calc(157.037037037037vw - 24px); padding: 36.5% 0; margin: rem-calc(16 0 8); align-items: center; justify-content: space-between;
+            #anatomy-of-an-extension-graphic-mobile {display: block; position: absolute; left: 0; top: 0; right: 0; bottom: 0;
+                #mobile-box_bottom_back {opacity: .2;}
+                #mobile-box_top_front_solid {opacity: .2;}
+            }
+
+            button {margin: rem-calc(0 0 -20);}
         }
     }
 }

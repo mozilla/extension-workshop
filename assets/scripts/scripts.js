@@ -555,7 +555,10 @@ jQuery(document).ready(function($) {
     // 8. Anatomy of an extenstion
     // ------
 
-    $.fn.extenstionAnatomy = function() {
+    $.fn.extenstionAnatomy = function(options) {
+        var settings = $.extend( {
+            control: $('#anatomy-control'),
+        }, options);
         var $this = this;
         var first = true;
         var timer1 = null;
@@ -597,6 +600,21 @@ jQuery(document).ready(function($) {
             } else {
                 $this.removeClass('step-one step-two');
             }
+        });
+
+        settings.control.on('mouseenter', 'button', function() {
+            var panel = $(this).data('panel');
+            if (panel == 'anatomy-ui') {
+                $tile_interface.addClass('hover');
+            } else if (panel == 'anatomy-content') {
+                $tile_content.addClass('hover');
+            } else if (panel == 'anatomy-background') {
+                $tile_background.addClass('hover');
+            }
+        }).on('mouseleave', 'button', function() {
+            $tile_interface.removeClass('hover');
+            $tile_content.removeClass('hover');
+            $tile_background.removeClass('hover');
         });
     }
 

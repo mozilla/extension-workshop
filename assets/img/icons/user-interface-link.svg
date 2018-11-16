@@ -6,8 +6,8 @@
     <mask id="user-interface-b" fill="#fff">
       <use xlink:href="#user-interface-a"/>
     </mask>
-    <use fill="#0a0a0a" fill-rule="nonzero" xlink:href="#user-interface-a"/>
-    <g fill="#0a0a0a" fill-rule="nonzero" mask="url(#user-interface-b)">
+    <use fill="#0060DF" fill-rule="nonzero" xlink:href="#user-interface-a"/>
+    <g fill="#0060DF" fill-rule="nonzero" mask="url(#user-interface-b)">
       <rect width="24" height="24"/>
     </g>
   </g>
