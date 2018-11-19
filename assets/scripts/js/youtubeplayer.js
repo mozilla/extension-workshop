@@ -74,6 +74,11 @@
 
 		this.on('click', settings.cta, function(e) {
         	e.preventDefault();
+
+        	if (playing) {
+				closeVideo(fast=true);
+			}
+
         	$link = $(this);
         	$link_container = $link.closest(settings.cta_container);
         	$target = settings.target == null ? $('#' + $link.data(settings.target_data)) : settings.target;
@@ -167,17 +172,23 @@ console.log('open video');
 		}
 
 
-		function closeVideo() {
+		function closeVideo(fast=false) {
 console.log('close video');
+
 			yt_player.stopVideo();
 			playing = false;
 			$container.removeClass('playing');
 			$link_container.removeClass('playing');
 			if (settings.target) {$target.velocity('fadeOut');}
-			setTimeout(function() {
+			if (fast) {
 				yt_player = null;
 				$container.remove();
-			},1000);
+			} else {
+				setTimeout(function() {
+					yt_player = null;
+					$container.remove();
+				},1000);
+			}
 		}
 
 	}
