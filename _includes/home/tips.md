@@ -69,7 +69,7 @@ Check your extension for errors, and modify the code as needed.
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
-[More development tools](https://www.firefox.com)
+[More development tools](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Development_Tools)
 
 </div>
 </div>

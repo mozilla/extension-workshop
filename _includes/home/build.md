@@ -24,7 +24,7 @@ Firefox extensions are made with the same technologies used to build the web. Th
 </div>
 <div class="cell small-12 medium-8 large-6 over-dark text-center" markdown="1">
 
-[Get example extension files](https://www.firefox.com "View on Github")
+[Get example extension files](https://github.com/mdn/webextensions-examples "View on Github")
 
 </div>
 </div>
@@ -100,7 +100,7 @@ Firefox is at the forefront of cross-browser compatibility. Firefox extensions a
 
 Already have an extension that works in Chrome? Bring your app to Firefox in a few easy steps.
 
-[Get Started](https://www.firefox.com)
+[Get Started](https://addons.mozilla.org/en-US/firefox/#login)
 
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
@@ -123,13 +123,13 @@ Top Resources
 
 Starting from scratch? It’s easy and fast to create your cross-browser extension in Firefox.
 
-[Get Started](https://www.firefox.com)
+[Get Started](https://addons.mozilla.org/en-US/firefox/#login)
 
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
 
 Top Resources  
-[Best practices for cross-browser extensions](https://www.firefox.com)
+[Best practices for cross-browser extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension)
 [Introduction to developing in Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 
 </div>
@@ -143,7 +143,8 @@ Top Resources
 
 
 <!-- Section CTA -->
-<div class="section-cta bg-dark img" style="background-image: url(assets/img/extension.svg);">
+<div class="section-cta bg-dark" style="background-color: #4f42ff">
+<div class="img" style="background-image: url(assets/img/extension-alt.svg);"></div>
 <div class="grid-container grid-x grid-padding-x align-middle">
 <div class="cell small-10 large-3 large-offset-1" markdown="1">
 

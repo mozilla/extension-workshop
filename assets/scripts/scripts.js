@@ -86,7 +86,7 @@ jQuery(document).ready(function($) {
             slidesToShow: 1,
             responsive: [
                 {
-                    breakpoint: 960,
+                    breakpoint: 640,
                     settings: 'unslick'
                 }
             ]
@@ -548,7 +548,7 @@ jQuery(document).ready(function($) {
             slidesToShow: 1,
             responsive: [
                 {
-                    breakpoint: 960,
+                    breakpoint: 640,
                     settings: 'unslick'
                 }
             ]
@@ -638,7 +638,7 @@ jQuery(document).ready(function($) {
         var settings = $.extend( {
             panels    : '.popup-panel',
             offset_x  : -220,
-            offset_y  : -110,
+            offset_y  : -55,
             padding_x : 0,
             padding_y : 80,
         }, options);
@@ -650,7 +650,7 @@ jQuery(document).ready(function($) {
             var $link = $(this);
             var $panel = $( '#' + $link.data('panel') );
             if ($panels.filter(':visible').length) {
-                $panels.velocity('transition.expandOut', {duration: 300, complete: function() {
+                $panels.velocity('transition.slideDownOut', {duration: 300, complete: function() {
                     openPopup($link, $panel);
                 }});
             } else {
@@ -663,9 +663,9 @@ jQuery(document).ready(function($) {
                 var x = $link.offset().left + settings.offset_x > settings.padding_x ? $link.offset().left + settings.offset_x : settings.padding_x;
                 var y = $link.offset().top + settings.offset_y - $window.scrollTop() > settings.padding_y ? $link.offset().top + settings.offset_y - $window.scrollTop() : settings.padding_y;
                 $panel.css({top:y, left:x});
-                $panel.velocity('transition.expandIn', {duration: 300});
+                $panel.velocity('transition.slideUpIn', {duration: 300});
                 $panel.find('button.close').off('click').on('click', function() {
-                    $panel.velocity('transition.expandOut', {duration: 300});
+                    $panel.velocity('transition.slideDownOut', {duration: 300});
                 });
             }
         }
