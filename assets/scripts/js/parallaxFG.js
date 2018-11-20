@@ -25,7 +25,7 @@
             offsetPosition: 0,
             axis: 'y',
             transformStyles: 'none',
-            breakpoint : false
+            breakpoint : true
         }, options);
         
         var $window = $(window);

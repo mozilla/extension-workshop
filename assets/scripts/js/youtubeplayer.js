@@ -28,9 +28,10 @@
 		// whenever youtube callback was called = deferred resolved your custom function will be executed with YT as an argument
 		YTdeferred.done(function(YT) {
 
-			$(document).video_cta({yt_object: YT, cta: '.video-link', close: null});
+			// $(document).video_cta({yt_object: YT, cta: '.video-link', close: null});
+			// $(document).video_cta({yt_object: YT, cta: 'a[title|="Open Popup Video"]', close: null, youtube_id_data: 'href', target: $('#video-popup')});
 
-			$(document).video_cta({yt_object: YT, cta: 'a[title|="Open Popup Video"]', close: null, youtube_id_data: 'href', target: $('#video-popup')});
+			$(document).video_cta({yt_object: YT, cta: '.video-link, a[title|="Open Popup Video"]', close: null, default_target: $('#video-popup')});
 
 		    if ($('.video-banner').length) {
 				$('.video-banner').each(function() {
@@ -50,41 +51,44 @@
 		var settings = $.extend( {
             yt_object : null,
             container : '<div id="stdVideo"><div id="stdVideo-player"></div></div>',
+            container_id : 'stdVideo-player',
             close : '<div id="stdVideo-close"></div>',
             cta : '.video-link',
             cta_container : '.video-cta',
             youtube_id_data : 'youtube_id',
             target_data : 'youtube_target',
-            target : null,
+            default_target : null,
         }, options);
 		var $link = $(settings.cta);
 		var $link_container = $link.closest(settings.cta_container);
 		var yt_player;
 		var $container;
-		var $target = settings.target;
+		var $target = settings.default_target;
 		var $close;
 		var playing = false;
 		var is_ios = navigator.userAgent.match(/(iPod|iPhone|iPad)/) != null;
         var is_android = /(android)/i.test(navigator.userAgent);
         var mobileOS = is_ios || is_android;
 
-        if (settings.target) {
-        	settings.target.find('.bg').on('click', closeVideo);
+        if (settings.default_target.length) {
+        	settings.default_target.find('.bg').on('click', closeVideo);
         }
 
 		this.on('click', settings.cta, function(e) {
         	e.preventDefault();
 
-        	if (playing) {
-				closeVideo(fast=true);
+console.log('clicked to play video!');
+	
+			if($('#'+settings.container_id).length && playing) {
+				closeVideo({fast:true});
 			}
 
         	$link = $(this);
         	$link_container = $link.closest(settings.cta_container);
-        	$target = settings.target == null ? $('#' + $link.data(settings.target_data)) : settings.target;
+        	$target = $('#' + $link.data(settings.target_data)).length ? $('#' + $link.data(settings.target_data)) : settings.default_target;
         	$link.addClass('loading');
         	$target.addClass('loading');
-        	var id = settings.youtube_id_data == 'href' ? $link.attr('href') : $link.data(settings.youtube_id_data);
+        	var id = typeof $link.data(settings.youtube_id_data) !== typeof undefined && $link.data(settings.youtube_id_data) !== false ? $link.data(settings.youtube_id_data) : $link.attr('href');
         	loadVideo(id);
         });
 
@@ -98,7 +102,9 @@
 			CUED
 		*/
 		function onPlayerStateChange(event) {
+
 console.log('video state change: ' + event.data);
+
 			// Open video player when playing
 			if (event.data == settings.yt_object.PlayerState.PLAYING && !playing) {
 				openVideo();
@@ -107,11 +113,13 @@ console.log('video state change: ' + event.data);
 			} else if (event.data == settings.yt_object.PlayerState.ENDED) {
 				closeVideo();
 		    }
-		  }
+		}
 
 		// The API calls this function when the player is ready.
 		function onPlayerReady(event) {
+
 console.log('video ready');
+
 			if (playing) {
 				closeVideo();
 			}
@@ -125,7 +133,9 @@ console.log('video ready');
 
 
 		function loadVideo(id) {
+
 console.log('load video');
+
 			$container = $(settings.container);
 
 			if (settings.close) {
@@ -134,15 +144,16 @@ console.log('load video');
 				$close.on('click', closeVideo);
 			}
 			
-			if (settings.target) {
+			if ($('#' + $link.data(settings.target_data)).length) { // if custom target
+				$container.appendTo($target);
+
+			} else { // if default player
 				$container.appendTo($target.find('.cell'));
 				$target.velocity('fadeIn');
-			} else {
-				$container.appendTo($target);
 			}
 
 			// creating a player: https://developers.google.com/youtube/iframe_api_reference#Getting_Started
-			yt_player = new settings.yt_object.Player('stdVideo-player', {
+			yt_player = new settings.yt_object.Player(settings.container_id, {
 				height: '390',
 				width: '640',
 				videoId: id,
@@ -163,7 +174,9 @@ console.log('load video');
 
 
 		function openVideo() {
+
 console.log('open video');
+
 			playing = true;
 			$container.addClass('playing');
 			$link_container.addClass('playing');
@@ -172,15 +185,19 @@ console.log('open video');
 		}
 
 
-		function closeVideo(fast=false) {
+		function closeVideo(options) {
+			var v = $.extend( {
+	            fast : false
+	        }, options);
+
 console.log('close video');
 
 			yt_player.stopVideo();
 			playing = false;
 			$container.removeClass('playing');
 			$link_container.removeClass('playing');
-			if (settings.target) {$target.velocity('fadeOut');}
-			if (fast) {
+			if (!$('#' + $link.data(settings.target_data)).length) {$target.velocity('fadeOut');}
+			if (v.fast) {
 				yt_player = null;
 				$container.remove();
 			} else {
