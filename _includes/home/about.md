@@ -33,7 +33,7 @@ Build on the web’s most customizable browser. Get your great idea into the han
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<a href="https://www.firefox.com" class="cell small-12 large-4 tile tile-block-link">
+<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Tinker with Tabs](assets/img/Tinker-with-Tabs.svg "Tinker with Tabs")
@@ -49,7 +49,7 @@ Your extension can control browser tabs. Use the API to open, close, move, hide,
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://www.firefox.com" class="cell small-12 large-4 tile tile-block-link">
+<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Transform Web Content](assets/img/Transform-Web-Content.svg "Transform Web Content")
@@ -65,7 +65,7 @@ Inject JavaScript into web pages and your extension can change page colors, augm
 <!-- END: Tile 2 -->
 
 <!-- Tile 3 -->
-<a href="https://www.firefox.com" class="cell small-12 large-4 tile tile-block-link">
+<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Add Innovative Features](assets/img/Add-Innovative-Features.svg "Add Innovative Features")

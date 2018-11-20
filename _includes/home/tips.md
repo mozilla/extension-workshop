@@ -162,7 +162,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 
 People spend just seconds on your product page. Make those seconds count with stellar content and visuals.
 
-[Find out how](https://www.firefox.com)
+[Find out how](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Listing)
 
 </div>
 <!-- END: Tile 2 -->
