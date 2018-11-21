@@ -1,0 +1,68 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.5
+    working_directory: ~/extension-workshop
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - rubygems-v1-{{ checksum "Gemfile.lock" }}
+            - rubygems-v1-fallback
+      - run:
+          name: Bundle Install
+          command: bundle check || bundle install
+      # requires gem 'html-proofer'
+      #- run:
+      #    name: HTMLProofer tests
+      #    command: |
+      #      bundle exec htmlproofer ./_site \
+      #        --allow-hash-href \
+      #        --check-favicon  \
+      #        --check-html \
+      #        --disable-external
+      - save_cache:
+          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: Jekyll build
+          command: bundle exec jekyll build
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - _site
+
+  deploy:
+    docker:
+      - image: circleci/python:3.6.3
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Install AWS CLI
+          command: pip install --upgrade --user pip awscli
+      - run:
+          name: extension workshop deployment
+          command: |
+            ./bin/deploy.sh
+            ./bin/circleci/invalidate-cloudfront-cache.sh
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /.*/
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v?[0-9]+(\.[0-9]+)*$/
+
