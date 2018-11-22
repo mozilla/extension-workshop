@@ -113,6 +113,16 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/protocol-lang-switcher.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/protocol-lang-switcher-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/rssfeed.js": {
 		"ft": 64,
 		"ma": 0,

@@ -95,14 +95,15 @@ jQuery(document).ready(function($) {
 
 
 
-    // 7. RSS Feed
+    // 7. RSS Feed 
 
-    // ******                                        ******
+    // ******  !DISABLED DUE TO INABILITY TO TEST!   ******
     // ** the code is found in rssfeed.js                **
     // ** it must be compiled with Browserfy:            **
     // ** $ browserify rssfeed.js -o rssfeed.pkg.js      **
     // *****                                         ******
     
+    // ALTERAVIVE METHOD OF GETTING FEED USING 3RD PARTY SERVICE:
     if ($('#rss-feed').length && $('#rss-feed-source').length) {
         $('#rss-feed').rss_feed({source: $('#rss-feed-source')});
     }
@@ -512,13 +513,26 @@ jQuery(document).ready(function($) {
     $.fn.rss_feed = function(options) {
         var settings = $.extend( {
             source : null,
-            container : '<div class="cell small-12 large-4 tile no-link no-img"></div>',
+            container : '<a href="" class="cell small-12 large-4 tile tile-block-link no-img"><div class="block-link"></div></a>',
             breakpoint : 'atleast_large',
         }, options);
 
         var $container = this;
 
-        // console.log(settings.source.html()); // <h4 class="feed-item-title"><a href="https://blog.mozilla.org/addons/2018/10/26/firefox-chrome-and-the-future-of-trustworthy-extensions/" target="_blank">Firefox, Chrome and the Future of Trustworthy Extensions</a></h4><p class="feed-item-desc"></p><p>Browser extensions are wonderful. Nearly every day I come across a new Firefox extension that customizes my browser in some creative way I’d never even considered. Some provide amusement for a short time, while others have become indispensable to my … <a class="go" href="https://blog.mozilla.org/addons/2018/10/26/firefox-chrome-and-the-future-of-trustworthy-extensions/">Continue reading</a></p><p>The post <a rel="nofollow" href="https://blog.mozilla.org/addons/2018/10/26/firefox-chrome-and-the-future-of-trustworthy-extensions/">Firefox, Chrome and the Future of Trustworthy Extensions</a> appeared first on <a rel="nofollow" href="https://blog.mozilla.org/addons">Mozilla Add-ons Blog</a>.</p><p></p><h4 class="feed-item-title"><a href="https://blog.mozilla.org/addons/2018/10/15/apply-to-join-the-featured-extensions-advisory-board-2/" target="_blank">Apply to Join the Featured Extensions Advisory Board</a></h4><p class="feed-item-desc"></p><p>Do you love extensions? Do you have a keen sense of what makes a great extension? Want to help users discover extensions that will improve how they experience the web? If so, please consider applying to join our Featured Extensions … <a class="go" href="https://blog.mozilla.org/addons/2018/10/15/apply-to-join-the-featured-extensions-advisory-board-2/">Continue reading</a></p><p>The post <a rel="nofollow" href="https://blog.mozilla.org/addons/2018/10/15/apply-to-join-the-featured-extensions-advisory-board-2/">Apply to Join the Featured Extensions Advisory Board</a> appeared first on <a rel="nofollow" href="https://blog.mozilla.org/addons">Mozilla Add-ons Blog</a>.</p><p></p><h4 class="feed-item-title"><a href="https://blog.mozilla.org/addons/2018/10/01/octobers-featured-extensions-2/" target="_blank">October’s Featured Extensions</a></h4><p class="feed-item-desc"></p><p>Pick of the Month: Default Bookmark Folder by Teddy Gustiaux Do you keep multiple bookmark folders? This extension makes it simple to add new bookmarks to specific folders. “So useful and powerful. I no longer have to change bookmark locations … <a class="go" href="https://blog.mozilla.org/addons/2018/10/01/octobers-featured-extensions-2/">Continue reading</a></p><p>The post <a rel="nofollow" href="https://blog.mozilla.org/addons/2018/10/01/octobers-featured-extensions-2/">October’s Featured Extensions</a> appeared first on <a rel="nofollow" href="https://blog.mozilla.org/addons">Mozilla Add-ons Blog</a>.</p><p></p><div class="rss2html-note" style="float: right;"><a href="https://rss.bloople.net/" style="color: #000000;">Powered by rss2html</a></div><div class="rss2html-note-clear" style="clear: right; height: 0;"></div>
+        // console.log(settings.source.html()); 
+        /* 
+
+            <h4 class="feed-item-title"><a href="[url]" target="_blank">[title]</a></h4>
+            <p class="feed-item-desc"></p>
+            <p>[excerpt] … <a class="go" href="[url]">Continue reading</a></p>
+            <p>The post <a rel="nofollow" href="[url]">[title]</a> appeared first on <a rel="nofollow" href="https://blog.mozilla.org/addons">Mozilla Add-ons Blog</a>.</p>
+            <p></p>
+
+            ...
+
+            <div class="rss2html-note" style="float: right;"><a href="https://rss.bloople.net/" style="color: #000000;">Powered by rss2html</a></div><div class="rss2html-note-clear" style="clear: right; height: 0;"></div> 
+        
+        */
         var items = settings.source.html().split('<p></p>');
         $.each(items, function(i, item) {
             if (item.indexOf('rss2html-note') !== -1) {
@@ -529,13 +543,21 @@ jQuery(document).ready(function($) {
             var description = elements[1];
             var title_elements = $($.parseHTML(title)).text();
             var $description_elements = $(description);
-            var $cell = $(settings.container); // $container.find('.cell').eq(i);
+            var $cell = $(settings.container);
+            var $cell_content = $cell.find('.block-link');
             
-            $cell.append($('<h4>'+title_elements+'</h4>')).append($description_elements);
+            $cell_content.append($('<h4>'+title_elements+'</h4>')).append($description_elements);
             $description_elements.last().remove();
+            
+            var $link = $cell.find('p a:last-child');
+            var link_label = $link.html();
+            var link_url = $link.attr('href');
+            $link.remove();
 
-            $cell.append($('<p class="continue"></p>'));
-            $cell.find('p a:last-child').appendTo($cell.find('.continue'));
+            $cell_content.append($('<p><span class="block-link-inline">'+link_label+'</span></p>'));
+            $('.block-link-inline').html();
+            $cell.attr('href', link_url);
+            
             $container.append($cell);
         });
 

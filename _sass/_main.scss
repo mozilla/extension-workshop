@@ -283,21 +283,6 @@ html {height: 100%;}
 
 
 
-// Body
-// ------
-
-.site-content {}
-
-
-
-// Footer
-// ------
-
-.site-footer {}
-
-
-
-
 
 // COMPONENT STYLES
 // -------------------------------------------------------------------------------------------------------------------
@@ -937,3 +922,56 @@ html {height: 100%;}
         .cell {padding-top: rem-calc(8); padding-bottom: rem-calc(8);}
     }
 }
+
+
+// Moz Footer
+// ------
+
+
+.site-footer {background-color: $black; color: $white;
+    @include breakpoint(medium down) {padding-top: rem-calc(40); padding-bottom: rem-calc(40);}
+
+    a {color: $white;
+        &:hover {color: $white;}
+    }
+
+    h4 {
+        @include breakpoint(medium down) {margin-top: 1.5em;}
+    }
+
+    ul {list-style: none; margin: 0;}
+
+    .mzp-c-footer-links-social {@include horizontal_list($margin: .6666em);
+        a {font-size: 0;
+            &:before {display: inline-block; font-size: rem-calc(20); vertical-align: middle;}
+            &:hover {text-decoration: none;}
+        }
+        .twitter:before {@include icon_font($char: $icon-twitter);}
+        .instagram:before {@include icon_font($char: $icon-instagram);}
+        .youtube:before {@include icon_font($char: $icon-youtube);}
+    }
+
+    .mzp-c-footer-legal ul {@include horizontal_list($margin: 1em); margin-bottom: 1em;
+        a {
+            &:hover {text-decoration: underline;}
+        }
+    }
+
+    .mzp-c-footer-primary-logo {margin-bottom: rem-calc(16); padding-right: rem-calc(24);
+        a {display: inline-block; width: 100px; height: 32px; overflow: hidden; text-decoration: none; text-indent: 120%; white-space: nowrap; background: $black url("img/moz-logo.svg") no-repeat 0 0/#{rem-calc(100)}; color: $white;}
+    }
+
+    .mzp-c-footer-secondary {font-size: $small-font-size; line-height: 1.333; padding-top: rem-calc(40);
+        @include breakpoint(large) {padding-top: rem-calc(60);}
+    }
+
+    .mzp-c-language-switcher {display: flex; flex-flow: row wrap; justify-content: flex-start; font-size: 1rem; align-items: center;
+        label {position: absolute; width: 1px; height: 1px; overflow: hidden; margin: -1px;}
+        .mzp-c-cta-link {flex: 0 0 auto; margin-right: rem-calc(24); font-weight: $global-weight-bold;}
+        select {flex: 0 0 auto; width: auto; margin-bottom: 0;}
+    }
+
+
+}
+
+

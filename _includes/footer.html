@@ -1,1 +1,91 @@
-<footer class="site-footer"></footer>
+<footer class="site-footer panel mzp-c-footer mzp-has-lang-switcher">
+  <div class="mzp-l-content">
+    <nav class="grid-container grid-x grid-padding-x mzp-c-footer-primary">
+      <div class="cell small-12 large-3">
+      	<div class="mzp-c-footer-primary-logo"><a href="https://www.mozilla.org/">Mozilla</a></div>
+      </div>
+      <section class="cell small-12 large-4 mzp-c-footer-section">
+        <h4>
+          <a href="https://www.mozilla.org/">Mozilla</a>
+        </h4>
+        <ul>
+          <li><a href="https://www.mozilla.org/about/">About</a></li>
+          <li><a href="https://blog.mozilla.org/">Blog</a></li>
+          <li><a href="https://www.mozilla.org/contact/">Contact Us</a></li>
+          <li><a href="https://donate.mozilla.org/">Donate</a></li>
+          <li>
+            <ul class="mzp-c-footer-links-social">
+              <li><a class="twitter" href="https://twitter.com/mozilla">Twitter<span> (@mozilla)</span></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/mozilla/">Instagram<span> (@mozilla)</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="cell small-12 large-4 mzp-c-footer-section">
+        <h4>
+          <a href="https://www.mozilla.org/firefox/">Firefox</a>
+        </h4>
+        <ul>
+          <li><a href="https://www.mozilla.org/firefox/new/">Download Firefox</a></li>
+          <li><a href="https://www.mozilla.org/firefox/">Desktop</a></li>
+          <li><a href="https://www.mozilla.org/firefox/mobile/">Mobile</a></li>
+          <li><a href="https://www.mozilla.org/firefox/features/">Features</a></li>
+          <li><a href="https://www.mozilla.org/firefox/channel/desktop/">Beta, Nightly, Developer Edition</a></li>
+          <li>
+            <ul class="mzp-c-footer-links-social">
+              <li><a class="twitter" href="https://twitter.com/firefox">Twitter<span> (@firefox)</span></a></li>
+              <li><a class="youtube" href="https://www.youtube.com/firefoxchannel">YouTube<span> (firefoxchannel)</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </nav>
+
+    <nav class="grid-container grid-x grid-padding-x mzp-c-footer-secondary">
+      <div class="cell small-12 large-7 mzp-c-footer-legal">
+        <ul>
+          <li><a rel="nofollow" href="https://www.mozilla.org/privacy/websites/">Website Privacy Notice</a></li>
+          <li><a rel="nofollow" href="https://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+          <li><a rel="nofollow" href="https://www.mozilla.org/about/legal/">Legal</a></li>
+        </ul>
+        <p class="mzp-c-footer-license">
+          Portions of this content are ©1998–{{ 'now' | date: "%Y" }} by individual mozilla.org
+          contributors. Content available under a
+          <a rel="license" href="https://www.mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>.
+        </p>
+      </div>
+
+      <div class="cell small-12 large-4">
+	      <form class="mzp-c-language-switcher mzp-t-dark" method="get" action="#">
+	        <a class="mzp-c-cta-link" href="https://www.mozilla.org/locales/">Language</a>
+	        <label for="mzp-c-language-switcher-select">Language</label>
+	        <select id="mzp-c-language-switcher-select" class="mzp-js-language-switcher-select"
+	         name="lang">
+	          <option value="en-US">English (US)</option>
+	          <option value="de">Deutsch</option>
+	          <option value="fr">Français</option>
+	          <option value="es-ES">Español</option>
+	          <option value="ja">日本語</option>
+	        </select>
+	        <!-- form submit button is shown when JavaScript is not enabled -->
+	        <button type="submit">Go</button>
+	      </form>
+
+	      <script src="{{ "/assets/scripts/protocol-lang-switcher.js" | relative_url }}"></script>
+
+	      <script>
+	        (function() {
+	          'use strict';
+	          // a custom callback can be passed to the lang switcher for analytics purposes.
+	          Mzp.LangSwitcher.init(function(previousLanguage,
+	            newLanguage) {
+	            console.log('Previous language: ',
+	              previousLanguage);
+	            console.log('New language: ', newLanguage);
+	          })
+	        })();
+	      </script>
+	    </div>
+    </nav>
+  </div>
+</footer>
