@@ -198,7 +198,7 @@ html {height: 100%;}
             a {position: relative; padding: rem-calc(15 20); color: $body-font-color; margin: 0; line-height: rem-calc(22); white-space: nowrap; transition: font-size .3s ease-in-out;
                 &:hover {color: $primary-color; text-decoration: none;}
                 &.active {color: $primary-color;
-                    &:after {content: ""; display: block; position: absolute; left: rem-calc(20); bottom: rem-calc(12); width: calc(100% - #{rem-calc(40)}); height: rem-calc(1); background-color: $primary-color;}
+                    &:after {content: ""; display: block; position: absolute; left: rem-calc(20); top: rem-calc(40); width: calc(100% - #{rem-calc(40)}); height: rem-calc(1); background-color: $primary-color;}
                 }
             }
             @include breakpoint(large) {padding-left: rem-calc(20); padding-right: rem-calc(20);}
@@ -223,7 +223,11 @@ html {height: 100%;}
         nav {margin: rem-calc(12 0);
             .jump-link {display: none;}
 
-            .group-a {overflow-x: scroll; -ms-overflow-style: -ms-autohiding-scrollbar;}
+            .group-a {overflow-x: hidden; overflow-y: hidden;
+                @include breakpoint(medium only) {
+                    &:hover {overflow-x: auto;} // -ms-overflow-style: -ms-autohiding-scrollbar;
+                }
+            }
 
             .fwd, .bak {visibility: hidden; pointer-events: none; position: absolute; z-index: 2; top: 0; height: 100%; width: rem-calc(64); display: flex; flex-flow: column nowrap; justify-content: center; align-items: center; cursor: pointer; font-size: rem-calc(16); text-align: center; color: $body-font-color; transition: left .3s ease-in-out, right .3s ease-in-out; 
                 &:after {display: block; flex: 0 0 auto; padding: rem-calc(0 16);}
@@ -246,7 +250,7 @@ html {height: 100%;}
         &.sticky nav {
             .group-a {width: calc(100% - #{rem-calc(155)});
                 a {font-size: rem-calc(13);
-                    &.active:after {bottom: rem-calc(12);}
+                    &.active:after {top: rem-calc(38);}
                 }
             }
             .group-b {opacity: 1; margin-right: 0;}
