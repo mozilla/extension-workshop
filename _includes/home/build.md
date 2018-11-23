@@ -146,7 +146,7 @@ Top Resources
 <div class="section-cta bg-dark" style="background-color: #4f42ff">
 <div class="img" style="background-image: url(assets/img/extension-alt.svg);"></div>
 <div class="grid-container grid-x grid-padding-x align-middle">
-<div class="cell small-10 large-3 large-offset-1" markdown="1">
+<div class="cell small-12 large-3 large-offset-1" markdown="1">
 
 ### Your extension might already be compatible!
 

@@ -684,16 +684,17 @@ html {height: 100%;}
 
 .section-cta {position: relative;
     
-    .img {position: absolute; left: 0; top: 50%; width: 100%; height: 50%;
-        @include breakpoint(medium) {top: 0; height: 100%;}
+    .img {position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+        @include breakpoint(small down) {background-position: left bottom; background-size: 100%;}
     }
 
-    .grid-container {position: relative; min-height: 48vw; padding-top: rem-calc(45); padding-bottom: calc(24vw + #{rem-calc(45)});
+    .grid-container {position: relative; min-height: 48vw; padding-top: rem-calc(45); padding-bottom: 24vw;
         @include breakpoint(medium) {min-height: 24vw; padding-bottom: rem-calc(45);}
     }
 
-    .cell {max-width: rem-calc(360);
+    .cell {
         > *:last-child {margin-bottom: 0;}
+        @include breakpoint(medium) {max-width: rem-calc(360);}
     }
 
     a:last-child {
