@@ -36,16 +36,20 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/python:3.6.3
+      - image: circleci/python:3.7
     steps:
       - attach_workspace:
-          at: ./
+          at: .
       - run:
           name: Install AWS CLI
-          command: pip install --upgrade --user pip awscli
+          command: |
+            sudo pip install --upgrade pip
+            sudo pip install --upgrade awscli
       - run:
           name: extension workshop deployment
           command: |
+            env | egrep -v AWS_
+            ls -l
             ./bin/deploy.sh
             ./bin/circleci/invalidate-cloudfront-cache.sh
 
