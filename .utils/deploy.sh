@@ -7,9 +7,9 @@
 
 set -x
 
-if [ ! -d "public" ]; then
-    echo "Can't find /public/ directory. Are you running from the correct"\
-         " root directory?"
+if [ ! -d "_site" ]; then
+    echo "Can't find /_site/ directory. Are you running from the correct"\
+         "root directory?"
     exit 1
 fi
 
@@ -44,7 +44,7 @@ ACAO="\"Access-Control-Allow-Origin\": \"*\""
 [ -e version.json ] || $(dirname $0)/build-version-json.sh
 
 if [ -e version.json ]; then
-    mv version.json public/__version__
+    mv version.json _site/__version__
     # __version__ JSON; short cache
     aws s3 cp \
       --cache-control "max-age=${TEN_MINUTES}" \
@@ -52,7 +52,7 @@ if [ -e version.json ]; then
       --metadata "{${ACAO}, ${HSTS}, ${TYPE}}" \
       --metadata-directive "REPLACE" \
       --acl "public-read" \
-      public/__version__ s3://${EXTENSION_WORKSHOP_BUCKET}/__version__
+      _site/__version__ s3://${EXTENSION_WORKSHOP_BUCKET}/__version__
 fi
 
 # HTML; short cache
@@ -64,7 +64,7 @@ aws s3 sync \
   --metadata "{${CSP}, ${HSTS}, ${TYPE}, ${XSS}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
-  public/ s3://${EXTENSION_WORKSHOP_BUCKET}/
+  _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
 
 # JSON; short cache
 aws s3 sync \
@@ -75,7 +75,7 @@ aws s3 sync \
   --metadata "{${ACAO}, ${HSTS}, ${TYPE}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
-  public/ s3://${EXTENSION_WORKSHOP_BUCKET}/
+  _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
 
 # SVG; cache forever, assign correct content-type
 aws s3 sync \
@@ -86,7 +86,7 @@ aws s3 sync \
   --metadata "{${HSTS}, ${TYPE}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
-  public/ s3://${EXTENSION_WORKSHOP_BUCKET}/
+  _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
 
 # Everything else; cache forever, because it has hashes in the filenames
 aws s3 sync \
@@ -95,11 +95,11 @@ aws s3 sync \
   --metadata "{${HSTS}, ${TYPE}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
-  public/ s3://${EXTENSION_WORKSHOP_BUCKET}/
+  _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
 
 # HTML - `path/index.html` to `path` resources; short cache
-for fn in $(find public -name 'index.html' -not -path 'public/index.html'); do
-  s3path=${fn#public/}
+for fn in $(find _site -name 'index.html' -not -path '_site/index.html'); do
+  s3path=${fn#_site/}
   s3path=${s3path%/index.html}
   aws s3 cp \
     --cache-control "max-age=${TEN_MINUTES}" \

@@ -33,6 +33,7 @@ jobs:
           root: ./
           paths:
             - _site
+            - .utils
 
   deploy:
     docker:
@@ -50,8 +51,8 @@ jobs:
           command: |
             env | egrep -v AWS_
             ls -l
-            ./bin/deploy.sh
-            ./bin/circleci/invalidate-cloudfront-cache.sh
+            ./.utils/deploy.sh
+            ./.utils/circleci/invalidate-cloudfront-cache.sh
 
 workflows:
   version: 2
