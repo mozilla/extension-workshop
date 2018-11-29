@@ -24,7 +24,7 @@ Firefox extensions are made with the same technologies used to build the web. Th
 </div>
 <div class="cell small-12 medium-8 large-6 over-dark text-center" markdown="1">
 
-[Get example extension files](https://github.com/mdn/webextensions-examples "View on Github")
+[Get example extension files](https://github.com/mozilla/old-timer-extension "View on Github")
 
 </div>
 </div>
