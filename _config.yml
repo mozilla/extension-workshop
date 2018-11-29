@@ -16,9 +16,8 @@
 title: Extension Workshop
 email: lance@turtleinc.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Firefox Extension Workshop. Make the web do what you want. If you can dream it, 
+  Firefox Extension Workshop. Make the web do what you want. If you can dream it,
   our open souce API and your HTML, CSS, and JavaScript skills can make it happen.
-baseurl: "/extension-workshop" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # If you want to link only specific pages in your header, uncomment
