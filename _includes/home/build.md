@@ -13,7 +13,7 @@ Firefox extensions are made with the same technologies used to build the web. Th
 	<div class="video-box">
 		<div class="video-cta">
 			<h2 class="h1">Build an Extension in Less Than 5 Minutes</h2>
-			<button class="show-for-medium video-play video-link" data-youtube_id="DAl0tOYDHxg" data-youtube_target="how-to-build-an-extension-video"></button>
+			<button class="show-for-medium video-play video-link" data-youtube_id="Q3AQ5D2QFwc" data-youtube_target="how-to-build-an-extension-video"></button>
 		</div>
 		<div id="how-to-build-an-extension-video" class="img" style="background-image: url(assets/img/content_5minextension_thumbnail.jpg);">
 			<span class="video-play"></span>
