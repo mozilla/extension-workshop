@@ -35,7 +35,7 @@ Discuss extension development and get support.
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://wiki.mozilla.org/Add-ons/Community/" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://wiki.mozilla.org/WebExtensions/policy" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Get Involved](assets/img/icons/get-involved.svg "Get Involved")
@@ -55,7 +55,7 @@ Connect with thousands of developers and contribute to the extension ecosystem.
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
-[Learn more about the community](https://wiki.mozilla.org/WebExtensions/policy)
+[Learn more about the community](https://wiki.mozilla.org/Add-ons/Community/)
 
 </div>
 </div>
