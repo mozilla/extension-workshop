@@ -84,7 +84,7 @@ For a more interactive and dynamic extension, use the WebExtensions JavaScript A
 
 Firefox is at the forefront of cross-browser compatibility. Firefox extensions are built using the WebExtensions API, so your creation will be accessible to users no matter what browser they use. 
 
-[Learn about browser differences](https://docs.google.com/document/d/1c8UOweEPigU-acWR74Xv6VelJuZvB0JTD3cvASaZYNE/edit%23heading%3Dh.hrrn5237ns60&sa=D&ust=1537825804932000&usg=AFQjCNGGw0CwN2K2INIjLHWu_pE3CnH4_w)
+[Learn about browser differences](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations)
 
 </div>
 </div>
