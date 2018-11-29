@@ -88,7 +88,7 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 
 [View more extension code examples](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
 
-[Explore live extensions](https://www.firefox.com)
+[Explore live extensions](https://addons.mozilla.org)
 
 </div>
 </div>
