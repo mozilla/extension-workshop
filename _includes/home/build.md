@@ -130,7 +130,7 @@ Starting from scratch? It’s easy and fast to create your cross-browser extensi
 
 Top Resources  
 [Best practices for cross-browser extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension)
-[Introduction to developing in Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+[Introduction to developing in Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)
 
 </div>
 
