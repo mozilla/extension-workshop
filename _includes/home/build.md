@@ -107,7 +107,7 @@ Already have an extension that works in Chrome? Bring your app to Firefox in a f
 
 Top Resources  
 [Differences between Chrome and Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
-[Port a Google Chrome extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting)
+[Port a Google Chrome extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)
 
 </div>
 
