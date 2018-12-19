@@ -26,4 +26,7 @@ CSS file.
 @include foundation-visibility-classes;
 
 // Import your custom styles
+
 @import "main";
+@import "landing";
+@import "contentguidelines";

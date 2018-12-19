@@ -1,0 +1,11 @@
+- title: "Master Template"
+  url: "/content-guidelines/master-template/"
+  target: "_self"
+
+- title: "Example"
+  url: "/content-guidelines/example/"
+  target: "_self"
+
+- title: "More Tips"
+  url: "http://firefox.com"
+  target: "_blank"

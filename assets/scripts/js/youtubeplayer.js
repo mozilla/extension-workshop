@@ -31,7 +31,7 @@
 			// $(document).video_cta({yt_object: YT, cta: '.video-link', close: null});
 			// $(document).video_cta({yt_object: YT, cta: 'a[title|="Open Popup Video"]', close: null, youtube_id_data: 'href', target: $('#video-popup')});
 
-			$(document).video_cta({yt_object: YT, cta: '.video-link, a[title|="Open Popup Video"]', close: null, default_target: $('#video-popup')});
+			$(document).video_cta({yt_object: YT, cta: '.video-link, a[title|="Open Popup Video"], .video-popup a', close: null, default_target: $('#video-popup')});
 
 		    if ($('.video-banner').length) {
 				$('.video-banner').each(function() {
@@ -76,8 +76,6 @@
 
 		this.on('click', settings.cta, function(e) {
         	e.preventDefault();
-
-console.log('clicked to play video!');
 	
 			if($('#'+settings.container_id).length && playing) {
 				closeVideo({fast:true});
@@ -103,8 +101,6 @@ console.log('clicked to play video!');
 		*/
 		function onPlayerStateChange(event) {
 
-console.log('video state change: ' + event.data);
-
 			// Open video player when playing
 			if (event.data == settings.yt_object.PlayerState.PLAYING && !playing) {
 				openVideo();
@@ -117,8 +113,6 @@ console.log('video state change: ' + event.data);
 
 		// The API calls this function when the player is ready.
 		function onPlayerReady(event) {
-
-console.log('video ready');
 
 			if (playing) {
 				closeVideo();
@@ -133,8 +127,6 @@ console.log('video ready');
 
 
 		function loadVideo(id) {
-
-console.log('load video');
 
 			$container = $(settings.container);
 
@@ -175,8 +167,6 @@ console.log('load video');
 
 		function openVideo() {
 
-console.log('open video');
-
 			playing = true;
 			$container.addClass('playing');
 			$link_container.addClass('playing');
@@ -189,8 +179,6 @@ console.log('open video');
 			var v = $.extend( {
 	            fast : false
 	        }, options);
-
-console.log('close video');
 
 			yt_player.stopVideo();
 			playing = false;

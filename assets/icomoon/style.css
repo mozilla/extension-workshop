@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?pv3fbv');
-  src:  url('fonts/icomoon.eot?pv3fbv#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?pv3fbv') format('woff2'),
-    url('fonts/icomoon.ttf?pv3fbv') format('truetype'),
-    url('fonts/icomoon.woff?pv3fbv') format('woff'),
-    url('fonts/icomoon.svg?pv3fbv#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?xpkwb6');
+  src:  url('fonts/icomoon.eot?xpkwb6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?xpkwb6') format('woff2'),
+    url('fonts/icomoon.ttf?xpkwb6') format('truetype'),
+    url('fonts/icomoon.woff?xpkwb6') format('woff'),
+    url('fonts/icomoon.svg?xpkwb6#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -27,6 +27,18 @@
 
 .icon-close:before {
   content: "\e909";
+}
+.icon-dont:before {
+  content: "\e910";
+}
+.icon-do:before {
+  content: "\e911";
+}
+.icon-back:before {
+  content: "\e90e";
+}
+.icon-new-tab:before {
+  content: "\e90f";
 }
 .icon-play:before {
   content: "\e900";

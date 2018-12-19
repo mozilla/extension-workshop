@@ -1,0 +1,245 @@
+/************************************************
+
+Stylesheet: Conteng Guidelines Stylesheet
+
+*************************************************/
+
+.site-wrapper {
+
+
+	// Header
+	// ------
+
+    @include breakpoint(medium) {display: flex; flex-flow: row nowrap;
+        .site-header {flex: 0 0 #{rem-calc(200)}; width: rem-calc(200);}
+        .site-content {flex: 1 1 auto;}
+    }
+    @include breakpoint(xlarge) {
+        .site-header {flex: 0 0 #{rem-calc(230)}; width: rem-calc(230);}
+    }
+    
+    .site-header {font-size: rem-calc(11); padding-bottom: rem-calc(50); position: relative; z-index: 2;
+        @include breakpoint(medium) {box-shadow: #{rem-calc(0 0 16)} rgba(12,12,13,0.1); padding-top: rem-calc(30); padding-bottom: rem-calc(30);}
+        @include breakpoint(xlarge) {padding-top: rem-calc(45); padding-bottom: rem-calc(45); font-size: rem-calc(13);}
+    }
+
+    .logo {font-size: rem-calc(13); line-height: 1.1; margin: rem-calc(8 0 24);
+        a {padding: rem-calc(15 0 3 50); 
+            &:before {content: ""; position: absolute; left: 0; top: rem-calc(8); display: block; width: rem-calc(41); height: rem-calc(42); background: transparent url(img/firefox-logo.png) no-repeat center/contain;}
+        }
+
+        small.tagline {font-size: rem-calc(11); font-weight: $global-weight-normal; color: inherit; padding: rem-calc(0 0 14 50);}
+
+        @include breakpoint(medium) {font-size: rem-calc(13); 
+            a {padding: rem-calc(15 0 14 43); display: block;
+                &:before {top: rem-calc(8); width: rem-calc(37); height: rem-calc(38);}
+            }
+            small.tagline {display: block; padding: rem-calc(5 0 14 0);}
+        }
+
+        @include breakpoint(xlarge) {font-size: rem-calc(15);
+            a {padding: rem-calc(15 0 17 50);
+                &:before {width: rem-calc(43); height: rem-calc(44);}
+            }
+            small.tagline {font-size: rem-calc(13);}
+        }
+        @include breakpoint(small down) {
+            br {display: none;}
+        }
+    }
+
+    .site-nav-container {
+    	.site-nav:focus {outline: none;}
+
+        ul.pages {list-style: none; margin: 0; font-size: rem-calc(13);
+        	li {margin: 0;}
+            a {color: $body-font-color; display: inline-block; padding: .25rem 0;}
+            a[target=_blank]:after {color: $primary-color; padding-left: .3em;
+                @include icon_font($char:$icon-newtab);
+            }
+
+            @include breakpoint(medium) {margin: rem-calc(24 0 30);
+            	.current a {color: $primary-color;}
+            }
+            @include breakpoint(xlarge) {font-size: rem-calc(15);}
+            @include breakpoint(small down) {
+            	li.current {display: block; pointer-events: none;}
+            }
+        }
+
+        .button {display: block; 
+            @include breakpoint(large down) {font-size: 0.733333333333333rem; padding: rem-calc(6 8);}
+        }
+
+        @include breakpoint(small down) {position: absolute; z-index: 10; top: rem-calc(66); left: rem-calc(12); width: calc(100% - #{rem-calc(24)}); min-height: rem-calc(75);
+        	&:before {content: ""; display: block; position: fixed; left: 0; top: rem-calc(-75); width: 100%; height: rem-calc(75); pointer-events: none; opacity: 0; background-image: linear-gradient(rgba($black, .333) 0, rgba($black, 0) 100%); transition: top 0 ease-in-out;}
+
+        	.site-nav {padding: rem-calc(12 15); background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); position: absolute; left: 0; top: rem-calc(12); width: 100%; max-height: calc(100vh - #{rem-calc(24)});
+
+		        &:after {@include icon_font($char: $icon-arrow-down); position: absolute; font-size: rem-calc(18); line-height: 1; top: rem-calc(17); right: rem-calc(15);}
+    	    	p, li {display: none;}
+
+    	    	p {margin: 0; padding: rem-calc(15 0 0);
+    	    		&:first-of-type,
+    	    		&:last-of-type {padding: rem-calc(24 0 0);}
+
+    	    	}
+
+    	    	.button {margin: 0;}
+
+    	    	&.open {
+    	    		&:after {@include icon_font($char: $icon-arrow-up);}
+    	    		&:focus {overflow-y: scroll;}
+    	    		.current a {color: $primary-color;}
+    	    	}
+    		}
+
+    		&.sticky {
+    			&:before {top: rem-calc(-20); opacity: 1; transition: top .2s ease-in-out, opacity .2s ease-in-out;}
+
+    			.site-nav {position: fixed; top: rem-calc(12); left: rem-calc(12); width: calc(100% - #{rem-calc(24)});}
+    		}
+    	}
+    }
+
+    .back {
+    	&:before {@include icon_font($char:$icon-back); padding-right: .3em;}
+    }
+
+    .site-metadata {color: $dark-gray; margin: 0;
+    	@include breakpoint(medium) {margin: rem-calc(30 0);}
+    }
+
+
+    // Page Content
+    // ------
+
+    .site-content {
+
+    	.post {padding: rem-calc(24 0);
+	        @include breakpoint(medium) {padding: rem-calc(45 0);}
+	        @include breakpoint(large) {padding: #{rem-calc(45)} 4.166666666666667%;}
+	        @include breakpoint(xlarge) {padding: #{rem-calc(60)} 8.333333333333333%;}
+    	}
+
+    	.post-content {
+    		.grid-container {padding: 0; margin-left: rem-calc(-6); margin-right: rem-calc(-6);
+    			@include breakpoint(medium) {margin-left: rem-calc(-12); margin-right: rem-calc(-12);}
+    		}
+    	}
+
+    }
+}
+
+
+// Full Width Image & Half Width Images
+// ------
+
+.image-with-caption {font-size: $small-font-size; color: $dark-gray; margin: rem-calc(12 0);
+	img {display: block; width: 100%; margin-bottom: rem-calc(6);}
+
+	@include breakpoint(medium) {margin: rem-calc(24 0);
+		img {margin-bottom: rem-calc(8);}
+	}
+}
+
+
+// Video Popup Thumbnail
+// ------
+
+.video-popup {margin: rem-calc(12 0); text-align: center;
+	@include breakpoint(medium) {margin: rem-calc(24 0);}
+
+	a {display: block; position: relative; font-size: rem-calc(22);
+		&:before, &:after {display: block; position: absolute; left: calc(50% - #{rem-calc(20)}); top: calc(50% - #{rem-calc(20)}); width: rem-calc(40); height: rem-calc(40);}
+		&:before {content: ""; background-color: $white; border-radius: 50%; box-shadow: #{rem-calc(0 2 8)} rgba(12,12,13,0.1); cursor: pointer; transition: box-shadow .2s ease-in-out;}
+        &:after {@include icon_font($char: $icon-play); text-align: center; line-height: rem-calc(38); color: $primary-color; transition: color .2s ease-in-out;}
+        &:hover:before {box-shadow: #{rem-calc(0 2 8)} rgba(12,12,13,0.33);}
+        &:hover:after {color: $primary-color-hover;}
+	}
+	img {display: block; width: 100%; margin-bottom: rem-calc(6);}
+
+	.medium-6 {
+		
+		@include breakpoint(medium) {margin-bottom: rem-calc(40);
+			a {margin-top: rem-calc(40); max-width: rem-calc(180); margin-right: auto; margin-left: auto; font-size: rem-calc(13); 
+				&:before, &:after {left: calc(50% - #{rem-calc(12)}); top: calc(50% - #{rem-calc(12)}); width: rem-calc(24); height: rem-calc(24);}
+		        &:after {line-height: rem-calc(23);}
+			}
+			img {border-radius: $global-radius;}
+			h1, h2, h3, h4, h5, h6, p {max-width: rem-calc(360); margin-right: auto; margin-left: auto;}
+		}
+	}
+}
+
+
+// Image Grid
+// ------
+
+.img-grid {margin: rem-calc(12 0 6); 
+	p {margin-bottom: rem-calc(12);}
+	@include breakpoint(medium) {margin: rem-calc(24 0 12);
+		p {margin-bottom: rem-calc(24);}
+	}
+}
+
+
+// Do this, not this
+// ------
+
+.example {background-color: $light-gray; padding: rem-calc(7); margin: rem-calc(0 -7 15); border-radius: $global-radius;
+	p, ul, ol {margin-bottom: .5rem;}
+	> *:last-child {margin-bottom: 0;}
+}
+span.example {display: inline-block; padding: rem-calc(0 7); margin: 0;}
+
+.do-this, .not-this {background-color: $lighter-gray; margin: rem-calc(12 0); padding: rem-calc(12); border: 1px solid darken($light-gray,5%);
+	> *:last-child {margin-bottom: 0;}
+
+	header {padding: rem-calc(8 0 6);
+		> *:first-child:before {display: inline; margin-right: .5rem;}
+	}
+
+	.example {background-color: darken($light-gray,5%);}
+
+	@include breakpoint(medium) {margin: rem-calc(24 0); padding: rem-calc(24);
+		header {padding: rem-calc(0 0 12);}
+	}
+
+	& + p, & + h1, & + h2, & + h3, & + h4, & + h5, & + h6, & + ol, & + ul {margin-top: 1.5em;}
+}
+
+.do-this {border-top: #{rem-calc(5)} solid #31C430; 
+	header {
+		* {color: #31C430;}
+		> *:first-child:before {@include icon_font($char: $icon-do); color: #31C430;}
+	}
+}
+.not-this {border-top: #{rem-calc(5)} solid #D70022;
+	header {
+		* {color: #D70022;}
+		> *:first-child:before {@include icon_font($char: $icon-dont); color: #D70022;}
+	}
+}
+
+.do-this-not-this {
+	.do-this, .not-this {margin: rem-calc(6 0);}
+
+	@include breakpoint(medium) {margin: rem-calc(24 0);
+		.do-this, .not-this {margin: 0;}
+	}
+
+	& + p, & + h1, & + h2, & + h3, & + h4, & + h5, & + h6, & + ol, & + ul {margin-top: 1.5em;}
+}
+
+
+
+
+// Moz Footer
+// ------
+
+.site-wrapper + .site-footer {
+    .mzp-l-content {
+        @include breakpoint(xxlarge) {margin-left: rem-calc(230); padding: 0 8.333333333333333%;}
+    }
+}

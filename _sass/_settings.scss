@@ -93,6 +93,10 @@ $icon-twitter: "\e907";
 $icon-github: "\e908";
 $icon-youtube: "\e90c";
 $icon-instagram: "\e90d";
+$icon-back: "\e90e";
+$icon-newtab: "\e90f";
+$icon-dont: "\e910";
+$icon-do: "\e911";
 
 
 // 3. Breakpoints
@@ -183,7 +187,7 @@ $hr-width: $global-width;
 $hr-border: 1px solid $light-gray;
 $hr-margin: rem-calc(40) auto;
 $list-lineheight: $paragraph-lineheight;
-$list-margin-bottom: $paragraph-margin-bottom / 2;
+$list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
 $list-style-position: outside;
 $list-side-margin: 1.25rem;

@@ -4,15 +4,14 @@
   {%- include head.html -%}
 
   <body class="site">
-    <div class="site-wrapper">
-        {%- include header.html -%}
 
-        <main class="site-content" aria-label="Content">
-          
-            {{ content }}
-          
-        </main>
-    </div>
+    {%- include landing-header.html -%}
+
+    <main class="site-content landing" aria-label="Content">
+      
+        {{ content }}
+      
+    </main>
 
     {%- include footer.html -%}
 
@@ -23,7 +22,10 @@
         </div>
     </aside>
 
+    <!-- <script type="text/javascript" src="{{ "/assets/scripts/rssfeed.pkg.js?ver=2018.11.23" | relative_url }}"></script> -->
+    <script type="text/javascript" src="{{ "/assets/slick/slick.min.js?ver=2018.11.23" | relative_url }}"></script>
     <script type="text/javascript" src="{{ "/assets/scripts/scripts.min.js?ver=2018.11.23" | relative_url }}"></script>
+    <script src="{{ "/assets/scripts/basket-client.js" | relative_url }}"></script>
   </body>
 
 </html>

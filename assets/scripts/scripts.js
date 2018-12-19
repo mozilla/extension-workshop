@@ -30,9 +30,14 @@ jQuery(document).ready(function($) {
     // ------------------
 
 
-    // 1. Top Header Nav
+    // 1. Page Nav
     if ($('.page-nav-container').length) {
-        $('.page-nav-container').switchNav();
+        $('.page-nav-container').switchPageNav();
+    }
+
+    // 10. Site (Content Guidelines) Nav
+    if ($('.site-wrapper .site-nav-container').length) {
+        $('.site-wrapper .site-nav-container').switchSiteNav();
     }
 
 
@@ -143,17 +148,17 @@ jQuery(document).ready(function($) {
     // 1. Top Navigation : toggle mobile and desktop
     // ------
 
-    $.fn.switchNav = function(options) {
+    $.fn.switchPageNav = function(options) {
         var settings = $.extend( {
             breakpoint : 'atleast_medium'
         }, options);
 
         var $container = this;
-        var nav_all = $container.allMenu();
+        var nav_all = $container.pageMenu();
         var nav_desk = null;
         var nav_mobile = null;
 
-        function switchNav(obj, media) {
+        function switchPageNav(obj, media) {
 
             // Set Desktop Nav 
             if (media[settings.breakpoint] || media.fallback) {
@@ -163,7 +168,7 @@ jQuery(document).ready(function($) {
                     nav_mobile = null;
                 }
                 if (nav_desk == null) {
-                    nav_desk = $container.desktopMenu();
+                    nav_desk = $container.desktopPageMenu();
                 }
 
             // Set Mobile Nav 
@@ -174,17 +179,17 @@ jQuery(document).ready(function($) {
                     nav_desk = null;
                 }
                 if (nav_mobile == null) {
-                    nav_mobile = $container.mobileMenu();
+                    nav_mobile = $container.mobilePageMenu();
                 }
             }
         }
-        $.subscribe("breakpoints", switchNav);
+        $.subscribe("breakpoints", switchPageNav);
     }
 
 
     // 1.a Mobile Menu
 
-    $.fn.mobileMenu = function() {
+    $.fn.mobilePageMenu = function() {
         var $container = this;
         var $nav = $container.find('nav');
         var $jump = $container.find('.jump-link');
@@ -226,7 +231,6 @@ jQuery(document).ready(function($) {
                 $jump.off('click');
                 $nav.removeClass('open');
                 $links.attr('style', '');
-                $window.off('resize.mobileMenu');
             }
         };
     }
@@ -234,7 +238,7 @@ jQuery(document).ready(function($) {
 
     // 1.b Desktop Menu
 
-    $.fn.desktopMenu = function() {
+    $.fn.desktopPageMenu = function() {
         var $container = this;
         var $anchors = $container.find("a[href^='#']");
 
@@ -250,7 +254,7 @@ jQuery(document).ready(function($) {
 
     // 1.c Persistant Menu
 
-    $.fn.allMenu = function() {
+    $.fn.pageMenu = function() {
         var $window = $(window);
         var $container = this;
         var $anchors = $container.find("a[href^='#']");
@@ -386,6 +390,112 @@ jQuery(document).ready(function($) {
             } 
         };
     }
+
+
+
+
+    // 10. Top Navigation : toggle mobile and desktop
+    // ------
+
+    $.fn.switchSiteNav = function(options) {
+        var settings = $.extend( {
+            breakpoint : 'atleast_medium'
+        }, options);
+
+        var $container = this;
+        var nav_all = $container.siteMenu();
+        var nav_desk = null;
+        var nav_mobile = null;
+
+        function switchSiteNav(obj, media) {
+
+            // Set Desktop Nav 
+            if (media[settings.breakpoint] || media.fallback) {
+
+                if (nav_mobile != null) {
+                    nav_mobile.kill();
+                    nav_mobile = null;
+                }
+                if (nav_desk == null) {
+                    nav_desk = $container.desktopSiteMenu();
+                }
+
+            // Set Mobile Nav 
+            } else {
+
+                if (nav_desk != null) {
+                    nav_desk.kill();
+                    nav_desk = null;
+                }
+                if (nav_mobile == null) {
+                    nav_mobile = $container.mobileSiteMenu();
+                }
+            }
+        }
+        $.subscribe("breakpoints", switchSiteNav);
+    }
+
+
+    // 10.a Mobile Menu
+
+    $.fn.mobileSiteMenu = function() {
+        var $container = this;
+        var $nav = $container.find('nav');
+        var $links = $container.find('p, li:not(.current)');
+        var open = $nav.hasClass('open');
+        var $window = $(window);
+
+        $window.on('scroll.mobile', function() {
+            if ($window.scrollTop() >= $container.offset().top ) {
+                $container.addClass('sticky');
+            } else {
+                $container.removeClass('sticky');
+            }
+        });
+
+        if (!open) {
+            $links.velocity('slideUp', {duration: 0});
+        }
+
+        $nav.on('click', function() {
+            if (open) {
+                $nav.removeClass('open');
+                $links.velocity('slideUp');
+            } else {
+                $nav.addClass('open');
+                $links.velocity('slideDown', {complete: function() {
+
+                    // if ($nav.outerHeight() + $nav.offset().top > $window.height() + $window.scrollTop()) {
+                    //     $nav.velocity('scroll', {duration: 900, offset: -($nav.outerHeight() - 16)});
+                    // }
+                }});
+            }
+            open = !open;
+        });
+
+        return {
+            kill: function() {
+                $nav.off('click');
+                $nav.removeClass('open');
+                $links.attr('style', '');
+                $window.off('scroll.mobile');
+            }
+        };
+    }
+
+
+    // 10.b Desktop Menu
+
+    $.fn.desktopSiteMenu = function() {
+        return { 
+            kill: function() {} 
+        };
+    }
+
+
+    // 10.c Persistant Menu
+
+    $.fn.siteMenu = function() {}
 
 
 
