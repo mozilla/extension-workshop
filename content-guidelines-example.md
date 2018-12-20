@@ -16,3 +16,14 @@ You can find the source code for Jekyll at GitHub:
 
 
 [jekyll-organization]: https://github.com/jekyll
+
+
+
+<!-- Bottom of Page Navigation -->
+<nav class="page-bottom-nav" markdown="1">
+
+* [Master Template](/content-guidelines/master-template/ "Master Template")
+* [More Tips](http://firefox.com "More Tips")
+
+</nav>
+<!-- END: Bottom of Page Navigation -->

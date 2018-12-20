@@ -4,24 +4,25 @@ Stylesheet: Conteng Guidelines Stylesheet
 
 *************************************************/
 
+$sidebar-w-sm : rem-calc(200);
+$sidebar-w : rem-calc(230);
+
 .site-wrapper {
 
 
 	// Header
 	// ------
 
+    .site-header {font-size: rem-calc(11); padding-bottom: rem-calc(50); position: relative; z-index: 100;}
+
     @include breakpoint(medium) {display: flex; flex-flow: row nowrap;
-        .site-header {flex: 0 0 #{rem-calc(200)}; width: rem-calc(200);}
+        .site-header {flex: 0 0 #{$sidebar-w-sm}; width: $sidebar-w-sm; box-shadow: #{rem-calc(0 0 16)} rgba(12,12,13,0.1); padding-top: rem-calc(30); padding-bottom: rem-calc(30);}
         .site-content {flex: 1 1 auto;}
     }
     @include breakpoint(xlarge) {
-        .site-header {flex: 0 0 #{rem-calc(230)}; width: rem-calc(230);}
+        .site-header {flex: 0 0 #{$sidebar-w}; width: $sidebar-w; padding-top: rem-calc(45); padding-bottom: rem-calc(45); font-size: rem-calc(13);}
     }
-    
-    .site-header {font-size: rem-calc(11); padding-bottom: rem-calc(50); position: relative; z-index: 2;
-        @include breakpoint(medium) {box-shadow: #{rem-calc(0 0 16)} rgba(12,12,13,0.1); padding-top: rem-calc(30); padding-bottom: rem-calc(30);}
-        @include breakpoint(xlarge) {padding-top: rem-calc(45); padding-bottom: rem-calc(45); font-size: rem-calc(13);}
-    }
+
 
     .logo {font-size: rem-calc(13); line-height: 1.1; margin: rem-calc(8 0 24);
         a {padding: rem-calc(15 0 3 50); 
@@ -54,7 +55,7 @@ Stylesheet: Conteng Guidelines Stylesheet
         ul.pages {list-style: none; margin: 0; font-size: rem-calc(13);
         	li {margin: 0;}
             a {color: $body-font-color; display: inline-block; padding: .25rem 0;}
-            a[target=_blank]:after {color: $primary-color; padding-left: .3em;
+            a[target=_blank]:after {color: $primary-color; padding-left: .3em; display: inline-block;
                 @include icon_font($char:$icon-newtab);
             }
 
@@ -103,7 +104,7 @@ Stylesheet: Conteng Guidelines Stylesheet
     }
 
     .back {
-    	&:before {@include icon_font($char:$icon-back); padding-right: .3em;}
+    	&:before {@include icon_font($char:$icon-back); padding-right: .3em; display: inline-block;}
     }
 
     .site-metadata {color: $dark-gray; margin: 0;
@@ -120,6 +121,8 @@ Stylesheet: Conteng Guidelines Stylesheet
 	        @include breakpoint(medium) {padding: rem-calc(45 0);}
 	        @include breakpoint(large) {padding: #{rem-calc(45)} 4.166666666666667%;}
 	        @include breakpoint(xlarge) {padding: #{rem-calc(60)} 8.333333333333333%;}
+
+            > .grid-container {max-width: $global-width - $sidebar-w;}
     	}
 
     	.post-content {
@@ -159,7 +162,7 @@ Stylesheet: Conteng Guidelines Stylesheet
 	}
 	img {display: block; width: 100%; margin-bottom: rem-calc(6);}
 
-	.medium-6 {
+	.medium-6 {margin-bottom: rem-calc(24);
 		
 		@include breakpoint(medium) {margin-bottom: rem-calc(40);
 			a {margin-top: rem-calc(40); max-width: rem-calc(180); margin-right: auto; margin-left: auto; font-size: rem-calc(13); 
@@ -176,9 +179,9 @@ Stylesheet: Conteng Guidelines Stylesheet
 // Image Grid
 // ------
 
-.img-grid {margin: rem-calc(12 0 6); 
+.icon-grid {margin: rem-calc(12 0 0); 
 	p {margin-bottom: rem-calc(12);}
-	@include breakpoint(medium) {margin: rem-calc(24 0 12);
+	@include breakpoint(medium) {margin: rem-calc(24 0 0);
 		p {margin-bottom: rem-calc(24);}
 	}
 }
@@ -193,14 +196,14 @@ Stylesheet: Conteng Guidelines Stylesheet
 }
 span.example {display: inline-block; padding: rem-calc(0 7); margin: 0;}
 
-.do-this, .not-this {background-color: $lighter-gray; margin: rem-calc(12 0); padding: rem-calc(12); border: 1px solid darken($light-gray,5%);
+.do-this, .not-this {background-color: $lighter-gray; margin: rem-calc(12 0); padding: rem-calc(12); border: 1px solid darken($light-gray,4%);
 	> *:last-child {margin-bottom: 0;}
 
 	header {padding: rem-calc(8 0 6);
 		> *:first-child:before {display: inline; margin-right: .5rem;}
 	}
 
-	.example {background-color: darken($light-gray,5%);}
+	.example {background-color: darken($light-gray,4%);}
 
 	@include breakpoint(medium) {margin: rem-calc(24 0); padding: rem-calc(24);
 		header {padding: rem-calc(0 0 12);}
@@ -234,12 +237,44 @@ span.example {display: inline-block; padding: rem-calc(0 7); margin: 0;}
 
 
 
+// Page bottom nav
+// ------
+
+.page-bottom-nav {padding-top: rem-calc(24); 
+    @include breakpoint(medium) {padding-top: rem-calc(45);}
+    @include breakpoint(xlarge) {padding-top: rem-calc(60);}
+
+    ul {display: flex; flex-flow: row nowrap; justify-content: space-between; line-height: $header-lineheight * 1.3; list-style: none; margin: 0;}
+
+    li {flex: 1 1 auto; margin: 0;
+        &:last-child {text-align: right;}
+    }
+
+    a {display: inline-block;}
+
+    li:first-child a:before {@include icon_font($char: $icon-back); display: inline-block; padding-right: .3em;}
+    li:last-child a:after {@include icon_font($char: $icon-forward); display: inline-block; padding-left: .3em;}
+}
+
+
+
 
 // Moz Footer
 // ------
 
 .site-wrapper + .site-footer {
+
     .mzp-l-content {
-        @include breakpoint(xxlarge) {margin-left: rem-calc(230); padding: 0 8.333333333333333%;}
+        .grid-container {max-width: $global-width - $sidebar-w;}
+    }
+
+    @include breakpoint(medium) {padding-left: $sidebar-w-sm;}
+
+    @include breakpoint(large) {
+        .mzp-l-content {padding: 0 4.166666666666667%;}
+    }
+    @include breakpoint(xlarge) {padding-left: $sidebar-w;
+        .mzp-l-content {padding: 0 8.333333333333333%;}
     }
 }
+

@@ -330,6 +330,96 @@
 		"oF": 1,
 		"oS": 3
 		},
+	"/_site/assets/icomoon/demo-files/demo.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/_site/assets/icomoon/demo-files/demo-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/_site/assets/icomoon/demo-files/demo.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/_site/assets/icomoon/demo-files/demo-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/_site/assets/icomoon/demo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/_site/assets/icomoon/demo.html",
+		"oF": 0
+		},
+	"/_site/assets/icomoon/fonts/icomoon.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/_site/assets/icomoon/fonts/icomoon.eot",
+		"oF": 0
+		},
+	"/_site/assets/icomoon/fonts/icomoon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/_site/assets/icomoon/fonts/icomoon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/_site/assets/icomoon/fonts/icomoon.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/_site/assets/icomoon/fonts/icomoon.ttf",
+		"oF": 0
+		},
+	"/_site/assets/icomoon/fonts/icomoon.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/_site/assets/icomoon/fonts/icomoon.woff",
+		"oF": 0
+		},
+	"/_site/assets/icomoon/fonts/icomoon.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/_site/assets/icomoon/fonts/icomoon.woff2",
+		"oF": 0
+		},
+	"/_site/assets/icomoon/Read Me.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/_site/assets/icomoon/Read Me.txt",
+		"oF": 0
+		},
+	"/_site/assets/icomoon/selection.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/_site/assets/icomoon/selection-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/_site/assets/icomoon/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/_site/assets/icomoon/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/_site/assets/img/Add-Innovative-Features.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -807,6 +897,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/_site/assets/scripts/js/youtubeplayer.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/_site/assets/scripts/js/youtubeplayer-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/_site/assets/scripts/node_modules": {
 		"ft": 65536,
 		"oA": 1,
@@ -870,6 +970,23 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/_site/assets/scripts/scripts.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/_site/assets/scripts/scripts.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/_site/assets/scripts/scripts.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/_site/assets/scripts/scripts.min.js.map",
+		"oF": 0
 		},
 	"/_site/assets/slick/ajax-loader.gif": {
 		"ft": 4194304,
@@ -1887,100 +2004,93 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/assets/icomoon-2.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/assets/icomoon-2.zip",
-		"oF": 0
-		},
-	"/assets/icomoon-2/demo-files/demo.css": {
+	"/assets/icomoon/demo-files/demo.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/assets/icomoon-2/demo-files/demo-min.css",
+		"oAP": "/assets/icomoon/demo-files/demo-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/assets/icomoon-2/demo-files/demo.js": {
+	"/assets/icomoon/demo-files/demo.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/assets/icomoon-2/demo-files/demo-min.js",
+		"oAP": "/assets/icomoon/demo-files/demo-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/assets/icomoon-2/demo.html": {
+	"/assets/icomoon/demo.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/assets/icomoon-2/demo.html",
+		"oAP": "/assets/icomoon/demo.html",
 		"oF": 0
 		},
-	"/assets/icomoon-2/fonts/icomoon.eot": {
+	"/assets/icomoon/fonts/icomoon.eot": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/assets/icomoon-2/fonts/icomoon.eot",
+		"oAP": "/assets/icomoon/fonts/icomoon.eot",
 		"oF": 0
 		},
-	"/assets/icomoon-2/fonts/icomoon.svg": {
+	"/assets/icomoon/fonts/icomoon.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/icomoon-2/fonts/icomoon.svg",
+		"oAP": "/assets/icomoon/fonts/icomoon.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/assets/icomoon-2/fonts/icomoon.ttf": {
+	"/assets/icomoon/fonts/icomoon.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/assets/icomoon-2/fonts/icomoon.ttf",
+		"oAP": "/assets/icomoon/fonts/icomoon.ttf",
 		"oF": 0
 		},
-	"/assets/icomoon-2/fonts/icomoon.woff": {
+	"/assets/icomoon/fonts/icomoon.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/assets/icomoon-2/fonts/icomoon.woff",
+		"oAP": "/assets/icomoon/fonts/icomoon.woff",
 		"oF": 0
 		},
-	"/assets/icomoon-2/fonts/icomoon.woff2": {
+	"/assets/icomoon/fonts/icomoon.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/assets/icomoon-2/fonts/icomoon.woff2",
+		"oAP": "/assets/icomoon/fonts/icomoon.woff2",
 		"oF": 0
 		},
-	"/assets/icomoon-2/Read Me.txt": {
+	"/assets/icomoon/Read Me.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/assets/icomoon-2/Read Me.txt",
+		"oAP": "/assets/icomoon/Read Me.txt",
 		"oF": 0
 		},
-	"/assets/icomoon-2/selection.json": {
+	"/assets/icomoon/selection.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/assets/icomoon-2/selection-min.json",
+		"oAP": "/assets/icomoon/selection-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"/assets/icomoon-2/style.css": {
+	"/assets/icomoon/style.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/assets/icomoon-2/style-min.css",
+		"oAP": "/assets/icomoon/style-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -2700,6 +2810,13 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"/content-guidelines-example.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/content-guidelines-example.html",
+		"oF": 0
 		},
 	"/content-guidelines-example.md": {
 		"cB": 0,

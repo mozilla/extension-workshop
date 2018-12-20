@@ -4,22 +4,28 @@ title: Master Template
 permalink: /content-guidelines/master-template/
 ---
 
+
+
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
+
 ![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
 Full width image (above)
+
 </section>
 <!-- END: Full Width Image -->
 
+
+
 <!-- Half Width Images -->
 <section class="image-with-caption grid-container grid-x grid-padding-x">
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-6" markdown="1">
 
 ![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
 Half width image (above)
 
 </div>
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-6" markdown="1">
 
 ![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
 Half width image (above)
@@ -28,8 +34,12 @@ Half width image (above)
 </section>
 <!-- END: Half Width Images -->
 
+
+
 ## Movie Title Lorem Ipsum
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+
+
 
 <!-- Video Popup Thumbnail -->
 <section class="video-popup" markdown="1">
@@ -38,6 +48,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </section>
 <!-- END: Video Popup Thumbnail -->
+
+
 
 <!-- Half Width Video Popup Thumbnails -->
 <section class="video-popup grid-container grid-x grid-padding-x">
@@ -62,11 +74,15 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 </section>
 <!-- END: Half Width Video Popup Thumbnails -->
 
-## Icons
-Examples of goood icons
 
-<!-- Image Grid : use "shrink" class instead of "auto" to fit grid to image size -->
-<section class="img-grid grid-container grid-x grid-padding-x">
+
+## Icons
+##### Examples of goood icons
+
+
+
+<!-- Icon Grid *** use "shrink" class instead of "auto" to fit grid to image size *** -->
+<section class="icon-grid grid-container grid-x grid-padding-x">
 <div class="cell auto" markdown="1">
 ![Icon](/assets/img/content-guidelines/example-icon.png "Icon")
 </div>
@@ -94,6 +110,8 @@ Examples of goood icons
 </section>
 <!-- END: Image Grid -->
 
+
+
 Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](http://firefox.com "addons.mozilla.org"), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built. 
 
 Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org](http://firefox.com "addons.mozilla.org").
@@ -107,9 +125,10 @@ Between your extension name and subtitle, you have up to 70 characters to use—
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
+
+
 <!-- Do this -->
-<section class="do-this" markdown="1">
-<header><h5>Do This</h5></header>
+<section class="do-this" markdown="1"><header><h5>Do This</h5></header>
 
 1. __Make it memorable__
 2. __Make it unique__
@@ -117,7 +136,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 4. __Make it easy to read and say__
 5. __Give an idea or hint about what your extension does with an illustrative word or metaphor__
 
-<!-- Example -->
+<!-- Example (Block) -->
 <div class="example" markdown="1">
 
 Examples:  
@@ -128,54 +147,54 @@ An extension that puts a cat on new tabs is called __Tabbycat__
 An extension that improves YouTube is called __Enhancer for YouTube__
 
 </div>
-<!-- END: Example -->
-
+<!-- END: Example (Block) -->
 </section>
 <!-- END: Do this -->
 
+
+
 <!-- Not this -->
-<section class="not-this" markdown="1">
-<header><h5>Not This</h5></header>
+<section class="not-this" markdown="1"><header><h5>Not This</h5></header>
 
-1. __Don't include a description.__ 
+##### 1. Don't include a description.
 
- Save these details for your subtitle and description.
+Save these details for your subtitle and description.
 
-<!-- Inline Example -->
-<span class="example" markdown="1">Example: Videomix, a fast video downloader</span>
-<!-- END: Inline Example -->
+<!-- Example (Inline) -->
+<span class="example">Example: Videomix, a fast video downloader</span>
+<!-- END: Example (Inline) -->
 
-2. __Don't stuff it with keywords.__ 
+##### 2. Don't stuff it with keywords. 
 
- Google is smarter than this and it just makes your extension look untrustworthy.
+Google is smarter than this and it just makes your extension look untrustworthy.
 
-<!-- Inline Example -->
-<span class="example" markdown="1">Example: Youtube Download Videos, Convert, Media, MP3, MP4, Free.</span>
-<!-- END: Inline Example -->
+<!-- Example (Inline) -->
+<span class="example">Example: Youtube Download Videos, Convert, Media, MP3, MP4, Free.</span>
+<!-- END: Example (Inline) -->
 
-3. __Don't use random words to differentiate, like “Barbara Notetaker.”__ 
+##### 3. Don't use random words to differentiate, like “Barbara Notetaker.” 
 
- Instead, create a descriptive name that is not already in use, like “Instant Notetaker.”
+Instead, create a descriptive name that is not already in use, like “Instant Notetaker.”
 
-4. __Don't call it something with no meaning, like “hoyv.”__ 
+##### 4. Don't call it something with no meaning, like “hoyv.” 
 
  While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad-blocking extension does because it contains the word “block”.
 
-5. __Don't include "WebExtension," “Firefox” or “Mozilla."__
+##### 5. Don't include "WebExtension," “Firefox” or “Mozilla."
 
-6. __Don't include version number or a previous name.__
+##### 6. Don't include version number or a previous name.
 
-<!-- Inline Example -->
-<span class="example" markdown="1">Example: Weatherchanger (fix version)</span>
-<!-- END: Example -->
+<!-- Example (Inline) -->
+<span class="example">Example: Weatherchanger (fix version)</span>
+<!-- END: Example (Inline) -->
 
-7. __Don't make it hard to read or say.__
+##### 7. Don't make it hard to read or say.
 
-<!-- Inline Example -->
-<span class="example" markdown="1">Example: TrLrs! Tab Changer.</span>
-<!-- END: Inline Example -->
+<!-- Example (Inline) -->
+<span class="example">Example: TrLrs! Tab Changer.</span>
+<!-- END: Example (Inline) -->
 
-__Remembear Example:__
+##### Remembear Example:
 
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
@@ -183,7 +202,7 @@ __Remembear Example:__
 </section>
 <!-- END: Full Width Image -->
 
-__List Example:__
+##### List Example:
 
 [Honey ](http://firefox.com "Honey ")  
 [Ghoastery](http://firefox.com "Ghoastery")  
@@ -194,17 +213,18 @@ __List Example:__
 </section>
 <!-- END: Not this -->
 
+
+
 <!-- Do this, not this, side-by-side -->
 <section class="do-this-not-this grid-container grid-x grid-padding-x">
 <div class="cell small-12 medium-6">
-<div class="do-this" markdown="1">
-<header><h5>Do This</h5></header>
+<div class="do-this" markdown="1"><header><h5>Do This</h5></header>
 
 1. __Make it memorable__
 2. __Make it unique__
 3. __Keep it short for better display on smaller screens__
 
-<!-- Example -->
+<!-- Example (Block) -->
 <div class="example" markdown="1">
 
 Examples:  
@@ -215,19 +235,18 @@ An extension that puts a cat on new tabs is called __Tabbycat__
 An extension that improves YouTube is called __Enhancer for YouTube__
 
 </div>
-<!-- END: Example -->
+<!-- END: Example (Block) -->
 
 </div>
 </div>
 <div class="cell small-12 medium-6">
-<div class="not-this" markdown="1">
-<header><h5>Not This</h5></header>
+<div class="not-this" markdown="1"><header><h5>Not This</h5></header>
 
 1. __Make it memorable__
 2. __Make it unique__
 3. __Keep it short for better display on smaller screens__
 
-<!-- Example -->
+<!-- Example (Block) -->
 <div class="example" markdown="1">
 
 Examples:  
@@ -238,15 +257,17 @@ An extension that puts a cat on new tabs is called __Tabbycat__
 An extension that improves YouTube is called __Enhancer for YouTube__
 
 </div>
-<!-- END: Example -->
+<!-- END: Example (Block) -->
 
 </div>
 </div>
 </section>
 <!-- END: Do this, not this, side-by-side -->
 
-<!-- Card -->
-<div class="tile" markdown="1">
+
+
+<!-- Tile -->
+<section class="tile" markdown="1">
 
 #### Requirements
 
@@ -260,8 +281,9 @@ An extension that improves YouTube is called __Enhancer for YouTube__
 * Excepteur sint: occaecat cupidatat non proident 
 * Bunt in culpa: qui officia deserunt mollit anim id est laborum
 
-</div>
-<!-- END: Card -->
+</section>
+<!-- END: Tile -->
+
 
 
 ## Stuck? Try this.
@@ -290,7 +312,7 @@ Remembear Example:
 * Friendly
 * Easy
 
-3. Example Lorum Ipsum
+#### 3. Example Lorum Ipsum
 
 Pull out the key words (nouns, adjectives, verbs) and phrases from your description  and create a word list. Add other words that come to mind based on those words, including synonyms.
 
@@ -300,15 +322,14 @@ Remembear: dolore eu fugiat nulla pariatur lemera dosada peel.
 [Extension Link ](http://firefox.com "Extension Link ")  
 [Extension Link ](http://firefox.com "Extension Link ")
 
-<!-- Helpful vote card -->
-<div class="tile vote" markdown="1">
-
-Tell us, is the content of this page helpful?
-
-</div>
-<!-- END: Helpful vote card -->
 
 
+<!-- Bottom of Page Navigation -->
+<nav class="page-bottom-nav" markdown="1">
 
+* [Extension Workshop](/ "Extension Workshop")
+* [Example](/content-guidelines/example/ "Example")
 
+</nav>
+<!-- END: Bottom of Page Navigation -->
 

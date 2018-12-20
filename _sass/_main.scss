@@ -14,16 +14,22 @@ Stylesheet: Main Stylesheet
 
 h1, h2, h3, h4, h5, h6 {margin-bottom: $header-margin-bottom;}
 
-p, ul, ol {
+p, ul, ol, h1, h2, h3, h4, h5, h6 {
     + h1, + h2, + h3, + h4, + h5, + h6 {margin-top: 1.5em;}
+}
+
+h1, h2 {
+    + h5, + h6 {margin-top: -0.6em;}
 }
 
 h2 {font-weight: 500;}
 
-li {margin-bottom: $list-margin-bottom / 2;}
+li {margin-bottom: $list-margin-bottom / 3;}
 
 a:not(.button) {
-    &:hover {text-decoration: underline; color: $primary-color;}
+    &:hover {text-decoration: underline; color: $primary-color;
+        &:before, &:after {text-decoration: none;}
+    }
 }
 
 small {color: $dark-gray;}
