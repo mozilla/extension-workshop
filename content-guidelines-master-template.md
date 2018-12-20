@@ -5,6 +5,9 @@ permalink: /content-guidelines/master-template/
 ---
 
 
+<header class="post-header">
+<h1 class="post-title">Heading One</h1>
+</header>
 
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">

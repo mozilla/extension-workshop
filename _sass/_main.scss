@@ -269,16 +269,17 @@ html {height: 100%;}
     iframe, object, embed, video {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
     .flex-video {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 
-    #stdVideo-close {z-index: 3; position: absolute; top: rem-calc(15); right: rem-calc(15); font-size: rem-calc(22); color: $white; background-color: $secondary-color; width: rem-calc(32); height: rem-calc(32); border-radius: 50%; box-shadow: #{rem-calc(0 1 3)} rgba($black,.33); cursor: pointer; text-align: center; transition: transform .15s ease-in-out;
-        &:before {@include icon_font($char: $icon-close); display: block; line-height: rem-calc(32);}
-        &:hover {transform: scale(1.1);}
-        @include breakpoint(large) {top: rem-calc(30); right: rem-calc(30); font-size: rem-calc(36); width: rem-calc(48); height: rem-calc(48);
-            &:before {line-height: rem-calc(48);}
-        }
-    }
-
     &.playing {opacity: 1; left: 0; top: 0; width: 100%; height: 100%; pointer-events: auto;}
 }
+
+#stdVideo-close {z-index: 3; position: absolute; top: rem-calc(-42); right: rem-calc(15); font-size: rem-calc(22); color: $white; width: rem-calc(32); height: rem-calc(32); border-radius: 50%; cursor: pointer; text-align: center; transition: transform .15s ease-in-out, opacity .3s ease-in-out;
+    &:before {@include icon_font($char: $icon-close); display: block; line-height: rem-calc(32);}
+    &:hover {transform: scale(1.1);}
+    @include breakpoint(large) {top: rem-calc(-63); right: 0; font-size: rem-calc(36); width: rem-calc(48); height: rem-calc(48);
+        &:before {line-height: rem-calc(48);}
+    }
+}
+.loading #stdVideo-close {opacity: 0;}
 
 .video-box {position: relative; 
 
@@ -321,7 +322,7 @@ html {height: 100%;}
 #video-popup {display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 100; background: rgba(0,0,0,.8);
     .bg {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
     .grid-container {height: 100%; position: relative; z-index: 3; pointer-events: none;
-        .cell {pointer-events: auto;}
+        .cell {pointer-events: auto; position: relative;}
     }
     #stdVideo {position: relative; height: 0; padding: 0; background: $white; transition: left .3s ease-in-out, top .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out, padding .3s ease-in-out, opacity .3s ease-in-out; 
         &.playing {opacity: 1; height: auto; padding-bottom: 56.25%;}

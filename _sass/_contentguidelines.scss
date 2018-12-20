@@ -13,37 +13,41 @@ $sidebar-w : rem-calc(230);
 	// Header
 	// ------
 
-    .site-header {font-size: rem-calc(11); padding-bottom: rem-calc(50); position: relative; z-index: 100;}
+    .site-header {font-size: rem-calc(13); padding-bottom: rem-calc(50); position: relative; z-index: 100;}
 
-    @include breakpoint(medium) {display: flex; flex-flow: row nowrap;
-        .site-header {flex: 0 0 #{$sidebar-w-sm}; width: $sidebar-w-sm; box-shadow: #{rem-calc(0 0 16)} rgba(12,12,13,0.1); padding-top: rem-calc(30); padding-bottom: rem-calc(30);}
+    @include breakpoint(medium) {display: flex; flex-flow: row nowrap;  
+        .site-header {font-size: rem-calc(11); flex: 0 0 #{$sidebar-w-sm}; width: $sidebar-w-sm; padding-top: rem-calc(30); padding-bottom: rem-calc(30);} //box-shadow: #{rem-calc(0 0 16)} rgba(12,12,13,0.1);
         .site-content {flex: 1 1 auto;}
     }
     @include breakpoint(xlarge) {
-        .site-header {flex: 0 0 #{$sidebar-w}; width: $sidebar-w; padding-top: rem-calc(45); padding-bottom: rem-calc(45); font-size: rem-calc(13);}
+        .site-header {font-size: rem-calc(13); flex: 0 0 #{$sidebar-w}; width: $sidebar-w; padding-top: rem-calc(45); padding-bottom: rem-calc(45);}
     }
 
 
-    .logo {font-size: rem-calc(13); line-height: 1.1; margin: rem-calc(8 0 24);
-        a {padding: rem-calc(15 0 3 50); 
-            &:before {content: ""; position: absolute; left: 0; top: rem-calc(8); display: block; width: rem-calc(41); height: rem-calc(42); background: transparent url(img/firefox-logo.png) no-repeat center/contain;}
+    .logo {font-size: rem-calc(15); margin: rem-calc(8 0 24); line-height: 1.1; 
+
+        a {padding: rem-calc(13 0 3 50); 
+            &:before {content: ""; position: absolute; display: block; left: 0; top: rem-calc(8); width: rem-calc(43); height: rem-calc(44); background: transparent url(img/firefox-logo.png) no-repeat center/contain;}
         }
+        small.tagline {font-size: rem-calc(13); padding: rem-calc(0 0 14 50); font-weight: $global-weight-normal; color: inherit;}
 
-        small.tagline {font-size: rem-calc(11); font-weight: $global-weight-normal; color: inherit; padding: rem-calc(0 0 14 50);}
 
-        @include breakpoint(medium) {font-size: rem-calc(13); 
+        @include breakpoint(medium) {font-size: rem-calc(13); margin-top: rem-calc(4);
             a {padding: rem-calc(15 0 14 43); display: block;
                 &:before {top: rem-calc(8); width: rem-calc(37); height: rem-calc(38);}
             }
-            small.tagline {display: block; padding: rem-calc(5 0 14 0);}
+            small.tagline {display: block; font-size: rem-calc(11); padding: rem-calc(5 0 14 0);}
         }
 
-        @include breakpoint(xlarge) {font-size: rem-calc(15);
+
+        @include breakpoint(xlarge) {font-size: rem-calc(15);  margin-top: rem-calc(2);
             a {padding: rem-calc(15 0 17 50);
                 &:before {width: rem-calc(43); height: rem-calc(44);}
             }
             small.tagline {font-size: rem-calc(13);}
         }
+
+
         @include breakpoint(small down) {
             br {display: none;}
         }
@@ -52,14 +56,14 @@ $sidebar-w : rem-calc(230);
     .site-nav-container {
     	.site-nav:focus {outline: none;}
 
-        ul.pages {list-style: none; margin: 0; font-size: rem-calc(13);
+        ul.pages {list-style: none; margin: 0; font-size: rem-calc(15);
         	li {margin: 0;}
             a {color: $body-font-color; display: inline-block; padding: .25rem 0;}
             a[target=_blank]:after {color: $primary-color; padding-left: .3em; display: inline-block;
                 @include icon_font($char:$icon-newtab);
             }
 
-            @include breakpoint(medium) {margin: rem-calc(24 0 30);
+            @include breakpoint(medium) {font-size: rem-calc(13); margin: rem-calc(24 0 30);
             	.current a {color: $primary-color;}
             }
             @include breakpoint(xlarge) {font-size: rem-calc(15);}
@@ -69,15 +73,16 @@ $sidebar-w : rem-calc(230);
         }
 
         .button {display: block; 
-            @include breakpoint(large down) {font-size: 0.733333333333333rem; padding: rem-calc(6 8);}
+            @include breakpoint(medium only) {font-size: 0.733333333333333rem; padding: rem-calc(6 8);}
+            @include breakpoint(large only) {font-size: 0.733333333333333rem; padding: rem-calc(6 8);}
         }
 
         @include breakpoint(small down) {position: absolute; z-index: 10; top: rem-calc(66); left: rem-calc(12); width: calc(100% - #{rem-calc(24)}); min-height: rem-calc(75);
         	&:before {content: ""; display: block; position: fixed; left: 0; top: rem-calc(-75); width: 100%; height: rem-calc(75); pointer-events: none; opacity: 0; background-image: linear-gradient(rgba($black, .333) 0, rgba($black, 0) 100%); transition: top 0 ease-in-out;}
 
         	.site-nav {padding: rem-calc(12 15); background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); position: absolute; left: 0; top: rem-calc(12); width: 100%; max-height: calc(100vh - #{rem-calc(24)});
+		        &:after {@include icon_font($char: $icon-arrow-down); position: absolute; font-size: rem-calc(18); line-height: 1; top: rem-calc(20); right: rem-calc(15);}
 
-		        &:after {@include icon_font($char: $icon-arrow-down); position: absolute; font-size: rem-calc(18); line-height: 1; top: rem-calc(17); right: rem-calc(15);}
     	    	p, li {display: none;}
 
     	    	p {margin: 0; padding: rem-calc(15 0 0);

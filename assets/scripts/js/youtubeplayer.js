@@ -31,7 +31,7 @@
 			// $(document).video_cta({yt_object: YT, cta: '.video-link', close: null});
 			// $(document).video_cta({yt_object: YT, cta: 'a[title|="Open Popup Video"]', close: null, youtube_id_data: 'href', target: $('#video-popup')});
 
-			$(document).video_cta({yt_object: YT, cta: '.video-link, a[title|="Open Popup Video"], .video-popup a', close: null, default_target: $('#video-popup')});
+			$(document).video_cta({yt_object: YT, cta: '.video-link, a[title|="Open Popup Video"], .video-popup a', default_target: $('#video-popup')});
 
 		    if ($('.video-banner').length) {
 				$('.video-banner').each(function() {
@@ -52,7 +52,7 @@
             yt_object : null,
             container : '<div id="stdVideo"><div id="stdVideo-player"></div></div>',
             container_id : 'stdVideo-player',
-            close : '<div id="stdVideo-close"></div>',
+            close : '#stdVideo-close',
             cta : '.video-link',
             cta_container : '.video-cta',
             youtube_id_data : 'youtube_id',
@@ -64,7 +64,6 @@
 		var yt_player;
 		var $container;
 		var $target = settings.default_target;
-		var $close;
 		var playing = false;
 		var is_ios = navigator.userAgent.match(/(iPod|iPhone|iPad)/) != null;
         var is_android = /(android)/i.test(navigator.userAgent);
@@ -72,6 +71,9 @@
 
         if (settings.default_target.length) {
         	settings.default_target.find('.bg').on('click', closeVideo);
+        }
+        if ($(settings.close).length) {
+        	$(settings.close).on('click', closeVideo);
         }
 
 		this.on('click', settings.cta, function(e) {
@@ -130,11 +132,11 @@
 
 			$container = $(settings.container);
 
-			if (settings.close) {
-				$close = $(settings.close);
-				$close.appendTo($container);
-				$close.on('click', closeVideo);
-			}
+			// if (settings.close) {
+				// $close = $(settings.close);
+				// $close.appendTo($container);
+				// $close.on('click', closeVideo);
+			// }
 			
 			if ($('#' + $link.data(settings.target_data)).length) { // if custom target
 				$container.appendTo($target);
