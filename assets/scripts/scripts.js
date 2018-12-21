@@ -1,4 +1,4 @@
-// @codekit-prepend "js/tinypubsub.js", "js/breakpoints.js", "js/velocity.js", "js/velocity.ui.js", "js/parallax.js", "js/parallaxFG.js", "js/inview.js", "js/youtubeplayer.js";
+// @codekit-prepend "js/tinypubsub.js", "js/breakpoints.js", "js/purify.min.js", "js/velocity.js", "js/velocity.ui.js", "js/parallax.js", "js/parallaxFG.js", "js/inview.js", "js/youtubeplayer.js";
 
 /*!
  * Glance Digital Custom JavaScript Programing
@@ -643,7 +643,11 @@ jQuery(document).ready(function($) {
             <div class="rss2html-note" style="float: right;"><a href="https://rss.bloople.net/" style="color: #000000;">Powered by rss2html</a></div><div class="rss2html-note-clear" style="clear: right; height: 0;"></div> 
         
         */
-        var items = settings.source.html().split('<p></p>');
+        var clean = DOMPurify.sanitize(settings.source.html());
+        var items = clean.split('<p></p>');
+
+        settings.source.remove();
+
         $.each(items, function(i, item) {
             if (item.indexOf('rss2html-note') !== -1) {
                 return true;
