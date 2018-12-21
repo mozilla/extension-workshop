@@ -12,14 +12,15 @@
 	            	<ul class="pages">
 					    {% for item in site.data.content-guidelines-pages %}
 						    {% if page.url == item.url %}
-					            <li class="current"><a href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a></li>
+					            <li class="current"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
 					        {% else %}
-					      		<li><a href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a></li>
+					      		<li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
 					        {% endif %}
 					    {% endfor %}
+					    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Listing" target="_blank">More Tips</a></li>
 					</ul>
 
-					<p><a href="http://firefox.com" class="button">Edit Product Page</a></p>
+					<p><a href="https://addons.mozilla.org/en-US/firefox/#login" class="button" target="_blank">Edit Product Page</a></p>
 					<p><a href="{{ "/" | relative_url }}" class="back">Extension Workshop</a></p>
 					<p class="site-metadata"><a href="">Site Feedback</a>
 						<br><a href="">Changelog</a> v0.6.8

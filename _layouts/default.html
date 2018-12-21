@@ -20,17 +20,17 @@
 
                                     {% if forloop.first %}
                                         {% assign last = site.data.content-guidelines-pages.last %}
-                                        <li><a href="{{ last.url }}">{{ last.title }}</a></li>
+                                        <li><a href="{{ last.url | relative_url }}">{{ last.title }}</a></li>
                                     {% else %}
-                                        <li><a href="{{ prev.url }}">{{ prev.title }}</a></li>
+                                        <li><a href="{{ prev.url | relative_url }}">{{ prev.title }}</a></li>
                                     {% endif %}
 
                                     {% if forloop.last %}
                                         {% assign first = site.data.content-guidelines-pages.first %}
-                                        <li><a href="{{ first.url }}">{{ first.title }}</a></li>
+                                        <li><a href="{{ first.url | relative_url }}">{{ first.title }}</a></li>
                                     {% else %}
                                         {% assign next = site.data.content-guidelines-pages[forloop.index] %}
-                                        <li><a href="{{ next.url }}">{{ next.title }}</a></li>
+                                        <li><a href="{{ next.url | relative_url }}">{{ next.title }}</a></li>
                                     {% endif %}
 
                                 {% endif %}
