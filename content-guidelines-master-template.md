@@ -60,7 +60,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <section class="video-popup grid-container grid-x grid-padding-x">
 <div class="cell small-12 medium-6" markdown="1">
 
-[![What’s Great Content and Design?](/assets/img/content-guidelines/example-thumbnail.jpg)](a0_OsLGI0k4 "What’s Great Content and Design?")
+![What’s Great Content and Design?]({{ site.baseurl }}/assets/img/content-guidelines/example-thumbnail.jpg "What’s Great Content and Design?")
 
 #### What’s Great Content and Design?
 

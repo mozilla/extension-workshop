@@ -189,12 +189,14 @@ $sidebar-w : rem-calc(230);
 	.medium-6 {margin-bottom: rem-calc(12);
 		
 		@include breakpoint(medium) {margin-bottom: rem-calc(24);
-			a {margin-top: rem-calc(40); max-width: rem-calc(180); margin-right: auto; margin-left: auto; font-size: rem-calc(13); 
+            a {font-size: rem-calc(13); 
 				&:before, &:after {left: calc(50% - #{rem-calc(12)}); top: calc(50% - #{rem-calc(12)}); width: rem-calc(24); height: rem-calc(24);}
 		        &:after {line-height: rem-calc(23);}
 			}
 			img {border-radius: $global-radius;}
 			h1, h2, h3, h4, h5, h6, p {max-width: rem-calc(360); margin-right: auto; margin-left: auto;}
+
+            p:first-child {margin-top: rem-calc(40); max-width: rem-calc(180); margin-right: auto; margin-left: auto;}
 		}
 	}
 }
