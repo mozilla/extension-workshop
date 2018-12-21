@@ -225,6 +225,7 @@ span.example {display: inline-block; padding: rem-calc(0 7); margin: 0;}
 
 	header {padding: rem-calc(8 0 6);
 		> *:first-child:before {display: inline; margin-right: .5rem;}
+        + h1, + h2, + h3, + h4, + h5, + h6 {margin-top: 0;}
 	}
 
 	.example {background-color: darken($light-gray,4%);}
