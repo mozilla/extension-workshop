@@ -10,7 +10,37 @@
         <main class="site-content" aria-label="Content">
           
             {{ content }}
-          
+            
+            <nav class="page-bottom-nav">
+                <div class="grid-container grid-x grid-padding-x">
+                    <div class="cell small-12">
+                        <ul>
+                            {% for item in site.data.content-guidelines-pages %}
+                                {% if item.url == page.url %}
+
+                                    {% if forloop.first %}
+                                        {% assign last = site.data.content-guidelines-pages.last %}
+                                        <li><a href="{{ last.url }}">{{ last.title }}</a></li>
+                                    {% else %}
+                                        <li><a href="{{ prev.url }}">{{ prev.title }}</a></li>
+                                    {% endif %}
+
+                                    {% if forloop.last %}
+                                        {% assign first = site.data.content-guidelines-pages.first %}
+                                        <li><a href="{{ first.url }}">{{ first.title }}</a></li>
+                                    {% else %}
+                                        {% assign next = site.data.content-guidelines-pages[forloop.index] %}
+                                        <li><a href="{{ next.url }}">{{ next.title }}</a></li>
+                                    {% endif %}
+
+                                {% endif %}
+                                {% assign prev = item %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
         </main>
     </div>
 

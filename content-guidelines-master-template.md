@@ -5,14 +5,16 @@ permalink: /content-guidelines/master-template/
 ---
 
 
-<header class="post-header">
-<h1 class="post-title">Heading One</h1>
-</header>
+
+# Heading One
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+
+
 
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
 
-![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
+![Screenshot Remembear]({{ site.baseurl }}/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
 Full width image (above)
 
 </section>
@@ -24,13 +26,13 @@ Full width image (above)
 <section class="image-with-caption grid-container grid-x grid-padding-x">
 <div class="cell small-6" markdown="1">
 
-![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
+![Screenshot Remembear]({{ site.baseurl }}/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
 Half width image (above)
 
 </div>
 <div class="cell small-6" markdown="1">
 
-![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
+![Screenshot Remembear]({{ site.baseurl }}/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
 Half width image (above)
 
 </div>
@@ -84,31 +86,16 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 
 
 
-<!-- Icon Grid *** use "shrink" class instead of "auto" to fit grid to image size *** -->
+<!-- Icon Grid *** use "shrink" class to fit grid to image size -OR- use "auto" class to fit images to grid width *** -->
 <section class="icon-grid grid-container grid-x grid-padding-x">
-<div class="cell auto" markdown="1">
-![Icon](/assets/img/content-guidelines/example-icon.png "Icon")
+<div class="cell shrink">
+	<p><img src="{{ site.baseurl }}/assets/img/content-guidelines/example-icon.png" alt="Icon" title="Icon" width="53"></p>
 </div>
-<div class="cell auto" markdown="1">
-![Icon](/assets/img/content-guidelines/example-icon.png "Icon")
+<div class="cell shrink">
+	<p><img src="{{ site.baseurl }}/assets/img/content-guidelines/example-icon.png" alt="Icon" title="Icon" width="53"></p>
 </div>
-<div class="cell auto" markdown="1">
-![Icon](/assets/img/content-guidelines/example-icon.png "Icon")
-</div>
-<div class="cell auto" markdown="1">
-![Icon](/assets/img/content-guidelines/example-icon.png "Icon")
-</div>
-<div class="cell auto" markdown="1">
-![Icon](/assets/img/content-guidelines/example-icon.png "Icon")
-</div>
-<div class="cell auto" markdown="1">
-![Icon](/assets/img/content-guidelines/example-icon.png "Icon")
-</div>
-<div class="cell auto" markdown="1">
-![Icon](/assets/img/content-guidelines/example-icon.png "Icon")
-</div>
-<div class="cell auto" markdown="1">
-![Icon](/assets/img/content-guidelines/example-icon.png "Icon")
+<div class="cell shrink">
+	<p><img src="{{ site.baseurl }}/assets/img/content-guidelines/example-icon.png" alt="Icon" title="Icon" width="53"></p>
 </div>
 </section>
 <!-- END: Image Grid -->
@@ -201,7 +188,7 @@ Instead, create a descriptive name that is not already in use, like “Instant N
 
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
-![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
+![Screenshot Remembear]({{ site.baseurl }}/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
 </section>
 <!-- END: Full Width Image -->
 
@@ -324,15 +311,4 @@ Remembear: dolore eu fugiat nulla pariatur lemera dosada peel.
 [Extension Link ](http://firefox.com "Extension Link ")  
 [Extension Link ](http://firefox.com "Extension Link ")  
 [Extension Link ](http://firefox.com "Extension Link ")
-
-
-
-<!-- Bottom of Page Navigation -->
-<nav class="page-bottom-nav" markdown="1">
-
-* [Extension Workshop](/ "Extension Workshop")
-* [Example](/content-guidelines/example/ "Example")
-
-</nav>
-<!-- END: Bottom of Page Navigation -->
 

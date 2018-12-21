@@ -4,6 +4,8 @@ title: Example
 permalink: /content-guidelines/example/
 ---
 
+# Example
+
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
 You can find the source code for Minima at GitHub:
@@ -16,14 +18,3 @@ You can find the source code for Jekyll at GitHub:
 
 
 [jekyll-organization]: https://github.com/jekyll
-
-
-
-<!-- Bottom of Page Navigation -->
-<nav class="page-bottom-nav" markdown="1">
-
-* [Master Template](/content-guidelines/master-template/ "Master Template")
-* [More Tips](http://firefox.com "More Tips")
-
-</nav>
-<!-- END: Bottom of Page Navigation -->

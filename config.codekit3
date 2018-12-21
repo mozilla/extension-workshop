@@ -330,483 +330,6 @@
 		"oF": 1,
 		"oS": 3
 		},
-	"/_site/assets/icomoon/demo-files/demo.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/_site/assets/icomoon/demo-files/demo-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/_site/assets/icomoon/demo-files/demo.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_site/assets/icomoon/demo-files/demo-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/icomoon/demo.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/_site/assets/icomoon/demo.html",
-		"oF": 0
-		},
-	"/_site/assets/icomoon/fonts/icomoon.eot": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/_site/assets/icomoon/fonts/icomoon.eot",
-		"oF": 0
-		},
-	"/_site/assets/icomoon/fonts/icomoon.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/_site/assets/icomoon/fonts/icomoon.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/icomoon/fonts/icomoon.ttf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/_site/assets/icomoon/fonts/icomoon.ttf",
-		"oF": 0
-		},
-	"/_site/assets/icomoon/fonts/icomoon.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/_site/assets/icomoon/fonts/icomoon.woff",
-		"oF": 0
-		},
-	"/_site/assets/icomoon/fonts/icomoon.woff2": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/_site/assets/icomoon/fonts/icomoon.woff2",
-		"oF": 0
-		},
-	"/_site/assets/icomoon/Read Me.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/_site/assets/icomoon/Read Me.txt",
-		"oF": 0
-		},
-	"/_site/assets/icomoon/selection.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/_site/assets/icomoon/selection-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/_site/assets/icomoon/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/_site/assets/icomoon/style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/_site/assets/img/Add-Innovative-Features.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/Add-Innovative-Features.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/ajax-loader.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/ajax-loader.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/Bring-Extension-Firefox.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/Bring-Extension-Firefox.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/content-guidelines/example-icon.png": {
-		"ft": 32768,
-		"iS": 6221,
-		"oA": 0,
-		"oAP": "/_site/assets/img/content-guidelines/example-icon.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/_site/assets/img/content-guidelines/example-remembear.png": {
-		"ft": 32768,
-		"iS": 75096,
-		"oA": 0,
-		"oAP": "/_site/assets/img/content-guidelines/example-remembear.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/_site/assets/img/content-guidelines/example-thumbnail.jpg": {
-		"ft": 16384,
-		"iS": 63974,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/_site/assets/img/content-guidelines/example-thumbnail.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/_site/assets/img/content_5minextension_thumbnail.jpg": {
-		"ft": 16384,
-		"iS": 91723,
-		"jF": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/content_5minextension_thumbnail.jpg",
-		"oF": 1,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/_site/assets/img/content_video_thumbnail.jpg": {
-		"ft": 16384,
-		"iS": 28755,
-		"jF": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/content_video_thumbnail.jpg",
-		"oF": 1,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/_site/assets/img/Create-New-Extension.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/Create-New-Extension.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/extension-alt.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/extension-alt.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/extension.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/extension.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/favicon.png": {
-		"ft": 32768,
-		"iS": 32658,
-		"oA": 1,
-		"oAP": "/_site/assets/img/favicon.png",
-		"oF": 1,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/_site/assets/img/firefox-logo.png": {
-		"ft": 32768,
-		"iS": 13095,
-		"oA": 1,
-		"oAP": "/_site/assets/img/firefox-logo.png",
-		"oF": 1,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/_site/assets/img/Focus-Usability.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/Focus-Usability.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/header-a.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/header-a.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/header-b.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/header-b.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/background-scripts-link.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/background-scripts-link.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/background-scripts.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/background-scripts.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/browser-api.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/browser-api.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/community-forums.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/community-forums.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/content-script-link.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/content-script-link.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/content-script.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/content-script.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/debug.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/debug.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/extension.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/extension.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/get-involved.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/get-involved.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/manifest.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/manifest.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/plugin.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/plugin.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/publish-on-firefox.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/publish-on-firefox.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/publish-on-own.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/publish-on-own.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/user-interface-link.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/user-interface-link.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/user-interface.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/user-interface.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/icons/web-ext.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/icons/web-ext.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/Javascript-API.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/Javascript-API.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/Manifest-Keys.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/Manifest-Keys.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/moz-logo.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/moz-logo.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/Optimize-Product-Page.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/Optimize-Product-Page.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/Tinker-with-Tabs.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/Tinker-with-Tabs.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/img/Transform-Web-Content.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 1,
-		"oAP": "/_site/assets/img/Transform-Web-Content.svg",
-		"oF": 1,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"/_site/assets/main.css": {
 		"aP": 1,
 		"bl": 0,
@@ -816,86 +339,6 @@
 		"oAP": "/_site/assets/main-min.css",
 		"oF": 1,
 		"oS": 3
-		},
-	"/_site/assets/scripts/basket-client.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/_site/assets/scripts/basket-client-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/scripts/js/breakpoints.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/_site/assets/scripts/js/breakpoints-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/scripts/js/inview.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/_site/assets/scripts/js/inview-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/scripts/js/parallax.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/_site/assets/scripts/js/parallax-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/scripts/js/parallaxFG.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/_site/assets/scripts/js/parallaxFG-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/scripts/js/tinypubsub.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/_site/assets/scripts/js/tinypubsub-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/scripts/js/velocity.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/_site/assets/scripts/js/velocity-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/scripts/js/velocity.ui.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/_site/assets/scripts/js/velocity.ui-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
 		},
 	"/_site/assets/scripts/node_modules": {
 		"ft": 65536,
@@ -960,6 +403,23 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/_site/assets/scripts/scripts.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/_site/assets/scripts/scripts.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/_site/assets/scripts/scripts.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/_site/assets/scripts/scripts.min.js.map",
+		"oF": 0
 		},
 	"/_site/assets/slick/ajax-loader.gif": {
 		"ft": 4194304,
@@ -1110,16 +570,16 @@
 	"/_site/content-guidelines/example/index.html": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/_site/content-guidelines/example/index.html",
-		"oF": 1
+		"oF": 0
 		},
 	"/_site/content-guidelines/master-template/index.html": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "/_site/content-guidelines/master-template/index.html",
-		"oF": 1
+		"oF": 0
 		},
 	"/_site/favicon.ico": {
 		"cB": 0,
@@ -1967,9 +1427,9 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/about.html",
-		"oF": 0,
+		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,
@@ -2784,13 +2244,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/content-guidelines-example.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/content-guidelines-example.html",
-		"oF": 0
-		},
 	"/content-guidelines-example.md": {
 		"cB": 0,
 		"cS": 0,
@@ -2799,22 +2252,15 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/content-guidelines-example.html",
-		"oF": 0,
+		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"/content-guidelines-master-template.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/content-guidelines-master-template.html",
-		"oF": 0
 		},
 	"/content-guidelines-master-template.md": {
 		"cB": 0,
@@ -2824,9 +2270,9 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/content-guidelines-master-template.html",
-		"oF": 0,
+		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,
@@ -2863,9 +2309,9 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/index.html",
-		"oF": 0,
+		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
 		"pHT": 0,
