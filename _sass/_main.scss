@@ -12,11 +12,10 @@ Stylesheet: Main Stylesheet
 // -------------------------------------------------------------------------------------------------------------------
 
 
-h1, h2, h3, h4, h5, h6 {margin-bottom: $header-margin-bottom;}
-
-p, ul, ol, h1, h2, h3, h4, h5, h6 {
-    + h1, + h2, + h3, + h4, + h5, + h6 {margin-top: 1.6666em;}
+h1, h2, h3, h4, h5, h6 {margin-bottom: $header-margin-bottom;
+    &:not(:first-child) {margin-top: 1.6666em;}
 }
+
 
 h1, h2 {
     + h5, + h6 {margin-top: -0.6em;}

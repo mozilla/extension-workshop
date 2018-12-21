@@ -162,7 +162,7 @@ $sidebar-w : rem-calc(230);
 // Full Width Image & Half Width Images
 // ------
 
-.image-with-caption {font-size: $small-font-size; color: $dark-gray; margin: rem-calc(12 0);
+.image-with-caption {font-size: $small-font-size; color: $dark-gray; margin: rem-calc(12 0 15);
 	img {display: block; width: 100%; margin-bottom: rem-calc(6);}
 
 	@include breakpoint(medium) {margin: rem-calc(24 0);
@@ -203,7 +203,7 @@ $sidebar-w : rem-calc(230);
 // Image Grid
 // ------
 
-.icon-grid {margin: rem-calc(12 0 0); 
+.icon-grid {margin: rem-calc(12 0 3); 
 	p {margin-bottom: rem-calc(12);}
 	@include breakpoint(medium) {margin: rem-calc(24 0 0);
 		p {margin-bottom: rem-calc(24);}
@@ -250,7 +250,7 @@ span.example {display: inline-block; padding: rem-calc(0 7); margin: 0;}
 }
 
 .do-this-not-this {
-	.do-this, .not-this {margin: rem-calc(6 0);}
+	.do-this, .not-this {margin: rem-calc(0 0 12);}
 
 	@include breakpoint(medium) {margin: rem-calc(24 0);
 		.do-this, .not-this {margin: 0;}

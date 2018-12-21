@@ -250,6 +250,10 @@ Stylesheet: Landing Page Stylesheet
 .cell.tile {z-index: 3; padding: rem-calc(20 26) !important; margin: rem-calc(8 0); color: $body-font-color; 
     &:before {left: rem-calc(6); width: calc(100% - #{rem-calc(12)});}
 
+    h1, h2, h3, h4, h5, h6 {
+        &:not(:first-child) {margin-top: 0;}
+    }
+
     img {display: block; max-height: rem-calc(120); margin: 0 auto;}
 
     &:not(.tile-block-link) {
@@ -333,6 +337,10 @@ Stylesheet: Landing Page Stylesheet
         &:last-child {margin-bottom: 0;}
     }
 
+    h1, h2, h3, h4, h5, h6 {
+        &:not(:first-child) {margin-top: 0;}
+    }
+
     &:not(.tile-block-link) > * {
         &:first-child {position: absolute; top: rem-calc(12); right: rem-calc(24); width: rem-calc(32);
             img {width: rem-calc(32);}
@@ -392,6 +400,10 @@ Stylesheet: Landing Page Stylesheet
     a img {border-radius: $global-radius; transition: box-shadow .2s ease-in-out;}
     a:hover img {box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.33);}
 
+    h1, h2, h3, h4, h5, h6 {
+        &:not(:first-child) {margin-top: 0;}
+    }
+
     @include breakpoint(medium) {padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0); display: flex; flex-flow: column nowrap; justify-content: stretch;
         > * {flex: 0 0 auto; width: 100%;
             &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-end; margin-bottom: 0;}
@@ -405,6 +417,9 @@ Stylesheet: Landing Page Stylesheet
 }
 
 .tile-extended {
+    h1, h2, h3, h4, h5, h6 {
+        &:not(:first-child) {margin-top: 0;}
+    }
     > p a {@include button(); font-size: 0.733333333333333rem; padding: rem-calc(6 8);
         &:hover {text-decoration: none;}
     }
@@ -414,6 +429,9 @@ Stylesheet: Landing Page Stylesheet
 }
 
 .tiles-outside {padding-top: rem-calc(10); padding-bottom: rem-calc(20); 
+    h1, h2, h3, h4, h5, h6 {
+        &:not(:first-child) {margin-top: 0;}
+    }
     &:first-child {
         *:last-child {margin-bottom: 0;}
         @include breakpoint(small down) {padding-top: rem-calc(24); padding-bottom: rem-calc(6);}
