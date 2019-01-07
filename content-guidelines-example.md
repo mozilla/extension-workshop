@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Example
-permalink: /content-guidelines/example/
+title: Extension Name
+permalink: /content-guidelines/extension-name/
 ---
 
 
