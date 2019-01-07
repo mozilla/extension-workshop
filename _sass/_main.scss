@@ -106,7 +106,6 @@ a[title="View on Github"] {
 // IMAGES, VIDEOS & GALLERIES
 // -------------------------------------------------------------------------------------------------------------------
 
-
 .img {position: relative; display: block; background: transparent no-repeat center/cover;}
 
 
@@ -115,15 +114,6 @@ a[title="View on Github"] {
 
 // FORM STYLES
 // -------------------------------------------------------------------------------------------------------------------
-
-
-// input[type=checkbox] {display: none;
-
-//     + label {position: relative; margin: 0; clear: none; cursor: pointer; line-height: rem-calc(24);
-//         &:before {content: ""; display: inline-block; width: rem-calc(24); height: rem-calc(24); border: #{rem-calc(4) solid $white}; margin-right: 1em; background-color: $white; vertical-align: top;}
-//     }
-//     &:checked + label:before {background-color: $black;}
-// }
 
 .newsletter_errors {display: none;}
 .newsletter_thanks {display: none;}
@@ -254,11 +244,8 @@ html {height: 100%;}
         &:last-child {margin-bottom: 0;}
     }
 
-    & + p, & + h1, & + h2, & + h3, & + h4, & + h5, & + h6, & + ol, & + ul {margin-top: 1.5em;
-        // @include breakpoint(medium) {margin-top: rem-calc(24);}
-    }
+    & + p, & + h1, & + h2, & + h3, & + h4, & + h5, & + h6, & + ol, & + ul {margin-top: 1.5em;}
 
-    &.vote {}
 }
 
 
@@ -328,6 +315,10 @@ html {height: 100%;}
     #stdVideo {position: relative; height: 0; padding: 0; background: $white; transition: left .3s ease-in-out, top .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out, padding .3s ease-in-out, opacity .3s ease-in-out; 
         &.playing {opacity: 1; height: auto; padding-bottom: 56.25%;}
     }
+    h1, h2, h3, h4, h5, h6 {
+        &:not(:first-child) {margin-top: 0;}
+    }
+
     &.loading {
         &:before {content: ""; position: absolute; z-index: 2; left: calc(50% - #{rem-calc(32)}); top: calc(50% - #{rem-calc(32)}); width: rem-calc(64); height: rem-calc(64); background: transparent url(img/ajax-loader.svg) no-repeat center/100%;}
     }

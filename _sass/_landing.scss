@@ -60,7 +60,7 @@ Stylesheet: Landing Page Stylesheet
 
             .group-a {overflow-x: hidden; overflow-y: hidden;
                 @include breakpoint(medium only) {
-                    &:hover {overflow-x: auto;} // -ms-overflow-style: -ms-autohiding-scrollbar;
+                    &:hover {overflow-x: auto;} 
                 }
             }
 
