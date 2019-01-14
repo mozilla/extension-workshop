@@ -1,10 +1,11 @@
-// @codekit-prepend "js/tinypubsub.js", "js/breakpoints.js", "js/purify.min.js", "js/velocity.js", "js/velocity.ui.js", "js/parallax.js", "js/parallaxFG.js", "js/inview.js", "js/youtubeplayer.js";
+// @codekit-prepend "../../node_modules/velocity-animate/velocity.min.js", "../../node_modules/velocity-ui-pack/velocity.ui.min.js", "../../node_modules/slick-carousel/slick/slick.min.js", "js/tinypubsub.js", "js/breakpoints.js", "js/parallax.js", "js/parallaxFG.js", "js/inview.js", "js/youtubeplayer.js";
 
 /*!
  * Glance Digital Custom JavaScript Programing
  * lance@glance.ca
  *
  */
+
 
 jQuery(document).ready(function($) {
 
@@ -641,7 +642,6 @@ jQuery(document).ready(function($) {
                             description: $this.find("description").text(),
                             pubDate: $this.find("pubDate").text(),
                     }
-                    console.log(item);
 
                     var newDate = new Date(item.pubDate);
                     var d = newDate.getDate();
@@ -716,8 +716,8 @@ jQuery(document).ready(function($) {
             <div class="rss2html-note" style="float: right;"><a href="https://rss.bloople.net/" style="color: #000000;">Powered by rss2html</a></div><div class="rss2html-note-clear" style="clear: right; height: 0;"></div> 
         
         */
-        var clean = DOMPurify.sanitize(settings.source.html());
-        var items = clean.split('<p></p>');
+        // var clean = DOMPurify.sanitize(settings.source.html());
+        var items = settings.source.html().split('<p></p>');
 
         settings.source.remove();
 

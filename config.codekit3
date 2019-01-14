@@ -860,42 +860,12 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/_site/assets/scripts/js/purify.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/_site/assets/scripts/js/purify.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/_site/assets/scripts/js/tinypubsub.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/_site/assets/scripts/js/tinypubsub-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/scripts/js/velocity.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/_site/assets/scripts/js/velocity-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/scripts/js/velocity.ui.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/_site/assets/scripts/js/velocity.ui-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -956,152 +926,6 @@
 		"oA": 0,
 		"oAP": "/_site/assets/scripts/scripts.min.js.map",
 		"oF": 0
-		},
-	"/_site/assets/slick/ajax-loader.gif": {
-		"ft": 4194304,
-		"iS": 4178,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/ajax-loader.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/_site/assets/slick/config.rb": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "/_site/assets/slick/config.rb",
-		"oF": 1
-		},
-	"/_site/assets/slick/fonts/slick.eot": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/fonts/slick.eot",
-		"oF": 0
-		},
-	"/_site/assets/slick/fonts/slick.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/_site/assets/slick/fonts/slick.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/_site/assets/slick/fonts/slick.ttf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/fonts/slick.ttf",
-		"oF": 0
-		},
-	"/_site/assets/slick/fonts/slick.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/fonts/slick.woff",
-		"oF": 0
-		},
-	"/_site/assets/slick/slick-theme.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/slick-theme-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/_site/assets/slick/slick-theme.less": {
-		"aP": 0,
-		"bl": 0,
-		"eJ": 0,
-		"ft": 1,
-		"ie": 0,
-		"iI": 0,
-		"ma": 1,
-		"mS": 0,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/slick-theme.css",
-		"oF": 0,
-		"oS": 0,
-		"rwU": 0,
-		"sI": 0,
-		"sU": 0
-		},
-	"/_site/assets/slick/slick-theme.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/slick-theme.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/_site/assets/slick/slick.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/slick-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/_site/assets/slick/slick.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/slick-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/slick/slick.less": {
-		"aP": 0,
-		"bl": 0,
-		"eJ": 0,
-		"ft": 1,
-		"ie": 0,
-		"iI": 0,
-		"ma": 1,
-		"mS": 0,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/slick.css",
-		"oF": 0,
-		"oS": 0,
-		"rwU": 0,
-		"sI": 0,
-		"sU": 0
-		},
-	"/_site/assets/slick/slick.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/slick.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_site/assets/slick/slick.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/_site/assets/slick/slick.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"/_site/content-guidelines/example-two/index.html": {
 		"cB": 0,
@@ -1962,6 +1786,21 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/_site/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/_site/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/_site/yarn.lock": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/_site/yarn.lock",
+		"oF": 0
+		},
 	"/assets/icomoon/demo-files/demo.css": {
 		"aP": 1,
 		"bl": 0,
@@ -2502,42 +2341,12 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/assets/scripts/js/purify.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/scripts/js/purify.min-min.js",
-		"oF": 1,
-		"sC": 3,
-		"tS": 0
-		},
 	"/assets/scripts/js/tinypubsub.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/assets/scripts/js/tinypubsub-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/assets/scripts/js/velocity.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/scripts/js/velocity-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/assets/scripts/js/velocity.ui.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/scripts/js/velocity.ui-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -2598,152 +2407,6 @@
 		"oA": 0,
 		"oAP": "/assets/scripts/scripts.min.js.map",
 		"oF": 0
-		},
-	"/assets/slick/ajax-loader.gif": {
-		"ft": 4194304,
-		"iS": 4178,
-		"oA": 0,
-		"oAP": "/assets/slick/ajax-loader.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/assets/slick/config.rb": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/assets/slick/config.rb",
-		"oF": 0
-		},
-	"/assets/slick/fonts/slick.eot": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/assets/slick/fonts/slick.eot",
-		"oF": 0
-		},
-	"/assets/slick/fonts/slick.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/slick/fonts/slick.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/assets/slick/fonts/slick.ttf": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/assets/slick/fonts/slick.ttf",
-		"oF": 0
-		},
-	"/assets/slick/fonts/slick.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/assets/slick/fonts/slick.woff",
-		"oF": 0
-		},
-	"/assets/slick/slick-theme.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/slick/slick-theme-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/assets/slick/slick-theme.less": {
-		"aP": 0,
-		"bl": 0,
-		"eJ": 0,
-		"ft": 1,
-		"ie": 0,
-		"iI": 0,
-		"ma": 1,
-		"mS": 0,
-		"oA": 0,
-		"oAP": "/assets/slick/slick-theme.css",
-		"oF": 0,
-		"oS": 0,
-		"rwU": 0,
-		"sI": 0,
-		"sU": 0
-		},
-	"/assets/slick/slick-theme.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/slick/slick-theme.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"/assets/slick/slick.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/slick/slick-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/assets/slick/slick.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/slick/slick-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/assets/slick/slick.less": {
-		"aP": 0,
-		"bl": 0,
-		"eJ": 0,
-		"ft": 1,
-		"ie": 0,
-		"iI": 0,
-		"ma": 1,
-		"mS": 0,
-		"oA": 0,
-		"oAP": "/assets/slick/slick.css",
-		"oF": 0,
-		"oS": 0,
-		"rwU": 0,
-		"sI": 0,
-		"sU": 0
-		},
-	"/assets/slick/slick.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/assets/slick/slick.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/assets/slick/slick.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/assets/slick/slick.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"/content-guidelines-example-two.md": {
 		"cB": 0,
@@ -5141,6 +4804,70 @@
 		"oF": 1,
 		"oS": 0,
 		"uL": 1
+		},
+	"/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/node_modules",
+		"oF": 0
+		},
+	"/node_modules/slick-carousel/slick/slick.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/slick-carousel/slick/slick.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/slick-carousel/slick/slick.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/node_modules/slick-carousel/slick/slick.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/node_modules/velocity-animate/velocity.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/velocity-animate/velocity.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/node_modules/velocity-ui-pack/velocity.ui.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/velocity-ui-pack/velocity.ui.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/yarn.lock": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/yarn.lock",
+		"oF": 0
 		}
 	},
 "hooks": [

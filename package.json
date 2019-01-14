@@ -1,0 +1,16 @@
+{
+  "name": "extension-workshop",
+  "version": "1.0.0",
+  "description": "Firefox Extension Workshop",
+  "main": "assets/scripts/scripts.js",
+  "repository": "https://github.com/mozilla/extension-workshop",
+  "author": "Lance Cummings <lance@glance.ca>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "foundation-sites": "^6.5.1",
+    "slick-carousel": "^1.8.1",
+    "velocity-animate": "^1.5.2",
+    "velocity-ui-pack": "^1.2.2"
+  }
+}
