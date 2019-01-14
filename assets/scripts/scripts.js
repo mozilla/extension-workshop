@@ -102,17 +102,16 @@ jQuery(document).ready(function($) {
 
     // 7. RSS Feed 
 
-    // ******  !DISABLED DUE TO INABILITY TO TEST!   ******
-    // ** the code is found in rssfeed.js                **
-    // ** it must be compiled with Browserfy:            **
-    // ** $ browserify rssfeed.js -o rssfeed.pkg.js      **
-    // *****                                         ******
+    if ($('#rss-feed').length) {
+        $('#rss-feed').rss_feed();
+    }
     
     // ALTERAVIVE METHOD OF GETTING FEED USING 3RD PARTY SERVICE:
-    if ($('#rss-feed').length && $('#rss-feed-source').length) {
-        $('#rss-feed').rss_feed({source: $('#rss-feed-source')});
-    }
+    // if ($('#rss-feed').length && $('#rss-feed-source').length) {
+    //     $('#rss-feed').rss_feed_3rdparty({source: $('#rss-feed-source')});
+    // }
 
+    
 
 
     // 8. Anatomy of an extension
@@ -622,6 +621,80 @@ jQuery(document).ready(function($) {
 
     $.fn.rss_feed = function(options) {
         var settings = $.extend( {
+            container : '<a href="" class="cell small-12 large-4 tile tile-block-link no-img"><div class="block-link"></div></a>',
+            breakpoint : 'atleast_large',
+            num : 3,
+        }, options);
+
+        var $container = this;
+
+        $.get("https://blog.mozilla.org/addons/feed/", function(data) {
+            var $xml = $(data);
+            var i = settings.num;
+            $xml.find("item").each(function() {
+                if (i--) {
+
+                    var $this = $(this),
+                        item = {
+                            title: $this.find("title").text(),
+                            link: $this.find("link").text(),
+                            description: $this.find("description").text(),
+                            pubDate: $this.find("pubDate").text(),
+                    }
+                    console.log(item);
+
+                    var newDate = new Date(item.pubDate);
+                    var d = newDate.getDate();
+                    var m =  newDate.getMonth();
+                    m += 1;  // JavaScript months are 0-11
+                    var y = newDate.getFullYear();
+                    var formattedDate = y + "/" + pad(m,2) + "/" + pad(d,2);
+
+                    var $description_elements = $(item.description);
+
+                    var $cell = $(settings.container);
+                    var $cell_content = $cell.find('.block-link');
+
+                    $cell_content.append($('<h4>'+item.title+'</h4><p class="meta-date">'+formattedDate+'</p>')).append($description_elements);
+                    $description_elements.last().remove();
+
+                    var $link = $cell.find('p a:last-child');
+                    var link_label = $link.html();
+                    var link_url = $link.attr('href');
+                    $link.remove();
+
+                    $cell_content.append($('<p><span class="block-link-inline">'+link_label+'</span></p>'));
+                    $cell.attr('href', link_url);
+
+                    $container.append($cell);
+
+                } else {
+                    return false;
+                }
+            }); 
+
+            $container.slick({
+                mobileFirst: true,
+                dots: true,
+                arrows: false,
+                centerMode: true,
+                centerPadding: '16px',
+                slidesToShow: 1,
+                responsive: [
+                    {
+                        breakpoint: 640,
+                        settings: 'unslick'
+                    }
+                ]
+            });
+        
+        });
+
+        return this;
+    }
+
+    $.fn.rss_feed_3rdparty = function(options) {
+        var settings = $.extend( {
             source : null,
             container : '<a href="" class="cell small-12 large-4 tile tile-block-link no-img"><div class="block-link"></div></a>',
             breakpoint : 'atleast_large',
@@ -813,6 +886,12 @@ jQuery(document).ready(function($) {
 
     // Utilities
     // ------
+
+    function pad(n, width, z) {
+        z = z || '0';
+        n = n + '';
+        return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+    }
 
     function decodeUrlParameter(str) {
         return decodeURIComponent((str+'').replace(/\+/g, '%20'));
