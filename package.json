@@ -5,7 +5,7 @@
   "main": "assets/scripts/scripts.js",
   "repository": "https://github.com/mozilla/extension-workshop",
   "author": "Lance Cummings <lance@glance.ca>",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "private": true,
   "dependencies": {
     "foundation-sites": "^6.5.1",
