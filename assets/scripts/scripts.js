@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
     // 4. Banner Image Parallax
 
     // ******                                        ******
-    // ** the plugin code is found in parallax.js        **
+    // **    the plugin code is found in parallax.js     **
     // *****                                         ******
 
     if ($('.parallax').length) {
@@ -72,14 +72,14 @@ jQuery(document).ready(function($) {
     // 5. Video Popup  
 
     // ******                                        ******
-    // ** the plugin code is found in youtubeplayer.js   **
+    // **  the plugin code is found in youtubeplayer.js  **
     // *****                                         ******
 
 
     // 6. Slick slider
 
     // ******                                        ******
-    // ** the plugin code is found in /assets/slick/     **
+    // **               external plugin                  **
     // *****                                         ******
 
     if ($('.mobile-slider .grid-container').length) {
@@ -106,13 +106,7 @@ jQuery(document).ready(function($) {
     if ($('#rss-feed').length) {
         $('#rss-feed').rss_feed();
     }
-    
-    // ALTERAVIVE METHOD OF GETTING FEED USING 3RD PARTY SERVICE:
-    // if ($('#rss-feed').length && $('#rss-feed-source').length) {
-    //     $('#rss-feed').rss_feed_3rdparty({source: $('#rss-feed-source')});
-    // }
 
-    
 
 
     // 8. Anatomy of an extension
@@ -688,79 +682,6 @@ jQuery(document).ready(function($) {
                 ]
             });
         
-        });
-
-        return this;
-    }
-
-    $.fn.rss_feed_3rdparty = function(options) {
-        var settings = $.extend( {
-            source : null,
-            container : '<a href="" class="cell small-12 large-4 tile tile-block-link no-img"><div class="block-link"></div></a>',
-            breakpoint : 'atleast_large',
-        }, options);
-
-        var $container = this;
-
-        // console.log(settings.source.html()); 
-        /* 
-
-            <h4 class="feed-item-title"><a href="[url]" target="_blank">[title]</a></h4>
-            <p class="feed-item-desc"></p>
-            <p>[excerpt] … <a class="go" href="[url]">Continue reading</a></p>
-            <p>The post <a rel="nofollow" href="[url]">[title]</a> appeared first on <a rel="nofollow" href="https://blog.mozilla.org/addons">Mozilla Add-ons Blog</a>.</p>
-            <p></p>
-
-            ...
-
-            <div class="rss2html-note" style="float: right;"><a href="https://rss.bloople.net/" style="color: #000000;">Powered by rss2html</a></div><div class="rss2html-note-clear" style="clear: right; height: 0;"></div> 
-        
-        */
-        // var clean = DOMPurify.sanitize(settings.source.html());
-        var items = settings.source.html().split('<p></p>');
-
-        settings.source.remove();
-
-        $.each(items, function(i, item) {
-            if (item.indexOf('rss2html-note') !== -1) {
-                return true;
-            }
-            var elements = item.split('<p class="feed-item-desc"></p>');
-            var title = elements[0];
-            var description = elements[1];
-            var title_elements = $($.parseHTML(title)).text();
-            var $description_elements = $(description);
-            var $cell = $(settings.container);
-            var $cell_content = $cell.find('.block-link');
-            
-            $cell_content.append($('<h4>'+title_elements+'</h4>')).append($description_elements);
-            $description_elements.last().remove();
-            
-            var $link = $cell.find('p a:last-child');
-            var link_label = $link.html();
-            var link_url = $link.attr('href');
-            $link.remove();
-
-            $cell_content.append($('<p><span class="block-link-inline">'+link_label+'</span></p>'));
-            $('.block-link-inline').html();
-            $cell.attr('href', link_url);
-            
-            $container.append($cell);
-        });
-
-        $container.slick({
-            mobileFirst: true,
-            dots: true,
-            arrows: false,
-            centerMode: true,
-            centerPadding: '16px',
-            slidesToShow: 1,
-            responsive: [
-                {
-                    breakpoint: 640,
-                    settings: 'unslick'
-                }
-            ]
         });
 
         return this;
