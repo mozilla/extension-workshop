@@ -1,11 +1,10 @@
-// @codekit-prepend "../../node_modules/velocity-animate/velocity.min.js", "../../node_modules/velocity-ui-pack/velocity.ui.min.js", "../../node_modules/slick-carousel/slick/slick.min.js", "js/tinypubsub.js", "js/breakpoints.js", "js/parallax.js", "js/parallaxFG.js", "js/inview.js", "js/youtubeplayer.js";
-
 /*!
  * Glance Digital Custom JavaScript Programing
  * lance@glance.ca
  *
  */
 
+// @codekit-prepend "../../node_modules/jquery/dist/jquery.min.js", "../../node_modules/velocity-animate/velocity.min.js", "../../node_modules/velocity-ui-pack/velocity.ui.min.js", "../../node_modules/slick-carousel/slick/slick.min.js", "js/tinypubsub.js", "js/breakpoints.js", "js/parallax.js", "js/parallaxFG.js", "js/inview.js", "js/youtubeplayer.js";
 
 jQuery(document).ready(function($) {
 
@@ -624,7 +623,7 @@ jQuery(document).ready(function($) {
         var $container = this;
 
         $.get("https://blog.mozilla.org/addons/feed/", function(data) {
-            var $xml = $(data);
+            var $xml = $(data);  // DOMPurify.sanitize(data) doesn't work because data is not html
             var i = settings.num;
             $xml.find("item").each(function() {
                 if (i--) {

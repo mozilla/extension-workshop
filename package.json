@@ -9,6 +9,7 @@
   "private": true,
   "dependencies": {
     "foundation-sites": "^6.5.1",
+    "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1",
     "velocity-animate": "^1.5.2",
     "velocity-ui-pack": "^1.2.2"

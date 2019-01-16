@@ -7,7 +7,7 @@ foundation-sites@^6.5.1:
   resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.5.1.tgz#a96da2da2dc81b84ff7730714ca1090445de4a42"
   integrity sha512-Z+FiBvogwIDjRlefJ5pYkVcmsGx3pbndRJ80+OvPvI9UwfKCif6YtOyTxpCjUoS3XBlOms5vYonfnasp2V2wZw==
 
-"jquery@>= 1.4.3":
+"jquery@>= 1.4.3", jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
   integrity sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==
