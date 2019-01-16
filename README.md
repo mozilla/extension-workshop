@@ -8,26 +8,49 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+* [Jekyll](https://jekyllrb.com) site generator for [Github Pages](https://pages.github.com)
+* [Yarn](https://yarnpkg.com/en/) Package Manager
+* [Codekit](https://codekitapp.com) to compile javaScript
+
+
+## Content Updates
+
+This site has two templates: the Extension Workshop landing page and Content Guidelines pages
+
+### How to add a Content Guidelines page
+
+#### Create a new page
+
+1. Create new file
+2. Add header (see example below)
+3. Copy 'modules' needed from content-guidelines-master-template.md and paste in new file
+4. Save as markdown: page-name.md
 
 ```
-Give examples
+---
+layout: page
+title: Page Name
+permalink: /content-guidelines/page-name/
+---
 ```
 
-### Installing
+#### Upload media
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+1. Navigate to /assets/img/ and click Upload files
+2. In your page, link to images using this page structure:
 
 ```
-until finished
+{{ site.baseurl }}/assets/img/image.jpg
+```
+
+#### Add the page to the menu
+
+Go to data/content-guidelines-pages.yaml and add a new entry for your page:
+
+```
+- title: "Page Name"
+  url: "/content-guidelines/page-name/"
+
 ```
 
 ## Deployment
