@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 * [Jekyll](https://jekyllrb.com) site generator for [Github Pages](https://pages.github.com)
 * [Yarn](https://yarnpkg.com/en/) Package Manager
-* [Codekit](https://codekitapp.com) to compile javaScript
+* [Gulp](https://gulpjs.com) to compile javaScript
 
 
 ## Content Updates
