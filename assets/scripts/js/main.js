@@ -619,17 +619,17 @@ jQuery(document).ready(function($) {
         var $container = this;
 
         $.get("https://blog.mozilla.org/addons/feed/", function(data) {
-            var $xml = $(data);  // DOMPurify.sanitize(data) doesn't work because data is not html
+            var $xml = $(data);  // DOMPurify.sanitize(data) doesn't work here because data is not html
             var i = settings.num;
             $xml.find("item").each(function() {
                 if (i--) {
 
                     var $this = $(this),
                         item = {
-                            title: $this.find("title").text(),
-                            link: $this.find("link").text(),
-                            description: $this.find("description").text(),
-                            pubDate: $this.find("pubDate").text(),
+                            title: DOMPurify.sanitize($this.find("title").text()),
+                            link: DOMPurify.sanitize($this.find("link").text()),
+                            description: DOMPurify.sanitize($this.find("description").text()),
+                            pubDate: DOMPurify.sanitize($this.find("pubDate").text()),
                     }
 
                     var newDate = new Date(item.pubDate);

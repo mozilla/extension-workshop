@@ -21,7 +21,6 @@
 (function($) {
 
      $.fn.breakpoints = function(options) {
-        console.log('what?');
         var settings = $.extend( {
             matchMedia: Array(
                 {label:'small', match:"(max-width: 639px)"},
