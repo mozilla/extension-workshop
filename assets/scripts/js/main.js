@@ -6,7 +6,6 @@
 
 jQuery(document).ready(function($) {
 
-
     // SETTINGS
     // ------------------
 
@@ -123,7 +122,6 @@ jQuery(document).ready(function($) {
 
     // Init Breakpoint Listeners
     // ------------------
-    
     $(this).breakpoints();
 });
 

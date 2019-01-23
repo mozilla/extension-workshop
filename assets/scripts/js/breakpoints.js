@@ -18,8 +18,10 @@
  * --------------------------------------------------------------------
  */
 
- (function($) {
+(function($) {
+
      $.fn.breakpoints = function(options) {
+        console.log('what?');
         var settings = $.extend( {
             matchMedia: Array(
                 {label:'small', match:"(max-width: 639px)"},
@@ -48,6 +50,7 @@
         // media query change
         // ------------------
         function breakpoint(mq) {
+
             if (mq.matches) {
                 var media = {};
                 for (var i=0; i < matches.length; i++) {

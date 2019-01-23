@@ -12,7 +12,7 @@
 /* jQuery Tiny Pub/Sub - v0.7 - 10/27/2011
  * http://benalman.com/
  * Copyright (c) 2011 "Cowboy" Ben Alman; Licensed MIT, GPL */
-(function(a){var b=a({});a.subscribe=function(){b.on.apply(b,arguments)},a.unsubscribe=function(){b.off.apply(b,arguments)},a.publish=function(){b.trigger.apply(b,arguments)}})(jQuery)
+(function(a){var b=a({});a.subscribe=function(){b.on.apply(b,arguments)},a.unsubscribe=function(){b.off.apply(b,arguments)},a.publish=function(){b.trigger.apply(b,arguments)}})(jQuery);
 /**
  * --------------------------------------------------------------------
  * jQuery-Plugin breakpoints
@@ -33,8 +33,10 @@
  * --------------------------------------------------------------------
  */
 
- (function($) {
+(function($) {
+
      $.fn.breakpoints = function(options) {
+        console.log('what?');
         var settings = $.extend( {
             matchMedia: Array(
                 {label:'small', match:"(max-width: 639px)"},
@@ -63,6 +65,7 @@
         // media query change
         // ------------------
         function breakpoint(mq) {
+
             if (mq.matches) {
                 var media = {};
                 for (var i=0; i < matches.length; i++) {
@@ -635,7 +638,6 @@ if(!(b=e)){var g={height:i.innerHeight,width:i.innerWidth};if(!g.height&&((b=h.c
 
 jQuery(document).ready(function($) {
 
-
     // SETTINGS
     // ------------------
 
@@ -752,7 +754,6 @@ jQuery(document).ready(function($) {
 
     // Init Breakpoint Listeners
     // ------------------
-    
     $(this).breakpoints();
 });
 
