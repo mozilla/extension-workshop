@@ -12,7 +12,7 @@ CSS file.
 @import "settings";
 
 // Import foundation.scss from vendor files
-@import "../modules/foundation-sites/scss/foundation";
+@import "../node_modules/foundation-sites/scss/foundation";
 
 // Select the components you want to use
 @include foundation-global-styles;

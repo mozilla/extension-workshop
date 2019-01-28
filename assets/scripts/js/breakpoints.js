@@ -18,7 +18,8 @@
  * --------------------------------------------------------------------
  */
 
- (function($) {
+(function($) {
+
      $.fn.breakpoints = function(options) {
         var settings = $.extend( {
             matchMedia: Array(
@@ -48,6 +49,7 @@
         // media query change
         // ------------------
         function breakpoint(mq) {
+
             if (mq.matches) {
                 var media = {};
                 for (var i=0; i < matches.length; i++) {
