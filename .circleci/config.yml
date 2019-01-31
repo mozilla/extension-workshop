@@ -13,15 +13,6 @@ jobs:
       - run:
           name: Bundle Install
           command: bundle check || bundle install
-      # requires gem 'html-proofer'
-      #- run:
-      #    name: HTMLProofer tests
-      #    command: |
-      #      bundle exec htmlproofer ./_site \
-      #        --allow-hash-href \
-      #        --check-favicon  \
-      #        --check-html \
-      #        --disable-external
       - save_cache:
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
@@ -48,8 +39,16 @@ jobs:
       - run:
           name: extension workshop deployment
           command: |
+            # show env variables but not the AWS secrets!
             env | egrep -v AWS_
-            ls -l
+            # push master branch to -stage env per
+            # https://github.com/mozilla/extension-workshop/issues/42
+            if [ "$CIRCLE_BRANCH" == "master" ] ; then
+              export AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"
+              export AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"
+              export DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"
+              export EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}"
+            fi
             ./.utils/deploy.sh
             ./.utils/circleci/invalidate-cloudfront-cache.sh
 
@@ -66,7 +65,7 @@ workflows:
             - build
           filters:
             branches:
-              ignore: /.*/
+              only: master
             tags:
               only: /^v?[0-9]+(\.[0-9]+)*$/
 
