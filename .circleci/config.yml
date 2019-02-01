@@ -19,7 +19,7 @@ jobs:
             - vendor/bundle
       - run:
           name: yarn install
-          command: env && sudo apt-get update && sudo apt-get install -y yarn && yarn install
+          command: sudo apt-get update && sudo apt-get install -y yarn && yarn install
           environment:
             TERMINFO: /etc/terminfo
             TERM: xterm
