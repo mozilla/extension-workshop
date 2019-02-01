@@ -19,7 +19,7 @@ jobs:
             - vendor/bundle
       - run:
           name: yarn install
-          command: bundle exec yarn install
+          command: yarn install
       - run:
           name: Jekyll build
           environment:
