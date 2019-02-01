@@ -22,6 +22,7 @@ jobs:
           command: env && sudo apt-get update && sudo apt-get install -y yarn && yarn install
           environment:
             TERMINFO: /etc/terminfo
+            TERM: xterm
       - run:
           name: Jekyll build
           environment:
