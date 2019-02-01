@@ -18,7 +18,12 @@ jobs:
           paths:
             - vendor/bundle
       - run:
+          name: yarn install
+          command: bundle exec yarn install
+      - run:
           name: Jekyll build
+          environment:
+            JEKYLL_ENV: production
           command: bundle exec jekyll build
       - persist_to_workspace:
           root: ./
