@@ -36,7 +36,7 @@ Build on the web’s most customizable browser. Get your great idea into the han
 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Tinker with Tabs](assets/img/Tinker-with-Tabs.svg "Tinker with Tabs")
+![Tinker with Tabs]({% asset "Tinker-with-Tabs.svg" @path %} "Tinker with Tabs")
 
 #### Tinker with Tabs
 
@@ -52,7 +52,7 @@ Your extension can control browser tabs. Use the API to open, close, move, hide,
 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Transform Web Content](assets/img/Transform-Web-Content.svg "Transform Web Content")
+![Transform Web Content]({% asset "Transform-Web-Content.svg" @path %} "Transform Web Content")
 
 #### Transform Web Content
 
@@ -68,7 +68,7 @@ Inject JavaScript into web pages and your extension can change page colors, augm
 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Add Innovative Features](assets/img/Add-Innovative-Features.svg "Add Innovative Features")
+![Add Innovative Features]({% asset "Add-Innovative-Features.svg" @path %} "Add Innovative Features")
 
 #### Add Innovative Features
 
@@ -106,7 +106,7 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 
 </div>
 <div class="cell small-12 medium-6 large-5" markdown="1">
-	
+
 An extension is a simple collection of files that modify the browser’s appearance and behavior. It can add user interface elements, alter content, or perform background tasks that enhance browsing.
 
 [Learn more about extension anatomy](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
@@ -117,31 +117,32 @@ An extension is a simple collection of files that modify the browser’s appeara
 <div class="cell small-12 large-10">
 
 <div class="anatomy-container">
-	<div class="anatomy-illustration">
-		{% include home/anatomy.svg %}
-		<p class="manifest show-for-medium"><img src="{{ "/assets/img/icons/manifest.svg" | relative_url }}">Manifest.json</p>
-	</div>
-	<div id="anatomy-control" class="anatomy-description">
-		{% include home/anatomy-mobile.svg %}
-		<button class="popup-action" data-panel="anatomy-ui"><img src="{{ "/assets/img/icons/user-interface-link.svg" | relative_url }}">User Interface</button>
-		<button class="popup-action" data-panel="anatomy-content"><img src="{{ "/assets/img/icons/content-script-link.svg" | relative_url }}">Content Scripts</button>
-		<button class="popup-action" data-panel="anatomy-background"><img src="{{ "/assets/img/icons/background-scripts-link.svg" | relative_url }}">Background Scripts</button>
-	</div>
-	<p class="manifest show-for-small-only"><img src="{{ "/assets/img/icons/manifest.svg" | relative_url }}">Manifest.json</p>
+  <div class="anatomy-illustration">
+    {% include home/anatomy.svg  %}
+    <p class="manifest show-for-medium">{% asset "icons/manifest.svg" %}Manifest.json</p>
+  </div>
+  <div id="anatomy-control" class="anatomy-description">
+    {% include home/anatomy-mobile.svg %}
+    <button class="popup-action" data-panel="anatomy-ui">{% asset "icons/user-interface-link.svg" %}"User Interface</button>
+    <button class="popup-action" data-panel="anatomy-content">{% asset "icons/content-script-link.svg" %}"Content Scripts</button>
+    <button class="popup-action" data-panel="anatomy-background">{% asset "icons/background-scripts-link.svg" %}"Background Scripts</button>
+  </div>
+  <p class="manifest show-for-small-only">{% asset "icons/manifest.svg" %}Manifest.json</p>
 </div>
+
 <aside class="popup-panel" id="anatomy-ui" markdown="1">
 
-![User Interface](assets/img/icons/user-interface.svg "User Interface")
+![User Interface]({% asset "icons/user-interface.svg" @path %} "User Interface")
 
 #### User Interface
 
-Add toolbar buttons, menu choices, and—only in Firefox—sidebars to display additional content. Manage tab behavior and create pop-up windows that respond to user events. 
+Add toolbar buttons, menu choices, and—only in Firefox—sidebars to display additional content. Manage tab behavior and create pop-up windows that respond to user events.
 
 <button class="close"></button>
 </aside>
 <aside class="popup-panel" id="anatomy-content" markdown="1">
 
-![Content Scripts](assets/img/icons/content-script.svg "Content Scripts")
+![Content Scripts]({% asset "icons/content-script.svg" @path %} "Content Scripts")
 
 #### Content Scripts
 
@@ -151,7 +152,7 @@ Change webpage content. Remove ads, highlight key words, and reformat elements f
 </aside>
 <aside class="popup-panel" id="anatomy-background" markdown="1">
 
-![Background Scripts](assets/img/icons/background-scripts.svg "Background Scripts")
+![Background Scripts]({% asset "icons/background-scripts.svg" @path %} "Background Scripts")
 
 #### Background Scripts
 

@@ -15,7 +15,7 @@ $sidebar-w : rem-calc(230);
 
     .site-header {font-size: rem-calc(13); padding-bottom: rem-calc(50); position: relative; z-index: 100;}
 
-    @include breakpoint(medium) {display: flex; flex-flow: row nowrap;  
+    @include breakpoint(medium) {display: flex; flex-flow: row nowrap;
         .site-header {font-size: rem-calc(11); flex: 0 0 #{$sidebar-w-sm}; width: $sidebar-w-sm; padding-top: rem-calc(30); padding-bottom: rem-calc(30);} //box-shadow: #{rem-calc(0 0 16)} rgba(12,12,13,0.1);
         .site-content {flex: 1 1 auto;}
     }
@@ -24,10 +24,10 @@ $sidebar-w : rem-calc(230);
     }
 
 
-    .logo {font-size: rem-calc(15); margin: rem-calc(8 0 24); line-height: 1.1; 
+    .logo {font-size: rem-calc(15); margin: rem-calc(8 0 24); line-height: 1.1;
 
-        a {padding: rem-calc(13 0 3 50); 
-            &:before {content: ""; position: absolute; display: block; left: 0; top: rem-calc(8); width: rem-calc(43); height: rem-calc(44); background: transparent url(img/firefox-logo.png) no-repeat center/contain;}
+        a {padding: rem-calc(13 0 3 50);
+            &:before {content: ""; position: absolute; display: block; left: 0; top: rem-calc(8); width: rem-calc(43); height: rem-calc(44); background: transparent asset_url("firefox-logo.png") no-repeat center/contain;}
         }
         small.tagline {font-size: rem-calc(13); padding: rem-calc(0 0 14 50); font-weight: $global-weight-normal; color: inherit;}
 
@@ -72,7 +72,7 @@ $sidebar-w : rem-calc(230);
             }
         }
 
-        .button {display: block; 
+        .button {display: block;
             @include breakpoint(medium only) {font-size: 0.733333333333333rem; padding: rem-calc(6 8);}
             @include breakpoint(large only) {font-size: 0.733333333333333rem; padding: rem-calc(6 8);}
         }
@@ -136,7 +136,7 @@ $sidebar-w : rem-calc(230);
     		}
     	}
 
-        .page-bottom-nav {padding-bottom: rem-calc(24); 
+        .page-bottom-nav {padding-bottom: rem-calc(24);
             @include breakpoint(medium) {padding: rem-calc(0 0 45);}
             @include breakpoint(large) {padding: 0 4.166666666666667% #{rem-calc(45)};}
             @include breakpoint(xlarge) {padding: 0 8.333333333333333% #{rem-calc(60)};}
@@ -187,9 +187,9 @@ $sidebar-w : rem-calc(230);
 	img {display: block; width: 100%; margin-bottom: rem-calc(6);}
 
 	.medium-6 {margin-bottom: rem-calc(12);
-		
+
 		@include breakpoint(medium) {margin-bottom: rem-calc(24);
-            a {font-size: rem-calc(13); 
+            a {font-size: rem-calc(13);
 				&:before, &:after {left: calc(50% - #{rem-calc(12)}); top: calc(50% - #{rem-calc(12)}); width: rem-calc(24); height: rem-calc(24);}
 		        &:after {line-height: rem-calc(23);}
 			}
@@ -205,7 +205,7 @@ $sidebar-w : rem-calc(230);
 // Image Grid
 // ------
 
-.icon-grid {margin: rem-calc(12 0 3); 
+.icon-grid {margin: rem-calc(12 0 3);
 	p {margin-bottom: rem-calc(12);}
 	@include breakpoint(medium) {margin: rem-calc(24 0 0);
 		p {margin-bottom: rem-calc(24);}
@@ -239,7 +239,7 @@ span.example {display: inline-block; padding: rem-calc(0 7); margin: 0;}
 	& + p, & + h1, & + h2, & + h3, & + h4, & + h5, & + h6, & + ol, & + ul {margin-top: 1.5em;}
 }
 
-.do-this {border-top: #{rem-calc(5)} solid #31C430; 
+.do-this {border-top: #{rem-calc(5)} solid #31C430;
 	header {
 		* {color: #31C430;}
 		> *:first-child:before {@include icon_font($char: $icon-do); color: #31C430;}

@@ -8,9 +8,9 @@
     {%- include landing-header.html -%}
 
     <main class="site-content landing" aria-label="Content">
-      
+
         {{ content }}
-      
+
     </main>
 
     {%- include footer.html -%}
@@ -22,8 +22,8 @@
         </div>
     </aside>
 
-    <script type="text/javascript" src="{{ "/assets/scripts/scripts.min.js?ver=2019.01.14" | relative_url }}"></script>
-    <script src="{{ "/assets/scripts/basket-client.js" | relative_url }}"></script>
+    {% asset "bundle.js" %}
+    {% asset "basket-client.js" %}"
   </body>
 
 </html>

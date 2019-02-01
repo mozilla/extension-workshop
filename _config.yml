@@ -40,11 +40,31 @@ plugins:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - node_modules
+   - .jekyll-cache
+   - rvm-installer
+   - rvm-installer.asc
+   - yarn-error.log
+   - package.json
+   - yarn.lock
+
+assets:
+  sources:
+    - _assets/img
+    - _assets/css
+    - _assets/fonts
+    - _assets/js
+    - node_modules/foundation-sites/scss
+    - node_modules/slick-carousel/slick
+    - node_modules/jquery/dist
+    - node_modules/dompurify/dist
+    - node_modules/velocity-animate
+    - node_modules/velocity-animate/
+
+  defaults:
+    js: { integrity: true }
+    css: { integrity: false }
+    img: { integrity: false }
