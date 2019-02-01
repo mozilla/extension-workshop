@@ -65,6 +65,8 @@ workflows:
           filters:
             tags:
               only: /.*/
+            branches:
+              only: /.*/
       - deploy:
           requires:
             - build
