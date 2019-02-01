@@ -8,7 +8,7 @@ Stylesheet: Main Stylesheet
 // SLICK SLIDESHOW
 // ------
 
-@import '../node_modules/slick-carousel/slick/slick';
+@import 'slick';
 
 
 // TYPOGRAPHY
@@ -88,7 +88,7 @@ blockquote {
 // Down Arrow
 // ------
 
-.cta-down:after {@include icon_font($char: $icon-arrow-down); display: inline-block; margin: .5rem auto; font-size: rem-calc(20);} 
+.cta-down:after {@include icon_font($char: $icon-arrow-down); display: inline-block; margin: .5rem auto; font-size: rem-calc(20);}
 
 
 // Anchor Links
@@ -146,7 +146,7 @@ a[title="View on Github"] {
 // -------------------------------------------------------------------------------------------------------------------
 
 
-// Sticky Footer 
+// Sticky Footer
 // -- Landing Page has .landing class on .site-header and .site-content
 // -- Conteng Guidelines pages have .site-wrapper element containing .site-header and .site-content
 // ------
@@ -167,9 +167,9 @@ html {height: 100%;}
 // Logo
 // ------
 
-.logo {position: relative; margin: 0; font-size: rem-calc(15); line-height: 1; 
+.logo {position: relative; margin: 0; font-size: rem-calc(15); line-height: 1;
     a {position: relative; display: block; padding: rem-calc(15 0 14 41); color: $body-font-color;
-        &:before {content: ""; position: absolute; left: 0; top: rem-calc(7); display: block; width: rem-calc(31); height: rem-calc(32); background: transparent url(img/firefox-logo.png) no-repeat center/contain;}
+        &:before {content: ""; position: absolute; left: 0; top: rem-calc(7); display: block; width: rem-calc(31); height: rem-calc(32); background: transparent asset_url("firefox-logo.png") no-repeat center/contain;}
         &:hover {text-decoration: none; color: inherit;}
     }
 
@@ -199,7 +199,7 @@ html {height: 100%;}
 // Panel
 // -------
 
-.panel {position: relative; padding-top: rem-calc(20); padding-bottom: rem-calc(20); 
+.panel {position: relative; padding-top: rem-calc(20); padding-bottom: rem-calc(20);
     @include breakpoint(medium) {padding-top: rem-calc(60); padding-bottom: rem-calc(60);}
 }
 
@@ -226,10 +226,10 @@ html {height: 100%;}
         &:not(:first-child) {margin-top: 0;}
     }
 
-    @include breakpoint(medium) {padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0); 
+    @include breakpoint(medium) {padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0);
 
         > *:not(:last-child) {width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
-            &:first-child {display: block; position: absolute; width: rem-calc(32); top: rem-calc(24); left: rem-calc(34); 
+            &:first-child {display: block; position: absolute; width: rem-calc(32); top: rem-calc(24); left: rem-calc(34);
                 img {width: rem-calc(32);}
             }
         }
@@ -242,11 +242,11 @@ html {height: 100%;}
 // Tiles
 // ------
 
-.tile {position: relative; padding: rem-calc(12) !important; margin: rem-calc(8 0); 
+.tile {position: relative; padding: rem-calc(12) !important; margin: rem-calc(8 0);
     @include breakpoint(medium) {padding: rem-calc(24) !important; margin: rem-calc(12 0);}
 
     &:before {content:""; display: block; position: absolute; left: rem-calc(0); width: 100%; top: 0; height: 100%; background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1);}
-    
+
     > * {position: relative; z-index: 2;
         &:last-child {margin-bottom: 0;}
     }
@@ -260,7 +260,7 @@ html {height: 100%;}
 // Video Box
 // ------
 
-#stdVideo {opacity: 0; pointer-events: none; position: absolute; z-index: 11; overflow: hidden; left: 0; top: calc(100% + 1px); width: 100%; height: 1px; background: rgba(0,0,0,.85); transition: left .3s ease-in-out, top .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out, opacity .3s ease-in-out; 
+#stdVideo {opacity: 0; pointer-events: none; position: absolute; z-index: 11; overflow: hidden; left: 0; top: calc(100% + 1px); width: 100%; height: 1px; background: rgba(0,0,0,.85); transition: left .3s ease-in-out, top .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out, opacity .3s ease-in-out;
     iframe, object, embed, video {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
     .flex-video {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 
@@ -276,18 +276,18 @@ html {height: 100%;}
 }
 .loading #stdVideo-close {opacity: 0;}
 
-.video-box {position: relative; 
+.video-box {position: relative;
 
     .h1 {
         @include breakpoint(small down) {text-align: center; font-size: rem-calc(15); margin-top: rem-calc(24);}
     }
-    
+
     .video-play {display: block; position: relative; overflow: hidden; display: block; width: rem-calc(48); height: rem-calc(48); margin: 1em 0; text-align: center; line-height: rem-calc(48); font-size: rem-calc(26); color: $primary-color; background-color: $white; border-radius: 50%; box-shadow: #{rem-calc(0 2 8)} rgba(12,12,13,0.1); cursor: pointer; transition: color .2s ease-in-out, box-shadow .2s ease-in-out, transform .2s ease-in-out;
         &:before {@include icon_font($char: $icon-play);}
         &:hover {color: $primary-color-hover; box-shadow: #{rem-calc(0 2 8)} rgba(12,12,13,0.33);}
 
         &.loading {background-color: $primary-color; color: $white;
-            &:before {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: transparent url(img/ajax-loader.svg) no-repeat center/86%;}
+            &:before {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: transparent asset_url("ajax-loader.svg") no-repeat center/86%;}
         }
     }
 
@@ -301,7 +301,7 @@ html {height: 100%;}
         &.loading {
             @include breakpoint(small down) {
                 .video-play {background-color: $primary-color; color: $white;
-                    &:before {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: transparent url(img/ajax-loader.svg) no-repeat center/86%;}
+                    &:before {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: transparent asset_url("ajax-loader.svg") no-repeat center/86%;}
                 }
             }
         }
@@ -319,11 +319,11 @@ html {height: 100%;}
     .grid-container {height: 100%; position: relative; z-index: 3; pointer-events: none;
         .cell {pointer-events: auto; position: relative;}
     }
-    #stdVideo {position: relative; height: 0; padding: 0; background: $white; transition: left .3s ease-in-out, top .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out, padding .3s ease-in-out, opacity .3s ease-in-out; 
+    #stdVideo {position: relative; height: 0; padding: 0; background: $white; transition: left .3s ease-in-out, top .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out, padding .3s ease-in-out, opacity .3s ease-in-out;
         &.playing {opacity: 1; height: auto; padding-bottom: 56.25%;}
     }
     &.loading {
-        &:before {content: ""; position: absolute; z-index: 2; left: calc(50% - #{rem-calc(32)}); top: calc(50% - #{rem-calc(32)}); width: rem-calc(64); height: rem-calc(64); background: transparent url(img/ajax-loader.svg) no-repeat center/100%;}
+        &:before {content: ""; position: absolute; z-index: 2; left: calc(50% - #{rem-calc(32)}); top: calc(50% - #{rem-calc(32)}); width: rem-calc(64); height: rem-calc(64); background: transparent asset_url("ajax-loader.svg") no-repeat center/100%;}
     }
 }
 
@@ -365,7 +365,7 @@ html {height: 100%;}
     }
 
     .mzp-c-footer-primary-logo {margin-bottom: rem-calc(16); padding-right: rem-calc(24);
-        a {display: inline-block; width: 100px; height: 32px; overflow: hidden; text-decoration: none; text-indent: 120%; white-space: nowrap; background: $black url("img/moz-logo.svg") no-repeat 0 0/#{rem-calc(100)}; color: $white;}
+        a {display: inline-block; width: 100px; height: 32px; overflow: hidden; text-decoration: none; text-indent: 120%; white-space: nowrap; background: $black asset_url("moz-logo.svg") no-repeat 0 0/#{rem-calc(100)}; color: $white;}
     }
 
     .mzp-c-footer-secondary {font-size: $small-font-size; line-height: 1.333; padding-top: rem-calc(40);

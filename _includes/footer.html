@@ -2,7 +2,7 @@
   <div class="mzp-l-content">
     <nav class="grid-container grid-x grid-padding-x mzp-c-footer-primary">
       <div class="cell small-12 large-3">
-      	<div class="mzp-c-footer-primary-logo"><a href="https://www.mozilla.org/">Mozilla</a></div>
+        <div class="mzp-c-footer-primary-logo"><a href="https://www.mozilla.org/">Mozilla</a></div>
       </div>
       <section class="cell small-12 large-4 mzp-c-footer-section">
         <h4>
@@ -12,9 +12,8 @@
           <li><a href="https://addons.mozilla.org/en-US/about">About</a></li>
           <li><a href="https://blog.mozilla.com/addons">Blog</a></li>
           <li><a href="https://addons.mozilla.org/developers/">Developer Hub</a></li>
-	  <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy">Developer Policies</a></li>
-	  <li><a href="https://discourse.mozilla.org/c/add-ons">Forum</a></li>
-          </li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy">Developer Policies</a></li>
+          <li><a href="https://discourse.mozilla.org/c/add-ons">Forum</a></li>
         </ul>
       </section>
       <section class="cell small-12 large-4 mzp-c-footer-section">
@@ -67,7 +66,7 @@
 	        <button type="submit">Go</button>
 	      </form>
 
-	      <script src="{{ "/assets/scripts/protocol-lang-switcher.js" | relative_url }}"></script>
+	      <script src="{% asset "protocol-lang-switcher.js" @path %}"></script>
 
 	      <script>
 	        (function() {

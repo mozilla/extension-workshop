@@ -8,9 +8,9 @@
         {%- include header.html -%}
 
         <main class="site-content" aria-label="Content">
-          
+
             {{ content }}
-            
+
             <nav class="page-bottom-nav">
                 <div class="grid-container grid-x grid-padding-x">
                     <div class="cell small-12">
@@ -55,7 +55,7 @@
         </div>
     </aside>
 
-    <script type="text/javascript" src="{{ "/assets/scripts/scripts.min.js?ver=2018.12.21" | relative_url }}"></script>
+    {% asset "bundle.js" %}
   </body>
 
 </html>

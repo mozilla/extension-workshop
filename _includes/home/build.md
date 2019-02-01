@@ -15,7 +15,7 @@ Firefox extensions are made with the same technologies used to build the web. Th
 			<h2 class="h1">Build an Extension in Less Than 5 Minutes</h2>
 			<button class="show-for-medium video-play video-link" data-youtube_id="Q3AQ5D2QFwc" data-youtube_target="how-to-build-an-extension-video"></button>
 		</div>
-		<div id="how-to-build-an-extension-video" class="img" style="background-image: url(assets/img/content_5minextension_thumbnail.jpg);">
+		<div id="how-to-build-an-extension-video" class="img" style="background-image: url({% asset "content_5minextension_thumbnail.jpg" @path %});">
 			<span class="video-play"></span>
 			<button class="show-for-small-only video-link" data-youtube_id="DAl0tOYDHxg" data-youtube_target="how-to-build-an-extension-video"></button>
 		</div>
@@ -41,7 +41,7 @@ Firefox extensions are made with the same technologies used to build the web. Th
 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json" class="cell small-12 medium-6 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Manifest Keys](assets/img/Manifest-Keys.svg "Manifest Keys")
+![Manifest Keys]({% asset "Manifest-Keys.svg" @path %} "Manifest Keys")
 
 #### Manifest Keys
 
@@ -57,11 +57,11 @@ Every extension contains manifest keys, which define what your extension is and 
 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API" class="cell small-12 medium-6 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![JavaScript API](assets/img/Javascript-API.svg "JavaScript API")
+![JavaScript API]({% asset "Javascript-API.svg" @path %} "JavaScript API")
 
 #### JavaScript API
 
-For a more interactive and dynamic extension, use the WebExtensions JavaScript API. Give your app advanced capabilities like tab manipulation, user input response, and configuration data management. 
+For a more interactive and dynamic extension, use the WebExtensions JavaScript API. Give your app advanced capabilities like tab manipulation, user input response, and configuration data management.
 
 <span class="block-link-inline">Learn more about Javascript API</span>
 
@@ -80,9 +80,9 @@ For a more interactive and dynamic extension, use the WebExtensions JavaScript A
 <div class="grid-container grid-x grid-padding-x align-center more-intro">
 <div class="cell small-12 medium-10 large-8 text-center" markdown="1">
 
-## Build Across Browsers 
+## Build Across Browsers
 
-Firefox is at the forefront of cross-browser compatibility. Firefox extensions are built using the WebExtensions API, so your creation will be accessible to users no matter what browser they use. 
+Firefox is at the forefront of cross-browser compatibility. Firefox extensions are built using the WebExtensions API, so your creation will be accessible to users no matter what browser they use.
 
 [Learn about browser differences](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations)
 
@@ -94,7 +94,7 @@ Firefox is at the forefront of cross-browser compatibility. Firefox extensions a
 <!-- Tile 1 -->
 <div class="cell small-12 medium-6 large-5 tile-borderless tile-extended" markdown="1">
 
-![Bring Your Extension to Firefox](assets/img/Bring-Extension-Firefox.svg "Bring Your Extension to Firefox")
+![Bring Your Extension to Firefox]({% asset "Bring-Extension-Firefox.svg" @path %} "Bring Your Extension to Firefox")
 
 #### Bring Your Extension to Firefox
 
@@ -105,7 +105,7 @@ Already have an extension that works in Chrome? Bring your app to Firefox in a f
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
 
-Top Resources  
+Top Resources
 [Differences between Chrome and Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 [Port a Google Chrome extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)
 
@@ -117,7 +117,7 @@ Top Resources
 <!-- Tile 2 -->
 <div class="cell small-12 medium-6 large-5 tile-borderless tile-extended" markdown="1">
 
-![Create a New Extension](assets/img/Create-New-Extension.svg "Create a New Extension")
+![Create a New Extension]({% asset Create-New-Extension.svg @path %} "Create a New Extension")
 
 #### Create a New Extension
 
@@ -128,7 +128,7 @@ Starting from scratch? It’s easy and fast to create your cross-browser extensi
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
 
-Top Resources  
+Top Resources
 [Best practices for cross-browser extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension)
 [Introduction to developing in Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)
 
@@ -144,7 +144,7 @@ Top Resources
 
 <!-- Section CTA -->
 <div class="section-cta bg-dark" style="background-color: #4f42ff">
-<div class="img" style="background-image: url(assets/img/extension-alt.svg);"></div>
+<div class="img" style="background-image: url({% asset "extension-alt.svg" @path %});"></div>
 <div class="grid-container grid-x grid-padding-x align-middle">
 <div class="cell small-12 large-3 large-offset-1" markdown="1">
 
