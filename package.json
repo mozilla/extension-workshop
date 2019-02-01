@@ -14,14 +14,5 @@
     "slick-carousel": "^1.8.1",
     "velocity-animate": "^1.5.2",
     "velocity-ui-pack": "^1.2.2"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-jshint": "^2.1.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
-    "jshint": "^2.9.7"
   }
 }

@@ -22,11 +22,11 @@ When you build on Firefox, you build with a community of extension developers. A
 <a href="https://discourse.mozilla.org/c/add-ons" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
-![Community Forums](assets/img/icons/community-forums.svg "Community Forums")
+![Community Forums]({% asset "icons/community-forums.svg" @path %} "Community Forums")
 
 #### Community Forums
 
-Discuss extension development and get support. 
+Discuss extension development and get support.
 
 <span class="block-link-inline">Join the conversation</span>
 
@@ -38,7 +38,7 @@ Discuss extension development and get support.
 <a href="https://wiki.mozilla.org/WebExtensions/policy" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
-![Get Involved](assets/img/icons/get-involved.svg "Get Involved")
+![Get Involved]({% asset "icons/get-involved.svg" @path %} "Get Involved")
 
 #### Get Involved
 
