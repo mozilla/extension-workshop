@@ -13,21 +13,32 @@ jobs:
       - run:
           name: Bundle Install
           command: bundle check || bundle install
-      # requires gem 'html-proofer'
-      #- run:
-      #    name: HTMLProofer tests
-      #    command: |
-      #      bundle exec htmlproofer ./_site \
-      #        --allow-hash-href \
-      #        --check-favicon  \
-      #        --check-html \
-      #        --disable-external
       - save_cache:
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
       - run:
+          name: yarn install
+          command: |
+            sudo apt-get update && sudo apt-get install -y apt-transport-https
+            sudo apt-get install -y gcc g++ make
+
+            # install nodejs v10
+            # https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
+            curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+
+            # install yarn stable
+            # https://yarnpkg.com/lang/en/docs/install/#debian-stable
+            curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+            echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+            sudo apt-get update && sudo apt-get install -y yarn
+
+            yarn install
+      - run:
           name: Jekyll build
+          environment:
+            JEKYLL_ENV: production
           command: bundle exec jekyll build
       - persist_to_workspace:
           root: ./
@@ -48,8 +59,16 @@ jobs:
       - run:
           name: extension workshop deployment
           command: |
+            # show env variables but not the AWS secrets!
             env | egrep -v AWS_
-            ls -l
+            # push master branch to -stage env per
+            # https://github.com/mozilla/extension-workshop/issues/42
+            if [ "$CIRCLE_BRANCH" == "master" ] ; then
+              export AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"
+              export AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"
+              export DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"
+              export EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}"
+            fi
             ./.utils/deploy.sh
             ./.utils/circleci/invalidate-cloudfront-cache.sh
 
@@ -57,16 +76,12 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build:
-          filters:
-            tags:
-              only: /.*/
+      - build
       - deploy:
           requires:
             - build
           filters:
             branches:
-              ignore: /.*/
+              only: master
             tags:
               only: /^v?[0-9]+(\.[0-9]+)*$/
-
