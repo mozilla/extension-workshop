@@ -874,7 +874,7 @@ Stylesheet: Landing Page Stylesheet
           flex: 1 1 auto;
           display: flex;
           flex-flow: column;
-          justify-content: flex-start;
+          justify-content: flex-end;
           margin-bottom: 0;
         }
       }
@@ -907,6 +907,9 @@ Stylesheet: Landing Page Stylesheet
             align-items: flex-start;
             margin-bottom: 0;
           }
+        }
+        &.align-start p:last-child{
+          justify-content: flex-start !important;
         }
       }
     }
