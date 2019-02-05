@@ -41,15 +41,16 @@ plugins:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
-   - Gemfile
-   - Gemfile.lock
-   - node_modules
-   - .jekyll-cache
-   - rvm-installer
-   - rvm-installer.asc
-   - yarn-error.log
-   - package.json
-   - yarn.lock
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - renovate.json
+  - rvm-installer
+  - rvm-installer.asc
+  - yarn-error.log
+  - yarn.lock
 
 assets:
   sources:
