@@ -27,6 +27,7 @@
     "lint": "eslint .",
     "prettier": "prettier --write '**'",
     "prettier-ci": "npm run prettier -- --list-different || (echo '\n\nThis failure means you did not run `yarn prettier-dev` before committing\n\n' && exit 1)",
-    "prettier-dev": "pretty-quick --branch master"
+    "prettier-dev": "pretty-quick --branch master",
+    "test": "npm run prettier-ci && npm run lint"
   }
 }
