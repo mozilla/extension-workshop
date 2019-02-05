@@ -1,0 +1,16 @@
+# exclude everything by default
+*.*
+# exclude these files
+Dockerfile
+# exclude these directories
+/node_modules/
+Gemfile
+rvm-installer
+_site/
+*.lock
+# white-list files we want to process
+!*.js
+!*.md
+!*.scss
+
+_assets/js/bundle.js

@@ -24,13 +24,12 @@ Firefox extensions are made with the same technologies used to build the web. Th
 </div>
 <div class="cell small-12 medium-8 large-6 over-dark text-center" markdown="1">
 
-[Get example extension files](https://github.com/mozilla/old-timer-extension "View on Github")
+[Get example extension files](https://github.com/mozilla/old-timer-extension 'View on Github')
 
 </div>
 </div>
 </div>
 <!-- END: Section Intro -->
-
 
 <!-- Section Tiles -->
 <div class="section-tiles bg-grey">
@@ -74,7 +73,6 @@ For a more interactive and dynamic extension, use the WebExtensions JavaScript A
 </div>
 <!-- END: Section Tiles -->
 
-
 <!-- Section More -->
 <div class="section-more bg-grey panel">
 <div class="grid-container grid-x grid-padding-x align-center more-intro">
@@ -105,9 +103,7 @@ Already have an extension that works in Chrome? Bring your app to Firefox in a f
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
 
-Top Resources
-[Differences between Chrome and Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
-[Port a Google Chrome extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)
+Top Resources [Differences between Chrome and Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities) [Port a Google Chrome extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)
 
 </div>
 
@@ -128,9 +124,7 @@ Starting from scratch? It’s easy and fast to create your cross-browser extensi
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
 
-Top Resources
-[Best practices for cross-browser extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension)
-[Introduction to developing in Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)
+Top Resources [Best practices for cross-browser extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension) [Introduction to developing in Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)
 
 </div>
 
@@ -140,7 +134,6 @@ Top Resources
 </div>
 </div>
 <!-- END: Section More -->
-
 
 <!-- Section CTA -->
 <div class="section-cta bg-dark" style="background-color: #4f42ff">
@@ -158,4 +151,3 @@ See if your extension works in Firefox. Simply upload your .crx file.
 </div>
 </div>
 <!-- END: Section CTA -->
-

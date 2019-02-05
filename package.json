@@ -14,5 +14,14 @@
     "slick-carousel": "1.8.1",
     "velocity-animate": "1.5.2",
     "velocity-ui-pack": "1.2.2"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4",
+    "pretty-quick": "^1.10.0"
+  },
+  "scripts": {
+    "prettier": "prettier --write '**'",
+    "prettier-ci": "npm run prettier -- --list-different || (echo '\n\nThis failure means you did not run `yarn prettier-dev` before committing\n\n' && exit 1)",
+    "prettier-dev": "pretty-quick --branch master"
   }
 }

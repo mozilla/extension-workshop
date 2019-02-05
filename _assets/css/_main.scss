@@ -4,380 +4,798 @@ Stylesheet: Main Stylesheet
 
 *************************************************/
 
-
 // SLICK SLIDESHOW
 // ------
 
 @import 'slick';
 
-
 // TYPOGRAPHY
 // -------------------------------------------------------------------------------------------------------------------
 
-
-h1, h2, h3, h4, h5, h6 {margin-bottom: $header-margin-bottom;
-    &:not(:first-child) {margin-top: 1.3333em;
-        @include breakpoint(medium) {margin-top: 1.6666em;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: $header-margin-bottom;
+  &:not(:first-child) {
+    margin-top: 1.3333em;
+    @include breakpoint(medium) {
+      margin-top: 1.6666em;
     }
+  }
 }
 
-
-h1, h2 {
-    + h5:not(:first-child), + h6:not(:first-child) {margin-top: -0.6em;}
+h1,
+h2 {
+  + h5:not(:first-child),
+  + h6:not(:first-child) {
+    margin-top: -0.6em;
+  }
 }
 
-h2 {font-weight: 500;}
+h2 {
+  font-weight: 500;
+}
 
-li {margin-bottom: $list-margin-bottom / 3;}
+li {
+  margin-bottom: $list-margin-bottom / 3;
+}
 
 a:not(.button) {
-    &:hover {text-decoration: underline; color: $primary-color;
-        &:before, &:after {text-decoration: none;}
+  &:hover {
+    text-decoration: underline;
+    color: $primary-color;
+    &:before,
+    &:after {
+      text-decoration: none;
     }
+  }
 }
 
-small {color: $dark-gray;}
-
+small {
+  color: $dark-gray;
+}
 
 // Button
 // ------
 
-.button {min-width: rem-calc(132);}
+.button {
+  min-width: rem-calc(132);
+}
 
-a:focus, button:focus {outline: none;}
-
+a:focus,
+button:focus {
+  outline: none;
+}
 
 // Bgs
 // ------
 
-.bg-grey {background-color: $lighter-gray;}
-
-
+.bg-grey {
+  background-color: $lighter-gray;
+}
 
 // Lead Text
 // ------
 
-.lead {font-size: $lead-font-size;}
-
-
+.lead {
+  font-size: $lead-font-size;
+}
 
 // Centered Text
 // ------
 
-.text-center {text-align: center;}
-
-
+.text-center {
+  text-align: center;
+}
 
 // Blockquote
 // ------
 
 blockquote {
-    p {margin-bottom: 0;}
-    cite {}
+  p {
+    margin-bottom: 0;
+  }
+  cite {
+  }
 }
-
-
 
 // Horizontal List
 // ------
 
-.horizontal-list {@include horizontal_list();}
-
-
+.horizontal-list {
+  @include horizontal_list();
+}
 
 // Down Arrow
 // ------
 
-.cta-down:after {@include icon_font($char: $icon-arrow-down); display: inline-block; margin: .5rem auto; font-size: rem-calc(20);}
-
+.cta-down:after {
+  @include icon_font($char: $icon-arrow-down);
+  display: inline-block;
+  margin: 0.5rem auto;
+  font-size: rem-calc(20);
+}
 
 // Anchor Links
 // ------
 
-a[title="View on Github"] {
-    &:before {@include icon_font($char: $icon-github); display: inline-block; font-size: rem-calc(24); margin-right: .6rem; vertical-align: middle;}
-    &:after {display: none !important;}
-    &:hover {
-        &:before {text-decoration: none;}
+a[title='View on Github'] {
+  &:before {
+    @include icon_font($char: $icon-github);
+    display: inline-block;
+    font-size: rem-calc(24);
+    margin-right: 0.6rem;
+    vertical-align: middle;
+  }
+  &:after {
+    display: none !important;
+  }
+  &:hover {
+    &:before {
+      text-decoration: none;
     }
+  }
 }
-
-
-
-
 
 // IMAGES, VIDEOS & GALLERIES
 // -------------------------------------------------------------------------------------------------------------------
 
-.img {position: relative; display: block; background: transparent no-repeat center/cover;}
-
-
-
-
+.img {
+  position: relative;
+  display: block;
+  background: transparent no-repeat center/cover;
+}
 
 // FORM STYLES
 // -------------------------------------------------------------------------------------------------------------------
 
-.newsletter_errors {display: none;}
-.newsletter_thanks {display: none;}
-
-.form_group-agree {display: flex; flex-flow: row nowrap; align-items: flex-start;
-    input[type=checkbox] {flex: 0 0 auto; margin: rem-calc(3 3 0 0);}
-    label {flex: 1 1 auto; color: $white; font-size: $small-font-size;
-        a {text-decoration: underline;}
-    }
+.newsletter_errors {
+  display: none;
+}
+.newsletter_thanks {
+  display: none;
 }
 
-#newsletter_form {display: flex; flex-flow: row wrap; justify-content: space-between; max-width: rem-calc(460);
-    > * {flex: 1 1 100%;
-        &#newsletter_email {flex: 0 0 calc(100% - #{rem-calc(142)});}
-        &#newsletter_privacy {order: 2;}
-        &#newsletter_submit {flex: 0 0 #{rem-calc(132)};
-            button {margin: 0;}
-        }
+.form_group-agree {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  input[type='checkbox'] {
+    flex: 0 0 auto;
+    margin: rem-calc(3 3 0 0);
+  }
+  label {
+    flex: 1 1 auto;
+    color: $white;
+    font-size: $small-font-size;
+    a {
+      text-decoration: underline;
     }
+  }
 }
 
-
-
-
+#newsletter_form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: rem-calc(460);
+  > * {
+    flex: 1 1 100%;
+    &#newsletter_email {
+      flex: 0 0 calc(100% - #{rem-calc(142)});
+    }
+    &#newsletter_privacy {
+      order: 2;
+    }
+    &#newsletter_submit {
+      flex: 0 0 #{rem-calc(132)};
+      button {
+        margin: 0;
+      }
+    }
+  }
+}
 
 // FRAMEWORK
 // -------------------------------------------------------------------------------------------------------------------
-
 
 // Sticky Footer
 // -- Landing Page has .landing class on .site-header and .site-content
 // -- Conteng Guidelines pages have .site-wrapper element containing .site-header and .site-content
 // ------
 
-html {height: 100%;}
-.site {display: flex; flex-direction: column; height: 100%;}
+html {
+  height: 100%;
+}
+.site {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 .site-header.landing,
-.site-footer {flex: none;}
+.site-footer {
+  flex: none;
+}
 
 .site-wrapper,
-.site-content.landing {flex: 1 0 auto; width: 100%;}
-
-
-
-
+.site-content.landing {
+  flex: 1 0 auto;
+  width: 100%;
+}
 
 // Logo
 // ------
 
-.logo {position: relative; margin: 0; font-size: rem-calc(15); line-height: 1;
-    a {position: relative; display: block; padding: rem-calc(15 0 14 41); color: $body-font-color;
-        &:before {content: ""; position: absolute; left: 0; top: rem-calc(7); display: block; width: rem-calc(31); height: rem-calc(32); background: transparent asset_url("firefox-logo.png") no-repeat center/contain;}
-        &:hover {text-decoration: none; color: inherit;}
+.logo {
+  position: relative;
+  margin: 0;
+  font-size: rem-calc(15);
+  line-height: 1;
+  a {
+    position: relative;
+    display: block;
+    padding: rem-calc(15 0 14 41);
+    color: $body-font-color;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: rem-calc(7);
+      display: block;
+      width: rem-calc(31);
+      height: rem-calc(32);
+      background: transparent asset_url('firefox-logo.png') no-repeat
+        center/contain;
     }
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
 
-    @include breakpoint(medium) {font-size: rem-calc(20);
-        a {padding: rem-calc(15 0 14 58);
-            &:before {top: 0; width: rem-calc(48); height: rem-calc(49);}
-        }
+  @include breakpoint(medium) {
+    font-size: rem-calc(20);
+    a {
+      padding: rem-calc(15 0 14 58);
+      &:before {
+        top: 0;
+        width: rem-calc(48);
+        height: rem-calc(49);
+      }
     }
+  }
 }
-
-
-
-
-
 
 // COMPONENT STYLES
 // -------------------------------------------------------------------------------------------------------------------
 
-
 // Transition Elements
 // ------
 
-.showOnView {opacity: 0; box-shadow: 0 0 1px rgba(0, 0, 0, 0);} // box shadow hack to remove redraw pixels
-
-
+.showOnView {
+  opacity: 0;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+} // box shadow hack to remove redraw pixels
 
 // Panel
 // -------
 
-.panel {position: relative; padding-top: rem-calc(20); padding-bottom: rem-calc(20);
-    @include breakpoint(medium) {padding-top: rem-calc(60); padding-bottom: rem-calc(60);}
+.panel {
+  position: relative;
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(20);
+  @include breakpoint(medium) {
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(60);
+  }
 }
-
-
 
 // Popup Panel
 // ------
 
-.popup-panel {display: none; max-width: rem-calc(460); position: fixed; z-index: 9; padding: rem-calc(20 38) !important; margin: rem-calc(8 0); color: $body-font-color;
-    &:before {content:""; display: block; position: absolute; left: rem-calc(12); width: calc(100% - #{rem-calc(24)}); top: 0; height: 100%; background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1);}
+.popup-panel {
+  display: none;
+  max-width: rem-calc(460);
+  position: fixed;
+  z-index: 9;
+  padding: rem-calc(20 38) !important;
+  margin: rem-calc(8 0);
+  color: $body-font-color;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: rem-calc(12);
+    width: calc(100% - #{rem-calc(24)});
+    top: 0;
+    height: 100%;
+    background-color: $white;
+    border-radius: $global-radius;
+    box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+  }
 
-    > * {position: relative; z-index: 2;
-        &:first-child {display: none;}
-        &:nth-last-child(2) {margin-bottom: 0;}
-        &:last-child {position: absolute; top: rem-calc(12); right: rem-calc(20);
-            button {color: $medium-gray; font-size: rem-calc(24); cursor: pointer;
-                &:before {@include icon_font($char: $icon-close);}
-                &:hover {color: $primary-color;}
-            }
+  > * {
+    position: relative;
+    z-index: 2;
+    &:first-child {
+      display: none;
+    }
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+    &:last-child {
+      position: absolute;
+      top: rem-calc(12);
+      right: rem-calc(20);
+      button {
+        color: $medium-gray;
+        font-size: rem-calc(24);
+        cursor: pointer;
+        &:before {
+          @include icon_font($char: $icon-close);
         }
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        &:not(:first-child) {margin-top: 0;}
-    }
-
-    @include breakpoint(medium) {padding: rem-calc(24 34 30) !important; margin: rem-calc(12 0);
-
-        > *:not(:last-child) {width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
-            &:first-child {display: block; position: absolute; width: rem-calc(32); top: rem-calc(24); left: rem-calc(34);
-                img {width: rem-calc(32);}
-            }
+        &:hover {
+          color: $primary-color;
         }
+      }
     }
+  }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+  }
+
+  @include breakpoint(medium) {
+    padding: rem-calc(24 34 30) !important;
+    margin: rem-calc(12 0);
+
+    > *:not(:last-child) {
+      width: calc(100% - #{rem-calc(50)});
+      margin-right: 0;
+      margin-left: auto;
+      &:first-child {
+        display: block;
+        position: absolute;
+        width: rem-calc(32);
+        top: rem-calc(24);
+        left: rem-calc(34);
+        img {
+          width: rem-calc(32);
+        }
+      }
+    }
+  }
 }
-
-
 
 // Tiles
 // ------
 
-.tile {position: relative; padding: rem-calc(12) !important; margin: rem-calc(8 0);
-    @include breakpoint(medium) {padding: rem-calc(24) !important; margin: rem-calc(12 0);}
+.tile {
+  position: relative;
+  padding: rem-calc(12) !important;
+  margin: rem-calc(8 0);
+  @include breakpoint(medium) {
+    padding: rem-calc(24) !important;
+    margin: rem-calc(12 0);
+  }
 
-    &:before {content:""; display: block; position: absolute; left: rem-calc(0); width: 100%; top: 0; height: 100%; background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1);}
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: rem-calc(0);
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background-color: $white;
+    border-radius: $global-radius;
+    box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+  }
 
-    > * {position: relative; z-index: 2;
-        &:last-child {margin-bottom: 0;}
+  > * {
+    position: relative;
+    z-index: 2;
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
 
-    & + p, & + h1, & + h2, & + h3, & + h4, & + h5, & + h6, & + ol, & + ul {margin-top: 1.5em;}
-
+  & + p,
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6,
+  & + ol,
+  & + ul {
+    margin-top: 1.5em;
+  }
 }
-
-
 
 // Video Box
 // ------
 
-#stdVideo {opacity: 0; pointer-events: none; position: absolute; z-index: 11; overflow: hidden; left: 0; top: calc(100% + 1px); width: 100%; height: 1px; background: rgba(0,0,0,.85); transition: left .3s ease-in-out, top .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out, opacity .3s ease-in-out;
-    iframe, object, embed, video {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
-    .flex-video {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+#stdVideo {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 11;
+  overflow: hidden;
+  left: 0;
+  top: calc(100% + 1px);
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.85);
+  transition: left 0.3s ease-in-out, top 0.3s ease-in-out,
+    width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  iframe,
+  object,
+  embed,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .flex-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-    &.playing {opacity: 1; left: 0; top: 0; width: 100%; height: 100%; pointer-events: auto;}
+  &.playing {
+    opacity: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+  }
 }
 
-#stdVideo-close {z-index: 3; position: absolute; top: rem-calc(-42); right: rem-calc(15); font-size: rem-calc(22); color: $white; width: rem-calc(32); height: rem-calc(32); border-radius: 50%; cursor: pointer; text-align: center; transition: transform .15s ease-in-out, opacity .3s ease-in-out;
-    &:before {@include icon_font($char: $icon-close); display: block; line-height: rem-calc(32);}
-    &:hover {transform: scale(1.1);}
-    @include breakpoint(large) {top: rem-calc(-63); right: 0; font-size: rem-calc(36); width: rem-calc(48); height: rem-calc(48);
-        &:before {line-height: rem-calc(48);}
+#stdVideo-close {
+  z-index: 3;
+  position: absolute;
+  top: rem-calc(-42);
+  right: rem-calc(15);
+  font-size: rem-calc(22);
+  color: $white;
+  width: rem-calc(32);
+  height: rem-calc(32);
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.15s ease-in-out, opacity 0.3s ease-in-out;
+  &:before {
+    @include icon_font($char: $icon-close);
+    display: block;
+    line-height: rem-calc(32);
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+  @include breakpoint(large) {
+    top: rem-calc(-63);
+    right: 0;
+    font-size: rem-calc(36);
+    width: rem-calc(48);
+    height: rem-calc(48);
+    &:before {
+      line-height: rem-calc(48);
     }
+  }
 }
-.loading #stdVideo-close {opacity: 0;}
-
-.video-box {position: relative;
-
-    .h1 {
-        @include breakpoint(small down) {text-align: center; font-size: rem-calc(15); margin-top: rem-calc(24);}
-    }
-
-    .video-play {display: block; position: relative; overflow: hidden; display: block; width: rem-calc(48); height: rem-calc(48); margin: 1em 0; text-align: center; line-height: rem-calc(48); font-size: rem-calc(26); color: $primary-color; background-color: $white; border-radius: 50%; box-shadow: #{rem-calc(0 2 8)} rgba(12,12,13,0.1); cursor: pointer; transition: color .2s ease-in-out, box-shadow .2s ease-in-out, transform .2s ease-in-out;
-        &:before {@include icon_font($char: $icon-play);}
-        &:hover {color: $primary-color-hover; box-shadow: #{rem-calc(0 2 8)} rgba(12,12,13,0.33);}
-
-        &.loading {background-color: $primary-color; color: $white;
-            &:before {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: transparent asset_url("ajax-loader.svg") no-repeat center/86%;}
-        }
-    }
-
-    .img {position: relative; z-index: 1; height: 0; padding-bottom: 56.25%; margin: rem-calc(20 0 10); box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); border-radius: $global-radius; overflow: hidden;
-
-        .video-play {position: absolute; top: calc(50% - #{rem-calc(16)}); left: calc(50% - #{rem-calc(16)}); width: rem-calc(32); height: rem-calc(32); line-height: rem-calc(32); font-size: rem-calc(16); margin: 0;
-            @include breakpoint(medium) {display: none;}
-        }
-        .video-link {position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
-
-        &.loading {
-            @include breakpoint(small down) {
-                .video-play {background-color: $primary-color; color: $white;
-                    &:before {content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: transparent asset_url("ajax-loader.svg") no-repeat center/86%;}
-                }
-            }
-        }
-    }
-
-    @include breakpoint(medium) {margin: rem-calc(16 0);
-        .video-cta {position: absolute; z-index: 2; left: 0; top: 0; width: 70%; height: 100%; padding: 10%; display: flex; flex-flow: column nowrap; justify-content: center; transition: opacity .3s ease-in-out;
-            &.playing {opacity: 0; pointer-events: none;}
-        }
-    }
+.loading #stdVideo-close {
+  opacity: 0;
 }
 
-#video-popup {display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 100; background: rgba(0,0,0,.8);
-    .bg {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
-    .grid-container {height: 100%; position: relative; z-index: 3; pointer-events: none;
-        .cell {pointer-events: auto; position: relative;}
+.video-box {
+  position: relative;
+
+  .h1 {
+    @include breakpoint(small down) {
+      text-align: center;
+      font-size: rem-calc(15);
+      margin-top: rem-calc(24);
     }
-    #stdVideo {position: relative; height: 0; padding: 0; background: $white; transition: left .3s ease-in-out, top .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out, padding .3s ease-in-out, opacity .3s ease-in-out;
-        &.playing {opacity: 1; height: auto; padding-bottom: 56.25%;}
+  }
+
+  .video-play {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: rem-calc(48);
+    height: rem-calc(48);
+    margin: 1em 0;
+    text-align: center;
+    line-height: rem-calc(48);
+    font-size: rem-calc(26);
+    color: $primary-color;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.1);
+    cursor: pointer;
+    transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
+    &:before {
+      @include icon_font($char: $icon-play);
     }
+    &:hover {
+      color: $primary-color-hover;
+      box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.33);
+    }
+
     &.loading {
-        &:before {content: ""; position: absolute; z-index: 2; left: calc(50% - #{rem-calc(32)}); top: calc(50% - #{rem-calc(32)}); width: rem-calc(64); height: rem-calc(64); background: transparent asset_url("ajax-loader.svg") no-repeat center/100%;}
+      background-color: $primary-color;
+      color: $white;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent asset_url('ajax-loader.svg') no-repeat
+          center/86%;
+      }
     }
+  }
+
+  .img {
+    position: relative;
+    z-index: 1;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: rem-calc(20 0 10);
+    box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+    border-radius: $global-radius;
+    overflow: hidden;
+
+    .video-play {
+      position: absolute;
+      top: calc(50% - #{rem-calc(16)});
+      left: calc(50% - #{rem-calc(16)});
+      width: rem-calc(32);
+      height: rem-calc(32);
+      line-height: rem-calc(32);
+      font-size: rem-calc(16);
+      margin: 0;
+      @include breakpoint(medium) {
+        display: none;
+      }
+    }
+    .video-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &.loading {
+      @include breakpoint(small down) {
+        .video-play {
+          background-color: $primary-color;
+          color: $white;
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent asset_url('ajax-loader.svg') no-repeat
+              center/86%;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    margin: rem-calc(16 0);
+    .video-cta {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      width: 70%;
+      height: 100%;
+      padding: 10%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      transition: opacity 0.3s ease-in-out;
+      &.playing {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
 }
 
-
-
-
+#video-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .grid-container {
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    pointer-events: none;
+    .cell {
+      pointer-events: auto;
+      position: relative;
+    }
+  }
+  #stdVideo {
+    position: relative;
+    height: 0;
+    padding: 0;
+    background: $white;
+    transition: left 0.3s ease-in-out, top 0.3s ease-in-out,
+      width 0.3s ease-in-out, height 0.3s ease-in-out, padding 0.3s ease-in-out,
+      opacity 0.3s ease-in-out;
+    &.playing {
+      opacity: 1;
+      height: auto;
+      padding-bottom: 56.25%;
+    }
+  }
+  &.loading {
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      left: calc(50% - #{rem-calc(32)});
+      top: calc(50% - #{rem-calc(32)});
+      width: rem-calc(64);
+      height: rem-calc(64);
+      background: transparent asset_url('ajax-loader.svg') no-repeat center/100%;
+    }
+  }
+}
 
 // Moz Footer
 // ------
 
+.site-footer {
+  background-color: $black;
+  color: $white;
+  @include breakpoint(medium down) {
+    padding-top: rem-calc(40);
+    padding-bottom: rem-calc(40);
+  }
 
-.site-footer {background-color: $black; color: $white;
-    @include breakpoint(medium down) {padding-top: rem-calc(40); padding-bottom: rem-calc(40);}
-
-    a {color: $white;
-        &:hover {color: $white;}
+  a {
+    color: $white;
+    &:hover {
+      color: $white;
     }
+  }
 
-    h4 {
-        @include breakpoint(medium down) {margin-top: 1.5em;}
+  h4 {
+    @include breakpoint(medium down) {
+      margin-top: 1.5em;
     }
+  }
 
-    ul {list-style: none; margin: 0;}
+  ul {
+    list-style: none;
+    margin: 0;
+  }
 
-    .mzp-c-footer-links-social {@include horizontal_list($margin: .6666em);
-        a {font-size: 0;
-            &:before {display: inline-block; font-size: rem-calc(20); vertical-align: middle;}
-            &:hover {text-decoration: none;}
-        }
-        .twitter:before {@include icon_font($char: $icon-twitter);}
-        .instagram:before {@include icon_font($char: $icon-instagram);}
-        .youtube:before {@include icon_font($char: $icon-youtube);}
+  .mzp-c-footer-links-social {
+    @include horizontal_list($margin: 0.6666em);
+    a {
+      font-size: 0;
+      &:before {
+        display: inline-block;
+        font-size: rem-calc(20);
+        vertical-align: middle;
+      }
+      &:hover {
+        text-decoration: none;
+      }
     }
-
-    .mzp-c-footer-legal ul {@include horizontal_list($margin: 1em); margin-bottom: 1em;
-        a {
-            &:hover {text-decoration: underline;}
-        }
+    .twitter:before {
+      @include icon_font($char: $icon-twitter);
     }
-
-    .mzp-c-footer-primary-logo {margin-bottom: rem-calc(16); padding-right: rem-calc(24);
-        a {display: inline-block; width: 100px; height: 32px; overflow: hidden; text-decoration: none; text-indent: 120%; white-space: nowrap; background: $black asset_url("moz-logo.svg") no-repeat 0 0/#{rem-calc(100)}; color: $white;}
+    .instagram:before {
+      @include icon_font($char: $icon-instagram);
     }
-
-    .mzp-c-footer-secondary {font-size: $small-font-size; line-height: 1.333; padding-top: rem-calc(40);
-        @include breakpoint(large) {padding-top: rem-calc(60);}
+    .youtube:before {
+      @include icon_font($char: $icon-youtube);
     }
+  }
 
-    .mzp-c-language-switcher {display: flex; flex-flow: row wrap; justify-content: flex-start; font-size: 1rem; align-items: center;
-        label {position: absolute; width: 1px; height: 1px; overflow: hidden; margin: -1px;}
-        .mzp-c-cta-link {flex: 0 0 auto; margin-right: rem-calc(24); font-weight: $global-weight-bold;}
-        select {flex: 0 0 auto; width: auto; margin-bottom: 0;}
+  .mzp-c-footer-legal ul {
+    @include horizontal_list($margin: 1em);
+    margin-bottom: 1em;
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
 
+  .mzp-c-footer-primary-logo {
+    margin-bottom: rem-calc(16);
+    padding-right: rem-calc(24);
+    a {
+      display: inline-block;
+      width: 100px;
+      height: 32px;
+      overflow: hidden;
+      text-decoration: none;
+      text-indent: 120%;
+      white-space: nowrap;
+      background: $black asset_url('moz-logo.svg') no-repeat 0 0 /#{rem-calc(
+          100
+        )};
+      color: $white;
+    }
+  }
+
+  .mzp-c-footer-secondary {
+    font-size: $small-font-size;
+    line-height: 1.333;
+    padding-top: rem-calc(40);
+    @include breakpoint(large) {
+      padding-top: rem-calc(60);
+    }
+  }
+
+  .mzp-c-language-switcher {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    font-size: 1rem;
+    align-items: center;
+    label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      margin: -1px;
+    }
+    .mzp-c-cta-link {
+      flex: 0 0 auto;
+      margin-right: rem-calc(24);
+      font-weight: $global-weight-bold;
+    }
+    select {
+      flex: 0 0 auto;
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
 }
-
-

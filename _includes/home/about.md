@@ -8,7 +8,7 @@
 </div>
 <div class="cell small-12 medium-6 large-5" markdown="1">
 
-Build on the web’s most customizable browser. Get your great idea into the hands of millions of users. Join an international community of developers in the movement to put people in control of their online lives. __(P.S. There’s no cost to participate!)__
+Build on the web’s most customizable browser. Get your great idea into the hands of millions of users. Join an international community of developers in the movement to put people in control of their online lives. **(P.S. There’s no cost to participate!)**
 
 [Learn more about extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
 
@@ -16,7 +16,6 @@ Build on the web’s most customizable browser. Get your great idea into the han
 </div>
 </div>
 <!-- END: Section Intro -->
-
 
 <!-- Section Tiles -->
 <div class="section-tiles bg-grey">
@@ -96,7 +95,6 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 </div>
 <!-- END: Section Tiles -->
 
-
 <!-- Section Anatomy of an Extension -->
 <div class="section-anatomy panel bg-grey">
 <div class="grid-container grid-x grid-padding-x align-center">
@@ -139,6 +137,7 @@ An extension is a simple collection of files that modify the browser’s appeara
 Add toolbar buttons, menu choices, and—only in Firefox—sidebars to display additional content. Manage tab behavior and create pop-up windows that respond to user events.
 
 <button class="close"></button>
+
 </aside>
 <aside class="popup-panel" id="anatomy-content" markdown="1">
 
@@ -149,6 +148,7 @@ Add toolbar buttons, menu choices, and—only in Firefox—sidebars to display a
 Change webpage content. Remove ads, highlight key words, and reformat elements for readability.
 
 <button class="close"></button>
+
 </aside>
 <aside class="popup-panel" id="anatomy-background" markdown="1">
 
@@ -159,6 +159,7 @@ Change webpage content. Remove ads, highlight key words, and reformat elements f
 Manage long-term configuration beyond the current tab, and respond to user events such as button clicks and menu selections.
 
 <button class="close"></button>
+
 </aside>
 
 </div>

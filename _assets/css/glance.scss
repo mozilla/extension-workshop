@@ -9,10 +9,10 @@ CSS file.
 ******************************************************************/
 
 // Import local Foundation overrides
-@import "settings";
+@import 'settings';
 
 // Import foundation.scss from vendor files
-@import "foundation";
+@import 'foundation';
 
 // Select the components you want to use
 @include foundation-global-styles;
@@ -26,6 +26,6 @@ CSS file.
 @include foundation-visibility-classes;
 
 // Import your custom styles
-@import "main";
-@import "landing";
-@import "contentguidelines";
+@import 'main';
+@import 'landing';
+@import 'contentguidelines';

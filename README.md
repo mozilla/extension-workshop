@@ -8,8 +8,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-* [Jekyll](https://jekyllrb.com) site generator for [Github Pages](https://pages.github.com)
-* [Yarn](https://yarnpkg.com/en/) Package Manager
+- [Jekyll](https://jekyllrb.com) site generator for [Github Pages](https://pages.github.com)
+- [Yarn](https://yarnpkg.com/en/) Package Manager
 
 Once you have Jekyll and yarn insalled you'll need to install the dependencies:
 
@@ -23,7 +23,6 @@ Then to run locally in devlopment run:
 ```
 bundle exec jekyll serve
 ```
-
 
 ## Content Updates
 
@@ -62,7 +61,6 @@ For finer control you can use:
 ```
 <img src="{% asset "image.jpg" @path %}" someattr="whatever" />
 ```
-
 
 #### Add the page to the menu
 

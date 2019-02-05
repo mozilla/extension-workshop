@@ -12,7 +12,6 @@ When you build on Firefox, you build with a community of extension developers. A
 </div>
 <!-- END: Section Intro -->
 
-
 <!-- Section Tiles -->
 <div class="section-tiles bg-grey">
 <div class="tiles-container">
@@ -63,6 +62,7 @@ Connect with thousands of developers and contribute to the extension ecosystem.
 <!-- END: Section Tiles -->
 
 {% comment %}
+
 <!-- Events iframe -->
 <div id="events" class="bg-grey">
 <iframe style="width: 100%; height: 100%; border: 0; overflow: hidden;" class="hub-mgmt-preview-iframe splash-page-iframe is-splash-resize-active" src="https://splashthat.com/sites/view/addonscommunityevent.splashthat.com?partial=823525519,495830716&amp;screenshotHash=494156500dffa3d9" id="iFrameResizer1" scrolling="no"></iframe><script type="text/javascript" src="https://splashthat.com/v2/js/splash/bundles/splash-js-1.0.min.js"></script>

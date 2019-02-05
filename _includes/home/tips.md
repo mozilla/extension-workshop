@@ -76,7 +76,6 @@ Check your extension for errors, and modify the code as needed.
 </div>
 <!-- END: Section Intro -->
 
-
 <!-- Section Tiles -->
 <div class="section-tiles bg-grey">
 <div class="tiles-outside">
@@ -124,7 +123,6 @@ Publish your signed extension on your own, and explore alternate installation me
 </div>
 <!-- END: Section Tiles -->
 
-
 <!-- Section More -->
 <div class="section-more panel bg-grey">
 <div class="grid-container grid-x grid-padding-x align-center more-intro">
@@ -142,13 +140,13 @@ You’ll want users! The shortest route to getting, and keeping them, is creatin
 <!-- Tile 1 -->
 <div class="cell small-12 large-4 tile-borderless" markdown="1">
 
-[![What’s Great Content and Design?]({% asset "content_video_thumbnail.jpg" @path %})](a0_OsLGI0k4 "Open Popup Video")
+[![What’s Great Content and Design?]({% asset "content_video_thumbnail.jpg" @path %})](a0_OsLGI0k4 'Open Popup Video')
 
 #### What’s Great Content and Design?
 
 Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
 
-[Watch the video](a0_OsLGI0k4 "Open Popup Video")
+[Watch the video](a0_OsLGI0k4 'Open Popup Video')
 
 </div>
 <!-- END: Tile 1 -->

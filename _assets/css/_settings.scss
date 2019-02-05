@@ -19,7 +19,6 @@
 @import 'util/util';
 // @import 'https://code.cdn.mozilla.net/fonts/fira.css';
 
-
 // 1. Global
 // ---------
 
@@ -42,7 +41,8 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; // -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; // 'Fira Sans',
+$body-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; // -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; // 'Fira Sans',
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -61,7 +61,6 @@ $print-transparent-backgrounds: true;
 
 @include add-foundation-colors;
 
-
 // 2. Icons
 // ------
 
@@ -77,28 +76,38 @@ $print-transparent-backgrounds: true;
   font-style: normal;
 }
 
-@mixin icon_font($char:"") {font-family:'icomoon'; content: $char; speak:none; font-style:normal; font-weight:normal; font-variant:normal; text-transform:none; line-height:1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+@mixin icon_font($char: '') {
+  font-family: 'icomoon';
+  content: $char;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-$icon-play: "\e900";
-$icon-close: "\e909";
-$icon-download: "\e901";
-$icon-arrow-up: "\e902";
-$icon-arrow-down: "\e90b";
-$icon-arrow-left: "\e903";
-$icon-arrow-right: "\e90a";
-$icon-irc: "\e904";
-$icon-mail: "\e905";
-$icon-telegram: "\e906";
-$icon-twitter: "\e907";
-$icon-github: "\e908";
-$icon-youtube: "\e90c";
-$icon-instagram: "\e90d";
-$icon-back: "\e912";
-$icon-forward: "\e90e";
-$icon-newtab: "\e90f";
-$icon-dont: "\e910";
-$icon-do: "\e911";
-
+$icon-play: '\e900';
+$icon-close: '\e909';
+$icon-download: '\e901';
+$icon-arrow-up: '\e902';
+$icon-arrow-down: '\e90b';
+$icon-arrow-left: '\e903';
+$icon-arrow-right: '\e90a';
+$icon-irc: '\e904';
+$icon-mail: '\e905';
+$icon-telegram: '\e906';
+$icon-twitter: '\e907';
+$icon-github: '\e908';
+$icon-youtube: '\e90c';
+$icon-instagram: '\e90d';
+$icon-back: '\e912';
+$icon-forward: '\e90e';
+$icon-newtab: '\e90f';
+$icon-dont: '\e910';
+$icon-do: '\e911';
 
 // 3. Breakpoints
 // --------------
@@ -121,7 +130,7 @@ $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
   small: 12px,
-  medium: 24px
+  medium: 24px,
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
@@ -131,40 +140,89 @@ $xy-block-grid-max: 8;
 // 5. Base Typography
 // ------------------
 
-$header-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; // -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; // 'Fira Sans',
+$header-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; // -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; // 'Fira Sans',
 $header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1;
-$header-margin-bottom: .6em;
+$header-margin-bottom: 0.6em;
 $header-styles: (
   'small': (
-    'h1': ('font-size': 28, 'line-height': $header-lineheight, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
-    'h2': ('font-size': 24, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
-    'h3': ('font-size': 17, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
-    'h4': ('font-size': 15, 'line-height': $header-lineheight * 1.1, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
-    'h5': ('font-size': 15, 'line-height': $header-lineheight * 1.3, 'margin-top': 0, 'margin-bottom': $header-margin-bottom),
-    'h6': ('font-size': 13, 'line-height': $header-lineheight * 1.45, 'margin-top': 0, 'margin-bottom': $header-margin-bottom)
+    'h1': (
+      'font-size': 28,
+      'line-height': $header-lineheight,
+      'margin-top': 0,
+      'margin-bottom': $header-margin-bottom,
+    ),
+    'h2': (
+      'font-size': 24,
+      'line-height': $header-lineheight * 1.1,
+      'margin-top': 0,
+      'margin-bottom': $header-margin-bottom,
+    ),
+    'h3': (
+      'font-size': 17,
+      'line-height': $header-lineheight * 1.1,
+      'margin-top': 0,
+      'margin-bottom': $header-margin-bottom,
+    ),
+    'h4': (
+      'font-size': 15,
+      'line-height': $header-lineheight * 1.1,
+      'margin-top': 0,
+      'margin-bottom': $header-margin-bottom,
+    ),
+    'h5': (
+      'font-size': 15,
+      'line-height': $header-lineheight * 1.3,
+      'margin-top': 0,
+      'margin-bottom': $header-margin-bottom,
+    ),
+    'h6': (
+      'font-size': 13,
+      'line-height': $header-lineheight * 1.45,
+      'margin-top': 0,
+      'margin-bottom': $header-margin-bottom,
+    ),
   ),
   'medium': (
-    'h1': ('font-size': 36),
-    'h2': ('font-size': 28),
-    'h3': ('font-size': 22),
-    'h4': ('font-size': 17),
-    'h5': ('font-size': 15),
-    'h6': ('font-size': 13)
-  )
+    'h1': (
+      'font-size': 36,
+    ),
+    'h2': (
+      'font-size': 28,
+    ),
+    'h3': (
+      'font-size': 22,
+    ),
+    'h4': (
+      'font-size': 17,
+    ),
+    'h5': (
+      'font-size': 15,
+    ),
+    'h6': (
+      'font-size': 13,
+    ),
+  ),
 );
 
-@mixin header-size($type){
-  font-size: rem-calc(map_get(map_get(map_get($header-styles, 'small'),$type),'font-size'));
+@mixin header-size($type) {
+  font-size: rem-calc(
+    map_get(map_get(map_get($header-styles, 'small'), $type), 'font-size')
+  );
 
   @include breakpoint(medium) {
-    font-size: rem-calc(map_get(map_get(map_get($header-styles, 'medium'),$type),'font-size'));
+    font-size: rem-calc(
+      map_get(map_get(map_get($header-styles, 'medium'), $type), 'font-size')
+    );
   }
   @include breakpoint(large) {
-    font-size: rem-calc(map_get(map_get(map_get($header-styles, 'large'),$type),'font-size'));
+    font-size: rem-calc(
+      map_get(map_get(map_get($header-styles, 'large'), $type), 'font-size')
+    );
   }
 }
 
@@ -222,17 +280,36 @@ $subheader-margin-bottom: 0.5rem;
 $stat-font-size: 2.5rem;
 
 // Horizontal List
-@mixin horizontal_list($margin: 0, $align: left, $wrap: wrap) {display: flex; flex-flow: row $wrap; list-style: none; width: 100%; margin-left: 0; margin-bottom: 0;
-    @if $align == left {justify-content: flex-start;}
-    @else if $align == right {justify-content: flex-end;}
-    @else if $align == center {justify-content: center;}
+@mixin horizontal_list($margin: 0, $align: left, $wrap: wrap) {
+  display: flex;
+  flex-flow: row $wrap;
+  list-style: none;
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 0;
+  @if $align == left {
+    justify-content: flex-start;
+  } @else if $align == right {
+    justify-content: flex-end;
+  } @else if $align == center {
+    justify-content: center;
+  }
 
-    > li {flex: 0 0 auto; margin: 0 $margin;
-        &:first-child {margin-left: 0;}
-        &:last-child {margin-right: 0;}
-
-        > a {display: inline-block; text-decoration: none;}
+  > li {
+    flex: 0 0 auto;
+    margin: 0 $margin;
+    &:first-child {
+      margin-left: 0;
     }
+    &:last-child {
+      margin-right: 0;
+    }
+
+    > a {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
 }
 
 // 7. Button
@@ -344,7 +421,10 @@ $table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(8 10 10);
 $table-hover-scale: 2%;
 $table-row-hover: darken($table-background, $table-hover-scale);
-$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
+$table-row-stripe-hover: darken(
+  $table-background,
+  $table-color-scale + $table-hover-scale
+);
 $table-is-striped: true;
 $table-striped-background: smart-scale($table-background, $table-color-scale);
 $table-stripe: even;

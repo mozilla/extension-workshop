@@ -4,291 +4,648 @@ Stylesheet: Conteng Guidelines Stylesheet
 
 *************************************************/
 
-$sidebar-w-sm : rem-calc(200);
-$sidebar-w : rem-calc(230);
+$sidebar-w-sm: rem-calc(200);
+$sidebar-w: rem-calc(230);
 
 .site-wrapper {
+  // Header
+  // ------
 
+  .site-header {
+    font-size: rem-calc(13);
+    padding-bottom: rem-calc(50);
+    position: relative;
+    z-index: 100;
+  }
 
-	// Header
-	// ------
-
-    .site-header {font-size: rem-calc(13); padding-bottom: rem-calc(50); position: relative; z-index: 100;}
-
-    @include breakpoint(medium) {display: flex; flex-flow: row nowrap;
-        .site-header {font-size: rem-calc(11); flex: 0 0 #{$sidebar-w-sm}; width: $sidebar-w-sm; padding-top: rem-calc(30); padding-bottom: rem-calc(30);} //box-shadow: #{rem-calc(0 0 16)} rgba(12,12,13,0.1);
-        .site-content {flex: 1 1 auto;}
-    }
-    @include breakpoint(xlarge) {
-        .site-header {font-size: rem-calc(13); flex: 0 0 #{$sidebar-w}; width: $sidebar-w; padding-top: rem-calc(45); padding-bottom: rem-calc(45);}
-    }
-
-
-    .logo {font-size: rem-calc(15); margin: rem-calc(8 0 24); line-height: 1.1;
-
-        a {padding: rem-calc(13 0 3 50);
-            &:before {content: ""; position: absolute; display: block; left: 0; top: rem-calc(8); width: rem-calc(43); height: rem-calc(44); background: transparent asset_url("firefox-logo.png") no-repeat center/contain;}
-        }
-        small.tagline {font-size: rem-calc(13); padding: rem-calc(0 0 14 50); font-weight: $global-weight-normal; color: inherit;}
-
-
-        @include breakpoint(medium) {font-size: rem-calc(13); margin-top: rem-calc(4);
-            a {padding: rem-calc(15 0 14 43); display: block;
-                &:before {top: rem-calc(8); width: rem-calc(37); height: rem-calc(38);}
-            }
-            small.tagline {display: block; font-size: rem-calc(11); padding: rem-calc(5 0 14 0);}
-        }
-
-
-        @include breakpoint(xlarge) {font-size: rem-calc(15);  margin-top: rem-calc(2);
-            a {padding: rem-calc(15 0 17 50);
-                &:before {width: rem-calc(43); height: rem-calc(44);}
-            }
-            small.tagline {font-size: rem-calc(13);}
-        }
-
-
-        @include breakpoint(small down) {
-            br {display: none;}
-        }
-    }
-
-    .site-nav-container {
-    	.site-nav:focus {outline: none;}
-
-        ul.pages {list-style: none; margin: 0; font-size: rem-calc(15);
-        	li {margin: 0;}
-            a {color: $body-font-color; display: inline-block; padding: .25rem 0;}
-            a[target=_blank]:after {color: $primary-color; padding-left: .3em; display: inline-block;
-                @include icon_font($char:$icon-newtab);
-            }
-
-            @include breakpoint(medium) {font-size: rem-calc(13); margin: rem-calc(24 0 30);
-            	.current a {color: $primary-color;}
-            }
-            @include breakpoint(xlarge) {font-size: rem-calc(15);}
-            @include breakpoint(small down) {
-            	li.current {display: block; pointer-events: none;}
-            }
-        }
-
-        .button {display: block;
-            @include breakpoint(medium only) {font-size: 0.733333333333333rem; padding: rem-calc(6 8);}
-            @include breakpoint(large only) {font-size: 0.733333333333333rem; padding: rem-calc(6 8);}
-        }
-
-        @include breakpoint(small down) {position: absolute; z-index: 10; top: rem-calc(66); left: rem-calc(12); width: calc(100% - #{rem-calc(24)}); min-height: rem-calc(75);
-        	&:before {content: ""; display: block; position: fixed; left: 0; top: rem-calc(-75); width: 100%; height: rem-calc(75); pointer-events: none; opacity: 0; background-image: linear-gradient(rgba($black, .333) 0, rgba($black, 0) 100%); transition: top 0 ease-in-out;}
-
-        	.site-nav {padding: rem-calc(12 15); background-color: $white; border-radius: $global-radius; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); position: absolute; left: 0; top: rem-calc(12); width: 100%; max-height: calc(100vh - #{rem-calc(24)});
-		        &:after {@include icon_font($char: $icon-arrow-down); position: absolute; font-size: rem-calc(18); line-height: 1; top: rem-calc(20); right: rem-calc(15);}
-
-    	    	p, li {display: none;}
-
-    	    	p {margin: 0; padding: rem-calc(15 0 0);
-    	    		&:first-of-type,
-    	    		&:last-of-type {padding: rem-calc(24 0 0);}
-
-    	    	}
-
-    	    	.button {margin: 0;}
-
-    	    	&.open {
-    	    		&:after {@include icon_font($char: $icon-arrow-up);}
-    	    		&:focus {overflow-y: scroll;}
-    	    		.current a {color: $primary-color;}
-    	    	}
-    		}
-
-    		&.sticky {
-    			&:before {top: rem-calc(-20); opacity: 1; transition: top .2s ease-in-out, opacity .2s ease-in-out;}
-
-    			.site-nav {position: fixed; top: rem-calc(12); left: rem-calc(12); width: calc(100% - #{rem-calc(24)});}
-    		}
-    	}
-    }
-
-    .back {
-    	&:before {@include icon_font($char:$icon-back); padding-right: .3em; display: inline-block;}
-    }
-
-    .site-metadata {color: $dark-gray; margin: 0;
-    	@include breakpoint(medium) {margin: rem-calc(30 0);}
-    }
-
-
-    // Page Content
-    // ------
-
+  @include breakpoint(medium) {
+    display: flex;
+    flex-flow: row nowrap;
+    .site-header {
+      font-size: rem-calc(11);
+      flex: 0 0 #{$sidebar-w-sm};
+      width: $sidebar-w-sm;
+      padding-top: rem-calc(30);
+      padding-bottom: rem-calc(30);
+    } //box-shadow: #{rem-calc(0 0 16)} rgba(12,12,13,0.1);
     .site-content {
+      flex: 1 1 auto;
+    }
+  }
+  @include breakpoint(xlarge) {
+    .site-header {
+      font-size: rem-calc(13);
+      flex: 0 0 #{$sidebar-w};
+      width: $sidebar-w;
+      padding-top: rem-calc(45);
+      padding-bottom: rem-calc(45);
+    }
+  }
 
-    	.post {padding: rem-calc(24 0);
-	        @include breakpoint(medium) {padding: rem-calc(45 0);}
-	        @include breakpoint(large) {padding: #{rem-calc(45)} 4.166666666666667%;}
-	        @include breakpoint(xlarge) {padding: #{rem-calc(60)} 8.333333333333333%;}
+  .logo {
+    font-size: rem-calc(15);
+    margin: rem-calc(8 0 24);
+    line-height: 1.1;
 
-            > .grid-container {max-width: $global-width - $sidebar-w;}
-    	}
+    a {
+      padding: rem-calc(13 0 3 50);
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        top: rem-calc(8);
+        width: rem-calc(43);
+        height: rem-calc(44);
+        background: transparent asset_url('firefox-logo.png') no-repeat
+          center/contain;
+      }
+    }
+    small.tagline {
+      font-size: rem-calc(13);
+      padding: rem-calc(0 0 14 50);
+      font-weight: $global-weight-normal;
+      color: inherit;
+    }
 
-    	.post-content {
-    		.grid-container {padding: 0; margin-left: rem-calc(-6); margin-right: rem-calc(-6);
-    			@include breakpoint(medium) {margin-left: rem-calc(-12); margin-right: rem-calc(-12);}
-    		}
-    	}
+    @include breakpoint(medium) {
+      font-size: rem-calc(13);
+      margin-top: rem-calc(4);
+      a {
+        padding: rem-calc(15 0 14 43);
+        display: block;
+        &:before {
+          top: rem-calc(8);
+          width: rem-calc(37);
+          height: rem-calc(38);
+        }
+      }
+      small.tagline {
+        display: block;
+        font-size: rem-calc(11);
+        padding: rem-calc(5 0 14 0);
+      }
+    }
 
-        .page-bottom-nav {padding-bottom: rem-calc(24);
-            @include breakpoint(medium) {padding: rem-calc(0 0 45);}
-            @include breakpoint(large) {padding: 0 4.166666666666667% #{rem-calc(45)};}
-            @include breakpoint(xlarge) {padding: 0 8.333333333333333% #{rem-calc(60)};}
+    @include breakpoint(xlarge) {
+      font-size: rem-calc(15);
+      margin-top: rem-calc(2);
+      a {
+        padding: rem-calc(15 0 17 50);
+        &:before {
+          width: rem-calc(43);
+          height: rem-calc(44);
+        }
+      }
+      small.tagline {
+        font-size: rem-calc(13);
+      }
+    }
 
-            > .grid-container {max-width: $global-width - $sidebar-w;}
+    @include breakpoint(small down) {
+      br {
+        display: none;
+      }
+    }
+  }
 
-            ul {display: flex; flex-flow: row nowrap; justify-content: space-between; line-height: $header-lineheight * 1.3; list-style: none; margin: 0;}
+  .site-nav-container {
+    .site-nav:focus {
+      outline: none;
+    }
 
-            li {flex: 1 1 auto; margin: 0;
-                &:last-child {text-align: right;}
-            }
+    ul.pages {
+      list-style: none;
+      margin: 0;
+      font-size: rem-calc(15);
+      li {
+        margin: 0;
+      }
+      a {
+        color: $body-font-color;
+        display: inline-block;
+        padding: 0.25rem 0;
+      }
+      a[target='_blank']:after {
+        color: $primary-color;
+        padding-left: 0.3em;
+        display: inline-block;
+        @include icon_font($char: $icon-newtab);
+      }
 
-            a {display: inline-block;}
+      @include breakpoint(medium) {
+        font-size: rem-calc(13);
+        margin: rem-calc(24 0 30);
+        .current a {
+          color: $primary-color;
+        }
+      }
+      @include breakpoint(xlarge) {
+        font-size: rem-calc(15);
+      }
+      @include breakpoint(small down) {
+        li.current {
+          display: block;
+          pointer-events: none;
+        }
+      }
+    }
 
-            li:first-child a:before {@include icon_font($char: $icon-back); display: inline-block; padding-right: .3em;}
-            li:last-child a:after {@include icon_font($char: $icon-forward); display: inline-block; padding-left: .3em;}
+    .button {
+      display: block;
+      @include breakpoint(medium only) {
+        font-size: 0.733333333333333rem;
+        padding: rem-calc(6 8);
+      }
+      @include breakpoint(large only) {
+        font-size: 0.733333333333333rem;
+        padding: rem-calc(6 8);
+      }
+    }
+
+    @include breakpoint(small down) {
+      position: absolute;
+      z-index: 10;
+      top: rem-calc(66);
+      left: rem-calc(12);
+      width: calc(100% - #{rem-calc(24)});
+      min-height: rem-calc(75);
+      &:before {
+        content: '';
+        display: block;
+        position: fixed;
+        left: 0;
+        top: rem-calc(-75);
+        width: 100%;
+        height: rem-calc(75);
+        pointer-events: none;
+        opacity: 0;
+        background-image: linear-gradient(
+          rgba($black, 0.333) 0,
+          rgba($black, 0) 100%
+        );
+        transition: top 0 ease-in-out;
+      }
+
+      .site-nav {
+        padding: rem-calc(12 15);
+        background-color: $white;
+        border-radius: $global-radius;
+        box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+        position: absolute;
+        left: 0;
+        top: rem-calc(12);
+        width: 100%;
+        max-height: calc(100vh - #{rem-calc(24)});
+        &:after {
+          @include icon_font($char: $icon-arrow-down);
+          position: absolute;
+          font-size: rem-calc(18);
+          line-height: 1;
+          top: rem-calc(20);
+          right: rem-calc(15);
         }
 
-    }
-}
+        p,
+        li {
+          display: none;
+        }
 
+        p {
+          margin: 0;
+          padding: rem-calc(15 0 0);
+          &:first-of-type,
+          &:last-of-type {
+            padding: rem-calc(24 0 0);
+          }
+        }
+
+        .button {
+          margin: 0;
+        }
+
+        &.open {
+          &:after {
+            @include icon_font($char: $icon-arrow-up);
+          }
+          &:focus {
+            overflow-y: scroll;
+          }
+          .current a {
+            color: $primary-color;
+          }
+        }
+      }
+
+      &.sticky {
+        &:before {
+          top: rem-calc(-20);
+          opacity: 1;
+          transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out;
+        }
+
+        .site-nav {
+          position: fixed;
+          top: rem-calc(12);
+          left: rem-calc(12);
+          width: calc(100% - #{rem-calc(24)});
+        }
+      }
+    }
+  }
+
+  .back {
+    &:before {
+      @include icon_font($char: $icon-back);
+      padding-right: 0.3em;
+      display: inline-block;
+    }
+  }
+
+  .site-metadata {
+    color: $dark-gray;
+    margin: 0;
+    @include breakpoint(medium) {
+      margin: rem-calc(30 0);
+    }
+  }
+
+  // Page Content
+  // ------
+
+  .site-content {
+    .post {
+      padding: rem-calc(24 0);
+      @include breakpoint(medium) {
+        padding: rem-calc(45 0);
+      }
+      @include breakpoint(large) {
+        padding: #{rem-calc(45)} 4.166666666666667%;
+      }
+      @include breakpoint(xlarge) {
+        padding: #{rem-calc(60)} 8.333333333333333%;
+      }
+
+      > .grid-container {
+        max-width: $global-width - $sidebar-w;
+      }
+    }
+
+    .post-content {
+      .grid-container {
+        padding: 0;
+        margin-left: rem-calc(-6);
+        margin-right: rem-calc(-6);
+        @include breakpoint(medium) {
+          margin-left: rem-calc(-12);
+          margin-right: rem-calc(-12);
+        }
+      }
+    }
+
+    .page-bottom-nav {
+      padding-bottom: rem-calc(24);
+      @include breakpoint(medium) {
+        padding: rem-calc(0 0 45);
+      }
+      @include breakpoint(large) {
+        padding: 0 4.166666666666667% #{rem-calc(45)};
+      }
+      @include breakpoint(xlarge) {
+        padding: 0 8.333333333333333% #{rem-calc(60)};
+      }
+
+      > .grid-container {
+        max-width: $global-width - $sidebar-w;
+      }
+
+      ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        line-height: $header-lineheight * 1.3;
+        list-style: none;
+        margin: 0;
+      }
+
+      li {
+        flex: 1 1 auto;
+        margin: 0;
+        &:last-child {
+          text-align: right;
+        }
+      }
+
+      a {
+        display: inline-block;
+      }
+
+      li:first-child a:before {
+        @include icon_font($char: $icon-back);
+        display: inline-block;
+        padding-right: 0.3em;
+      }
+      li:last-child a:after {
+        @include icon_font($char: $icon-forward);
+        display: inline-block;
+        padding-left: 0.3em;
+      }
+    }
+  }
+}
 
 // Full Width Image & Half Width Images
 // ------
 
-.image-with-caption {font-size: $small-font-size; color: $dark-gray; margin: rem-calc(12 0 15);
-	img {display: block; width: 100%; margin-bottom: rem-calc(6);}
+.image-with-caption {
+  font-size: $small-font-size;
+  color: $dark-gray;
+  margin: rem-calc(12 0 15);
+  img {
+    display: block;
+    width: 100%;
+    margin-bottom: rem-calc(6);
+  }
 
-	@include breakpoint(medium) {margin: rem-calc(24 0);
-		img {margin-bottom: rem-calc(8);}
-	}
+  @include breakpoint(medium) {
+    margin: rem-calc(24 0);
+    img {
+      margin-bottom: rem-calc(8);
+    }
+  }
 }
-
 
 // Video Popup Thumbnail
 // ------
 
-.video-popup {margin: rem-calc(12 0); text-align: center;
-	@include breakpoint(medium) {margin: rem-calc(24 0);}
+.video-popup {
+  margin: rem-calc(12 0);
+  text-align: center;
+  @include breakpoint(medium) {
+    margin: rem-calc(24 0);
+  }
 
-	a {display: block; position: relative; font-size: rem-calc(22);
-		&:before, &:after {display: block; position: absolute; left: calc(50% - #{rem-calc(20)}); top: calc(50% - #{rem-calc(20)}); width: rem-calc(40); height: rem-calc(40);}
-		&:before {content: ""; background-color: $white; border-radius: 50%; box-shadow: #{rem-calc(0 2 8)} rgba(12,12,13,0.1); cursor: pointer; transition: box-shadow .2s ease-in-out;}
-        &:after {@include icon_font($char: $icon-play); text-align: center; line-height: rem-calc(38); color: $primary-color; transition: color .2s ease-in-out;}
-        &:hover:before {box-shadow: #{rem-calc(0 2 8)} rgba(12,12,13,0.33);}
-        &:hover:after {color: $primary-color-hover;}
-	}
-	img {display: block; width: 100%; margin-bottom: rem-calc(6);}
+  a {
+    display: block;
+    position: relative;
+    font-size: rem-calc(22);
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      left: calc(50% - #{rem-calc(20)});
+      top: calc(50% - #{rem-calc(20)});
+      width: rem-calc(40);
+      height: rem-calc(40);
+    }
+    &:before {
+      content: '';
+      background-color: $white;
+      border-radius: 50%;
+      box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.1);
+      cursor: pointer;
+      transition: box-shadow 0.2s ease-in-out;
+    }
+    &:after {
+      @include icon_font($char: $icon-play);
+      text-align: center;
+      line-height: rem-calc(38);
+      color: $primary-color;
+      transition: color 0.2s ease-in-out;
+    }
+    &:hover:before {
+      box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.33);
+    }
+    &:hover:after {
+      color: $primary-color-hover;
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    margin-bottom: rem-calc(6);
+  }
 
-	.medium-6 {margin-bottom: rem-calc(12);
+  .medium-6 {
+    margin-bottom: rem-calc(12);
 
-		@include breakpoint(medium) {margin-bottom: rem-calc(24);
-            a {font-size: rem-calc(13);
-				&:before, &:after {left: calc(50% - #{rem-calc(12)}); top: calc(50% - #{rem-calc(12)}); width: rem-calc(24); height: rem-calc(24);}
-		        &:after {line-height: rem-calc(23);}
-			}
-			img {border-radius: $global-radius;}
-			h1, h2, h3, h4, h5, h6, p {max-width: rem-calc(360); margin-right: auto; margin-left: auto;}
+    @include breakpoint(medium) {
+      margin-bottom: rem-calc(24);
+      a {
+        font-size: rem-calc(13);
+        &:before,
+        &:after {
+          left: calc(50% - #{rem-calc(12)});
+          top: calc(50% - #{rem-calc(12)});
+          width: rem-calc(24);
+          height: rem-calc(24);
+        }
+        &:after {
+          line-height: rem-calc(23);
+        }
+      }
+      img {
+        border-radius: $global-radius;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        max-width: rem-calc(360);
+        margin-right: auto;
+        margin-left: auto;
+      }
 
-            p:first-child {margin-top: rem-calc(40); max-width: rem-calc(180); margin-right: auto; margin-left: auto;}
-		}
-	}
+      p:first-child {
+        margin-top: rem-calc(40);
+        max-width: rem-calc(180);
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
 }
-
 
 // Image Grid
 // ------
 
-.icon-grid {margin: rem-calc(12 0 3);
-	p {margin-bottom: rem-calc(12);}
-	@include breakpoint(medium) {margin: rem-calc(24 0 0);
-		p {margin-bottom: rem-calc(24);}
-	}
+.icon-grid {
+  margin: rem-calc(12 0 3);
+  p {
+    margin-bottom: rem-calc(12);
+  }
+  @include breakpoint(medium) {
+    margin: rem-calc(24 0 0);
+    p {
+      margin-bottom: rem-calc(24);
+    }
+  }
 }
-
 
 // Do this, not this
 // ------
 
-.example {background-color: $light-gray; padding: rem-calc(7); margin: rem-calc(0 -7 15); border-radius: $global-radius;
-	p, ul, ol {margin-bottom: .5rem;}
-	> *:last-child {margin-bottom: 0;}
+.example {
+  background-color: $light-gray;
+  padding: rem-calc(7);
+  margin: rem-calc(0 -7 15);
+  border-radius: $global-radius;
+  p,
+  ul,
+  ol {
+    margin-bottom: 0.5rem;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
 }
-span.example {display: inline-block; padding: rem-calc(0 7); margin: 0;}
-
-.do-this, .not-this {background-color: $lighter-gray; margin: rem-calc(12 0); padding: rem-calc(12); border: 1px solid darken($light-gray,4%);
-	> *:last-child {margin-bottom: 0;}
-
-	header {padding: rem-calc(8 0 6);
-		> *:first-child:before {display: inline; margin-right: .5rem;}
-        + h1, + h2, + h3, + h4, + h5, + h6 {margin-top: 0;}
-	}
-
-	.example {background-color: darken($light-gray,4%);}
-
-	@include breakpoint(medium) {margin: rem-calc(24 0); padding: rem-calc(24);
-		header {padding: rem-calc(0 0 12);}
-	}
-
-	& + p, & + h1, & + h2, & + h3, & + h4, & + h5, & + h6, & + ol, & + ul {margin-top: 1.5em;}
+span.example {
+  display: inline-block;
+  padding: rem-calc(0 7);
+  margin: 0;
 }
 
-.do-this {border-top: #{rem-calc(5)} solid #31C430;
-	header {
-		* {color: #31C430;}
-		> *:first-child:before {@include icon_font($char: $icon-do); color: #31C430;}
-	}
+.do-this,
+.not-this {
+  background-color: $lighter-gray;
+  margin: rem-calc(12 0);
+  padding: rem-calc(12);
+  border: 1px solid darken($light-gray, 4%);
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  header {
+    padding: rem-calc(8 0 6);
+    > *:first-child:before {
+      display: inline;
+      margin-right: 0.5rem;
+    }
+    + h1,
+    + h2,
+    + h3,
+    + h4,
+    + h5,
+    + h6 {
+      margin-top: 0;
+    }
+  }
+
+  .example {
+    background-color: darken($light-gray, 4%);
+  }
+
+  @include breakpoint(medium) {
+    margin: rem-calc(24 0);
+    padding: rem-calc(24);
+    header {
+      padding: rem-calc(0 0 12);
+    }
+  }
+
+  & + p,
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6,
+  & + ol,
+  & + ul {
+    margin-top: 1.5em;
+  }
 }
-.not-this {border-top: #{rem-calc(5)} solid #D70022;
-	header {
-		* {color: #D70022;}
-		> *:first-child:before {@include icon_font($char: $icon-dont); color: #D70022;}
-	}
+
+.do-this {
+  border-top: #{rem-calc(5)} solid #31c430;
+  header {
+    * {
+      color: #31c430;
+    }
+    > *:first-child:before {
+      @include icon_font($char: $icon-do);
+      color: #31c430;
+    }
+  }
+}
+.not-this {
+  border-top: #{rem-calc(5)} solid #d70022;
+  header {
+    * {
+      color: #d70022;
+    }
+    > *:first-child:before {
+      @include icon_font($char: $icon-dont);
+      color: #d70022;
+    }
+  }
 }
 
 .do-this-not-this {
-	.do-this, .not-this {margin: rem-calc(0 0 12);}
+  .do-this,
+  .not-this {
+    margin: rem-calc(0 0 12);
+  }
 
-	@include breakpoint(medium) {margin: rem-calc(24 0);
-		.do-this, .not-this {margin: 0;}
-	}
+  @include breakpoint(medium) {
+    margin: rem-calc(24 0);
+    .do-this,
+    .not-this {
+      margin: 0;
+    }
+  }
 
-	& + p, & + h1, & + h2, & + h3, & + h4, & + h5, & + h6, & + ol, & + ul {margin-top: 1.5em;}
+  & + p,
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6,
+  & + ol,
+  & + ul {
+    margin-top: 1.5em;
+  }
 }
-
 
 // Tile
 // ------
 
-.site-wrapper .tile {margin-top: rem-calc(12); margin-bottom: rem-calc(12);
-    @include breakpoint(medium) {margin-top: rem-calc(24); margin-bottom: rem-calc(24);}
+.site-wrapper .tile {
+  margin-top: rem-calc(12);
+  margin-bottom: rem-calc(12);
+  @include breakpoint(medium) {
+    margin-top: rem-calc(24);
+    margin-bottom: rem-calc(24);
+  }
 }
-
-
-
 
 // Moz Footer
 // ------
 
 .site-wrapper + .site-footer {
+  .mzp-l-content {
+    .grid-container {
+      max-width: $global-width - $sidebar-w;
+    }
+  }
 
+  @include breakpoint(medium) {
+    padding-left: $sidebar-w-sm;
+  }
+
+  @include breakpoint(large) {
     .mzp-l-content {
-        .grid-container {max-width: $global-width - $sidebar-w;}
+      padding: 0 4.166666666666667%;
     }
-
-    @include breakpoint(medium) {padding-left: $sidebar-w-sm;}
-
-    @include breakpoint(large) {
-        .mzp-l-content {padding: 0 4.166666666666667%;}
+  }
+  @include breakpoint(xlarge) {
+    padding-left: $sidebar-w;
+    .mzp-l-content {
+      padding: 0 8.333333333333333%;
     }
-    @include breakpoint(xlarge) {padding-left: $sidebar-w;
-        .mzp-l-content {padding: 0 8.333333333333333%;}
-    }
+  }
 }
-
