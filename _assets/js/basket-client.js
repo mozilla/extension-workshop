@@ -7,7 +7,7 @@
 
   // !! this file assumes only one signup form per page !!
 
-  var newsletterForm = document.getElementById('newsletter_form');
+  var newsletterForm = document.getElementById("newsletter_form");
 
   // handle errors
   var errorArray = [];
