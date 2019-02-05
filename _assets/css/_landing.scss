@@ -20,16 +20,16 @@ Stylesheet: Landing Page Stylesheet
 // Page Navigation
 // ------
 
-.page-nav-container {position: absolute; z-index: 10; top: calc(100% - #{rem-calc(38)}); left: 0; width: 100%; 
+.page-nav-container {position: absolute; z-index: 10; top: calc(100% - #{rem-calc(38)}); left: 0; width: 100%;
     * {transform: translate3d(0,0,0);}
-    .page-nav {position: absolute; left: 0; top: 0; width: 100%; 
+    .page-nav {position: absolute; left: 0; top: 0; width: 100%;
         &:before {content: ""; display: block; position: absolute; left: 0; top: rem-calc(-75); width: 100%; height: rem-calc(75); pointer-events: none; opacity: 0; background-image: linear-gradient(rgba($black, .333) 0, rgba($black, 0) 100%); transition: top 0 ease-in-out;}
     }
     nav {position: relative; width: 100%; height: rem-calc(52); background-color: $white; box-shadow: #{rem-calc(0 4 16)} rgba(12,12,13,0.1); border-radius: $global-radius; margin: rem-calc(12 0); overflow: hidden;
 
         .group-a, .group-b {position: absolute; left: 0; top: 0; height: 100%; padding: rem-calc(0 10); display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: stretch;}
 
-        .group-a {width: 100%; transition: width .3s ease-in-out; 
+        .group-a {width: 100%; transition: width .3s ease-in-out;
             a {position: relative; padding: rem-calc(15 20); color: $body-font-color; margin: 0; line-height: rem-calc(22); white-space: nowrap; transition: font-size .3s ease-in-out;
                 &:hover {color: $primary-color; text-decoration: none;}
                 &.active {color: $primary-color;
@@ -39,12 +39,12 @@ Stylesheet: Landing Page Stylesheet
             @include breakpoint(large) {padding-left: rem-calc(20); padding-right: rem-calc(20);}
         }
 
-        .group-b {width: rem-calc(155); left: auto; right: 0; display: flex; flex-flow: row nowrap; justify-content: flex-end; overflow: hidden; opacity: 0; margin-right: rem-calc(-155); padding: rem-calc(10 10 10 0); background-color: $white; transition: opacity .3s ease-in-out, margin .3s ease-in-out; 
+        .group-b {width: rem-calc(155); left: auto; right: 0; display: flex; flex-flow: row nowrap; justify-content: flex-end; overflow: hidden; opacity: 0; margin-right: rem-calc(-155); padding: rem-calc(10 10 10 0); background-color: $white; transition: opacity .3s ease-in-out, margin .3s ease-in-out;
             a.button {margin: rem-calc(0); margin-left: auto;}
         }
 
         .fwd, .bak {display: none;}
-        
+
     }
 
     &.sticky .page-nav {position: fixed; top: 0;
@@ -60,11 +60,11 @@ Stylesheet: Landing Page Stylesheet
 
             .group-a {overflow-x: hidden; overflow-y: hidden;
                 @include breakpoint(medium only) {
-                    &:hover {overflow-x: auto;} 
+                    &:hover {overflow-x: auto;}
                 }
             }
 
-            .fwd, .bak {visibility: hidden; pointer-events: none; position: absolute; z-index: 2; top: 0; height: 100%; width: rem-calc(64); display: flex; flex-flow: column nowrap; justify-content: center; align-items: center; cursor: pointer; font-size: rem-calc(16); text-align: center; color: $body-font-color; transition: left .3s ease-in-out, right .3s ease-in-out; 
+            .fwd, .bak {visibility: hidden; pointer-events: none; position: absolute; z-index: 2; top: 0; height: 100%; width: rem-calc(64); display: flex; flex-flow: column nowrap; justify-content: center; align-items: center; cursor: pointer; font-size: rem-calc(16); text-align: center; color: $body-font-color; transition: left .3s ease-in-out, right .3s ease-in-out;
                 &:after {display: block; flex: 0 0 auto; padding: rem-calc(0 16);}
                 &:hover {color: $primary-color;}
             }
@@ -100,7 +100,7 @@ Stylesheet: Landing Page Stylesheet
                 &:after {@include icon_font($char: $icon-arrow-down); display: block; flex: 0 1 #{rem-calc(22)}; width: rem-calc(22); padding: rem-calc(3 0 3 6); font-size: rem-calc(16);}
             }
 
-            .group-a {display: none; z-index: 1; height: auto; position: relative; margin-top: rem-calc(54); padding: rem-calc(12 10); border-top: 1px solid $medium-gray; 
+            .group-a {display: none; z-index: 1; height: auto; position: relative; margin-top: rem-calc(54); padding: rem-calc(12 10); border-top: 1px solid $medium-gray;
                 a {display: block; padding: rem-calc(8 0 8 25); font-size: rem-calc(15);
                     &.active {color: $body-font-color;
                         &:after {content: ""; display: block; position: absolute; left: rem-calc(12); top: rem-calc(11); bottom: auto; width: rem-calc(1); height: rem-calc(16); background-color: $primary-color;}
@@ -117,7 +117,7 @@ Stylesheet: Landing Page Stylesheet
         }
     }
 
-    
+
 }
 
 
@@ -162,7 +162,7 @@ Stylesheet: Landing Page Stylesheet
 // ------
 
 .section-intro {padding-top: rem-calc(32); padding-bottom: rem-calc(20); background-color: #f8e71c;
-    
+
     > .tiles-outside:first-child {padding-top: rem-calc(0);}
     > .tiles-outside:last-child {padding-bottom: rem-calc(0);}
 
@@ -184,8 +184,8 @@ Stylesheet: Landing Page Stylesheet
         }
     }
 
-    &.bg-dark {background-color: $primary-color; color: $white; 
-        > .grid-container > .cell:not(.tile):not(.tile-compact) > p > a, 
+    &.bg-dark {background-color: $primary-color; color: $white;
+        > .grid-container > .cell:not(.tile):not(.tile-compact) > p > a,
         .over-dark a,
         .tiles-outside a {color: $white;
             &:last-child {
@@ -197,7 +197,7 @@ Stylesheet: Landing Page Stylesheet
                 }
             }
         }
-    
+
         + .section-tiles {
             .tiles-outside:first-child {background-color: $primary-color; color: $white;}
             .tiles-container {background-color: $primary-color; color: $white;
@@ -247,7 +247,7 @@ Stylesheet: Landing Page Stylesheet
 // Tiles
 // ------
 
-.cell.tile {z-index: 3; padding: rem-calc(20 26) !important; margin: rem-calc(8 0); color: $body-font-color; 
+.cell.tile {z-index: 3; padding: rem-calc(20 26) !important; margin: rem-calc(8 0); color: $body-font-color;
     &:before {left: rem-calc(6); width: calc(100% - #{rem-calc(12)});}
 
     h1, h2, h3, h4, h5, h6 {
@@ -305,7 +305,7 @@ Stylesheet: Landing Page Stylesheet
                 }
             }
         }
-    }   
+    }
 
     @include breakpoint(large) {
         &:not(.tile-block-link) {
@@ -371,12 +371,12 @@ Stylesheet: Landing Page Stylesheet
         &:not(.tile-block-link) {display: flex; flex-flow: column nowrap; justify-content: stretch;
             > * {flex: 0 0 auto; align-items: flex-end; width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
                 &:first-child {width: rem-calc(32); top: rem-calc(24); left: rem-calc(34); right: auto;}
-                &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-end; margin-bottom: 0;}
+                &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-start; margin-bottom: 0;}
             }
         }
 
         &.tile-block-link {padding: 0 !important;
-            .block-link {height: 100%; display: flex; flex-flow: column nowrap; justify-content: stretch; padding: rem-calc(24 34 30) !important; 
+            .block-link {height: 100%; display: flex; flex-flow: column nowrap; justify-content: stretch; padding: rem-calc(24 34 30) !important;
                 > * {flex: 0 0 auto; align-items: flex-end; width: calc(100% - #{rem-calc(50)}); margin-right: 0; margin-left: auto;
                     &:first-child {top: rem-calc(24); left: rem-calc(34); right: auto;}
                     &:last-child {flex: 1 1 auto; display: flex; flex-flow: column; justify-content: flex-end; align-items: flex-start; margin-bottom: 0;}
@@ -428,7 +428,7 @@ Stylesheet: Landing Page Stylesheet
     }
 }
 
-.tiles-outside {padding-top: rem-calc(10); padding-bottom: rem-calc(20); 
+.tiles-outside {padding-top: rem-calc(10); padding-bottom: rem-calc(20);
     h1, h2, h3, h4, h5, h6 {
         &:not(:first-child) {margin-top: 0;}
     }
@@ -483,7 +483,7 @@ Stylesheet: Landing Page Stylesheet
 // ------
 
 .section-cta {position: relative;
-    
+
     .img {position: absolute; left: 0; top: 0; width: 100%; height: 100%;
         @include breakpoint(small down) {background-position: left bottom; background-size: 100%;}
     }
@@ -504,7 +504,7 @@ Stylesheet: Landing Page Stylesheet
         &:hover:after {margin-left: .5em; margin-right: -.2em;}
     }
 
-    &.bg-dark {color: $white; 
+    &.bg-dark {color: $white;
         a {color: $white;}
     }
 
@@ -535,7 +535,7 @@ Stylesheet: Landing Page Stylesheet
     .anatomy-illustration {text-align: center;
         #anatomy-of-an-extension-graphic {display: none;}
     }
-    .anatomy-description {position: relative; display: flex; flex-flow: column nowrap; justify-content: center; 
+    .anatomy-description {position: relative; display: flex; flex-flow: column nowrap; justify-content: center;
         #anatomy-of-an-extension-graphic-mobile {display: none;}
 
         button {position: relative; display: block; padding: rem-calc(16 24); text-align: left; color: $primary-color; cursor: pointer;
@@ -543,7 +543,7 @@ Stylesheet: Landing Page Stylesheet
             &:after {display: inline-block; margin-left: .3em; font-size: .8em; transition: margin .2s ease-in-out;
                 @include icon_font($char: $icon-arrow-right);
             }
-            &:hover {text-decoration: underline; 
+            &:hover {text-decoration: underline;
                 &:after {margin-left: .5em; margin-right: -.2em;}
             }
 
