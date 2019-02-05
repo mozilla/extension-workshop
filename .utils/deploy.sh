@@ -29,13 +29,13 @@ TEN_MINUTES="600"
 ONE_YEAR="31536000"
 
 CSP="\"content-security-policy\": \"default-src 'self'; font-src 'self' fonts.gstatic.com use.typekit.net;"\
-"form-action 'none'; frame-ancestors 'self';"\
 "connect-src https://blog.mozilla.org/addons/feed/;"\
+"form-action 'none'; frame-ancestors 'self';"\
+"frame-src 'none';"\
 "img-src 'self' data: https://ssl.google-analytics.com https://www.google-analytics.com https://p.typekit.net/p.gif;"\
 "object-src 'none';"\
 "script-src 'self' use.typekit.net https://ssl.google-analytics.com https://www.google-analytics.com/analytics.js;"\
-"style-src 'self' 'unsafe-inline' fonts.googleapis.com;"\
-"frame-src 'none';\""
+"style-src 'self' 'unsafe-inline' fonts.googleapis.com;\""
 HSTS="\"strict-transport-security\": \"max-age=${ONE_YEAR}; includeSubDomains; preload\""
 TYPE="\"x-content-type-options\": \"nosniff\""
 XSS="\"x-xss-protection\": \"1; mode=block\""
