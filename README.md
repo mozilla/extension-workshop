@@ -10,7 +10,19 @@ These instructions will get you a copy of the project up and running on your loc
 
 * [Jekyll](https://jekyllrb.com) site generator for [Github Pages](https://pages.github.com)
 * [Yarn](https://yarnpkg.com/en/) Package Manager
-* [Gulp](https://gulpjs.com) to compile javaScript
+
+Once you have Jekyll and yarn insalled you'll need to install the dependencies:
+
+```
+bundle install
+yarn install
+```
+
+Then to run locally in devlopment run:
+
+```
+bundle exec jekyll serve
+```
 
 
 ## Content Updates
@@ -36,12 +48,21 @@ permalink: /content-guidelines/page-name/
 
 #### Upload media
 
-1. Navigate to /assets/img/ and click Upload files
+1. Add the image files to `_assets/img/`
 2. In your page, link to images using this page structure:
 
+This tag will output an entire `img` element.
+
 ```
-{{ site.baseurl }}/assets/img/image.jpg
+{% asset "image.jpg" %}
 ```
+
+For finer control you can use:
+
+```
+<img src="{% asset "image.jpg" @path %}" someattr="whatever" />
+```
+
 
 #### Add the page to the menu
 
@@ -55,4 +76,6 @@ Go to data/content-guidelines-pages.yaml and add a new entry for your page:
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+The site is auto-deployed on commits to master to https://extensionworkshop.allizom.org/
+
+Tagged commits will be auto deployed to production.
