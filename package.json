@@ -9,7 +9,7 @@
   "private": true,
   "dependencies": {
     "dompurify": "1.0.9",
-    "foundation-sites": "6.5.1",
+    "foundation-sites": "6.5.3",
     "jquery": "3.3.1",
     "slick-carousel": "1.8.1",
     "velocity-animate": "1.5.2",
