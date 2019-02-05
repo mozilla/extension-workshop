@@ -62,8 +62,10 @@ Connect with thousands of developers and contribute to the extension ecosystem.
 </div>
 <!-- END: Section Tiles -->
 
+{% comment %}
 <!-- Events iframe -->
 <div id="events" class="bg-grey">
-<iframe style="width: 100%; height: 100%; border: 0; overflow: hidden;" class="hub-mgmt-preview-iframe splash-page-iframe is-splash-resize-active" src="//splashthat.com/sites/view/addonscommunityevent.splashthat.com?partial=823525519,495830716&amp;screenshotHash=494156500dffa3d9" id="iFrameResizer1" scrolling="no"></iframe><script type="text/javascript" src="//splashthat.com/v2/js/splash/bundles/splash-js-1.0.min.js"></script>
+<iframe style="width: 100%; height: 100%; border: 0; overflow: hidden;" class="hub-mgmt-preview-iframe splash-page-iframe is-splash-resize-active" src="https://splashthat.com/sites/view/addonscommunityevent.splashthat.com?partial=823525519,495830716&amp;screenshotHash=494156500dffa3d9" id="iFrameResizer1" scrolling="no"></iframe><script type="text/javascript" src="https://splashthat.com/v2/js/splash/bundles/splash-js-1.0.min.js"></script>
 </div>
 <!-- END: Events iframe -->
+{% endcomment %}
