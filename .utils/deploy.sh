@@ -30,8 +30,9 @@ ONE_YEAR="31536000"
 
 CSP="\"content-security-policy\": \"default-src 'self'; font-src 'self' fonts.gstatic.com use.typekit.net;"\
 "connect-src https://blog.mozilla.org/addons/feed/;"\
-"form-action 'none'; frame-ancestors 'self';"\
-"frame-src 'none';"\
+"form-action 'none';"\
+"frame-ancestors 'self';"\
+"frame-src https://www.youtube.com/embed/Q3AQ5D2QFwc;"\
 "img-src 'self' data: https://ssl.google-analytics.com https://www.google-analytics.com https://p.typekit.net/p.gif;"\
 "object-src 'none';"\
 "script-src 'self' use.typekit.net https://ssl.google-analytics.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api https://s.ytimg.com/yts/jsbin/;"\
