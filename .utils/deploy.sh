@@ -34,7 +34,7 @@ CSP="\"content-security-policy\": \"default-src 'self'; font-src 'self' fonts.gs
 "frame-src 'none';"\
 "img-src 'self' data: https://ssl.google-analytics.com https://www.google-analytics.com https://p.typekit.net/p.gif;"\
 "object-src 'none';"\
-"script-src 'self' use.typekit.net https://ssl.google-analytics.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api;"\
+"script-src 'self' use.typekit.net https://ssl.google-analytics.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api https://s.ytimg.com/yts/jsbin/;"\
 "style-src 'self' 'unsafe-inline' fonts.googleapis.com;\""
 HSTS="\"strict-transport-security\": \"max-age=${ONE_YEAR}; includeSubDomains; preload\""
 TYPE="\"x-content-type-options\": \"nosniff\""
