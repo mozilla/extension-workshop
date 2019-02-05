@@ -48,7 +48,7 @@ if (typeof Mzp === 'undefined') {
    */
   LangSwitcher.init = function(callback) {
     var language = document.querySelectorAll(
-      '.mzp-js-language-switcher-select',
+      '.mzp-js-language-switcher-select'
     );
 
     for (var i = 0; i < language.length; i++) {
@@ -59,7 +59,7 @@ if (typeof Mzp === 'undefined') {
         function(e) {
           var newLanguage = e.target.value;
           var previousLanguage = e.target.getAttribute(
-            'data-previous-language',
+            'data-previous-language'
           );
 
           // support custom callback for page analytics.
@@ -68,10 +68,10 @@ if (typeof Mzp === 'undefined') {
           }
 
           LangSwitcher.doRedirect(
-            LangSwitcher.switchPath(window.location, newLanguage),
+            LangSwitcher.switchPath(window.location, newLanguage)
           );
         },
-        false,
+        false
       );
     }
   };

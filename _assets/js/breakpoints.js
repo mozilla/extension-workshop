@@ -33,10 +33,10 @@
             label: 'large',
             match: '(min-width: 960px) and (max-width: 1319px)',
           },
-          { label: 'atleast_large', match: '(min-width: 960px)' },
+          { label: 'atleast_large', match: '(min-width: 960px)' }
         ),
       },
-      options,
+      options
     );
 
     var matches = new Array();

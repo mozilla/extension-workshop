@@ -8,12 +8,11 @@
   // !! this file assumes only one signup form per page !!
 
   var newsletterForm = document.getElementById('newsletter_form');
-  var newsletterWrapper = document.getElementById('newsletter_wrap');
 
   // handle errors
   var errorArray = [];
   var newsletterErrors = document.getElementById('newsletter_errors');
-  function newsletterError(e) {
+  function newsletterError() {
     var errorList = document.createElement('ul');
 
     if (errorArray.length) {

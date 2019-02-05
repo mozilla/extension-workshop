@@ -66,7 +66,7 @@
       var travel =
         Math.round(
           Math.abs(config.$window.height() - containerHeight) *
-            Math.abs(config.offsetIntertia),
+            Math.abs(config.offsetIntertia)
         ) * 2;
       // console.log('travel: ' + travel);
       var safeHeight = containerHeight + travel;
@@ -96,7 +96,7 @@
 
         $self.triggerHandler(
           'windowScroll',
-          distanceFromView($self, config.$window),
+          distanceFromView($self, config.$window)
         );
       } else {
         if ($self.hasClass('active')) {
@@ -108,7 +108,7 @@
     function scrollBackground() {
       var bgPos =
         Math.round(
-          -distanceFromView($self, config.$window) * config.offsetIntertia,
+          -distanceFromView($self, config.$window) * config.offsetIntertia
         ) -
         (vertical_adjust + config.offsetPosition);
 

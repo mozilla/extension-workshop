@@ -26,7 +26,7 @@
         transformStyles: 'none',
         breakpoint: true,
       },
-      options,
+      options
     );
 
     var $window = $(window);

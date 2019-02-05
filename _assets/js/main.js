@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
   }
 
   // 2. Anchor Link Scroll
-  $("a[href^='#']").scrollto({ offset_lg: 38, offset_sm: 38 });
+  $('a[href^="#"]').scrollto({ offset_lg: 38, offset_sm: 38 });
 
   // 3. Show in View
   if ($('.showOnView').length) {
@@ -116,7 +116,7 @@ jQuery(document).ready(function($) {
       {
         breakpoint: 'atleast_medium',
       },
-      options,
+      options
     );
 
     var $container = this;
@@ -207,7 +207,7 @@ jQuery(document).ready(function($) {
 
   $.fn.desktopPageMenu = function() {
     var $container = this;
-    var $anchors = $container.find("a[href^='#']");
+    var $anchors = $container.find('a[href^="#"]');
 
     var overflow_scroll = $anchors.overflow_x_scroll();
 
@@ -223,7 +223,7 @@ jQuery(document).ready(function($) {
   $.fn.pageMenu = function() {
     var $window = $(window);
     var $container = this;
-    var $anchors = $container.find("a[href^='#']");
+    var $anchors = $container.find('a[href^="#"]');
 
     $window.on('scroll.persistant', function() {
       if ($window.scrollTop() >= $container.offset().top) {
@@ -378,7 +378,7 @@ jQuery(document).ready(function($) {
       {
         breakpoint: 'atleast_medium',
       },
-      options,
+      options
     );
 
     var $container = this;
@@ -481,7 +481,7 @@ jQuery(document).ready(function($) {
         offset_sm: 0,
         exclude: 'tabbed-link',
       },
-      options,
+      options
     );
 
     var offset = settings.offset_lg;
@@ -523,7 +523,7 @@ jQuery(document).ready(function($) {
         staggerIncrement: 100,
         breakpoint: 'atleast_medium',
       },
-      options,
+      options
     );
 
     var $window = $(window);
@@ -620,7 +620,7 @@ jQuery(document).ready(function($) {
         breakpoint: 'atleast_large',
         num: 3,
       },
-      options,
+      options
     );
 
     var $container = this;
@@ -657,8 +657,8 @@ jQuery(document).ready(function($) {
                   item.title +
                   '</h4><p class="meta-date">' +
                   formattedDate +
-                  '</p>',
-              ),
+                  '</p>'
+              )
             )
             .append($description_elements);
           $description_elements.last().remove();
@@ -670,10 +670,8 @@ jQuery(document).ready(function($) {
 
           $cell_content.append(
             $(
-              '<p><span class="block-link-inline">' +
-                link_label +
-                '</span></p>',
-            ),
+              '<p><span class="block-link-inline">' + link_label + '</span></p>'
+            )
           );
           $cell.attr('href', link_url);
 
@@ -710,7 +708,7 @@ jQuery(document).ready(function($) {
       {
         control: $('#anatomy-control'),
       },
-      options,
+      options
     );
     var $this = this;
     var first = true;
@@ -794,7 +792,7 @@ jQuery(document).ready(function($) {
         padding_x: 0,
         padding_y: 80,
       },
-      options,
+      options
     );
     var $window = $(window);
     var $links = this;

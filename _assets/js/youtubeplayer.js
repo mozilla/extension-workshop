@@ -22,9 +22,6 @@
   $(document).ready(function() {
     // whenever youtube callback was called = deferred resolved your custom function will be executed with YT as an argument
     YTdeferred.done(function(YT) {
-      // $(document).video_cta({yt_object: YT, cta: '.video-link', close: null});
-      // $(document).video_cta({yt_object: YT, cta: 'a[title|="Open Popup Video"]', close: null, youtube_id_data: 'href', target: $('#video-popup')});
-
       $(document).video_cta({
         yt_object: YT,
         cta: '.video-link, a[title|="Open Popup Video"], .video-popup a',
@@ -55,7 +52,7 @@
         target_data: 'youtube_target',
         default_target: null,
       },
-      options,
+      options
     );
     var $link = $(settings.cta);
     var $link_container = $link.closest(settings.cta_container);
@@ -116,7 +113,7 @@
     }
 
     // The API calls this function when the player is ready.
-    function onPlayerReady(event) {
+    function onPlayerReady() {
       if (playing) {
         closeVideo();
       }
@@ -178,7 +175,7 @@
         {
           fast: false,
         },
-        options,
+        options
       );
 
       yt_player.stopVideo();
@@ -208,7 +205,7 @@
       {
         yt_object: null,
       },
-      options,
+      options
     );
 
     var $player = this;
@@ -243,7 +240,7 @@
     });
 
     // The API calls this function when the player is ready.
-    function onPlayerReady(event) {
+    function onPlayerReady() {
       player.mute();
     }
 

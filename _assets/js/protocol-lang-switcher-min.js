@@ -30,7 +30,7 @@ if (void 0 === Mzp) var Mzp = {};
               'function' == typeof n && n(i, e),
                 a.doRedirect(a.switchPath(window.location, e));
             },
-            !1,
+            !1
           );
     },
   };
