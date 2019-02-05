@@ -25,11 +25,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # header_pages:
 #   - about.md
 
-defaults:
-  - scope:
-      path: "assets/img"
-    values:
-      image: true
+#defaults:
+#  - scope:
+#      path: "assets/img"
+#    values:
+#      image: true
 
 # Build settings
 markdown: kramdown
@@ -53,6 +53,10 @@ exclude:
   - yarn.lock
 
 assets:
+  caching:
+    path: ".jekyll-cache/assets"
+    type: memory
+    enabled: true
   sources:
     - _assets/img
     - _assets/css
@@ -63,8 +67,6 @@ assets:
     - node_modules/jquery/dist
     - node_modules/dompurify/dist
     - node_modules/velocity-animate
-    - node_modules/velocity-animate/
-
   defaults:
     js: { integrity: true }
     css: { integrity: false }
