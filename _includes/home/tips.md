@@ -13,7 +13,7 @@
 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link align-start" markdown="1">
 
-![Web-Ext]({% asset "icons/web-ext.svg" @path %} "Web-Ext")
+![Web-Ext]({% asset "icons/web-ext.svg" @path @optim %} "Web-Ext")
 
 #### Web-Ext
 
@@ -27,7 +27,7 @@ Accelerate development with this Firefox command line tool. See real-time code c
 <a href="https://github.com/hiikezoe/web-ext-webpack-plugin/blob/master/README.md" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link align-start" markdown="1">
 
-![Web-Ext Webpack Plugin]({% asset "icons/plugin.svg" @path %} "Web-Ext Webpack Plugin")
+![Web-Ext Webpack Plugin]({% asset "icons/plugin.svg" @path @optim %} "Web-Ext Webpack Plugin")
 
 #### Web-Ext Webpack Plugin
 
@@ -41,7 +41,7 @@ This plug-in makes webpack aware of extensions so you can easily bundle your Jav
 <a href="https://github.com/mozilla/webextension-polyfill" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link align-start" markdown="1">
 
-![Browser API Polyfill]({% asset "icons/browser-api.svg" @path %} "Browser API Polyfill")
+![Browser API Polyfill]({% asset "icons/browser-api.svg" @path @optim %} "Browser API Polyfill")
 
 #### Browser API Polyfill
 
@@ -55,7 +55,7 @@ Create your extension using the Firefox promise-based API, and the polyfill libr
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Debugging" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link align-start" markdown="1">
 
-![Debug Your Extension]({% asset "icons/debug.svg" @path %} "Debug Your Extension")
+![Debug Your Extension]({% asset "icons/debug.svg" @path @optim %} "Debug Your Extension")
 
 #### Debug Your Extension
 
@@ -94,7 +94,7 @@ Check your extension for errors, and modify the code as needed.
 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link align-start" markdown="1">
 
-![Publish on Firefox]({% asset "icons/publish-on-firefox.svg" @path %} "Publish on Firefox")
+![Publish on Firefox]({% asset "icons/publish-on-firefox.svg" @path @optim %} "Publish on Firefox")
 
 #### Publish on Firefox
 
@@ -108,7 +108,7 @@ With millions of monthly users and Firefox integration, publishing your extensio
 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link align-start" markdown="1">
 
-![Publish on Your Own]({% asset "icons/publish-on-own.svg" @path %} "Publish on Your Own")
+![Publish on Your Own]({% asset "icons/publish-on-own.svg" @path @optim %} "Publish on Your Own")
 
 #### Publish on Your Own
 
@@ -140,7 +140,7 @@ You’ll want users! The shortest route to getting, and keeping them, is creatin
 <!-- Tile 1 -->
 <div class="cell small-12 large-4 tile-borderless" markdown="1">
 
-[![What’s Great Content and Design?]({% asset "content_video_thumbnail.jpg" @path %})](a0_OsLGI0k4 'Open Popup Video')
+[![What’s Great Content and Design?]({% asset "content_video_thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'Open Popup Video')
 
 #### What’s Great Content and Design?
 
@@ -154,7 +154,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 <!-- Tile 2 -->
 <div class="cell small-12 large-4 tile-borderless" markdown="1">
 
-![Optimize Your Product Page]({% asset "Optimize-Product-Page.svg" @path %} "Optimize Your Product Page")
+![Optimize Your Product Page]({% asset "Optimize-Product-Page.svg" @path @optim %} "Optimize Your Product Page")
 
 #### Optimize Your Product Page
 
@@ -168,7 +168,7 @@ People spend just seconds on your product page. Make those seconds count with st
 <!-- Tile 3 -->
 <div class="cell small-12 large-4 tile-borderless" markdown="1">
 
-![Focus on Usability]({% asset "Focus-Usability.svg" @path %} "Focus on Usability")
+![Focus on Usability]({% asset "Focus-Usability.svg" @path @optim %} "Focus on Usability")
 
 #### Focus on Usability
 

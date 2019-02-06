@@ -24,5 +24,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 # Performance-booster for watching directories on Windows
+gem 'wdm', '~> 0.1.0' if Gem.win_platform?
+
+# Image optimization
+gem 'image_optim', '~> 0.26.3'
+gem 'image_optim_pack', '~> 0.5.1.20190105'

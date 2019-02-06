@@ -50,16 +50,16 @@ permalink: /content-guidelines/page-name/
 1. Add the image files to `_assets/img/`
 2. In your page, link to images using this page structure:
 
-This tag will output an entire `img` element.
+This tag will output an entire `img` element. Note: that using `@optim` enables the jekyll asset pipeline to optimize the image this is always recommended unless you see an issue with the output.
 
 ```
-{% asset "image.jpg" %}
+{% asset "image.jpg" @optim %}
 ```
 
 For finer control you can use:
 
 ```
-<img src="{% asset "image.jpg" @path %}" someattr="whatever" />
+<img src="{% asset "image.jpg" @path @optim %}" someattr="whatever" />
 ```
 
 #### Add the page to the menu

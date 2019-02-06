@@ -20,13 +20,15 @@
     "eslint-config-prettier": "4.0.0",
     "eslint-plugin-prettier": "3.0.1",
     "prettier": "1.16.4",
-    "pretty-quick": "1.10.0"
+    "pretty-quick": "1.10.0",
+    "svgo": "^1.1.1"
   },
   "scripts": {
     "lint": "eslint .",
     "prettier": "prettier --write '**'",
     "prettier-ci": "prettier -c '**'",
     "prettier-dev": "pretty-quick --branch master",
-    "test": "npm run prettier-ci && npm run lint"
+    "test": "npm run prettier-ci && npm run lint",
+    "start": "SVGO_BIN='node_modules/svgo/bin/svgo' jekyll serve"
   }
 }

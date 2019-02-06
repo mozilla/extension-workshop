@@ -42,6 +42,7 @@ jobs:
           name: Jekyll build
           environment:
             JEKYLL_ENV: production
+            SVGO_BIN: node_modules/svgo/bin/svgo
           command: bundle exec jekyll build
       - persist_to_workspace:
           root: ./
