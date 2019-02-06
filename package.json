@@ -21,7 +21,7 @@
     "eslint-plugin-prettier": "3.0.1",
     "prettier": "1.16.4",
     "pretty-quick": "1.10.0",
-    "svgo": "^1.1.1"
+    "svgo": "1.1.1"
   },
   "scripts": {
     "lint": "eslint .",
