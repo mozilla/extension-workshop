@@ -98,7 +98,7 @@ Firefox is at the forefront of cross-browser compatibility. Firefox extensions a
 
 Already have an extension that works in Chrome? Bring your app to Firefox in a few easy steps.
 
-[Get Started](https://addons.mozilla.org/en-US/firefox/#login)
+[Get Started](https://addons.mozilla.org/developers/addons)
 
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
@@ -119,7 +119,7 @@ Top Resources [Differences between Chrome and Firefox](https://developer.mozilla
 
 Starting from scratch? It’s easy and fast to create your cross-browser extension in Firefox.
 
-[Get Started](https://addons.mozilla.org/en-US/firefox/#login)
+[Get Started](https://addons.mozilla.org/developers/addons)
 
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
