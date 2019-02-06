@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/mozilla/extension-workshop/tree/master.svg?style=svg)](https://circleci.com/gh/mozilla/extension-workshop/tree/master)
+
 # Extension Workshop
 
 Launchpad for why and how to build Firefox extensions
