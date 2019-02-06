@@ -28,15 +28,15 @@ TEN_MINUTES="600"
 # For long-lived assets; in seconds
 ONE_YEAR="31536000"
 
-CSP="\"content-security-policy\": \"default-src 'none';"\
-"connect-src https://blog.mozilla.org/addons/feed/ https://www.mozilla.org/en-US/newsletter/;"\
-"font-src 'self';"\
-"form-action https://www.mozilla.org/en-US/newsletter/;"\
-"frame-ancestors 'none';"\
-"frame-src https://www.youtube.com/embed/Q3AQ5D2QFwc;"\
-"img-src 'self' data: https://ssl.google-analytics.com https://www.google-analytics.com;"\
-"object-src 'none';"\
-"script-src 'self' https://ssl.google-analytics.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api https://s.ytimg.com/yts/jsbin/;"\
+CSP="\"content-security-policy\": \"default-src 'none'; "\
+"connect-src https://blog.mozilla.org/addons/feed/ https://www.mozilla.org/en-US/newsletter/; "\
+"font-src 'self'; "\
+"form-action https://www.mozilla.org/en-US/newsletter/; "\
+"frame-ancestors 'none'; "\
+"frame-src https://www.youtube.com/embed/Q3AQ5D2QFwc; "\
+"img-src 'self' data: https://ssl.google-analytics.com https://www.google-analytics.com; "\
+"object-src 'none'; "\
+"script-src 'self' https://ssl.google-analytics.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api https://s.ytimg.com/yts/jsbin/; "\
 "style-src 'self' 'unsafe-inline'\""
 HSTS="\"strict-transport-security\": \"max-age=${ONE_YEAR}; includeSubDomains; preload\""
 TYPE="\"x-content-type-options\": \"nosniff\""
