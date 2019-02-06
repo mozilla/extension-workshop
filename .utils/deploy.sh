@@ -34,9 +34,9 @@ CSP="\"content-security-policy\": \"default-src 'none'; "\
 "form-action https://www.mozilla.org/en-US/newsletter/; "\
 "frame-ancestors 'none'; "\
 "frame-src https://www.youtube.com/embed/Q3AQ5D2QFwc; "\
-"img-src 'self' data: https://ssl.google-analytics.com https://www.google-analytics.com; "\
+"img-src 'self' data:; "\
 "object-src 'none'; "\
-"script-src 'self' https://ssl.google-analytics.com https://www.google-analytics.com/analytics.js https://www.youtube.com/iframe_api https://s.ytimg.com/yts/jsbin/; "\
+"script-src 'self' https://www.youtube.com/iframe_api https://s.ytimg.com/yts/jsbin/; "\
 "style-src 'self' 'unsafe-inline'\""
 HSTS="\"strict-transport-security\": \"max-age=${ONE_YEAR}; includeSubDomains; preload\""
 TYPE="\"x-content-type-options\": \"nosniff\""
