@@ -1,6 +1,6 @@
 <svg id="anatomy-of-an-extension-graphic-mobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 270 424">
 	<defs>
-		<radialGradient id="radial-gradient" cx="133.87" cy="372.57" r="126.05" gradientTransform="matrix(1, 0, 0, -1, 0, 426)" gradientUnits="userSpaceOnUse"><stop offset="0.58" stop-color="#4030db" stop-opacity="0.1"/><stop offset="0.96" stop-color="#4030db" stop-opacity="0.92"/><stop offset="1" stop-color="#4030db"/></radialGradient>
+		<radialGradient id="radial-gradient2" cx="133.87" cy="372.57" r="126.05" gradientTransform="matrix(1, 0, 0, -1, 0, 426)" gradientUnits="userSpaceOnUse"><stop offset="0.58" stop-color="#4030db" stop-opacity="0.1"/><stop offset="0.96" stop-color="#4030db" stop-opacity="0.92"/><stop offset="1" stop-color="#4030db"/></radialGradient>
 	</defs>
 
 	<g id="mobile-box_bottom_back" data-name="box bottom back">
@@ -20,7 +20,7 @@
 
 	<g id="mobile-box_top_back" data-name="box top back"><path d="M265.46,38.46a.49.49,0,0,1-.45-.4L130.14,6.87h0L5.17,38.06a.45.45,0,0,1-.45.4.43.43,0,0,1-.45-.36V38c0-.09,0-.13,0-.18a.82.82,0,0,1,.63-.62L129.91,6c.09,0,.18,0,.27,0h.14l135,31.19a.9.9,0,0,1,.63.62c0,.05,0,.09,0,.18v.09A.76.76,0,0,1,265.46,38.46ZM5.17,38ZM130,6.87h0Z" style="fill:#4030db"/></g>
 
-	<g id="mobile-box_top_front_transparent" data-name="box top front"><path d="M130.05,70.05a.47.47,0,0,1-.23,0L4.9,38.82A.82.82,0,0,1,4.27,38a.42.42,0,0,1,.45-.44h0a.48.48,0,0,1,.45.4L130.09,69.16,265,38a.48.48,0,0,1,.45-.4h0a.45.45,0,0,1,.45.44.82.82,0,0,1-.63.81L130.27,70A.43.43,0,0,1,130.05,70.05Z" style="fill:url(#radial-gradient)"/></g>
+	<g id="mobile-box_top_front_transparent" data-name="box top front"><path d="M130.05,70.05a.47.47,0,0,1-.23,0L4.9,38.82A.82.82,0,0,1,4.27,38a.42.42,0,0,1,.45-.44h0a.48.48,0,0,1,.45.4L130.09,69.16,265,38a.48.48,0,0,1,.45-.4h0a.45.45,0,0,1,.45.44.82.82,0,0,1-.63.81L130.27,70A.43.43,0,0,1,130.05,70.05Z" style="fill:url(#radial-gradient2)"/></g>
 
 	<g id="mobile-box_top_front_solid" data-name="box top front solid"><path d="M129.82,70.05a.43.43,0,0,1-.22,0L4.63,38.82A.82.82,0,0,1,4,38a.42.42,0,0,1,.45-.44h0a.48.48,0,0,1,.45.4L129.82,69.16,264.75,38a.46.46,0,0,1,.44-.4h0a.45.45,0,0,1,.45.44.82.82,0,0,1-.63.81L130,70A.37.37,0,0,1,129.82,70.05Z" style="fill:#4030db"/></g>
 
