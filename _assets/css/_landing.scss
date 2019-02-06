@@ -350,12 +350,12 @@ Stylesheet: Landing Page Stylesheet
   position: relative;
   background: $white no-repeat center/cover;
   height: calc(100vh - #{rem-calc(120)});
-  min-height: 100vw;
-  max-height: 200vw;
+  min-height: 120vw;
+  max-height: 130vw;
   @include breakpoint(medium) {
     height: calc(100vh - #{rem-calc(50)});
     min-height: rem-calc(300);
-    max-height: 60vw;
+    max-height: 70vw;
   }
 
   .graphic-bg {
