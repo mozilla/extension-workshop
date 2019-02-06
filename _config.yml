@@ -71,3 +71,10 @@ assets:
     js: { integrity: true }
     css: { integrity: false }
     img: { integrity: false }
+  plugins:
+    img:
+      optim:
+        jekyll:
+          verbose: false
+          pngout: false
+          svgo:

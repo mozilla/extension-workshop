@@ -57,7 +57,7 @@ $sidebar-w: rem-calc(230);
         top: rem-calc(8);
         width: rem-calc(43);
         height: rem-calc(44);
-        background: transparent asset_url('firefox-logo.png') no-repeat
+        background: transparent asset_url('firefox-logo.png @optim') no-repeat
           center/contain;
       }
     }
