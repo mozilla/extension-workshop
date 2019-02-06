@@ -35,7 +35,7 @@ url: "https://extensionsworkshop.com" # the base hostname & protocol for your si
 markdown: kramdown
 # theme: minima
 plugins:
-  - jekyll-feed
+#  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -53,6 +53,7 @@ exclude:
   - yarn.lock
 
 assets:
+  compression: true
   caching:
     path: ".jekyll-cache/assets"
     type: memory
@@ -68,9 +69,12 @@ assets:
     - node_modules/dompurify/dist
     - node_modules/velocity-animate
   defaults:
-    js: { integrity: true }
-    css: { integrity: false }
-    img: { integrity: false }
+    js:
+      integrity: true
+    css:
+      integrity: false
+    img:
+      integrity: false
   plugins:
     img:
       optim:

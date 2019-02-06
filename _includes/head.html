@@ -6,7 +6,9 @@
   <link rel="apple-touch-icon" href="{% asset "favicon.png" @path @optim %}">
   <link rel="shortcut icon" href="{% asset "favicon.ico" @path @optim %}">
   <link rel="stylesheet" href="{% asset "glance.scss" @path %}">
-  {%- feed_meta -%}
+  {% comment %}
+    {%- feed_meta -%}
+  {% endcomment %}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
