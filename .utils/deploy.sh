@@ -28,6 +28,10 @@ TEN_MINUTES="600"
 # For long-lived assets; in seconds
 ONE_YEAR="31536000"
 
+CSPSTATIC="\"content-security-policy\": \"default-src 'none'; "\
+"base-uri 'none'; "\
+"form-action 'none'; "\
+"object-src 'none'\""
 CSP="\"content-security-policy\": \"default-src 'none'; "\
 "base-uri 'self'; "\
 "connect-src https://blog.mozilla.org/addons/feed/ https://www.mozilla.org/en-US/newsletter/; "\
@@ -42,6 +46,8 @@ CSP="\"content-security-policy\": \"default-src 'none'; "\
 HSTS="\"strict-transport-security\": \"max-age=${ONE_YEAR}; includeSubDomains; preload\""
 TYPE="\"x-content-type-options\": \"nosniff\""
 XSS="\"x-xss-protection\": \"1; mode=block\""
+XFRAME="\"x-frame-options\": \"SAMEORIGIN\""
+REFERRER="\"referrer-policy\": \"no-referrer-when-downgrade\""
 ACAO="\"Access-Control-Allow-Origin\": \"*\""
 
 
@@ -54,7 +60,7 @@ if [ -e version.json ]; then
     aws s3 cp \
       --cache-control "max-age=${TEN_MINUTES}" \
       --content-type "application/json" \
-      --metadata "{${ACAO}, ${HSTS}, ${TYPE}}" \
+      --metadata "{${ACAO}, ${CSPSTATIC}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
       --metadata-directive "REPLACE" \
       --acl "public-read" \
       _site/__version__ s3://${EXTENSION_WORKSHOP_BUCKET}/__version__
@@ -66,7 +72,7 @@ aws s3 sync \
   --content-type "text/html" \
   --exclude "*" \
   --include "*.html" \
-  --metadata "{${CSP}, ${HSTS}, ${TYPE}, ${XSS}}" \
+  --metadata "{${CSP}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
   _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
@@ -77,7 +83,7 @@ aws s3 sync \
   --content-type "application/json" \
   --exclude "*" \
   --include "*.json" \
-  --metadata "{${ACAO}, ${HSTS}, ${TYPE}}" \
+  --metadata "{${ACAO}, ${CSPSTATIC}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
   _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
@@ -88,7 +94,7 @@ aws s3 sync \
   --content-type "image/svg+xml" \
   --exclude "*" \
   --include "*.svg" \
-  --metadata "{${HSTS}, ${TYPE}}" \
+  --metadata "{${CSPSTATIC}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
   _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
@@ -97,7 +103,7 @@ aws s3 sync \
 aws s3 sync \
   --delete \
   --cache-control "max-age=${ONE_YEAR}, immutable" \
-  --metadata "{${HSTS}, ${TYPE}}" \
+  --metadata "{${CSPSTATIC}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
   _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
@@ -111,7 +117,7 @@ for fn in $(find _site -name 'index.html' -not -path '_site/index.html'); do
     --content-type "text/html" \
     --exclude "*" \
     --include "*.html" \
-    --metadata "{${CSP}, ${HSTS}, ${TYPE}, ${XSS}}" \
+    --metadata "{${CSP}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
     --metadata-directive "REPLACE" \
     --acl "public-read" \
     $fn s3://${EXTENSION_WORKSHOP_BUCKET}/${s3path}
