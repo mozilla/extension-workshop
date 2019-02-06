@@ -29,6 +29,7 @@ TEN_MINUTES="600"
 ONE_YEAR="31536000"
 
 CSP="\"content-security-policy\": \"default-src 'none'; "\
+"base-uri 'self'; "\
 "connect-src https://blog.mozilla.org/addons/feed/ https://www.mozilla.org/en-US/newsletter/; "\
 "font-src 'self'; "\
 "form-action https://www.mozilla.org/en-US/newsletter/; "\
