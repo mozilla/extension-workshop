@@ -117,7 +117,7 @@ An extension is a simple collection of files that modify the browser’s appeara
 <div class="anatomy-container">
   <div class="anatomy-illustration">
     {% include home/anatomy.svg  %}
-    <p class="manifest show-for-medium">{% asset "icons/manifest.svg" @optim %}Manifest.json</p>
+    <p class="manifest show-for-medium">{% asset "icons/manifest.svg" @optim alt="" %}Manifest.json</p>
   </div>
   <div id="anatomy-control" class="anatomy-description">
     {% include home/anatomy-mobile.svg %}
