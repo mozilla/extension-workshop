@@ -38,7 +38,7 @@ CSP="\"content-security-policy\": \"default-src 'none'; "\
 "font-src 'self'; "\
 "form-action https://www.mozilla.org/en-US/newsletter/; "\
 "frame-ancestors 'none'; "\
-"frame-src https://www.youtube.com/embed/Q3AQ5D2QFwc; "\
+"frame-src https://www.youtube.com/embed/; "\
 "img-src 'self' data:; "\
 "object-src 'none'; "\
 "script-src 'self' https://www.youtube.com/iframe_api https://s.ytimg.com/yts/jsbin/; "\
