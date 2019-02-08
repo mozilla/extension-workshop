@@ -11,7 +11,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
 
-![Screenshot Remembear]({{ site.baseurl }}/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Full width image (above)
+![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @optim @path %} "Screenshot Remembear") Full width image (above)
 
 </section>
 <!-- END: Full Width Image -->
@@ -20,12 +20,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <section class="image-with-caption grid-container grid-x grid-padding-x">
 <div class="cell small-6" markdown="1">
 
-![Screenshot Remembear]({{ site.baseurl }}/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Half width image (above)
+![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear") Half width image (above)
 
 </div>
 <div class="cell small-6" markdown="1">
 
-![Screenshot Remembear]({{ site.baseurl }}/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Half width image (above)
+![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optime %} "Screenshot Remembear") Half width image (above)
 
 </div>
 </section>
@@ -38,7 +38,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- Video Popup Thumbnail -->
 <section class="video-popup" markdown="1">
 
-[![What’s Great Content and Design?](/assets/img/content-guidelines/example-thumbnail.jpg)](a0_OsLGI0k4 'What’s Great Content and Design?')
+[![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'What’s Great Content and Design?')
 
 </section>
 <!-- END: Video Popup Thumbnail -->
@@ -47,7 +47,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <section class="video-popup grid-container grid-x grid-padding-x">
 <div class="cell small-12 medium-6" markdown="1">
 
-![What’s Great Content and Design?]({{ site.baseurl }}/assets/img/content-guidelines/example-thumbnail.jpg "What’s Great Content and Design?")
+![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %} "What’s Great Content and Design?")
 
 #### What’s Great Content and Design?
 
@@ -56,7 +56,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-[![What’s Great Content and Design?](/assets/img/content-guidelines/example-thumbnail.jpg)](a0_OsLGI0k4 'What’s Great Content and Design?')
+[![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'What’s Great Content and Design?')
 
 #### What’s Great Content and Design?
 
@@ -73,20 +73,20 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 <!-- Icon Grid *** use "shrink" class to fit grid to image size -OR- use "auto" class to fit images to grid width *** -->
 <section class="icon-grid grid-container grid-x grid-padding-x">
 <div class="cell shrink">
-	<p><img src="{{ site.baseurl }}/assets/img/content-guidelines/example-icon.png" alt="Icon" title="Icon" width="53"></p>
+	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
 </div>
 <div class="cell shrink">
-	<p><img src="{{ site.baseurl }}/assets/img/content-guidelines/example-icon.png" alt="Icon" title="Icon" width="53"></p>
+	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
 </div>
 <div class="cell shrink">
-	<p><img src="{{ site.baseurl }}/assets/img/content-guidelines/example-icon.png" alt="Icon" title="Icon" width="53"></p>
+	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
 </div>
 </section>
 <!-- END: Image Grid -->
 
-Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](http://firefox.com 'addons.mozilla.org'), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
+Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
 
-Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org](http://firefox.com 'addons.mozilla.org').
+Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org').
 
 Between your extension name and subtitle, you have up to 70 characters to use—that’s because 70 is the max character limit for your headline in external search results. It’s best to keep your extension name shorter so you have more characters left over for your subtitle.
 
@@ -109,8 +109,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 <!-- Example (Block) -->
 <div class="example" markdown="1">
 
-Examples:  
-An extension that saves passwords is called **Remembear**
+Examples: An extension that saves passwords is called **Remembear**
 
 An extension that puts a cat on new tabs is called **Tabbycat**
 
@@ -174,17 +173,17 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
-![Screenshot Remembear]({{ site.baseurl }}/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
+![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear")
 </section>
 <!-- END: Full Width Image -->
 
 ##### List Example:
 
-[Honey ](http://firefox.com 'Honey ')  
-[Ghoastery](http://firefox.com 'Ghoastery')  
-[Disconnect](http://firefox.com 'Disconnect')  
-[Ecoesia](http://firefox.com 'Ecoesia')  
-[Mate Translate](http://firefox.com 'Mate Translate')
+- [Honey ](https://firefox.com 'Honey ')
+- [Ghoastery](https://firefox.com 'Ghoastery')
+- [Disconnect](https://firefox.com 'Disconnect')
+- [Ecoesia](https://firefox.com 'Ecoesia')
+- [Mate Translate](https://firefox.com 'Mate Translate')
 
 </section>
 <!-- END: Not this -->
@@ -201,8 +200,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 <!-- Example (Block) -->
 <div class="example" markdown="1">
 
-Examples:  
-An extension that saves passwords is called **Remembear**
+Examples: An extension that saves passwords is called **Remembear**
 
 An extension that puts a cat on new tabs is called **Tabbycat**
 
@@ -223,8 +221,7 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 <!-- Example (Block) -->
 <div class="example" markdown="1">
 
-Examples:  
-An extension that saves passwords is called **Remembear**
+Examples: An extension that saves passwords is called **Remembear**
 
 An extension that puts a cat on new tabs is called **Tabbycat**
 
@@ -288,6 +285,6 @@ Pull out the key words (nouns, adjectives, verbs) and phrases from your descript
 
 Remembear: dolore eu fugiat nulla pariatur lemera dosada peel.
 
-[Extension Link ](http://firefox.com 'Extension Link ')  
-[Extension Link ](http://firefox.com 'Extension Link ')  
-[Extension Link ](http://firefox.com 'Extension Link ')
+- [Extension Link ](https://firefox.com 'Extension Link ')
+- [Extension Link ](https://firefox.com 'Extension Link ')
+- [Extension Link ](https://firefox.com 'Extension Link ')
