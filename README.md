@@ -36,8 +36,8 @@ This site has two templates: the Extension Workshop landing page and Content Gui
 
 1. Create new file
 2. Add header (see example below)
-3. Copy 'modules' needed from content-guidelines-master-template.md and paste in new file
-4. Save as markdown: page-name.md
+3. Copy 'modules' needed from `content-guidelines/master-template.md` and paste in new file
+4. Save as markdown: `content-guidelines/page-name.md`
 
 ```
 ---
@@ -66,13 +66,17 @@ For finer control you can use:
 
 #### Add the page to the menu
 
-Go to data/content-guidelines-pages.yaml and add a new entry for your page:
+Go to `_data/content-guidelines-pages.yaml` and add a new entry for your page:
 
 ```
 - title: "Page Name"
   url: "/content-guidelines/page-name/"
-
+  draft: true
 ```
+
+#### Controlling draft state
+
+If you don't want the page to appear as a draft or as and when it's ready remove `draft: true` from the relevant entry in `_data/content-guidelines.yaml`
 
 ## Deployment
 
