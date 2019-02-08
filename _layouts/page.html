@@ -8,7 +8,7 @@ layout: default
 		    <div class="post-content">
 			    {% for item in site.data.content-guidelines-pages %}
 					{% if item.url == page.url and item.draft %}
-					<p class="warning">{% asset icons/warning.svg @optim alt="Warning:" %} This is a working draft <a href="https://github.com/mozilla/extension-workshop/issues/new">Report issue</a></p>
+					<p class="warning">{% asset icons/warning.svg @optim alt="Warning:" %} This is a working draft</p>
 			        {% endif %}
 			    {% endfor %}
 
