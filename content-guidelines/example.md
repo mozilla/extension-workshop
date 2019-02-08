@@ -9,7 +9,7 @@ permalink: /content-guidelines/extension-name/
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
 
-![Screenshot Remembear]({{ site.baseurl }}/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Example extension name from RememBear
+![Screenshot Remembear]({% asset content-guidelines/example-remembear.png @path @optim  %} "Screenshot Remembear") Example extension name from RememBear
 
 </section>
 <!-- END: Full Width Image -->
@@ -43,8 +43,7 @@ Between your extension name and subtitle, you have up to 70 characters to use—
 <!-- Example (Block) -->
 <div class="example" markdown="1">
 
-Examples:  
-An extension that saves passwords is called **Remembear**
+Examples: An extension that saves passwords is called **Remembear**
 
 An extension that puts a cat on new tabs is called **Tabbycat**
 
