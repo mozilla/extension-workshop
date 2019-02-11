@@ -6,9 +6,14 @@ layout: default
         <div class="cell small-12">
 
 		    <div class="post-content">
+			    {% for item in site.data.content-guidelines-pages %}
+					{% if item.url == page.url and item.draft %}
+					<p class="warning">{% asset icons/warning.svg @optim alt="Warning:" %} This is a working draft</p>
+			        {% endif %}
+			    {% endfor %}
+
 		    	{{ content }}
 		    </div>
-		    
 		</div>
 	</div>
 </article>

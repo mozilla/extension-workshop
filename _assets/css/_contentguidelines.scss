@@ -1,8 +1,46 @@
 /************************************************
 
-Stylesheet: Conteng Guidelines Stylesheet
+Stylesheet: Content Guidelines Stylesheet
 
 *************************************************/
+
+// Style for "DRAFT" items in the sidebar nav
+.draft {
+  background-color: #ffe900;
+  padding: 4px;
+  font-weight: bold;
+  font-size: 0.8em;
+  border-radius: 2px;
+  text-transform: uppercase;
+  margin: 0 5px;
+}
+
+// Style for warnings
+.warning {
+  display: inline;
+  background-color: #ffe900;
+  border-radius: 2px;
+  padding: 10px 6px;
+  line-height: 1.5;
+
+  img {
+    margin-top: -1px;
+    vertical-align: middle;
+  }
+
+  a {
+    background: #d7b600;
+    border-radius: 2px;
+    color: #0c0c0d;
+    padding: 6px 4px;
+
+    &:hover,
+    &:active,
+    &:visited {
+      color: #0c0c0d;
+    }
+  }
+}
 
 $sidebar-w-sm: rem-calc(200);
 $sidebar-w: rem-calc(230);
