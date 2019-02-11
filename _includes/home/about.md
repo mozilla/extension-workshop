@@ -10,7 +10,7 @@
 
 Build on the web’s most customizable browser. Get your great idea into the hands of millions of users. Join an international community of developers in the movement to put people in control of their online lives. **(P.S. There’s no cost to participate!)**
 
-[Learn more about extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
+[Learn more about extensions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
 
 </div>
 </div>
@@ -32,7 +32,7 @@ Build on the web’s most customizable browser. Get your great idea into the han
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API" class="cell small-12 large-4 tile tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Tinker with Tabs]({% asset "Tinker-with-Tabs.svg" @path @optim %} "Tinker with Tabs")
@@ -48,7 +48,7 @@ Your extension can control browser tabs. Use the API to open, close, move, hide,
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts" class="cell small-12 large-4 tile tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Transform Web Content]({% asset "Transform-Web-Content.svg" @path @optim %} "Transform Web Content")
@@ -64,7 +64,7 @@ Inject JavaScript into web pages and your extension can change page colors, augm
 <!-- END: Tile 2 -->
 
 <!-- Tile 3 -->
-<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface" class="cell small-12 large-4 tile tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Add Innovative Features]({% asset "Add-Innovative-Features.svg" @path @optim %} "Add Innovative Features")
@@ -85,7 +85,7 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
-[View more extension code examples](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples)
+[View more extension code examples](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Examples)
 
 [Explore live extensions](https://addons.mozilla.org)
 
@@ -107,7 +107,7 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 
 An extension is a simple collection of files that modify the browser’s appearance and behavior. It can add user interface elements, alter content, or perform background tasks that enhance browsing.
 
-[Learn more about extension anatomy](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+[Learn more about extension anatomy](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 
 </div>
 </div>

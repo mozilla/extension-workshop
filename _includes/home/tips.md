@@ -10,7 +10,7 @@
 <div class="grid-container grid-x grid-padding-x tiles-container">
 
 <!-- Tile 1 -->
-<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link align-start" markdown="1">
 
 ![Web-Ext]({% asset "icons/web-ext.svg" @path @optim %} "Web-Ext")
@@ -69,7 +69,7 @@ Check your extension for errors, and modify the code as needed.
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
 <div class="cell small-12 medium-8 large-6 text-center" markdown="1">
 
-[More development tools](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Development_Tools)
+[More development tools](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Development_Tools)
 
 </div>
 </div>
@@ -91,7 +91,7 @@ Check your extension for errors, and modify the code as needed.
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/Distribution" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link align-start" markdown="1">
 
 ![Publish on Firefox]({% asset "icons/publish-on-firefox.svg" @path @optim %} "Publish on Firefox")
@@ -105,7 +105,7 @@ With millions of monthly users and Firefox integration, publishing your extensio
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link align-start" markdown="1">
 
 ![Publish on Your Own]({% asset "icons/publish-on-own.svg" @path @optim %} "Publish on Your Own")
@@ -160,7 +160,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 
 People spend just seconds on your product page. Make those seconds count with stellar content and visuals.
 
-[Find out how](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Listing)
+[Find out how](https://developer.mozilla.org/docs/Mozilla/Add-ons/Listing)
 
 </div>
 <!-- END: Tile 2 -->
@@ -174,7 +174,7 @@ People spend just seconds on your product page. Make those seconds count with st
 
 Build in UX best practices and  the positive reviews and ratings  will follow.
 
-[Learn more about usability](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)
+[Learn more about usability](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)
 
 </div>
 <!-- END: Tile 3 -->

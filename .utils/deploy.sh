@@ -34,9 +34,9 @@ CSPSTATIC="\"content-security-policy\": \"default-src 'none'; "\
 "object-src 'none'\""
 CSP="\"content-security-policy\": \"default-src 'none'; "\
 "base-uri 'self'; "\
-"connect-src https://blog.mozilla.org/addons/feed/ https://www.mozilla.org/en-US/newsletter/; "\
+"connect-src https://blog.mozilla.org/addons/feed/ https://www.mozilla.org/newsletter/; "\
 "font-src 'self'; "\
-"form-action https://www.mozilla.org/en-US/newsletter/; "\
+"form-action https://www.mozilla.org/newsletter/; "\
 "frame-ancestors 'none'; "\
 "frame-src https://www.youtube.com/embed/; "\
 "img-src 'self' data:; "\

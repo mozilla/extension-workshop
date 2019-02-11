@@ -37,7 +37,7 @@ Firefox extensions are made with the same technologies used to build the web. Th
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json" class="cell small-12 medium-6 tile tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json" class="cell small-12 medium-6 tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Manifest Keys]({% asset "Manifest-Keys.svg" @path @optim %} "Manifest Keys")
@@ -53,7 +53,7 @@ Every extension contains manifest keys, which define what your extension is and 
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API" class="cell small-12 medium-6 tile tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API" class="cell small-12 medium-6 tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![JavaScript API]({% asset "Javascript-API.svg" @path @optim %} "JavaScript API")
@@ -103,7 +103,7 @@ Already have an extension that works in Chrome? Bring your app to Firefox in a f
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
 
-Top Resources [Differences between Chrome and Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities) [Port a Google Chrome extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)
+Top Resources [Differences between Chrome and Firefox](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities) [Port a Google Chrome extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)
 
 </div>
 
@@ -124,7 +124,7 @@ Starting from scratch? It’s easy and fast to create your cross-browser extensi
 <!-- Tile Additional Actions -->
 <div class="secondary-actions" markdown="1">
 
-Top Resources [Best practices for cross-browser extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension) [Introduction to developing in Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)
+Top Resources [Best practices for cross-browser extensions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension) [Introduction to developing in Firefox](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview)
 
 </div>
 
