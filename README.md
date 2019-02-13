@@ -26,13 +26,13 @@ Then to run locally in devlopment run:
 yarn start
 ```
 
-Note: Running locally will show unpublished content that uses the `published: false` conventionn in frontmatter. Once on stage (or production) any content with `published: false` will not be available.
+Note: Running locally will show unpublished content that uses the `published: false` convention in frontmatter. Content with `published: false` will not be available on stage or production.
 
 ### Available yarn commands
 
 | Command             | Description                                                                             |
 | ------------------- | --------------------------------------------------------------------------------------- |
-| yarn start          | Starts jekyll and includes unpublished content                                          |
+| yarn start          | Starts jekyll and includes unpublished content.                                         |
 | yarn start-prodlike | Starts jekyll and doesn't include unpublished content for a production-like experience. |
 
 ## Content Updates
