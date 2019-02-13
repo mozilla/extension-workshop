@@ -6,3 +6,10 @@
   url: "/content-guidelines/extension-name/"
   draft: true
 
+- title: "Extension Title"
+  url: "/content-guidelines/extension-title/"
+  draft: true
+  
+- title: "Extension Subtitle"
+  url: "/content-guidelines/extension-subtitle/"
+  draft: true
