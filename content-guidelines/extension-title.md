@@ -3,6 +3,7 @@ layout: page
 title: Page Name
 permalink: /content-guidelines/extension-title/
 ---
+
 # Heading One
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
