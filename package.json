@@ -29,6 +29,7 @@
     "prettier-ci": "prettier -c '**'",
     "prettier-dev": "pretty-quick --branch master",
     "test": "npm run prettier-ci && npm run lint",
-    "start": "SVGO_BIN='node_modules/svgo/bin/svgo' jekyll serve"
+    "start": "SVGO_BIN='node_modules/svgo/bin/svgo' jekyll serve --unpublished",
+    "start-prodlike": "SVGO_BIN='node_modules/svgo/bin/svgo' jekyll serve"
   }
 }

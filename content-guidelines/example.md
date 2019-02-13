@@ -2,6 +2,7 @@
 layout: page
 title: Extension Name
 permalink: /content-guidelines/extension-name/
+published: false
 ---
 
 # Extension Name
