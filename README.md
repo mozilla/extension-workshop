@@ -57,7 +57,7 @@ published: false
 ---
 ```
 
-Note: `published: false` will withold this content from stage and production, to publish content, remove this line.
+Note: `published: false` will withhold this content from stage and production, to publish content, remove this line.
 
 #### Upload media
 
