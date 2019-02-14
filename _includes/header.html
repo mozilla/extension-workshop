@@ -14,12 +14,12 @@
 						    {% if page.url == item.url %}
 							<li class="current">
 								<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-								{% if item.draft %}<span class="draft">draft</span>{% endif %}
+								{% if item.draft-label %}<span class="draft">draft</span>{% endif %}
 							</li>
 					        {% else %}
 							<li>
 								<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-								{% if item.draft %}<span class="draft">draft</span>{% endif %}
+								{% if item.draft-label %}<span class="draft">draft</span>{% endif %}
 							</li>
 					        {% endif %}
 					    {% endfor %}

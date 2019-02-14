@@ -71,12 +71,12 @@ Go to `_data/content-guidelines-pages.yaml` and add a new entry for your page:
 ```
 - title: "Page Name"
   url: "/content-guidelines/page-name/"
-  draft: true
+  draft-label: true
 ```
 
-#### Controlling draft state
+#### Controlling draft labelling
 
-If you don't want the page to appear as a draft or as and when it's ready remove `draft: true` from the relevant entry in `_data/content-guidelines.yaml`
+If you don't want the page to be labelled as a draft, as and when it's ready remove `draft-label: true` from the relevant entry in `_data/content-guidelines.yaml`
 
 ## Deployment
 
