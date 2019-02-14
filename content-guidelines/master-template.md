@@ -2,6 +2,7 @@
 layout: page
 title: Master Template
 permalink: /content-guidelines/master-template/
+published: false
 ---
 
 # Heading One

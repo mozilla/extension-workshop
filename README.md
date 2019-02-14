@@ -23,8 +23,17 @@ yarn install
 Then to run locally in devlopment run:
 
 ```
-bundle exec jekyll serve
+yarn start
 ```
+
+Note: Running locally will show unpublished content that uses the `published: false` convention in frontmatter. Content with `published: false` will not be available on stage or production.
+
+### Available yarn commands
+
+| Command             | Description                                                                             |
+| ------------------- | --------------------------------------------------------------------------------------- |
+| yarn start          | Starts jekyll and includes unpublished content.                                         |
+| yarn start-prodlike | Starts jekyll and doesn't include unpublished content for a production-like experience. |
 
 ## Content Updates
 
@@ -44,8 +53,11 @@ This site has two templates: the Extension Workshop landing page and Content Gui
 layout: page
 title: Page Name
 permalink: /content-guidelines/page-name/
+published: false
 ---
 ```
+
+Note: `published: false` will withhold this content from stage and production, to publish content, remove this line.
 
 #### Upload media
 
