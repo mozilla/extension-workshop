@@ -1,15 +1,15 @@
 - title: "Master Template"
   url: "/content-guidelines/master-template/"
-  draft: true
+  draft-label: true
 
 - title: "Extension Name"
   url: "/content-guidelines/extension-name/"
-  draft: true
+  draft-label: true
 
 - title: "Extension Title"
   url: "/content-guidelines/extension-title/"
-  draft: true
-  
+  draft-label: true
+
 - title: "Extension Subtitle"
   url: "/content-guidelines/extension-subtitle/"
-  draft: true
+  draft-label: true
