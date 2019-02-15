@@ -32,7 +32,9 @@ Note: Running locally will show unpublished content that uses the `published: fa
 
 | Command             | Description                                                                             |
 | ------------------- | --------------------------------------------------------------------------------------- |
-| yarn start          | Starts jekyll and includes unpublished content.                                         |
+| yarn clean          | Clears the output directly and cleans the .jekyll-cache.                                |
+| yarn build          | Builds the site.                                                                        |
+| yarn start          | Starts jekyll and includes unpublished content. (Note the first run is slow!)           |
 | yarn start-prodlike | Starts jekyll and doesn't include unpublished content for a production-like experience. |
 
 ## Content Updates

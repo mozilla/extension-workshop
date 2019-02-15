@@ -21,6 +21,7 @@
     "eslint-plugin-prettier": "3.0.1",
     "prettier": "1.16.4",
     "pretty-quick": "1.10.0",
+    "rimraf": "^2.6.3",
     "svgo": "1.1.1"
   },
   "scripts": {
@@ -29,7 +30,9 @@
     "prettier-ci": "prettier -c '**'",
     "prettier-dev": "pretty-quick --branch master",
     "test": "npm run prettier-ci && npm run lint",
-    "start": "SVGO_BIN='node_modules/svgo/bin/svgo' jekyll serve --unpublished",
+    "clean": "rimraf './.jekyll-cache/' && jekyll clean",
+    "build": "JEKYLL_ENV=production SVGO_BIN='node_modules/svgo/bin/svgo' jekyll build",
+    "start": "jekyll serve --unpublished --config _config.yml,_config_local.yml",
     "start-prodlike": "SVGO_BIN='node_modules/svgo/bin/svgo' jekyll serve"
   }
 }
