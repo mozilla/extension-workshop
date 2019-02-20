@@ -88,5 +88,4 @@ workflows:
             branches:
               only: master
             tags:
-              # only: /^v?[0-9]+(\.[0-9]+)*$/
-              ignore: /.*/
+              only: /^v?[0-9]+(\.[0-9]+)*$/
