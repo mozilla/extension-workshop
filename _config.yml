@@ -55,10 +55,6 @@ exclude:
 
 assets:
   compression: true
-  caching:
-    path: ".jekyll-cache/assets"
-    type: memory
-    enabled: true
   sources:
     - _assets/img
     - _assets/css
