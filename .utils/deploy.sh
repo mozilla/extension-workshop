@@ -41,7 +41,7 @@ CSP="\"content-security-policy\": \"default-src 'none'; "\
 "frame-src https://www.youtube.com/embed/; "\
 "img-src 'self' data:; "\
 "object-src 'none'; "\
-"script-src 'self' https://www.youtube.com/iframe_api https://s.ytimg.com/yts/jsbin/ 'sha256-s5p8SZqTDVVMAzH8ZhqAEcXwCeq4GaYNOyj+EcI//VM='; "\
+"script-src 'self' https://www.youtube.com/iframe_api https://s.ytimg.com/yts/jsbin/ 'sha256-cEol3PeVsUqXLYFr6jKFJdNafMQx9RDvCSi6+kCHa6U=' https://www.google-analytics.com/analytics.js; "\
 "style-src 'self' 'unsafe-inline'\""
 HSTS="\"strict-transport-security\": \"max-age=${ONE_YEAR}; includeSubDomains; preload\""
 TYPE="\"x-content-type-options\": \"nosniff\""
