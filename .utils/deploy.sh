@@ -34,7 +34,7 @@ CSPSTATIC="\"content-security-policy\": \"default-src 'none'; "\
 "object-src 'none'\""
 CSP="\"content-security-policy\": \"default-src 'none'; "\
 "base-uri 'self'; "\
-"connect-src https://blog.mozilla.org/addons/feed/ https://www.mozilla.org/newsletter/; "\
+"connect-src https://blog.mozilla.org/addons/feed/ https://www.mozilla.org/newsletter/ https://www.google-analytics.com/r/collect; "\
 "font-src 'self'; "\
 "form-action https://www.mozilla.org/newsletter/; "\
 "frame-ancestors 'none'; "\
