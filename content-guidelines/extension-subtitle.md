@@ -70,9 +70,15 @@ To determine your keywords, think about what words a person would use when searc
 <!-- Not this -->
 <section class="not-this" markdown="1"><header><h5>Not This:</h5></header>
 
-- **Don’t overpromise.** If you have in fact created the fastest proxy on the planet, you should say that. If it isn’t faster than its competitors, focus on other descriptors and features to distinguish it.  
-- **Don’t use filler, redundant words like “this extension.”** Example: Video Organizer extension that downloads and organizes media.
-- **Don’t add formatting like bullets or line breaks**. This will take up your limited real estate.
+
+##### 1. Don’t overpromise.
+If you have in fact created the fastest proxy on the planet, you should say that. If it isn’t faster than its competitors, focus on other descriptors and features to distinguish it.  
+
+##### 2. Don’t use filler, redundant words like “this extension.
+<span class="example">Example: Video Organizer extension that downloads and organizes media.</span>
+
+##### 3. Don’t add formatting like bullets or line breaks.
+This will take up your limited real estate.
 
 ## Stuck? Try this.
 
