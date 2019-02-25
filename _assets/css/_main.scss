@@ -73,9 +73,43 @@ small {
   min-width: rem-calc(132);
 }
 
-a:focus,
-button:focus {
+.site-footer .mzp-c-footer-legal ul > li > a:focus,
+a:focus {
   outline: none;
+  text-decoration: underline;
+}
+
+#page-nav-links a:focus {
+  text-decoration: none;
+  color: #0060df;
+}
+
+.mzp-c-footer-links-social a:focus,
+.mzp-c-footer-primary-logo a:focus,
+.logo a:focus {
+  text-decoration: none;
+  outline: 1px dotted currentcolor;
+}
+
+.tile-borderless a:focus img,
+.tile-extended > p a:focus,
+a.button:focus,
+a.cta-down:focus,
+button.video-play:focus,
+button:focus {
+  text-decoration: none;
+  outline: none;
+  box-shadow: inset 0 0 0 1px #0a84ff, 0 0 0 1px #0a84ff,
+    0 0 0 4px rgba(10, 132, 255, 0.3);
+}
+
+a.tile-block-link:focus {
+  text-decoration: none;
+  box-shadow: none;
+  &::before {
+    box-shadow: inset 0 0 0 1px #0a84ff, 0 0 0 1px #0a84ff,
+      0 0 0 4px rgba(10, 132, 255, 0.3);
+  }
 }
 
 // Bgs
@@ -762,7 +796,7 @@ html {
     a {
       display: inline-block;
       width: 100px;
-      height: 32px;
+      height: 28px;
       overflow: hidden;
       text-decoration: none;
       text-indent: 120%;
