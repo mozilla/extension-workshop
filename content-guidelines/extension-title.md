@@ -7,7 +7,7 @@ published: false
 
 # Extension Name
 
-Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built. 
+Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
 
 Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into extension name field becomes your URL on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org').
 
@@ -20,13 +20,14 @@ Between your name and subtitle, you have up to 70 characters to use—that’s b
 
 - Make it memorable
 - Make it unique
-- Keep it short for better display on smaller screens 
-- Make it easy to read and say 
+- Keep it short for better display on smaller screens
+- Make it easy to read and say
 - Give an idea or hint about what your extension does with an illustrative word or metaphor
 
 <!-- Example (Block) -->
 
-**Examples:** 
+**Examples:**
+
 <div class="example" markdown="1">
 
 An extension that saves passwords is called **Remembear**
@@ -103,13 +104,13 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 #### 1. Identify the problem
 
-What problem does your extension solve? Why did you create this extension? Write that down.  
+What problem does your extension solve? Why did you create this extension? Write that down.
 
 Let’s take the popular extension, Remembear, as an example. You can imagine the creator of this extension writing something like this: I am tired of having to remember all of my passwords for the web. And I worry that these passwords will get stolen. I want a simple way to save and secure my passwords so they are always at my fingertips. And I don’t want the experience to be an unpleasant, security-laden process. Let’s make it friendly and easy.
 
 #### 2. Identify key words
 
-Pull out the key words (nouns, adjectives, verbs) and phrases from your problem statement and create a word list. Add other words that come to mind based on those words, including synonyms. 
+Pull out the key words (nouns, adjectives, verbs) and phrases from your problem statement and create a word list. Add other words that come to mind based on those words, including synonyms.
 
 Remembear Example:
 
@@ -126,14 +127,17 @@ Remembear Example:
 - Easy
 
 #### 3. Consider a metaphor
-Consider adding a person, place, or thing that summarizes or serves as a metaphor for what your extension does. 
 
-Remembear example: Saving and protecting passwords is not very unique from what other extensions do, so finding a good metaphor might help create a unique name. What animal, place, or thing makes me think about safety and security? How about a mother bear? Mother bears are notorious for protecting their young. 
+Consider adding a person, place, or thing that summarizes or serves as a metaphor for what your extension does.
+
+Remembear example: Saving and protecting passwords is not very unique from what other extensions do, so finding a good metaphor might help create a unique name. What animal, place, or thing makes me think about safety and security? How about a mother bear? Mother bears are notorious for protecting their young.
 
 #### 4. Create combinations
-Take that list of words and try different combinations until you land on something that feels right. 
+
+Take that list of words and try different combinations until you land on something that feels right.
 
 Remembear example:
+
 - Protect passwords with mother bear
 - Motherbear
 - Remember passwords with mother bear
