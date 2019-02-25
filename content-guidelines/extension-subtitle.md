@@ -1,120 +1,66 @@
 ---
 layout: page
-title: Page Name
+title: Extension Subtitle
 permalink: /content-guidelines/extension-subtitle/
 published: false
 ---
 
-# Heading One
+# Extension Subtitle
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+The subtitle is one of your extension’s most important pieces of content. It’s the thing that shows up in search results, drawing a potential user’s attention. It makes your extension more discoverable. And, it’s used everywhere—in search results, throughout [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the Firefox browser. 
+ 
+**A subtitle is a short phrase that clearly, concisely explains what your extension does.** It’s short for a reason: extension name + subtitle become your headline on search. While the name may appear by itself in some contexts, the subtitle will never appear without the name.
 
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
 
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @optim @path %} "Screenshot Remembear") Full width image (above)
+![Remembear subtitle screenshot]({% asset "remembear-subtitle.png" @optim %} "Remembear subtitle text") 
 
 </section>
-<!-- END: Full Width Image -->
 
-<!-- Half Width Images -->
-<section class="image-with-caption grid-container grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+## Requirements:
+- Minimum length: 2 characters
+- Maximum length: 70 characters between extension name and subtitle
 
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear") Half width image (above)
+## Extension Subtitle Do’s and Don’ts
 
-</div>
-<div class="cell small-6" markdown="1">
+<section class="do-this" markdown="1"><header><h5>Do This:</h5></header>
 
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optime %} "Screenshot Remembear") Half width image (above)
+- Keep it short: You have 70 characters to use between extension name and extension subtitle. It may be best to keep your extension name shorter, so you have more room in your subtitle. Don’t worry, you also have an unlimited description field to provide a longer, detailed explanation of your product.
+- Capture the key features of your extension.
+- Make it accurate—our reviewers will check to make sure it reflects your extension’s functionality.
+- Be direct and to-the-point. The goal is to be informative, not overly market your product.  
+- If writing in English, use sentence case rather than title case. It’s easier to read.
+- If you have the room, end your subtitle with closing punctuation (like a period or exclamation mark), especially if written as a phrase or short sentence. 
+- Only say your extension is “free” if this distinguishes it from other extensions like it—most extensions are free. If you are a VPN extension, however, it may make sense to include the word “free” in your subtitle since VPNs are not often free.  
+- Incorporate keywords that someone might use to search for your extension. But keep it natural—forcing keywords won’t improve search rankings or compel potential users. 
 
-</div>
-</section>
-<!-- END: Half Width Images -->
-
-## Movie Title Lorem Ipsum
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
-
-<!-- Video Popup Thumbnail -->
-<section class="video-popup" markdown="1">
-
-[![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'What’s Great Content and Design?')
-
-</section>
-<!-- END: Video Popup Thumbnail -->
-
-<!-- Half Width Video Popup Thumbnails -->
-<section class="video-popup grid-container grid-x grid-padding-x">
-<div class="cell small-12 medium-6" markdown="1">
-
-![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %} "What’s Great Content and Design?")
-
-#### What’s Great Content and Design?
-
-Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
-
-</div>
-<div class="cell small-12 medium-6" markdown="1">
-
-[![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'What’s Great Content and Design?')
-
-#### What’s Great Content and Design?
-
-Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
-
-</div>
-</section>
-<!-- END: Half Width Video Popup Thumbnails -->
-
-## Icons
-
-##### Examples of goood icons
-
-<!-- Icon Grid *** use "shrink" class to fit grid to image size -OR- use "auto" class to fit images to grid width *** -->
-<section class="icon-grid grid-container grid-x grid-padding-x">
-<div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
-</div>
-<div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
-</div>
-<div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
-</div>
-</section>
-<!-- END: Image Grid -->
-
-Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
-
-Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org').
-
-Between your extension name and subtitle, you have up to 70 characters to use—that’s because 70 is the max character limit for your headline in external search results. It’s best to keep your extension name shorter so you have more characters left over for your subtitle.
-
-- Tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Enim facilisis gravida neque convallis a cras.
-- Id diam vel quam elementum pulvinar etiam non. Quam id leo in vitae turpis.
-
-## Extension Name Do’s and Don’ts
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-<!-- Do this -->
-<section class="do-this" markdown="1"><header><h5>Do This</h5></header>
-
-1. **Make it memorable**
-2. **Make it unique**
-3. **Keep it short for better display on smaller screens**
-4. **Make it easy to read and say**
-5. **Give an idea or hint about what your extension does with an illustrative word or metaphor**
+To determine your keywords, think about what words a person would use when searching for an extension like yours. Consider the problem that user is trying to solve. For example, what words would someone use when searching for a proofreader or ad-blocking extension? 
 
 <!-- Example (Block) -->
 <div class="example" markdown="1">
+<header><h5>Examples:</h5></header>
 
-Examples: An extension that saves passwords is called **Remembear**
+**Name:** Facebook Container
 
-An extension that puts a cat on new tabs is called **Tabbycat**
+**Subtitle:** Prevent Facebook from tracking you around the web. 
 
-An extension that improves YouTube is called **Enhancer for YouTube**
+**Name:** Remembear
+
+**Subtitle:** The easiest way to remember passwords
+
+**Name:** Emoji to English
+
+**Subtitle:** Translates emojis to their Unicode names
+
+**Name:** Honey
+
+**Subtitle:** Automatic Coupons, Promo Codes, & Deals
+
+**Name:** Spotter
+
+**Subtitle:** Automatic connecting with public rooms
+
 
 </div>
 <!-- END: Example (Block) -->
@@ -122,170 +68,36 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 <!-- END: Do this -->
 
 <!-- Not this -->
-<section class="not-this" markdown="1"><header><h5>Not This</h5></header>
+<section class="not-this" markdown="1"><header><h5>Not This:</h5></header>
 
-##### 1. Don't include a description.
 
-Save these details for your subtitle and description.
+##### 1. Don’t overpromise.
+If you have in fact created the fastest proxy on the planet, you should say that. If it isn’t faster than its competitors, focus on other descriptors and features to distinguish it.  
 
-<!-- Example (Inline) -->
+##### 2. Don’t use filler, redundant words like “this extension.
+<span class="example">Example: Video Organizer extension that downloads and organizes media.</span>
 
-<span class="example">Example: Videomix, a fast video downloader</span>
-
-<!-- END: Example (Inline) -->
-
-##### 2. Don't stuff it with keywords.
-
-Google is smarter than this and it just makes your extension look untrustworthy.
-
-<!-- Example (Inline) -->
-
-<span class="example">Example: Youtube Download Videos, Convert, Media, MP3, MP4, Free.</span>
-
-<!-- END: Example (Inline) -->
-
-##### 3. Don't use random words to differentiate, like “Barbara Notetaker.”
-
-Instead, create a descriptive name that is not already in use, like “Instant Notetaker.”
-
-##### 4. Don't call it something with no meaning, like “hoyv.”
-
-While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad-blocking extension does because it contains the word “block”.
-
-##### 5. Don't include "WebExtension," “Firefox” or “Mozilla."
-
-##### 6. Don't include version number or a previous name.
-
-<!-- Example (Inline) -->
-
-<span class="example">Example: Weatherchanger (fix version)</span>
-
-<!-- END: Example (Inline) -->
-
-##### 7. Don't make it hard to read or say.
-
-<!-- Example (Inline) -->
-
-<span class="example">Example: TrLrs! Tab Changer.</span>
-
-<!-- END: Example (Inline) -->
-
-##### Remembear Example:
-
-<!-- Full Width Image -->
-<section class="image-with-caption" markdown="1">
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear")
-</section>
-<!-- END: Full Width Image -->
-
-##### List Example:
-
-- [Honey ](https://firefox.com 'Honey ')
-- [Ghoastery](https://firefox.com 'Ghoastery')
-- [Disconnect](https://firefox.com 'Disconnect')
-- [Ecoesia](https://firefox.com 'Ecoesia')
-- [Mate Translate](https://firefox.com 'Mate Translate')
-
-</section>
-<!-- END: Not this -->
-
-<!-- Do this, not this, side-by-side -->
-<section class="do-this-not-this grid-container grid-x grid-padding-x">
-<div class="cell small-12 medium-6">
-<div class="do-this" markdown="1"><header><h5>Do This</h5></header>
-
-1. **Make it memorable**
-2. **Make it unique**
-3. **Keep it short for better display on smaller screens**
-
-<!-- Example (Block) -->
-<div class="example" markdown="1">
-
-Examples: An extension that saves passwords is called **Remembear**
-
-An extension that puts a cat on new tabs is called **Tabbycat**
-
-An extension that improves YouTube is called **Enhancer for YouTube**
-
-</div>
-<!-- END: Example (Block) -->
-
-</div>
-</div>
-<div class="cell small-12 medium-6">
-<div class="not-this" markdown="1"><header><h5>Not This</h5></header>
-
-1. **Make it memorable**
-2. **Make it unique**
-3. **Keep it short for better display on smaller screens**
-
-<!-- Example (Block) -->
-<div class="example" markdown="1">
-
-Examples: An extension that saves passwords is called **Remembear**
-
-An extension that puts a cat on new tabs is called **Tabbycat**
-
-An extension that improves YouTube is called **Enhancer for YouTube**
-
-</div>
-<!-- END: Example (Block) -->
-
-</div>
-</div>
-</section>
-<!-- END: Do this, not this, side-by-side -->
-
-<!-- Tile -->
-<section class="tile" markdown="1">
-
-#### Requirements
-
-- Minimum length: 2 characters
-- Maximum length: 70 characters between extension name and subtitle
-- Lorem ipsum: dolor sit amet, consectetur adipiscing elit
-- Sed do eiusmod: tempor incididunt ut labore et dolore magna aliqua
-- Ut enim ad: minim veniam, quis nostrud exercitation ullamco laboris
-- Nisi ut aliquip: ex ea commodo consequat
-- Duis aute: irure dolor in reprehenderit in voluptate velit esse cillum
-- Excepteur sint: occaecat cupidatat non proident
-- Bunt in culpa: qui officia deserunt mollit anim id est laborum
-
-</section>
-<!-- END: Tile -->
+##### 3. Don’t add formatting like bullets or line breaks.
+This will take up your limited real estate.
 
 ## Stuck? Try this.
 
-#### 1. Identify the problem
+#### Adjective + Action:
+*The ______ [adjective/user benefit] to do _____ [action/what extension does].*
 
-What problem does your extension solve? You had a reason for creating that extension...what was it? Write that down.
+Example, “Remembear”: The easiest way to remember passwords
 
-Take the popular extension, Remembear, as an example. You can imagine the creator of this extension writing, "I am tired of having to remember all of my passwords for the web. And I worry that these passwords will get stolen. I want a simple way to save and secure my passwords so they are always at my fingertips. And I don’t want the experience to be an unpleasant, security-laden process. Let’s make it friendly and easy.
+#### Features:
+*____ [feature], _____ [feature], ____ [feature]* 
 
-#### 2. Identify key words
+Example, “Honey”: Automatic Coupons, Promo Codes, & Deals
 
-Pull out the key words (nouns, adjectives, verbs) and phrases from your description  and create a word list. Add other words that come to mind based on those words, including synonyms.
+#### Keywords:
+*____ [keyword] _____ [keyword] ____ [keyword]*
 
-Remembear Example:
+Example, “Ghostery”: Privacy ad blocker
 
-- Tired
-- Remember
-- Passwords
-- Worry
-- Stolen
-- Simple
-- Save
-- Secure
-- At your fingertips
-- Friendly
-- Easy
+#### Action + More Detail:
+*____[Action/what your extension does] where/how/by ___ [more detail about extension]* 
 
-#### 3. Example Lorum Ipsum
-
-Pull out the key words (nouns, adjectives, verbs) and phrases from your description  and create a word list. Add other words that come to mind based on those words, including synonyms.
-
-Remembear: dolore eu fugiat nulla pariatur lemera dosada peel.
-
-- [Extension Link ](https://firefox.com 'Extension Link ')
-- [Extension Link ](https://firefox.com 'Extension Link ')
-- [Extension Link ](https://firefox.com 'Extension Link ')
+Example, “Spotter”: Automatic connecting with public rooms
