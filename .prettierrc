@@ -2,5 +2,5 @@
   "arrowParens": "always",
   "singleQuote": true,
   "trailingComma": "es5",
-  "proseWrap": "never"
+  "proseWrap": "preserve"
 }
