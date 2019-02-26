@@ -17,7 +17,7 @@ Firefox extensions are made with the same technologies used to build the web. Th
 		</div>
 		<div id="how-to-build-an-extension-video" class="img" style="background-image: url({% asset "content_5minextension_thumbnail.jpg" @path @optim %});">
 			<span class="video-play"></span>
-			<button class="show-for-small-only video-link" data-youtube_id="DAl0tOYDHxg" data-youtube_target="how-to-build-an-extension-video">Play</button>
+			<button class="show-for-small-only video-link" data-youtube_id="Q3AQ5D2QFwc" data-youtube_target="how-to-build-an-extension-video">Play</button>
 		</div>
 	</div>
 	<!-- END: Video Box -->
