@@ -74,8 +74,14 @@ This tag will output an entire `img` element. Note: that using `@optim` enables 
 
 For finer control you can use:
 
-```
+```html
 <img src="{% asset "image.jpg" @path @optim %}" someattr="whatever" />
+```
+
+Here's an example using markdown - note you need to add `@path` and `@optim`.
+
+```markdown
+![Remembear subtitle screenshot]({% asset "content-guidelines/remembear-subtitle.png" @path @optim %} "Remembear subtitle text")
 ```
 
 #### Add the page to the menu
