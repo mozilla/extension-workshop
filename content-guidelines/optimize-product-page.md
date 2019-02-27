@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Optimize your product page
-permalink: /content-guidelines/master-template/
+permalink: /content-guidelines/optimize-product-page/
 published: false
 ---
 
