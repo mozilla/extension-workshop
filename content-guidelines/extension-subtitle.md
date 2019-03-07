@@ -42,24 +42,19 @@ To determine your keywords, think about what words a person would use when searc
 <div class="example" markdown="1">
 <header><h5>Examples:</h5></header>
 
-**Name:** Facebook Container
-
+**Name:** Facebook Container  
 **Subtitle:** Prevent Facebook from tracking you around the web.
 
-**Name:** Remembear
-
+**Name:** Remembear  
 **Subtitle:** The easiest way to remember passwords
 
-**Name:** Emoji to English
-
+**Name:** Emoji to English  
 **Subtitle:** Translates emojis to their Unicode names
 
-**Name:** Honey
-
+**Name:** Honey  
 **Subtitle:** Automatic Coupons, Promo Codes, & Deals
 
-**Name:** Spotter
-
+**Name:** Spotter  
 **Subtitle:** Automatic connecting with public rooms
 
 </div>
@@ -74,7 +69,7 @@ To determine your keywords, think about what words a person would use when searc
 
 If you have in fact created the fastest proxy on the planet, you should say that. If it isn’t faster than its competitors, focus on other descriptors and features to distinguish it.
 
-##### 2. Don’t use filler, redundant words like “this extension.
+##### 2. Don’t use filler, redundant words like “this extension”.
 
 <span class="example">Example: Video Organizer extension that downloads and organizes media.</span>
 
@@ -82,28 +77,28 @@ If you have in fact created the fastest proxy on the planet, you should say that
 
 This will take up your limited real estate.
 
-## Stuck? Try this.
+# Stuck? Try this.
 
 #### Adjective + Action:
 
-_The **\_\_** [adjective/user benefit] to do **\_** [action/what extension does]._
+_The \_\_\_\_ [adjective/user benefit] to do \_\_\_\_ [action/what extension does]._
 
 Example, “Remembear”: The easiest way to remember passwords
 
 #### Features:
 
-_\_**\_ [feature], \_\_\_** [feature], \_\_\_\_ [feature]_
+_\_\_\_ [feature], \_\_\_\_ [feature], \_\_\_\_ [feature]_
 
 Example, “Honey”: Automatic Coupons, Promo Codes, & Deals
 
 #### Keywords:
 
-_\_**\_ [keyword] \_\_\_** [keyword] \_\_\_\_ [keyword]_
+_\_\_\_ [keyword] \_\_\_\_ [keyword] \_\_\_\_ [keyword]_
 
 Example, “Ghostery”: Privacy ad blocker
 
 #### Action + More Detail:
 
-_\_***[Action/what your extension does] where/how/by *** [more detail about extension]_
+_\_\_\_ [Action/what your extension does] where/how/by \_\_\_\_ [more detail about extension]_
 
 Example, “Spotter”: Automatic connecting with public rooms
