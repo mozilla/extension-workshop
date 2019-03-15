@@ -10,6 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+- [Ruby 2.6.1](https://www.ruby-lang.org/en/downloads/), a dynamic open-source programming language  
 - [Jekyll](https://jekyllrb.com) site generator for [Github Pages](https://pages.github.com)
 - [Yarn](https://yarnpkg.com/en/) Package Manager
 
