@@ -72,7 +72,7 @@ Instead, create a descriptive name that is not already in use, like “Instant N
 
 While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad-blocking extension does because it contains the word “block”.
 
-##### 5. Don't include "WebExtension," “Firefox” or “Mozilla."
+##### 5. Don't include "WebExtension," “Firefox”, or “Mozilla."
 
 ##### 6. Don't include version number or a previous name.
 
@@ -106,7 +106,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 What problem does your extension solve? Why did you create this extension? Write that down.
 
-Let’s take the popular extension, Remembear, as an example. You can imagine the creator of this extension writing something like this: I am tired of having to remember all of my passwords for the web. And I worry that these passwords will get stolen. I want a simple way to save and secure my passwords so they are always at my fingertips. And I don’t want the experience to be an unpleasant, security-laden process. Let’s make it friendly and easy.
+Let’s take the popular extension, Remembear, as an example. You can imagine the creator of this extension writing something like this: "I am tired of having to remember all of my passwords for the web. And I worry that these passwords will get stolen. I want a simple way to save and secure my passwords so they are always at my fingertips. And I don’t want the experience to be an unpleasant, security-laden process. Let’s make it friendly and easy."
 
 #### 2. Identify key words
 
@@ -128,7 +128,7 @@ Remembear Example:
 
 #### 3. Consider a metaphor
 
-Consider adding a person, place, or thing that summarizes or serves as a metaphor for what your extension does.
+**Consider adding a person, place, or thing that summarizes or serves as a metaphor for what your extension does.**
 
 Remembear example: Saving and protecting passwords is not very unique from what other extensions do, so finding a good metaphor might help create a unique name. What animal, place, or thing makes me think about safety and security? How about a mother bear? Mother bears are notorious for protecting their young.
 
@@ -138,9 +138,11 @@ Take that list of words and try different combinations until you land on somethi
 
 Remembear example:
 
-- Protect passwords with mother bear
-- Motherbear
-- Remember passwords with mother bear
-- Protect passwords with a bear
-- Remember password with a bear
-- Remembear
+- Protect passwords with mother bear    
+_Motherbear_
+
+- Remember passwords with mother bear  
+_Protect passwords with a bear_
+
+- Remember password with a bear  
+_Remembear_
