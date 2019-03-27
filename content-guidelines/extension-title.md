@@ -138,11 +138,11 @@ Take that list of words and try different combinations until you land on somethi
 
 Remembear example:
 
-- Protect passwords with mother bear    
-_Motherbear_
+- Protect passwords with mother bear  
+  _Motherbear_
 
 - Remember passwords with mother bear  
-_Protect passwords with a bear_
+  _Protect passwords with a bear_
 
 - Remember password with a bear  
-_Remembear_
+  _Remembear_

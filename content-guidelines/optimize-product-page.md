@@ -20,6 +20,7 @@ When you build an extension, you make the web better. To get your great idea out
 Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
 
 [Watch the video](a0_OsLGI0k4 'Open Popup Video')
+
 </div>
 </div>
 
@@ -27,10 +28,10 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 
 - If you are creating a new extension or theme, you’ll need to create an account on [addons.mozilla.org/developers](https://addons.mozilla.org/developers/ 'addons.mozilla.org/developers/'), select **New Submission**, and submit your extension or theme file. Once you do this, you will create your Product Page within the submission flow.
 - If you are updating an existing product page, you will log in to [addons.mozilla.org/developers](https://addons.mozilla.org/developers/ 'addons.mozilla.org/developers/') and select **Edit Information** to revise content.
-- All fields can be updated at any time. You will need to update the following content types in both your manifest and on addons.mozilla.org: 
+- All fields can be updated at any time. You will need to update the following content types in both your manifest and on addons.mozilla.org:
   - Author Name,
   - Extension/Theme Name,
-  - Subtitle, 
+  - Subtitle,
   - Extension Icon,
 
 ### Additional Resources
