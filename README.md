@@ -2,7 +2,7 @@
 
 # Extension Workshop
 
-Launchpad for why and how to build Firefox extensions
+Launchpad for why and how to build Firefox extensions.
 
 ## Getting Started
 
@@ -67,7 +67,7 @@ Note: `published: false` will withhold this content from stage and production, t
 1. Add the image files to `_assets/img/`
 2. In your page, link to images using this page structure:
 
-This tag will output an entire `img` element. Note: that using `@optim` enables the jekyll asset pipeline to optimize the image this is always recommended unless you see an issue with the output.
+This tag will output an entire `img` element. Note: that using `@optim` enables the jekyll asset pipeline to optimize the image. This is always recommended unless you see an issue with the output.
 
 ```
 {% asset "image.jpg" @optim %}
