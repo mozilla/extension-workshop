@@ -7,14 +7,14 @@ published: false
 
 # Extension Subtitle
 
-The subtitle is one of your extension’s most important pieces of content. It’s the thing that shows up in search results, drawing a potential user’s attention. It makes your extension more discoverable. And, it’s used everywhere—in search results, throughout [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the Firefox browser.
+The subtitle is one of your extension’s most important pieces of content. It’s the thing that shows up in search, drawing a potential user’s attention. It makes your extension more discoverable. And, it’s used everywhere—in search results, throughout [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the Firefox browser.
 
 **A subtitle is a short phrase that clearly, concisely explains what your extension does.** It’s short for a reason: extension name + subtitle become your headline on search. While the name may appear by itself in some contexts, the subtitle will never appear without the name.
 
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
 
-![Remembear subtitle screenshot]({% asset "content-guidelines/remembear-subtitle.png" @path @optim %} "Remembear subtitle text")
+![Remembear subtitle screenshot]({% asset "content-guidelines/remembear-subtitle.png" @path @optim %} "Remembear subtitle text") Remembear Search Snippet Example
 
 </section>
 
@@ -22,8 +22,6 @@ The subtitle is one of your extension’s most important pieces of content. It�
 
 - Minimum length: 2 characters
 - Maximum length: 70 characters between extension name and subtitle
-
-## Extension Subtitle Do’s and Don’ts
 
 <section class="do-this" markdown="1"><header><h5>Do This:</h5></header>
 
@@ -40,7 +38,7 @@ To determine your keywords, think about what words a person would use when searc
 
 <!-- Example (Block) -->
 <div class="example" markdown="1">
-<header><h5>Examples:</h5></header>
+Examples:
 
 **Name:** Facebook Container  
 **Subtitle:** Prevent Facebook from tracking you around the web.
@@ -69,13 +67,15 @@ To determine your keywords, think about what words a person would use when searc
 
 If you have in fact created the fastest proxy on the planet, you should say that. If it isn’t faster than its competitors, focus on other descriptors and features to distinguish it.
 
-##### 2. Don’t use filler, redundant words like “this extension”.
+##### 2. Don’t use filler, redundant words like “this extension.”
 
 <span class="example">Example: Video Organizer extension that downloads and organizes media.</span>
 
 ##### 3. Don’t add formatting like bullets or line breaks.
 
 This will take up your limited real estate.
+
+</section>
 
 # Stuck? Try this.
 
