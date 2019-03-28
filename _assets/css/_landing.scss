@@ -401,6 +401,10 @@ Stylesheet: Landing Page Stylesheet
   .banner-content {
     height: 80%;
     position: relative;
+    @include breakpoint(medium) {
+      padding-top: 5em;
+    }
+
     z-index: 2;
     .cell {
       > * {
