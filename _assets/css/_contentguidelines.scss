@@ -58,6 +58,7 @@ $sidebar-w: rem-calc(230);
   @include breakpoint(medium) {
     display: flex;
     flex-flow: row nowrap;
+
     .site-header {
       font-size: rem-calc(11);
       flex: 0 0 #{$sidebar-w-sm};
@@ -86,7 +87,8 @@ $sidebar-w: rem-calc(230);
 
     a {
       padding: rem-calc(13 0 3 50);
-      &:before {
+
+      &::before {
         content: '';
         position: absolute;
         display: block;
@@ -98,6 +100,7 @@ $sidebar-w: rem-calc(230);
           center/contain;
       }
     }
+
     small.tagline {
       font-size: rem-calc(13);
       padding: rem-calc(0 0 14 50);
@@ -108,15 +111,18 @@ $sidebar-w: rem-calc(230);
     @include breakpoint(medium) {
       font-size: rem-calc(13);
       margin-top: rem-calc(4);
+
       a {
         padding: rem-calc(15 0 14 43);
         display: block;
-        &:before {
+
+        &::before {
           top: rem-calc(8);
           width: rem-calc(37);
           height: rem-calc(38);
         }
       }
+
       small.tagline {
         display: block;
         font-size: rem-calc(11);
@@ -127,13 +133,16 @@ $sidebar-w: rem-calc(230);
     @include breakpoint(xlarge) {
       font-size: rem-calc(15);
       margin-top: rem-calc(2);
+
       a {
         padding: rem-calc(15 0 17 50);
-        &:before {
+
+        &::before {
           width: rem-calc(43);
           height: rem-calc(44);
         }
       }
+
       small.tagline {
         font-size: rem-calc(13);
       }
@@ -155,15 +164,18 @@ $sidebar-w: rem-calc(230);
       list-style: none;
       margin: 0;
       font-size: rem-calc(15);
+
       li {
         margin: 0;
       }
+
       a {
         color: $body-font-color;
         display: inline-block;
         padding: 0.25rem 0;
       }
-      a[target='_blank']:after {
+
+      a[target='_blank']::after {
         color: $primary-color;
         padding-left: 0.3em;
         display: inline-block;
@@ -173,6 +185,7 @@ $sidebar-w: rem-calc(230);
       @include breakpoint(medium) {
         font-size: rem-calc(13);
         margin: rem-calc(24 0 30);
+
         .current a {
           color: $primary-color;
         }
@@ -207,7 +220,8 @@ $sidebar-w: rem-calc(230);
       left: rem-calc(12);
       width: calc(100% - #{rem-calc(24)});
       min-height: rem-calc(75);
-      &:before {
+
+      &::before {
         content: '';
         display: block;
         position: fixed;
@@ -234,8 +248,10 @@ $sidebar-w: rem-calc(230);
         top: rem-calc(12);
         width: 100%;
         max-height: calc(100vh - #{rem-calc(24)});
-        &:after {
+
+        &::after {
           @include icon_font($char: $icon-arrow-down);
+
           position: absolute;
           font-size: rem-calc(18);
           line-height: 1;
@@ -251,6 +267,7 @@ $sidebar-w: rem-calc(230);
         p {
           margin: 0;
           padding: rem-calc(15 0 0);
+
           &:first-of-type,
           &:last-of-type {
             padding: rem-calc(24 0 0);
@@ -262,12 +279,14 @@ $sidebar-w: rem-calc(230);
         }
 
         &.open {
-          &:after {
+          &::after {
             @include icon_font($char: $icon-arrow-up);
           }
+
           &:focus {
             overflow-y: scroll;
           }
+
           .current a {
             color: $primary-color;
           }
@@ -275,7 +294,7 @@ $sidebar-w: rem-calc(230);
       }
 
       &.sticky {
-        &:before {
+        &::before {
           top: rem-calc(-20);
           opacity: 1;
           transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out;
@@ -292,8 +311,9 @@ $sidebar-w: rem-calc(230);
   }
 
   .back {
-    &:before {
+    &::before {
       @include icon_font($char: $icon-back);
+
       padding-right: 0.3em;
       display: inline-block;
     }
@@ -368,6 +388,7 @@ $sidebar-w: rem-calc(230);
       li {
         flex: 1 1 auto;
         margin: 0;
+
         &:last-child {
           text-align: right;
         }
@@ -377,13 +398,16 @@ $sidebar-w: rem-calc(230);
         display: inline-block;
       }
 
-      li:first-child a:before {
+      li:first-child a::before {
         @include icon_font($char: $icon-back);
+
         display: inline-block;
         padding-right: 0.3em;
       }
-      li:last-child a:after {
+
+      li:last-child a::after {
         @include icon_font($char: $icon-forward);
+
         display: inline-block;
         padding-left: 0.3em;
       }
@@ -398,6 +422,7 @@ $sidebar-w: rem-calc(230);
   font-size: $small-font-size;
   color: $dark-gray;
   margin: rem-calc(12 0 15);
+
   img {
     display: block;
     width: 100%;
@@ -406,6 +431,7 @@ $sidebar-w: rem-calc(230);
 
   @include breakpoint(medium) {
     margin: rem-calc(24 0);
+
     img {
       margin-bottom: rem-calc(8);
     }
@@ -426,8 +452,9 @@ $sidebar-w: rem-calc(230);
     display: block;
     position: relative;
     font-size: rem-calc(22);
-    &:before,
-    &:after {
+
+    &::before,
+    &::after {
       display: block;
       position: absolute;
       left: calc(50% - #{rem-calc(20)});
@@ -435,7 +462,8 @@ $sidebar-w: rem-calc(230);
       width: rem-calc(40);
       height: rem-calc(40);
     }
-    &:before {
+
+    &::before {
       content: '';
       background-color: $white;
       border-radius: 50%;
@@ -443,20 +471,25 @@ $sidebar-w: rem-calc(230);
       cursor: pointer;
       transition: box-shadow 0.2s ease-in-out;
     }
-    &:after {
+
+    &::after {
       @include icon_font($char: $icon-play);
+
       text-align: center;
       line-height: rem-calc(38);
       color: $primary-color;
       transition: color 0.2s ease-in-out;
     }
-    &:hover:before {
+
+    &:hover::before {
       box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.33);
     }
-    &:hover:after {
+
+    &:hover::after {
       color: $primary-color-hover;
     }
   }
+
   img {
     display: block;
     width: 100%;
@@ -468,22 +501,27 @@ $sidebar-w: rem-calc(230);
 
     @include breakpoint(medium) {
       margin-bottom: rem-calc(24);
+
       a {
         font-size: rem-calc(13);
-        &:before,
-        &:after {
+
+        &::before,
+        &::after {
           left: calc(50% - #{rem-calc(12)});
           top: calc(50% - #{rem-calc(12)});
           width: rem-calc(24);
           height: rem-calc(24);
         }
-        &:after {
+
+        &::after {
           line-height: rem-calc(23);
         }
       }
+
       img {
         border-radius: $global-radius;
       }
+
       h1,
       h2,
       h3,
@@ -511,11 +549,13 @@ $sidebar-w: rem-calc(230);
 
 .icon-grid {
   margin: rem-calc(12 0 3);
+
   p {
     margin-bottom: rem-calc(12);
   }
   @include breakpoint(medium) {
     margin: rem-calc(24 0 0);
+
     p {
       margin-bottom: rem-calc(24);
     }
@@ -530,15 +570,18 @@ $sidebar-w: rem-calc(230);
   padding: rem-calc(7);
   margin: rem-calc(0 -7 15);
   border-radius: $global-radius;
+
   p,
   ul,
   ol {
     margin-bottom: 0.5rem;
   }
+
   > *:last-child {
     margin-bottom: 0;
   }
 }
+
 span.example {
   display: inline-block;
   padding: rem-calc(0 7);
@@ -551,16 +594,19 @@ span.example {
   margin: rem-calc(12 0);
   padding: rem-calc(12);
   border: 1px solid darken($light-gray, 4%);
+
   > *:last-child {
     margin-bottom: 0;
   }
 
   header {
     padding: rem-calc(8 0 6);
-    > *:first-child:before {
+
+    > *:first-child::before {
       display: inline;
       margin-right: 0.5rem;
     }
+
     + h1,
     + h2,
     + h3,
@@ -578,6 +624,7 @@ span.example {
   @include breakpoint(medium) {
     margin: rem-calc(24 0);
     padding: rem-calc(24);
+
     header {
       padding: rem-calc(0 0 12);
     }
@@ -598,24 +645,31 @@ span.example {
 
 .do-this {
   border-top: #{rem-calc(5)} solid #31c430;
+
   header {
     * {
       color: #31c430;
     }
-    > *:first-child:before {
+
+    > *:first-child::before {
       @include icon_font($char: $icon-do);
+
       color: #31c430;
     }
   }
 }
+
 .not-this {
   border-top: #{rem-calc(5)} solid #d70022;
+
   header {
     * {
       color: #d70022;
     }
-    > *:first-child:before {
+
+    > *:first-child::before {
       @include icon_font($char: $icon-dont);
+
       color: #d70022;
     }
   }
@@ -629,6 +683,7 @@ span.example {
 
   @include breakpoint(medium) {
     margin: rem-calc(24 0);
+
     .do-this,
     .not-this {
       margin: 0;
@@ -681,6 +736,7 @@ span.example {
   }
   @include breakpoint(xlarge) {
     padding-left: $sidebar-w;
+
     .mzp-l-content {
       padding: 0 8.333333333333333%;
     }

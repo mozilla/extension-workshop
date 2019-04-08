@@ -14,6 +14,7 @@ Stylesheet: Landing Page Stylesheet
   top: 0;
   width: 100%;
   padding: rem-calc(12 0);
+
   .cell {
     display: flex;
     flex-flow: row nowrap;
@@ -37,15 +38,18 @@ Stylesheet: Landing Page Stylesheet
   top: calc(100% - #{rem-calc(38)});
   left: 0;
   width: 100%;
+
   * {
     transform: translate3d(0, 0, 0);
   }
+
   .page-nav {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    &:before {
+
+    &::before {
       content: '';
       display: block;
       position: absolute;
@@ -62,6 +66,7 @@ Stylesheet: Landing Page Stylesheet
       transition: top 0 ease-in-out;
     }
   }
+
   nav {
     position: relative;
     width: 100%;
@@ -88,6 +93,7 @@ Stylesheet: Landing Page Stylesheet
     .group-a {
       width: 100%;
       transition: width 0.3s ease-in-out;
+
       a {
         position: relative;
         padding: rem-calc(15 20);
@@ -96,13 +102,16 @@ Stylesheet: Landing Page Stylesheet
         line-height: rem-calc(22);
         white-space: nowrap;
         transition: font-size 0.3s ease-in-out;
+
         &:hover {
           color: $primary-color;
           text-decoration: none;
         }
+
         &.active {
           color: $primary-color;
-          &:after {
+
+          &::after {
             content: '';
             display: block;
             position: absolute;
@@ -133,6 +142,7 @@ Stylesheet: Landing Page Stylesheet
       padding: rem-calc(10 10 10 0);
       background-color: $white;
       transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
+
       a.button {
         margin: rem-calc(0);
         margin-left: auto;
@@ -148,7 +158,8 @@ Stylesheet: Landing Page Stylesheet
   &.sticky .page-nav {
     position: fixed;
     top: 0;
-    &:before {
+
+    &::before {
       top: rem-calc(-20);
       opacity: 1;
       transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out;
@@ -163,6 +174,7 @@ Stylesheet: Landing Page Stylesheet
 
     nav {
       margin: rem-calc(12 0);
+
       .jump-link {
         display: none;
       }
@@ -195,15 +207,18 @@ Stylesheet: Landing Page Stylesheet
         text-align: center;
         color: $body-font-color;
         transition: left 0.3s ease-in-out, right 0.3s ease-in-out;
-        &:after {
+
+        &::after {
           display: block;
           flex: 0 0 auto;
           padding: rem-calc(0 16);
         }
+
         &:hover {
           color: $primary-color;
         }
       }
+
       .fwd {
         right: 0;
         background-image: linear-gradient(
@@ -212,10 +227,12 @@ Stylesheet: Landing Page Stylesheet
           rgba($white, 1) 50%
         );
         align-items: flex-end;
-        &:after {
+
+        &::after {
           @include icon_font($char: $icon-arrow-right);
         }
       }
+
       .bak {
         left: 0;
         background-image: linear-gradient(
@@ -224,7 +241,8 @@ Stylesheet: Landing Page Stylesheet
           rgba($white, 0) 100%
         );
         align-items: flex-start;
-        &:after {
+
+        &::after {
           @include icon_font($char: $icon-arrow-left);
         }
       }
@@ -235,10 +253,12 @@ Stylesheet: Landing Page Stylesheet
           visibility: visible;
           pointer-events: auto;
         }
+
         &.start .bak {
           visibility: hidden;
           pointer-events: none;
         }
+
         &.end .fwd {
           visibility: hidden;
           pointer-events: none;
@@ -249,13 +269,16 @@ Stylesheet: Landing Page Stylesheet
     &.sticky nav {
       .group-a {
         width: calc(100% - #{rem-calc(155)});
+
         a {
           font-size: rem-calc(13);
-          &.active:after {
+
+          &.active::after {
             top: rem-calc(38);
           }
         }
       }
+
       .group-b {
         opacity: 1;
         margin-right: 0;
@@ -271,6 +294,7 @@ Stylesheet: Landing Page Stylesheet
     nav {
       height: auto;
       min-height: rem-calc(52);
+
       .jump-link {
         position: absolute;
         z-index: 2;
@@ -287,8 +311,10 @@ Stylesheet: Landing Page Stylesheet
         background-color: $white;
         margin: 0;
         cursor: pointer;
-        &:after {
+
+        &::after {
           @include icon_font($char: $icon-arrow-down);
+
           display: block;
           flex: 0 1 #{rem-calc(22)};
           width: rem-calc(22);
@@ -305,13 +331,16 @@ Stylesheet: Landing Page Stylesheet
         margin-top: rem-calc(54);
         padding: rem-calc(12 10);
         border-top: 1px solid $medium-gray;
+
         a {
           display: block;
           padding: rem-calc(8 0 8 25);
           font-size: rem-calc(15);
+
           &.active {
             color: $body-font-color;
-            &:after {
+
+            &::after {
               content: '';
               display: block;
               position: absolute;
@@ -325,6 +354,7 @@ Stylesheet: Landing Page Stylesheet
           }
         }
       }
+
       .group-b {
         z-index: 2;
         opacity: 1;
@@ -334,7 +364,7 @@ Stylesheet: Landing Page Stylesheet
 
       &.open {
         .jump-link {
-          &:after {
+          &::after {
             @include icon_font($char: $icon-arrow-up);
           }
         }
@@ -366,6 +396,7 @@ Stylesheet: Landing Page Stylesheet
     height: 100%;
     z-index: 1;
     overflow: hidden;
+
     > * {
       position: absolute;
       left: 0;
@@ -373,9 +404,11 @@ Stylesheet: Landing Page Stylesheet
       width: 100%;
       height: 100%;
       background: transparent no-repeat center/contain;
+
       &.left {
         background: transparent no-repeat -15% 100%/45%;
       }
+
       &.right {
         background: transparent no-repeat 110% 100%/65%;
       }
@@ -384,6 +417,7 @@ Stylesheet: Landing Page Stylesheet
       > .left {
         background: transparent no-repeat -20% 100%/40%;
       }
+
       > .right {
         background: transparent no-repeat 115% 100%/60%;
       }
@@ -392,6 +426,7 @@ Stylesheet: Landing Page Stylesheet
       > .left {
         background: transparent no-repeat -25% 100%/60%;
       }
+
       > .right {
         background: transparent no-repeat 115% 100%/80%;
       }
@@ -406,12 +441,14 @@ Stylesheet: Landing Page Stylesheet
     }
 
     z-index: 2;
+
     .cell {
       > * {
         max-width: rem-calc(400);
         margin-left: auto;
         margin-right: auto;
       }
+
       > h1 {
         max-width: rem-calc(280);
       }
@@ -440,6 +477,7 @@ Stylesheet: Landing Page Stylesheet
   > .tiles-outside:first-child {
     padding-top: rem-calc(0);
   }
+
   > .tiles-outside:last-child {
     padding-bottom: rem-calc(0);
   }
@@ -465,19 +503,22 @@ Stylesheet: Landing Page Stylesheet
 
   + .section-tiles {
     padding-bottom: 1px;
+
     .tiles-outside:first-child {
       background-color: #f8e71c;
     }
+
     .tiles-container {
       position: relative;
       padding-bottom: 1px;
       margin-bottom: calc(5.6652083333333vw * 2);
       background-color: #f8e71c;
+
       .grid-container {
         margin-bottom: calc(-5.6652083333333vw * 2);
       }
 
-      &:after {
+      &::after {
         content: '';
         display: block;
         position: absolute;
@@ -488,6 +529,7 @@ Stylesheet: Landing Page Stylesheet
         background: transparent no-repeat center/cover;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 58.39'%3E%3Cdefs%3E%3Cstyle%3E.bg-1%7Bfill:%23f8e71c;%7D%3C/style%3E%3C/defs%3E%3Cpath class='bg-1' d='M0,494.21c108.92,32.92,283.14,54.24,479.5,54.24,197,0,371.65-21.45,480.5-54.55v-3.84H0Z' transform='translate(0 -490.06)'/%3E%3C/svg%3E");
       }
+
       + * {
         position: relative;
       }
@@ -497,20 +539,23 @@ Stylesheet: Landing Page Stylesheet
   &.bg-dark {
     background-color: $primary-color;
     color: $white;
+
     > .grid-container > .cell:not(.tile):not(.tile-compact) > p > a,
     .over-dark a,
     .tiles-outside a {
       color: $white;
+
       &:last-child {
-        &:after {
+        &::after {
           display: inline-block;
           margin-left: 0.3em;
           font-size: 0.8em;
           transition: margin 0.2s ease-in-out;
           @include icon_font($char: $icon-arrow-right);
         }
+
         &:hover {
-          &:after {
+          &::after {
             margin-left: 0.5em;
             margin-right: -0.2em;
           }
@@ -523,10 +568,12 @@ Stylesheet: Landing Page Stylesheet
         background-color: $primary-color;
         color: $white;
       }
+
       .tiles-container {
         background-color: $primary-color;
         color: $white;
-        &:after {
+
+        &::after {
           background: transparent no-repeat center/cover;
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 58.39'%3E%3Cdefs%3E%3Cstyle%3E.bg-1%7Bfill:%230060df;%7D%3C/style%3E%3C/defs%3E%3Cpath class='bg-1' d='M0,494.21c108.92,32.92,283.14,54.24,479.5,54.24,197,0,371.65-21.45,480.5-54.55v-3.84H0Z' transform='translate(0 -490.06)'/%3E%3C/svg%3E");
         }
@@ -541,9 +588,11 @@ Stylesheet: Landing Page Stylesheet
       .tiles-outside:first-child {
         background-color: #6200a4;
       }
+
       .tiles-container {
         background-color: #6200a4;
-        &:after {
+
+        &::after {
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 58.39'%3E%3Cdefs%3E%3Cstyle%3E.bg-1%7Bfill:%236200a4;%7D%3C/style%3E%3C/defs%3E%3Cpath class='bg-1' d='M0,494.21c108.92,32.92,283.14,54.24,479.5,54.24,197,0,371.65-21.45,480.5-54.55v-3.84H0Z' transform='translate(0 -490.06)'/%3E%3C/svg%3E");
         }
       }
@@ -557,9 +606,11 @@ Stylesheet: Landing Page Stylesheet
       .tiles-outside:first-child {
         background-color: #ff9400;
       }
+
       .tiles-container {
         background-color: #ff9400;
-        &:after {
+
+        &::after {
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 58.39'%3E%3Cdefs%3E%3Cstyle%3E.bg-1%7Bfill:%23ff9400;%7D%3C/style%3E%3C/defs%3E%3Cpath class='bg-1' d='M0,494.21c108.92,32.92,283.14,54.24,479.5,54.24,197,0,371.65-21.45,480.5-54.55v-3.84H0Z' transform='translate(0 -490.06)'/%3E%3C/svg%3E");
         }
       }
@@ -601,7 +652,8 @@ Stylesheet: Landing Page Stylesheet
   padding: rem-calc(20 26) !important;
   margin: rem-calc(8 0);
   color: $body-font-color;
-  &:before {
+
+  &::before {
     left: rem-calc(6);
     width: calc(100% - #{rem-calc(12)});
   }
@@ -628,6 +680,7 @@ Stylesheet: Landing Page Stylesheet
       border-radius: $global-radius;
       transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
+
     a:hover img {
       box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
       transform: scale(1.01);
@@ -644,6 +697,7 @@ Stylesheet: Landing Page Stylesheet
     &:hover {
       color: $body-font-color;
       text-decoration: none;
+
       .block-link-inline {
         text-decoration: underline;
       }
@@ -653,7 +707,8 @@ Stylesheet: Landing Page Stylesheet
   @include breakpoint(medium) {
     padding: rem-calc(24 34 30) !important;
     margin: rem-calc(12 0);
-    &:before {
+
+    &::before {
       left: rem-calc(12);
       width: calc(100% - #{rem-calc(24)});
     }
@@ -662,9 +717,11 @@ Stylesheet: Landing Page Stylesheet
       display: flex;
       flex-flow: column nowrap;
       justify-content: stretch;
+
       > * {
         flex: 0 0 auto;
         width: 100%;
+
         &:last-child {
           flex: 1 1 auto;
           display: flex;
@@ -681,9 +738,11 @@ Stylesheet: Landing Page Stylesheet
         display: flex;
         flex-flow: column nowrap;
         justify-content: stretch;
+
         > * {
           flex: 0 0 auto;
           width: 100%;
+
           &:last-child {
             flex: 1 1 auto;
             display: flex;
@@ -701,6 +760,7 @@ Stylesheet: Landing Page Stylesheet
       &:not(.medium-6):not(.no-img) {
         > * {
           max-width: 70%;
+
           &:first-child {
             position: absolute;
             top: rem-calc(12);
@@ -715,6 +775,7 @@ Stylesheet: Landing Page Stylesheet
       &:not(.medium-6):not(.no-img) .block-link {
         > * {
           max-width: 70%;
+
           &:first-child {
             position: absolute;
             top: rem-calc(12);
@@ -731,6 +792,7 @@ Stylesheet: Landing Page Stylesheet
       &.medium-6:not(.no-img) {
         > * {
           max-width: 70%;
+
           &:first-child {
             position: absolute;
             top: rem-calc(12);
@@ -742,11 +804,12 @@ Stylesheet: Landing Page Stylesheet
     }
 
     &.tile-block-link {
-      &:before {
+      &::before {
         will-change: transform;
         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
       }
-      &:hover:before {
+
+      &:hover::before {
         box-shadow: #{rem-calc(0 4 20)} rgba(12, 12, 13, 0.33);
         transform: scale(1.01);
       }
@@ -754,6 +817,7 @@ Stylesheet: Landing Page Stylesheet
       &.medium-6:not(.no-img) .block-link {
         > * {
           max-width: 70%;
+
           &:first-child {
             position: absolute;
             top: rem-calc(12);
@@ -772,7 +836,8 @@ Stylesheet: Landing Page Stylesheet
   padding: rem-calc(20 26) !important;
   margin: rem-calc(8 0);
   color: $body-font-color;
-  &:before {
+
+  &::before {
     content: '';
     display: block;
     position: absolute;
@@ -788,6 +853,7 @@ Stylesheet: Landing Page Stylesheet
   > * {
     position: relative;
     z-index: 2;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -810,6 +876,7 @@ Stylesheet: Landing Page Stylesheet
       top: rem-calc(12);
       right: rem-calc(24);
       width: rem-calc(32);
+
       img {
         width: rem-calc(32);
       }
@@ -821,16 +888,19 @@ Stylesheet: Landing Page Stylesheet
 
     .block-link {
       padding: rem-calc(20 26) !important;
+
       > * {
         &:first-child {
           position: absolute;
           top: rem-calc(12);
           right: rem-calc(24);
           width: rem-calc(32);
+
           img {
             width: rem-calc(32);
           }
         }
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -844,6 +914,7 @@ Stylesheet: Landing Page Stylesheet
     &:hover {
       color: $body-font-color;
       text-decoration: none;
+
       .block-link-inline {
         text-decoration: underline;
       }
@@ -853,7 +924,8 @@ Stylesheet: Landing Page Stylesheet
   @include breakpoint(medium) {
     padding: rem-calc(24 34 30) !important;
     margin: rem-calc(12 0);
-    &:before {
+
+    &::before {
       left: rem-calc(12);
       width: calc(100% - #{rem-calc(24)});
     }
@@ -862,18 +934,21 @@ Stylesheet: Landing Page Stylesheet
       display: flex;
       flex-flow: column nowrap;
       justify-content: stretch;
+
       > * {
         flex: 0 0 auto;
         align-items: flex-end;
         width: calc(100% - #{rem-calc(50)});
         margin-right: 0;
         margin-left: auto;
+
         &:first-child {
           width: rem-calc(32);
           top: rem-calc(24);
           left: rem-calc(34);
           right: auto;
         }
+
         &:last-child {
           flex: 1 1 auto;
           display: flex;
@@ -886,23 +961,27 @@ Stylesheet: Landing Page Stylesheet
 
     &.tile-block-link {
       padding: 0 !important;
+
       .block-link {
         height: 100%;
         display: flex;
         flex-flow: column nowrap;
         justify-content: stretch;
         padding: rem-calc(24 34 30) !important;
+
         > * {
           flex: 0 0 auto;
           align-items: flex-end;
           width: calc(100% - #{rem-calc(50)});
           margin-right: 0;
           margin-left: auto;
+
           &:first-child {
             top: rem-calc(24);
             left: rem-calc(34);
             right: auto;
           }
+
           &:last-child {
             flex: 1 1 auto;
             display: flex;
@@ -912,6 +991,7 @@ Stylesheet: Landing Page Stylesheet
             margin-bottom: 0;
           }
         }
+
         &.align-start p:last-child {
           justify-content: flex-start !important;
         }
@@ -921,11 +1001,12 @@ Stylesheet: Landing Page Stylesheet
 
   @include breakpoint(large) {
     &.tile-block-link {
-      &:before {
+      &::before {
         will-change: transform;
         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
       }
-      &:hover:before {
+
+      &:hover::before {
         box-shadow: #{rem-calc(0 4 20)} rgba(12, 12, 13, 0.33);
         transform: scale(1.01);
       }
@@ -946,10 +1027,12 @@ Stylesheet: Landing Page Stylesheet
     max-height: rem-calc(108);
     margin: 0 auto;
   }
+
   a img {
     border-radius: $global-radius;
     transition: box-shadow 0.2s ease-in-out;
   }
+
   a:hover img {
     box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.33);
   }
@@ -971,9 +1054,11 @@ Stylesheet: Landing Page Stylesheet
     display: flex;
     flex-flow: column nowrap;
     justify-content: stretch;
+
     > * {
       flex: 0 0 auto;
       width: 100%;
+
       &:last-child {
         flex: 1 1 auto;
         display: flex;
@@ -989,6 +1074,7 @@ Stylesheet: Landing Page Stylesheet
       }
     }
   }
+
   > * {
     position: relative;
     z-index: 2;
@@ -1006,16 +1092,21 @@ Stylesheet: Landing Page Stylesheet
       margin-top: 0;
     }
   }
+
   > p a {
     @include button();
+
     font-size: 0.733333333333333rem;
     padding: rem-calc(6 8);
+
     &:hover {
       text-decoration: none;
     }
   }
+
   .secondary-actions {
     font-size: $small-font-size;
+
     a {
       display: block;
       padding-top: rem-calc(6);
@@ -1026,6 +1117,7 @@ Stylesheet: Landing Page Stylesheet
 .tiles-outside {
   padding-top: rem-calc(10);
   padding-bottom: rem-calc(20);
+
   h1,
   h2,
   h3,
@@ -1036,6 +1128,7 @@ Stylesheet: Landing Page Stylesheet
       margin-top: 0;
     }
   }
+
   &:first-child {
     *:last-child {
       margin-bottom: 0;
@@ -1045,6 +1138,7 @@ Stylesheet: Landing Page Stylesheet
       padding-bottom: rem-calc(6);
     }
   }
+
   &:last-child p:not(:last-child) {
     margin-bottom: 0.5rem;
   }
@@ -1066,6 +1160,7 @@ Stylesheet: Landing Page Stylesheet
   justify-content: center;
   margin: rem-calc(10 0);
   height: rem-calc(8);
+
   > * {
     flex: 0 0 #{rem-calc(20)};
     width: rem-calc(20);
@@ -1074,6 +1169,7 @@ Stylesheet: Landing Page Stylesheet
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+
     button {
       flex: 0 0 #{rem-calc(8)};
       width: rem-calc(8);
@@ -1084,10 +1180,12 @@ Stylesheet: Landing Page Stylesheet
       background-color: #99b8dc;
       cursor: pointer;
       transition: transform 0.2s ease-in-out;
+
       &:hover {
         transform: scale(1.3);
       }
     }
+
     &.slick-active button {
       background-color: $primary-color;
       pointer-events: none;
@@ -1115,6 +1213,7 @@ Stylesheet: Landing Page Stylesheet
       .slick-track {
         display: flex;
         align-items: stretch;
+
         .slick-slide {
           display: flex;
           flex-flow: column nowrap;
@@ -1122,7 +1221,8 @@ Stylesheet: Landing Page Stylesheet
           height: auto;
           padding: rem-calc(20 28) !important;
           margin: rem-calc(16 0 20 0);
-          &:before {
+
+          &::before {
             content: '';
             display: block;
             position: absolute;
@@ -1133,6 +1233,8 @@ Stylesheet: Landing Page Stylesheet
           > * {
             flex: 0 0 auto;
             width: 100%;
+
+            /* stylelint-disable-next-line max-nesting-depth */
             &:last-child {
               flex: 1 1 auto;
               display: flex;
@@ -1186,14 +1288,15 @@ Stylesheet: Landing Page Stylesheet
   }
 
   a:last-child {
-    &:after {
+    &::after {
       display: inline-block;
       margin-left: 0.3em;
       font-size: 0.8em;
       transition: margin 0.2s ease-in-out;
       @include icon_font($char: $icon-arrow-right);
     }
-    &:hover:after {
+
+    &:hover::after {
       margin-left: 0.5em;
       margin-right: -0.2em;
     }
@@ -1201,6 +1304,7 @@ Stylesheet: Landing Page Stylesheet
 
   &.bg-dark {
     color: $white;
+
     a {
       color: $white;
     }
@@ -1232,15 +1336,18 @@ Stylesheet: Landing Page Stylesheet
 .anatomy-container {
   .anatomy-illustration {
     text-align: center;
+
     #anatomy-of-an-extension-graphic {
       display: none;
     }
   }
+
   .anatomy-description {
     position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+
     #anatomy-of-an-extension-graphic-mobile {
       display: none;
     }
@@ -1253,16 +1360,18 @@ Stylesheet: Landing Page Stylesheet
       color: $primary-color;
       cursor: pointer;
 
-      &:after {
+      &::after {
         display: inline-block;
         margin-left: 0.3em;
         font-size: 0.8em;
         transition: margin 0.2s ease-in-out;
         @include icon_font($char: $icon-arrow-right);
       }
+
       &:hover {
         text-decoration: underline;
-        &:after {
+
+        &::after {
           margin-left: 0.5em;
           margin-right: -0.2em;
         }
@@ -1276,6 +1385,7 @@ Stylesheet: Landing Page Stylesheet
 
   .manifest {
     text-align: center;
+
     img {
       display: inline-block;
       margin-right: 0.3em;
@@ -1286,15 +1396,19 @@ Stylesheet: Landing Page Stylesheet
     display: flex;
     flex-flow: row nowrap;
     justify-content: stretch;
+
     .anatomy-illustration {
       flex: 0 0 70%;
+
       #anatomy-of-an-extension-graphic {
         display: block;
         margin: #{rem-calc(32)} auto 0;
         max-width: 100%;
+
         .tile {
           cursor: pointer;
           transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
           &.hover {
             transform: translate(#{rem-calc(8)}, 0);
           }
@@ -1307,19 +1421,24 @@ Stylesheet: Landing Page Stylesheet
         #box_bottom_back {
           transition: transform 0.3s ease-in-out, opacity 0.3s 0.15s ease-in-out;
         }
+
         #box_bottom_front {
           transition: transform 0.3s ease-in-out;
         }
+
         #box_top_back {
           transition: transform 0.3s ease-in-out;
         }
+
         #box_top_front_transparent {
           transition: transform 0.3s ease-in-out;
         }
+
         #box_top_front_solid {
           transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
           opacity: 0;
         }
+
         #box_sides {
           transition: transform 0.3s ease-in-out;
         }
@@ -1330,58 +1449,73 @@ Stylesheet: Landing Page Stylesheet
               scale(1, 0.294871794871795);
             opacity: 0;
           }
+
           #box_bottom_front {
             transform: translateY(#{rem-calc(-110)});
           }
+
           #box_top_back {
             transform: translateY(#{rem-calc(110)});
           }
+
           #box_top_front_transparent {
             transform: translateY(#{rem-calc(110)});
           }
+
           #box_top_front_solid {
             transform: translateY(#{rem-calc(110)});
             opacity: 1;
           }
+
           #box_sides {
             transform: translateY(calc(50% - #{rem-calc(74)}))
               scale(1, 0.294871794871795);
           }
         }
+
         &:not(.step-two) {
           #background {
             transform: translateY(#{rem-calc(-30)});
             opacity: 0;
           }
+
           #content {
             opacity: 0;
           }
+
           #interface {
             transform: translateY(#{rem-calc(30)});
             opacity: 0;
           }
+
           + .manifest {
             opacity: 0;
           }
         }
       }
     }
+
     .anatomy-description {
       flex: 0 0 30%;
+
       button {
         margin: rem-calc(15 0);
       }
     }
+
     #anatomy-control {
       button {
         transition: opacity 0.3s 0.15s ease-in-out, transform 0.3s ease-in-out;
       }
+
       &:not(.step-two) {
         button {
           opacity: 0;
+
           &:first-of-type {
             transform: translateY(#{rem-calc(30)});
           }
+
           &:last-of-type {
             transform: translateY(#{rem-calc(-30)});
           }
@@ -1397,6 +1531,7 @@ Stylesheet: Landing Page Stylesheet
       margin: rem-calc(16 0 8);
       align-items: center;
       justify-content: space-between;
+
       #anatomy-of-an-extension-graphic-mobile {
         display: block;
         position: absolute;
@@ -1404,9 +1539,11 @@ Stylesheet: Landing Page Stylesheet
         top: 0;
         right: 0;
         bottom: 0;
+
         #mobile-box_bottom_back {
           opacity: 0.2;
         }
+
         #mobile-box_top_front_solid {
           opacity: 0.2;
         }
@@ -1433,8 +1570,7 @@ Stylesheet: Landing Page Stylesheet
 #rss-feed-source {
   display: none;
 }
-#rss-feed {
-}
+
 .meta-date {
   font-size: rem-calc(13);
   color: $dark-gray;
@@ -1447,61 +1583,79 @@ Stylesheet: Landing Page Stylesheet
   background-color: #363959;
   color: $white;
   font-size: $small-font-size;
+
   h4 {
     margin-top: rem-calc(10);
   }
+
   p {
     color: #b1b1b3;
   }
+
   a {
     color: $white;
-    &:before {
+
+    &::before {
       display: inline-block;
     }
+
     &:hover {
       color: $white;
-      &:before {
+
+      &::before {
         text-decoration: none;
       }
     }
-    &.twitter:before {
+
+    &.twitter::before {
       @include icon_font($char: $icon-twitter);
+
       font-size: rem-calc(24);
       vertical-align: middle;
       margin-right: 0.3em;
     }
-    &.telegram:before {
+
+    &.telegram::before {
       @include icon_font($char: $icon-telegram);
+
       font-size: rem-calc(24);
       vertical-align: middle;
       margin-right: 0.3em;
     }
-    &.irc:before {
+
+    &.irc::before {
       @include icon_font($char: $icon-irc);
+
       font-size: rem-calc(24);
       vertical-align: middle;
       margin-right: 0.3em;
     }
-    &.mailinglist:before {
+
+    &.mailinglist::before {
       @include icon_font($char: $icon-mail);
+
       font-size: rem-calc(24);
       vertical-align: middle;
       margin-right: 0.3em;
     }
   }
+
   input[type='text'],
   input[type='email'] {
     background-color: rgba(#b1b1b3, 0.2);
     border: 0;
     color: $white;
+
     &::placeholder {
       color: #b1b1b3;
     }
   }
+
   .button {
     background-color: $white;
     color: $primary-color;
     margin-top: rem-calc(16);
+
     &:hover {
       background-color: $light-gray;
     }

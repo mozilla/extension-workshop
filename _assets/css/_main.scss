@@ -19,6 +19,7 @@ h4,
 h5,
 h6 {
   margin-bottom: $header-margin-bottom;
+
   &:not(:first-child) {
     margin-top: 1.3333em;
     @include breakpoint(medium) {
@@ -47,8 +48,9 @@ a:not(.button) {
   &:hover {
     text-decoration: underline;
     color: $primary-color;
-    &:before,
-    &:after {
+
+    &::before,
+    &::after {
       text-decoration: none;
     }
   }
@@ -106,6 +108,7 @@ button:focus {
 a.tile-block-link:focus {
   text-decoration: none;
   box-shadow: none;
+
   &::before {
     box-shadow: inset 0 0 0 1px #0a84ff, 0 0 0 1px #0a84ff,
       0 0 0 4px rgba(10, 132, 255, 0.3);
@@ -140,8 +143,6 @@ blockquote {
   p {
     margin-bottom: 0;
   }
-  cite {
-  }
 }
 
 // Horizontal List
@@ -154,8 +155,9 @@ blockquote {
 // Down Arrow
 // ------
 
-.cta-down:after {
+.cta-down::after {
   @include icon_font($char: $icon-arrow-down);
+
   display: inline-block;
   margin: 0.5rem auto;
   font-size: rem-calc(20);
@@ -165,18 +167,21 @@ blockquote {
 // ------
 
 a[title='View on Github'] {
-  &:before {
+  &::before {
     @include icon_font($char: $icon-github);
+
     display: inline-block;
     font-size: rem-calc(24);
     margin-right: 0.6rem;
     vertical-align: middle;
   }
-  &:after {
+
+  &::after {
     display: none !important;
   }
+
   &:hover {
-    &:before {
+    &::before {
       text-decoration: none;
     }
   }
@@ -197,6 +202,7 @@ a[title='View on Github'] {
 .newsletter_errors {
   display: none;
 }
+
 .newsletter_thanks {
   display: none;
 }
@@ -205,14 +211,17 @@ a[title='View on Github'] {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
+
   input[type='checkbox'] {
     flex: 0 0 auto;
     margin: rem-calc(3 3 0 0);
   }
+
   label {
     flex: 1 1 auto;
     color: $white;
     font-size: $small-font-size;
+
     a {
       text-decoration: underline;
     }
@@ -224,16 +233,21 @@ a[title='View on Github'] {
   flex-flow: row wrap;
   justify-content: space-between;
   max-width: rem-calc(460);
+
   > * {
     flex: 1 1 100%;
+
     &#newsletter_email {
       flex: 0 0 calc(100% - #{rem-calc(142)});
     }
+
     &#newsletter_privacy {
       order: 2;
     }
+
     &#newsletter_submit {
       flex: 0 0 #{rem-calc(132)};
+
       button {
         margin: 0;
       }
@@ -252,6 +266,7 @@ a[title='View on Github'] {
 html {
   height: 100%;
 }
+
 .site {
   display: flex;
   flex-direction: column;
@@ -277,12 +292,14 @@ html {
   margin: 0;
   font-size: rem-calc(15);
   line-height: 1;
+
   a {
     position: relative;
     display: block;
     padding: rem-calc(15 0 14 41);
     color: $body-font-color;
-    &:before {
+
+    &::before {
       content: '';
       position: absolute;
       left: 0;
@@ -293,6 +310,7 @@ html {
       background: transparent asset_url('firefox-logo.png @optim') no-repeat
         center/contain;
     }
+
     &:hover {
       text-decoration: none;
       color: inherit;
@@ -301,9 +319,11 @@ html {
 
   @include breakpoint(medium) {
     font-size: rem-calc(20);
+
     a {
       padding: rem-calc(15 0 14 58);
-      &:before {
+
+      &::before {
         top: 0;
         width: rem-calc(48);
         height: rem-calc(49);
@@ -347,7 +367,8 @@ html {
   padding: rem-calc(20 38) !important;
   margin: rem-calc(8 0);
   color: $body-font-color;
-  &:before {
+
+  &::before {
     content: '';
     display: block;
     position: absolute;
@@ -363,23 +384,29 @@ html {
   > * {
     position: relative;
     z-index: 2;
+
     &:first-child {
       display: none;
     }
+
     &:nth-last-child(2) {
       margin-bottom: 0;
     }
+
     &:last-child {
       position: absolute;
       top: rem-calc(12);
       right: rem-calc(20);
+
       button {
         color: $medium-gray;
         font-size: rem-calc(24);
         cursor: pointer;
-        &:before {
+
+        &::before {
           @include icon_font($char: $icon-close);
         }
+
         &:hover {
           color: $primary-color;
         }
@@ -406,12 +433,14 @@ html {
       width: calc(100% - #{rem-calc(50)});
       margin-right: 0;
       margin-left: auto;
+
       &:first-child {
         display: block;
         position: absolute;
         width: rem-calc(32);
         top: rem-calc(24);
         left: rem-calc(34);
+
         img {
           width: rem-calc(32);
         }
@@ -432,7 +461,7 @@ html {
     margin: rem-calc(12 0);
   }
 
-  &:before {
+  &::before {
     content: '';
     display: block;
     position: absolute;
@@ -448,6 +477,7 @@ html {
   > * {
     position: relative;
     z-index: 2;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -482,6 +512,7 @@ html {
   background: rgba(0, 0, 0, 0.85);
   transition: left 0.3s ease-in-out, top 0.3s ease-in-out,
     width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
   iframe,
   object,
   embed,
@@ -492,6 +523,7 @@ html {
     width: 100%;
     height: 100%;
   }
+
   .flex-video {
     position: absolute;
     top: 0;
@@ -523,11 +555,14 @@ html {
   cursor: pointer;
   text-align: center;
   transition: transform 0.15s ease-in-out, opacity 0.3s ease-in-out;
-  &:before {
+
+  &::before {
     @include icon_font($char: $icon-close);
+
     display: block;
     line-height: rem-calc(32);
   }
+
   &:hover {
     transform: scale(1.1);
   }
@@ -537,11 +572,13 @@ html {
     font-size: rem-calc(36);
     width: rem-calc(48);
     height: rem-calc(48);
-    &:before {
+
+    &::before {
       line-height: rem-calc(48);
     }
   }
 }
+
 .loading #stdVideo-close {
   opacity: 0;
 }
@@ -561,7 +598,6 @@ html {
     display: block;
     position: relative;
     overflow: hidden;
-    display: block;
     width: rem-calc(48);
     height: rem-calc(48);
     margin: 1em 0;
@@ -575,9 +611,11 @@ html {
     cursor: pointer;
     transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
       transform 0.2s ease-in-out;
-    &:before {
+
+    &::before {
       @include icon_font($char: $icon-play);
     }
+
     &:hover {
       color: $primary-color-hover;
       box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.33);
@@ -586,7 +624,8 @@ html {
     &.loading {
       background-color: $primary-color;
       color: $white;
-      &:before {
+
+      &::before {
         content: '';
         position: absolute;
         left: 0;
@@ -622,6 +661,7 @@ html {
         display: none;
       }
     }
+
     .video-link {
       position: absolute;
       top: 0;
@@ -635,7 +675,8 @@ html {
         .video-play {
           background-color: $primary-color;
           color: $white;
-          &:before {
+
+          &::before {
             content: '';
             position: absolute;
             left: 0;
@@ -652,6 +693,7 @@ html {
 
   @include breakpoint(medium) {
     margin: rem-calc(16 0);
+
     .video-cta {
       position: absolute;
       z-index: 2;
@@ -664,6 +706,7 @@ html {
       flex-flow: column nowrap;
       justify-content: center;
       transition: opacity 0.3s ease-in-out;
+
       &.playing {
         opacity: 0;
         pointer-events: none;
@@ -681,6 +724,7 @@ html {
   height: 100vh;
   z-index: 100;
   background: rgba(0, 0, 0, 0.8);
+
   .bg {
     position: absolute;
     left: 0;
@@ -688,16 +732,19 @@ html {
     width: 100%;
     height: 100%;
   }
+
   .grid-container {
     height: 100%;
     position: relative;
     z-index: 3;
     pointer-events: none;
+
     .cell {
       pointer-events: auto;
       position: relative;
     }
   }
+
   #stdVideo {
     position: relative;
     height: 0;
@@ -706,14 +753,16 @@ html {
     transition: left 0.3s ease-in-out, top 0.3s ease-in-out,
       width 0.3s ease-in-out, height 0.3s ease-in-out, padding 0.3s ease-in-out,
       opacity 0.3s ease-in-out;
+
     &.playing {
       opacity: 1;
       height: auto;
       padding-bottom: 56.25%;
     }
   }
+
   &.loading {
-    &:before {
+    &::before {
       content: '';
       position: absolute;
       z-index: 2;
@@ -740,6 +789,7 @@ html {
 
   a {
     color: $white;
+
     &:hover {
       color: $white;
     }
@@ -758,31 +808,39 @@ html {
 
   .mzp-c-footer-links-social {
     @include horizontal_list($margin: 0.6666em);
+
     a {
       font-size: 0;
-      &:before {
+
+      &::before {
         display: inline-block;
         font-size: rem-calc(20);
         vertical-align: middle;
       }
+
       &:hover {
         text-decoration: none;
       }
     }
-    .twitter:before {
+
+    .twitter::before {
       @include icon_font($char: $icon-twitter);
     }
-    .instagram:before {
+
+    .instagram::before {
       @include icon_font($char: $icon-instagram);
     }
-    .youtube:before {
+
+    .youtube::before {
       @include icon_font($char: $icon-youtube);
     }
   }
 
   .mzp-c-footer-legal ul {
     @include horizontal_list($margin: 1em);
+
     margin-bottom: 1em;
+
     a {
       &:hover {
         text-decoration: underline;
@@ -793,6 +851,7 @@ html {
   .mzp-c-footer-primary-logo {
     margin-bottom: rem-calc(16);
     padding-right: rem-calc(24);
+
     a {
       display: inline-block;
       width: 100px;
@@ -801,7 +860,7 @@ html {
       text-decoration: none;
       text-indent: 120%;
       white-space: nowrap;
-      background: #ffffff asset_url('moz-logo.svg @optim') no-repeat 0 0 /#{rem-calc(
+      background: #fff asset_url('moz-logo.svg @optim') no-repeat 0 0 /#{rem-calc(
           100
         )};
       color: $white;
@@ -823,6 +882,7 @@ html {
     justify-content: flex-start;
     font-size: 1rem;
     align-items: center;
+
     label {
       position: absolute;
       width: 1px;
@@ -830,11 +890,13 @@ html {
       overflow: hidden;
       margin: -1px;
     }
+
     .mzp-c-cta-link {
       flex: 0 0 auto;
       margin-right: rem-calc(24);
       font-weight: $global-weight-bold;
     }
+
     select {
       flex: 0 0 auto;
       width: auto;
