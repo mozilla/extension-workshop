@@ -93,6 +93,9 @@ jobs:
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
               EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}" \
               ./.utils/circleci/invalidate-cloudfront-cache.sh
+            else
+              ./.utils/deploy.sh
+              ./.utils/circleci/invalidate-cloudfront-cache.sh
             fi
 
 workflows:
