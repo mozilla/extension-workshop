@@ -63,18 +63,38 @@ jobs:
       - run:
           name: extension workshop deployment
           command: |
-            # show env variables but not the AWS secrets!
-            env | egrep -v AWS_
-            # push master branch to -stage env per
-            # https://github.com/mozilla/extension-workshop/issues/42
             if [ "$CIRCLE_BRANCH" == "master" ] ; then
-              export AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"
-              export AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"
-              export DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"
-              export EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}"
+              # push master branch to -dev env per
+              # https://github.com/mozilla/extension-workshop/issues/131
+              AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
+              AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
+              DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
+              EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
+              ./.utils/deploy.sh
+
+              AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
+              AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
+              DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
+              EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
+              ./.utils/circleci/invalidate-cloudfront-cache.sh
+
+              # push master branch to -stage env per
+              # https://github.com/mozilla/extension-workshop/issues/42
+              AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
+              AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"         \
+              DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
+              EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}" \
+              ./.utils/deploy.sh
+
+              AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
+              AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"         \
+              DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
+              EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}" \
+              ./.utils/circleci/invalidate-cloudfront-cache.sh
+            else
+              ./.utils/deploy.sh
+              ./.utils/circleci/invalidate-cloudfront-cache.sh
             fi
-            ./.utils/deploy.sh
-            ./.utils/circleci/invalidate-cloudfront-cache.sh
 
 workflows:
   version: 2
