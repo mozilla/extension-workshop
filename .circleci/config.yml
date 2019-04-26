@@ -63,8 +63,6 @@ jobs:
       - run:
           name: extension workshop deployment
           command: |
-            # show env variables but not the AWS secrets!
-            env | egrep -v AWS_
             if [ "$CIRCLE_BRANCH" == "master" ] ; then
               # push master branch to -dev env per
               # https://github.com/mozilla/extension-workshop/issues/131
