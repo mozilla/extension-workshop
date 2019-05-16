@@ -22,7 +22,7 @@
     "prettier": "1.17.1",
     "pretty-quick": "1.10.0",
     "rimraf": "2.6.3",
-    "svgo": "1.2.1"
+    "svgo": "1.2.2"
   },
   "scripts": {
     "lint": "eslint .",
