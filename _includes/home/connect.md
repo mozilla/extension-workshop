@@ -1,7 +1,7 @@
 <!-- Section Intro -->
 <div class="panel section-intro">
 <div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-12 medium-10 large-8 text-center" markdown="1">
+<div class="cell small-12 medium-10 xlarge-8 text-center" markdown="1">
 
 ## Connect with the Community
 
@@ -52,7 +52,7 @@ Connect with thousands of developers and contribute to the extension ecosystem.
 </div>
 </div>
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
-<div class="cell small-12 medium-8 large-6 text-center" markdown="1">
+<div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
 
 [Learn more about the community](https://wiki.mozilla.org/Add-ons/Community/)
 

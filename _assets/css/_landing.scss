@@ -434,13 +434,12 @@ Stylesheet: Landing Page Stylesheet
   }
 
   .banner-content {
-    height: 80%;
     position: relative;
+    z-index: 2;
+    height: 80%;
     @include breakpoint(medium) {
       padding-top: 5em;
     }
-
-    z-index: 2;
 
     .cell {
       > * {
@@ -449,9 +448,6 @@ Stylesheet: Landing Page Stylesheet
         margin-right: auto;
       }
 
-      > h1 {
-        max-width: rem-calc(280);
-      }
     }
   }
 
@@ -509,29 +505,12 @@ Stylesheet: Landing Page Stylesheet
     }
 
     .tiles-container {
-      position: relative;
       padding-bottom: 1px;
-      margin-bottom: calc(5.6652083333333vw * 2);
+      margin-bottom: rem-calc(100);
       background-color: #f8e71c;
 
       .grid-container {
-        margin-bottom: calc(-5.6652083333333vw * 2);
-      }
-
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: -5.6652083333333vw;
-        height: 6.081875vw;
-        width: 100vw;
-        background: transparent no-repeat center/cover;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 58.39'%3E%3Cdefs%3E%3Cstyle%3E.bg-1%7Bfill:%23f8e71c;%7D%3C/style%3E%3C/defs%3E%3Cpath class='bg-1' d='M0,494.21c108.92,32.92,283.14,54.24,479.5,54.24,197,0,371.65-21.45,480.5-54.55v-3.84H0Z' transform='translate(0 -490.06)'/%3E%3C/svg%3E");
-      }
-
-      + * {
-        position: relative;
+        margin-bottom: rem-calc(-100);
       }
     }
   }
@@ -572,11 +551,6 @@ Stylesheet: Landing Page Stylesheet
       .tiles-container {
         background-color: $primary-color;
         color: $white;
-
-        &::after {
-          background: transparent no-repeat center/cover;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 58.39'%3E%3Cdefs%3E%3Cstyle%3E.bg-1%7Bfill:%230060df;%7D%3C/style%3E%3C/defs%3E%3Cpath class='bg-1' d='M0,494.21c108.92,32.92,283.14,54.24,479.5,54.24,197,0,371.65-21.45,480.5-54.55v-3.84H0Z' transform='translate(0 -490.06)'/%3E%3C/svg%3E");
-        }
       }
     }
   }
@@ -591,10 +565,6 @@ Stylesheet: Landing Page Stylesheet
 
       .tiles-container {
         background-color: #6200a4;
-
-        &::after {
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 58.39'%3E%3Cdefs%3E%3Cstyle%3E.bg-1%7Bfill:%236200a4;%7D%3C/style%3E%3C/defs%3E%3Cpath class='bg-1' d='M0,494.21c108.92,32.92,283.14,54.24,479.5,54.24,197,0,371.65-21.45,480.5-54.55v-3.84H0Z' transform='translate(0 -490.06)'/%3E%3C/svg%3E");
-        }
       }
     }
   }
@@ -609,10 +579,6 @@ Stylesheet: Landing Page Stylesheet
 
       .tiles-container {
         background-color: #ff9400;
-
-        &::after {
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 58.39'%3E%3Cdefs%3E%3Cstyle%3E.bg-1%7Bfill:%23ff9400;%7D%3C/style%3E%3C/defs%3E%3Cpath class='bg-1' d='M0,494.21c108.92,32.92,283.14,54.24,479.5,54.24,197,0,371.65-21.45,480.5-54.55v-3.84H0Z' transform='translate(0 -490.06)'/%3E%3C/svg%3E");
-        }
       }
     }
   }
@@ -1197,13 +1163,11 @@ Stylesheet: Landing Page Stylesheet
 .news-slider {
   @include breakpoint(medium down) {
     padding: rem-calc(0 0 1);
-    margin-bottom: calc(#{5.6652083333333vw * 5} + #{rem-calc(96)}) !important;
+    margin-bottom: rem-calc(150) !important;
 
     .grid-container {
       padding: rem-calc(0 0 1);
-      margin-bottom: calc(
-        #{-5.6652083333333vw * 5} + #{rem-calc(-96)}
-      ) !important;
+      margin-bottom: rem-calc(-150) !important;
 
       .slick-list {
         position: relative;
