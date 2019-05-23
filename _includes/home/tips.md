@@ -1,7 +1,7 @@
 <!-- Section Intro -->
 <div class="panel section-intro bg-dark bg-alt2">
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
-<div class="cell small-12 medium-8 large-6 text-center" markdown="1">
+<div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
 
 ## Tools to Build Faster
 
@@ -67,7 +67,7 @@ Check your extension for errors, and modify the code as needed.
 
 </div>
 <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
-<div class="cell small-12 medium-8 large-6 text-center" markdown="1">
+<div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
 
 [More development tools](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Development_Tools)
 
@@ -80,7 +80,7 @@ Check your extension for errors, and modify the code as needed.
 <div class="section-tiles bg-grey">
 <div class="tiles-outside">
 <div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-12 medium-8 large-6 text-center" markdown="1">
+<div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
 
 ## Distribute Your Extension
 
@@ -126,7 +126,7 @@ Publish your signed extension on your own, and explore alternate installation me
 <!-- Section More -->
 <div class="section-more panel bg-grey">
 <div class="grid-container grid-x grid-padding-x align-center more-intro">
-<div class="cell small-12 medium-10 large-8 text-center" markdown="1">
+<div class="cell small-12 medium-10 xlarge-8 text-center" markdown="1">
 
 ## Attract Users with Content and Design
 
