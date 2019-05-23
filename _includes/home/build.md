@@ -1,14 +1,14 @@
 <!-- Section Intro -->
 <div class="panel section-intro bg-dark bg-alt1">
 <div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-12 medium-10 large-8 text-center" markdown="1">
+<div class="cell small-12 medium-10 xlarge-8 text-center" markdown="1">
 
 ## How to Build An Extension
 
 Firefox extensions are made with the same technologies used to build the web. They employ a modern promise-based API to communicate with and customize the browser.
 
 </div>
-<div class="cell small-12 large-10">
+<div class="cell small-12 xlarge-10">
 	<!-- Video Box -->
 	<div class="video-box">
 		<div class="video-cta">
@@ -22,7 +22,7 @@ Firefox extensions are made with the same technologies used to build the web. Th
 	</div>
 	<!-- END: Video Box -->
 </div>
-<div class="cell small-12 medium-8 large-6 over-dark text-center" markdown="1">
+<div class="cell small-12 medium-8 xlarge-6 over-dark text-center" markdown="1">
 
 [Get example extension files](https://github.com/mozilla/old-timer-extension 'View on Github')
 
@@ -76,7 +76,7 @@ For a more interactive and dynamic extension, use the WebExtensions JavaScript A
 <!-- Section More -->
 <div class="section-more bg-grey panel">
 <div class="grid-container grid-x grid-padding-x align-center more-intro">
-<div class="cell small-12 medium-10 large-8 text-center" markdown="1">
+<div class="cell small-12 medium-10 xlarge-8 text-center" markdown="1">
 
 ## Build Across Browsers
 
@@ -90,7 +90,7 @@ Firefox is at the forefront of cross-browser compatibility. Firefox extensions a
 <div class="grid-container grid-x grid-padding-x align-center tiles-container">
 
 <!-- Tile 1 -->
-<div class="cell small-12 medium-6 large-5 tile-borderless tile-extended" markdown="1">
+<div class="cell small-12 medium-6 xlarge-5 tile-borderless tile-extended" markdown="1">
 
 ![Bring Your Extension to Firefox]({% asset "Bring-Extension-Firefox.svg" @path @optim %} "Bring Your Extension to Firefox")
 
@@ -111,7 +111,7 @@ Top Resources [Differences between Chrome and Firefox](https://developer.mozilla
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<div class="cell small-12 medium-6 large-5 tile-borderless tile-extended" markdown="1">
+<div class="cell small-12 medium-6 xlarge-5 tile-borderless tile-extended" markdown="1">
 
 ![Create a New Extension]({% asset Create-New-Extension.svg @path @optim %} "Create a New Extension")
 
@@ -139,7 +139,7 @@ Top Resources [Best practices for cross-browser extensions](https://developer.mo
 <div class="section-cta bg-dark" style="background-color: #4f42ff">
 <div class="img" style="background-image: url({% asset "extension-alt.svg" @path @optim %});"></div>
 <div class="grid-container grid-x grid-padding-x align-middle">
-<div class="cell small-12 large-3 large-offset-1" markdown="1">
+<div class="cell small-12 large-4 xlarge-3 xlarge-offset-1" markdown="1">
 
 ### Your extension might already be compatible!
 

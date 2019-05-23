@@ -35,10 +35,6 @@ h2 {
   }
 }
 
-h2 {
-  font-weight: 500;
-}
-
 li {
   margin-bottom: $list-margin-bottom / 3;
 }
@@ -267,6 +263,21 @@ html {
 .site-content.landing {
   flex: 1 0 auto;
   width: 100%;
+}
+
+.grid-container {
+  @include breakpoint(large only) {
+    .landing &,
+    .landing + .site-footer & {
+      max-width: 84%;
+    }
+  }
+  @include breakpoint(xlarge) {
+    max-width: 84%;
+  }
+  @include breakpoint(xxlarge) {
+    max-width: $global-width;
+  }
 }
 
 // Logo
