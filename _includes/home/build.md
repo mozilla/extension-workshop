@@ -1,5 +1,5 @@
 <!-- Section Intro -->
-<div class="panel section-intro bg-dark bg-alt1">
+<div class="panel section-intro bg-dark">
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-10 xlarge-8 text-center" markdown="1">
 
