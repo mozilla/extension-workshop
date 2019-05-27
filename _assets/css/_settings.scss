@@ -19,7 +19,37 @@
 @import 'util/util';
 
 // Inter Font
-@import url('https://rsms.me/inter/inter.css');
+// ----------
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  src: asset_url("inter/Inter-Regular.woff2") format("woff2"),
+       asset_url("inter/Inter-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 400;
+  src: asset_url("inter/Inter-Italic.woff2") format("woff2"),
+       asset_url("inter/Inter-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 600;
+  src: asset_url("inter/Inter-SemiBold.woff2") format("woff2"),
+       asset_url("inter/Inter-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 600;
+  src: asset_url("inter/Inter-SemiBoldItalic.woff2") format("woff2"),
+       asset_url("inter/Inter-SemiBoldItalic.woff") format("woff");
+}
 
 // 1. Global
 // ---------
