@@ -35,7 +35,7 @@ Build on the web’s most customizable browser. Get your great idea into the han
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Tinker with Tabs]({% asset "Tinker-with-Tabs.svg" @path @optim %} "Tinker with Tabs")
+![Tinker with Tabs]({% asset "Tinker-with-Tabs-v2.svg" @path @optim %} "Tinker with Tabs")
 
 #### Tinker with Tabs
 
@@ -51,7 +51,7 @@ Your extension can control browser tabs. Use the API to open, close, move, hide,
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Transform Web Content]({% asset "Transform-Web-Content.svg" @path @optim %} "Transform Web Content")
+![Transform Web Content]({% asset "Integrate-Web-Search.svg" @path @optim %} "Transform Web Content")
 
 #### Transform Web Content
 
@@ -67,7 +67,7 @@ Inject JavaScript into web pages and your extension can change page colors, augm
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Add Innovative Features]({% asset "Add-Innovative-Features.svg" @path @optim %} "Add Innovative Features")
+![Add Innovative Features]({% asset "Add-Innovative-Features-v2.svg" @path @optim %} "Add Innovative Features")
 
 #### Add Innovative Features
 

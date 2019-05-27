@@ -1216,6 +1216,7 @@ Stylesheet: Landing Page Stylesheet
 
 .section-cta {
   position: relative;
+  background: #592acb no-repeat center/cover;
 
   .img {
     position: absolute;
@@ -1223,9 +1224,10 @@ Stylesheet: Landing Page Stylesheet
     top: 0;
     width: 100%;
     height: 100%;
+    background-position: right bottom;
+    background-size: auto 100%;
     @include breakpoint(small down) {
-      background-position: left bottom;
-      background-size: 100%;
+      background-size: auto 32vw;
     }
   }
 
