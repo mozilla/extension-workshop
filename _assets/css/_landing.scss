@@ -1382,61 +1382,6 @@ Stylesheet: Landing Page Stylesheet
           transition: opacity 0.3s ease-in-out;
         }
 
-        #box_bottom_back {
-          transition: transform 0.3s ease-in-out, opacity 0.3s 0.15s ease-in-out;
-        }
-
-        #box_bottom_front {
-          transition: transform 0.3s ease-in-out;
-        }
-
-        #box_top_back {
-          transition: transform 0.3s ease-in-out;
-        }
-
-        #box_top_front_transparent {
-          transition: transform 0.3s ease-in-out;
-        }
-
-        #box_top_front_solid {
-          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-          opacity: 0;
-        }
-
-        #box_sides {
-          transition: transform 0.3s ease-in-out;
-        }
-
-        &:not(.step-one) {
-          #box_bottom_back {
-            transform: translateY(calc(50% - #{rem-calc(115)}))
-              scale(1, 0.294871794871795);
-            opacity: 0;
-          }
-
-          #box_bottom_front {
-            transform: translateY(#{rem-calc(-110)});
-          }
-
-          #box_top_back {
-            transform: translateY(#{rem-calc(110)});
-          }
-
-          #box_top_front_transparent {
-            transform: translateY(#{rem-calc(110)});
-          }
-
-          #box_top_front_solid {
-            transform: translateY(#{rem-calc(110)});
-            opacity: 1;
-          }
-
-          #box_sides {
-            transform: translateY(calc(50% - #{rem-calc(74)}))
-              scale(1, 0.294871794871795);
-          }
-        }
-
         &:not(.step-two) {
           #background {
             transform: translateY(#{rem-calc(-30)});
@@ -1503,14 +1448,6 @@ Stylesheet: Landing Page Stylesheet
         top: 0;
         right: 0;
         bottom: 0;
-
-        #mobile-box_bottom_back {
-          opacity: 0.2;
-        }
-
-        #mobile-box_top_front_solid {
-          opacity: 0.2;
-        }
       }
 
       button {
