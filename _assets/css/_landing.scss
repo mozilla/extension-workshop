@@ -467,7 +467,7 @@ Stylesheet: Landing Page Stylesheet
 .section-intro {
   padding-top: rem-calc(32);
   padding-bottom: rem-calc(20);
-  background-color: #f8e71c;
+  background-color: $lighter-gray;
 
   > .tiles-outside:first-child {
     padding-top: rem-calc(0);
@@ -500,13 +500,13 @@ Stylesheet: Landing Page Stylesheet
     padding-bottom: 1px;
 
     .tiles-outside:first-child {
-      background-color: #f8e71c;
+      background-color: $lighter-gray;
     }
 
     .tiles-container {
       padding-bottom: 1px;
       margin-bottom: rem-calc(100);
-      background-color: #f8e71c;
+      background-color: $lighter-gray;
 
       .grid-container {
         margin-bottom: rem-calc(-100);
@@ -516,6 +516,7 @@ Stylesheet: Landing Page Stylesheet
 
   &.bg-dark {
     background-color: $primary-color;
+    background-image: linear-gradient(47deg, #0090ED 0%, #B832E0 100%);
     color: $white;
 
     > .grid-container > .cell:not(.tile):not(.tile-compact) > p > a,
@@ -544,40 +545,31 @@ Stylesheet: Landing Page Stylesheet
     + .section-tiles {
       .tiles-outside:first-child {
         background-color: $primary-color;
+        background-image: linear-gradient(47deg, #0090ED 0%, #B832E0 100%);
         color: $white;
       }
 
       .tiles-container {
         background-color: $primary-color;
+        background-image: linear-gradient(47deg, #0090ED 0%, #B832E0 100%);
         color: $white;
-      }
-    }
-  }
-
-  &.bg-alt1 {
-    background-color: #6200a4;
-
-    + .section-tiles {
-      .tiles-outside:first-child {
-        background-color: #6200a4;
-      }
-
-      .tiles-container {
-        background-color: #6200a4;
       }
     }
   }
 
   &.bg-alt2 {
     background-color: #ff9400;
+    background-image: linear-gradient(47deg, #E31586 0%, #FC4054 51%, #FF9641 100%);
 
     + .section-tiles {
       .tiles-outside:first-child {
         background-color: #ff9400;
+        background-image: linear-gradient(47deg, #E31586 0%, #FC4054 51%, #FF9641 100%);
       }
 
       .tiles-container {
         background-color: #ff9400;
+        background-image: linear-gradient(47deg, #E31586 0%, #FC4054 51%, #FF9641 100%);
       }
     }
   }

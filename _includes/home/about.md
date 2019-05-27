@@ -1,5 +1,5 @@
 <!-- Section Intro -->
-<div class="panel section-intro extra-space bg-dark">
+<div class="panel section-intro extra-space bg-dark bg-alt2">
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-6 xlarge-5" markdown="1">
 
@@ -23,7 +23,7 @@ Build on the web’s most customizable browser. Get your great idea into the han
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
 
-## Cool Things Extensions Can Do
+### Cool Things Extensions Can Do
 
 </div>
 </div>
