@@ -116,11 +116,11 @@ An extension is a simple collection of files that modify the browser’s appeara
 
 <div class="anatomy-container">
   <div class="anatomy-illustration">
-    {% include home/anatomy.svg  %}
+    {% include home/anatomy-v2.svg  %}
     <p class="manifest show-for-medium">{% asset "icons/manifest.svg" @optim alt="" %}Manifest.json</p>
   </div>
   <div id="anatomy-control" class="anatomy-description">
-    {% include home/anatomy-mobile.svg %}
+    {% include home/anatomy-v2-mobile.svg %}
     <button class="popup-action" data-panel="anatomy-ui">{% asset "icons/user-interface-link.svg" @optim alt="" %}User Interface</button>
     <button class="popup-action" data-panel="anatomy-content">{% asset "icons/content-script-link.svg" @optim alt="" %}Content Scripts</button>
     <button class="popup-action" data-panel="anatomy-background">{% asset "icons/background-scripts-link.svg" @optim alt="" %}Background Scripts</button>
