@@ -136,8 +136,8 @@ Top Resources [Best practices for cross-browser extensions](https://developer.mo
 <!-- END: Section More -->
 
 <!-- Section CTA -->
-<div class="section-cta bg-dark" style="background-color: #4f42ff">
-<div class="img" style="background-image: url({% asset "extension-alt.svg" @path @optim %});"></div>
+<div class="section-cta bg-dark" style="background-image: url({% asset "extension-bg.svg" @path @optim %});">
+<div class="img" style="background-image: url({% asset "extension-v2.svg" @path @optim %});"></div>
 <div class="grid-container grid-x grid-padding-x align-middle">
 <div class="cell small-12 large-4 xlarge-3 xlarge-offset-1" markdown="1">
 
