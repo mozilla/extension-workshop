@@ -680,9 +680,11 @@ Stylesheet: Landing Page Stylesheet
           }
         }
       }
+
       &.medium-12:not(.no-img) {
         > * {
           max-width: calc(100% - #{rem-calc(190)});
+
           &:first-child {
             max-width: rem-calc(160);
           }
@@ -714,9 +716,11 @@ Stylesheet: Landing Page Stylesheet
           }
         }
       }
+
       &.medium-12:not(.no-img) .block-link {
         > * {
           max-width: calc(100% - #{rem-calc(190)});
+
           &:first-child {
             max-width: rem-calc(160);
           }
@@ -1401,6 +1405,7 @@ Stylesheet: Landing Page Stylesheet
   position: relative;
   padding-bottom: 14.89583333333335vw;
 }
+
 .bottom-of-page {
   position: absolute;
   left: 0;
