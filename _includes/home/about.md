@@ -10,7 +10,7 @@
 </div>
 <div class="cell small-12 medium-6 xlarge-5" markdown="1">
 
-Get your great idea into the hands of millions of Firefox users. Join an international community of developers. Be supported every step of the way. And, when you build for Firefox first, it’s easy to port your extension to other browsers, saving you valuable development time. 
+Get your great idea into the hands of millions of Firefox users. Join an international community of developers. Be supported every step of the way. And, when you build for Firefox first, it’s easy to port your extension to other browsers, saving you valuable development time.
 
 [Learn more about extensions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
 
@@ -82,7 +82,6 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 </div>
 <!-- END: Intro -->
 
-
 <!-- More Details -->
 <div class="grid-container grid-x grid-padding-x align-center tiles-footer">
 <div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
@@ -94,7 +93,6 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 </div>
 </div>
 <!-- END: More Details -->
-
 
 <!-- Anatomy of an Extension -->
 <div class="section-anatomy panel">

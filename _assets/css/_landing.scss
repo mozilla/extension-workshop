@@ -373,12 +373,12 @@ Stylesheet: Landing Page Stylesheet
   }
 }
 
-
-
 // Landing Page
 // ------
 
-.site-content.landing {background-color: $lighter-gray;}
+.site-content.landing {
+  background-color: $lighter-gray;
+}
 
 // Into Banner
 // ------
@@ -474,7 +474,9 @@ Stylesheet: Landing Page Stylesheet
   position: relative;
   color: $white;
 
-  .grid-container {position: relative;}
+  .grid-container {
+    position: relative;
+  }
 
   > .grid-container > .cell:not(.tile):not(.tile-compact) > p > a,
   .tiles-intro a {
@@ -505,11 +507,16 @@ Stylesheet: Landing Page Stylesheet
     top: 0;
     height: calc(100% - #{rem-calc(100)});
     background-color: $primary-color;
-    background-image: linear-gradient(47deg, #0090ED 0%, #B832E0 100%);
+    background-image: linear-gradient(47deg, #0090ed 0%, #b832e0 100%);
 
     &.alt {
       background-color: #ff9400;
-      background-image: linear-gradient(47deg, #E31586 0%, #FC4054 51%, #FF9641 100%);
+      background-image: linear-gradient(
+        47deg,
+        #e31586 0%,
+        #fc4054 51%,
+        #ff9641 100%
+      );
     }
   }
 }
@@ -659,7 +666,6 @@ Stylesheet: Landing Page Stylesheet
 
   @include breakpoint(large) {
     &:not(.tile-block-link) {
-
       &.medium-12:not(.no-img),
       &.medium-6:not(.no-img) {
         > * {
@@ -674,8 +680,11 @@ Stylesheet: Landing Page Stylesheet
         }
       }
       &.medium-12:not(.no-img) {
-        > * {max-width: calc(100% - #{rem-calc(190)});
-          &:first-child {max-width: rem-calc(160);}
+        > * {
+          max-width: calc(100% - #{rem-calc(190)});
+          &:first-child {
+            max-width: rem-calc(160);
+          }
         }
       }
     }
@@ -705,8 +714,11 @@ Stylesheet: Landing Page Stylesheet
         }
       }
       &.medium-12:not(.no-img) .block-link {
-        > * {max-width: calc(100% - #{rem-calc(190)});
-          &:first-child {max-width: rem-calc(160);}
+        > * {
+          max-width: calc(100% - #{rem-calc(190)});
+          &:first-child {
+            max-width: rem-calc(160);
+          }
         }
       }
     }
@@ -1012,7 +1024,7 @@ Stylesheet: Landing Page Stylesheet
   h4,
   h5,
   h6,
-  p {    
+  p {
     &:last-child {
       margin-bottom: 0;
     }
@@ -1021,7 +1033,7 @@ Stylesheet: Landing Page Stylesheet
   p:not(:last-child) {
     margin-bottom: 0.5rem;
   }
-  
+
   @include breakpoint(medium) {
     padding-top: rem-calc(24);
     padding-bottom: rem-calc(24);
@@ -1384,8 +1396,18 @@ Stylesheet: Landing Page Stylesheet
 // News
 // ------
 
-#news {position: relative; padding-bottom: 14.89583333333335vw;}
-.bottom-of-page {position: absolute; left: 0; bottom: -14.89583333333335vw; width: 100%; height: 44.6875vw; background: no-repeat bottom/100%; }
+#news {
+  position: relative;
+  padding-bottom: 14.89583333333335vw;
+}
+.bottom-of-page {
+  position: absolute;
+  left: 0;
+  bottom: -14.89583333333335vw;
+  width: 100%;
+  height: 44.6875vw;
+  background: no-repeat bottom/100%;
+}
 
 // RSS Feed
 // ------

@@ -11,7 +11,6 @@ When you build on Firefox, you build with a community of extension developers. A
 </div>
 </div>
 
-
 <div class="tiles-container">
 <div class="grid-container grid-x grid-padding-x align-center">
 
