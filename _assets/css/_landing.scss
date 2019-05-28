@@ -373,6 +373,13 @@ Stylesheet: Landing Page Stylesheet
   }
 }
 
+
+
+// Landing Page
+// ------
+
+.site-content.landing {background-color: $lighter-gray;}
+
 // Into Banner
 // ------
 
@@ -450,153 +457,60 @@ Stylesheet: Landing Page Stylesheet
     }
   }
 
-  + section .section-intro {
-    padding-top: rem-calc(64);
+  + section > div:first-child {
+    padding-top: rem-calc(32);
     @include breakpoint(medium) {
-      padding-top: rem-calc(96);
+      padding-top: rem-calc(48);
     }
     @include breakpoint(large) {
-      padding-top: rem-calc(124);
+      padding-top: rem-calc(60);
     }
   }
 }
 
-// Section Intro
+// Intro with dark background
 // ------
 
-.section-intro {
-  padding-top: rem-calc(32);
-  padding-bottom: rem-calc(20);
-  background-color: $lighter-gray;
+.bg-dark {
+  position: relative;
+  color: $white;
 
-  > .tiles-outside:first-child {
-    padding-top: rem-calc(0);
-  }
+  .grid-container {position: relative;}
 
-  > .tiles-outside:last-child {
-    padding-bottom: rem-calc(0);
-  }
-
-  @include breakpoint(medium) {
-    padding-top: rem-calc(48);
-    padding-bottom: rem-calc(30);
-  }
-  @include breakpoint(large) {
-    padding-top: rem-calc(64);
-    padding-bottom: rem-calc(40);
-  }
-
-  &.extra-space {
-    padding-bottom: rem-calc(24);
-    @include breakpoint(medium) {
-      padding-bottom: rem-calc(32);
-    }
-    @include breakpoint(large) {
-      padding-bottom: rem-calc(64);
-    }
-  }
-
-  + .section-tiles {
-    padding-bottom: 1px;
-
-    .tiles-outside:first-child {
-      background-color: $lighter-gray;
-    }
-
-    .tiles-container {
-      padding-bottom: 1px;
-      margin-bottom: rem-calc(100);
-      background-color: $lighter-gray;
-
-      .grid-container {
-        margin-bottom: rem-calc(-100);
-      }
-    }
-  }
-
-  &.bg-dark {
-    background-color: $primary-color;
-    background-image: linear-gradient(47deg, #0090ED 0%, #B832E0 100%);
+  > .grid-container > .cell:not(.tile):not(.tile-compact) > p > a,
+  .tiles-intro a {
     color: $white;
 
-    > .grid-container > .cell:not(.tile):not(.tile-compact) > p > a,
-    .over-dark a,
-    .tiles-outside a {
-      color: $white;
+    &:last-child {
+      &::after {
+        display: inline-block;
+        margin-left: 0.3em;
+        font-size: 0.8em;
+        transition: margin 0.2s ease-in-out;
+        @include icon_font($char: $icon-arrow-right);
+      }
 
-      &:last-child {
+      &:hover {
         &::after {
-          display: inline-block;
-          margin-left: 0.3em;
-          font-size: 0.8em;
-          transition: margin 0.2s ease-in-out;
-          @include icon_font($char: $icon-arrow-right);
-        }
-
-        &:hover {
-          &::after {
-            margin-left: 0.5em;
-            margin-right: -0.2em;
-          }
+          margin-left: 0.5em;
+          margin-right: -0.2em;
         }
       }
     }
-
-    + .section-tiles {
-      .tiles-outside:first-child {
-        background-color: $primary-color;
-        background-image: linear-gradient(47deg, #0090ED 0%, #B832E0 100%);
-        color: $white;
-      }
-
-      .tiles-container {
-        background-color: $primary-color;
-        background-image: linear-gradient(47deg, #0090ED 0%, #B832E0 100%);
-        color: $white;
-      }
-    }
   }
 
-  &.bg-alt2 {
-    background-color: #ff9400;
-    background-image: linear-gradient(47deg, #E31586 0%, #FC4054 51%, #FF9641 100%);
+  .bg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: calc(100% - #{rem-calc(100)});
+    background-color: $primary-color;
+    background-image: linear-gradient(47deg, #0090ED 0%, #B832E0 100%);
 
-    + .section-tiles {
-      .tiles-outside:first-child {
-        background-color: #ff9400;
-        background-image: linear-gradient(47deg, #E31586 0%, #FC4054 51%, #FF9641 100%);
-      }
-
-      .tiles-container {
-        background-color: #ff9400;
-        background-image: linear-gradient(47deg, #E31586 0%, #FC4054 51%, #FF9641 100%);
-      }
-    }
-  }
-}
-
-// Section More
-// ------
-
-.section-more {
-  padding-top: rem-calc(32);
-  padding-bottom: rem-calc(20);
-  @include breakpoint(medium) {
-    padding-top: rem-calc(48);
-    padding-bottom: rem-calc(30);
-  }
-  @include breakpoint(large) {
-    padding-top: rem-calc(64);
-    padding-bottom: rem-calc(40);
-  }
-
-  &.extra-space {
-    padding-bottom: rem-calc(24);
-    @include breakpoint(medium) {
-      padding-bottom: rem-calc(32);
-    }
-    @include breakpoint(large) {
-      padding-bottom: rem-calc(64);
+    &.alt {
+      background-color: #ff9400;
+      background-image: linear-gradient(47deg, #E31586 0%, #FC4054 51%, #FF9641 100%);
     }
   }
 }
@@ -611,8 +525,8 @@ Stylesheet: Landing Page Stylesheet
   color: $body-font-color;
 
   &::before {
-    left: rem-calc(6);
-    width: calc(100% - #{rem-calc(12)});
+    left: rem-calc(8);
+    width: calc(100% - #{rem-calc(16)});
   }
 
   h1,
@@ -746,6 +660,8 @@ Stylesheet: Landing Page Stylesheet
 
   @include breakpoint(large) {
     &:not(.tile-block-link) {
+
+      &.medium-12:not(.no-img),
       &.medium-6:not(.no-img) {
         > * {
           max-width: 70%;
@@ -756,6 +672,11 @@ Stylesheet: Landing Page Stylesheet
             right: rem-calc(12);
             max-width: 24%;
           }
+        }
+      }
+      &.medium-12:not(.no-img) {
+        > * {max-width: calc(100% - #{rem-calc(190)});
+          &:first-child {max-width: rem-calc(160);}
         }
       }
     }
@@ -771,6 +692,7 @@ Stylesheet: Landing Page Stylesheet
         transform: scale(1.01);
       }
 
+      &.medium-12:not(.no-img) .block-link,
       &.medium-6:not(.no-img) .block-link {
         > * {
           max-width: 70%;
@@ -781,6 +703,11 @@ Stylesheet: Landing Page Stylesheet
             right: rem-calc(12);
             max-width: 24%;
           }
+        }
+      }
+      &.medium-12:not(.no-img) .block-link {
+        > * {max-width: calc(100% - #{rem-calc(190)});
+          &:first-child {max-width: rem-calc(160);}
         }
       }
     }
@@ -798,8 +725,8 @@ Stylesheet: Landing Page Stylesheet
     content: '';
     display: block;
     position: absolute;
-    left: rem-calc(6);
-    width: calc(100% - #{rem-calc(12)});
+    left: rem-calc(8);
+    width: calc(100% - #{rem-calc(16)});
     top: 0;
     height: 100%;
     background-color: $white;
@@ -1054,7 +981,7 @@ Stylesheet: Landing Page Stylesheet
     @include button();
 
     font-size: 0.733333333333333rem;
-    padding: rem-calc(6 8);
+    padding: rem-calc(8);
 
     &:hover {
       text-decoration: none;
@@ -1066,39 +993,36 @@ Stylesheet: Landing Page Stylesheet
 
     a {
       display: block;
-      padding-top: rem-calc(6);
+      padding-top: rem-calc(8);
     }
   }
 }
 
-.tiles-outside {
-  padding-top: rem-calc(10);
-  padding-bottom: rem-calc(20);
+// .tiles-intro: Short text area that intros a set of tiles
+// .tiles-footer: Links following a set of tiles
+// ------
+
+.tiles-intro,
+.tiles-footer {
+  padding-top: rem-calc(16);
+  padding-bottom: rem-calc(16);
 
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6 {
-    &:not(:first-child) {
-      margin-top: 0;
-    }
-  }
-
-  &:first-child {
-    *:last-child {
+  h6,
+  p {    
+    &:last-child {
       margin-bottom: 0;
     }
-    @include breakpoint(small down) {
-      padding-top: rem-calc(24);
-      padding-bottom: rem-calc(6);
-    }
   }
 
-  &:last-child p:not(:last-child) {
+  p:not(:last-child) {
     margin-bottom: 0.5rem;
   }
+  
   @include breakpoint(medium) {
     padding-top: rem-calc(24);
     padding-bottom: rem-calc(24);
@@ -1457,6 +1381,12 @@ Stylesheet: Landing Page Stylesheet
   margin-bottom: -1px;
   overflow: hidden;
 }
+
+// News
+// ------
+
+#news {position: relative; padding-bottom: 14.89583333333335vw;}
+.bottom-of-page {position: absolute; left: 0; bottom: -14.89583333333335vw; width: 100%; height: 44.6875vw; background: no-repeat bottom/100%; }
 
 // RSS Feed
 // ------
