@@ -47,6 +47,9 @@ jQuery(document).ready(function($) {
   if ($('.parallax').length) {
     $('.parallax').parallax({ offsetIntertia: -0.15 });
   }
+  if ($('.parallaxFG').length) {
+    $('.parallaxFG').parallaxFG({ offsetIntertia: 0.15 });
+  }
   if ($('.parallaxFG-right').length) {
     $('.parallaxFG-right').parallaxFG({ offsetIntertia: 0.075, axis: 'x' });
   }

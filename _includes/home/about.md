@@ -1,6 +1,8 @@
-<!-- Section Intro -->
-<div class="panel section-intro extra-space bg-dark bg-alt2">
-<div class="grid-container grid-x grid-padding-x align-center">
+<!-- Intro -->
+<div class="bg-dark">
+<div class="bg alt"></div>
+
+<div class="grid-container grid-x grid-padding-x align-center panel extra-space">
 <div class="cell small-12 medium-6 xlarge-5" markdown="1">
 
 ## Why Create Extensions on&nbsp;Firefox?
@@ -8,26 +10,21 @@
 </div>
 <div class="cell small-12 medium-6 xlarge-5" markdown="1">
 
-Build on the web’s most customizable browser. Get your great idea into the hands of millions of users. Join an international community of developers in the movement to put people in control of their online lives. **(P.S. There’s no cost to participate!)**
+Get your great idea into the hands of millions of Firefox users. Join an international community of developers. Be supported every step of the way. And, when you build for Firefox first, it’s easy to port your extension to other browsers, saving you valuable development time. 
 
 [Learn more about extensions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
 
 </div>
 </div>
-</div>
-<!-- END: Section Intro -->
 
-<!-- Section Tiles -->
-<div class="section-tiles bg-grey">
-<div class="tiles-outside">
-<div class="grid-container grid-x grid-padding-x align-center">
+<div class="grid-container grid-x grid-padding-x align-center tiles-intro">
 <div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
 
 ### Cool Things Extensions Can Do
 
 </div>
 </div>
-</div>
+
 <div class="tiles-container mobile-slider">
 <div class="grid-container grid-x grid-padding-x align-center">
 
@@ -53,9 +50,9 @@ Your extension can control browser tabs. Use the API to open, close, move, hide,
 
 ![Transform Web Content]({% asset "Integrate-Web-Search.svg" @path @optim %} "Transform Web Content")
 
-#### Transform Web Content
+#### Integrate Web Search
 
-Inject JavaScript into web pages and your extension can change page colors, augment text, remove distractions, and much more.
+Use Firefox's powerful built-in search capabilities to open up the web for users from within your own extension.
 
 <span class="block-link-inline">Learn about enhancing content</span>
 
@@ -81,8 +78,13 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 
 </div>
 </div>
-<div class="tiles-outside">
-<div class="grid-container grid-x grid-padding-x align-center">
+
+</div>
+<!-- END: Intro -->
+
+
+<!-- More Details -->
+<div class="grid-container grid-x grid-padding-x align-center tiles-footer">
 <div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
 
 [View more extension code examples](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Examples)
@@ -91,12 +93,11 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 
 </div>
 </div>
-</div>
-</div>
-<!-- END: Section Tiles -->
+<!-- END: More Details -->
 
-<!-- Section Anatomy of an Extension -->
-<div class="section-anatomy panel bg-grey">
+
+<!-- Anatomy of an Extension -->
+<div class="section-anatomy panel">
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-6 xlarge-5" markdown="1">
 
@@ -165,4 +166,4 @@ Manage long-term configuration beyond the current tab, and respond to user event
 </div>
 </div>
 </div>
-<!-- END: Section Anatomy of an Extension -->
+<!-- END: Anatomy of an Extension -->
