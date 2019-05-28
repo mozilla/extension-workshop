@@ -192,9 +192,13 @@ a[title='View on Github'] {
   background: transparent no-repeat center/cover;
 }
 
-.image-block {border-radius: $global-radius; margin: rem-calc(16 0);
+.image-block {
+  border-radius: $global-radius;
+  margin: rem-calc(16 0);
   @include breakpoint(medium) {
-    &:first-child {margin-top: 0;}
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
@@ -372,7 +376,9 @@ html {
     padding-bottom: rem-calc(60);
   }
 
-  .grid-container {position: relative;}
+  .grid-container {
+    position: relative;
+  }
 
   &.extra-space {
     padding-top: rem-calc(32);
@@ -389,30 +395,32 @@ html {
 }
 
 .panel-outside {
-  position: relative; 
-  margin-top: rem-calc(20); 
+  position: relative;
+  margin-top: rem-calc(20);
   margin-bottom: rem-calc(20);
   @include breakpoint(medium) {
     margin-top: rem-calc(60);
     margin-bottom: rem-calc(60);
   }
 
-  .grid-container {position: relative;}
+  .grid-container {
+    position: relative;
+  }
 }
 
 .panel-intro {
-  position: relative; 
-  padding-top: rem-calc(20); 
+  position: relative;
+  padding-top: rem-calc(20);
   margin-bottom: rem-calc(20);
   @include breakpoint(medium) {
     padding-top: rem-calc(60);
     margin-bottom: rem-calc(60);
   }
 
-  .grid-container {position: relative;}
+  .grid-container {
+    position: relative;
+  }
 }
-
-
 
 // Popup Panel
 // ------
