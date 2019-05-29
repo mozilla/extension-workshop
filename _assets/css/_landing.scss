@@ -503,6 +503,16 @@ Stylesheet: Landing Page Stylesheet
     // }
   }
 
+  > .grid-container > .cell:not(.tile):not(.tile-compact) > h1,
+  > .grid-container > .cell:not(.tile):not(.tile-compact) > h2,
+  .tiles-intro h1,
+  .tiles-intro h2 {
+    &:after {
+      background-color: $white;
+      background-image: none;
+    }
+  }
+
   .bg {
     position: absolute;
     left: 0;
@@ -1209,6 +1219,14 @@ Stylesheet: Landing Page Stylesheet
       text-decoration: underline;
       &:hover {opacity: 0.9;}
     }
+
+    h1,
+    h2 {
+      &:after {
+        background-color: $white;
+        background-image: none;
+      }
+    }
   }
 }
 
@@ -1438,6 +1456,11 @@ Stylesheet: Landing Page Stylesheet
   background-color: #363959;
   color: $white;
   font-size: $small-font-size;
+
+  h1, 
+  h2 {
+    &:after {display: none;}
+  }
 
   h4 {
     margin-top: rem-calc(10);

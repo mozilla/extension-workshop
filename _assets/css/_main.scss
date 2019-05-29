@@ -30,11 +30,29 @@ h6 {
 
 h1,
 h2 {
+  &:after {
+    content: ""; 
+    display: block; 
+    width: rem-calc(40); 
+    height: rem-calc(2); 
+    margin-top: 1.5rem;
+    background-color: $primary-color;
+    background-image: linear-gradient(90deg, #0099F1 0%, #9059FF 9%, #B833E1 35%, #E31587 52%, #FC4055 70%, #FF9640 92%, #FFF36E 100%);
+  }
+
   + h5:not(:first-child),
   + h6:not(:first-child) {
     margin-top: -0.6em;
   }
 }
+
+.text-center {
+  h1, 
+  h2 {
+    &:after {display: none;}
+  }
+}
+
 
 li {
   margin-bottom: $list-margin-bottom / 3;
