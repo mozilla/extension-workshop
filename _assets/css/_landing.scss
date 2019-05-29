@@ -150,7 +150,7 @@ Stylesheet: Landing Page Stylesheet
   .cell:not(.tile):not(.tile-compact) h2,
   .tiles-intro h1,
   .tiles-intro h2 {
-    &:after {
+    &::after {
       background-color: $white;
       background-image: none;
     }
