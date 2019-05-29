@@ -21,9 +21,9 @@ jQuery(document).ready(function($) {
   // ------------------
 
   // 1. Page Nav
-  if ($('.page-nav-container').length) {
-    $('.page-nav-container').switchPageNav();
-  }
+  // if ($('.page-nav-container').length) {
+  //   $('.page-nav-container').switchPageNav();
+  // }
 
   // 10. Site (Content Guidelines) Nav
   if ($('.site-wrapper .site-nav-container').length) {
