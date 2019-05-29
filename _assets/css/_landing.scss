@@ -483,7 +483,9 @@ Stylesheet: Landing Page Stylesheet
   .tiles-intro a {
     color: $white;
     text-decoration: underline;
-    &:hover {opacity: 0.9;}
+    &:hover {
+      opacity: 0.9;
+    }
 
     // &:last-child {
     //   &::after {
@@ -1217,7 +1219,9 @@ Stylesheet: Landing Page Stylesheet
     a {
       color: $white;
       text-decoration: underline;
-      &:hover {opacity: 0.9;}
+      &:hover {
+        opacity: 0.9;
+      }
     }
 
     h1,
@@ -1453,13 +1457,15 @@ Stylesheet: Landing Page Stylesheet
 // ------
 
 .social {
-  background-color: #09204D;
+  background-color: #09204d;
   color: $white;
   font-size: $small-font-size;
 
-  h1, 
+  h1,
   h2 {
-    &:after {display: none;}
+    &:after {
+      display: none;
+    }
   }
 
   h4 {

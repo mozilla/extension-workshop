@@ -31,13 +31,22 @@ h6 {
 h1,
 h2 {
   &:after {
-    content: ""; 
-    display: block; 
-    width: rem-calc(40); 
-    height: rem-calc(2); 
+    content: '';
+    display: block;
+    width: rem-calc(40);
+    height: rem-calc(2);
     margin-top: 1.5rem;
     background-color: $primary-color;
-    background-image: linear-gradient(90deg, #0099F1 0%, #9059FF 9%, #B833E1 35%, #E31587 52%, #FC4055 70%, #FF9640 92%, #FFF36E 100%);
+    background-image: linear-gradient(
+      90deg,
+      #0099f1 0%,
+      #9059ff 9%,
+      #b833e1 35%,
+      #e31587 52%,
+      #fc4055 70%,
+      #ff9640 92%,
+      #fff36e 100%
+    );
   }
 
   + h5:not(:first-child),
@@ -47,12 +56,13 @@ h2 {
 }
 
 .text-center {
-  h1, 
+  h1,
   h2 {
-    &:after {display: none;}
+    &:after {
+      display: none;
+    }
   }
 }
-
 
 li {
   margin-bottom: $list-margin-bottom / 3;
