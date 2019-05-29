@@ -482,23 +482,25 @@ Stylesheet: Landing Page Stylesheet
   > .grid-container > .cell:not(.tile):not(.tile-compact) > p > a,
   .tiles-intro a {
     color: $white;
+    text-decoration: underline;
+    &:hover {opacity: 0.9;}
 
-    &:last-child {
-      &::after {
-        display: inline-block;
-        margin-left: 0.3em;
-        font-size: 0.8em;
-        transition: margin 0.2s ease-in-out;
-        @include icon_font($char: $icon-arrow-right);
-      }
+    // &:last-child {
+    //   &::after {
+    //     display: inline-block;
+    //     margin-left: 0.3em;
+    //     font-size: 0.8em;
+    //     transition: margin 0.2s ease-in-out;
+    //     @include icon_font($char: $icon-arrow-right);
+    //   }
 
-      &:hover {
-        &::after {
-          margin-left: 0.5em;
-          margin-right: -0.2em;
-        }
-      }
-    }
+    //   &:hover {
+    //     &::after {
+    //       margin-left: 0.5em;
+    //       margin-right: -0.2em;
+    //     }
+    //   }
+    // }
   }
 
   .bg {
@@ -1184,26 +1186,28 @@ Stylesheet: Landing Page Stylesheet
     }
   }
 
-  a:last-child {
-    &::after {
-      display: inline-block;
-      margin-left: 0.3em;
-      font-size: 0.8em;
-      transition: margin 0.2s ease-in-out;
-      @include icon_font($char: $icon-arrow-right);
-    }
+  // a:last-child {
+  //   &::after {
+  //     display: inline-block;
+  //     margin-left: 0.3em;
+  //     font-size: 0.8em;
+  //     transition: margin 0.2s ease-in-out;
+  //     @include icon_font($char: $icon-arrow-right);
+  //   }
 
-    &:hover::after {
-      margin-left: 0.5em;
-      margin-right: -0.2em;
-    }
-  }
+  //   &:hover::after {
+  //     margin-left: 0.5em;
+  //     margin-right: -0.2em;
+  //   }
+  // }
 
   &.bg-dark {
     color: $white;
 
     a {
       color: $white;
+      text-decoration: underline;
+      &:hover {opacity: 0.9;}
     }
   }
 }
