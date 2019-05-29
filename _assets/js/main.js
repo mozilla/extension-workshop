@@ -21,9 +21,9 @@ jQuery(document).ready(function($) {
   // ------------------
 
   // 1. Page Nav
-  if ($('.page-nav-container').length) {
-    $('.page-nav-container').switchPageNav();
-  }
+  // if ($('.page-nav-container').length) {
+  //   $('.page-nav-container').switchPageNav();
+  // }
 
   // 10. Site (Content Guidelines) Nav
   if ($('.site-wrapper .site-nav-container').length) {
@@ -46,6 +46,9 @@ jQuery(document).ready(function($) {
 
   if ($('.parallax').length) {
     $('.parallax').parallax({ offsetIntertia: -0.15 });
+  }
+  if ($('.parallaxFG').length) {
+    $('.parallaxFG').parallaxFG({ offsetIntertia: 0.15 });
   }
   if ($('.parallaxFG-right').length) {
     $('.parallaxFG-right').parallaxFG({ offsetIntertia: 0.075, axis: 'x' });

@@ -6,16 +6,16 @@ layout: landing
 
     <header id="top" class="banner intro">
         <div class="graphic-bg">
-            <div class="parallaxFG-left left" style="background-image: url({% asset "header-a.svg" @path @optim %});"></div>
-            <div class="parallaxFG-right right" style="background-image: url({% asset "header-b.svg" @path @optim %});"></div>
+            <div class="parallaxFG-left left" style="background-image: url({% asset "header-v2-a.svg" @path @optim %});"></div>
+            <div class="parallaxFG-right right" style="background-image: url({% asset "header-v2-b.svg" @path @optim %});"></div>
         </div>
         <div class="grid-container grid-x grid-padding-x align-center align-middle banner-content">
             <div class="cell small-12 medium-6 text-center">
                 {{ content }}
-                <a href="#about" class="cta-down show-for-medium"></a>
             </div>
         </div>
 
+        {% comment %}
         <div class="page-nav-container">
             <div class="page-nav">
                 <div class="grid-container grid-x grid-padding-x">
@@ -25,7 +25,6 @@ layout: landing
                             <div class="group-a" id="page-nav-links">
                                 <a href="#about">About Extensions</a>
                                 <a href="#build">Build Extensions</a>
-                                <a href="#tips">Tips for Better Extensions</a>
                                 <a href="#connect">Connect</a>
                                 <a href="#news">Developer News</a>
                             </div>
@@ -37,6 +36,8 @@ layout: landing
                 </div>
             </div>
         </div>
+        {% endcomment %}
+        
     </header>
 
     {% for section in site.data.home-sections %}
@@ -48,9 +49,11 @@ layout: landing
 
     {% endfor %}
 
-    <section id="news" class="panel bg-grey">
-        <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
-            <div class="cell small-12 medium-8 large-6 text-center">
+    <section id="news">
+        <div class="bottom-of-page parallaxFG" style="background-image: url({% asset "bottom.svg" @path @optim %});"></div>
+
+        <div class="grid-container grid-x grid-padding-x align-center tiles-intro">
+            <div class="cell small-12">
                 <h2>Latest Developer News</h2>
             </div>
         </div>
@@ -59,12 +62,12 @@ layout: landing
             <div id="rss-feed" class="grid-container grid-x grid-padding-x align-center"></div>
         </div>
 
-        <div class="grid-container grid-x grid-padding-x align-center tiles-outside">
+        <div class="grid-container grid-x grid-padding-x align-center tiles-footer">
             <div class="cell small-12 medium-8 large-6 text-center">
                 <p><a href="https://blog.mozilla.org/addons/">Visit add-ons blog</a></p>
             </div>
         </div>
-    </section>
+    </section> 
 
     <aside class="panel social">
         <div class="grid-container grid-x grid-padding-x">
@@ -84,7 +87,7 @@ layout: landing
                 <p><a href="https://wiki.mozilla.org/IRC" class="irc">IRC</a></p>
                 <p><a href="https://mail.mozilla.org/listinfo/dev-addons" class="mailinglist">Add-on Developers Mailing List</a></p>
             </div>
-            <div class="cell small-12 large-4">
+            <div class="cell small-12 large-5">
                 <h4>Extensions Developer Newsletter</h4>
                 <p>Stay up-to-date on news and events for Firefox extension developers.</p>
 

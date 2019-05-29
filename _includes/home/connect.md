@@ -1,19 +1,16 @@
 <!-- Section Intro -->
-<div class="panel section-intro">
-<div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-12 medium-10 large-8 text-center" markdown="1">
+<div class="panel">
 
-## Connect with the Community
+<div class="grid-container grid-x grid-padding-x align-center tiles-intro">
+<div class="cell small-12" markdown="1">
+
+## Need some extra help along the way?
 
 When you build on Firefox, you build with a community of extension developers. And they’re eager to share their expertise and answer your questions.
 
 </div>
 </div>
-</div>
-<!-- END: Section Intro -->
 
-<!-- Section Tiles -->
-<div class="section-tiles bg-grey">
 <div class="tiles-container">
 <div class="grid-container grid-x grid-padding-x align-center">
 
@@ -25,9 +22,7 @@ When you build on Firefox, you build with a community of extension developers. A
 
 #### Community Forums
 
-Discuss extension development and get support.
-
-<span class="block-link-inline">Join the conversation</span>
+<span class="block-link-inline">Ask questions in the forum</span>
 
 </div>
 </a>
@@ -39,11 +34,9 @@ Discuss extension development and get support.
 
 ![Get Involved]({% asset "icons/get-involved.svg" @path @optim %} "Get Involved")
 
-#### Get Involved
+#### Connect with other extension developers
 
-Connect with thousands of developers and contribute to the extension ecosystem.
-
-<span class="block-link-inline">Learn about enhancing the API</span>
+<span class="block-link-inline">Email the community</span>
 
 </div>
 </a>
@@ -51,20 +44,24 @@ Connect with thousands of developers and contribute to the extension ecosystem.
 
 </div>
 </div>
-<div class="grid-container grid-x grid-padding-x align-center tiles-outside">
-<div class="cell small-12 medium-8 large-6 text-center" markdown="1">
+
+<div class="grid-container grid-x grid-padding-x align-center tiles-footer">
+<div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
 
 [Learn more about the community](https://wiki.mozilla.org/Add-ons/Community/)
 
+[Learn about enhancing the API](https://wiki.mozilla.org/Add-ons/Community/)
+
 </div>
 </div>
+
 </div>
-<!-- END: Section Tiles -->
+<!-- END: Section Intro -->
 
 {% comment %}
 
 <!-- Events iframe -->
-<div id="events" class="bg-grey">
+<div id="events">
 <iframe style="width: 100%; height: 100%; border: 0; overflow: hidden;" class="hub-mgmt-preview-iframe splash-page-iframe is-splash-resize-active" src="https://splashthat.com/sites/view/addonscommunityevent.splashthat.com?partial=823525519,495830716&amp;screenshotHash=494156500dffa3d9" id="iFrameResizer1" scrolling="no"></iframe><script type="text/javascript" src="https://splashthat.com/v2/js/splash/bundles/splash-js-1.0.min.js"></script>
 </div>
 <!-- END: Events iframe -->

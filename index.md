@@ -3,6 +3,6 @@
 layout: home
 ---
 
-# Make the web do what you want.
+# Build a better web
 
-If you can dream it, our open source API and your HTML, CSS, and JavaScript skills can make it happen.
+New to extension development? Ready to launch your innovation or create a custom enterprise solution? We’ve got the resources you need to make browsing smarter, safer, faster.

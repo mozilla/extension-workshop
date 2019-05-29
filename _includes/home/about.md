@@ -1,33 +1,30 @@
-<!-- Section Intro -->
-<div class="panel section-intro extra-space bg-dark">
-<div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-12 medium-6 large-5" markdown="1">
+<!-- Intro -->
+<div class="panel-intro bg-dark">
+<div class="bg alt"></div>
+
+<div class="grid-container grid-x grid-padding-x align-center panel-nested">
+<div class="cell small-12 medium-6 xlarge-5" markdown="1">
 
 ## Why Create Extensions on&nbsp;Firefox?
 
 </div>
-<div class="cell small-12 medium-6 large-5" markdown="1">
+<div class="cell small-12 medium-6 xlarge-5" markdown="1">
 
-Build on the web’s most customizable browser. Get your great idea into the hands of millions of users. Join an international community of developers in the movement to put people in control of their online lives. **(P.S. There’s no cost to participate!)**
+Get your great idea into the hands of millions of Firefox users. Join an international community of developers. Be supported every step of the way. And, when you build for Firefox first, it’s easy to port your extension to other browsers, saving you valuable development time.
 
 [Learn more about extensions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions)
 
 </div>
 </div>
-</div>
-<!-- END: Section Intro -->
 
-<!-- Section Tiles -->
-<div class="section-tiles bg-grey">
-<div class="tiles-outside">
-<div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-12 medium-8 large-6 text-center" markdown="1">
+<div class="grid-container grid-x grid-padding-x align-center tiles-intro">
+<div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
 
-## Cool Things Extensions Can Do
+### Cool Things Extensions Can Do
 
 </div>
 </div>
-</div>
+
 <div class="tiles-container mobile-slider">
 <div class="grid-container grid-x grid-padding-x align-center">
 
@@ -35,7 +32,7 @@ Build on the web’s most customizable browser. Get your great idea into the han
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Tinker with Tabs]({% asset "Tinker-with-Tabs.svg" @path @optim %} "Tinker with Tabs")
+![Tinker with Tabs]({% asset "Tinker-with-Tabs-v2.svg" @path @optim %} "Tinker with Tabs")
 
 #### Tinker with Tabs
 
@@ -51,11 +48,11 @@ Your extension can control browser tabs. Use the API to open, close, move, hide,
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Transform Web Content]({% asset "Transform-Web-Content.svg" @path @optim %} "Transform Web Content")
+![Transform Web Content]({% asset "Integrate-Web-Search.svg" @path @optim %} "Transform Web Content")
 
-#### Transform Web Content
+#### Integrate Web Search
 
-Inject JavaScript into web pages and your extension can change page colors, augment text, remove distractions, and much more.
+Use Firefox's powerful built-in search capabilities to open up the web for users from within your own extension.
 
 <span class="block-link-inline">Learn about enhancing content</span>
 
@@ -67,7 +64,7 @@ Inject JavaScript into web pages and your extension can change page colors, augm
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface" class="cell small-12 large-4 tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Add Innovative Features]({% asset "Add-Innovative-Features.svg" @path @optim %} "Add Innovative Features")
+![Add Innovative Features]({% asset "Add-Innovative-Features-v2.svg" @path @optim %} "Add Innovative Features")
 
 #### Add Innovative Features
 
@@ -81,9 +78,13 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 
 </div>
 </div>
-<div class="tiles-outside">
-<div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-12 medium-8 large-6 text-center" markdown="1">
+
+</div>
+<!-- END: Intro -->
+
+<!-- More Details -->
+<div class="grid-container grid-x grid-padding-x align-center tiles-footer">
+<div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
 
 [View more extension code examples](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Examples)
 
@@ -91,19 +92,17 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 
 </div>
 </div>
-</div>
-</div>
-<!-- END: Section Tiles -->
+<!-- END: More Details -->
 
-<!-- Section Anatomy of an Extension -->
-<div class="section-anatomy panel bg-grey">
+<!-- Anatomy of an Extension -->
+<div class="section-anatomy panel">
 <div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-12 medium-6 large-5" markdown="1">
+<div class="cell small-12 medium-6 xlarge-5" markdown="1">
 
 ## Anatomy of an Extension
 
 </div>
-<div class="cell small-12 medium-6 large-5" markdown="1">
+<div class="cell small-12 medium-6 xlarge-5" markdown="1">
 
 An extension is a simple collection of files that modify the browser’s appearance and behavior. It can add user interface elements, alter content, or perform background tasks that enhance browsing.
 
@@ -112,15 +111,15 @@ An extension is a simple collection of files that modify the browser’s appeara
 </div>
 </div>
 <div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-12 large-10">
+<div class="cell small-12 xlarge-10">
 
 <div class="anatomy-container">
   <div class="anatomy-illustration">
-    {% include home/anatomy.svg  %}
+    {% include home/anatomy-v2.svg  %}
     <p class="manifest show-for-medium">{% asset "icons/manifest.svg" @optim alt="" %}Manifest.json</p>
   </div>
   <div id="anatomy-control" class="anatomy-description">
-    {% include home/anatomy-mobile.svg %}
+    {% include home/anatomy-v2-mobile.svg %}
     <button class="popup-action" data-panel="anatomy-ui">{% asset "icons/user-interface-link.svg" @optim alt="" %}User Interface</button>
     <button class="popup-action" data-panel="anatomy-content">{% asset "icons/content-script-link.svg" @optim alt="" %}Content Scripts</button>
     <button class="popup-action" data-panel="anatomy-background">{% asset "icons/background-scripts-link.svg" @optim alt="" %}Background Scripts</button>
@@ -165,4 +164,4 @@ Manage long-term configuration beyond the current tab, and respond to user event
 </div>
 </div>
 </div>
-<!-- END: Section Anatomy of an Extension -->
+<!-- END: Anatomy of an Extension -->
