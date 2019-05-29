@@ -429,6 +429,7 @@ html {
   padding-bottom: rem-calc(20);
   @include breakpoint(medium) {
     padding-top: rem-calc(60);
+    padding-bottom: 0;
   }
 
   .grid-container {
