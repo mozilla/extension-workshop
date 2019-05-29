@@ -458,12 +458,13 @@ Stylesheet: Landing Page Stylesheet
   }
 
   + section > div:first-child {
-    padding-top: rem-calc(32);
+    padding-top: rem-calc(64);
+
     @include breakpoint(medium) {
-      padding-top: rem-calc(48);
+      padding-top: rem-calc(96);
     }
     @include breakpoint(large) {
-      padding-top: rem-calc(60);
+      padding-top: rem-calc(124);
     }
   }
 }
@@ -520,9 +521,12 @@ Stylesheet: Landing Page Stylesheet
     left: 0;
     width: 100%;
     top: 0;
-    height: calc(100% - #{rem-calc(100)});
+    height: calc(100% - #{rem-calc(240)});
     background-color: $primary-color;
     background-image: linear-gradient(47deg, #0090ed 0%, #b832e0 100%);
+    @include breakpoint(medium) {
+      height: calc(100% - #{rem-calc(120)});
+    }
 
     &.alt {
       background-color: #ff9400;
@@ -533,6 +537,15 @@ Stylesheet: Landing Page Stylesheet
         #ff9641 100%
       );
     }
+  }
+}
+
+.panel-nested {
+  @include breakpoint(medium) {
+    padding-bottom: rem-calc(32);
+  }
+  @include breakpoint(large) {
+    padding-bottom: rem-calc(48);
   }
 }
 
@@ -1108,53 +1121,53 @@ Stylesheet: Landing Page Stylesheet
 .news-slider {
   @include breakpoint(medium down) {
     padding: rem-calc(0 0 1);
-    margin-bottom: rem-calc(150) !important;
+    margin-bottom: rem-calc(40) !important;
 
     .grid-container {
       padding: rem-calc(0 0 1);
-      margin-bottom: rem-calc(-150) !important;
+      margin-bottom: rem-calc(-40) !important;
+    }
 
-      .slick-list {
-        position: relative;
-        z-index: 2;
+    .slick-list {
+      position: relative;
+      z-index: 2;
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .slick-slide {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: stretch;
+      height: auto;
+      padding: rem-calc(20 28) !important;
+      margin: rem-calc(16 0 20 0);
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: rem-calc(8);
+        width: calc(100% - #{rem-calc(16)});
       }
 
-      .slick-track {
-        display: flex;
-        align-items: stretch;
+      > * {
+        flex: 0 0 auto;
+        width: 100%;
 
-        .slick-slide {
+        &:last-child {
+          flex: 1 1 auto;
           display: flex;
-          flex-flow: column nowrap;
-          justify-content: stretch;
-          height: auto;
-          padding: rem-calc(20 28) !important;
-          margin: rem-calc(16 0 20 0);
-
-          &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            left: rem-calc(8);
-            width: calc(100% - #{rem-calc(16)});
-          }
-
-          > * {
-            flex: 0 0 auto;
-            width: 100%;
-
-            /* stylelint-disable-next-line max-nesting-depth */
-            &:last-child {
-              flex: 1 1 auto;
-              display: flex;
-              flex-flow: column;
-              justify-content: flex-end;
-              margin-bottom: 0;
-            }
-          }
+          flex-flow: column;
+          justify-content: flex-end;
+          margin-bottom: 0;
         }
       }
     }
+    
   }
 }
 
@@ -1393,6 +1406,8 @@ Stylesheet: Landing Page Stylesheet
   }
 
   @include breakpoint(small down) {
+    margin-top: -12vw;
+
     .anatomy-description {
       height: calc(157.037037037037vw - 24px);
       padding: 36.5% 0;
@@ -1410,8 +1425,13 @@ Stylesheet: Landing Page Stylesheet
       }
 
       button {
+        font-size: $small-font-size;
         margin: rem-calc(0 0 -20);
       }
+    }
+
+    .manifest {
+      margin-top: -20vw;
     }
   }
 }
@@ -1429,16 +1449,22 @@ Stylesheet: Landing Page Stylesheet
 
 #news {
   position: relative;
-  padding-bottom: 14.89583333333335vw;
+  padding-bottom: 22.34375vw;
+  @include breakpoint(medium) {
+    padding-bottom: 14.89583333333335vw;
+  }
 }
 
 .bottom-of-page {
   position: absolute;
   left: 0;
-  bottom: -14.89583333333335vw;
+  bottom: -7.447916666666675vw;
   width: 100%;
   height: 44.6875vw;
   background: no-repeat bottom/100%;
+  @include breakpoint(medium) {
+    bottom: -14.89583333333335vw;
+  }
 }
 
 // RSS Feed

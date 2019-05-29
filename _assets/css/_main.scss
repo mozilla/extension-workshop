@@ -397,8 +397,8 @@ html {
 
 .panel {
   position: relative;
-  padding-top: rem-calc(20);
-  padding-bottom: rem-calc(20);
+  padding-top: rem-calc(32);
+  padding-bottom: rem-calc(24);
   @include breakpoint(medium) {
     padding-top: rem-calc(60);
     padding-bottom: rem-calc(60);
@@ -406,19 +406,6 @@ html {
 
   .grid-container {
     position: relative;
-  }
-
-  &.extra-space {
-    padding-top: rem-calc(32);
-    padding-bottom: rem-calc(24);
-    @include breakpoint(medium) {
-      padding-top: rem-calc(48);
-      padding-bottom: rem-calc(32);
-    }
-    @include breakpoint(large) {
-      padding-top: rem-calc(64);
-      padding-bottom: rem-calc(48);
-    }
   }
 }
 
@@ -438,11 +425,10 @@ html {
 
 .panel-intro {
   position: relative;
-  padding-top: rem-calc(20);
-  margin-bottom: rem-calc(20);
+  padding-top: rem-calc(40);
+  padding-bottom: rem-calc(20);
   @include breakpoint(medium) {
     padding-top: rem-calc(60);
-    margin-bottom: rem-calc(60);
   }
 
   .grid-container {

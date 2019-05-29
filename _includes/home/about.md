@@ -1,8 +1,8 @@
 <!-- Intro -->
-<div class="bg-dark">
+<div class="panel-intro bg-dark">
 <div class="bg alt"></div>
 
-<div class="grid-container grid-x grid-padding-x align-center panel extra-space">
+<div class="grid-container grid-x grid-padding-x align-center panel-nested">
 <div class="cell small-12 medium-6 xlarge-5" markdown="1">
 
 ## Why Create Extensions on&nbsp;Firefox?
