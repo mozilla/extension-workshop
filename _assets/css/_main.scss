@@ -30,7 +30,7 @@ h6 {
 
 h1,
 h2 {
-  &:after {
+  &::after {
     content: '';
     display: block;
     width: rem-calc(40);
@@ -52,15 +52,6 @@ h2 {
   + h5:not(:first-child),
   + h6:not(:first-child) {
     margin-top: -0.6em;
-  }
-}
-
-.text-center {
-  h1,
-  h2 {
-    &:after {
-      display: none;
-    }
   }
 }
 
@@ -158,6 +149,13 @@ a.tile-block-link:focus {
 
 .text-center {
   text-align: center;
+
+  h1,
+  h2 {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 // Blockquote

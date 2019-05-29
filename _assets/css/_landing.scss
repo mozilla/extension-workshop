@@ -484,6 +484,7 @@ Stylesheet: Landing Page Stylesheet
   .tiles-intro a {
     color: $white;
     text-decoration: underline;
+
     &:hover {
       opacity: 0.9;
     }
@@ -1231,6 +1232,7 @@ Stylesheet: Landing Page Stylesheet
     a {
       color: $white;
       text-decoration: underline;
+
       &:hover {
         opacity: 0.9;
       }
@@ -1238,7 +1240,7 @@ Stylesheet: Landing Page Stylesheet
 
     h1,
     h2 {
-      &:after {
+      &::after {
         background-color: $white;
         background-image: none;
       }
@@ -1488,7 +1490,7 @@ Stylesheet: Landing Page Stylesheet
 
   h1,
   h2 {
-    &:after {
+    &::after {
       display: none;
     }
   }
