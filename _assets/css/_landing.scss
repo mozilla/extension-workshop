@@ -29,350 +29,6 @@ Stylesheet: Landing Page Stylesheet
   }
 }
 
-// Page Navigation
-// ------
-
-// .page-nav-container {
-//   position: absolute;
-//   z-index: 10;
-//   top: calc(100% - #{rem-calc(38)});
-//   left: 0;
-//   width: 100%;
-
-//   * {
-//     transform: translate3d(0, 0, 0);
-//   }
-
-//   .page-nav {
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-
-//     &::before {
-//       content: '';
-//       display: block;
-//       position: absolute;
-//       left: 0;
-//       top: rem-calc(-75);
-//       width: 100%;
-//       height: rem-calc(75);
-//       pointer-events: none;
-//       opacity: 0;
-//       background-image: linear-gradient(
-//         rgba($black, 0.333) 0,
-//         rgba($black, 0) 100%
-//       );
-//       transition: top 0 ease-in-out;
-//     }
-//   }
-
-//   nav {
-//     position: relative;
-//     width: 100%;
-//     height: rem-calc(52);
-//     background-color: $white;
-//     box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
-//     border-radius: $global-radius;
-//     margin: rem-calc(12 0);
-//     overflow: hidden;
-
-//     .group-a,
-//     .group-b {
-//       position: absolute;
-//       left: 0;
-//       top: 0;
-//       height: 100%;
-//       padding: rem-calc(0 10);
-//       display: flex;
-//       flex-flow: row nowrap;
-//       justify-content: space-between;
-//       align-items: stretch;
-//     }
-
-//     .group-a {
-//       width: 100%;
-//       transition: width 0.3s ease-in-out;
-
-//       a {
-//         position: relative;
-//         padding: rem-calc(15 20);
-//         color: $body-font-color;
-//         margin: 0;
-//         line-height: rem-calc(22);
-//         white-space: nowrap;
-//         transition: font-size 0.3s ease-in-out;
-
-//         &:hover {
-//           color: $primary-color;
-//           text-decoration: none;
-//         }
-
-//         &.active {
-//           color: $primary-color;
-
-//           &::after {
-//             content: '';
-//             display: block;
-//             position: absolute;
-//             left: rem-calc(20);
-//             top: rem-calc(40);
-//             width: calc(100% - #{rem-calc(40)});
-//             height: rem-calc(1);
-//             background-color: $primary-color;
-//           }
-//         }
-//       }
-//       @include breakpoint(large) {
-//         padding-left: rem-calc(20);
-//         padding-right: rem-calc(20);
-//       }
-//     }
-
-//     .group-b {
-//       width: rem-calc(155);
-//       left: auto;
-//       right: 0;
-//       display: flex;
-//       flex-flow: row nowrap;
-//       justify-content: flex-end;
-//       overflow: hidden;
-//       opacity: 0;
-//       margin-right: rem-calc(-155);
-//       padding: rem-calc(10 10 10 0);
-//       background-color: $white;
-//       transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
-
-//       a.button {
-//         margin: rem-calc(0);
-//         margin-left: auto;
-//       }
-//     }
-
-//     .fwd,
-//     .bak {
-//       display: none;
-//     }
-//   }
-
-//   &.sticky .page-nav {
-//     position: fixed;
-//     top: 0;
-
-//     &::before {
-//       top: rem-calc(-20);
-//       opacity: 1;
-//       transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out;
-//     }
-//   }
-
-//   @include breakpoint(medium) {
-//     .page-nav .grid-container {
-//       padding-left: 0;
-//       padding-right: 0;
-//     }
-
-//     nav {
-//       margin: rem-calc(12 0);
-
-//       .jump-link {
-//         display: none;
-//       }
-
-//       .group-a {
-//         overflow-x: hidden;
-//         overflow-y: hidden;
-//         @include breakpoint(medium only) {
-//           &:hover {
-//             overflow-x: auto;
-//           }
-//         }
-//       }
-
-//       .fwd,
-//       .bak {
-//         visibility: hidden;
-//         pointer-events: none;
-//         position: absolute;
-//         z-index: 2;
-//         top: 0;
-//         height: 100%;
-//         width: rem-calc(64);
-//         display: flex;
-//         flex-flow: column nowrap;
-//         justify-content: center;
-//         align-items: center;
-//         cursor: pointer;
-//         font-size: rem-calc(16);
-//         text-align: center;
-//         color: $body-font-color;
-//         transition: left 0.3s ease-in-out, right 0.3s ease-in-out;
-
-//         &::after {
-//           display: block;
-//           flex: 0 0 auto;
-//           padding: rem-calc(0 16);
-//         }
-
-//         &:hover {
-//           color: $primary-color;
-//         }
-//       }
-
-//       .fwd {
-//         right: 0;
-//         background-image: linear-gradient(
-//           to right,
-//           rgba($white, 0) 0,
-//           rgba($white, 1) 50%
-//         );
-//         align-items: flex-end;
-
-//         &::after {
-//           @include icon_font($char: $icon-arrow-right);
-//         }
-//       }
-
-//       .bak {
-//         left: 0;
-//         background-image: linear-gradient(
-//           to right,
-//           rgba($white, 1) 50%,
-//           rgba($white, 0) 100%
-//         );
-//         align-items: flex-start;
-
-//         &::after {
-//           @include icon_font($char: $icon-arrow-left);
-//         }
-//       }
-
-//       &.scrollable {
-//         .fwd,
-//         .bak {
-//           visibility: visible;
-//           pointer-events: auto;
-//         }
-
-//         &.start .bak {
-//           visibility: hidden;
-//           pointer-events: none;
-//         }
-
-//         &.end .fwd {
-//           visibility: hidden;
-//           pointer-events: none;
-//         }
-//       }
-//     }
-
-//     &.sticky nav {
-//       .group-a {
-//         width: calc(100% - #{rem-calc(155)});
-
-//         a {
-//           font-size: rem-calc(13);
-
-//           &.active::after {
-//             top: rem-calc(38);
-//           }
-//         }
-//       }
-
-//       .group-b {
-//         opacity: 1;
-//         margin-right: 0;
-//       }
-
-//       .fwd {
-//         right: rem-calc(150);
-//       }
-//     }
-//   }
-
-//   @include breakpoint(small down) {
-//     nav {
-//       height: auto;
-//       min-height: rem-calc(52);
-
-//       .jump-link {
-//         position: absolute;
-//         z-index: 2;
-//         left: 0;
-//         top: 0;
-//         height: rem-calc(52);
-//         display: flex;
-//         flex-flow: row nowrap;
-//         justify-content: flex-start;
-//         align-items: center;
-//         padding: rem-calc(10 10 10 35);
-//         width: calc(100% - #{rem-calc(155)});
-//         font-weight: $global-weight-normal;
-//         background-color: $white;
-//         margin: 0;
-//         cursor: pointer;
-
-//         &::after {
-//           @include icon_font($char: $icon-arrow-down);
-
-//           display: block;
-//           flex: 0 1 #{rem-calc(22)};
-//           width: rem-calc(22);
-//           padding: rem-calc(3 0 3 6);
-//           font-size: rem-calc(16);
-//         }
-//       }
-
-//       .group-a {
-//         display: none;
-//         z-index: 1;
-//         height: auto;
-//         position: relative;
-//         margin-top: rem-calc(54);
-//         padding: rem-calc(12 10);
-//         border-top: 1px solid $medium-gray;
-
-//         a {
-//           display: block;
-//           padding: rem-calc(8 0 8 25);
-//           font-size: rem-calc(15);
-
-//           &.active {
-//             color: $body-font-color;
-
-//             &::after {
-//               content: '';
-//               display: block;
-//               position: absolute;
-//               left: rem-calc(12);
-//               top: rem-calc(11);
-//               bottom: auto;
-//               width: rem-calc(1);
-//               height: rem-calc(16);
-//               background-color: $primary-color;
-//             }
-//           }
-//         }
-//       }
-
-//       .group-b {
-//         z-index: 2;
-//         opacity: 1;
-//         margin-right: 0;
-//         height: rem-calc(52);
-//       }
-
-//       &.open {
-//         .jump-link {
-//           &::after {
-//             @include icon_font($char: $icon-arrow-up);
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
 // Landing Page
 // ------
 
@@ -480,7 +136,7 @@ Stylesheet: Landing Page Stylesheet
     position: relative;
   }
 
-  > .grid-container > .cell:not(.tile):not(.tile-compact) > p > a,
+  .cell:not(.tile):not(.tile-compact) a,
   .tiles-intro a {
     color: $white;
     text-decoration: underline;
@@ -488,27 +144,10 @@ Stylesheet: Landing Page Stylesheet
     &:hover {
       opacity: 0.9;
     }
-
-    // &:last-child {
-    //   &::after {
-    //     display: inline-block;
-    //     margin-left: 0.3em;
-    //     font-size: 0.8em;
-    //     transition: margin 0.2s ease-in-out;
-    //     @include icon_font($char: $icon-arrow-right);
-    //   }
-
-    //   &:hover {
-    //     &::after {
-    //       margin-left: 0.5em;
-    //       margin-right: -0.2em;
-    //     }
-    //   }
-    // }
   }
 
-  > .grid-container > .cell:not(.tile):not(.tile-compact) > h1,
-  > .grid-container > .cell:not(.tile):not(.tile-compact) > h2,
+  .cell:not(.tile):not(.tile-compact) h1,
+  .cell:not(.tile):not(.tile-compact) h2,
   .tiles-intro h1,
   .tiles-intro h2 {
     &:after {
@@ -1122,11 +761,11 @@ Stylesheet: Landing Page Stylesheet
 .news-slider {
   @include breakpoint(medium down) {
     padding: rem-calc(0 0 1);
-    margin-bottom: rem-calc(40) !important;
+    margin-bottom: rem-calc(40);
 
     .grid-container {
       padding: rem-calc(0 0 1);
-      margin-bottom: rem-calc(-40) !important;
+      margin-bottom: rem-calc(-40);
     }
 
     .slick-list {
@@ -1210,21 +849,6 @@ Stylesheet: Landing Page Stylesheet
       max-width: rem-calc(360);
     }
   }
-
-  // a:last-child {
-  //   &::after {
-  //     display: inline-block;
-  //     margin-left: 0.3em;
-  //     font-size: 0.8em;
-  //     transition: margin 0.2s ease-in-out;
-  //     @include icon_font($char: $icon-arrow-right);
-  //   }
-
-  //   &:hover::after {
-  //     margin-left: 0.5em;
-  //     margin-right: -0.2em;
-  //   }
-  // }
 
   &.bg-dark {
     color: $white;
