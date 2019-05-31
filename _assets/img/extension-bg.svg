@@ -1,1 +1,10 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1959.14" height="488.32" viewBox="0 0 1959.14 488.32"><defs><style>.cls-1{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="278.06" y1="-424.26" x2="1617.41" y2="915.1" gradientTransform="matrix(1, 0, 0, -1, 0, 488)" gradientUnits="userSpaceOnUse"><stop offset="0.59" stop-color="#592acb"/><stop offset="1" stop-color="#952bb9"/></linearGradient></defs><title>extension-bg</title><rect class="cls-1" x="-96.92" y="-52.12" width="2089.31" height="589.4"/></svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1959.14" height="488.32" viewBox="0 0 1959.14 488.32">
+  <defs>
+    <linearGradient id="linear-gradient" x1="278.06" y1="456.26" x2="1617.41" y2="-883.1" gradientTransform="translate(0 456)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.59" stop-color="#592acb"/>
+      <stop offset="1" stop-color="#952bb9"/>
+    </linearGradient>
+  </defs>
+  <title>extension-bg</title>
+  <rect x="-96.92" y="-52.12" width="2089.31" height="589.4" fill="url(#linear-gradient)"/>
+</svg>
