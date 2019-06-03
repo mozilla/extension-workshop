@@ -398,6 +398,17 @@ html {
     }
   }
 
+  &.full-width,
+  &.side-bar {
+    .site-content {
+      padding-top: rem-calc(40);
+
+      @include breakpoint(large) {
+        padding-top: rem-calc(64);
+      }
+    }
+  }
+
   &.nav-open {
     @include breakpoint(medium down) {
       overflow: hidden;
