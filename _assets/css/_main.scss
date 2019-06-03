@@ -88,6 +88,10 @@ small {
 
 .button {
   min-width: rem-calc(132);
+
+  &.large {
+    padding: 0.95em 1.15em;
+  }
 }
 
 .site-footer .mzp-c-footer-legal ul > li > a:focus,
@@ -290,10 +294,12 @@ a[title='View on Github'] {
 // FRAMEWORK
 // -------------------------------------------------------------------------------------------------------------------
 
-// Sticky Footer
-// -- Landing Page has .landing class on .site-header and .site-content
+// Header
 // -- Conteng Guidelines pages have .site-wrapper element containing .site-header and .site-content
 // ------
+
+$header_h_sm: rem-calc(40);
+$header_h_lg: rem-calc(64);
 
 html {
   height: 100%;
@@ -303,31 +309,139 @@ html {
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  &.content-guidelines .site-wrapper,
+  &.full-width .site-content,
+  &.side-bar .site-content {
+    flex: 1 0 auto;
+    width: 100%;
+  }
+
+  &.full-width .site-header,
+  &.side-bar .site-header {
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    padding: rem-calc(6 0);
+    background: $white;
+    box-shadow: #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.1);
+    transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out,
+      height 0.4s ease-in-out;
+
+    .button.show-for-large {
+      margin-bottom: 0;
+    }
+
+    .search {
+      font-size: 0;
+
+      &::before {
+        @include icon_font($char: $icon-search);
+        font-size: rem-calc(20);
+      }
+    }
+
+    @include breakpoint(large) {
+      padding: rem-calc(12 0);
+
+      .cell {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        transition: margin 0.4s ease-in-out;
+      }
+      .button.show-for-large {
+        flex: 0 0 auto;
+        padding: 0.85em 1.15em;
+      }
+      .search {
+        flex: 0 0 auto;
+        margin-right: 1.2rem;
+      }
+    }
+
+    @include breakpoint(medium down) {
+      height: rem-calc(40);
+      overflow: hidden;
+
+      .search {
+        position: absolute;
+        top: rem-calc(6);
+        right: rem-calc(56);
+        padding: rem-calc(6 16 6 6);
+        transition: opacity 0.3s ease-in-out;
+
+        &::before {
+          font-size: rem-calc(16);
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: rem-calc(1);
+          height: 100%;
+          background-color: $medium-light-gray;
+        }
+      }
+    }
+  }
+
+  &.nav-open {
+    @include breakpoint(medium down) {
+      overflow: hidden;
+      &.full-width .site-header,
+      &.side-bar .site-header {
+        height: 100vh;
+      }
+      .logo a {
+        color: $white;
+      }
+      .search {
+        opacity: 0;
+      }
+    }
+  }
+
+  &:not(.nav-open) {
+    &.full-width .site-header,
+    &.side-bar .site-header {
+      &.minimize {
+        transform: translateY(#{-$header_h_lg});
+        box-shadow: none;
+      }
+    }
+  }
 }
 
-.site-header.landing,
+.site-header,
 .site-footer {
   flex: none;
 }
 
-.site-wrapper,
-.site-content.landing {
-  flex: 1 0 auto;
-  width: 100%;
-}
+// Grid Container
+// ------
 
 .grid-container {
-  @include breakpoint(large only) {
-    .landing &,
-    .landing + .site-footer & {
-      max-width: 84%;
-    }
-  }
   @include breakpoint(xlarge) {
     max-width: 84%;
   }
   @include breakpoint(xxlarge) {
     max-width: $global-width;
+  }
+}
+.site.full-width,
+.site.side-bar {
+  .site-content,
+  .site-footer {
+    .grid-container {
+      @include breakpoint(large only) {
+        max-width: 84%;
+      }
+    }
   }
 }
 
@@ -336,24 +450,26 @@ html {
 
 .logo {
   position: relative;
-  margin: 0;
-  font-size: rem-calc(15);
-  line-height: 1;
+  margin: 0 1rem 0 0;
+  font-size: $small-font-size;
+  line-height: 1.15;
+  font-weight: $global-weight-bold;
 
   a {
     position: relative;
     display: block;
-    padding: rem-calc(15 0 14 41);
+    padding: rem-calc(6 0 6 32);
     color: $body-font-color;
+    transition: color 0.3s ease-in-out;
 
     &::before {
       content: '';
       position: absolute;
       left: 0;
-      top: rem-calc(7);
+      top: 0;
       display: block;
-      width: rem-calc(31);
-      height: rem-calc(32);
+      width: rem-calc(25);
+      height: rem-calc(25);
       background: transparent asset_url('firefox-logo.png @optim') no-repeat
         center/contain;
     }
@@ -364,17 +480,165 @@ html {
     }
   }
 
-  @include breakpoint(medium) {
-    font-size: rem-calc(20);
+  @include breakpoint(large) {
+    flex: 0 0 auto;
 
     a {
-      padding: rem-calc(15 0 14 58);
+      max-width: rem-calc(136);
+      padding: rem-calc(4 0 4 45);
 
       &::before {
-        top: 0;
-        width: rem-calc(48);
-        height: rem-calc(49);
+        width: rem-calc(38);
+        height: rem-calc(38);
       }
+    }
+  }
+}
+
+// Hamburger Icon
+// ------
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: rem-calc(14);
+$hamburger-layer-height: rem-calc(2);
+$hamburger-layer-spacing: rem-calc(3);
+$hamburger-layer-color: $black;
+$hamburger-layer-border-radius: rem-calc(1);
+$hamburger-hover-opacity: 1;
+$hamburger-hover-transition-duration: 0.15s;
+$hamburger-hover-transition-timing-function: linear;
+
+@import 'hamburgers/hamburgers';
+
+.site-header .hamburger {
+  position: absolute;
+  top: rem-calc(9);
+  right: rem-calc(16);
+  padding: rem-calc(0 5);
+  transition: transform 0.3s ease-in-out;
+  &.is-active {
+    transform: scale(1.2);
+  }
+}
+
+// Top Nav
+// ------
+
+.topNav {
+  font-size: $small-font-size;
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    margin-bottom: 0;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  @include breakpoint(large) {
+    flex: 1 1 auto;
+    margin-right: 1.2rem;
+    .level-one {
+      @include horizontal_list($margin: 1.2rem);
+
+      > li {
+        padding: rem-calc(9 0);
+        &.is-active {
+          position: relative;
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: rem-calc(4);
+            width: 100%;
+            height: rem-calc(2);
+            background-color: $primary-color;
+            background-image: linear-gradient(
+              90deg,
+              #0099f1 0%,
+              #9059ff 9%,
+              #b833e1 35%,
+              #e31587 52%,
+              #fc4055 70%,
+              #ff9640 92%,
+              #fff36e 100%
+            );
+          }
+        }
+      }
+    }
+    .level-two {
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(1em);
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: rem-calc(136);
+      padding: rem-calc(10 0);
+      background: $white;
+      box-shadow: 0 4px 16px 0 rgba(12, 12, 13, 0.1);
+      border-radius: $global-radius;
+      transition: box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out,
+        opacity 0.3s ease-in-out;
+
+      li {
+        padding: rem-calc(6 16);
+        &.is-active {
+          background-color: #e5effb;
+          a {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    .has-children {
+      position: relative;
+      &:hover .level-two {
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      > a::after {
+        @include icon_font($char: $icon-arrow-down);
+        display: inline-block;
+        margin-left: 0.5em;
+        transform: translateY(#{rem-calc(2)});
+      }
+    }
+  }
+  @include breakpoint(medium down) {
+    display: none;
+    position: absolute;
+    top: rem-calc(40);
+    left: 0;
+    width: 100%;
+    height: calc(100% - #{rem-calc(40)});
+    flex-flow: column nowrap;
+
+    .level-one li {
+      padding: rem-calc(12 16);
+      &.has-children {
+        padding: rem-calc(0 16);
+        > a {
+          display: none;
+        }
+      }
+    }
+    .level-two li {
+      padding: rem-calc(12 0);
+    }
+
+    .level-one {
+      flex: 1 1 auto;
+    }
+    .button {
+      flex: 0 0 auto;
+      margin: rem-calc(16);
     }
   }
 }

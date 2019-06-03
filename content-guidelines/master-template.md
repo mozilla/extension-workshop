@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: guides
 title: Master Template
 permalink: /content-guidelines/master-template/
 published: false

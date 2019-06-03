@@ -1,38 +1,10 @@
 /************************************************
 
-Stylesheet: Landing Page Stylesheet
+Stylesheet: Full Width Page Stylesheet
 
 *************************************************/
 
-// Header
-// ------
-
-.site-header.landing {
-  position: absolute;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  padding: rem-calc(12 0);
-
-  .cell {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-  }
-
-  .site-nav {
-    padding: rem-calc(9 0 8);
-    @include breakpoint(small down) {
-      display: none;
-    }
-  }
-}
-
-// Landing Page
-// ------
-
-.site-content.landing {
+.site.full-width {
   background-color: $lighter-gray;
 }
 
@@ -41,14 +13,17 @@ Stylesheet: Landing Page Stylesheet
 
 .banner.intro {
   position: relative;
-  background: $white no-repeat center/cover;
+  background: transparent no-repeat center/cover;
   height: calc(100vh - #{rem-calc(120)});
   min-height: 120vw;
   max-height: 130vw;
   @include breakpoint(medium) {
     height: calc(100vh - #{rem-calc(50)});
-    min-height: rem-calc(300);
-    max-height: 70vw;
+    max-height: 66vw;
+    min-height: rem-calc(360);
+  }
+  @include breakpoint(large) {
+    max-height: 50vw;
   }
 
   .graphic-bg {
@@ -99,8 +74,9 @@ Stylesheet: Landing Page Stylesheet
   .banner-content {
     position: relative;
     z-index: 2;
-    height: 80%;
+    height: 90%;
     @include breakpoint(medium) {
+      height: 80%;
       padding-top: 5em;
     }
 
@@ -939,7 +915,7 @@ Stylesheet: Landing Page Stylesheet
       }
 
       img {
-        margin-right: rem-calc(16);
+        margin-right: 0.5rem;
       }
     }
   }
@@ -1179,6 +1155,7 @@ Stylesheet: Landing Page Stylesheet
   input[type='email'] {
     background-color: rgba(#b1b1b3, 0.2);
     border: 0;
+    margin-bottom: rem-calc(10);
     color: $white;
 
     &::placeholder {

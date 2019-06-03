@@ -69,6 +69,7 @@ $foundation-palette: (
 $primary-color-hover: #003eaa;
 $lighter-gray: #f3f3f3;
 $light-gray: #eee;
+$medium-light-gray: #e5e5e5;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
@@ -130,6 +131,7 @@ $icon-arrow-up: '\e902';
 $icon-arrow-down: '\e90b';
 $icon-arrow-left: '\e903';
 $icon-arrow-right: '\e90a';
+$icon-search: '\e913';
 $icon-irc: '\e904';
 $icon-mail: '\e905';
 $icon-telegram: '\e906';
@@ -351,7 +353,7 @@ $stat-font-size: 2.5rem;
 // ----------
 
 $button-font-family: inherit;
-$button-padding: 0.666em 1em;
+$button-padding: 0.575em 1.15em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
