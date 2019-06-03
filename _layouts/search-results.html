@@ -50,5 +50,4 @@ layout: full-width
       "date": {{ post.date | date: '%B %-d, %Y' | jsonify }},
       "excerpt": {{ post.content | strip_html | truncatewords: 50 | jsonify }}
     }{% unless forloop.last %},{% endunless %}{% endfor %}]
-
 </script>
