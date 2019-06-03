@@ -17,6 +17,7 @@
     "velocity-ui-pack": "1.2.2"
   },
   "devDependencies": {
+    "browserify": "^16.2.3",
     "eslint": "5.16.0",
     "eslint-config-prettier": "4.3.0",
     "eslint-plugin-prettier": "3.1.0",
@@ -25,7 +26,8 @@
     "rimraf": "2.6.3",
     "stylelint": "10.1.0",
     "stylelint-config-standard": "18.3.0",
-    "svgo": "1.2.2"
+    "svgo": "1.2.2",
+    "uglifyify": "^5.0.1"
   },
   "scripts": {
     "lint": "eslint .",
