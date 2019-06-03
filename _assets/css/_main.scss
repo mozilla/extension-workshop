@@ -328,15 +328,11 @@ html {
     transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out,
       height 0.4s ease-in-out;
 
-    .cell {
-      position: relative;
-    }
-
     .button.show-for-large {
       margin-bottom: 0;
     }
 
-    .search {
+    .search-input-open {
       font-size: 0;
       cursor: pointer;
 
@@ -355,6 +351,7 @@ html {
       padding: rem-calc(12 0);
 
       .cell {
+        position: relative;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -367,7 +364,7 @@ html {
         padding: 0.85em 1.15em;
       }
 
-      .search {
+      .search-input-open {
         flex: 0 0 auto;
         margin-right: 1.2rem;
       }
@@ -377,7 +374,7 @@ html {
       height: rem-calc(40);
       overflow: hidden;
 
-      .search {
+      .search-input-open {
         position: absolute;
         top: rem-calc(6);
         right: rem-calc(56);
@@ -415,7 +412,7 @@ html {
         color: $white;
       }
 
-      .search {
+      .search-input-open {
         opacity: 0;
       }
     }
@@ -511,15 +508,90 @@ html {
   }
 }
 
-// Search box
+// Search input box
 
 .search-input {
+  display: none;
   position: absolute;
-  left: 0; 
+  left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  padding-left: rem-calc(16);
+  padding-right: rem-calc(12);
   background: $white;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+
+  &::before {
+    @include icon_font($char: $icon-search);
+    font-size: rem-calc(20);
+    text-align: center;
+    line-height: rem-calc(40);
+    width: rem-calc(32);
+    flex: 0 0 #{rem-calc(20)};
+    color: $medium-light-gray;
+  }
+
+  @include breakpoint(large) {
+    padding-left: rem-calc(12);
+    padding-right: rem-calc(8);
+  }
+}
+
+.search-interface {
+  flex: 1 1 auto;
+  margin: rem-calc(6 8 6 12);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+
+  .label-text {
+    display: none;
+  }
+
+  .field {
+    flex: 1 1 auto;
+  }
+
+  button {
+    flex: 0 0 0;
+    font-size: 0;
+  }
+
+  @include breakpoint(large) {
+    margin: rem-calc(0 12 0 16);
+  }
+}
+
+#search-input {
+  border: 0;
+  margin: 0;
+  width: 100%;
+  height: rem-calc(28);
+  font-size: rem-calc(16);
+
+  &::placeholder {
+    font-weight: $global-weight-bold;
+  }
+
+  @include breakpoint(large) {
+    height: rem-calc(40);
+  }
+}
+
+.search-input-close {
+  flex: 0 0 #{rem-calc(28)};
+  font-size: rem-calc(28);
+  cursor: pointer;
+
+  &::before {
+    @include icon_font($char: $icon-close);
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
 }
 
 // Hamburger Icon
