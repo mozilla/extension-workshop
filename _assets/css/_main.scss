@@ -328,17 +328,26 @@ html {
     transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out,
       height 0.4s ease-in-out;
 
+    .cell {
+      position: relative;
+    }
+
     .button.show-for-large {
       margin-bottom: 0;
     }
 
     .search {
       font-size: 0;
+      cursor: pointer;
 
       &::before {
         @include icon_font($char: $icon-search);
 
         font-size: rem-calc(20);
+      }
+
+      &:hover {
+        color: $primary-color;
       }
     }
 
@@ -500,6 +509,17 @@ html {
       }
     }
   }
+}
+
+// Search box
+
+.search-input {
+  position: absolute;
+  left: 0; 
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $white;
 }
 
 // Hamburger Icon
