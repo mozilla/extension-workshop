@@ -9,8 +9,8 @@
 function renderJekyllPagesApiSearchResults(query, results, doc, resultsElem) {
   results.forEach(function(result, index) {
     var item = doc.createElement('li'),
-        link = doc.createElement('a'),
-        text = doc.createTextNode(result.title);
+      link = doc.createElement('a'),
+      text = doc.createTextNode(result.title);
 
     link.appendChild(text);
     link.title = result.title;
