@@ -3,14 +3,12 @@
 
   {%- include head.html -%}
 
-  <body class="site">
+  <body class="site side-bar">
 
-    {%- include landing-header.html -%}
+    {%- include header.html -%}
 
-    <main class="site-content landing" aria-label="Content">
-
+    <main class="site-content" aria-label="Content">
         {{ content }}
-
     </main>
 
     {%- include footer.html -%}
@@ -18,11 +16,12 @@
     <aside id="video-popup">
         <div class="bg"></div>
         <div class="grid-container grid-x grid-padding-x align-center align-middle">
-            <div class="cell small-12 large-10"></div>
+            <div class="cell small-12 large-10">
+                <button id="stdVideo-close"></button>
+            </div>
         </div>
     </aside>
 
     {% asset "bundle.js" !type %}
-    {% asset "basket-client.js" !type %}
   </body>
 </html>

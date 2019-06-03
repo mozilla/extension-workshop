@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: guides
 title: Extension Name
 permalink: /content-guidelines/extension-title/
 published: false

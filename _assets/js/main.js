@@ -21,11 +21,23 @@ jQuery(document).ready(function($) {
   // PLUGINS
   // ------------------
 
+  // 1. Site Nav
+
+  if ($('.full-width .site-header, .side-bar .site-header').length) {
+    $('.site-header').switchNav();
+  }
+
+  $('.has-children').each(function() {
+    if ($(this).find('.is-active').length) {
+      $(this).addClass('is-active');
+    }
+  });
+
   // 10. Site (Content Guidelines) Nav
   // ------
 
-  if ($('.site-wrapper .site-nav-container').length) {
-    $('.site-wrapper .site-nav-container').switchSiteNav();
+  if ($('.content-guidelines .site-nav-container').length) {
+    $('.content-guidelines .site-nav-container').switchContentGuidelinesNav();
   }
 
   // 2. Anchor Link Scroll
@@ -122,23 +134,23 @@ jQuery(document).ready(function($) {
 // PLUGINS
 
 (function($) {
-  // 10. Top Navigation : toggle mobile and desktop
+  // 1. Top Navigation : toggle mobile and desktop
   // ------
 
-  $.fn.switchSiteNav = function(options) {
+  $.fn.switchNav = function(options) {
     var settings = $.extend(
       {
-        breakpoint: 'atleast_medium',
+        breakpoint: 'atleast_large',
       },
       options
     );
 
-    var $container = this;
-    var nav_all = $container.siteMenu();
+    var $top = this;
+    var nav_all = $top.persistantMenu();
     var nav_desk = null;
     var nav_mobile = null;
 
-    function switchSiteNav(obj, media) {
+    function switchNav(obj, media) {
       // Set Desktop Nav
       if (media[settings.breakpoint] || media.fallback) {
         if (nav_mobile != null) {
@@ -146,7 +158,7 @@ jQuery(document).ready(function($) {
           nav_mobile = null;
         }
         if (nav_desk == null) {
-          nav_desk = $container.desktopSiteMenu();
+          nav_desk = $top.desktopMenu();
         }
 
         // Set Mobile Nav
@@ -156,16 +168,158 @@ jQuery(document).ready(function($) {
           nav_desk = null;
         }
         if (nav_mobile == null) {
-          nav_mobile = $container.mobileSiteMenu();
+          nav_mobile = $top.mobileMenu();
         }
       }
     }
-    $.subscribe('breakpoints', switchSiteNav);
+    $.subscribe('breakpoints', switchNav);
+  };
+
+  // 1.a Mobile Menu
+
+  $.fn.mobileMenu = function() {
+    var $body = $('body');
+    var $container = this;
+    var $nav = $container.find('.topNav');
+    var $primaryDropdown = this.find('.hamburger');
+
+    $nav.velocity('transition.slideUpOut', { duration: 0, display: 'none' });
+
+    $primaryDropdown.on('click', function(e) {
+      e.preventDefault();
+      if ($body.hasClass('nav-open')) {
+        $primaryDropdown
+          .removeClass('is-active')
+          .attr('aria-expanded', 'false');
+        $body.removeClass('nav-open');
+        $nav.velocity('transition.slideUpOut', {
+          duration: 600,
+          display: 'none',
+        });
+      } else {
+        $primaryDropdown.addClass('is-active').attr('aria-expanded', 'true');
+        $body.addClass('nav-open');
+        $nav.velocity('transition.slideDownIn', {
+          duration: 600,
+          display: 'flex',
+        });
+      }
+    });
+
+    return {
+      kill: function() {
+        $primaryDropdown.off('click').removeClass('is-active');
+        $nav.velocity('transition.slideDownIn', {
+          duration: 0,
+          display: 'flex',
+          complete: function() {
+            $nav.attr('style', '');
+            $body.removeClass('nav-open');
+          },
+        });
+      },
+    };
+  };
+
+  // 1.b Desktop Menu
+
+  $.fn.desktopMenu = function() {
+    return {
+      kill: function() {},
+    };
+  };
+
+  // 1.c Persistant Menu
+
+  $.fn.persistantMenu = function() {
+    var $container = this;
+    var $window = $(window);
+    var scrollTop = $window.scrollTop();
+    var stateMinimized = false;
+    var lastScrollTop = 0;
+    var sensitivity = 5;
+    var trigger = 30;
+
+    function scrollState() {
+      scrollTop = $window.scrollTop();
+
+      // downscroll
+      if (scrollTop > trigger && scrollTop > lastScrollTop && !stateMinimized) {
+        stateMinimized = true;
+        $container.addClass('minimize').removeClass('minimize-down');
+
+        // upscroll
+      } else if (
+        scrollTop > trigger &&
+        scrollTop < lastScrollTop - sensitivity &&
+        stateMinimized
+      ) {
+        stateMinimized = false;
+        $container.removeClass('minimize').addClass('minimize-down');
+
+        // top of page
+      } else if (scrollTop < trigger) {
+        stateMinimized = false;
+        $container.removeClass('minimize minimize-down');
+      }
+
+      lastScrollTop = scrollTop;
+    }
+
+    $window.on('scroll', scrollState);
+    scrollState();
+
+    return {
+      kill: function() {
+        $container.removeClass('minimize');
+        $window.off('scroll');
+      },
+    };
+  };
+
+  // 10. Content Guidelines Navigation
+  // ------
+
+  $.fn.switchContentGuidelinesNav = function(options) {
+    var settings = $.extend(
+      {
+        breakpoint: 'atleast_medium',
+      },
+      options
+    );
+
+    var $container = this;
+    var nav_desk = null;
+    var nav_mobile = null;
+
+    function switchContentGuidelinesNav(obj, media) {
+      // Set Desktop Nav
+      if (media[settings.breakpoint] || media.fallback) {
+        if (nav_mobile != null) {
+          nav_mobile.kill();
+          nav_mobile = null;
+        }
+        if (nav_desk == null) {
+          nav_desk = $container.desktopContentGuidelinesMenu();
+        }
+
+        // Set Mobile Nav
+      } else {
+        if (nav_desk != null) {
+          nav_desk.kill();
+          nav_desk = null;
+        }
+        if (nav_mobile == null) {
+          nav_mobile = $container.mobileContentGuidelinesMenu();
+        }
+      }
+    }
+    $.subscribe('breakpoints', switchContentGuidelinesNav);
   };
 
   // 10.a Mobile Menu
 
-  $.fn.mobileSiteMenu = function() {
+  $.fn.mobileContentGuidelinesMenu = function() {
     var $container = this;
     var $nav = $container.find('nav');
     var $links = $container.find('p, li:not(.current)');
@@ -213,15 +367,11 @@ jQuery(document).ready(function($) {
 
   // 10.b Desktop Menu
 
-  $.fn.desktopSiteMenu = function() {
+  $.fn.desktopContentGuidelinesMenu = function() {
     return {
       kill: function() {},
     };
   };
-
-  // 10.c Persistant Menu
-
-  $.fn.siteMenu = function() {};
 
   // 2. Anchor scroll
   // ------

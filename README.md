@@ -40,7 +40,7 @@ Note: Running locally will show unpublished content that uses the `published: fa
 
 ## Content Updates
 
-This site has two templates: the Extension Workshop landing page and Content Guidelines pages
+This site has three templates: a full-width page, a side-bar page for documentation, and a Content Guidelines page
 
 ### How to add a Content Guidelines page
 
@@ -53,7 +53,7 @@ This site has two templates: the Extension Workshop landing page and Content Gui
 
 ```
 ---
-layout: page
+layout: guides
 title: Page Name
 permalink: /content-guidelines/page-name/
 published: false

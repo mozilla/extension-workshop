@@ -1,38 +1,33 @@
 <header class="site-header">
     <div class="grid-container grid-x grid-padding-x">
         <div class="cell small-12">
-            <h3 class="logo">
-            	<a href="{{ "/" | relative_url }}">Content
-            		<br>Guidelines</a>
-            	<small class="tagline">Optimize Your Product Page</small>
-            </h3>
-
-            <div class="site-nav-container">
-            	<nav class="site-nav" tabindex="1">
-	            	<ul class="pages">
-					    {% for item in site.data.content-guidelines-pages %}
-						    {% if page.url == item.url %}
-							<li class="current">
-								<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-								{% if item.draft-label %}<span class="draft">draft</span>{% endif %}
+            <h3 class="logo"><a href="{{ "/" | relative_url }}">Extension Workshop</a></h3>
+            <button class="hamburger hide-for-large hamburger--collapse" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="false">
+			    <span class="hamburger-box">
+			        <span class="hamburger-inner"></span>
+			    </span>
+			</button>
+            <nav role="navigation" class="topNav" id="primary">
+                <ul class="level-one">
+                	{% for item in site.data.documentation-pages.primary %}
+					  	{% if item.subfolderitems %}
+					  		<li class="has-children {% if page.url == item.url %}is-active{% endif %}">
+					  			<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+						    	<ul class="level-two">
+									{% for entry in item.subfolderitems %}
+										<li class="{% if page.url == entry.url %}is-active{% endif %}"><a href="{{ entry.url | relative_url }}">{{ entry.title }}</a></li>
+									{% endfor %}
+							    </ul>
 							</li>
-					        {% else %}
-							<li>
-								<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-								{% if item.draft-label %}<span class="draft">draft</span>{% endif %}
-							</li>
-					        {% endif %}
-					    {% endfor %}
-					    <li><a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/Listing" target="_blank" rel="noreferrer noopener">More Tips</a></li>
-					</ul>
-
-					<p><a href="https://addons.mozilla.org/developers/addons" class="button" target="_blank" rel="noreferrer noopener">Edit Product Page</a></p>
-					<p><a href="{{ "/" | relative_url }}" class="back">Extension Workshop</a></p>
-					<p class="site-metadata"><a href="https://github.com/mozilla/extension-workshop/issues/new">Site Feedback</a>
-						<br><a href="https://www.mozilla.org/privacy/websites/">Privacy Policy</a>
-					</p>
-				</nav>
-            </div>
+					    {% else %}
+					    	<li class="{% if page.url == item.url %}is-active{% endif %}"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+					    {% endif %}
+					{% endfor %}
+                </ul>
+                <a href="https://addons.mozilla.org/developers/addons" class="button large hide-for-large">Submit or Manage Extensions</a>
+            </nav>
+        	<button class="search">Search</button>
+            <a href="https://addons.mozilla.org/developers/addons" class="button show-for-large">Submit or Manage Extensions</a>
         </div>
     </div>
 </header>

@@ -102,7 +102,7 @@ $sidebar-w: rem-calc(230);
     }
 
     small.tagline {
-      font-size: rem-calc(13);
+      font-size: rem-calc(12);
       padding: rem-calc(0 0 14 50);
       font-weight: $global-weight-normal;
       color: inherit;
@@ -125,7 +125,7 @@ $sidebar-w: rem-calc(230);
 
       small.tagline {
         display: block;
-        font-size: rem-calc(11);
+        font-size: rem-calc(10);
         padding: rem-calc(5 0 14 0);
       }
     }
@@ -141,10 +141,6 @@ $sidebar-w: rem-calc(230);
           width: rem-calc(43);
           height: rem-calc(44);
         }
-      }
-
-      small.tagline {
-        font-size: rem-calc(13);
       }
     }
 
@@ -593,7 +589,7 @@ span.example {
   background-color: $lighter-gray;
   margin: rem-calc(12 0);
   padding: rem-calc(12);
-  border: 1px solid darken($light-gray, 4%);
+  border: 1px solid $medium-light-gray;
 
   > *:last-child {
     margin-bottom: 0;
@@ -618,7 +614,7 @@ span.example {
   }
 
   .example {
-    background-color: darken($light-gray, 4%);
+    background-color: $medium-light-gray;
   }
 
   @include breakpoint(medium) {

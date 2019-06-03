@@ -26,7 +26,7 @@
           { label: 'small', match: '(max-width: 639px)' },
           {
             label: 'medium',
-            match: '(min-width: 640px) and (max-width: 1079px)',
+            match: '(min-width: 640px) and (max-width: 959px)',
           },
           { label: 'atleast_medium', match: '(min-width: 640px)' },
           {
