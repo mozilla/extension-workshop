@@ -30,14 +30,29 @@ h6 {
 
 h1,
 h2 {
+  &::after {
+    content: '';
+    display: block;
+    width: rem-calc(40);
+    height: rem-calc(2);
+    margin-top: 1.5rem;
+    background-color: $primary-color;
+    background-image: linear-gradient(
+      90deg,
+      #0099f1 0%,
+      #9059ff 9%,
+      #b833e1 35%,
+      #e31587 52%,
+      #fc4055 70%,
+      #ff9640 92%,
+      #fff36e 100%
+    );
+  }
+
   + h5:not(:first-child),
   + h6:not(:first-child) {
     margin-top: -0.6em;
   }
-}
-
-h2 {
-  font-weight: 500;
 }
 
 li {
@@ -134,6 +149,13 @@ a.tile-block-link:focus {
 
 .text-center {
   text-align: center;
+
+  h1,
+  h2 {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 // Blockquote
@@ -194,6 +216,16 @@ a[title='View on Github'] {
   position: relative;
   display: block;
   background: transparent no-repeat center/cover;
+}
+
+.image-block {
+  border-radius: $global-radius;
+  margin: rem-calc(16 0);
+  @include breakpoint(medium) {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 // FORM STYLES
@@ -284,6 +316,21 @@ html {
   width: 100%;
 }
 
+.grid-container {
+  @include breakpoint(large only) {
+    .landing &,
+    .landing + .site-footer & {
+      max-width: 84%;
+    }
+  }
+  @include breakpoint(xlarge) {
+    max-width: 84%;
+  }
+  @include breakpoint(xxlarge) {
+    max-width: $global-width;
+  }
+}
+
 // Logo
 // ------
 
@@ -348,11 +395,43 @@ html {
 
 .panel {
   position: relative;
-  padding-top: rem-calc(20);
-  padding-bottom: rem-calc(20);
+  padding-top: rem-calc(32);
+  padding-bottom: rem-calc(24);
   @include breakpoint(medium) {
     padding-top: rem-calc(60);
     padding-bottom: rem-calc(60);
+  }
+
+  .grid-container {
+    position: relative;
+  }
+}
+
+.panel-outside {
+  position: relative;
+  margin-top: rem-calc(20);
+  margin-bottom: rem-calc(20);
+  @include breakpoint(medium) {
+    margin-top: rem-calc(60);
+    margin-bottom: rem-calc(60);
+  }
+
+  .grid-container {
+    position: relative;
+  }
+}
+
+.panel-intro {
+  position: relative;
+  padding-top: rem-calc(40);
+  padding-bottom: rem-calc(20);
+  @include breakpoint(medium) {
+    padding-top: rem-calc(60);
+    padding-bottom: 0;
+  }
+
+  .grid-container {
+    position: relative;
   }
 }
 

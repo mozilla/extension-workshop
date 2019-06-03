@@ -15,30 +15,33 @@ jQuery(document).ready(function($) {
 
   // Device
   // ------
+
   var is_touch_device = 'ontouchstart' in document.documentElement;
 
   // PLUGINS
   // ------------------
 
-  // 1. Page Nav
-  if ($('.page-nav-container').length) {
-    $('.page-nav-container').switchPageNav();
-  }
-
   // 10. Site (Content Guidelines) Nav
+  // ------
+
   if ($('.site-wrapper .site-nav-container').length) {
     $('.site-wrapper .site-nav-container').switchSiteNav();
   }
 
   // 2. Anchor Link Scroll
+  // ------
+
   $('a[href^="#"]').scrollto({ offset_lg: 38, offset_sm: 38 });
 
   // 3. Show in View
+  // ------
+
   if ($('.showOnView').length) {
     $('.showOnView').showOnView();
   }
 
   // 4. Banner Image Parallax
+  // ------
 
   // ******                                        ******
   // **    the plugin code is found in parallax.js     **
@@ -46,6 +49,9 @@ jQuery(document).ready(function($) {
 
   if ($('.parallax').length) {
     $('.parallax').parallax({ offsetIntertia: -0.15 });
+  }
+  if ($('.parallaxFG').length) {
+    $('.parallaxFG').parallaxFG({ offsetIntertia: 0.15 });
   }
   if ($('.parallaxFG-right').length) {
     $('.parallaxFG-right').parallaxFG({ offsetIntertia: 0.075, axis: 'x' });
@@ -55,12 +61,14 @@ jQuery(document).ready(function($) {
   }
 
   // 5. Video Popup
+  // ------
 
   // ******                                        ******
   // **  the plugin code is found in youtubeplayer.js  **
   // *****                                         ******
 
   // 6. Slick slider
+  // ------
 
   // ******                                        ******
   // **               external plugin                  **
@@ -84,23 +92,29 @@ jQuery(document).ready(function($) {
   }
 
   // 7. RSS Feed
+  // ------
 
   if ($('#rss-feed').length) {
     $('#rss-feed').rss_feed();
   }
 
   // 8. Anatomy of an extension
+  // ------
+
   if ($('#anatomy-of-an-extension-graphic').length) {
     $('#anatomy-of-an-extension-graphic').extenstionAnatomy();
   }
 
   // 9. Popups
+  // ------
+
   if ($('.popup-action').length) {
     $('.popup-action').popups();
   }
 
   // Init Breakpoint Listeners
   // ------------------
+
   $(this).breakpoints();
 });
 
@@ -108,268 +122,6 @@ jQuery(document).ready(function($) {
 // PLUGINS
 
 (function($) {
-  // 1. Top Navigation : toggle mobile and desktop
-  // ------
-
-  $.fn.switchPageNav = function(options) {
-    var settings = $.extend(
-      {
-        breakpoint: 'atleast_medium',
-      },
-      options
-    );
-
-    var $container = this;
-    var nav_all = $container.pageMenu();
-    var nav_desk = null;
-    var nav_mobile = null;
-
-    function switchPageNav(obj, media) {
-      // Set Desktop Nav
-      if (media[settings.breakpoint] || media.fallback) {
-        if (nav_mobile != null) {
-          nav_mobile.kill();
-          nav_mobile = null;
-        }
-        if (nav_desk == null) {
-          nav_desk = $container.desktopPageMenu();
-        }
-
-        // Set Mobile Nav
-      } else {
-        if (nav_desk != null) {
-          nav_desk.kill();
-          nav_desk = null;
-        }
-        if (nav_mobile == null) {
-          nav_mobile = $container.mobilePageMenu();
-        }
-      }
-    }
-    $.subscribe('breakpoints', switchPageNav);
-  };
-
-  // 1.a Mobile Menu
-
-  $.fn.mobilePageMenu = function() {
-    var $container = this;
-    var $nav = $container.find('nav');
-    var $jump = $container.find('.jump-link');
-    var $links = $container.find('#page-nav-links');
-    var open = $nav.hasClass('open');
-    var $window = $(window);
-
-    if (!open) {
-      $links.velocity('slideUp', { duration: 0 });
-    }
-
-    $jump.on('click', function() {
-      if (open) {
-        $nav.removeClass('open');
-        $links.velocity('slideUp');
-      } else {
-        $nav.addClass('open');
-        $links.velocity('slideDown', {
-          complete: function() {
-            if (
-              $nav.outerHeight() + $nav.offset().top >
-              $window.height() + $window.scrollTop()
-            ) {
-              $nav.velocity('scroll', {
-                duration: 900,
-                offset: -($nav.outerHeight() - 16),
-              });
-            }
-          },
-        });
-      }
-      open = !open;
-    });
-
-    $.subscribe('scrollto', function(obj, anchor) {
-      if (anchor.parent().attr('id') == 'page-nav-links') {
-        $nav.removeClass('open');
-        $links.velocity('slideUp');
-        open = false;
-      }
-    });
-
-    return {
-      kill: function() {
-        $jump.off('click');
-        $nav.removeClass('open');
-        $links.attr('style', '');
-      },
-    };
-  };
-
-  // 1.b Desktop Menu
-
-  $.fn.desktopPageMenu = function() {
-    var $container = this;
-    var $anchors = $container.find('a[href^="#"]');
-
-    var overflow_scroll = $anchors.overflow_x_scroll();
-
-    return {
-      kill: function() {
-        overflow_scroll.kill();
-      },
-    };
-  };
-
-  // 1.c Persistant Menu
-
-  $.fn.pageMenu = function() {
-    var $window = $(window);
-    var $container = this;
-    var $anchors = $container.find('a[href^="#"]');
-
-    $window.on('scroll.persistant', function() {
-      if ($window.scrollTop() >= $container.offset().top) {
-        $container.addClass('sticky');
-      } else {
-        $container.removeClass('sticky');
-      }
-
-      updateAnchorActive();
-    });
-
-    function updateAnchorActive() {
-      var len = 0;
-      $anchors.each(function() {
-        var $self = $(this);
-        var $el = $($self.attr('href'));
-        if ($el.length && isInFocus($el, 0.75)) {
-          $anchors.removeClass('active');
-          $self.addClass('active');
-          len++;
-        }
-      });
-      if (!len) {
-        $anchors.removeClass('active');
-      }
-    }
-  };
-
-  // 1.d Overflow X scroll
-  // ------
-
-  $.fn.overflow_x_scroll = function(options) {
-    var $links = this;
-    var $container = $links.parent();
-    var $container_parent = $container.parent();
-    $container.after('<div class="fwd"></div>');
-    $container.before('<div class="bak"></div>');
-    var track_w = w();
-    var container_w = $container.outerWidth();
-    var padding = 32;
-    var btn_lock = false;
-
-    function w() {
-      var len = 0;
-      $links.each(function() {
-        len += $(this).outerWidth(true);
-      });
-      return len;
-    }
-
-    function update() {
-      var position = $links.first().position();
-      container_w = $container.outerWidth();
-      track_w = w();
-
-      if (track_w > container_w) {
-        $container_parent.addClass('scrollable').removeClass('end start');
-        if (position.left >= 0) {
-          $container_parent.addClass('start');
-        } else if (track_w + position.left <= container_w) {
-          $container_parent.addClass('end');
-        }
-      } else {
-        $container.attr('style', '');
-        $container_parent.removeClass('scrollable end start');
-      }
-    }
-
-    function scroll(dir) {
-      if (!btn_lock) {
-        btn_lock = true;
-        var offset = 0;
-        var $scroll_to = dir < 0 ? $links.first() : $links.last(); // default if loop below doesn't work out
-
-        $links.each(function() {
-          var $this = $(this);
-          if (dir < 0 && $this.position().left < 0) {
-            $scroll_to = $this;
-            // } else if (dir < 0 && $this.position().left >= 0) {
-            return false;
-          } else if (
-            dir > 0 &&
-            $this.position().left + $this.outerWidth() >
-              container_w - $links.first().position().left
-          ) {
-            $scroll_to = $this;
-            return false;
-          }
-        });
-
-        if (dir > 0 && $scroll_to != $links.last()) {
-          offset -= padding;
-        } else if (dir < 0 && $scroll_to != $links.first()) {
-          offset -= padding;
-        }
-
-        if ($scroll_to) {
-          $scroll_to.velocity('scroll', {
-            container: $container,
-            duration: 600,
-            offset: offset,
-            axis: 'x',
-            easing: 'easeInOutSine',
-            complete: function() {
-              btn_lock = false;
-            },
-          });
-        } else {
-          btn_lock = false;
-        }
-      }
-    }
-
-    $container_parent.find('.fwd').on('click', function() {
-      scroll(1);
-    });
-
-    $container_parent.find('.bak').on('click', function() {
-      scroll(-1);
-    });
-
-    $container.on('scroll.xscroll', update);
-    $(window)
-      .on('resize.xscroll', update)
-      .on('scroll.xscroll', update);
-    setTimeout(update, 500);
-
-    return {
-      kill: function() {
-        $container_parent
-          .find('.fwd')
-          .off('click')
-          .remove();
-        $container_parent
-          .find('.bak')
-          .off('click')
-          .remove();
-        $container.off('scroll.xscroll');
-        $(window)
-          .off('resize.xscroll')
-          .off('scroll.xscroll');
-        $container_parent.removeClass('scrollable end start');
-      },
-    };
-  };
-
   // 10. Top Navigation : toggle mobile and desktop
   // ------
 

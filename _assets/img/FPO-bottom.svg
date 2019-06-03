@@ -1,0 +1,47 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="429" viewBox="0 0 960 429">
+  <defs>
+    <mask id="mask" x="-10.23" y="-8" width="791.23" height="445" maskUnits="userSpaceOnUse">
+      <g id="mask-2" data-name="mask">
+        <g id="group-4-c">
+          <path id="group-4-a" d="M-10.23,169.31V430.88A6.18,6.18,0,0,0-7.52,436H103.77L43.65,262.74A285.6,285.6,0,0,0-10.23,169.31Z" fill="#fff" fill-rule="evenodd"/>
+        </g>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient" x1="927.69" y1="-71.24" x2="927.5" y2="-71.38" gradientTransform="matrix(0, 445, 791.23, 0, 56698.58, -412645.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9059ff"/>
+      <stop offset="1" stop-color="#fefdff"/>
+    </linearGradient>
+    <mask id="mask-3" x="195.77" y="53.5" width="791.23" height="445" maskUnits="userSpaceOnUse">
+      <g id="mask-2-2" data-name="mask-2">
+        <g id="group-4-f">
+          <path id="group-4-d" d="M987,59.62v432.7a6.18,6.18,0,0,1-6.18,6.18H351.52l632.77-444A6.18,6.18,0,0,1,987,59.62Z" fill="#fff" fill-rule="evenodd"/>
+        </g>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient-2" x1="929.2" y1="-70.96" x2="929.34" y2="-71.11" gradientTransform="translate(56904.58 413855.5) rotate(-90) scale(445 791.23)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffd567"/>
+      <stop offset="1" stop-color="#fffffd"/>
+    </linearGradient>
+    <mask id="mask-4" x="195.77" y="53.5" width="791.23" height="445" maskUnits="userSpaceOnUse">
+      <g id="mask-3-2" data-name="mask-3">
+        <g id="group-4-i">
+          <path id="group-4-g" d="M987,409.17v83.15a6.18,6.18,0,0,1-6.18,6.18H357.41a707,707,0,0,0,119-138.83c86.93-132.81,265.9-170.56,399.75-84.31A285.91,285.91,0,0,1,987,409.17Z" fill="#fff" fill-rule="evenodd"/>
+        </g>
+      </g>
+    </mask>
+    <linearGradient id="linear-gradient-3" x1="929.37" y1="-71.25" x2="929.5" y2="-70.79" gradientTransform="translate(56904.58 413855.5) rotate(-90) scale(445 791.23)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff298a"/>
+      <stop offset="1" stop-color="#ffd367"/>
+    </linearGradient>
+  </defs>
+  <title>FPO-bottom</title>
+  <g mask="url(#mask)">
+    <polygon points="781 -8 781 437 -10.23 437 -10.23 -8 781 -8" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+  </g>
+  <g mask="url(#mask-3)">
+    <polygon points="987 498.5 987 53.5 195.77 53.5 195.77 498.5 987 498.5" fill-rule="evenodd" fill="url(#linear-gradient-2)"/>
+  </g>
+  <g mask="url(#mask-4)">
+    <polygon points="987 498.5 987 53.5 195.77 53.5 195.77 498.5 987 498.5" fill-rule="evenodd" fill="url(#linear-gradient-3)"/>
+  </g>
+</svg>
