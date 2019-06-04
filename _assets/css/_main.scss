@@ -30,7 +30,7 @@ h6 {
 
 h1,
 h2 {
-  &::after {
+  &:not(.no-underline)::after {
     content: '';
     display: block;
     width: rem-calc(40);
@@ -140,6 +140,13 @@ a.tile-block-link:focus {
 .bg-grey {
   background-color: $lighter-gray;
 }
+
+// Element Shadows
+// ------
+
+$element-shadow: #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.1);
+
+
 
 // Lead Text
 // ------
@@ -324,7 +331,7 @@ html {
     width: 100%;
     padding: rem-calc(6 0);
     background: $white;
-    box-shadow: #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.1);
+    box-shadow: $element-shadow;
     transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out,
       height 0.4s ease-in-out;
 
@@ -428,7 +435,7 @@ html {
     &.side-bar .site-header {
       &.minimize {
         transform: translateY(#{-$header_h_lg});
-        box-shadow: none;
+        box-shadow: $element-shadow;
       }
     }
   }
@@ -532,7 +539,7 @@ html {
     font-size: rem-calc(20);
     text-align: center;
     line-height: rem-calc(40);
-    width: rem-calc(32);
+    width: rem-calc(20);
     flex: 0 0 #{rem-calc(20)};
     color: $medium-light-gray;
   }
@@ -595,6 +602,86 @@ html {
 
   &:hover {
     color: $primary-color;
+  }
+}
+
+// Search CTA box
+
+.search-cta {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: stretch;
+  margin: rem-calc(32 0);
+  padding: rem-calc(8);
+  background: $white;
+  box-shadow: #{rem-calc(0 6 22 0)} rgba(16, 16, 18, 0.2); // $element-shadow; 
+  border-radius: rem-calc(6);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &::before {
+    @include icon_font($char: $icon-search);
+    font-size: rem-calc(20);
+    text-align: right;
+    line-height: rem-calc(40);
+    width: rem-calc(30);
+    flex: 0 0 #{rem-calc(30)};
+    color: $primary-color;
+  }
+
+  @include breakpoint(large) {
+    margin: rem-calc(38 0);
+    padding: rem-calc(12);
+
+    &:first-child {
+      margin: rem-calc(-16 0 48);
+    }
+  }
+}
+
+#result-list ol {
+  list-style: none;
+  margin: 0;
+
+  li {
+    padding: rem-calc(30 0);
+
+    &:first-child {
+      border-top: 1px solid $medium-light-gray;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $medium-light-gray;
+    }
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+
+      h3 {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 1em;
+    color: $black;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  small {
+    font-size: rem-calc(12);
   }
 }
 
@@ -684,7 +771,7 @@ $hamburger-hover-transition-timing-function: linear;
       width: rem-calc(136);
       padding: rem-calc(10 0);
       background: $white;
-      box-shadow: 0 4px 16px 0 rgba(12, 12, 13, 0.1);
+      box-shadow: $element-shadow;
       border-radius: $global-radius;
       transition: box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out,
         opacity 0.3s ease-in-out;
@@ -824,7 +911,7 @@ $hamburger-hover-transition-timing-function: linear;
     height: 100%;
     background-color: $white;
     border-radius: $global-radius;
-    box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+    box-shadow: $element-shadow;
   }
 
   > * {
@@ -917,7 +1004,7 @@ $hamburger-hover-transition-timing-function: linear;
     height: 100%;
     background-color: $white;
     border-radius: $global-radius;
-    box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+    box-shadow: $element-shadow;
   }
 
   > * {
@@ -1090,7 +1177,7 @@ $hamburger-hover-transition-timing-function: linear;
     height: 0;
     padding-bottom: 56.25%;
     margin: rem-calc(20 0 10);
-    box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+    box-shadow: $element-shadow;
     border-radius: $global-radius;
     overflow: hidden;
 
