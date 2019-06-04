@@ -18,7 +18,9 @@ Stylesheet: Full Width Page Stylesheet
   min-height: 120vw;
   max-height: 130vw;
 
-  &#top {margin-top: rem-calc(-40);}
+  &#top {
+    margin-top: rem-calc(-40);
+  }
 
   @include breakpoint(medium) {
     height: calc(100vh - #{rem-calc(88)});
@@ -30,7 +32,9 @@ Stylesheet: Full Width Page Stylesheet
     height: calc(100vh - #{rem-calc(64)});
     max-height: 50vw;
 
-    &#top {margin-top: rem-calc(-64);}
+    &#top {
+      margin-top: rem-calc(-64);
+    }
   }
 
   .graphic-bg {

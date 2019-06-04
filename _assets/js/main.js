@@ -752,7 +752,7 @@ jQuery(document).ready(function($) {
     var settings = $.extend(
       {
         open: '.search-input-open',
-        close: '.search-input-close', 
+        close: '.search-input-close',
         input: '#search-input',
       },
       options
@@ -764,13 +764,17 @@ jQuery(document).ready(function($) {
     var $input = $(settings.input);
 
     $open.on('click', function() {
-      $container.velocity('transition.slideRightIn', {duration: 450, display: "flex", complete: function() {
-        $input.focus();
-      }});
+      $container.velocity('transition.slideRightIn', {
+        duration: 450,
+        display: 'flex',
+        complete: function() {
+          $input.focus();
+        },
+      });
     });
 
     $close.on('click', function() {
-      $container.velocity('transition.slideRightOut', {duration: 450});
+      $container.velocity('transition.slideRightOut', { duration: 450 });
     });
   };
 
