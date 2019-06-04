@@ -96,6 +96,25 @@ Stylesheet: Full Width Page Stylesheet
     }
   }
 
+  .bottom-content {
+    position: absolute;
+    left: 0; 
+    width: 100%;
+    bottom: rem-calc(-28);
+    z-index: 2;
+
+    @include breakpoint(large) {
+      bottom: rem-calc(-32);
+    }
+  }
+
+  .search-cta {
+    margin: rem-calc(0);
+    @include breakpoint(large) {
+      
+    }
+  }
+
   // First section following banner
   // ------
 
