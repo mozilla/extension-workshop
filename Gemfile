@@ -19,6 +19,7 @@ group :jekyll_plugins do
   gem 'jekyll-assets', '~> 3.0'
   gem 'jekyll-seo-tag', '~> 2.5.0'
   gem 'jekyll_pages_api_search'
+  # gem 'jekyll_pages_api_search', :path => '../jekyll_pages_api_search' <-- TESTING LOCAL FORK
   # gem 'github-pages', '~> 193'
 end
 
