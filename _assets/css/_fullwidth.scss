@@ -110,8 +110,6 @@ Stylesheet: Full Width Page Stylesheet
 
   .search-cta {
     margin: rem-calc(0);
-    @include breakpoint(large) {
-    }
   }
 
   // First section following banner
