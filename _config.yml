@@ -60,9 +60,9 @@ jekyll_pages_api_search:
   # If defined and browserify and uglifyify are installed, the plugin will
   # generate a bundle to define the renderJekyllPagesApiSearchResults
   # function.
-  # browserify:
-  #   source: js/my-search.js
-  #   target: js/my-search-bundle.js
+  browserify:
+    source: _assets/js/my-search.js
+    target: assets/js/my-search-bundle.js
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
