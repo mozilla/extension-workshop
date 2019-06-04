@@ -3,9 +3,18 @@ layout: full-width
 ---
 
 <div class="search-results">
+	<div class="grid-container grid-x grid-padding-x">
+        <div class="cell small-12">
 
-    <div id="result-list"></div>
+        	<section class="search-cta" role="search">
+            	{% jekyll_pages_api_search_interface %}
+            </section>
 
+            <h3 class="results-title">Search results</h3>
+
+		    <div id="result-list">{% jekyll_pages_api_search_results %}</div>
+		</div>
+	</div>
 </div>
 <script>
 var JEKYLL_PAGES_API_SEARCH_UI_OPTIONS = {
