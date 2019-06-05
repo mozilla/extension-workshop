@@ -337,7 +337,7 @@ html {
 
       &::before {
         @include icon_font($char: $icon-search);
-        
+
         font-size: rem-calc(20);
       }
     }
