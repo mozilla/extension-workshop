@@ -3,14 +3,52 @@ layout: full-width
 ---
 
 <div class="search-results panel">
-  <div class="grid-container grid-x grid-padding-x">
-    <div class="cell small-12">
+    <div class="grid-container grid-x grid-padding-x">
+        <div class="cell small-12">
 
-        <section class="search-cta" role="search">
-          
-        </section>
+            <section class="search-cta" role="search">
+                {% include search-bar.html %}
+            </section>
 
-        <section id="result-list"></section>
+            <div id="result-list"></div>
+
+            <aside class="popular-searches">
+                {% capture popular_searches %}{% include popular-searches.md %}{% endcapture %}
+                {{ popular_searches | markdownify }}
+            </aside>
+        </div>
     </div>
-  </div>
 </div>
+
+{% asset "lunr.min.js" !type %}
+<script>
+    // ---
+    // Lunr Feed 
+    // Based on: https://katydecorah.com/code/lunr-and-jekyll/
+    // ---
+
+    // builds lunr
+    var index = lunr(function () {
+        this.field('title')
+        this.field('content', {boost: 10})
+        this.ref('id')
+
+        {% assign count = 0 %}{% for post in site.pages %}
+        this.add({
+          title: {{post.title | jsonify}},
+          topic: {{post.topic | jsonify}},
+          content: {{post.content | strip_html | jsonify}},
+          id: {{count}}
+        });{% assign count = count | plus: 1 %}{% endfor %}
+    });
+
+    // builds reference data
+    var store = [{% for post in site.pages %}{
+      "title": {{post.title | jsonify}},
+      "topic": {{post.topic | jsonify}},
+      "link": window.location.origin + {{ post.url | jsonify }},
+      "date": {{ post.date | date: '%B %-d, %Y' | jsonify }},
+      "excerpt": {{ post.content | strip_html | truncatewords: 50 | jsonify }}
+    }{% unless forloop.last %},{% endunless %}{% endfor %}]
+
+</script>

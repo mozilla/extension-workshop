@@ -554,38 +554,43 @@ html {
   display: flex;
   flex-flow: row nowrap;
   justify-content: stretch;
+  align-items: stretch;
 
-  .label-text {
-    display: none;
-  }
-
-  .field {
-    flex: 1 1 auto;
-  }
-
-  button {
+  label {
     flex: 0 0 0;
+    opacity: 0;
     font-size: 0;
+  }
+
+  input[type=text],
+  input[type=search] {
+    flex: 1 1 auto;
+    margin: 0;
+    border: 0;
+    width: 100%;
+    height: rem-calc(28);
+    font-size: rem-calc(16);
+
+    &::placeholder {
+      font-weight: $global-weight-bold;
+    }
+
+    @include breakpoint(large) {
+      height: rem-calc(40);
+    }
+  }
+
+  input[type=submit] {
+    flex: 0 0 0;
+    opacity: 0;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
   }
 
   @include breakpoint(large) {
     margin: rem-calc(0 12 0 16);
-  }
-}
-
-#search-input {
-  border: 0;
-  margin: 0;
-  width: 100%;
-  height: rem-calc(28);
-  font-size: rem-calc(16);
-
-  &::placeholder {
-    font-weight: $global-weight-bold;
-  }
-
-  @include breakpoint(large) {
-    height: rem-calc(40);
   }
 }
 
@@ -678,8 +683,27 @@ html {
     }
   }
 
+  .post-meta {
+    margin-bottom: 1em;
+
+    + h3 {
+      margin-top: 0;
+    }
+  }
+
   small {
     font-size: rem-calc(12);
+  }
+}
+
+.popular-searches {
+  display: none;
+  padding: rem-calc(30 0);
+  border-top: 1px solid $medium-light-gray;
+
+  ul {
+    list-style: none;
+    margin: 0;
   }
 }
 
