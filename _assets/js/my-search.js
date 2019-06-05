@@ -8,21 +8,22 @@ function renderJekyllPagesApiSearchResults(query, results, doc, resultsElem) {
   list_title.classList.add('no-underline');
 
   results.forEach(function(result, index) {
+    console.log(result);
     if (!result.title) return true;
 
     var item = doc.createElement('li'),
       link = doc.createElement('a'),
       title = doc.createElement('h3'),
-      excerpt = doc.createTextNode('Excerpt to go here...'),
-      url = doc.createTextNode(location.origin + result.url),
       body = doc.createElement('p'),
       body_2 = doc.createElement('p'),
       small = doc.createElement('small'),
-      text = doc.createTextNode(result.title);
+      title_text = doc.createTextNode(result.title),
+      excerpt_text = doc.createTextNode('Excerpt to go here...'),
+      url_text = doc.createTextNode(location.origin + result.url);
 
-    title.appendChild(text);
-    small.appendChild(url);
-    body.appendChild(excerpt);
+    title.appendChild(title_text);
+    body.appendChild(excerpt_text);
+    small.appendChild(url_text);
     body_2.appendChild(small);
     link.appendChild(title);
     link.appendChild(body);
