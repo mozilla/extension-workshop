@@ -837,6 +837,7 @@ jQuery(document).ready(function($) {
             '</p><p><small>' +
             store[ref].link +
             '</small></p></a></li>';
+
           $list.append(searchitem);
         }
 
