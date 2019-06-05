@@ -569,8 +569,8 @@ html {
     font-size: 0;
   }
 
-  input[type=text],
-  input[type=search] {
+  input[type='text'],
+  input[type='search'] {
     flex: 1 1 auto;
     margin: 0;
     border: 0;
@@ -587,7 +587,7 @@ html {
     }
   }
 
-  input[type=submit] {
+  input[type='submit'] {
     flex: 0 0 0;
     opacity: 0;
     font-size: 0;
