@@ -131,6 +131,13 @@ jQuery(document).ready(function($) {
     $('.search-input').searchHeader();
   }
 
+  // 12. Site Search Results
+  // ------
+
+  if ($('#result-list').length) {
+    $('#result-list').searchResults();
+  }
+
   // Init Breakpoint Listeners
   // ------------------
 
@@ -753,7 +760,7 @@ jQuery(document).ready(function($) {
       {
         open: '.search-input-open',
         close: '.search-input-close',
-        input: '#search-input',
+        input: '#lunrsearch',
       },
       options
     );
@@ -777,6 +784,62 @@ jQuery(document).ready(function($) {
       $container.velocity('transition.slideRightOut', { duration: 450 });
     });
   };
+
+  // 12. Search Results
+  // ------
+
+  $.fn.searchResults = function(options) {
+    var settings = $.extend(
+      {
+        input: '.search-cta #lunrsearch',
+        default: '.popular-searches',
+      },
+      options
+    );
+
+    var $container = this;
+    var $local_input = $(settings.input);
+    var $default = $(settings.default);
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('q');
+    
+    function lunr_search(query) {
+      var result = index.search(query);
+      var num = result.length && query != '' ? result.length : 0;
+
+      // Show results
+      $container.empty();
+
+      // Add status
+      $container.prepend('<h2 class="no-underline">' + num + ' results for "' + query + '"</h2>');
+
+      if (num != 0) {
+        var $list = $('<ol></ol>');
+
+        // Loop through, match, and add results
+        for (var item in result) {
+          var ref = result[item].ref;
+          var topic = store[ref].topic ? '<p class="post-meta"><small>' + store[ref].topic + '</small></p>' : '';
+          var searchitem = '<li class="result"><a href="'+store[ref].link+'">'+topic+'<h3>'+store[ref].title+'</h3><p>'+store[ref].excerpt+'</p><p><small>'+store[ref].link+'</small></p></a></li>';
+          $list.append(searchitem);
+        }
+
+        $default.hide(0);
+        $container.append($list);
+
+      } else {
+        $default.show(0);
+      }
+    }
+
+    $local_input.on('keyup', function () {
+      lunr_search($(this).val());
+    });
+
+    $local_input.val(myParam);
+
+    lunr_search(myParam);
+  }
 
   // Utilities
   // ------
