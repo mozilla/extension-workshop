@@ -337,6 +337,7 @@ html {
 
       &::before {
         @include icon_font($char: $icon-search);
+        
         font-size: rem-calc(20);
       }
     }
@@ -351,10 +352,12 @@ html {
         align-items: center;
         transition: margin 0.4s ease-in-out;
       }
+
       .button.show-for-large {
         flex: 0 0 auto;
         padding: 0.85em 1.15em;
       }
+
       .search {
         flex: 0 0 auto;
         margin-right: 1.2rem;
@@ -393,13 +396,16 @@ html {
   &.nav-open {
     @include breakpoint(medium down) {
       overflow: hidden;
+
       &.full-width .site-header,
       &.side-bar .site-header {
         height: 100vh;
       }
+
       .logo a {
         color: $white;
       }
+
       .search {
         opacity: 0;
       }
@@ -433,6 +439,7 @@ html {
     max-width: $global-width;
   }
 }
+
 .site.full-width,
 .site.side-bar {
   .site-content,
@@ -516,6 +523,7 @@ $hamburger-hover-transition-timing-function: linear;
   right: rem-calc(16);
   padding: rem-calc(0 5);
   transition: transform 0.3s ease-in-out;
+
   &.is-active {
     transform: scale(1.2);
   }
@@ -526,10 +534,12 @@ $hamburger-hover-transition-timing-function: linear;
 
 .topNav {
   font-size: $small-font-size;
+
   ul {
     list-style: none;
     margin: 0;
   }
+
   li {
     margin-bottom: 0;
 
@@ -541,14 +551,17 @@ $hamburger-hover-transition-timing-function: linear;
   @include breakpoint(large) {
     flex: 1 1 auto;
     margin-right: 1.2rem;
+
     .level-one {
       @include horizontal_list($margin: 1.2rem);
 
       > li {
         padding: rem-calc(9 0);
+
         &.is-active {
           position: relative;
-          &:after {
+
+          &::after {
             content: '';
             display: block;
             position: absolute;
@@ -571,6 +584,7 @@ $hamburger-hover-transition-timing-function: linear;
         }
       }
     }
+
     .level-two {
       pointer-events: none;
       opacity: 0;
@@ -588,23 +602,29 @@ $hamburger-hover-transition-timing-function: linear;
 
       li {
         padding: rem-calc(6 16);
+
         &.is-active {
           background-color: #e5effb;
+
           a {
             color: $primary-color;
           }
         }
       }
     }
+
     .has-children {
       position: relative;
+
       &:hover .level-two {
         pointer-events: auto;
         opacity: 1;
         transform: translateY(0);
       }
+
       > a::after {
         @include icon_font($char: $icon-arrow-down);
+
         display: inline-block;
         margin-left: 0.5em;
         transform: translateY(#{rem-calc(2)});
@@ -622,13 +642,16 @@ $hamburger-hover-transition-timing-function: linear;
 
     .level-one li {
       padding: rem-calc(12 16);
+
       &.has-children {
         padding: rem-calc(0 16);
+
         > a {
           display: none;
         }
       }
     }
+
     .level-two li {
       padding: rem-calc(12 0);
     }
@@ -636,6 +659,7 @@ $hamburger-hover-transition-timing-function: linear;
     .level-one {
       flex: 1 1 auto;
     }
+
     .button {
       flex: 0 0 auto;
       margin: rem-calc(16);
