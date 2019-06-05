@@ -98,7 +98,7 @@ Stylesheet: Full Width Page Stylesheet
 
   .bottom-content {
     position: absolute;
-    left: 0; 
+    left: 0;
     width: 100%;
     bottom: rem-calc(-28);
     z-index: 2;
@@ -111,7 +111,6 @@ Stylesheet: Full Width Page Stylesheet
   .search-cta {
     margin: rem-calc(0);
     @include breakpoint(large) {
-      
     }
   }
 
