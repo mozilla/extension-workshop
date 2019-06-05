@@ -508,7 +508,7 @@ $hamburger-hover-opacity: 1;
 $hamburger-hover-transition-duration: 0.15s;
 $hamburger-hover-transition-timing-function: linear;
 
-@import 'hamburgers/hamburgers';
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 
 .site-header .hamburger {
   position: absolute;
