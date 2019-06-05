@@ -146,8 +146,6 @@ a.tile-block-link:focus {
 
 $element-shadow: #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.1);
 
-
-
 // Lead Text
 // ------
 
@@ -619,7 +617,7 @@ html {
   margin: rem-calc(32 0);
   padding: rem-calc(8);
   background: $white;
-  box-shadow: #{rem-calc(0 6 22 0)} rgba(16, 16, 18, 0.2); // $element-shadow; 
+  box-shadow: #{rem-calc(0 6 22 0)} rgba(16, 16, 18, 0.2); // $element-shadow;
   border-radius: rem-calc(6);
 
   &:first-child {
