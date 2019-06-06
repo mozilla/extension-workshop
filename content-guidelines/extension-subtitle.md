@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: guides
 title: Extension Subtitle
 permalink: /content-guidelines/extension-subtitle/
 published: false

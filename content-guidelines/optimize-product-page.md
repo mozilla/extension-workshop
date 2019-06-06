@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: guides
 title: Optimize Your Product Page
 permalink: /content-guidelines/optimize-product-page/
 published: false

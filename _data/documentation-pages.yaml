@@ -1,0 +1,26 @@
+primary:
+  - title: "Documentation Topics"
+    url: "/documentation/develop/"
+    draft-label: true
+    subfolderitems:
+      - title: "Develop"
+        url: "/documentation/develop/"
+        draft-label: true
+      - title: "Publish"
+        draft-label: true
+        url: "/documentation/publish/"
+      - title: "Manage"
+        url: "/documentation/manage/"
+        draft-label: true
+      - title: "Enterprise"
+        url: "/documentation/enterprise/"
+        draft-label: true
+      - title: "Themes"
+        url: "/documentation/themes/"
+        draft-label: true
+  - title: "Extension Basics"
+    url: "/extension-basics/"
+    draft-label: true
+  - title: "Community"
+    url: "/community/"
+    draft-label: true

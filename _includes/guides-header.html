@@ -1,0 +1,38 @@
+<header class="site-header">
+    <div class="grid-container grid-x grid-padding-x">
+        <div class="cell small-12">
+            <h3 class="logo">
+            	<a href="{{ "/" | relative_url }}">Content
+            		<br>Guidelines</a>
+            	<small class="tagline">Optimize Your Product Page</small>
+            </h3>
+
+            <div class="site-nav-container">
+            	<nav class="site-nav" tabindex="1">
+	            	<ul class="pages">
+					    {% for item in site.data.content-guidelines-pages %}
+						    {% if page.url == item.url %}
+							<li class="current">
+								<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+								{% if item.draft-label %}<span class="draft">draft</span>{% endif %}
+							</li>
+					        {% else %}
+							<li>
+								<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+								{% if item.draft-label %}<span class="draft">draft</span>{% endif %}
+							</li>
+					        {% endif %}
+					    {% endfor %}
+					    <li><a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/Listing" target="_blank" rel="noreferrer noopener">More Tips</a></li>
+					</ul>
+
+					<p><a href="https://addons.mozilla.org/developers/addons" class="button" target="_blank" rel="noreferrer noopener">Edit Product Page</a></p>
+					<p><a href="{{ "/" | relative_url }}" class="back">Extension Workshop</a></p>
+					<p class="site-metadata"><a href="https://github.com/mozilla/extension-workshop/issues/new">Site Feedback</a>
+						<br><a href="https://www.mozilla.org/privacy/websites/">Privacy Policy</a>
+					</p>
+				</nav>
+            </div>
+        </div>
+    </div>
+</header>

@@ -10,6 +10,7 @@
   "dependencies": {
     "dompurify": "1.0.10",
     "foundation-sites": "6.5.3",
+    "hamburgers": "^1.1.3",
     "jquery": "3.4.1",
     "slick-carousel": "1.8.1",
     "velocity-animate": "1.5.2",
