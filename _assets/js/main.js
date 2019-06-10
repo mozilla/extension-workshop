@@ -800,8 +800,8 @@ jQuery(document).ready(function($) {
     var $container = this;
     var $local_input = $(settings.input);
     var $default = $(settings.default);
-    const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get('q');
+    var urlParams = new URLSearchParams(window.location.search);
+    var myParam = urlParams.get('q');
 
     function lunr_search(query) {
       var result = index.search(query);
