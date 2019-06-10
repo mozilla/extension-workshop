@@ -406,6 +406,15 @@ html {
 
   &.full-width,
   &.side-bar {
+    .site-content,
+    .site-footer {
+      .grid-container {
+        @include breakpoint(large only) {
+          max-width: 84%;
+        }
+      }
+    }
+
     .site-content {
       padding-top: rem-calc(40);
 
@@ -459,18 +468,6 @@ html {
   }
   @include breakpoint(xxlarge) {
     max-width: $global-width;
-  }
-}
-
-.site.full-width,
-.site.side-bar {
-  .site-content,
-  .site-footer {
-    .grid-container {
-      @include breakpoint(large only) {
-        max-width: 84%;
-      }
-    }
   }
 }
 
@@ -541,6 +538,7 @@ html {
 
   &::before {
     @include icon_font($char: $icon-search);
+
     font-size: rem-calc(20);
     text-align: center;
     line-height: rem-calc(40);
@@ -633,6 +631,7 @@ html {
 
   &::before {
     @include icon_font($char: $icon-search);
+
     font-size: rem-calc(20);
     text-align: right;
     line-height: rem-calc(40);
