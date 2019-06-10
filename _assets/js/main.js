@@ -782,7 +782,6 @@ jQuery(document).ready(function($) {
 
     $close.on('click', function() {
       $container.velocity('transition.slideRightOut', { duration: 450 });
-
     });
   };
 
