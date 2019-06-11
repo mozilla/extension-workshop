@@ -806,14 +806,15 @@ jQuery(document).ready(function($) {
     function lunr_search(query) {
       var result = index.search(query);
       var num = result.length && query != '' ? result.length : 0;
+      var query_output = num + ' results for "' + query + '"';
+      var $title = $('<h2 class="no-underline"></h2>');
 
       // Show results
       $container.empty();
 
       // Add status
-      $container.prepend(
-        '<h2 class="no-underline">' + num + ' results for "' + query + '"</h2>'
-      );
+      $title.text(query_output);
+      $container.prepend($title);
 
       if (num != 0) {
         var $list = $('<ol></ol>');
