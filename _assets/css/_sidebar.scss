@@ -1,0 +1,235 @@
+/************************************************
+
+Stylesheet: Side Bar Page Stylesheet
+
+*************************************************/
+
+$sidebar-nav-width: rem-calc(240);
+
+.site.side-bar {
+  background-color: $lighter-gray;
+
+  .site-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+
+  .side-bar-nav {
+  	ul {
+  		list-style: none;
+  		margin: 0;
+  	}
+
+  	li {
+  		margin: 0;
+  	}
+
+  	a {
+      color: inherit;
+    }
+
+  	.primary > li:not(.is-active):not(.has-active-children) {
+			display: none;
+		}
+
+  	&-top {
+
+  		.primary > li > a {
+				font-weight: $global-weight-bold;
+			}
+
+  		.category {
+  			display: none;
+  		}
+
+  		@include breakpoint(large) {
+  			padding: rem-calc(16 0);
+
+		    li {
+	        padding: rem-calc(9 16);
+		    }
+
+		    .subfolder {
+		      pointer-events: none;
+		      opacity: 0;
+		      transform: translateY(1em);
+		      position: absolute;
+		      left: 0;
+		      top: 100%;
+		      width: rem-calc(136);
+		      padding: rem-calc(10 0);
+		      background: $white;
+		      box-shadow: $element-shadow;
+		      border-radius: $global-radius;
+		      transition: box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out,
+		        opacity 0.3s ease-in-out;
+
+		      li {
+		        padding: rem-calc(6 16);
+
+		        &.is-active,
+		        &.has-active-children {
+		          background-color: #e5effb;
+
+		          a {
+		            color: $primary-color;
+		          }
+		        }
+		      }
+		    }
+		    .has-subfolder {
+		      position: relative;
+
+		      &:hover .subfolder {
+		        pointer-events: auto;
+		        opacity: 1;
+		        transform: translateY(0);
+		      }
+
+		      > a::after {
+		        @include icon_font($char: $icon-arrow-down);
+
+		        display: inline-block;
+		        margin-left: 0.5em;
+		        transform: translateY(#{rem-calc(2)});
+		      }
+		    }
+		  }
+
+		  @include breakpoint(medium down) {
+		  	.primary > .is-active.has-children,
+		  	.primary > .has-active-children {
+	  			> a {display: none;}
+	  			.subfolder {
+	  				> li:not(.is-active):not(.has-active-children) {
+	  					display: none;
+	  				}
+	  			}
+	  		}
+		  }
+  	}
+
+  	&-detail {
+  		font-size: $small-font-size;
+
+  		.has-subfolder.is-active > a,
+  		.has-subfolder.has-active-children > a {
+  			display: none;
+  		}
+
+  		.subfolder > li:not(.is-active):not(.has-active-children) {
+  			display: none;
+  		}
+
+  		.is-active {
+
+  		}
+
+  		h6 {
+  			margin: rem-calc(16);
+  			padding: rem-calc(16 0 0);
+  			font-size: $small-font-size;
+  			font-weight: $global-weight-normal;
+  			color: $dark-gray;
+  			border-top: 1px solid $medium-light-gray;
+  		}
+
+  		a {
+  			padding: rem-calc(5 16);
+  		}
+
+  	}
+  }
+
+  .site-content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: $white;
+  }
+
+  .site-content-body {
+    flex: 1 0 auto;
+    width: 100%;
+  }
+
+  .site-footer {
+  }
+
+  @include breakpoint(large) {
+    .site-wrapper {
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+    }
+
+    .side-bar-nav {
+      flex: 0 0 #{$sidebar-nav-width};
+      position: fixed; 
+      top: rem-calc(64);
+      height: calc(100% - #{rem-calc(64)});
+      left: 0; 
+      width: $sidebar-nav-width;
+      overflow-y: auto;
+      overflow-x: hidden;
+      transition: top 0.4s ease-in-out, height 0.4s ease-in-out;
+    }
+
+    .minimize + .site-wrapper .side-bar-nav {
+    	top: 0;
+    	height: 100%;
+    }
+
+    .site-content {
+      flex: 0 0 calc(100% - #{$sidebar-nav-width});
+    }
+  }
+
+  // Grid Container
+  // ------
+
+  .site-content-body {
+    .module {
+      padding: rem-calc(0 8);
+      margin: 0 auto;
+
+      @include breakpoint(medium) {
+        padding: rem-calc(0 12);
+      }
+
+      @include breakpoint(xlarge) {
+        display: flex;
+        flex-flow: row nowrap;
+        max-width: 84%;
+      }
+      @include breakpoint(xxlarge) {
+        max-width: #{$global-width - $sidebar-nav-width};
+      }
+    }
+
+    .module-content {
+      flex: 0 0 75%;
+    }
+
+    .module-aside {
+      flex: 0 0 25%;
+      padding: rem-calc(0 8);
+
+      @include breakpoint(medium) {
+        padding: rem-calc(0 12);
+      }
+    }
+  }
+
+  .social,
+  .site-footer {
+    .grid-container {
+      @include breakpoint(xlarge) {
+        max-width: 84%;
+      }
+      @include breakpoint(xxlarge) {
+        max-width: #{$global-width - $sidebar-nav-width};
+      }
+    }
+  }
+}

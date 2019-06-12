@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+    {%- include head.html -%}
 
-  <body class="site side-bar">
+    <body class="site side-bar">
+        {%- include header.html -%}
 
-    {%- include header.html -%}
+        <div class="site-wrapper">
 
-    <main class="site-content" aria-label="Content">
-        {{ content }}
-    </main>
+            <nav role="navigation" class="side-bar-nav">
 
-    {%- include footer.html -%}
+                <div class="side-bar-nav-top">
+                    {%- include documentation-nav.html -%}
+                </div>
 
-    <aside id="video-popup">
-        <div class="bg"></div>
-        <div class="grid-container grid-x grid-padding-x align-center align-middle">
-            <div class="cell small-12 large-10">
-                <button id="stdVideo-close"></button>
+                <div class="side-bar-nav-detail">
+                    {%- include documentation-nav.html -%}
+                </div>
+
+            </nav>
+
+            <div class="site-content">
+
+                <main class="site-content-body" aria-label="Content">
+
+                    {{ content }}
+
+                </main>
+
+                {%- include connect.html -%}
+
+                {%- include footer.html -%}
             </div>
-        </div>
-    </aside>
 
-    {% asset "bundle.js" !type %}
-  </body>
+        </div>
+
+        <aside id="video-popup">
+            <div class="bg"></div>
+            <div class="grid-container grid-x grid-padding-x align-center align-middle">
+                <div class="cell small-12 large-10">
+                    <button id="stdVideo-close"></button>
+                </div>
+            </div>
+        </aside>
+
+        {% asset "bundle.js" !type %}
+    </body>
 </html>

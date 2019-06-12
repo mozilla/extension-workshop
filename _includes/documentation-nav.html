@@ -1,0 +1,89 @@
+<ul class="primary">
+    {% for item in site.data.documentation-pages.primary %}
+
+        {% if item.categories %}
+
+            <li class="has-children {% if page.url == item.url %}is-active{% endif %}">
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                
+                {% for cat in item.categories %}
+                    <div class="category">
+                        <h6>{{ cat.category }}</h6>
+                        {% if cat.pages %}
+                            <ul>
+                                {% for pg in cat.pages %}
+                                    {% if pg.subpageitems %}
+                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
+                                            <ul class="section">
+                                                {% for section in pg.subpageitems %}
+                                                    <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                    {% else %}
+                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+
+            </li>
+
+        {% elsif item.subfolderitems %}
+
+            <li class="has-children has-subfolder {% if page.url == item.url %}is-active{% endif %}">
+                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+
+                <ul class="subfolder">
+                    {% for subitem in item.subfolderitems %}
+
+                        {% if subitem.categories %}
+                            <li class="has-children {% if page.url == subitem.url %}is-active{% endif %}">
+                                <a href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a>
+
+                                {% for cat in subitem.categories %}
+                                    <div class="category">
+                                        <h6>{{ cat.category }}</h6>
+                                        {% if cat.pages %}
+                                            <ul>
+                                                {% for pg in cat.pages %}
+                                                    {% if pg.subpageitems %}
+                                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
+                                                            <ul class="section">
+                                                                {% for section in pg.subpageitems %}
+                                                                    <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        </li>
+                                                    {% else %}
+                                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a></li>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </ul>
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+
+                            </li>
+
+                        {% else %}
+
+                            <li class="{% if page.url == subitem.url %}is-active{% endif %}"><a href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a></li>
+                        
+                        {% endif %}
+
+                        
+                    {% endfor %}
+                </ul>
+
+            </li>
+
+        {% else %}
+            
+            <li class="{% if page.url == item.url %}is-active{% endif %}"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+
+        {% endif %}
+    {% endfor %}
+</ul>

@@ -1,26 +1,77 @@
 primary:
   - title: "Documentation Topics"
     url: "/documentation/develop/"
-    draft-label: true
     subfolderitems:
       - title: "Develop"
         url: "/documentation/develop/"
-        draft-label: true
+        categories:
+          - category: "Firefox Tools"
+            pages:
+              - title: "Build an extension in 5 minutes"
+                url: "/documentation/develop/build-an-extension-in-5-minutes"
+              - title: "Getting started with web-ext"
+                url: "/documentation/develop/getting-started-with-web-ext/"
+                subpageitems:
+                  - title: "Installation"
+                    id: "installation"
+                  - title: "Using web-ext"
+                    id: "using-web-ext"
+                  - title: "See also"
+                    id: "see-also"
+              - title: "Web-ext Webpack plug-in"
+                url: "/documentation/develop/web-ext-webpack-plug-in/"
+              - title: "Web-ext command reference"
+                url: "/documentation/develop/web-ext-command-reference"
+              - title: "Browser API Polyfill"
+                url: "/documentation/develop/browser-api-polyfill"
+              - title: "Extensions and the Add-on ID"
+                url: "/documentation/develop/extensions-and-the-add-on-id"
+              - title: "Request the right permissions"
+                url: "/documentation/develop/request-the-right-permissions"
+          - category: "User Experience"
+            pages:
+              - title: "Build a secure extension"
+                url: "/documentation/develop/build-a-secure-extension/"
+              - title: "User experience best practices"
+                url: "/documentation/develop/user-experience-best-practices/"
+              - title: "Onboard, upboard, offboard users"
+                url: "/documentation/develop/onboard-upboard-offboard-users/"
+              - title: "Create an appealing listing"
+                url: "/documentation/develop/create-an-appealing-listing/"
+              - title: "What’s great content and design?"
+                url: "/documentation/develop/whats-great-content-and-design/"
+          - category: "Mobile"
+            pages:
+              - title: "GeckoView Extensions"
+                url: "/documentation/develop/geckoview-extensions/"
+              - title: "Desktop and Android differences"
+                url: "/documentation/develop/desktop-and-android-differences/"
+              - title: "Developing for Firefox for Android"
+                url: "/documentation/develop/developing-for-firefox-for-android/"
       - title: "Publish"
-        draft-label: true
         url: "/documentation/publish/"
       - title: "Manage"
         url: "/documentation/manage/"
-        draft-label: true
       - title: "Enterprise"
         url: "/documentation/enterprise/"
-        draft-label: true
       - title: "Themes"
         url: "/documentation/themes/"
-        draft-label: true
   - title: "Extension Basics"
     url: "/extension-basics/"
-    draft-label: true
   - title: "Community"
     url: "/community/"
-    draft-label: true
+    categories:
+      - category: "About the Community"
+        pages:
+          - title: "Discourse Forum"
+            url: "https://www.firefox.com"
+            target: "_blank"
+      - category: "Contribute to the API"
+        pages:
+          - title: "API Overview"
+            url: "/community/api-overview/"
+      - category: "Start Contributing"
+        pages:
+          - title: "Find or create a bug"
+            url: "https://www.firefox.com"
+            target: "_blank"
