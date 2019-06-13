@@ -40,7 +40,7 @@ Note: Running locally will show unpublished content that uses the `published: fa
 
 ## Content Updates
 
-This site has three templates: a full-width page, a side-bar page for documentation, and a Content Guidelines page
+This site has three templates: a full-width page, a sidebar page for documentation, and a Content Guidelines page
 
 ### How to add a Content Guidelines page
 

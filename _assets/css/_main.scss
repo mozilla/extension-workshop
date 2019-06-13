@@ -316,13 +316,13 @@ html {
   height: 100%;
 
   &.full-width .site-content,
-  &.side-bar .site-wrapper {
+  &.sidebar .site-wrapper {
     flex: 1 0 auto;
     width: 100%;
   }
 
   &.full-width .site-header,
-  &.side-bar .site-header {
+  &.sidebar .site-header {
     position: fixed;
     z-index: 20;
     width: 100%;
@@ -403,8 +403,7 @@ html {
     }
   }
 
-  &.full-width .site-content,
-  &.side-bar .site-wrapper {
+  &.full-width .site-content {
     padding-top: rem-calc(40);
 
     @include breakpoint(large) {
@@ -417,7 +416,7 @@ html {
       overflow: hidden;
 
       &.full-width .site-header,
-      &.side-bar .site-header {
+      &.sidebar .site-header {
         height: 100vh;
       }
 
@@ -433,7 +432,7 @@ html {
 
   &:not(.nav-open) {
     &.full-width .site-header,
-    &.side-bar .site-header {
+    &.sidebar .site-header {
       &.minimize {
         transform: translateY(#{-$header_h_lg});
         box-shadow: $element-shadow;
@@ -556,6 +555,10 @@ $hamburger-hover-transition-timing-function: linear;
     }
   }
 
+  .category {
+    display: none;
+  }
+
   @include breakpoint(large) {
     flex: 1 1 auto;
     margin-right: 1.2rem;
@@ -616,15 +619,12 @@ $hamburger-hover-transition-timing-function: linear;
         &.has-active-children {
           background-color: #e5effb;
 
-          a {
+          a,
+          .label {
             color: $primary-color;
           }
         }
       }
-    }
-
-    .category {
-      display: none;
     }
 
     .has-subfolder {
@@ -636,7 +636,8 @@ $hamburger-hover-transition-timing-function: linear;
         transform: translateY(0);
       }
 
-      > a::after {
+      > a::after,
+      > .label::after {
         @include icon_font($char: $icon-arrow-down);
 
         display: inline-block;
@@ -645,6 +646,7 @@ $hamburger-hover-transition-timing-function: linear;
       }
     }
   }
+
   @include breakpoint(medium down) {
     display: none;
     position: absolute;
@@ -654,13 +656,14 @@ $hamburger-hover-transition-timing-function: linear;
     height: calc(100% - #{rem-calc(40)});
     flex-flow: column nowrap;
 
-    .primary li {
+    .primary > li {
       padding: rem-calc(12 16);
 
-      &.has-children {
+      &.has-subfolder {
         padding: rem-calc(0 16);
 
-        > a {
+        > a,
+        > .label {
           display: none;
         }
       }
@@ -830,7 +833,7 @@ $hamburger-hover-transition-timing-function: linear;
   }
 }
 
-.panel-outside {
+.panel-collapse {
   position: relative;
   margin-top: rem-calc(20);
   margin-bottom: rem-calc(20);

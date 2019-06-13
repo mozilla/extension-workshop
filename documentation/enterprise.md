@@ -1,5 +1,5 @@
 ---
-layout: side-bar
+layout: sidebar
 title: Enterprise
 permalink: /documentation/enterprise/
 published: false

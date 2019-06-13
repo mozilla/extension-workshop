@@ -1,5 +1,5 @@
 ---
-layout: side-bar
+layout: sidebar
 title: Community
 permalink: /community/
 published: false

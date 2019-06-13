@@ -1,10 +1,10 @@
 <ul class="primary">
-    {% for item in site.data.documentation-pages.primary %}
+    {% for item in site.data.pages %}
 
         {% if item.categories %}
 
             <li class="has-children {% if page.url == item.url %}is-active{% endif %}">
-                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                <a href="{{ item.url | relative_url }}" data-overviewtitle="{{ item.title }} Overview">{{ item.title }}</a>
                 
                 {% for cat in item.categories %}
                     <div class="category">
@@ -13,7 +13,8 @@
                             <ul>
                                 {% for pg in cat.pages %}
                                     {% if pg.subpageitems %}
-                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
+                                        <li class="{% if page.url == pg.url %}is-active{% endif %}">
+                                            <a href="{{ pg.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% endif %}>{{ pg.title }}</a>
                                             <ul class="section">
                                                 {% for section in pg.subpageitems %}
                                                     <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
@@ -21,7 +22,7 @@
                                             </ul>
                                         </li>
                                     {% else %}
-                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a></li>
+                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% endif %}>{{ pg.title }}</a></li>
                                     {% endif %}
                                 {% endfor %}
                             </ul>
@@ -34,14 +35,18 @@
         {% elsif item.subfolderitems %}
 
             <li class="has-children has-subfolder {% if page.url == item.url %}is-active{% endif %}">
-                <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% if item.url %}
+                    <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% else %}
+                    <span class="label">{{ item.title }}</span>
+                {% endif %}
 
                 <ul class="subfolder">
                     {% for subitem in item.subfolderitems %}
 
                         {% if subitem.categories %}
                             <li class="has-children {% if page.url == subitem.url %}is-active{% endif %}">
-                                <a href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a>
+                                <a href="{{ subitem.url | relative_url }}" data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a>
 
                                 {% for cat in subitem.categories %}
                                     <div class="category">
@@ -50,7 +55,8 @@
                                             <ul>
                                                 {% for pg in cat.pages %}
                                                     {% if pg.subpageitems %}
-                                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
+                                                        <li class="{% if page.url == pg.url %}is-active{% endif %}">
+                                                            <a href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
                                                             <ul class="section">
                                                                 {% for section in pg.subpageitems %}
                                                                     <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
@@ -58,7 +64,7 @@
                                                             </ul>
                                                         </li>
                                                     {% else %}
-                                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a></li>
+                                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% endif %}>{{ pg.title }}</a></li>
                                                     {% endif %}
                                                 {% endfor %}
                                             </ul>
@@ -70,7 +76,7 @@
 
                         {% else %}
 
-                            <li class="{% if page.url == subitem.url %}is-active{% endif %}"><a href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a></li>
+                            <li class="{% if page.url == subitem.url %}is-active{% endif %}"><a href="{{ subitem.url | relative_url }}" {% if pg.target %} target="{{ pg.target }}"{% endif %}>{{ subitem.title }}</a></li>
                         
                         {% endif %}
 
@@ -82,7 +88,7 @@
 
         {% else %}
             
-            <li class="{% if page.url == item.url %}is-active{% endif %}"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+            <li class="{% if page.url == item.url %}is-active{% endif %}"><a href="{{ item.url | relative_url }}" data-overviewtitle="{{ item.title }} Overview">{{ item.title }}</a></li>
 
         {% endif %}
     {% endfor %}

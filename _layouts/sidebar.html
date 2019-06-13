@@ -3,19 +3,24 @@
 
     {%- include head.html -%}
 
-    <body class="site side-bar">
+    <body class="site sidebar">
         {%- include header.html -%}
 
         <div class="site-wrapper">
 
-            <nav role="navigation" class="side-bar-nav">
+            <nav role="navigation" class="sidenav">
 
-                <div class="side-bar-nav-top">
-                    {%- include documentation-nav.html -%}
+                <div class="sidenav-status">
+                    <div class="sidenav-status-instruction">Select a section</div>
+                    <div id="sidenav-status-pagename">Page Name</div>
                 </div>
 
-                <div class="side-bar-nav-detail">
-                    {%- include documentation-nav.html -%}
+                <div class="sidenav-top" aria-hidden="true">
+                    {%- include nav.html -%}
+                </div>
+
+                <div class="sidenav-detail">
+                    {%- include nav.html -%}
                 </div>
 
             </nav>

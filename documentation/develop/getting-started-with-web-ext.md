@@ -1,12 +1,12 @@
 ---
-layout: side-bar
+layout: sidebar
 title: Getting started with web-ext
 permalink: /documentation/develop/getting-started-with-web-ext/
 published: false
 topic: Develop
 ---
 
-<section class="module">
+<section class="module panel">
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 

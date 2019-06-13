@@ -6,140 +6,311 @@ Stylesheet: Side Bar Page Stylesheet
 
 $sidebar-nav-width: rem-calc(240);
 
-.site.side-bar {
+.site.sidebar {
   background-color: $lighter-gray;
 
   .site-wrapper {
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
+    padding-top: rem-calc(90);
+
+    @include breakpoint(large) {
+      padding-top: rem-calc(64);
+    }
   }
 
-  .side-bar-nav {
-  	ul {
-  		list-style: none;
-  		margin: 0;
-  	}
+  .site-header {
+    @include breakpoint(medium down) {
+      box-shadow: none;
+    }
+  }
 
-  	li {
-  		margin: 0;
-  	}
+  .sidenav {
+    ul {
+      list-style: none;
+      margin: 0;
+    }
 
-  	a {
+    li {
+      margin: 0;
+    }
+
+    a {
       color: inherit;
     }
 
-  	.primary > li:not(.is-active):not(.has-active-children) {
-			display: none;
-		}
+    .primary > li:not(.is-active):not(.has-active-children) {
+      display: none;
+    }
 
-  	&-top {
+    .section {
+    	display: none;
+    }
 
-  		.primary > li > a {
-				font-weight: $global-weight-bold;
-			}
+    @include breakpoint(medium down) {
+      position: fixed;
+      z-index: 19;
+      left: 0;
+      top: rem-calc(-40);
+      padding-top: rem-calc(40);
+      transform: translateY(#{rem-calc(40)});
+      width: 100%;
+      height: rem-calc(90);
+      transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
+      overflow-y: auto;
+      background-color: $lighter-gray;
+      box-shadow: #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.25);
 
-  		.category {
-  			display: none;
-  		}
+      .primary > .is-active.has-children,
+      .primary > .has-active-children {
+        .subfolder {
+          > a {
+            display: none;
+          }
+          > li:not(.is-active):not(.has-active-children) {
+            display: none;
+          }
+        }
+      }
+    }
 
-  		@include breakpoint(large) {
-  			padding: rem-calc(16 0);
+    &-status {
+      @include breakpoint(large) {
+        display: none;
+      }
 
-		    li {
-	        padding: rem-calc(9 16);
-		    }
+      @include breakpoint(medium down) {
+        position: relative;
+        height: rem-calc(50);
+        font-size: $small-font-size;
+        cursor: pointer;
 
-		    .subfolder {
-		      pointer-events: none;
-		      opacity: 0;
-		      transform: translateY(1em);
-		      position: absolute;
-		      left: 0;
-		      top: 100%;
-		      width: rem-calc(136);
-		      padding: rem-calc(10 0);
-		      background: $white;
-		      box-shadow: $element-shadow;
-		      border-radius: $global-radius;
-		      transition: box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out,
-		        opacity 0.3s ease-in-out;
+        &::after {
+          @include icon_font($char: $icon-arrow-down);
 
-		      li {
-		        padding: rem-calc(6 16);
+          display: block;
+          position: absolute;
+          right: rem-calc(16);
+          top: calc(50% - #{rem-calc(12)});
+          font-size: rem-calc(24);
+          transform: translateY(#{rem-calc(2)});
+          transition: transform 0.3s ease-in-out;
+          pointer-events: none;
+        }
 
-		        &.is-active,
-		        &.has-active-children {
-		          background-color: #e5effb;
+        &-instruction,
+        #sidenav-status-pagename {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: rem-calc(16);
+          line-height: rem-calc(18);
+          transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+          pointer-events: none;
+        }
 
-		          a {
-		            color: $primary-color;
-		          }
-		        }
-		      }
-		    }
-		    .has-subfolder {
-		      position: relative;
+        &-instruction {
+          font-size: $small-font-size;
+          color: $dark-gray;
+          line-height: rem-calc(20);
+          opacity: 0;
+          transform: translateY(#{rem-calc(-16)});
+        }
+      }
+    }
 
-		      &:hover .subfolder {
-		        pointer-events: auto;
-		        opacity: 1;
-		        transform: translateY(0);
-		      }
+    &-top {
+      .primary > li > a,
+      .primary > li > .label {
+        font-weight: $global-weight-bold;
+      }
 
-		      > a::after {
-		        @include icon_font($char: $icon-arrow-down);
+      .category {
+        display: none;
+      }
 
-		        display: inline-block;
-		        margin-left: 0.5em;
-		        transform: translateY(#{rem-calc(2)});
-		      }
-		    }
-		  }
+      @include breakpoint(large) {
+        padding: rem-calc(12 0 4);
 
-		  @include breakpoint(medium down) {
-		  	.primary > .is-active.has-children,
-		  	.primary > .has-active-children {
-	  			> a {display: none;}
-	  			.subfolder {
-	  				> li:not(.is-active):not(.has-active-children) {
-	  					display: none;
-	  				}
-	  			}
-	  		}
-		  }
-  	}
+        li {
+          padding: rem-calc(12 16);
+        }
 
-  	&-detail {
-  		font-size: $small-font-size;
+        .subfolder {
+          pointer-events: none;
+          opacity: 0;
+          transform: translateY(1em);
+          position: absolute;
+          left: rem-calc(16);
+          top: rem-calc(4);
+          width: calc(100% - #{rem-calc(32)});
+          padding: rem-calc(10 0);
+          background: $white;
+          box-shadow: $element-shadow;
+          border-radius: $global-radius;
+          transition: box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out,
+            opacity 0.3s ease-in-out;
 
-  		.has-subfolder.is-active > a,
-  		.has-subfolder.has-active-children > a {
-  			display: none;
-  		}
+          li {
+            padding: rem-calc(6 16);
 
-  		.subfolder > li:not(.is-active):not(.has-active-children) {
-  			display: none;
-  		}
+            &.is-active,
+            &.has-active-children {
+              background-color: #e5effb;
 
-  		.is-active {
+              a {
+                color: $primary-color;
+              }
+            }
+          }
+        }
+        .has-subfolder {
+          position: relative;
 
-  		}
+          &:hover .subfolder {
+            pointer-events: auto;
+            opacity: 1;
+            transform: translateY(0);
+          }
 
-  		h6 {
-  			margin: rem-calc(16);
-  			padding: rem-calc(16 0 0);
-  			font-size: $small-font-size;
-  			font-weight: $global-weight-normal;
-  			color: $dark-gray;
-  			border-top: 1px solid $medium-light-gray;
-  		}
+          > a::after,
+          > .label::after {
+            @include icon_font($char: $icon-arrow-down);
 
-  		a {
-  			padding: rem-calc(5 16);
-  		}
+            display: inline-block;
+            margin-left: 0.5em;
+            transform: translateY(#{rem-calc(2)});
+          }
+        }
+      }
 
-  	}
+      @include breakpoint(medium down) {
+        display: none;
+        border-top: 1px solid $medium-light-gray;
+
+        a,
+        .label {
+          display: block;
+          padding: rem-calc(24 16);
+        }
+
+        .subfolder {
+          display: none;
+        }
+      }
+    }
+
+    &-detail {
+      padding-bottom: rem-calc(16);
+      font-size: $small-font-size;
+
+      a,
+      .label {
+        display: block;
+        padding: rem-calc(12 16);
+      }
+
+      .has-subfolder.is-active,
+      .has-subfolder.has-active-children {
+        > a,
+        > .label {
+          display: none;
+        }
+      }
+
+      .subfolder > li:not(.is-active):not(.has-active-children) {
+        display: none;
+      }
+
+      .is-active {
+        > a,
+        > .label {
+          color: $primary-color;
+          background-color: rgba($primary-color, 0.1);
+          font-weight: $global-weight-bold;
+        }
+      }
+
+      h6 {
+        margin: rem-calc(12 16);
+        padding: rem-calc(24 0 0);
+        font-size: $small-font-size;
+        font-weight: $global-weight-normal;
+        color: $dark-gray;
+        border-top: 1px solid $medium-light-gray;
+      }
+
+      @include breakpoint(large) {
+      	.is-active > .section {
+        	display: block;
+        	padding-top: rem-calc(6);
+        	padding-bottom: rem-calc(6);
+
+        	a {
+        		padding-top: rem-calc(6);
+        		padding-bottom: rem-calc(6);
+        		padding-left: rem-calc(34);
+        		position: relative;
+
+        		&::before {
+        			content: "";
+        			display: block;
+        			position: absolute;
+        			left: rem-calc(16);
+        			width: rem-calc(2);
+        			top: rem-calc(0);
+        			height: 100%;
+        			background-color: $medium-light-gray;
+        		}
+        	}
+        }
+      }
+
+      @include breakpoint(medium down) {
+        display: none;
+
+        li.is-active .category:first-of-type h6 {
+          margin-top: rem-calc(24);
+        }
+      }
+    }
+  }
+
+  &.subnav-open {
+    @include breakpoint(medium down) {
+      overflow: hidden;
+
+      .sidenav {
+        height: 100vh;
+      }
+
+      .sidenav-status::after {
+        transform: rotate(180deg);
+      }
+
+      #sidenav-status-pagename {
+        opacity: 0;
+        transform: translateY(#{rem-calc(16)});
+      }
+
+      .sidenav-status-instruction {
+        opacity: 1;
+        transform: translateY(#{rem-calc(0)});
+      }
+
+      .minimize + .site-wrapper .sidenav {
+        height: calc(100vh + #{rem-calc(40)});
+      }
+    }
+  }
+
+  .minimize + .site-wrapper .sidenav {
+    @include breakpoint(medium down) {
+      transform: translateY(0);
+    }
   }
 
   .site-content {
@@ -154,30 +325,27 @@ $sidebar-nav-width: rem-calc(240);
     width: 100%;
   }
 
-  .site-footer {
-  }
-
   @include breakpoint(large) {
     .site-wrapper {
       flex-flow: row nowrap;
       justify-content: flex-end;
     }
 
-    .side-bar-nav {
+    .sidenav {
       flex: 0 0 #{$sidebar-nav-width};
-      position: fixed; 
+      position: fixed;
       top: rem-calc(64);
       height: calc(100% - #{rem-calc(64)});
-      left: 0; 
+      left: 0;
       width: $sidebar-nav-width;
       overflow-y: auto;
       overflow-x: hidden;
       transition: top 0.4s ease-in-out, height 0.4s ease-in-out;
     }
 
-    .minimize + .site-wrapper .side-bar-nav {
-    	top: 0;
-    	height: 100%;
+    .minimize + .site-wrapper .sidenav {
+      top: 0;
+      height: 100%;
     }
 
     .site-content {
@@ -190,11 +358,14 @@ $sidebar-nav-width: rem-calc(240);
 
   .site-content-body {
     .module {
-      padding: rem-calc(0 8);
-      margin: 0 auto;
+      padding-left: rem-calc(8);
+      padding-right: rem-calc(8);
+      margin-left: auto;
+      margin-right: auto;
 
       @include breakpoint(medium) {
-        padding: rem-calc(0 12);
+        padding-left: rem-calc(12);
+        padding-right: rem-calc(12);
       }
 
       @include breakpoint(xlarge) {

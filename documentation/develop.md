@@ -1,11 +1,11 @@
 ---
-layout: side-bar
+layout: sidebar
 title: Develop
 permalink: /documentation/develop/
 published: false
 ---
 
-<section class="module">
+<section class="panel-collapse module">
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
@@ -15,7 +15,7 @@ published: false
 </article>
 </section>
 
-<section class="module">
+<section class="panel-collapse module">
 <article class="module-content grid-x grid-padding-x image-with-caption">
 <div class="cell small-6" markdown="1">
 

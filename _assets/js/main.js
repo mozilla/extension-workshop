@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
 
   // 1. Site Nav
 
-  if ($('.full-width .site-header, .side-bar .site-header').length) {
+  if ($('.full-width .site-header, .sidebar .site-header').length) {
     $('.site-header').switchNav();
   }
 
@@ -32,6 +32,24 @@ jQuery(document).ready(function($) {
       $(this).addClass('has-active-children');
     }
   });
+
+  if ($('.sidenav').length) {
+    $('.sidenav').sideNav();
+  }
+
+  if ($('#sidenav-status-pagename').length) {
+    $('#sidenav-status-pagename').sideNavStatus();
+  }
+
+  if ($('.sidenav-top .primary > .has-subfolder.has-active-children').length) {
+    $(
+      '.sidenav-top .primary > .has-subfolder.has-active-children'
+    ).sideNavTop();
+  }
+
+  if ($('.sidenav-detail').length) {
+    $('.sidenav-detail').sideNavDetail();
+  }
 
   // 2. Anchor Link Scroll
   // ------
@@ -289,6 +307,117 @@ jQuery(document).ready(function($) {
         $window.off('scroll');
       },
     };
+  };
+
+  // 1.d Sidebar Nav
+
+  $.fn.sideNav = function(options) {
+    var settings = $.extend(
+      {
+        breakpoint: 'atleast_large',
+      },
+      options
+    );
+
+    var $top = this;
+    var nav_mobile = null;
+
+    function switchNav(obj, media) {
+      // Set Desktop Nav
+      if (media[settings.breakpoint] || media.fallback) {
+        if (nav_mobile != null) {
+          nav_mobile.kill();
+          nav_mobile = null;
+        }
+
+        // Set Mobile Nav
+      } else {
+        if (nav_mobile == null) {
+          nav_mobile = $top.mobileSideNav();
+        }
+      }
+    }
+    $.subscribe('breakpoints', switchNav);
+  };
+
+  // 1.e Mobile Side Menu
+
+  $.fn.mobileSideNav = function() {
+    var $body = $('body');
+    var $container = this;
+    var $nav = $container.find('.sidenav-top, .sidenav-detail');
+    var $primaryDropdown = this.find('.sidenav-status');
+
+    $nav.velocity('transition.slideUpOut', { duration: 0, display: 'none' });
+
+    $primaryDropdown.on('click', function(e) {
+      e.preventDefault();
+      if ($body.hasClass('subnav-open')) {
+        $primaryDropdown.removeClass('is-active');
+        $body.removeClass('subnav-open');
+        $nav.velocity('transition.slideUpOut', {
+          duration: 600,
+          display: 'none',
+        });
+      } else {
+        $primaryDropdown.addClass('is-active');
+        $body.addClass('subnav-open');
+        $nav.velocity('transition.slideDownIn', {
+          duration: 600,
+          display: 'block',
+        });
+      }
+    });
+
+    return {
+      kill: function() {
+        $primaryDropdown.off('click').removeClass('is-active');
+        $nav.velocity('transition.slideDownIn', {
+          duration: 0,
+          display: 'block',
+          complete: function() {
+            $nav.attr('style', '');
+            $body.removeClass('subnav-open');
+          },
+        });
+      },
+    };
+  };
+
+  // 1.f Sidebar Nav Top
+  // ------
+
+  $.fn.sideNavTop = function() {
+    var $label = this.find('> a, > .label');
+    var $active_parent = this.find(
+      '.subfolder > .has-active-children > a, .subfolder > .is-active > a'
+    );
+    var url = $active_parent.attr('href');
+    var title = $active_parent.text();
+    $label.attr('href', url);
+    $label.text(title);
+  };
+
+  $.fn.sideNavDetail = function() {
+    this.find('a[data-overviewtitle]').each(function() {
+      var $this = $(this);
+      var attr = $this.data('overviewtitle');
+      $this.text(attr);
+    });
+  };
+
+  // 1.g Sidebar Status
+  // ------
+
+  $.fn.sideNavStatus = function(options) {
+    var settings = $.extend(
+      {
+        active_el: '.sidenav-detail .is-active > a',
+      },
+      options
+    );
+
+    this.text($(settings.active_el).text());
   };
 
   // 2. Anchor scroll
@@ -804,7 +933,7 @@ jQuery(document).ready(function($) {
     var myParam = urlParams.get('q');
 
     function lunr_search(query) {
-      //var result = index.search(query); --> this will be implemented when we integrate lunr js 
+      //var result = index.search(query); --> this will be implemented when we integrate lunr js
       var num = 0; //result.length && query != '' ? result.length : 0;
       var query_output = num + ' results for "' + query + '"';
       var $title = $('<h2 class="no-underline"></h2>');
@@ -819,7 +948,7 @@ jQuery(document).ready(function($) {
       if (num != 0) {
         var $list = $('<ol></ol>');
 
-        // Loop through, match, and add results --> this will be implemented when we integrate lunr js 
+        // Loop through, match, and add results --> this will be implemented when we integrate lunr js
         // for (var item in result) {
         //   var ref = result[item].ref;
         //   var topic = store[ref].topic
