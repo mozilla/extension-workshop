@@ -45,7 +45,7 @@ $sidebar-nav-width: rem-calc(240);
     }
 
     .section {
-    	display: none;
+      display: none;
     }
 
     @include breakpoint(medium down) {
@@ -244,28 +244,28 @@ $sidebar-nav-width: rem-calc(240);
       }
 
       @include breakpoint(large) {
-      	.is-active > .section {
-        	display: block;
-        	padding-top: rem-calc(6);
-        	padding-bottom: rem-calc(6);
+        .is-active > .section {
+          display: block;
+          padding-top: rem-calc(6);
+          padding-bottom: rem-calc(6);
 
-        	a {
-        		padding-top: rem-calc(6);
-        		padding-bottom: rem-calc(6);
-        		padding-left: rem-calc(34);
-        		position: relative;
+          a {
+            padding-top: rem-calc(6);
+            padding-bottom: rem-calc(6);
+            padding-left: rem-calc(34);
+            position: relative;
 
-        		&::before {
-        			content: "";
-        			display: block;
-        			position: absolute;
-        			left: rem-calc(16);
-        			width: rem-calc(2);
-        			top: rem-calc(0);
-        			height: 100%;
-        			background-color: $medium-light-gray;
-        		}
-        	}
+            &::before {
+              content: '';
+              display: block;
+              position: absolute;
+              left: rem-calc(16);
+              width: rem-calc(2);
+              top: rem-calc(0);
+              height: 100%;
+              background-color: $medium-light-gray;
+            }
+          }
         }
       }
 
