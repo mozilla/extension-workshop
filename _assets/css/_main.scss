@@ -972,6 +972,7 @@ $hamburger-hover-transition-timing-function: linear;
 
   &::before {
     @include icon_font($char: $icon-search);
+
     font-size: rem-calc(20);
     text-align: center;
     line-height: rem-calc(40);
@@ -1065,6 +1066,7 @@ $hamburger-hover-transition-timing-function: linear;
 
   &::before {
     @include icon_font($char: $icon-search);
+
     font-size: rem-calc(20);
     text-align: right;
     line-height: rem-calc(40);
