@@ -75,7 +75,7 @@ Mozilla takes the safety and privacy of its users very seriously. Be sure to rev
 </div>
 <div class="cell small-6" markdown="1">
 
-<img src="{% asset "Learn-About-Our-Policies.svg" @path @optime %}" class="image-block" alt="Learn about our policies" title="Learn about our policies">
+<img src="{% asset "Learn-About-Our-Policies.svg" @path @optim %}" class="image-block" alt="Learn about our policies" title="Learn about our policies">
 [Learn about our policies](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 
 </div>
