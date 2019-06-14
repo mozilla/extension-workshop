@@ -23,21 +23,32 @@ jQuery(document).ready(function($) {
 
   // 1. Site Nav
 
-  if ($('.full-width .site-header, .side-bar .site-header').length) {
+  if ($('.full-width .site-header, .sidebar .site-header').length) {
     $('.site-header').switchNav();
   }
 
   $('.has-children').each(function() {
     if ($(this).find('.is-active').length) {
-      $(this).addClass('is-active');
+      $(this).addClass('has-active-children');
     }
   });
 
-  // 10. Site (Content Guidelines) Nav
-  // ------
+  if ($('.sidenav').length) {
+    $('.sidenav').sideNav();
+  }
 
-  if ($('.content-guidelines .site-nav-container').length) {
-    $('.content-guidelines .site-nav-container').switchContentGuidelinesNav();
+  if ($('#sidenav-status-pagename').length) {
+    $('#sidenav-status-pagename').sideNavStatus();
+  }
+
+  if ($('.sidenav-top .primary > .has-subfolder.has-active-children').length) {
+    $(
+      '.sidenav-top .primary > .has-subfolder.has-active-children'
+    ).sideNavTop();
+  }
+
+  if ($('.sidenav-detail').length) {
+    $('.sidenav-detail').sideNavDetail();
   }
 
   // 2. Anchor Link Scroll
@@ -122,6 +133,27 @@ jQuery(document).ready(function($) {
 
   if ($('.popup-action').length) {
     $('.popup-action').popups();
+  }
+
+  // 10. Site (Content Guidelines) Nav
+  // ------
+
+  if ($('.content-guidelines .site-nav-container').length) {
+    $('.content-guidelines .site-nav-container').switchContentGuidelinesNav();
+  }
+
+  // 11. Site Search Header
+  // ------
+
+  if ($('.search-input').length) {
+    $('.search-input').searchHeader();
+  }
+
+  // 12. Site Search Results
+  // ------
+
+  if ($('#result-list').length) {
+    $('#result-list').searchResults();
   }
 
   // Init Breakpoint Listeners
@@ -277,100 +309,115 @@ jQuery(document).ready(function($) {
     };
   };
 
-  // 10. Content Guidelines Navigation
-  // ------
+  // 1.d Sidebar Nav
 
-  $.fn.switchContentGuidelinesNav = function(options) {
+  $.fn.sideNav = function(options) {
     var settings = $.extend(
       {
-        breakpoint: 'atleast_medium',
+        breakpoint: 'atleast_large',
       },
       options
     );
 
-    var $container = this;
-    var nav_desk = null;
+    var $top = this;
     var nav_mobile = null;
 
-    function switchContentGuidelinesNav(obj, media) {
+    function switchNav(obj, media) {
       // Set Desktop Nav
       if (media[settings.breakpoint] || media.fallback) {
         if (nav_mobile != null) {
           nav_mobile.kill();
           nav_mobile = null;
         }
-        if (nav_desk == null) {
-          nav_desk = $container.desktopContentGuidelinesMenu();
-        }
 
         // Set Mobile Nav
       } else {
-        if (nav_desk != null) {
-          nav_desk.kill();
-          nav_desk = null;
-        }
         if (nav_mobile == null) {
-          nav_mobile = $container.mobileContentGuidelinesMenu();
+          nav_mobile = $top.mobileSideNav();
         }
       }
     }
-    $.subscribe('breakpoints', switchContentGuidelinesNav);
+    $.subscribe('breakpoints', switchNav);
   };
 
-  // 10.a Mobile Menu
+  // 1.e Mobile Side Menu
 
-  $.fn.mobileContentGuidelinesMenu = function() {
+  $.fn.mobileSideNav = function() {
+    var $body = $('body');
     var $container = this;
-    var $nav = $container.find('nav');
-    var $links = $container.find('p, li:not(.current)');
-    var open = $nav.hasClass('open');
-    var $window = $(window);
+    var $nav = $container.find('.sidenav-top, .sidenav-detail');
+    var $primaryDropdown = this.find('.sidenav-status');
 
-    $window.on('scroll.mobile', function() {
-      if ($window.scrollTop() >= $container.offset().top) {
-        $container.addClass('sticky');
+    $nav.velocity('transition.slideUpOut', { duration: 0, display: 'none' });
+
+    $primaryDropdown.on('click', function(e) {
+      e.preventDefault();
+      if ($body.hasClass('subnav-open')) {
+        $primaryDropdown.removeClass('is-active');
+        $body.removeClass('subnav-open');
+        $nav.velocity('transition.slideUpOut', {
+          duration: 600,
+          display: 'none',
+        });
       } else {
-        $container.removeClass('sticky');
-      }
-    });
-
-    if (!open) {
-      $links.velocity('slideUp', { duration: 0 });
-    }
-
-    $nav.on('click', function() {
-      if (open) {
-        $nav.removeClass('open');
-        $links.velocity('slideUp');
-      } else {
-        $nav.addClass('open');
-        $links.velocity('slideDown', {
-          complete: function() {
-            // if ($nav.outerHeight() + $nav.offset().top > $window.height() + $window.scrollTop()) {
-            //     $nav.velocity('scroll', {duration: 900, offset: -($nav.outerHeight() - 16)});
-            // }
-          },
+        $primaryDropdown.addClass('is-active');
+        $body.addClass('subnav-open');
+        $nav.velocity('transition.slideDownIn', {
+          duration: 600,
+          display: 'block',
         });
       }
-      open = !open;
     });
 
     return {
       kill: function() {
-        $nav.off('click');
-        $nav.removeClass('open');
-        $links.attr('style', '');
-        $window.off('scroll.mobile');
+        $primaryDropdown.off('click').removeClass('is-active');
+        $nav.velocity('transition.slideDownIn', {
+          duration: 0,
+          display: 'block',
+          complete: function() {
+            $nav.attr('style', '');
+            $body.removeClass('subnav-open');
+          },
+        });
       },
     };
   };
 
-  // 10.b Desktop Menu
+  // 1.f Sidebar Nav Top
+  // ------
 
-  $.fn.desktopContentGuidelinesMenu = function() {
-    return {
-      kill: function() {},
-    };
+  $.fn.sideNavTop = function() {
+    var $label = this.find('> a, > .label');
+    var $active_parent = this.find(
+      '.subfolder > .has-active-children > a, .subfolder > .is-active > a'
+    );
+    var url = $active_parent.attr('href');
+    var title = $active_parent.text();
+    $label.attr('href', url);
+    $label.text(title);
+  };
+
+  $.fn.sideNavDetail = function() {
+    this.find('a[data-overviewtitle]').each(function() {
+      var $this = $(this);
+      var attr = $this.data('overviewtitle');
+      $this.text(attr);
+    });
+  };
+
+  // 1.g Sidebar Status
+  // ------
+
+  $.fn.sideNavStatus = function(options) {
+    var settings = $.extend(
+      {
+        active_el: '.sidenav-detail .is-active > a',
+      },
+      options
+    );
+
+    this.text($(settings.active_el).text());
   };
 
   // 2. Anchor scroll
@@ -736,6 +783,207 @@ jQuery(document).ready(function($) {
           });
       }
     }
+  };
+
+  // 10. Content Guidelines Navigation
+  // ------
+
+  $.fn.switchContentGuidelinesNav = function(options) {
+    var settings = $.extend(
+      {
+        breakpoint: 'atleast_medium',
+      },
+      options
+    );
+
+    var $container = this;
+    var nav_desk = null;
+    var nav_mobile = null;
+
+    function switchContentGuidelinesNav(obj, media) {
+      // Set Desktop Nav
+      if (media[settings.breakpoint] || media.fallback) {
+        if (nav_mobile != null) {
+          nav_mobile.kill();
+          nav_mobile = null;
+        }
+        if (nav_desk == null) {
+          nav_desk = $container.desktopContentGuidelinesMenu();
+        }
+
+        // Set Mobile Nav
+      } else {
+        if (nav_desk != null) {
+          nav_desk.kill();
+          nav_desk = null;
+        }
+        if (nav_mobile == null) {
+          nav_mobile = $container.mobileContentGuidelinesMenu();
+        }
+      }
+    }
+    $.subscribe('breakpoints', switchContentGuidelinesNav);
+  };
+
+  // 10.a Mobile Menu
+
+  $.fn.mobileContentGuidelinesMenu = function() {
+    var $container = this;
+    var $nav = $container.find('nav');
+    var $links = $container.find('p, li:not(.current)');
+    var open = $nav.hasClass('open');
+    var $window = $(window);
+
+    $window.on('scroll.mobile', function() {
+      if ($window.scrollTop() >= $container.offset().top) {
+        $container.addClass('sticky');
+      } else {
+        $container.removeClass('sticky');
+      }
+    });
+
+    if (!open) {
+      $links.velocity('slideUp', { duration: 0 });
+    }
+
+    $nav.on('click', function() {
+      if (open) {
+        $nav.removeClass('open');
+        $links.velocity('slideUp');
+      } else {
+        $nav.addClass('open');
+        $links.velocity('slideDown', {
+          complete: function() {
+            // if ($nav.outerHeight() + $nav.offset().top > $window.height() + $window.scrollTop()) {
+            //     $nav.velocity('scroll', {duration: 900, offset: -($nav.outerHeight() - 16)});
+            // }
+          },
+        });
+      }
+      open = !open;
+    });
+
+    return {
+      kill: function() {
+        $nav.off('click');
+        $nav.removeClass('open');
+        $links.attr('style', '');
+        $window.off('scroll.mobile');
+      },
+    };
+  };
+
+  // 10.b Desktop Menu
+
+  $.fn.desktopContentGuidelinesMenu = function() {
+    return {
+      kill: function() {},
+    };
+  };
+
+  // 11. Search Header
+  // ------
+
+  $.fn.searchHeader = function(options) {
+    var settings = $.extend(
+      {
+        open: '.search-input-open',
+        close: '.search-input-close',
+        input: '#lunrsearch',
+      },
+      options
+    );
+
+    var $container = this;
+    var $open = $(settings.open);
+    var $close = $(settings.close);
+    var $input = $(settings.input);
+
+    $open.on('click', function() {
+      $container.velocity('transition.slideRightIn', {
+        duration: 450,
+        display: 'flex',
+        complete: function() {
+          $input.focus();
+        },
+      });
+    });
+
+    $close.on('click', function() {
+      $container.velocity('transition.slideRightOut', { duration: 450 });
+    });
+  };
+
+  // 12. Search Results
+  // ------
+
+  $.fn.searchResults = function(options) {
+    var settings = $.extend(
+      {
+        input: '.search-cta #lunrsearch',
+        default: '.popular-searches',
+      },
+      options
+    );
+
+    var $container = this;
+    var $local_input = $(settings.input);
+    var $default = $(settings.default);
+    var urlParams = new URLSearchParams(window.location.search);
+    var myParam = urlParams.get('q');
+
+    function lunr_search(query) {
+      //var result = index.search(query); --> this will be implemented when we integrate lunr js
+      var num = 0; //result.length && query != '' ? result.length : 0;
+      var query_output = num + ' results for "' + query + '"';
+      var $title = $('<h2 class="no-underline"></h2>');
+
+      // Show results
+      $container.empty();
+
+      // Add status
+      $title.text(query_output);
+      $container.prepend($title);
+
+      if (num != 0) {
+        var $list = $('<ol></ol>');
+
+        // Loop through, match, and add results --> this will be implemented when we integrate lunr js
+        // for (var item in result) {
+        //   var ref = result[item].ref;
+        //   var topic = store[ref].topic
+        //     ? '<p class="post-meta"><small>' + store[ref].topic + '</small></p>'
+        //     : '';
+        //   var searchitem =
+        //     '<li class="result"><a href="' +
+        //     store[ref].link +
+        //     '">' +
+        //     topic +
+        //     '<h3>' +
+        //     store[ref].title +
+        //     '</h3><p>' +
+        //     store[ref].excerpt +
+        //     '</p><p><small>' +
+        //     store[ref].link +
+        //     '</small></p></a></li>';
+
+        //   $list.append(searchitem);
+        // }
+
+        $default.hide(0);
+        $container.append($list);
+      } else {
+        $default.show(0);
+      }
+    }
+
+    $local_input.on('keyup', function() {
+      lunr_search($(this).val());
+    });
+
+    $local_input.val(myParam);
+
+    lunr_search(myParam);
   };
 
   // Utilities

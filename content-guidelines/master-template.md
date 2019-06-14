@@ -26,7 +26,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </div>
 <div class="cell small-6" markdown="1">
 
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optime %} "Screenshot Remembear") Half width image (above)
+![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear") Half width image (above)
 
 </div>
 </section>

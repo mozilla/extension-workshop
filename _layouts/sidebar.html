@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+    {%- include head.html -%}
+
+    <body class="site sidebar">
+        {%- include header.html -%}
+
+        <div class="site-wrapper">
+
+            <nav role="navigation" class="sidenav">
+
+                <div class="sidenav-status">
+                    <div class="sidenav-status-instruction">Select a section</div>
+                    <div id="sidenav-status-pagename">Page Name</div>
+                </div>
+
+                <div class="sidenav-top" aria-hidden="true">
+                    {%- include nav.html -%}
+                </div>
+
+                <div class="sidenav-detail">
+                    {%- include nav.html -%}
+                </div>
+
+            </nav>
+
+            <div class="site-content">
+
+                <main class="site-content-body" aria-label="Content">
+
+                    {{ content }}
+
+                </main>
+
+                {%- include connect.html -%}
+
+                {%- include footer.html -%}
+            </div>
+
+        </div>
+
+        <aside id="video-popup">
+            <div class="bg"></div>
+            <div class="grid-container grid-x grid-padding-x align-center align-middle">
+                <div class="cell small-12 large-10">
+                    <button id="stdVideo-close"></button>
+                </div>
+            </div>
+        </aside>
+
+        {% asset "bundle.js" !type %}
+    </body>
+</html>

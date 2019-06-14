@@ -17,13 +17,24 @@ Stylesheet: Full Width Page Stylesheet
   height: calc(100vh - #{rem-calc(120)});
   min-height: 120vw;
   max-height: 130vw;
+
+  &#top {
+    margin-top: rem-calc(-40);
+  }
+
   @include breakpoint(medium) {
-    height: calc(100vh - #{rem-calc(50)});
+    height: calc(100vh - #{rem-calc(88)});
     max-height: 66vw;
     min-height: rem-calc(360);
   }
+
   @include breakpoint(large) {
+    height: calc(100vh - #{rem-calc(64)});
     max-height: 50vw;
+
+    &#top {
+      margin-top: rem-calc(-64);
+    }
   }
 
   .graphic-bg {
@@ -74,11 +85,7 @@ Stylesheet: Full Width Page Stylesheet
   .banner-content {
     position: relative;
     z-index: 2;
-    height: 90%;
-    @include breakpoint(medium) {
-      height: 80%;
-      padding-top: 5em;
-    }
+    height: 86%;
 
     .cell {
       > * {
@@ -88,6 +95,25 @@ Stylesheet: Full Width Page Stylesheet
       }
     }
   }
+
+  .bottom-content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: rem-calc(-28);
+    z-index: 2;
+
+    @include breakpoint(large) {
+      bottom: rem-calc(-32);
+    }
+  }
+
+  .search-cta {
+    margin: rem-calc(0);
+  }
+
+  // First section following banner
+  // ------
 
   + section > div:first-child {
     padding-top: rem-calc(64);
@@ -1178,5 +1204,11 @@ Stylesheet: Full Width Page Stylesheet
       padding-top: rem-calc(8);
       padding-bottom: rem-calc(8);
     }
+  }
+}
+
+.page-404 {
+  .tiles-intro {
+    min-height: 50vh;
   }
 }
