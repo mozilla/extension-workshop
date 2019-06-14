@@ -92,6 +92,11 @@ small {
   &.large {
     padding: 0.95em 1.15em;
   }
+
+  &.secondary {
+    color: inherit;
+    background-color: $medium-gray;
+  }
 }
 
 .site-footer .mzp-c-footer-legal ul > li > a:focus,
