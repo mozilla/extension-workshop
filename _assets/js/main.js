@@ -156,6 +156,13 @@ jQuery(document).ready(function($) {
     $('#result-list').searchResults();
   }
 
+  // 13. Sidebar Nav Page Section Highlighting
+  // ------
+
+  if ($('.category .is-active .section').length) {
+    $('.category .is-active .section').highlightPageSection();
+  }
+
   // Init Breakpoint Listeners
   // ------------------
 
@@ -985,6 +992,38 @@ jQuery(document).ready(function($) {
 
     lunr_search(myParam);
   };
+
+  // 13. Sidebar Nav Page Section Highlighting
+
+  $.fn.highlightPageSection = function(options) {
+    var settings = $.extend( {
+      offset: 38
+    }, options);
+
+    var $window = $(window);
+    var $this = this;
+    var $anchors = this.find('a');
+    
+    $window.on('scroll', function() {
+        updateAnchorActive();
+    });
+
+    updateAnchorActive();
+
+    function updateAnchorActive() {
+      $anchors.removeClass('is-in-view');
+      $anchors.each(function() {
+        var $self = $(this);
+        var $el = $($self.attr('href'));
+        if ($el.length && isInFocus($el, .75)) {
+          $anchors.removeClass('is-in-view');
+          $self.addClass('is-in-view');
+        }
+      });
+    }
+
+    return this;
+  }
 
   // Utilities
   // ------

@@ -35,14 +35,14 @@ web-ext is a command line tool designed to speed up various parts of the extensi
 
 <!-- Single Column Body Module -->
 
-<section class="module">
+<section id="installation-section" class="module">
 <aside class="module-aside table-of-contents" markdown="1">
 
 <h6>Contents</h6>
 
-1. [Installation](#installation "Installation")
-2. [Using web-ext](#using-web-ext "Using web-ext")
-3. [See also](#see-also "See also")
+1. [Installation](#installation-section "Installation")
+2. [Using web-ext](#using-web-ext-section "Using web-ext")
+3. [See also](#see-also-section "See also")
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
@@ -59,6 +59,18 @@ web-ext requires the current LTS (long-term support) versions of NodeJS.
 To test whether the installation worked run the following command, which displays the web-ext version number:
 
 web-ext --version
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+<section id="using-web-ext-section" class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
 
 ## Using web-ext
 
@@ -79,6 +91,18 @@ The run command watches your source files and tells Firefox to reload the extens
 web-ext run
 
 <p class="note">Extension reloading is only supported in Firefox 49 or higher.</p>
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+<section id="see-also-section" class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
 
 ## See also
 

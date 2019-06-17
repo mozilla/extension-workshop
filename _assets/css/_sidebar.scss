@@ -298,6 +298,15 @@ $sidebar-nav-width: rem-calc(240);
           background-color: $medium-light-gray;
         }
       }
+
+      a.is-in-view {
+        color: $primary-color;
+        font-weight: $global-weight-bold;
+
+        &::before {
+          background-image: linear-gradient(180deg, #0099F1 0%, #9059FF 9%, #B833E1 35%, #E31587 52%, #FC4055 70%, #FF9640 92%, #FFF36E 100%);
+        }
+      }
     }
   }
 
@@ -497,10 +506,6 @@ $sidebar-nav-width: rem-calc(240);
     margin-bottom: rem-calc(40);
   }
 
-  @include breakpoint(xlarge) {
-    margin-bottom: rem-calc(60);
-  }
-
   h1,
   h2 {
     margin-top: 0 !important;
@@ -554,6 +559,10 @@ $sidebar-nav-width: rem-calc(240);
 .overview-hero {
   color: $white;
   background: $primary-color no-repeat center/cover;
+
+  @include breakpoint(xlarge) {
+    margin-bottom: rem-calc(60);
+  }
 
   .button {
     background-color: $white;

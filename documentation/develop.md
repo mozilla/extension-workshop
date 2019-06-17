@@ -33,15 +33,15 @@ Short and brief description of the sort of content you will find on this page.
 
 <!-- Single Column Body Module -->
 
-<section class="module">
+<section id="section-1" class="module">
 <aside class="module-aside table-of-contents" markdown="1">
 
 <h6>Contents</h6>
 
-1. [Summary](#summary "Develop Overview Summary")
-2. [Description](#description "Develop Overview Description")
-3. [Flow](#Flow "Develop Overview Flow")
-4. [Instructions](#instructions "Develop Overview Instructions")
+1. [Label Title 1](#section-1 "Label Title 1")
+2. [Label Title 2](#section-2 "Label Title 2")
+3. [Label Title 3](#section-3 "Label Title 3")
+4. [Label Title 4](#section-4 "Label Title 4")
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
@@ -59,34 +59,25 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- Table -->
 
-<table>
-	<thead>
-		<tr>
-			<th>Column Title</th>
-			<th>Column Title</th>
-			<th>Column Title</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Content scripts matching URL patterns</td>
-			<td><code>page-mod</code> API</td>
-			<td><code>content-scripts</code> key</td>
-		</tr>
-		<tr>
-			<td>Content scripts matching URL patterns</td>
-			<td><code>page-mod</code> API</td>
-			<td><code>content-scripts</code> key</td>
-		</tr>
-		<tr>
-			<td>Content scripts matching URL patterns</td>
-			<td><code>page-mod</code> API</td>
-			<td><code>content-scripts</code> key</td>
-		</tr>
-	</tbody>
-</table>
+Column Title | Column title | Column Title
+--- | --- | --- 
+Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key
+Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key
+Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key
 
 <!-- END: Table -->
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+<section id="section-2" class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
 
 ## Label Title 2
 
@@ -94,9 +85,37 @@ You reference all extensions API functions using a namespace, for example, `brow
 
 [`code link goes here`](https://www.firefox.com "Code link example") and [`runtime.sendNativeMessage()`](https://www.firefox.com "Code link example")
 
-<div>
-	<p>Placeholder for syntax highlighting code block</p>
+<!-- Syntax Highlighting -->
+
+<div markdown="1">
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
 </div>
+
+<!-- END: Syntax Highlighting -->
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+<!-- Page navigation section 
+	(wrap modules in a page section container 
+	when they are all part of the section 
+	referenced by a table of contents link) -->
+
+<section id="section-3" class="page-section-container">
+
+<!-- Single Column Body Module -->
+
+<section class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
 
 ## Label Title 3
 
@@ -161,9 +180,13 @@ Cards contain content and links about a single subject.
 
 <!-- END: Two Column Body Module With Aside -->
 
+</section>
+
+<!-- END: page navigation section -->
+
 <!-- Single Column Body Module -->
 
-<section class="module">
+<section id="section-4" class="module">
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
@@ -189,3 +212,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </div>
 </article>
 </section>
+
+<!-- END: Single Column Body Module -->
