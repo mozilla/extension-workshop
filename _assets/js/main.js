@@ -163,6 +163,13 @@ jQuery(document).ready(function($) {
     $('.category .is-active .section').highlightPageSection();
   }
 
+  // 14. Expandable List
+  // ------
+
+  if ($('.expandable-list').length) {
+    $('.expandable-list').expandableList();
+  }
+
   // Init Breakpoint Listeners
   // ------------------
 
@@ -1024,6 +1031,22 @@ jQuery(document).ready(function($) {
 
     return this;
   }
+
+  // 14. Expandable List
+  // ------
+
+  $.fn.expandableList = function(options) {
+    var settings = $.extend( {
+      title: 'dt',
+      description: 'dd'
+    }, options);
+
+    this.find(settings.title).addClass('closed');
+
+    this.on('click', settings.title, function() {
+      $(this).toggleClass('closed');
+    });
+  };
 
   // Utilities
   // ------

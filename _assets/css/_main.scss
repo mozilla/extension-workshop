@@ -71,6 +71,13 @@ a:not(.button) {
   }
 }
 
+a[target='_blank']::after {
+  color: inherit;
+  padding-left: 0.3em;
+  display: inline-block;
+  @include icon_font($char: $icon-newtab);
+}
+
 small {
   color: $dark-gray;
 }
@@ -1499,18 +1506,18 @@ $hamburger-hover-transition-timing-function: linear;
 // ------
 
 .image-with-caption {
+  margin-bottom: rem-calc(12);
   font-size: $small-font-size;
   color: $dark-gray;
-  margin: rem-calc(12 0 15);
 
   img {
     display: block;
     width: 100%;
     margin-bottom: rem-calc(6);
+    border-radius: $global-radius;
   }
 
   @include breakpoint(medium) {
-    margin: rem-calc(24 0);
 
     img {
       margin-bottom: rem-calc(8);
@@ -1522,103 +1529,89 @@ $hamburger-hover-transition-timing-function: linear;
 // ------
 
 .video-popup {
-  margin: rem-calc(12 0);
-  text-align: center;
-  @include breakpoint(medium) {
-    margin: rem-calc(24 0);
-  }
+  margin-bottom: rem-calc(12);
 
-  a {
-    display: block;
-    position: relative;
-    font-size: rem-calc(22);
+  p:first-child {
 
-    &::before,
-    &::after {
+    a {
       display: block;
-      position: absolute;
-      left: calc(50% - #{rem-calc(20)});
-      top: calc(50% - #{rem-calc(20)});
-      width: rem-calc(40);
-      height: rem-calc(40);
+      position: relative;
+      font-size: rem-calc(22);
+
+      &::before,
+      &::after {
+        display: block;
+        position: absolute;
+        left: calc(50% - #{rem-calc(20)});
+        top: calc(50% - #{rem-calc(20)});
+        width: rem-calc(40);
+        height: rem-calc(40);
+      }
+
+      &::before {
+        content: '';
+        background-color: $white;
+        border-radius: 50%;
+        box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.1);
+        cursor: pointer;
+        transition: box-shadow 0.2s ease-in-out;
+      }
+
+      &::after {
+        @include icon_font($char: $icon-play);
+
+        text-align: center;
+        line-height: rem-calc(38);
+        color: $primary-color;
+        transition: color 0.2s ease-in-out;
+      }
+
+      &:hover::before {
+        box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.33);
+      }
+
+      &:hover::after {
+        color: $primary-color-hover;
+      }
     }
 
-    &::before {
-      content: '';
-      background-color: $white;
-      border-radius: 50%;
-      box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.1);
-      cursor: pointer;
-      transition: box-shadow 0.2s ease-in-out;
-    }
-
-    &::after {
-      @include icon_font($char: $icon-play);
-
-      text-align: center;
-      line-height: rem-calc(38);
-      color: $primary-color;
-      transition: color 0.2s ease-in-out;
-    }
-
-    &:hover::before {
-      box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.33);
-    }
-
-    &:hover::after {
-      color: $primary-color-hover;
+    + h1,
+    + h2,
+    + h3,
+    + h4,
+    + h5,
+    + h6 {
+        margin-top: 0;
     }
   }
 
   img {
     display: block;
     width: 100%;
-    margin-bottom: rem-calc(6);
+    border-radius: $global-radius;
   }
 
   .medium-6 {
-    margin-bottom: rem-calc(12);
 
     @include breakpoint(medium) {
-      margin-bottom: rem-calc(24);
-
-      a {
-        font-size: rem-calc(13);
-
-        &::before,
-        &::after {
-          left: calc(50% - #{rem-calc(12)});
-          top: calc(50% - #{rem-calc(12)});
-          width: rem-calc(24);
-          height: rem-calc(24);
-        }
-
-        &::after {
-          line-height: rem-calc(23);
-        }
-      }
-
-      img {
-        border-radius: $global-radius;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p {
-        max-width: rem-calc(360);
-        margin-right: auto;
-        margin-left: auto;
-      }
 
       p:first-child {
-        margin-top: rem-calc(40);
-        max-width: rem-calc(180);
-        margin-right: auto;
-        margin-left: auto;
+
+        a {
+          font-size: rem-calc(13);
+
+          &::before,
+          &::after {
+            left: calc(50% - #{rem-calc(12)});
+            top: calc(50% - #{rem-calc(12)});
+            width: rem-calc(24);
+            height: rem-calc(24);
+          }
+
+          &::after {
+            line-height: rem-calc(23);
+          }
+        }
       }
     }
   }
@@ -1628,16 +1621,15 @@ $hamburger-hover-transition-timing-function: linear;
 // ------
 
 .icon-grid {
-  margin: rem-calc(12 0 3);
 
-  p {
-    margin-bottom: rem-calc(12);
-  }
-  @include breakpoint(medium) {
-    margin: rem-calc(24 0 0);
-
-    p {
-      margin-bottom: rem-calc(24);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:first-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -1647,8 +1639,8 @@ $hamburger-hover-transition-timing-function: linear;
 
 .example {
   background-color: $light-gray;
-  padding: rem-calc(7);
-  margin: rem-calc(0 -7 15);
+  padding: rem-calc(16 8);
+  margin: rem-calc(0 -6 16);
   border-radius: $global-radius;
 
   p,
@@ -1664,29 +1656,53 @@ $hamburger-hover-transition-timing-function: linear;
 
 span.example {
   display: inline-block;
-  padding: rem-calc(0 7);
+  padding: rem-calc(0 8);
   margin: 0;
 }
 
 .do-this,
 .not-this {
+  position: relative;
   background-color: $lighter-gray;
-  margin: rem-calc(12 0);
+  margin-bottom: rem-calc(24);
   padding: rem-calc(12);
   border: 1px solid $medium-light-gray;
+  border-top: 0;
+  border-radius: $global-radius;
+  font-size: $small-font-size;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: 0; 
+    width: calc(100% + 2px);
+    height: rem-calc(5);
+    border-top-left-radius: $global-radius;
+    border-top-right-radius: $global-radius;
+  }
 
   > *:last-child {
     margin-bottom: 0;
   }
 
   header {
-    padding: rem-calc(8 0 6);
+    padding: rem-calc(8 0 16);
 
     > *:first-child::before {
       display: inline;
       margin-right: 0.5rem;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+    }
     + h1,
     + h2,
     + h3,
@@ -1697,16 +1713,27 @@ span.example {
     }
   }
 
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ol,
+  ul {
+    margin-bottom: 0.5rem;
+  }
+
   .example {
     background-color: $medium-light-gray;
   }
 
   @include breakpoint(medium) {
-    margin: rem-calc(24 0);
     padding: rem-calc(24);
 
     header {
-      padding: rem-calc(0 0 12);
+      padding: rem-calc(0 0 16);
     }
   }
 
@@ -1724,51 +1751,44 @@ span.example {
 }
 
 .do-this {
-  border-top: #{rem-calc(5)} solid #31c430;
+
+  &::before {
+    background-color: $success-color;
+  }
 
   header {
     * {
-      color: #31c430;
+      color: $success-color;
     }
 
     > *:first-child::before {
       @include icon_font($char: $icon-do);
 
-      color: #31c430;
+      color: $success-color;
     }
   }
 }
 
 .not-this {
-  border-top: #{rem-calc(5)} solid #d70022;
+  
+  &::before {
+    background-color: $alert-color;
+  }
 
   header {
     * {
-      color: #d70022;
+      color: $alert-color;
     }
 
     > *:first-child::before {
       @include icon_font($char: $icon-dont);
 
-      color: #d70022;
+      color: $alert-color;
     }
   }
 }
 
 .do-this-not-this {
-  .do-this,
-  .not-this {
-    margin: rem-calc(0 0 12);
-  }
-
-  @include breakpoint(medium) {
-    margin: rem-calc(24 0);
-
-    .do-this,
-    .not-this {
-      margin: 0;
-    }
-  }
 
   & + p,
   & + h1,
@@ -1780,5 +1800,105 @@ span.example {
   & + ol,
   & + ul {
     margin-top: 1.5em;
+  }
+}
+
+// Note 
+// ------
+
+.note {
+  position: relative;
+  padding: rem-calc(10 15 10 38);
+  font-size: $small-font-size;
+  border-left: #{rem-calc(2)} solid $warning-color;
+  background-color: $warning-color-light;
+  border-radius: $global-radius;
+
+  &::before {
+    @include icon_font($char: $icon-info);
+
+    display: block;
+    position: absolute;
+    font-size: rem-calc(16);
+    left: rem-calc(12);
+    top: rem-calc(14);
+  }
+}
+
+// Alert
+// ------
+
+.note.alert {
+  border-left-color: $alert-color;
+  background-color: $alert-color-light;
+
+  &::before {
+    @include icon_font($char: $icon-alert);
+  }
+}
+
+// Tables
+// ------
+
+.table-wrapper {
+  border-radius: $global-radius;
+  font-size: $small-font-size;
+}
+
+// Expandable List
+// ------
+
+.expandable-list {
+  font-size: $small-font-size;
+  margin-bottom: rem-calc(24);
+
+  dt {
+    position: relative;
+    padding: rem-calc(8 34 8 8);
+    border: 1px solid $medium-light-gray;
+    border-top-left-radius: $global-radius;
+    border-top-right-radius: $global-radius;
+    border-bottom: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: $global-weight-bold;
+    transition: padding 0.3s ease-in-out;
+
+    &::after {
+      @include icon_font($char: $icon-arrow-down);
+
+      position: absolute;
+      top: rem-calc(12);
+      right: rem-calc(8);
+      font-size: rem-calc(18);
+      color: $primary-color; 
+      transform: rotate(180deg);
+      transition: transform 0.45s ease-in-out;
+    }
+  }
+
+  dt.closed {
+    padding-bottom: 0;
+    font-weight: $global-weight-normal;
+
+    &::after {
+      transform: rotate(0);
+    }
+  }
+
+  dd {
+    padding: rem-calc(4 8 8);
+    border: 1px solid $medium-light-gray;
+    border-bottom-left-radius: $global-radius;
+    border-bottom-right-radius: $global-radius;
+    border-top: 0;
+    margin-bottom: rem-calc(12);
+    transition: padding 0.3s ease-in-out, font-size 0.1s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  dt.closed + dd {
+    padding: rem-calc(0 8 8);
+    font-size: 0;
+    color: rgba($black, 0);
   }
 }

@@ -2,7 +2,7 @@
 <div class="panel-intro bg-dark">
 <div class="bg"></div>
 
-<div class="grid-container grid-x grid-padding-x align-center">
+<div class="grid-container grid-x grid-padding-x align-center align-middle">
 <div class="cell small-12 medium-6" markdown="1">
 
 ## Build extensions

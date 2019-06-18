@@ -174,13 +174,6 @@ $sidebar-w: rem-calc(230);
         padding: 0.25rem 0;
       }
 
-      a[target='_blank']::after {
-        color: $primary-color;
-        padding-left: 0.3em;
-        display: inline-block;
-        @include icon_font($char: $icon-newtab);
-      }
-
       @include breakpoint(medium) {
         font-size: rem-calc(13);
         margin: rem-calc(24 0 30);

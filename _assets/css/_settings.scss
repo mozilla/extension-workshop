@@ -62,11 +62,15 @@ $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #015fdf,
   secondary: #777,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840,
+  success: #2BC3A2,
+  warning: #FFD568,
+  alert: #FF4F5E,
 );
+
 $primary-color-hover: #003eaa;
+$warning-color-light: #FFEB80;
+$alert-color-light: #FFBDC5;
+
 $lighter-gray: #f3f3f3;
 $light-gray: #eee;
 $medium-light-gray: #e5e5e5;
@@ -144,6 +148,8 @@ $icon-forward: '\e90e';
 $icon-newtab: '\e90f';
 $icon-dont: '\e910';
 $icon-do: '\e911';
+$icon-alert: '\e914';
+$icon-info: '\e915';
 
 // 3. Breakpoints
 // --------------
@@ -453,17 +459,17 @@ $pagination-arrows: true;
 // 12. Table
 // ---------
 
-$table-background: $white;
-$table-color-scale: 5%;
+$table-background: #F9F9FA;
+$table-color-scale: 7.5%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
-$table-padding: rem-calc(8 10 10);
+$table-padding: rem-calc(8);
 $table-hover-scale: 2%;
 $table-row-hover: darken($table-background, $table-hover-scale);
 $table-row-stripe-hover: darken(
   $table-background,
   $table-color-scale + $table-hover-scale
 );
-$table-is-striped: true;
+$table-is-striped: false;
 $table-striped-background: smart-scale($table-background, $table-color-scale);
 $table-stripe: even;
 $table-head-background: smart-scale($table-background, $table-color-scale / 2);
