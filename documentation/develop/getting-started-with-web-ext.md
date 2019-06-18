@@ -4,6 +4,8 @@ title: Getting started with web-ext
 permalink: /documentation/develop/getting-started-with-web-ext/
 published: false
 topic: Develop
+tags: label distribution install remove
+contributors: caitmuenster muffinresearch bqbn
 ---
 
 <!-- Page Hero Banner -->
@@ -13,7 +15,7 @@ topic: Develop
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
 <div class="page-hero-description" markdown="1">
-<p class="section-title"><small>Develop</small></p>
+<p class="section-title"><small>{{ page.topic }}</small></p>
 
 # Getting started with web-ext
 
@@ -107,7 +109,7 @@ web-ext run
 ## See also
 
 <a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="webextensions-examples">webextensions-examples</a>
-
+<br>
 <a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="web-ext command reference">web-ext command reference</a>
 
 </div>
@@ -115,3 +117,66 @@ web-ext run
 </section>
 
 <!-- END: Single Column Body Module -->
+
+<!-- Meta Data -->
+
+{%- include page-meta-data.html -%}
+
+<!-- END: Meta Data -->
+
+<!-- Up Next -->
+
+<section class="module up-next">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+###### Up Next
+
+</div>
+
+<!-- Tile -->
+
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Web-ext Webpack plug-in
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+<!-- Tile -->
+
+<a href="/documentation/develop/web-ext-command-reference" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Web-ext command reference
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+<!-- Tile -->
+
+<a href="/documentation/develop/browser-api-polyfill" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Browser API Polyfill
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+</article>
+</section>
+
+<!-- END: Up Next -->

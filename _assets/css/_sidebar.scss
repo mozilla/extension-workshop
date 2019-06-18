@@ -66,6 +66,7 @@ $sidebar-nav-width: rem-calc(240);
     height: calc(100% - #{rem-calc(64)});
     left: 0;
     width: $sidebar-nav-width;
+    border-right: 1px solid $medium-light-gray;
     overflow-y: auto;
     overflow-x: hidden;
     transition: top 0.4s ease-in-out, height 0.4s ease-in-out;
@@ -83,7 +84,7 @@ $sidebar-nav-width: rem-calc(240);
     transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
     overflow-y: auto;
     background-color: $lighter-gray;
-    box-shadow: #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.25);
+    box-shadow: $element-shadow;
 
     .primary > .is-active.has-children,
     .primary > .has-active-children {
@@ -178,7 +179,7 @@ $sidebar-nav-width: rem-calc(240);
       width: calc(100% - #{rem-calc(32)});
       padding: rem-calc(10 0);
       background: $white;
-      box-shadow: $element-shadow;
+      box-shadow: $element-shadow-highlight;
       border-radius: $global-radius;
       transition: box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out,
         opacity 0.3s ease-in-out;
@@ -650,6 +651,42 @@ $sidebar-nav-width: rem-calc(240);
       padding-bottom: rem-calc(24);
       border-bottom: 1px solid $medium-light-gray;
       margin-bottom: rem-calc(30);
+    }
+  }
+}
+
+// Documentation Topics
+
+.documentation-topics {
+  background-color: $light-gray;
+  font-size: $small-font-size;
+  padding: rem-calc(24 0);
+  flex: none;
+
+  h6 {
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 0.75rem;
+  }
+
+  @include breakpoint(medium) {
+    padding: rem-calc(36 0);
+
+    h6 {
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      @include horizontal_list($margin: 1.2rem);
+
+      justify-content: space-between;
     }
   }
 }

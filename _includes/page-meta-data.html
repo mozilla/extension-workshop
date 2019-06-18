@@ -1,0 +1,27 @@
+<section class="module meta-data">
+	<article class="module-content grid-x grid-padding-x">
+		<div class="cell small-12">
+
+			<p><span class="meta-label tags">Tags:</span> 
+				{% assign tags = page.tags | split:' ' | sort %}
+				{% for tag in tags %}
+				  {% capture tag_name %}{{ tag }}{% endcapture %}
+				  <a href="/tag/{{ tag_name }}">{{ tag_name }}</a>&nbsp;
+				{% endfor %}
+			</p>
+
+			<p><span class="meta-label contributors">Contributors:</span>
+				{% assign contributors = page.contributors | split:' ' | sort %}
+				{% for contributor in contributors %}
+				  <a href="https://github.com/{{ contributor }}/" title="View {{ contributor }} on Github">{{ contributor }}</a>&nbsp;
+				{% endfor %}
+			</p>
+
+			<p><span class="meta-label date">Last update:</span> 
+				author 
+				date
+			</p>
+
+		</div>
+	</article>
+</section>

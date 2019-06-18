@@ -335,7 +335,7 @@ $sidebar-w: rem-calc(230);
         padding: #{rem-calc(60)} 8.333333333333333%;
       }
 
-      > .grid-container {
+      .grid-container {
         max-width: $global-width - $sidebar-w;
       }
     }

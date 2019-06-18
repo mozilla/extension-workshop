@@ -33,6 +33,11 @@
 
                 </main>
 
+                {% assign parts = page.url | split: "/" %}
+                {% if parts[1] == "documentation" %}
+                    {%- include documentation-topics.html -%}
+                {% endif %}
+
                 {%- include connect.html -%}
 
                 {%- include footer.html -%}

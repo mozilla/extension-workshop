@@ -3,6 +3,8 @@ layout: sidebar
 title: Develop
 permalink: /documentation/develop/
 published: false
+tags: label distribution install remove
+contributors: caitmuenster muffinresearch bqbn
 ---
 
 <!-- Overview Page Hero Banner -->
@@ -529,7 +531,7 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 
 <!-- Tile -->
 
-<section class="module do-this-not-this">
+<section class="module">
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12 tile" markdown="1">
 
@@ -551,4 +553,66 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 
 <!-- END: Tile -->
 
+<!-- Meta Data -->
+
+{%- include page-meta-data.html -%}
+
+<!-- END: Meta Data -->
+
+<!-- Up Next -->
+
+<section class="module up-next">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+###### Up Next
+
+</div>
+
+<!-- Tile -->
+
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Web-ext Webpack plug-in
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+<!-- Tile -->
+
+<a href="/documentation/develop/web-ext-command-reference" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Web-ext command reference
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+<!-- Tile -->
+
+<a href="/documentation/develop/browser-api-polyfill" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Browser API Polyfill
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+</article>
+</section>
+
+<!-- END: Up Next -->
 
