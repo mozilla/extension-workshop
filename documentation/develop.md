@@ -40,7 +40,7 @@ Short and brief description of the sort of content you will find on this page.
 <section id="section-1" class="module">
 <aside class="module-aside table-of-contents" markdown="1">
 
-<h6>Contents</h6>
+###### Contents
 
 1. [Label Title 1](#section-1 'Label Title 1')
 2. [Label Title 2](#section-2 'Label Title 2')
@@ -258,12 +258,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <section class="module image-with-caption">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-12 medium-6" markdown="1">
 
 ![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear") Half width image (above)
 
 </div>
-<div class="cell small-6" markdown="1">
+<div class="cell small-12 medium-6" markdown="1">
 
 ![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear") Half width image (above)
 

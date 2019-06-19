@@ -48,11 +48,6 @@ h2 {
       #fff36e 100%
     );
   }
-
-  + h5:not(:first-child),
-  + h6:not(:first-child) {
-    margin-top: -0.6em;
-  }
 }
 
 li {
@@ -1668,9 +1663,12 @@ $hamburger-hover-transition-timing-function: linear;
 // ------
 
 .image-with-caption {
-  margin-bottom: rem-calc(12);
   font-size: $small-font-size;
   color: $dark-gray;
+
+  .cell {
+    margin-bottom: rem-calc(6);
+  }
 
   img {
     display: block;
@@ -1680,6 +1678,10 @@ $hamburger-hover-transition-timing-function: linear;
   }
 
   @include breakpoint(medium) {
+    .cell {
+      margin-bottom: rem-calc(8);
+    }
+
     img {
       margin-bottom: rem-calc(8);
     }
@@ -1690,7 +1692,9 @@ $hamburger-hover-transition-timing-function: linear;
 // ------
 
 .video-popup {
-  margin-bottom: rem-calc(12);
+  .cell {
+    margin-bottom: rem-calc(6);
+  }
 
   p:first-child {
     a {
@@ -1749,6 +1753,12 @@ $hamburger-hover-transition-timing-function: linear;
     display: block;
     width: 100%;
     border-radius: $global-radius;
+  }
+
+  @include breakpoint(medium) {
+    .cell {
+      margin-bottom: rem-calc(8);
+    }
   }
 
   .medium-6 {
@@ -1820,8 +1830,8 @@ span.example {
 .not-this {
   position: relative;
   background-color: $lighter-gray;
-  margin-bottom: rem-calc(24);
   padding: rem-calc(12);
+  margin-bottom: rem-calc(12);
   border: 1px solid $medium-light-gray;
   border-top: 0;
   border-radius: $global-radius;
@@ -1884,10 +1894,15 @@ span.example {
 
   .example {
     background-color: $medium-light-gray;
+
+    &:last-child {
+      margin-bottom: rem-calc(-6);
+    }
   }
 
   @include breakpoint(medium) {
     padding: rem-calc(24);
+    margin-bottom: rem-calc(24);
 
     header {
       padding: rem-calc(0 0 16);
@@ -2143,6 +2158,7 @@ span.example {
   @include breakpoint(small down) {
     flex: 1 1 100%;
     width: 100%;
+    margin-bottom: rem-calc(24);
 
     .block-link {
       display: flex;
@@ -2168,7 +2184,11 @@ span.example {
 
 .up-next {
   #up-next {
-    margin: rem-calc(24 0 8);
+    margin: rem-calc(12 0 8);
+
+    @include breakpoint(medium) {
+      margin-top: rem-calc(24);
+    }
   }
 
   .tile {

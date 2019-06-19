@@ -42,7 +42,7 @@ web-ext is a command line tool designed to speed up various parts of the extensi
 <section id="installation-section" class="module">
 <aside class="module-aside table-of-contents" markdown="1">
 
-<h6>Contents</h6>
+###### Contents
 
 1. [Installation](#installation-section 'Installation')
 2. [Using web-ext](#using-web-ext-section 'Using web-ext')

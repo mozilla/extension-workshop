@@ -1029,7 +1029,7 @@ Stylesheet: Full Width Page Stylesheet
 // Events
 // ------
 
-#events {
+div#events {
   margin-bottom: -1px;
   overflow: hidden;
 }
@@ -1037,7 +1037,7 @@ Stylesheet: Full Width Page Stylesheet
 // News
 // ------
 
-#news {
+section#news {
   position: relative;
   padding-bottom: 22.34375vw;
   @include breakpoint(medium) {

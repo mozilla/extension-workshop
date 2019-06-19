@@ -57,7 +57,8 @@ If you know the basics of extension development, you’re ready to create an ext
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-learn.svg" @path @optim %} "Community Forums")
-<span class="block-link-inline">Learn</span>
+
+<p><span class="block-link-inline">Learn</span></p>
 
 </div>
 </a>
@@ -68,7 +69,8 @@ If you know the basics of extension development, you’re ready to create an ext
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-develop.svg" @path @optim %} "Community Forums")
-<span class="block-link-inline">Develop</span>
+
+<p><span class="block-link-inline">Develop</span></p>
 
 </div>
 </a>
@@ -79,7 +81,8 @@ If you know the basics of extension development, you’re ready to create an ext
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-test.svg" @path @optim %} "Community Forums")
-<span class="block-link-inline">Test & Debug</span>
+
+<p><span class="block-link-inline">Test & Debug</span></p>
 
 </div>
 </a>
@@ -90,7 +93,8 @@ If you know the basics of extension development, you’re ready to create an ext
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-publish.svg" @path @optim %} "Community Forums")
-<span class="block-link-inline">Publish</span>
+
+<p><span class="block-link-inline">Publish</span></p>
 
 </div>
 </a>
@@ -101,7 +105,8 @@ If you know the basics of extension development, you’re ready to create an ext
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-manage.svg" @path @optim %} "Community Forums")
-<span class="block-link-inline">Manage</span>
+
+<p><span class="block-link-inline">Manage</span></p>
 
 </div>
 </a>
@@ -123,13 +128,13 @@ Mozilla takes the safety and privacy of its users very seriously. Be sure to rev
 </div>
 
 <div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-6" markdown="1">
+<div class="cell small-12 medium-6" markdown="1">
 
 <img src="{% asset "Learn-About-Security-Best-Practices.svg" @path @optim %}" class="image-block" alt="Learn about security best practices" title="Learn about security best practices">
 [Learn about security best practices](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 
 </div>
-<div class="cell small-6" markdown="1">
+<div class="cell small-12 medium-6" markdown="1">
 
 <img src="{% asset "Learn-About-Our-Policies.svg" @path @optim %}" class="image-block" alt="Learn about our policies" title="Learn about our policies">
 [Learn about our policies](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
