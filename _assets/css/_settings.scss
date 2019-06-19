@@ -56,9 +56,13 @@
 // Element Shadows
 // ------
 
-$element-shadow: 0 1px 6px 0 rgba(14,13,26,0.12), 0 2px 1px 0 rgba(7,48,114,0.12), 0 1px 2px 0 rgba(34,0,51,0.04), 0 0 0 1px rgba(32,18,58,0.04); // #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.1);
-$element-shadow-highlight: 0 6px 10px -4px rgba(14,13,26,0.12), 0 6px 22px 4px rgba(7,48,114,0.12), 0 12px 18px 2px rgba(34,0,51,0.04);
-$focus-shadow: inset 0 0 0 1px #0a84ff, 0 0 0 1px #0a84ff, 0 0 0 4px rgba(10, 132, 255, 0.3);
+$element-shadow: 0 1px 6px 0 rgba(14, 13, 26, 0.12),
+  0 2px 1px 0 rgba(7, 48, 114, 0.12), 0 1px 2px 0 rgba(34, 0, 51, 0.04),
+  0 0 0 1px rgba(32, 18, 58, 0.04); // #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.1);
+$element-shadow-highlight: 0 6px 10px -4px rgba(14, 13, 26, 0.12),
+  0 6px 22px 4px rgba(7, 48, 114, 0.12), 0 12px 18px 2px rgba(34, 0, 51, 0.04);
+$focus-shadow: inset 0 0 0 1px #0a84ff, 0 0 0 1px #0a84ff,
+  0 0 0 4px rgba(10, 132, 255, 0.3);
 
 // 1. Global
 // ---------
@@ -69,14 +73,14 @@ $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #015fdf,
   secondary: #777,
-  success: #2BC3A2,
-  warning: #FFD568,
-  alert: #FF4F5E,
+  success: #2bc3a2,
+  warning: #ffd568,
+  alert: #ff4f5e,
 );
 
 $primary-color-hover: #003eaa;
-$warning-color-light: #FFEB80;
-$alert-color-light: #FFBDC5;
+$warning-color-light: #ffeb80;
+$alert-color-light: #ffbdc5;
 
 $lighter-gray: #f3f3f3;
 $light-gray: #eee;
@@ -469,7 +473,7 @@ $pagination-arrows: true;
 // 12. Table
 // ---------
 
-$table-background: #F9F9FA;
+$table-background: #f9f9fa;
 $table-color-scale: 7.5%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(8);

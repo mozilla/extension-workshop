@@ -44,9 +44,9 @@ web-ext is a command line tool designed to speed up various parts of the extensi
 
 <h6>Contents</h6>
 
-1. [Installation](#installation-section "Installation")
-2. [Using web-ext](#using-web-ext-section "Using web-ext")
-3. [See also](#see-also-section "See also")
+1. [Installation](#installation-section 'Installation')
+2. [Using web-ext](#using-web-ext-section 'Using web-ext')
+3. [See also](#see-also-section 'See also')
 
 </aside>
 <article class="module-content grid-x grid-padding-x">

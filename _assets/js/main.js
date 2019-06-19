@@ -1003,16 +1003,19 @@ jQuery(document).ready(function($) {
   // 13. Sidebar Nav Page Section Highlighting
 
   $.fn.highlightPageSection = function(options) {
-    var settings = $.extend( {
-      offset: 38
-    }, options);
+    var settings = $.extend(
+      {
+        offset: 38,
+      },
+      options
+    );
 
     var $window = $(window);
     var $this = this;
     var $anchors = this.find('a');
-    
+
     $window.on('scroll', function() {
-        updateAnchorActive();
+      updateAnchorActive();
     });
 
     updateAnchorActive();
@@ -1022,7 +1025,7 @@ jQuery(document).ready(function($) {
       $anchors.each(function() {
         var $self = $(this);
         var $el = $($self.attr('href'));
-        if ($el.length && isInFocus($el, .75)) {
+        if ($el.length && isInFocus($el, 0.75)) {
           $anchors.removeClass('is-in-view');
           $self.addClass('is-in-view');
         }
@@ -1030,16 +1033,19 @@ jQuery(document).ready(function($) {
     }
 
     return this;
-  }
+  };
 
   // 14. Expandable List
   // ------
 
   $.fn.expandableList = function(options) {
-    var settings = $.extend( {
-      title: 'dt',
-      description: 'dd'
-    }, options);
+    var settings = $.extend(
+      {
+        title: 'dt',
+        description: 'dd',
+      },
+      options
+    );
 
     this.find(settings.title).addClass('closed');
 

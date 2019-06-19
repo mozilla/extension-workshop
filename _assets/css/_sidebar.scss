@@ -305,7 +305,16 @@ $sidebar-nav-width: rem-calc(240);
         font-weight: $global-weight-bold;
 
         &::before {
-          background-image: linear-gradient(180deg, #0099F1 0%, #9059FF 9%, #B833E1 35%, #E31587 52%, #FC4055 70%, #FF9640 92%, #FFF36E 100%);
+          background-image: linear-gradient(
+            180deg,
+            #0099f1 0%,
+            #9059ff 9%,
+            #b833e1 35%,
+            #e31587 52%,
+            #fc4055 70%,
+            #ff9640 92%,
+            #fff36e 100%
+          );
         }
       }
     }
@@ -404,7 +413,7 @@ $sidebar-nav-width: rem-calc(240);
 .site.sidebar .panel {
   padding-top: rem-calc(32);
   padding-bottom: rem-calc(24);
-  
+
   @include breakpoint(medium) {
     padding-top: rem-calc(40);
     padding-bottom: rem-calc(40);
@@ -518,7 +527,9 @@ $sidebar-nav-width: rem-calc(240);
     }
   }
 
-  .section-title {margin-bottom: 1em;}
+  .section-title {
+    margin-bottom: 1em;
+  }
 
   &-description {
     padding: rem-calc(32 0 12);
@@ -533,7 +544,7 @@ $sidebar-nav-width: rem-calc(240);
   }
 
   &-cta {
-    display: flex; 
+    display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     margin: rem-calc(0 -8);
@@ -554,7 +565,6 @@ $sidebar-nav-width: rem-calc(240);
       }
     }
   }
-
 }
 
 .overview-hero {
@@ -591,12 +601,11 @@ $sidebar-nav-width: rem-calc(240);
 }
 
 .page-hero {
-
   &-cta {
     padding-bottom: 0;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       height: 1px;
       width: calc(100% - #{rem-calc(16)});
@@ -633,12 +642,12 @@ $sidebar-nav-width: rem-calc(240);
     order: 2;
     position: relative;
     padding-left: rem-calc(28) !important;
-    
+
     &::before {
-      content: ""; 
+      content: '';
       display: block;
       position: absolute;
-      top: 0; 
+      top: 0;
       height: 100%;
       left: rem-calc(12);
       width: 1px;

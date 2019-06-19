@@ -42,10 +42,10 @@ Short and brief description of the sort of content you will find on this page.
 
 <h6>Contents</h6>
 
-1. [Label Title 1](#section-1 "Label Title 1")
-2. [Label Title 2](#section-2 "Label Title 2")
-3. [Label Title 3](#section-3 "Label Title 3")
-4. [Label Title 4](#section-4 "Label Title 4")
+1. [Label Title 1](#section-1 'Label Title 1')
+2. [Label Title 2](#section-2 'Label Title 2')
+3. [Label Title 3](#section-3 'Label Title 3')
+4. [Label Title 4](#section-4 'Label Title 4')
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
@@ -53,7 +53,7 @@ Short and brief description of the sort of content you will find on this page.
 
 ## Label Title 1
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
 
 <!-- Note -->
 
@@ -65,11 +65,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <div class="table-wrapper table-scroll" markdown="1">
 
-Column Title | Column Title | Column Title
---- | --- | --- 
-Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key
-Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key
-Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key
+| Column Title                          | Column Title              | Column Title                     |
+| ------------------------------------- | ------------------------- | -------------------------------- |
+| Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key |
+| Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key |
+| Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key |
 
 </div>
 
@@ -91,7 +91,7 @@ Content scripts matching URL patterns | <code>page-mod</code> API | <code>conten
 
 You reference all extensions API functions using a namespace, for example, `browser.alarms.create([delayInMinutes]);` would create an alram in Firefox that goes off after the time specified in `code goes here`
 
-[`code link goes here`](https://www.firefox.com "Code link example") and [`runtime.sendNativeMessage()`](https://www.firefox.com "Code link example")
+[`code link goes here`](https://www.firefox.com 'Code link example') and [`runtime.sendNativeMessage()`](https://www.firefox.com 'Code link example')
 
 <!-- Syntax Highlighting -->
 
@@ -99,7 +99,7 @@ You reference all extensions API functions using a namespace, for example, `brow
 
 ```javascript
 function setCurrentChoice(result) {
-  document.querySelector("#color").value = result.color || "blue";
+  document.querySelector('#color').value = result.color || 'blue';
 }
 ```
 
@@ -113,9 +113,9 @@ function setCurrentChoice(result) {
 
 <!-- END: Single Column Body Module -->
 
-<!-- Page navigation section 
-	(wrap modules in a page section container 
-	when they are all part of the section 
+<!-- Page navigation section
+	(wrap modules in a page section container
+	when they are all part of the section
 	referenced by a table of contents link) -->
 
 <section id="section-3" class="page-section-container">
@@ -128,7 +128,7 @@ function setCurrentChoice(result) {
 
 ## Label Title 3
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
 
 <p class="note alert">Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
 
@@ -201,7 +201,7 @@ Cards contain content and links about a single subject.
 
 ## Label Title 4
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
 
 <!-- Expandable List -->
 
@@ -232,7 +232,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Phase 1 Components
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
 
 </div>
 </article>
@@ -617,4 +617,3 @@ Develop
 </section>
 
 <!-- END: Up Next -->
-

@@ -57,7 +57,6 @@ If you know the basics of extension development, you’re ready to create an ext
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-learn.svg" @path @optim %} "Community Forums")
-	
 <span class="block-link-inline">Learn</span>
 
 </div>
@@ -69,7 +68,6 @@ If you know the basics of extension development, you’re ready to create an ext
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-develop.svg" @path @optim %} "Community Forums")
-	
 <span class="block-link-inline">Develop</span>
 
 </div>
@@ -81,7 +79,6 @@ If you know the basics of extension development, you’re ready to create an ext
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-test.svg" @path @optim %} "Community Forums")
-	
 <span class="block-link-inline">Test & Debug</span>
 
 </div>
@@ -93,7 +90,6 @@ If you know the basics of extension development, you’re ready to create an ext
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-publish.svg" @path @optim %} "Community Forums")
-	
 <span class="block-link-inline">Publish</span>
 
 </div>
@@ -105,7 +101,6 @@ If you know the basics of extension development, you’re ready to create an ext
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-manage.svg" @path @optim %} "Community Forums")
-	
 <span class="block-link-inline">Manage</span>
 
 </div>

@@ -405,7 +405,9 @@ Stylesheet: Full Width Page Stylesheet
         width: rem-calc(32);
       }
 
-      + * {padding-right: rem-calc(40);}
+      + * {
+        padding-right: rem-calc(40);
+      }
     }
   }
 
@@ -426,7 +428,9 @@ Stylesheet: Full Width Page Stylesheet
             width: rem-calc(32);
           }
 
-          + * {padding-right: rem-calc(40);}
+          + * {
+            padding-right: rem-calc(40);
+          }
         }
 
         &:last-child {

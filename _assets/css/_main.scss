@@ -140,7 +140,7 @@ a.tile-block-link:focus {
   box-shadow: none;
 
   &::before {
-    box-shadow: $focus-shadow; 
+    box-shadow: $focus-shadow;
   }
 }
 
@@ -1680,7 +1680,6 @@ $hamburger-hover-transition-timing-function: linear;
   }
 
   @include breakpoint(medium) {
-
     img {
       margin-bottom: rem-calc(8);
     }
@@ -1694,7 +1693,6 @@ $hamburger-hover-transition-timing-function: linear;
   margin-bottom: rem-calc(12);
 
   p:first-child {
-
     a {
       display: block;
       position: relative;
@@ -1743,7 +1741,7 @@ $hamburger-hover-transition-timing-function: linear;
     + h4,
     + h5,
     + h6 {
-        margin-top: 0;
+      margin-top: 0;
     }
   }
 
@@ -1754,11 +1752,8 @@ $hamburger-hover-transition-timing-function: linear;
   }
 
   .medium-6 {
-
     @include breakpoint(medium) {
-
       p:first-child {
-
         a {
           font-size: rem-calc(13);
 
@@ -1783,7 +1778,6 @@ $hamburger-hover-transition-timing-function: linear;
 // ------
 
 .icon-grid {
-
   h1,
   h2,
   h3,
@@ -1834,11 +1828,11 @@ span.example {
   font-size: $small-font-size;
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: -1px;
-    top: 0; 
+    top: 0;
     width: calc(100% + 2px);
     height: rem-calc(5);
     border-top-left-radius: $global-radius;
@@ -1913,7 +1907,6 @@ span.example {
 }
 
 .do-this {
-
   &::before {
     background-color: $success-color;
   }
@@ -1932,7 +1925,6 @@ span.example {
 }
 
 .not-this {
-  
   &::before {
     background-color: $alert-color;
   }
@@ -1951,7 +1943,6 @@ span.example {
 }
 
 .do-this-not-this {
-
   & + p,
   & + h1,
   & + h2,
@@ -1965,7 +1956,7 @@ span.example {
   }
 }
 
-// Note 
+// Note
 // ------
 
 .note {
@@ -2033,7 +2024,7 @@ span.example {
       top: rem-calc(10);
       right: rem-calc(8);
       font-size: rem-calc(18);
-      color: $primary-color; 
+      color: $primary-color;
       transform: rotate(180deg);
       transition: transform 0.45s ease-in-out;
     }
@@ -2055,7 +2046,8 @@ span.example {
     border-bottom-right-radius: $global-radius;
     border-top: 0;
     margin-bottom: rem-calc(12);
-    transition: padding 0.3s ease-in-out, font-size 0.1s ease-in-out, color 0.3s ease-in-out;
+    transition: padding 0.3s ease-in-out, font-size 0.1s ease-in-out,
+      color 0.3s ease-in-out;
   }
 
   dt.closed + dd {
@@ -2150,7 +2142,7 @@ span.example {
 
   @include breakpoint(small down) {
     flex: 1 1 100%;
-    width: 100%; 
+    width: 100%;
 
     .block-link {
       display: flex;
@@ -2175,13 +2167,11 @@ span.example {
 // ------
 
 .up-next {
-
   #up-next {
     margin: rem-calc(24 0 8);
   }
 
   .tile {
-
     &.auto {
       margin-top: 0;
 
