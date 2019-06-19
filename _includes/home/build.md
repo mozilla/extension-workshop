@@ -21,7 +21,7 @@ It's easy to create your cross-browser extension for Firefox. Where your develop
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json" class="cell small-12 medium-12 tile tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json" class="cell small-12 medium-12 tile illustrated-tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Manifest Keys]({% asset "MDN-Docs.svg" @path @optim %} "MDN Docs")
@@ -42,8 +42,8 @@ MDN web docs will onboard you to the basics. With tutorials from simple user int
 <!-- END: Section Intro -->
 
 <!-- Section -->
-<div class="panel-collapse">
-<div class="grid-container grid-x grid-padding-x align-center">
+<div class="panel-collapse quick-links">
+<div class="grid-container grid-x grid-padding-x align-space-between">
 <div class="cell small-12" markdown="1">
 
 ## Ready to build an extension for Firefox?
@@ -51,6 +51,67 @@ MDN web docs will onboard you to the basics. With tutorials from simple user int
 If you know the basics of extension development, you’re ready to create an extension for Firefox. We’ve got all the resources you need right here. Learn about cross-browser development. Get tips on testing. Make user updates smooth and painless.
 
 </div>
+
+<!-- Tile -->
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell shrink tile tile-block-link">
+<div class="block-link" markdown="1">
+
+![Community Forums]({% asset "icons/quick-link-learn.svg" @path @optim %} "Community Forums")
+	
+<span class="block-link-inline">Learn</span>
+
+</div>
+</a>
+<!-- END: Tile -->
+
+<!-- Tile -->
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell shrink tile tile-block-link">
+<div class="block-link" markdown="1">
+
+![Community Forums]({% asset "icons/quick-link-develop.svg" @path @optim %} "Community Forums")
+	
+<span class="block-link-inline">Develop</span>
+
+</div>
+</a>
+<!-- END: Tile -->
+
+<!-- Tile -->
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell shrink tile tile-block-link">
+<div class="block-link" markdown="1">
+
+![Community Forums]({% asset "icons/quick-link-test.svg" @path @optim %} "Community Forums")
+	
+<span class="block-link-inline">Test & Debug</span>
+
+</div>
+</a>
+<!-- END: Tile -->
+
+<!-- Tile -->
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell shrink tile tile-block-link">
+<div class="block-link" markdown="1">
+
+![Community Forums]({% asset "icons/quick-link-publish.svg" @path @optim %} "Community Forums")
+	
+<span class="block-link-inline">Publish</span>
+
+</div>
+</a>
+<!-- END: Tile -->
+
+<!-- Tile -->
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell shrink tile tile-block-link">
+<div class="block-link" markdown="1">
+
+![Community Forums]({% asset "icons/quick-link-manage.svg" @path @optim %} "Community Forums")
+	
+<span class="block-link-inline">Manage</span>
+
+</div>
+</a>
+<!-- END: Tile -->
+
 </div>
 </div>
 

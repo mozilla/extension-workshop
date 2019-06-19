@@ -579,7 +579,7 @@ jQuery(document).ready(function($) {
     var settings = $.extend(
       {
         container:
-          '<a href="" class="cell small-12 large-4 tile tile-block-link no-img"><div class="block-link"></div></a>',
+          '<a href="" class="cell small-12 large-4 tile illustrated-tile tile-block-link no-img"><div class="block-link"></div></a>',
         breakpoint: 'atleast_large',
         num: 3,
       },

@@ -132,7 +132,7 @@ button.video-play:focus,
 button:focus {
   text-decoration: none;
   outline: none;
-  box-shadow: $element-shadow-highlight;
+  box-shadow: $focus-shadow;
 }
 
 a.tile-block-link:focus {
@@ -140,15 +140,8 @@ a.tile-block-link:focus {
   box-shadow: none;
 
   &::before {
-    box-shadow: $element-shadow-highlight; 
+    box-shadow: $focus-shadow; 
   }
-}
-
-// Bgs
-// ------
-
-.bg-grey {
-  background-color: $lighter-gray;
 }
 
 // Lead Text
@@ -223,8 +216,18 @@ a[title='View on Github'] {
   }
 }
 
-// IMAGES, VIDEOS & GALLERIES
+// STYLE ELEMENTS
 // -------------------------------------------------------------------------------------------------------------------
+
+// Bgs
+// ------
+
+.bg-grey {
+  background-color: $lighter-gray;
+}
+
+// Images
+// ------
 
 .img {
   position: relative;
@@ -240,6 +243,13 @@ a[title='View on Github'] {
       margin-top: 0;
     }
   }
+}
+
+// Layout Options
+// ------
+
+.align-space-between {
+  justify-content: space-between;
 }
 
 // FORM STYLES
@@ -516,6 +526,7 @@ html {
 
 // Hamburger Icon
 // ------
+
 $hamburger-padding-x: 0;
 $hamburger-padding-y: 0;
 $hamburger-layer-width: rem-calc(14);
@@ -989,7 +1000,7 @@ $hamburger-hover-transition-timing-function: linear;
     height: 100%;
     background-color: $white;
     border-radius: $global-radius;
-    box-shadow: $element-shadow;
+    box-shadow: $element-shadow-highlight;
   }
 
   > * {
@@ -1304,6 +1315,31 @@ $hamburger-hover-transition-timing-function: linear;
   }
 }
 
+// Tile on Cell
+// ------
+
+.cell.tile {
+  z-index: 3;
+  padding: rem-calc(20 26) !important;
+  margin: rem-calc(8 0);
+  color: $body-font-color;
+
+  &::before {
+    left: rem-calc(8);
+    width: calc(100% - #{rem-calc(16)});
+  }
+
+  @include breakpoint(medium) {
+    padding: rem-calc(24 34 30) !important;
+    margin: rem-calc(12 0);
+
+    &::before {
+      left: rem-calc(12);
+      width: calc(100% - #{rem-calc(24)});
+    }
+  }
+}
+
 // Tile inside Site Wrapper
 // ------
 
@@ -1313,6 +1349,38 @@ $hamburger-hover-transition-timing-function: linear;
   @include breakpoint(medium) {
     margin-top: rem-calc(24);
     margin-bottom: rem-calc(24);
+  }
+}
+
+// Tile Link
+// ------
+
+.tile.tile-block-link {
+  cursor: pointer;
+
+  .block-link-inline {
+    color: $primary-color;
+  }
+
+  &:hover {
+    color: $body-font-color;
+    text-decoration: none;
+
+    .block-link-inline {
+      text-decoration: underline;
+    }
+  }
+
+  @include breakpoint(large) {
+    &::before {
+      will-change: transform;
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    &:hover::before {
+      box-shadow: $element-shadow-highlight;
+      transform: scale(1.01);
+    }
   }
 }
 
@@ -2003,7 +2071,10 @@ span.example {
 .meta-data {
   font-size: $small-font-size;
 
-  p {margin-bottom: 0.75rem;}
+  p {
+    margin-bottom: 0.75rem;
+    padding-left: rem-calc(24);
+  }
 
   p:first-child {
     margin-top: rem-calc(24);
@@ -2018,21 +2089,23 @@ span.example {
   }
 
   .meta-label {
+    position: relative;
+
     font-weight: $global-weight-bold;
 
     &::before {
-      display: inline-block;
+      position: absolute;
+      left: rem-calc(-24);
+      top: rem-calc(2);
+      display: block;
       font-size: 1rem;
-      margin-right: 0.5rem;
-      line-height: $small-font-size;
-      vertical-align: middle;
     }
   }
 
   .tags ~ a {
     display: inline-block;
-    margin: rem-calc(-1 1);
-    padding: rem-calc(1 2);
+    margin: rem-calc(1);
+    padding: rem-calc(0 2);
     border-radius: $global-radius;
     background-color: $medium-light-gray;
   }
@@ -2050,6 +2123,54 @@ span.example {
   }
 }
 
+// Quick Links
+// ------
+
+.quick-links .tile {
+  p {
+    margin-bottom: rem-calc(8);
+    padding-left: rem-calc(8);
+    padding-right: rem-calc(8);
+  }
+
+  @include breakpoint(medium) {
+    text-align: center;
+
+    p:last-child {
+      margin-bottom: rem-calc(-16) !important;
+    }
+  }
+
+  @include breakpoint(large) {
+    p {
+      padding-left: rem-calc(24);
+      padding-right: rem-calc(24);
+    }
+  }
+
+  @include breakpoint(small down) {
+    flex: 1 1 100%;
+    width: 100%; 
+
+    .block-link {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    p:first-child {
+      flex: 0 0 auto;
+    }
+
+    p:last-child {
+      flex: 1 1 auto;
+    }
+  }
+}
+
 // Up next
 // ------
 
@@ -2061,12 +2182,17 @@ span.example {
 
   .tile {
 
-    .block-link {
-      justify-content: flex-start !important;
-      
-      > *:last-child {
-        flex: 0 0 auto !important;
+    &.auto {
+      margin-top: 0;
+
+      @include breakpoint(small down) {
+        flex: 1 1 100%;
+        width: 100%;
       }
+    }
+
+    h5 {
+      margin: 0;
     }
 
     p {
@@ -2076,13 +2202,6 @@ span.example {
 
       &:first-child {
         margin-top: rem-calc(-8);
-      }
-    }
-
-    &.auto {
-      @include breakpoint(small down) {
-        flex: 1 1 100%;
-        width: 100%;
       }
     }
   }

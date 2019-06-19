@@ -3,6 +3,10 @@ layout: sidebar
 title: Enterprise
 permalink: /documentation/enterprise/
 published: false
+tags: label distribution install remove
+contributors: caitmuenster muffinresearch bqbn
+author: caitmuenster
+date: 2019-06-24 09:00:00
 ---
 
 <!-- Overview Page Hero Banner -->

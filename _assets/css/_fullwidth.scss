@@ -191,20 +191,10 @@ Stylesheet: Full Width Page Stylesheet
   }
 }
 
-// Tiles
+// Illustrated Tiles
 // ------
 
-.cell.tile {
-  z-index: 3;
-  padding: rem-calc(20 26) !important;
-  margin: rem-calc(8 0);
-  color: $body-font-color;
-
-  &::before {
-    left: rem-calc(8);
-    width: calc(100% - #{rem-calc(16)});
-  }
-
+.illustrated-tile {
   h1,
   h2,
   h3,
@@ -229,37 +219,12 @@ Stylesheet: Full Width Page Stylesheet
     }
 
     a:hover img {
-      box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+      box-shadow: $element-shadow-highlight;
       transform: scale(1.01);
     }
   }
 
-  &.tile-block-link {
-    cursor: pointer;
-
-    .block-link-inline {
-      color: $primary-color;
-    }
-
-    &:hover {
-      color: $body-font-color;
-      text-decoration: none;
-
-      .block-link-inline {
-        text-decoration: underline;
-      }
-    }
-  }
-
   @include breakpoint(medium) {
-    padding: rem-calc(24 34 30) !important;
-    margin: rem-calc(12 0);
-
-    &::before {
-      left: rem-calc(12);
-      width: calc(100% - #{rem-calc(24)});
-    }
-
     &:not(.tile-block-link) {
       display: flex;
       flex-flow: column nowrap;
@@ -362,16 +327,6 @@ Stylesheet: Full Width Page Stylesheet
     }
 
     &.tile-block-link {
-      &::before {
-        will-change: transform;
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-      }
-
-      &:hover::before {
-        box-shadow: #{rem-calc(0 4 20)} rgba(12, 12, 13, 0.33);
-        transform: scale(1.01);
-      }
-
       &.medium-12:not(.no-img) .block-link,
       &.medium-6:not(.no-img) .block-link {
         > * {
@@ -416,7 +371,7 @@ Stylesheet: Full Width Page Stylesheet
     height: 100%;
     background-color: $white;
     border-radius: $global-radius;
-    box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+    box-shadow: $element-shadow;
   }
 
   > * {
@@ -449,6 +404,8 @@ Stylesheet: Full Width Page Stylesheet
       img {
         width: rem-calc(32);
       }
+
+      + * {padding-right: rem-calc(40);}
     }
   }
 
@@ -468,6 +425,8 @@ Stylesheet: Full Width Page Stylesheet
           img {
             width: rem-calc(32);
           }
+
+          + * {padding-right: rem-calc(40);}
         }
 
         &:last-child {
@@ -576,7 +535,7 @@ Stylesheet: Full Width Page Stylesheet
       }
 
       &:hover::before {
-        box-shadow: #{rem-calc(0 4 20)} rgba(12, 12, 13, 0.33);
+        box-shadow: $element-shadow-highlight;
         transform: scale(1.01);
       }
     }
@@ -603,7 +562,7 @@ Stylesheet: Full Width Page Stylesheet
   }
 
   a:hover img {
-    box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.33);
+    box-shadow: $element-shadow-highlight;
   }
 
   h1,
@@ -1105,6 +1064,9 @@ Stylesheet: Full Width Page Stylesheet
   font-size: rem-calc(13);
   color: $dark-gray;
 }
+
+// 404 page
+// ------
 
 .page-404 {
   .tiles-intro {

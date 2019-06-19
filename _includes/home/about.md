@@ -29,7 +29,7 @@ Get your great idea into the hands of millions of Firefox users. Join an interna
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API" class="cell small-12 large-4 tile tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API" class="cell small-12 large-4 tile illustrated-tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Tinker with Tabs]({% asset "Tinker-with-Tabs-v2.svg" @path @optim %} "Tinker with Tabs")
@@ -45,7 +45,7 @@ Your extension can control browser tabs. Use the API to open, close, move, hide,
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts" class="cell small-12 large-4 tile tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts" class="cell small-12 large-4 tile illustrated-tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Transform Web Content]({% asset "Integrate-Web-Search.svg" @path @optim %} "Transform Web Content")
@@ -61,7 +61,7 @@ Use Firefox's powerful built-in search capabilities to open up the web for users
 <!-- END: Tile 2 -->
 
 <!-- Tile 3 -->
-<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface" class="cell small-12 large-4 tile tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface" class="cell small-12 large-4 tile illustrated-tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Add Innovative Features]({% asset "Add-Innovative-Features-v2.svg" @path @optim %} "Add Innovative Features")

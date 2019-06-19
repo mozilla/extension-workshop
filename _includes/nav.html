@@ -76,7 +76,7 @@
 
                         {% else %}
 
-                            <li class="{% if page.url == subitem.url %}is-active{% endif %}"><a href="{{ subitem.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% if pg.target == "_blank" %} rel="noreferrer noopener"{% endif %}{% endif %}>{{ subitem.title }}</a></li>
+                            <li class="{% if page.url == subitem.url %}is-active{% endif %}"><a href="{{ subitem.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% if pg.target == "_blank" %} rel="noreferrer noopener"{% endif %}{% endif %} data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a></li>
                         
                         {% endif %}
 

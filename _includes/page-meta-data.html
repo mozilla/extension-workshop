@@ -2,7 +2,7 @@
 	<article class="module-content grid-x grid-padding-x">
 		<div class="cell small-12">
 
-			<p><span class="meta-label tags">Tags:</span> 
+			<p><span class="meta-label tags">Tags:</span>&nbsp;
 				{% assign tags = page.tags | split:' ' | sort %}
 				{% for tag in tags %}
 				  {% capture tag_name %}{{ tag }}{% endcapture %}
@@ -10,16 +10,21 @@
 				{% endfor %}
 			</p>
 
-			<p><span class="meta-label contributors">Contributors:</span>
+			<p><span class="meta-label contributors">Contributors:</span>&nbsp;
 				{% assign contributors = page.contributors | split:' ' | sort %}
 				{% for contributor in contributors %}
 				  <a href="https://github.com/{{ contributor }}/" title="View {{ contributor }} on Github">{{ contributor }}</a>&nbsp;
 				{% endfor %}
 			</p>
 
-			<p><span class="meta-label date">Last update:</span> 
-				author 
-				date
+			<p><span class="meta-label date">Last update:</span>&nbsp;
+				{%- if page.author -%}
+                  <a href="https://github.com/{{ contributor }}/" title="View {{ contributor }} on Github" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></a>&nbsp; 
+                {%- endif -%}
+                <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                  {{ page.date | date: date_format }}
+                </time>
 			</p>
 
 		</div>
