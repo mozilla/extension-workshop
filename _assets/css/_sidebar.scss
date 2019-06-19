@@ -481,6 +481,7 @@ $sidebar-nav-width: rem-calc(240);
 .site.sidebar .module-aside.tile {
   margin: rem-calc(0 0 8 0);
   font-size: $small-font-size;
+  padding: rem-calc(24) !important;
 
   @include breakpoint(medium) {
     margin: rem-calc(0 0 12 0);

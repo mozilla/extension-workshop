@@ -1859,6 +1859,7 @@ span.example {
     h6 {
       margin: 0;
     }
+    
     + h1,
     + h2,
     + h3,
@@ -2082,7 +2083,6 @@ span.example {
 
   .meta-label {
     position: relative;
-
     font-weight: $global-weight-bold;
 
     &::before {
