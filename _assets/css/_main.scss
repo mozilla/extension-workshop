@@ -2217,42 +2217,42 @@ span.example {
 
 .quick-links {
   margin-bottom: rem-calc(24);
-}
 
-.quick-links .tile {
-  p {
-    margin-bottom: rem-calc(8);
-  }
-
-  @include breakpoint(medium) {
-    text-align: center;
-
-    p:last-child {
-      margin-bottom: rem-calc(-16) !important;
-    }
-  }
-
-  @include breakpoint(small down) {
-    flex: 1 1 100%;
-    width: 100%;
-    margin-bottom: rem-calc(12);
-
-    .block-link {
-      display: flex;
-      flex-flow: row nowrap;
-    }
-
+  .tile {
     p {
-      margin-bottom: 0;
+      margin-bottom: rem-calc(8);
     }
 
-    p:first-child {
-      flex: 0 0 auto;
-      margin-right: 1em;
+    @include breakpoint(medium) {
+      text-align: center;
+
+      p:last-child {
+        margin-bottom: rem-calc(-16) !important;
+      }
     }
 
-    p:last-child {
-      flex: 1 1 auto;
+    @include breakpoint(small down) {
+      flex: 1 1 100%;
+      width: 100%;
+      margin-bottom: rem-calc(12);
+
+      .block-link {
+        display: flex;
+        flex-flow: row nowrap;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+
+      p:first-child {
+        flex: 0 0 auto;
+        margin-right: 1em;
+      }
+
+      p:last-child {
+        flex: 1 1 auto;
+      }
     }
   }
 }
