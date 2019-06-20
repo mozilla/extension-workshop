@@ -49,6 +49,14 @@ $sidebar-nav-width: rem-calc(240);
 
   a {
     color: inherit;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .is-active > a:hover {
+    text-decoration: none;
   }
 
   .primary > li:not(.is-active):not(.has-active-children) {
@@ -643,17 +651,6 @@ $sidebar-nav-width: rem-calc(240);
     order: 2;
     position: relative;
     padding-left: rem-calc(28) !important;
-
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      height: 100%;
-      left: rem-calc(12);
-      width: 1px;
-      background-color: $medium-light-gray;
-    }
   }
 
   @include breakpoint(large down) {

@@ -33,6 +33,8 @@ google_analytics: UA-77033033-24
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+
 # theme: minima
 plugins:
 #  - jekyll-feed

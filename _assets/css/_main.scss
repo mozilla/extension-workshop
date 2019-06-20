@@ -211,6 +211,66 @@ a[title='View on Github'] {
   }
 }
 
+// Code blocks
+// ------
+
+code {
+  border-radius: $global-radius;
+}
+
+a code {
+  color: #00b3f4;
+}
+
+figure.highlight {
+  padding: rem-calc(16 0 16 16);
+  margin-top: rem-calc(-12);
+  margin-bottom: rem-calc(12);
+  border-radius: $global-radius;
+  background-color: $code-bg;
+
+  @include breakpoint(medium) {
+    margin-top: rem-calc(-6);
+    margin-bottom: rem-calc(24);
+  }
+
+  > pre {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  code {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .gutter {
+    color: rgba($white, 0.5);
+    border-right: 1px solid rgba($white, 0.75);
+    padding-right: rem-calc(6);
+  }
+
+  .code {
+    padding: rem-calc(0 16 0 6);
+
+    pre {
+      overflow: auto;
+    }
+  }
+}
+
+table.rouge-table,
+table.rouge-table thead,
+table.rouge-table tbody,
+table.rouge-table tr,
+table.rouge-table td {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
 // STYLE ELEMENTS
 // -------------------------------------------------------------------------------------------------------------------
 
@@ -2136,8 +2196,6 @@ span.example {
 .quick-links .tile {
   p {
     margin-bottom: rem-calc(8);
-    padding-left: rem-calc(8);
-    padding-right: rem-calc(8);
   }
 
   @include breakpoint(medium) {
@@ -2145,13 +2203,6 @@ span.example {
 
     p:last-child {
       margin-bottom: rem-calc(-16) !important;
-    }
-  }
-
-  @include breakpoint(large) {
-    p {
-      padding-left: rem-calc(24);
-      padding-right: rem-calc(24);
     }
   }
 
@@ -2203,6 +2254,7 @@ span.example {
 
     h5 {
       margin: 0;
+      color: $primary-color;
     }
 
     p {
@@ -2213,6 +2265,10 @@ span.example {
       &:first-child {
         margin-top: rem-calc(-8);
       }
+    }
+
+    &:hover h5 {
+      text-decoration: underline;
     }
   }
 }

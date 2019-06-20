@@ -65,11 +65,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <div class="table-wrapper table-scroll" markdown="1">
 
-| Column Title                          | Column Title              | Column Title                     |
-| ------------------------------------- | ------------------------- | -------------------------------- |
-| Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key |
-| Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key |
-| Content scripts matching URL patterns | <code>page-mod</code> API | <code>content-scripts</code> key |
+| Column Title                          | Column Title                                                      | Column Title                                                             |
+| ------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Content scripts matching URL patterns | <a href="#" title="content-scripts"><code>page-mod</code></a> API | <a href="#" title="content-scripts"><code>content-scripts</code></a> key |
+| Content scripts matching URL patterns | <a href="#" title="content-scripts"><code>page-mod</code></a> API | <a href="#" title="content-scripts"><code>content-scripts</code></a> key |
+| Content scripts matching URL patterns | <a href="#" title="content-scripts"><code>page-mod</code></a> API | <a href="#" title="content-scripts"><code>content-scripts</code></a> key |
 
 </div>
 
@@ -95,15 +95,11 @@ You reference all extensions API functions using a namespace, for example, `brow
 
 <!-- Syntax Highlighting -->
 
-<p class="code-block" markdown="1">
-
-```javascript
+{% highlight javascript linenos %}
 function setCurrentChoice(result) {
-  document.querySelector('#color').value = result.color || 'blue';
+document.querySelector('#color').value = result.color || 'blue';
 }
-```
-
-</p>
+{% endhighlight %}
 
 <!-- END: Syntax Highlighting -->
 

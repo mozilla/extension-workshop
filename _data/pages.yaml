@@ -2,6 +2,15 @@
   subfolderitems:
     - title: "Develop"
       url: "/documentation/develop/"
+      subpageitems:
+        - title: "Label Title 1"
+          id: "section-1"
+        - title: "Label Title 2"
+          id: "section-2"
+        - title: "Label Title 3"
+          id: "section-3"
+        - title: "Label Title 4"
+          id: "section-4"
       categories:
         - category: "Firefox Tools"
           pages:

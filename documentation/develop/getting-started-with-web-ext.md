@@ -54,15 +54,27 @@ web-ext is a command line tool designed to speed up various parts of the extensi
 
 ## Installation
 
-web-ext is a node-based application that you install with the nodejs/npm tool. Install web-ext using the following command:
+`web-ext` is a node-based application that you install with the <a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="nodejs/npm">nodejs/npm</a> tool. Install web-ext using the following command:
 
+<!-- Syntax Highlighting -->
+
+{% highlight console %}
 npm install --global web-ext
+{% endhighlight %}
 
-web-ext requires the current LTS (long-term support) versions of NodeJS.
+<!-- END: Syntax Highlighting -->
 
-To test whether the installation worked run the following command, which displays the web-ext version number:
+`web-ext` requires the current <a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="LTS">LTS</a> (long-term support) versions of <a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="NodeJS">NodeJS</a>.
 
+To test whether the installation worked run the following command, which displays the `web-ext` version number:
+
+<!-- Syntax Highlighting -->
+
+{% highlight console %}
 web-ext --version
+{% endhighlight %}
+
+<!-- END: Syntax Highlighting -->
 
 </div>
 </article>
@@ -78,21 +90,33 @@ web-ext --version
 
 ## Using web-ext
 
-Before you start using web-ext locate an example extension to use—if you don’t have one, use one from the webextensions-examples repo.
+Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the <a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="webextensions-examples">webextensions-examples</a> repo.
 
 #### Testing out an extension
 
-Test an extension in Firefox by cd'ing into your extensions’s root directory and entering:
+Test an extension in Firefox by `cd`'ing into your extensions’s root directory and entering:
 
+<!-- Syntax Highlighting -->
+
+{% highlight console %}
 web-ext run
+{% endhighlight %}
 
-This starte Firefox and loads the extension temporarily in the browser, just as you can on the about:debugging page. Note that this web-ext method has the same limitations regarding prompts for permissions and restart features as about:debugging.
+<!-- END: Syntax Highlighting -->
+
+This starts Firefox and loads the extension temporarily in the browser, just as you can on the about:debugging page. Note that this `web-ext` method has the same limitations regarding prompts for permissions and restart features as about:debugging.
 
 #### Automatic extension reloading
 
-The run command watches your source files and tells Firefox to reload the extension after you edit and save a file. For exmaple, if you changed the name property in your manifest.json file, Firefox displays the new name. This makes it easy to try out new features because you can see the effect immediately. The automatic reloading feature is active by default, you use it like this:
+The `run` command watches your source files and tells Firefox to reload the extension after you edit and save a file. For exmaple, if you changed the `name` property in your `manifest.json` file, Firefox displays the new name. This makes it easy to try out new features because you can see the effect immediately. The automatic reloading feature is active by default, you use it like this:
 
+<!-- Syntax Highlighting -->
+
+{% highlight console %}
 web-ext run
+{% endhighlight %}
+
+<!-- END: Syntax Highlighting -->
 
 <p class="note">Extension reloading is only supported in Firefox 49 or higher.</p>
 
