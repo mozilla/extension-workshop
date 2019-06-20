@@ -395,23 +395,24 @@ $sidebar-nav-width: rem-calc(240);
 .site.sidebar .site-content-body {
   flex: 1 0 auto;
   width: 100%;
-  padding-bottom: rem-calc(20);
+  padding-bottom: rem-calc(8);
 
   @include breakpoint(medium) {
-    padding-bottom: rem-calc(40);
+    padding-bottom: rem-calc(16);
   }
 
   @include breakpoint(xlarge) {
-    padding-bottom: rem-calc(60);
+    padding-bottom: rem-calc(24);
   }
 
   h1,
   h2 {
+    margin-top: rem-calc(12);
     border-top: 1px solid $medium-light-gray;
     padding-top: rem-calc(30);
 
-    &:not(:first-child) {
-      margin-top: rem-calc(30);
+    @include breakpoint(medium) {
+      margin-top: rem-calc(24);
     }
   }
 }
@@ -450,15 +451,19 @@ $sidebar-nav-width: rem-calc(240);
 
 // Content Body Modules
 
-.site.sidebar .module {
+.module {
   padding-left: rem-calc(8);
   padding-right: rem-calc(8);
   margin-left: auto;
   margin-right: auto;
+  margin-top: rem-calc(12);
+  margin-bottom: rem-calc(12);
 
   @include breakpoint(medium) {
     padding-left: rem-calc(12);
     padding-right: rem-calc(12);
+    margin-top: rem-calc(24);
+    margin-bottom: rem-calc(24);
   }
   @include breakpoint(xlarge) {
     display: flex;
@@ -486,13 +491,13 @@ $sidebar-nav-width: rem-calc(240);
 
 // Aside Tile
 
-.site.sidebar .module-aside.tile {
-  margin: rem-calc(0 0 8 0);
+.module-aside.tile {
+  margin: rem-calc(12 0 12 0);
   font-size: $small-font-size;
   padding: rem-calc(24) !important;
 
   @include breakpoint(medium) {
-    margin: rem-calc(0 0 12 0);
+    margin: rem-calc(0 0 24 0);
   }
 
   @include breakpoint(large only) {
@@ -519,10 +524,15 @@ $sidebar-nav-width: rem-calc(240);
 
 .page-hero,
 .overview-hero {
-  margin-bottom: rem-calc(20);
+  margin-bottom: rem-calc(32);
 
-  @include breakpoint(medium) {
-    margin-bottom: rem-calc(40);
+  @include breakpoint(xlarge) {
+    margin-bottom: rem-calc(64);
+  }
+
+  .module {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   h1,
@@ -566,11 +576,14 @@ $sidebar-nav-width: rem-calc(240);
   }
 
   + .module {
+    margin-top: 0;
+
     h1,
     h2 {
       &:first-child {
-        border-top: 0 !important;
-        padding-top: 0 !important;
+        margin-top: 0;
+        border-top: 0;
+        padding-top: 0;
       }
     }
   }
@@ -579,10 +592,6 @@ $sidebar-nav-width: rem-calc(240);
 .overview-hero {
   color: $white;
   background: $primary-color no-repeat center/cover;
-
-  @include breakpoint(xlarge) {
-    margin-bottom: rem-calc(60);
-  }
 
   .button {
     background-color: $white;

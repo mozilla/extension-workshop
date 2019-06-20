@@ -91,6 +91,10 @@ small {
 .button {
   min-width: rem-calc(132);
 
+  &[target='_blank']::after {
+    display: none;
+  }
+
   &.large {
     padding: 0.95em 1.15em;
   }
@@ -216,6 +220,13 @@ a[title='View on Github'] {
   }
 }
 
+// Tables
+// ------
+
+table {
+  margin-bottom: 1.5rem;
+}
+
 // Code blocks
 // ------
 
@@ -229,13 +240,11 @@ a code {
 
 figure.highlight {
   padding: rem-calc(16 0 16 16);
-  margin-top: rem-calc(-12);
   margin-bottom: rem-calc(12);
   border-radius: $global-radius;
   background-color: $code-bg;
 
   @include breakpoint(medium) {
-    margin-top: rem-calc(-6);
     margin-bottom: rem-calc(24);
   }
 
@@ -412,6 +421,10 @@ html {
 
     .button.show-for-large {
       margin-bottom: 0;
+    }
+
+    a[target='_blank']::after {
+      display: none;
     }
 
     .search-input-open {
@@ -803,6 +816,10 @@ $hamburger-hover-transition-timing-function: linear;
       display: inline-block;
     }
 
+    &[target='_blank']::after {
+      display: none;
+    }
+
     &:hover {
       color: $white;
 
@@ -887,6 +904,10 @@ $hamburger-hover-transition-timing-function: linear;
 
   a {
     color: $white;
+
+    &[target='_blank']::after {
+      display: none;
+    }
 
     &:hover {
       color: $white;
@@ -1432,7 +1453,7 @@ $hamburger-hover-transition-timing-function: linear;
 // Tile Link
 // ------
 
-.tile.tile-block-link {
+a.tile-block-link {
   cursor: pointer;
 
   .block-link-inline {
@@ -1446,6 +1467,10 @@ $hamburger-hover-transition-timing-function: linear;
     .block-link-inline {
       text-decoration: underline;
     }
+  }
+
+  &[target='_blank']::after {
+    display: none;
   }
 
   @include breakpoint(large) {
@@ -1748,10 +1773,6 @@ $hamburger-hover-transition-timing-function: linear;
   font-size: $small-font-size;
   color: $dark-gray;
 
-  .cell {
-    margin-bottom: rem-calc(6);
-  }
-
   img {
     display: block;
     width: 100%;
@@ -1760,12 +1781,16 @@ $hamburger-hover-transition-timing-function: linear;
   }
 
   @include breakpoint(medium) {
-    .cell {
-      margin-bottom: rem-calc(8);
-    }
 
     img {
       margin-bottom: rem-calc(8);
+    }
+  }
+
+  @include breakpoint(small down) {
+
+    .medium-6:not(:last-child) {
+      margin-bottom: rem-calc(12);
     }
   }
 }
@@ -1774,9 +1799,6 @@ $hamburger-hover-transition-timing-function: linear;
 // ------
 
 .video-popup {
-  .cell {
-    margin-bottom: rem-calc(6);
-  }
 
   p:first-child {
     a {
@@ -1837,12 +1859,6 @@ $hamburger-hover-transition-timing-function: linear;
     border-radius: $global-radius;
   }
 
-  @include breakpoint(medium) {
-    .cell {
-      margin-bottom: rem-calc(8);
-    }
-  }
-
   .medium-6 {
     @include breakpoint(medium) {
       p:first-child {
@@ -1861,6 +1877,12 @@ $hamburger-hover-transition-timing-function: linear;
             line-height: rem-calc(23);
           }
         }
+      }
+    }
+
+    @include breakpoint(small down) {
+      &:not(:last-child) {
+        margin-bottom: rem-calc(12);
       }
     }
   }
@@ -1929,6 +1951,10 @@ span.example {
     height: rem-calc(5);
     border-top-left-radius: $global-radius;
     border-top-right-radius: $global-radius;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
   > *:last-child {
@@ -2052,6 +2078,14 @@ span.example {
   & + ul {
     margin-top: 1.5em;
   }
+
+  @include breakpoint(small down) {
+    .medium-6 {
+      &:not(:last-child) {
+        margin-bottom: rem-calc(12);
+      }
+    }
+  }
 }
 
 // Note
@@ -2160,6 +2194,8 @@ span.example {
 
 .meta-data {
   font-size: $small-font-size;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 
   p {
     margin-bottom: 0.75rem;
@@ -2167,13 +2203,11 @@ span.example {
   }
 
   p:first-child {
-    margin-top: rem-calc(24);
     border-top: 1px solid $medium-light-gray;
     padding-top: rem-calc(24);
   }
 
   p:last-child {
-    margin-bottom: rem-calc(24);
     border-bottom: 1px solid $medium-light-gray;
     padding-bottom: rem-calc(24);
   }
@@ -2262,11 +2296,7 @@ span.example {
 
 .up-next {
   h6 {
-    margin: rem-calc(12 0 8);
-
-    @include breakpoint(medium) {
-      margin-top: rem-calc(24);
-    }
+    margin: rem-calc(0 0 8);
   }
 
   .tile {
