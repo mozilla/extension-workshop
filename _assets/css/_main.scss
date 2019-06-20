@@ -267,7 +267,7 @@ figure.highlight {
 .rouge-table {
   margin: 0;
   border: 0;
-  
+
   thead,
   tbody,
   tr,
@@ -671,17 +671,13 @@ $hamburger-hover-transition-timing-function: linear;
         }
       }
 
-      > li > a {
-        &:hover {
-          text-decoration: underline;
-        }
+      > li > a:hover {
+        text-decoration: underline;
       }
 
-      > li.is-active > a {
-        &:hover {
-          text-decoration: none;
-          color: inherit;
-        }
+      > li.is-active > a:hover {
+        text-decoration: none;
+        color: inherit;
       }
     }
 
