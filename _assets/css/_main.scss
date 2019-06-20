@@ -2261,7 +2261,7 @@ span.example {
 // ------
 
 .up-next {
-  #up-next {
+  h6 {
     margin: rem-calc(12 0 8);
 
     @include breakpoint(medium) {

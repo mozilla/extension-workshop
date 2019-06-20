@@ -34,6 +34,8 @@ google_analytics: UA-77033033-24
 # Build settings
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  auto_ids: false
 
 # theme: minima
 plugins:
