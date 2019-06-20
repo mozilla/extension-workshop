@@ -521,8 +521,8 @@ html {
     &.full-width .site-header,
     &.sidebar .site-header {
       &.minimize {
-        transform: translateY(#{-$header_h_lg});
-        box-shadow: $element-shadow;
+        transform: translateY(#{-$header_h_lg + rem-calc(-1)});
+        box-shadow: none;
       }
     }
   }

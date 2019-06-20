@@ -778,16 +778,7 @@ jQuery(document).ready(function($) {
 
     function openPopup($link, $panel) {
       if ($panel.length) {
-        var x =
-          $link.offset().left + settings.offset_x > settings.padding_x
-            ? $link.offset().left + settings.offset_x
-            : settings.padding_x;
-        var y =
-          $link.offset().top + settings.offset_y - $window.scrollTop() >
-          settings.padding_y
-            ? $link.offset().top + settings.offset_y - $window.scrollTop()
-            : settings.padding_y;
-        $panel.css({ top: y, left: x });
+        positionPanel($panel);
         $panel.velocity('transition.slideUpIn', { duration: 300 });
         $panel
           .find('button.close')
@@ -797,6 +788,22 @@ jQuery(document).ready(function($) {
           });
       }
     }
+
+    function positionPanel($panel) {
+      var x = $window.width() / 2;
+      var y = $window.height() / 2;
+      var w = $panel.outerWidth() / 2;
+      var h = $panel.outerHeight() / 2;
+      $panel.css({ top: y - h, left: x - w });
+    }
+
+    function updatePanelPosition() {
+      $panels.filter(':visible').each(function() {
+        positionPanel($(this));
+      });
+    }
+    $window.on('resize', updatePanelPosition);
+    updatePanelPosition();
   };
 
   // 10. Content Guidelines Navigation
