@@ -307,13 +307,21 @@ figure.highlight {
   background: transparent no-repeat center/cover;
 }
 
-.image-block {
+.image-block-first {
   border-radius: $global-radius;
   margin: rem-calc(16 0);
+
   @include breakpoint(medium) {
-    &:first-child {
-      margin-top: 0;
-    }
+    margin-top: 0;
+  }
+}
+
+.image-block-last {
+  border-radius: $global-radius;
+  margin: rem-calc(16 0);
+
+  @include breakpoint(small down) {
+    margin-top: 0;
   }
 }
 

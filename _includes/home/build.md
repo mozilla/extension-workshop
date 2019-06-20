@@ -2,7 +2,7 @@
 <div class="panel-intro bg-dark">
 <div class="bg"></div>
 
-<div class="grid-container grid-x grid-padding-x align-center align-middle">
+<div class="grid-container grid-x grid-padding-x align-center align-middle panel-nested">
 <div class="cell small-12 medium-6" markdown="1">
 
 ## Build extensions
@@ -12,7 +12,7 @@ It's easy to create your cross-browser extension for Firefox. Where your develop
 </div>
 <div class="cell small-12 medium-6">
 
-<img src="{% asset "build-extensions.jpg" @path @optim %}" class="image-block" alt="Build extensions" title="Build extensions">
+<img src="{% asset "build-extensions.jpg" @path @optim %}" class="image-block-last" alt="Build extensions" title="Build extensions">
 
 </div>
 </div>
@@ -130,13 +130,13 @@ Mozilla takes the safety and privacy of its users very seriously. Be sure to rev
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-6" markdown="1">
 
-<img src="{% asset "Learn-About-Security-Best-Practices.svg" @path @optim %}" class="image-block" alt="Learn about security best practices" title="Learn about security best practices">
+<img src="{% asset "Learn-About-Security-Best-Practices.svg" @path @optim %}" class="image-block-first" alt="Learn about security best practices" title="Learn about security best practices">
 [Learn about security best practices](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-<img src="{% asset "Learn-About-Our-Policies.svg" @path @optim %}" class="image-block" alt="Learn about our policies" title="Learn about our policies">
+<img src="{% asset "Learn-About-Our-Policies.svg" @path @optim %}" class="image-block-first" alt="Learn about our policies" title="Learn about our policies">
 [Learn about our policies](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 
 </div>

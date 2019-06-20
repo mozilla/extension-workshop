@@ -183,6 +183,8 @@ Stylesheet: Full Width Page Stylesheet
 }
 
 .panel-nested {
+  padding-bottom: rem-calc(16);
+
   @include breakpoint(medium) {
     padding-bottom: rem-calc(32);
   }
