@@ -932,6 +932,10 @@ $hamburger-hover-transition-timing-function: linear;
     .youtube::before {
       @include icon_font($char: $icon-youtube);
     }
+
+    .github::before {
+      @include icon_font($char: $icon-github);
+    }
   }
 
   .mzp-c-footer-legal ul {
