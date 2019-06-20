@@ -264,15 +264,19 @@ figure.highlight {
   }
 }
 
-table.rouge-table,
-table.rouge-table thead,
-table.rouge-table tbody,
-table.rouge-table tr,
-table.rouge-table td {
-  border: 0;
+.rouge-table {
   margin: 0;
-  padding: 0;
-  background-color: transparent;
+  border: 0;
+  
+  thead,
+  tbody,
+  tr,
+  td {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
 }
 
 // STYLE ELEMENTS

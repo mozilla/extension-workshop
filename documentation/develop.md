@@ -97,7 +97,7 @@ You reference all extensions API functions using a namespace, for example, `brow
 
 {% highlight javascript linenos %}
 function setCurrentChoice(result) {
-document.querySelector('#color').value = result.color || 'blue';
+  document.querySelector('#color').value = result.color || 'blue';
 }
 {% endhighlight %}
 
