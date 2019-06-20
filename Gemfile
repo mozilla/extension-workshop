@@ -33,3 +33,7 @@ gem 'image_optim_pack', '~> 0.5.1.20190105'
 
 # Uglifier for JS minification
 gem 'uglifier', '~> 4.1', '>= 4.1.20'
+
+# Automatically adds a target="_blank" rel="noopener noreferrer" attribute 
+# to all external links in Jekyll's content 
+gem 'jekyll-target-blank'

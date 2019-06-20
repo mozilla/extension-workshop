@@ -145,7 +145,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-<h4><a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="External Link Example">Laser Cat</a></h4>
+#### [Laser Cat](https://www.firefox.com)
 
 This page provides a succinct description of the extension, clear instructions on how to fire your cat’s lasers, and how to turn your laser cat on and off.
 
@@ -166,7 +166,7 @@ This page provides a succinct description of the extension, clear instructions o
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-<h4><a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="External Link Example">Ghostery - Privacy Ad Blocker</a></h4>
+#### [Ghostery - Privacy Ad Blocker](https://www.firefox.com)
 
 As the features of Ghostery are mostly silent, this onboarding screen gives users two options for the initial setup: A simple one-click option and a link to the full settings so they can customize how Ghostery works.
 
@@ -178,7 +178,7 @@ As the features of Ghostery are mostly silent, this onboarding screen gives user
 
 Cards contain content and links about a single subject.
 
-<a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="External Link Example">Related Article</a>
+[Related Article](https://www.firefox.com)
 
 </aside>
 </section>

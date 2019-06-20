@@ -39,6 +39,7 @@ kramdown:
 
 # theme: minima
 plugins:
+  - jekyll-target-blank
 #  - jekyll-feed
 
 # Exclude from processing.

@@ -53,11 +53,11 @@ Short and brief description of the sort of content you will find on this page.
 
 ##### News
 
-Find news about the browser extension technology in Firefox on the <a href="https://blog.mozilla.org/addons/" target="_blank" rel="noreferrer noopener" title="Mozilla Add-ons blog">Mozilla Add-ons blog</a>. You can also get browser extension news and information delivered to your inbox each quarter, sign up from the <a href="https://blog.mozilla.org/addons/" target="_blank" rel="noreferrer noopener" title="Browser Extensions page">Browser Extensions page</a>.
+Find news about the browser extension technology in Firefox on the [Mozilla Add-ons blog](https://blog.mozilla.org/addons/). You can also get browser extension news and information delivered to your inbox each quarter, sign up from the [Browser Extensions page](https://blog.mozilla.org/addons/).
 
-You can also subscribe to our <a href="https://blog.mozilla.org/addons/" target="_blank" rel="noreferrer noopener" title="mailing list">mailing list</a> dedicated to the development of the add-on ecosystem including the site addons.mozilla.org (AMO), WebExtensions APIs, and public meetings.
+You can also subscribe to our [mailing list](https://blog.mozilla.org/addons/) dedicated to the development of the add-on ecosystem including the site addons.mozilla.org (AMO), WebExtensions APIs, and public meetings.
 
-The <a href="https://blog.mozilla.org/addons/" target="_blank" rel="noreferrer noopener" title="Mozilla Tech blog">Mozilla Tech blog</a> is another place where you can find news and views about browser extension development.
+The [Mozilla Tech blog](https://blog.mozilla.org/addons/) is another place where you can find news and views about browser extension development.
 
 </div>
 </article>

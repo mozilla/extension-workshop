@@ -134,9 +134,8 @@ web-ext run
 
 ## See also
 
-<a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="webextensions-examples">webextensions-examples</a>
-<br>
-<a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="web-ext command reference">web-ext command reference</a>
+[webextensions-examples](https://www.firefox.com)  
+[web-ext command reference](/documentation/develop/web-ext-command-reference)
 
 </div>
 </article>
