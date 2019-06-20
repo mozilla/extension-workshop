@@ -881,7 +881,7 @@ Stylesheet: Full Width Page Stylesheet
     button {
       position: relative;
       display: block;
-      padding: rem-calc(16 24);
+      padding: rem-calc(16 8 16 8);
       text-align: left;
       color: $primary-color;
       cursor: pointer;
@@ -910,6 +910,7 @@ Stylesheet: Full Width Page Stylesheet
   }
 
   .manifest {
+    margin-top: rem-calc(-48);
     text-align: center;
 
     img {

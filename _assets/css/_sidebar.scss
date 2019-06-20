@@ -127,9 +127,9 @@ $sidebar-nav-width: rem-calc(240);
 
       display: block;
       position: absolute;
-      right: rem-calc(16);
+      right: rem-calc(18);
       top: calc(50% - #{rem-calc(12)});
-      font-size: rem-calc(24);
+      font-size: rem-calc(20);
       transform: translateY(#{rem-calc(2)});
       transition: transform 0.3s ease-in-out;
       pointer-events: none;
@@ -587,12 +587,22 @@ $sidebar-nav-width: rem-calc(240);
   .button {
     background-color: $white;
     color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
   }
 
   .button.secondary {
     background-color: transparent;
     border-color: $white;
     color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $primary-color;
+    }
   }
 
   &-description {

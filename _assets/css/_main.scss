@@ -98,6 +98,11 @@ small {
   &.secondary {
     color: inherit;
     background-color: $medium-gray;
+
+    &:hover {
+      color: inherit;
+      background-color: darken($medium-gray, 10%);
+    }
   }
 }
 
@@ -235,8 +240,7 @@ figure.highlight {
   }
 
   > pre {
-    overflow: hidden;
-    width: 100%;
+    overflow: auto;
   }
 
   code {
@@ -255,7 +259,7 @@ figure.highlight {
     padding: rem-calc(0 16 0 6);
 
     pre {
-      overflow: auto;
+      overflow: hidden;
     }
   }
 }
@@ -490,10 +494,6 @@ html {
         height: 100vh;
       }
 
-      .logo a {
-        color: $white;
-      }
-
       .search-input-open {
         opacity: 0;
       }
@@ -666,6 +666,19 @@ $hamburger-hover-transition-timing-function: linear;
           }
         }
       }
+
+      > li > a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      > li.is-active > a {
+        &:hover {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
     }
 
     .subfolder {
@@ -694,6 +707,11 @@ $hamburger-hover-transition-timing-function: linear;
           .label {
             color: $primary-color;
           }
+        }
+
+        &.is-active > a:hover {
+          text-decoration: none;
+          color: $primary-color;
         }
       }
     }
@@ -2172,7 +2190,7 @@ span.example {
   .tags ~ a {
     display: inline-block;
     margin: rem-calc(1);
-    padding: rem-calc(0 2);
+    padding: rem-calc(0 4);
     border-radius: $global-radius;
     background-color: $medium-light-gray;
   }
@@ -2193,6 +2211,10 @@ span.example {
 // Quick Links
 // ------
 
+.quick-links {
+  margin-bottom: rem-calc(24);
+}
+
 .quick-links .tile {
   p {
     margin-bottom: rem-calc(8);
@@ -2209,7 +2231,7 @@ span.example {
   @include breakpoint(small down) {
     flex: 1 1 100%;
     width: 100%;
-    margin-bottom: rem-calc(24);
+    margin-bottom: rem-calc(12);
 
     .block-link {
       display: flex;
@@ -2222,6 +2244,7 @@ span.example {
 
     p:first-child {
       flex: 0 0 auto;
+      margin-right: 1em;
     }
 
     p:last-child {
