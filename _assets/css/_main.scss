@@ -1781,14 +1781,12 @@ a.tile-block-link {
   }
 
   @include breakpoint(medium) {
-
     img {
       margin-bottom: rem-calc(8);
     }
   }
 
   @include breakpoint(small down) {
-
     .medium-6:not(:last-child) {
       margin-bottom: rem-calc(12);
     }
@@ -1799,7 +1797,6 @@ a.tile-block-link {
 // ------
 
 .video-popup {
-
   p:first-child {
     a {
       display: block;
