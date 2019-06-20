@@ -1,9 +1,11 @@
 .highlight pre {
   background-color: $code-bg;
 }
+
 .highlight .hll {
   background-color: $code-bg;
 }
+
 .highlight .c {
   color: #75715e;
 } /* Comment */
@@ -179,9 +181,6 @@
 .highlight .il {
   color: #ae81ff;
 } /* Literal.Number.Integer.Long */
-
-.highlight .gh {
-} /* Generic Heading & Diff Header */
 .highlight .gu {
   color: #75715e;
 } /* Generic.Subheading & Diff Unified/Comment? */
