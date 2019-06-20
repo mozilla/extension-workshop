@@ -14,7 +14,7 @@
                                 {% for pg in cat.pages %}
                                     {% if pg.subpageitems %}
                                         <li class="{% if page.url == pg.url %}is-active{% endif %}">
-                                            <a href="{{ pg.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% if pg.target == "_blank" %} rel="noreferrer noopener"{% endif %}{% endif %}>{{ pg.title }}</a>
+                                            <a href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
                                             <ul class="section">
                                                 {% for section in pg.subpageitems %}
                                                     <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
@@ -22,7 +22,7 @@
                                             </ul>
                                         </li>
                                     {% else %}
-                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% if pg.target == "_blank" %} rel="noreferrer noopener"{% endif %}{% endif %}>{{ pg.title }}</a></li>
+                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a></li>
                                     {% endif %}
                                 {% endfor %}
                             </ul>
@@ -64,7 +64,7 @@
                                                             </ul>
                                                         </li>
                                                     {% else %}
-                                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% if pg.target == "_blank" %} rel="noreferrer noopener"{% endif %}{% endif %}>{{ pg.title }}</a></li>
+                                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}">{{ pg.title }}</a></li>
                                                     {% endif %}
                                                 {% endfor %}
                                             </ul>
@@ -76,7 +76,7 @@
 
                         {% else %}
 
-                            <li class="{% if page.url == subitem.url %}is-active{% endif %}"><a href="{{ subitem.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% if pg.target == "_blank" %} rel="noreferrer noopener"{% endif %}{% endif %} data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a></li>
+                            <li class="{% if page.url == subitem.url %}is-active{% endif %}"><a href="{{ subitem.url | relative_url }}" data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a></li>
                         
                         {% endif %}
 
