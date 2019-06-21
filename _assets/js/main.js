@@ -159,8 +159,8 @@ jQuery(document).ready(function($) {
   // 13. Sidebar Nav Page Section Highlighting
   // ------
 
-  if ($('.category .is-active .section').length) {
-    $('.category .is-active .section').highlightPageSection();
+  if ($('.is-active > .section').length) {
+    $('.is-active > .section').highlightPageSection();
   }
 
   // 14. Expandable List

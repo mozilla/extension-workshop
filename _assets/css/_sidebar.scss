@@ -55,8 +55,11 @@ $sidebar-nav-width: rem-calc(240);
     }
   }
 
-  .is-active > a:hover {
-    text-decoration: none;
+  .is-active,
+  .has-active-children {
+    > a:hover {
+      text-decoration: none;
+    }
   }
 
   .primary > li:not(.is-active):not(.has-active-children) {
@@ -182,6 +185,7 @@ $sidebar-nav-width: rem-calc(240);
       opacity: 0;
       transform: translateY(1em);
       position: absolute;
+      z-index: 2;
       left: rem-calc(16);
       top: rem-calc(4);
       width: calc(100% - #{rem-calc(32)});

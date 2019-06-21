@@ -651,7 +651,8 @@ $hamburger-hover-transition-timing-function: linear;
     }
   }
 
-  .category {
+  .category,
+  .section {
     display: none;
   }
 
@@ -661,6 +662,10 @@ $hamburger-hover-transition-timing-function: linear;
 
     .primary {
       @include horizontal_list($margin: 1.2rem);
+
+      > li > a:hover {
+        text-decoration: underline;
+      }
 
       > li {
         padding: rem-calc(9 0);
@@ -689,16 +694,12 @@ $hamburger-hover-transition-timing-function: linear;
               #fff36e 100%
             );
           }
+
+          > a:hover {
+            text-decoration: none;
+            color: inherit;
+          }
         }
-      }
-
-      > li > a:hover {
-        text-decoration: underline;
-      }
-
-      > li.is-active > a:hover {
-        text-decoration: none;
-        color: inherit;
       }
     }
 
@@ -728,11 +729,11 @@ $hamburger-hover-transition-timing-function: linear;
           .label {
             color: $primary-color;
           }
-        }
 
-        &.is-active > a:hover {
-          text-decoration: none;
-          color: $primary-color;
+          > a:hover {
+            text-decoration: none;
+            color: $primary-color;
+          }
         }
       }
     }
@@ -769,18 +770,34 @@ $hamburger-hover-transition-timing-function: linear;
     .primary > li {
       padding: rem-calc(12 16);
 
+      a {
+        display: block;
+      }
+
       &.has-subfolder {
-        padding: rem-calc(0 16);
+        padding: rem-calc(0);
 
         > a,
         > .label {
           display: none;
         }
       }
+
+      &:not(.has-subfolder),
+      .subfolder li {
+        &.is-active,
+        &.has-active-children {
+          background-color: #e5effb;
+
+          > a {
+            color: $primary-color;
+          }
+        }
+      }
     }
 
     .subfolder li {
-      padding: rem-calc(12 0);
+      padding: rem-calc(12 16);
     }
 
     .primary {

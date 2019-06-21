@@ -67,6 +67,11 @@
   url: "/extension-basics/"
 - title: "Community"
   url: "/community/"
+  subpageitems:
+    - title: "Connect with us"
+      id: "connect-with-us-container"
+    - title: "Become a contributor"
+      id: "become-a-contributor-container"
   categories:
     - category: "About the Community"
       pages:
