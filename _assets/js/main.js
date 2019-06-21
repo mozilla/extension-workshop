@@ -976,7 +976,8 @@ jQuery(document).ready(function($) {
               '</h3><p>' +
               excerpt +
               '</p><p><small>' +
-              window.location.origin + item.url +
+              window.location.origin +
+              item.url +
               '</small></p></a></li>';
 
             $list.append(searchitem);
