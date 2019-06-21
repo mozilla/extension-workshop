@@ -110,6 +110,9 @@ small {
   }
 }
 
+// Focus Styles
+// ------
+
 .site-footer .mzp-c-footer-legal ul > li > a:focus,
 a:focus {
   outline: none;
@@ -123,6 +126,7 @@ a:focus {
 
 .mzp-c-footer-links-social a:focus,
 .mzp-c-footer-primary-logo a:focus,
+.topNav a:focus,
 .logo a:focus {
   text-decoration: none;
   outline: 1px dotted currentcolor;
@@ -146,6 +150,10 @@ a.tile-block-link:focus {
   &::before {
     box-shadow: $focus-shadow;
   }
+}
+
+a:focus code {
+  box-shadow: $focus-shadow;
 }
 
 // Lead Text
@@ -730,7 +738,7 @@ $hamburger-hover-transition-timing-function: linear;
             color: $primary-color;
           }
 
-          > a:hover {
+          a:hover {
             text-decoration: none;
             color: $primary-color;
           }
@@ -741,7 +749,8 @@ $hamburger-hover-transition-timing-function: linear;
     .has-subfolder {
       position: relative;
 
-      &:hover .subfolder {
+      &:hover .subfolder,
+      &.over .subfolder {
         pointer-events: auto;
         opacity: 1;
         transform: translateY(0);
@@ -1154,6 +1163,11 @@ $hamburger-hover-transition-timing-function: linear;
 
         &:hover {
           color: $primary-color;
+        }
+
+        &:focus {
+          color: $primary-color;
+          box-shadow: $focus-shadow;
         }
       }
     }
@@ -1857,11 +1871,15 @@ a.tile-block-link {
       }
 
       &:hover::before {
-        box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.33);
+        box-shadow: $element-shadow-highlight;
       }
 
       &:hover::after {
         color: $primary-color-hover;
+      }
+
+      &:focus::before {
+        box-shadow: $focus-shadow;
       }
     }
 

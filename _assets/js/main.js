@@ -18,6 +18,14 @@ jQuery(document).ready(function($) {
 
   var is_touch_device = 'ontouchstart' in document.documentElement;
 
+  $('body').on('mousedown', function() {
+    $('body').addClass('using-mouse')
+  });
+  $('body').on('keydown', function() {
+    $('body').removeClass('using-mouse')
+  });
+
+
   // PLUGINS
   // ------------------
 
@@ -270,8 +278,20 @@ jQuery(document).ready(function($) {
   // 1.b Desktop Menu
 
   $.fn.desktopMenu = function() {
+    var $container = this;
+    var $subnav = $container.find('.subfolder');
+
+    $subnav.on('focus', 'a', function() {
+      $(this).closest('.has-subfolder').addClass('over');
+
+    }).on('blur', 'a', function() {
+      $(this).closest('.has-subfolder').removeClass('over');
+    });
+
     return {
-      kill: function() {},
+      kill: function() {
+        $subnav.off('focus').off('blur');
+      },
     };
   };
 
@@ -758,6 +778,7 @@ jQuery(document).ready(function($) {
       options
     );
     var $window = $(window);
+    var $body = $('body');
     var $links = this;
     var $panels = $(settings.panels);
 
@@ -779,12 +800,20 @@ jQuery(document).ready(function($) {
     function openPopup($link, $panel) {
       if ($panel.length) {
         positionPanel($panel);
-        $panel.velocity('transition.slideUpIn', { duration: 300 });
+        $panel.velocity('transition.slideUpIn', { duration: 300, complete: function() {
+          if (!$body.hasClass('using-mouse')) {
+            $panel.find('button.close').focus();
+          }
+        } });
         $panel
           .find('button.close')
           .off('click')
           .on('click', function() {
-            $panel.velocity('transition.slideDownOut', { duration: 300 });
+            $panel.velocity('transition.slideDownOut', { duration: 300, complete: function() {
+              if (!$body.hasClass('using-mouse')) {
+                $link.focus();
+              }
+            } });
           });
       }
     }

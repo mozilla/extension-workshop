@@ -717,6 +717,10 @@ $sidebar-nav-width: rem-calc(240);
       @include horizontal_list($margin: 1.2rem);
 
       justify-content: space-between;
+
+      a:focus {
+        text-decoration: underline;
+      }
     }
   }
 }

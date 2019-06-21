@@ -146,6 +146,11 @@ Stylesheet: Full Width Page Stylesheet
     &:hover {
       text-decoration: none;
     }
+
+    &:focus {
+      text-decoration: none;
+      outline: 1px dotted currentcolor;
+    }
   }
 
   .cell:not(.tile):not(.tile-compact) h1,
@@ -826,6 +831,11 @@ Stylesheet: Full Width Page Stylesheet
 
       &:hover {
         text-decoration: none;
+      }
+
+      &:focus {
+        text-decoration: none;
+        outline: 1px dotted currentcolor;
       }
     }
 
