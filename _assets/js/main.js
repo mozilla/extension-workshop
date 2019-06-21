@@ -19,12 +19,11 @@ jQuery(document).ready(function($) {
   var is_touch_device = 'ontouchstart' in document.documentElement;
 
   $('body').on('mousedown', function() {
-    $('body').addClass('using-mouse')
+    $('body').addClass('using-mouse');
   });
   $('body').on('keydown', function() {
-    $('body').removeClass('using-mouse')
+    $('body').removeClass('using-mouse');
   });
-
 
   // PLUGINS
   // ------------------
@@ -281,12 +280,17 @@ jQuery(document).ready(function($) {
     var $container = this;
     var $subnav = $container.find('.subfolder');
 
-    $subnav.on('focus', 'a', function() {
-      $(this).closest('.has-subfolder').addClass('over');
-
-    }).on('blur', 'a', function() {
-      $(this).closest('.has-subfolder').removeClass('over');
-    });
+    $subnav
+      .on('focus', 'a', function() {
+        $(this)
+          .closest('.has-subfolder')
+          .addClass('over');
+      })
+      .on('blur', 'a', function() {
+        $(this)
+          .closest('.has-subfolder')
+          .removeClass('over');
+      });
 
     return {
       kill: function() {
@@ -800,20 +804,26 @@ jQuery(document).ready(function($) {
     function openPopup($link, $panel) {
       if ($panel.length) {
         positionPanel($panel);
-        $panel.velocity('transition.slideUpIn', { duration: 300, complete: function() {
-          if (!$body.hasClass('using-mouse')) {
-            $panel.find('button.close').focus();
-          }
-        } });
+        $panel.velocity('transition.slideUpIn', {
+          duration: 300,
+          complete: function() {
+            if (!$body.hasClass('using-mouse')) {
+              $panel.find('button.close').focus();
+            }
+          },
+        });
         $panel
           .find('button.close')
           .off('click')
           .on('click', function() {
-            $panel.velocity('transition.slideDownOut', { duration: 300, complete: function() {
-              if (!$body.hasClass('using-mouse')) {
-                $link.focus();
-              }
-            } });
+            $panel.velocity('transition.slideDownOut', {
+              duration: 300,
+              complete: function() {
+                if (!$body.hasClass('using-mouse')) {
+                  $link.focus();
+                }
+              },
+            });
           });
       }
     }
