@@ -2179,15 +2179,12 @@ span.example {
 
   dt {
     position: relative;
-    padding: rem-calc(8 34 8 8);
+    padding: 0;
     border: 1px solid $medium-light-gray;
     border-top-left-radius: $global-radius;
     border-top-right-radius: $global-radius;
     border-bottom: 0;
     margin-bottom: 0;
-    cursor: pointer;
-    font-weight: $global-weight-bold;
-    transition: padding 0.3s ease-in-out;
 
     &::after {
       @include icon_font($char: $icon-arrow-down);
@@ -2197,17 +2194,41 @@ span.example {
       right: rem-calc(8);
       font-size: rem-calc(18);
       color: $primary-color;
+      pointer-events: none;
       transform: rotate(180deg);
       transition: transform 0.45s ease-in-out;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: rem-calc(8 34 8 8);
+      cursor: pointer;
+      line-height: 1.5em;
+      text-align: left;
+      font-weight: $global-weight-bold;
+      transition: padding 0.3s ease-in-out;
+
+      &:focus {
+        color: inherit;
+        text-decoration: underline;
+        box-shadow: none;
+      }
+
+      &:active {
+        color: inherit;
+      }
     }
   }
 
   dt.closed {
-    padding-bottom: 0;
-    font-weight: $global-weight-normal;
-
     &::after {
       transform: rotate(0);
+    }
+
+    button {
+      padding-bottom: 0;
+      font-weight: $global-weight-normal;
     }
   }
 

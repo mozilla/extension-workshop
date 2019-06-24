@@ -1095,15 +1095,28 @@ jQuery(document).ready(function($) {
     var settings = $.extend(
       {
         title: 'dt',
+        title_button: 'dt button',
         description: 'dd',
       },
       options
     );
 
     this.find(settings.title).addClass('closed');
+    this.find(settings.title_button).attr('aria-expanded', 'false');
+    this.find(settings.description).attr('aria-hidden', 'true');
 
-    this.on('click', settings.title, function() {
-      $(this).toggleClass('closed');
+    this.on('click', settings.title_button, function() {
+      var $this = $(this);
+
+      if ($this.attr('aria-expanded') == 'true') {
+        $this.attr('aria-expanded', 'false');
+        $this.closest(settings.title).next(settings.description).attr('aria-hidden', 'true');
+      } else {
+        $this.attr('aria-expanded', 'true');
+        $this.closest(settings.title).next(settings.description).attr('aria-hidden', 'false');
+      }
+
+      $this.closest(settings.title).toggleClass('closed');
     });
   };
 

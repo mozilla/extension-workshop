@@ -201,15 +201,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- Expandable List -->
 
-<dl class="expandable-list">
-<dt>How do I change my developer account information?</dt>
-<dd>Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
+<dl class="expandable-list" aria-label="Accordion Control Button Group">
+<dt><button aria-controls="content-1" aria-expanded="true">How do I change my developer account information?</button></dt>
+<dd aria-hidden="false" id="content-1">Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
 
-<dt>How do I manage access to account information for multiple members of my team or company?</dt>
-<dd>Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
+<dt><button aria-controls="content-2" aria-expanded="true">How do I manage access to account information for multiple members of my team or company?</button></dt>
+<dd aria-hidden="false" id="content-2">Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
 
-<dt>What is the developer's revenue share?</dt>
-<dd>Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
+<dt><button aria-controls="content-3" aria-expanded="true">What is the developer's revenue share?</button></dt>
+<dd aria-hidden="false" id="content-3">Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
 </dl>
 
 <!-- END: Expandable List -->
