@@ -494,6 +494,9 @@ jQuery(document).ready(function($) {
         var $el = $('#' + id);
         var top = id == 'top' ? $el.offset().top : $el.offset().top - offset;
         $('html').velocity('scroll', { duration: 900, offset: top });
+
+        var url_state = window.location.protocol+'//'+window.location.host+window.location.pathname+'#'+id;
+        window.history.pushState({href: url_state}, '', url_state);
       }
     });
 
