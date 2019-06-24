@@ -54,6 +54,13 @@ jQuery(document).ready(function($) {
     ).sideNavTop();
   }
 
+  // Secondary Dropdown should not be tabbed through since it repeats functionality above:
+  if ($('.sidenav-top a').length) {
+    $('.sidenav-top a').each(function() {
+      $(this).attr('tabindex', '-1');
+    });
+  }
+
   if ($('.sidenav-detail').length) {
     $('.sidenav-detail').sideNavDetail();
   }
