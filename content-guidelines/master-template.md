@@ -3,6 +3,7 @@ layout: guides
 title: Master Template
 permalink: /content-guidelines/master-template/
 published: false
+skip_index: true
 ---
 
 # Heading One

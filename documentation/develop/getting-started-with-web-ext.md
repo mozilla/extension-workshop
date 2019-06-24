@@ -4,7 +4,7 @@ title: Getting started with web-ext
 permalink: /documentation/develop/getting-started-with-web-ext/
 published: false
 topic: Develop
-tags: [label, distribution, install, remove]
+tags: ['test', 'community', 'hello']
 contributors: [caitmuenster, muffinresearch, bqbn]
 author: caitmuenster
 date: 2019-06-24 09:00:00

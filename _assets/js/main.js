@@ -169,6 +169,17 @@ jQuery(document).ready(function($) {
   if ($('#result-list').length) {
     $('#result-list').searchResults();
   }
+  if ($('#tag-list').length) {
+    $('#tag-list').searchResults({
+      input: '.tag-cta #lunrsearch',
+      default: '.popular-searches',
+      search_fields: [
+        {
+          title: 'tags',
+        },
+      ],
+    });
+  }
 
   // 13. Sidebar Nav Page Section Highlighting
   // ------
@@ -998,6 +1009,20 @@ jQuery(document).ready(function($) {
       {
         input: '.search-cta #lunrsearch',
         default: '.popular-searches',
+        search_fields: [
+          {
+            title: 'tags',
+            boost: 3,
+          },
+          {
+            title: 'title',
+            boost: 2,
+          },
+          {
+            title: 'body',
+            boost: 1,
+          },
+        ],
       },
       options
     );
@@ -1007,59 +1032,93 @@ jQuery(document).ready(function($) {
     var $default = $(settings.default);
     var urlParams = new URLSearchParams(window.location.search);
     var myParam = urlParams.get('q');
+    var idx = null;
+    var data = $.getJSON('/api/v1/pages.json');
 
+    // Lunr Search
     function lunr_search(query) {
-      //var result = index.search(query); --> this will be implemented when we integrate lunr js
-      var num = 0; //result.length && query != '' ? result.length : 0;
-      var query_output = num + ' results for "' + query + '"';
+      var result = idx.search(query);
+      var num = result.length && query != '' ? result.length : 0;
+      var query_output =
+        num + ' ' + $container.data('message') + ' "' + query + '"';
       var $title = $('<h2 class="no-underline"></h2>');
 
-      // Show results
-      $container.empty();
+      data.then(function(loaded_data) {
+        // Show results
+        $container.empty();
 
-      // Add status
-      $title.text(query_output);
-      $container.prepend($title);
+        // Add status
+        $title.text(query_output);
+        $container.prepend($title);
 
-      if (num != 0) {
-        var $list = $('<ol></ol>');
+        if (num != 0) {
+          var $list = $('<ol></ol>');
 
-        // Loop through, match, and add results --> this will be implemented when we integrate lunr js
-        // for (var item in result) {
-        //   var ref = result[item].ref;
-        //   var topic = store[ref].topic
-        //     ? '<p class="post-meta"><small>' + store[ref].topic + '</small></p>'
-        //     : '';
-        //   var searchitem =
-        //     '<li class="result"><a href="' +
-        //     store[ref].link +
-        //     '">' +
-        //     topic +
-        //     '<h3>' +
-        //     store[ref].title +
-        //     '</h3><p>' +
-        //     store[ref].excerpt +
-        //     '</p><p><small>' +
-        //     store[ref].link +
-        //     '</small></p></a></li>';
+          // Loop through, match, and add results
+          for (var item in result) {
+            var ref = result[item].ref;
+            var item = loaded_data.entries[ref];
+            var topic =
+              item.meta && item.meta.topic
+                ? '<p class="post-meta"><small>' +
+                  item.meta.topic +
+                  '</small></p>'
+                : '';
+            var excerpt =
+              $.trim(item.body)
+                .substring(0, 300)
+                .split(' ')
+                .slice(0, -1)
+                .join(' ') + '...';
+            var searchitem =
+              '<li class="result"><a href="' +
+              item.url +
+              '">' +
+              topic +
+              '<h3>' +
+              item.title +
+              '</h3><p>' +
+              excerpt +
+              '</p><p><small>' +
+              window.location.origin +
+              item.url +
+              '</small></p></a></li>';
 
-        //   $list.append(searchitem);
-        // }
+            $list.append(searchitem);
+          }
 
-        $default.hide(0);
-        $container.append($list);
-      } else {
-        $default.show(0);
-      }
+          $default.hide(0);
+          $container.append($list);
+        } else {
+          $default.show(0);
+        }
+      });
     }
 
-    $local_input.on('keyup', function() {
-      lunr_search($(this).val());
+    // Build Lunr
+    data.then(function(loaded_data) {
+      idx = lunr(function() {
+        var l = this;
+        $.each(settings.search_fields, function(i, obj) {
+          l.field(obj.title, { boost: obj.boost ? obj.boost : 1 });
+        });
+        l.ref('id');
+
+        $.each(loaded_data.entries, function(index, value) {
+          if (!value.skip_index) {
+            l.add($.extend({ id: index }, value));
+          }
+        });
+      });
+
+      $local_input.on('keyup', function() {
+        lunr_search($(this).val());
+      });
+
+      lunr_search(myParam);
     });
 
     $local_input.val(myParam);
-
-    lunr_search(myParam);
   };
 
   // 13. Sidebar Nav Page Section Highlighting

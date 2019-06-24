@@ -69,6 +69,7 @@ assets:
     - node_modules/slick-carousel/slick
     - node_modules/jquery/dist
     - node_modules/dompurify/dist
+    - node_modules/lunr/
     - node_modules/velocity-animate
   defaults:
     js:

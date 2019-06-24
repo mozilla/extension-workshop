@@ -5,7 +5,7 @@
 			<p><span class="meta-label tags">Tags:</span>&nbsp;
 				{% for tag in page.tags %}
 				  {% capture tag_name %}{{ tag }}{% endcapture %}
-				  <a href="/tag/{{ tag_name }}">{{ tag_name }}</a>&nbsp;
+				  <a href="/tags/?q={{ tag_name | url_encode }}">{{ tag_name }}</a>&nbsp;
 				{% endfor %}
 			</p>
 
@@ -17,7 +17,7 @@
 
 			<p><span class="meta-label date">Last update:</span>&nbsp;
 				{%- if page.author -%}
-                  <a href="https://github.com/{{ contributor }}/" title="View {{ contributor }} on Github" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></a>&nbsp; 
+                  <a href="https://github.com/{{ page.author }}/" title="View {{ page.author }} on Github" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></a>&nbsp; 
                 {%- endif -%}
                 <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}

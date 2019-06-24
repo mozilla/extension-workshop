@@ -1304,6 +1304,7 @@ $hamburger-hover-transition-timing-function: linear;
 // Search CTA box
 // ------
 
+.tag-cta,
 .search-cta {
   display: flex;
   flex-flow: row nowrap;
@@ -1339,9 +1340,16 @@ $hamburger-hover-transition-timing-function: linear;
   }
 }
 
+.tag-cta::before {
+  @include icon_font($char: $icon-tags);
+
+  line-height: rem-calc(40);
+}
+
 // Search Results
 // ------
 
+#tag-list ol,
 #result-list ol {
   list-style: none;
   margin: 0;

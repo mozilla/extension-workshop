@@ -2,15 +2,15 @@
 layout: full-width
 ---
 
-<div class="search-results panel">
+<div class="tag-results panel">
     <div class="grid-container grid-x grid-padding-x">
         <div class="cell small-12">
 
-            <section class="search-cta" role="search">
-                {% include search-bar.html %}
+            <section class="tag-cta" role="search">
+                {% include tag-bar.html %}
             </section>
 
-            <div id="result-list" data-message="results for"></div>
+            <div id="tag-list" data-message="results for tag: "></div>
 
             <aside class="popular-searches">
                 {{ content }}
