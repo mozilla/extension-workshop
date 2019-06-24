@@ -495,8 +495,14 @@ jQuery(document).ready(function($) {
         var top = id == 'top' ? $el.offset().top : $el.offset().top - offset;
         $('html').velocity('scroll', { duration: 900, offset: top });
 
-        var url_state = window.location.protocol+'//'+window.location.host+window.location.pathname+'#'+id;
-        window.history.pushState({href: url_state}, '', url_state);
+        var url_state =
+          window.location.protocol +
+          '//' +
+          window.location.host +
+          window.location.pathname +
+          '#' +
+          id;
+        window.history.pushState({ href: url_state }, '', url_state);
       }
     });
 
@@ -1113,10 +1119,16 @@ jQuery(document).ready(function($) {
 
       if ($this.attr('aria-expanded') == 'true') {
         $this.attr('aria-expanded', 'false');
-        $this.closest(settings.title).next(settings.description).attr('aria-hidden', 'true');
+        $this
+          .closest(settings.title)
+          .next(settings.description)
+          .attr('aria-hidden', 'true');
       } else {
         $this.attr('aria-expanded', 'true');
-        $this.closest(settings.title).next(settings.description).attr('aria-hidden', 'false');
+        $this
+          .closest(settings.title)
+          .next(settings.description)
+          .attr('aria-hidden', 'false');
       }
 
       $this.closest(settings.title).toggleClass('closed');
