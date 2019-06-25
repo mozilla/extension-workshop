@@ -6,7 +6,7 @@
 		        	<h6>{{ item.title }}</h6>       
 		            <ul>
 		                {% for subitem in item.subfolderitems %}
-		                    <li><a href="{{ subitem.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% if pg.target == "_blank" %} rel="noreferrer noopener"{% endif %}{% endif %}>{{ subitem.title }}</a></li>
+		                    <li><a href="{{ subitem.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% endif %}>{{ subitem.title }}</a></li>
 		                {% endfor %}
 		            </ul>
 		        </div>

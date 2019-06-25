@@ -54,7 +54,7 @@ web-ext is a command line tool designed to speed up various parts of the extensi
 
 ## Installation
 
-`web-ext` is a node-based application that you install with the <a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="nodejs/npm">nodejs/npm</a> tool. Install web-ext using the following command:
+`web-ext` is a node-based application that you install with the [nodejs/npm](https://www.firefox.com) tool. Install web-ext using the following command:
 
 <!-- Syntax Highlighting -->
 
@@ -64,7 +64,7 @@ npm install --global web-ext
 
 <!-- END: Syntax Highlighting -->
 
-`web-ext` requires the current <a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="LTS">LTS</a> (long-term support) versions of <a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="NodeJS">NodeJS</a>.
+`web-ext` requires the current [LTS](https://www.firefox.com) (long-term support) versions of [NodeJS](https://www.firefox.com).
 
 To test whether the installation worked run the following command, which displays the `web-ext` version number:
 
@@ -90,7 +90,7 @@ web-ext --version
 
 ## Using web-ext
 
-Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the <a href="https://www.firefox.com" target="_blank" rel="noreferrer noopener" title="webextensions-examples">webextensions-examples</a> repo.
+Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the [webextensions-examples](https://www.firefox.com) repo.
 
 #### Testing out an extension
 
