@@ -49,6 +49,17 @@ $sidebar-nav-width: rem-calc(240);
 
   a {
     color: inherit;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .is-active,
+  .has-active-children {
+    > a:hover {
+      text-decoration: none;
+    }
   }
 
   .primary > li:not(.is-active):not(.has-active-children) {
@@ -66,6 +77,7 @@ $sidebar-nav-width: rem-calc(240);
     height: calc(100% - #{rem-calc(64)});
     left: 0;
     width: $sidebar-nav-width;
+    border-right: 1px solid $medium-light-gray;
     overflow-y: auto;
     overflow-x: hidden;
     transition: top 0.4s ease-in-out, height 0.4s ease-in-out;
@@ -83,7 +95,7 @@ $sidebar-nav-width: rem-calc(240);
     transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
     overflow-y: auto;
     background-color: $lighter-gray;
-    box-shadow: #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.25);
+    box-shadow: $element-shadow;
 
     .primary > .is-active.has-children,
     .primary > .has-active-children {
@@ -118,9 +130,9 @@ $sidebar-nav-width: rem-calc(240);
 
       display: block;
       position: absolute;
-      right: rem-calc(16);
+      right: rem-calc(18);
       top: calc(50% - #{rem-calc(12)});
-      font-size: rem-calc(24);
+      font-size: rem-calc(20);
       transform: translateY(#{rem-calc(2)});
       transition: transform 0.3s ease-in-out;
       pointer-events: none;
@@ -173,12 +185,13 @@ $sidebar-nav-width: rem-calc(240);
       opacity: 0;
       transform: translateY(1em);
       position: absolute;
+      z-index: 2;
       left: rem-calc(16);
       top: rem-calc(4);
       width: calc(100% - #{rem-calc(32)});
       padding: rem-calc(10 0);
       background: $white;
-      box-shadow: $element-shadow;
+      box-shadow: $element-shadow-highlight;
       border-radius: $global-radius;
       transition: box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out,
         opacity 0.3s ease-in-out;
@@ -298,6 +311,24 @@ $sidebar-nav-width: rem-calc(240);
           background-color: $medium-light-gray;
         }
       }
+
+      a.is-in-view {
+        color: $primary-color;
+        font-weight: $global-weight-bold;
+
+        &::before {
+          background-image: linear-gradient(
+            180deg,
+            #0099f1 0%,
+            #9059ff 9%,
+            #b833e1 35%,
+            #e31587 52%,
+            #fc4055 70%,
+            #ff9640 92%,
+            #fff36e 100%
+          );
+        }
+      }
     }
   }
 
@@ -368,23 +399,80 @@ $sidebar-nav-width: rem-calc(240);
 .site.sidebar .site-content-body {
   flex: 1 0 auto;
   width: 100%;
+  padding-bottom: rem-calc(8);
+
+  @include breakpoint(medium) {
+    padding-bottom: rem-calc(16);
+  }
+
+  @include breakpoint(xlarge) {
+    padding-bottom: rem-calc(24);
+  }
+
+  h1,
+  h2 {
+    margin-top: rem-calc(12);
+    border-top: 1px solid $medium-light-gray;
+    padding-top: rem-calc(30);
+
+    @include breakpoint(medium) {
+      margin-top: rem-calc(24);
+    }
+  }
+}
+
+// Content Body Panel
+
+.site.sidebar .panel {
+  padding-top: rem-calc(32);
+  padding-bottom: rem-calc(24);
+
+  @include breakpoint(medium) {
+    padding-top: rem-calc(40);
+    padding-bottom: rem-calc(40);
+  }
+
+  @include breakpoint(xlarge) {
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(60);
+  }
+}
+
+.site.sidebar .panel-collapse {
+  margin-top: rem-calc(20);
+  margin-bottom: rem-calc(20);
+
+  @include breakpoint(medium) {
+    margin-top: rem-calc(40);
+    margin-bottom: rem-calc(40);
+  }
+
+  @include breakpoint(xlarge) {
+    margin-top: rem-calc(60);
+    margin-bottom: rem-calc(60);
+  }
 }
 
 // Content Body Modules
 
-.site.sidebar .module {
+.module {
   padding-left: rem-calc(8);
   padding-right: rem-calc(8);
   margin-left: auto;
   margin-right: auto;
+  margin-top: rem-calc(12);
+  margin-bottom: rem-calc(12);
 
   @include breakpoint(medium) {
     padding-left: rem-calc(12);
     padding-right: rem-calc(12);
+    margin-top: rem-calc(24);
+    margin-bottom: rem-calc(24);
   }
   @include breakpoint(xlarge) {
     display: flex;
     flex-flow: row nowrap;
+    align-items: flex-start;
     max-width: 84%;
   }
   @include breakpoint(xxlarge) {
@@ -401,6 +489,238 @@ $sidebar-nav-width: rem-calc(240);
 
     @include breakpoint(medium) {
       padding: rem-calc(0 12);
+    }
+  }
+}
+
+// Aside Tile
+
+.module-aside.tile {
+  margin: rem-calc(12 0 12 0);
+  font-size: $small-font-size;
+  padding: rem-calc(24) !important;
+
+  @include breakpoint(medium) {
+    margin: rem-calc(0 0 24 0);
+  }
+
+  @include breakpoint(large only) {
+    width: 33.3333%;
+  }
+
+  @include breakpoint(medium only) {
+    width: 50%;
+  }
+
+  &::before {
+    left: rem-calc(12);
+    width: calc(100% - #{rem-calc(24)});
+    top: rem-calc(12);
+    height: calc(100% - #{rem-calc(24)});
+  }
+
+  > *:not(:last-child) {
+    margin-bottom: $paragraph-margin-bottom / 2;
+  }
+}
+
+// Page Hero Banners
+
+.page-hero,
+.overview-hero {
+  margin-bottom: rem-calc(32);
+
+  @include breakpoint(xlarge) {
+    margin-bottom: rem-calc(64);
+  }
+
+  .module {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h1,
+  h2 {
+    margin-top: 0 !important;
+    border-top: 0 !important;
+    padding-top: 0 !important;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 1em;
+  }
+
+  &-description {
+    padding: rem-calc(32 0 12);
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(large) {
+      padding: rem-calc(70 0 24);
+    }
+  }
+
+  &-cta {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: rem-calc(0 -8);
+    padding: rem-calc(4 0 28);
+
+    .button {
+      flex: 0 0 auto;
+      margin: rem-calc(8);
+    }
+  }
+
+  + .module {
+    margin-top: 0;
+
+    h1,
+    h2 {
+      &:first-child {
+        margin-top: 0;
+        border-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+.overview-hero {
+  color: $white;
+  background: $primary-color no-repeat center/cover;
+
+  .button {
+    background-color: $white;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  .button.secondary {
+    background-color: transparent;
+    border-color: $white;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $primary-color;
+    }
+  }
+
+  &-description {
+    padding: rem-calc(50 0 25);
+
+    @include breakpoint(large) {
+      padding: rem-calc(100 0 55);
+    }
+  }
+
+  &-cta {
+    padding: rem-calc(25 0 50);
+    margin: rem-calc(-8);
+  }
+}
+
+.page-hero {
+  &-cta {
+    padding-bottom: 0;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: calc(100% - #{rem-calc(16)});
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: rem-calc(20);
+      background-color: $medium-light-gray;
+
+      @include breakpoint(large) {
+        margin-top: rem-calc(40);
+      }
+    }
+  }
+}
+
+// Table of Contents
+
+.table-of-contents {
+  font-size: $small-font-size;
+
+  h6 {
+    font-size: $small-font-size;
+    font-weight: $global-weight-normal;
+    color: $dark-gray;
+    margin-bottom: $list-margin-bottom / 3;
+  }
+
+  ol {
+    list-style: none;
+    margin: 0;
+  }
+
+  @include breakpoint(xlarge) {
+    order: 2;
+    position: relative;
+    padding-left: rem-calc(28) !important;
+  }
+
+  @include breakpoint(large down) {
+    ol {
+      padding-bottom: rem-calc(24);
+      border-bottom: 1px solid $medium-light-gray;
+      margin-bottom: rem-calc(30);
+    }
+  }
+}
+
+// Documentation Topics
+
+.documentation-topics {
+  background-color: $light-gray;
+  font-size: $small-font-size;
+  padding: rem-calc(24 0);
+  flex: none;
+
+  h6 {
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 0.75rem;
+  }
+
+  @include breakpoint(medium) {
+    padding: rem-calc(36 0);
+
+    h6 {
+      margin-bottom: 1.5rem;
+    }
+
+    ul {
+      @include horizontal_list($margin: 1.2rem);
+
+      justify-content: space-between;
+
+      a:focus {
+        text-decoration: underline;
+      }
     }
   }
 }

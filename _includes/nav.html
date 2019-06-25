@@ -5,6 +5,14 @@
 
             <li class="has-children {% if page.url == item.url %}is-active{% endif %}">
                 <a href="{{ item.url | relative_url }}" data-overviewtitle="{{ item.title }} Overview">{{ item.title }}</a>
+
+                {% if item.subpageitems %}
+                    <ul class="section">
+                        {% for section in item.subpageitems %}
+                            <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
                 
                 {% for cat in item.categories %}
                     <div class="category">
@@ -12,18 +20,18 @@
                         {% if cat.pages %}
                             <ul>
                                 {% for pg in cat.pages %}
-                                    {% if pg.subpageitems %}
-                                        <li class="{% if page.url == pg.url %}is-active{% endif %}">
-                                            <a href="{{ pg.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% if pg.target == "_blank" %} rel="noreferrer noopener"{% endif %}{% endif %}>{{ pg.title }}</a>
+                                    <li class="{% if page.url == pg.url %}is-active{% endif %}">
+                                        <a href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
+    
+                                        {% if pg.subpageitems %}                                    
                                             <ul class="section">
                                                 {% for section in pg.subpageitems %}
                                                     <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
                                                 {% endfor %}
                                             </ul>
-                                        </li>
-                                    {% else %}
-                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% if pg.target == "_blank" %} rel="noreferrer noopener"{% endif %}{% endif %}>{{ pg.title }}</a></li>
-                                    {% endif %}
+                                        {% endif %}
+
+                                    </li>
                                 {% endfor %}
                             </ul>
                         {% endif %}
@@ -45,8 +53,17 @@
                     {% for subitem in item.subfolderitems %}
 
                         {% if subitem.categories %}
+
                             <li class="has-children {% if page.url == subitem.url %}is-active{% endif %}">
                                 <a href="{{ subitem.url | relative_url }}" data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a>
+
+                                {% if subitem.subpageitems %}
+                                    <ul class="section">
+                                        {% for section in subitem.subpageitems %}
+                                            <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
 
                                 {% for cat in subitem.categories %}
                                     <div class="category">
@@ -54,18 +71,18 @@
                                         {% if cat.pages %}
                                             <ul>
                                                 {% for pg in cat.pages %}
-                                                    {% if pg.subpageitems %}
-                                                        <li class="{% if page.url == pg.url %}is-active{% endif %}">
-                                                            <a href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
+                                                    <li class="{% if page.url == pg.url %}is-active{% endif %}">
+                                                        <a href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
+
+                                                        {% if pg.subpageitems %}
                                                             <ul class="section">
                                                                 {% for section in pg.subpageitems %}
                                                                     <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
                                                                 {% endfor %}
                                                             </ul>
-                                                        </li>
-                                                    {% else %}
-                                                        <li class="{% if page.url == pg.url %}is-active{% endif %}"><a href="{{ pg.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% if pg.target == "_blank" %} rel="noreferrer noopener"{% endif %}{% endif %}>{{ pg.title }}</a></li>
-                                                    {% endif %}
+                                                        {% endif %}
+
+                                                    </li>
                                                 {% endfor %}
                                             </ul>
                                         {% endif %}
@@ -76,20 +93,39 @@
 
                         {% else %}
 
-                            <li class="{% if page.url == subitem.url %}is-active{% endif %}"><a href="{{ subitem.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% if pg.target == "_blank" %} rel="noreferrer noopener"{% endif %}{% endif %}>{{ subitem.title }}</a></li>
-                        
+                            <li class="{% if page.url == subitem.url %}is-active{% endif %}">
+                                <a href="{{ subitem.url | relative_url }}" data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a>
+                                
+                                {% if subitem.subpageitems %}
+                                    <ul class="section">
+                                        {% for section in subitem.subpageitems %}
+                                            <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+
+                            </li>
                         {% endif %}
 
-                        
                     {% endfor %}
                 </ul>
 
             </li>
 
         {% else %}
-            
-            <li class="{% if page.url == item.url %}is-active{% endif %}"><a href="{{ item.url | relative_url }}" data-overviewtitle="{{ item.title }} Overview">{{ item.title }}</a></li>
 
+            <li class="{% if page.url == item.url %}is-active{% endif %}">
+                <a href="{{ item.url | relative_url }}" data-overviewtitle="{{ item.title }} Overview">{{ item.title }}</a>
+                
+                {% if item.subpageitems %}
+                    <ul class="section">
+                        {% for section in item.subpageitems %}
+                            <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            
+            </li>
         {% endif %}
     {% endfor %}
 </ul>

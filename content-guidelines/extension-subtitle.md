@@ -3,6 +3,7 @@ layout: guides
 title: Extension Subtitle
 permalink: /content-guidelines/extension-subtitle/
 published: false
+skip_index: true
 ---
 
 # Extension Subtitle
