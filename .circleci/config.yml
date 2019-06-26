@@ -1,6 +1,6 @@
-version: 2.0
+version: 2.1
 jobs:
-  build:
+  pre-build:
     docker:
       - image: circleci/ruby:2.6
     working_directory: ~/extension-workshop
@@ -38,6 +38,26 @@ jobs:
       - run:
           name: test
           command: yarn run test
+
+  build-unpublished:
+    requires:
+      - pre-build
+    steps:
+      - run:
+          name: Jekyll build unpublished
+          environment:
+            JEKYLL_ENV: production
+            SVGO_BIN: node_modules/svgo/bin/svgo
+          command: bundle exec jekyll build --unpublished
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - ./*
+
+  build:
+    requires:
+      - pre-build
+    steps:
       - run:
           name: Jekyll build
           environment:
@@ -49,7 +69,7 @@ jobs:
           paths:
             - ./*
 
-  deploy:
+  pre-deploy:
     docker:
       - image: circleci/python:3.7
     steps:
@@ -60,24 +80,37 @@ jobs:
           command: |
             sudo pip install --upgrade pip
             sudo pip install --upgrade awscli
+
+  # unpublished contents only deployed to -dev
+  deploy-unpublished:
+    requires:
+      - pre-deploy
+    steps:
+      - run:
+          name: extension workshop deployment (unpublished)
+          command: |
+            # push master branch to -dev env per
+            # https://github.com/mozilla/extension-workshop/issues/131
+            AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
+            AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
+            DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
+            EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
+            ./.utils/deploy.sh
+
+            AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
+            AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
+            DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
+            EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
+            ./.utils/circleci/invalidate-cloudfront-cache.sh
+
+  deploy:
+    requires:
+      - pre-deploy
+    steps:
       - run:
           name: extension workshop deployment
           command: |
             if [ "$CIRCLE_BRANCH" == "master" ] ; then
-              # push master branch to -dev env per
-              # https://github.com/mozilla/extension-workshop/issues/131
-              AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
-              AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
-              DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
-              EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
-              ./.utils/deploy.sh
-
-              AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
-              AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
-              DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
-              EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
-              ./.utils/circleci/invalidate-cloudfront-cache.sh
-
               # push master branch to -stage env per
               # https://github.com/mozilla/extension-workshop/issues/42
               AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
@@ -100,10 +133,12 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - build:
+      - deploy-unpublished:
+          requires:
+            - build-unpublished
           filters:
-            tags:
-              only: /^v?[0-9]+(\.[0-9]+)*$/
+            branches:
+              only: master
       - deploy:
           requires:
             - build
