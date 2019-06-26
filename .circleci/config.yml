@@ -40,8 +40,6 @@ jobs:
           command: yarn run test
 
   build-unpublished:
-    requires:
-      - pre-build
     steps:
       - run:
           name: Jekyll build unpublished
@@ -55,8 +53,6 @@ jobs:
             - ./*
 
   build:
-    requires:
-      - pre-build
     steps:
       - run:
           name: Jekyll build
@@ -83,8 +79,6 @@ jobs:
 
   # unpublished contents only deployed to -dev
   deploy-unpublished:
-    requires:
-      - pre-deploy
     steps:
       - run:
           name: extension workshop deployment (unpublished)
@@ -104,8 +98,6 @@ jobs:
             ./.utils/circleci/invalidate-cloudfront-cache.sh
 
   deploy:
-    requires:
-      - pre-deploy
     steps:
       - run:
           name: extension workshop deployment
@@ -133,15 +125,31 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - deploy-unpublished:
+      - build-unpublished:
           requires:
-            - build-unpublished
+            - pre-build
           filters:
             branches:
               only: master
+      - deploy-unpublished:
+          requires:
+            - build-unpublished
+            - pre-deploy
+          filters:
+            branches:
+              only: master
+      - build:
+          requires:
+            - pre-build
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /^v?[0-9]+(\.[0-9]+)*$/
       - deploy:
           requires:
             - build
+            - pre-deploy
           filters:
             branches:
               only: master
