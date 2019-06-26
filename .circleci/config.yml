@@ -157,22 +157,14 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - build-unpublished:
-          filters:
-            branches:
-              only: master
+      - build-unpublished
       - deploy-unpublished:
           requires:
             - build-unpublished
           filters:
             branches:
               only: master
-      - build:
-          filters:
-            branches:
-              only: master
-            tags:
-              only: /^v?[0-9]+(\.[0-9]+)*$/
+      - build
       - deploy:
           requires:
             - build
