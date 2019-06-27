@@ -20,6 +20,11 @@ INVALIDATION_ID=$(
 # checks. We retry 3 times for a maximum 30 minutes, as we've seen the
 # invalidation can take more than 10 minutes to finish.
 retry=0
+
+# "aws cloudfront wait" may fail, in which case we don't want to abort
+# unless it has failed more than the number of retry times.
+set +e
+
 until aws cloudfront wait invalidation-completed  \
       --distribution-id $DISTRIBUTION_ID          \
       --id $INVALIDATION_ID ; do

@@ -1,83 +1,140 @@
-version: 2.0
-jobs:
-  build:
+version: 2.1
+
+references:
+  build_container: &build_container
     docker:
       - image: circleci/ruby:2.6
     working_directory: ~/extension-workshop
+
+  restore_build_cache: &restore_build_cache
+    restore_cache:
+      keys:
+        - rubygems-v1-{{ checksum "Gemfile.lock" }}
+        - rubygems-v1-fallback
+
+  run_bundle_install: &run_bundle_install
+    run:
+      name: Bundle Install
+      command: bundle check || bundle install
+
+  save_build_cache: &save_build_cache
+    save_cache:
+      key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+      paths:
+        - vendor/bundle
+
+  run_yarn_install: &run_yarn_install
+    run:
+      name: yarn install
+      command: |
+        sudo apt-get update && sudo apt-get install -y apt-transport-https
+        sudo apt-get install -y gcc g++ make
+
+        # install nodejs v10
+        # https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
+        curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+
+        # install yarn stable
+        # https://yarnpkg.com/lang/en/docs/install/#debian-stable
+        curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+        echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+        sudo apt-get update && sudo apt-get install -y yarn
+
+        yarn install
+
+  run_build_test: &run_build_test
+    run:
+      name: test
+      command: yarn run test
+
+  persist_build_workspace: &persist_build_workspace
+    persist_to_workspace:
+      root: ./
+      paths:
+        - ./*
+
+  deploy_container: &deploy_container
+    docker:
+      - image: circleci/python:3.7
+
+  attach_deploy_workspace: &attach_deploy_workspace
+    attach_workspace:
+      at: .
+
+  run_install_aws_cli: &run_install_aws_cli
+    run:
+      name: Install AWS CLI
+      command: |
+        sudo pip install --upgrade pip
+        sudo pip install --upgrade awscli
+jobs:
+  build-unpublished:
+    <<: *build_container
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - rubygems-v1-{{ checksum "Gemfile.lock" }}
-            - rubygems-v1-fallback
+      - *restore_build_cache
+      - *run_bundle_install
+      - *save_build_cache
+      - *run_yarn_install
+      - *run_build_test
       - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-      - save_cache:
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
-      - run:
-          name: yarn install
-          command: |
-            sudo apt-get update && sudo apt-get install -y apt-transport-https
-            sudo apt-get install -y gcc g++ make
+          name: Jekyll build unpublished
+          environment:
+            JEKYLL_ENV: production
+            SVGO_BIN: node_modules/svgo/bin/svgo
+          command: bundle exec jekyll build --unpublished
+      - *persist_build_workspace
 
-            # install nodejs v10
-            # https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
-            curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-            sudo apt-get install -y nodejs
-
-            # install yarn stable
-            # https://yarnpkg.com/lang/en/docs/install/#debian-stable
-            curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-            echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-            sudo apt-get update && sudo apt-get install -y yarn
-
-            yarn install
-      - run:
-          name: test
-          command: yarn run test
+  build:
+    <<: *build_container
+    steps:
+      - checkout
+      - *restore_build_cache
+      - *run_bundle_install
+      - *save_build_cache
+      - *run_yarn_install
+      - *run_build_test
       - run:
           name: Jekyll build
           environment:
             JEKYLL_ENV: production
             SVGO_BIN: node_modules/svgo/bin/svgo
           command: bundle exec jekyll build
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - ./*
+      - *persist_build_workspace
+
+  # unpublished contents only deployed to -dev
+  deploy-unpublished:
+    <<: *deploy_container
+    steps:
+      - *attach_deploy_workspace
+      - *run_install_aws_cli
+      - run:
+          name: extension workshop deployment (unpublished)
+          command: |
+            # push master branch to -dev env per
+            # https://github.com/mozilla/extension-workshop/issues/131
+            AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
+            AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
+            DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
+            EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
+            ./.utils/deploy.sh
+
+            AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
+            AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
+            DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
+            EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
+            ./.utils/circleci/invalidate-cloudfront-cache.sh
 
   deploy:
-    docker:
-      - image: circleci/python:3.7
+    <<: *deploy_container
     steps:
-      - attach_workspace:
-          at: .
-      - run:
-          name: Install AWS CLI
-          command: |
-            sudo pip install --upgrade pip
-            sudo pip install --upgrade awscli
+      - *attach_deploy_workspace
+      - *run_install_aws_cli
       - run:
           name: extension workshop deployment
           command: |
             if [ "$CIRCLE_BRANCH" == "master" ] ; then
-              # push master branch to -dev env per
-              # https://github.com/mozilla/extension-workshop/issues/131
-              AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
-              AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
-              DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
-              EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
-              ./.utils/deploy.sh
-
-              AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
-              AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
-              DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
-              EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
-              ./.utils/circleci/invalidate-cloudfront-cache.sh
-
               # push master branch to -stage env per
               # https://github.com/mozilla/extension-workshop/issues/42
               AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
@@ -100,10 +157,14 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - build:
+      - build-unpublished
+      - deploy-unpublished:
+          requires:
+            - build-unpublished
           filters:
-            tags:
-              only: /^v?[0-9]+(\.[0-9]+)*$/
+            branches:
+              only: master
+      - build
       - deploy:
           requires:
             - build
