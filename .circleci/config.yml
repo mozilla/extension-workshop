@@ -134,9 +134,9 @@ jobs:
       - run:
           name: extension workshop deployment
           command: |
-            if [ "$CIRCLE_BRANCH" == "master" ] ; then
-              # push master branch to -stage env per
-              # https://github.com/mozilla/extension-workshop/issues/42
+            # push tags that end with the word "-stage" to -stage env per
+            # https://github.com/mozilla/extension-workshop/issues/192
+            if [[ "$CIRCLE_BRANCH" =~ -stage$ ]] ; then
               AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
               AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"         \
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
@@ -148,9 +148,12 @@ jobs:
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
               EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}" \
               ./.utils/circleci/invalidate-cloudfront-cache.sh
-            else
+            elif [[ "$CIRCLE_BRANCH" =~ ^v?[0-9]+(\.[0-9]+)*$ ]] ; then
               ./.utils/deploy.sh
               ./.utils/circleci/invalidate-cloudfront-cache.sh
+            else
+              echo "Unrecognized tag: \`${CIRCLE_BRANCH}'. A good tag example is v1.1.1, or anything-stage" 1>&2
+              exit 1
             fi
 
 workflows:
@@ -169,7 +172,6 @@ workflows:
           requires:
             - build
           filters:
-            branches:
-              only: master
             tags:
-              only: /^v?[0-9]+(\.[0-9]+)*$/
+              # match tags such as "v1.1.1" or "anything-stage"
+              only: /^v?[0-9]+(\.[0-9]+)*$|(?:-stage)$/
