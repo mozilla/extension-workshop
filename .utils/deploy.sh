@@ -36,7 +36,7 @@ CSP="\"content-security-policy\": \"default-src 'none'; "\
 "base-uri 'self'; "\
 "connect-src https://blog.mozilla.org/addons/feed/ https://www.mozilla.org/en-US/newsletter/ https://www.google-analytics.com/; "\
 "font-src 'self'; "\
-"form-action https://www.mozilla.org/en-US/newsletter/; "\
+"form-action 'self' https://www.mozilla.org/en-US/newsletter/; "\
 "frame-ancestors 'none'; "\
 "frame-src https://www.youtube.com/embed/; "\
 "img-src 'self' data:; "\
