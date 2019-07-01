@@ -112,8 +112,6 @@ jobs:
       - run:
           name: extension workshop deployment (unpublished)
           command: |
-            # push master branch to -dev env per
-            # https://github.com/mozilla/extension-workshop/issues/131
             AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
             AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
             DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
@@ -134,9 +132,7 @@ jobs:
       - run:
           name: extension workshop deployment
           command: |
-            if [ "$CIRCLE_BRANCH" == "master" ] ; then
-              # push master branch to -stage env per
-              # https://github.com/mozilla/extension-workshop/issues/42
+            if [[ "$CIRCLE_BRANCH" =~ -stage$ ]] ; then
               AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
               AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"         \
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
@@ -147,12 +143,23 @@ jobs:
               AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"         \
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
               EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}" \
+              ./.utils/circleci/invalidate-cloudfront-cache.sh
+            elif [[ "$CIRCLE_BRANCH" =~ ^v?[0-9]+(\.[0-9]+)*$ ]] ; then
+              ./.utils/deploy.sh
               ./.utils/circleci/invalidate-cloudfront-cache.sh
             else
-              ./.utils/deploy.sh
-              ./.utils/circleci/invalidate-cloudfront-cache.sh
+              echo "Unrecognized tag: \`${CIRCLE_BRANCH}'. A good tag example is v1.1.1, or v1.1.1-stage" 1>&2
+              exit 1
             fi
 
+# Per https://github.com/mozilla/extension-workshop/issues/191 and
+# https://github.com/mozilla/extension-workshop/issues/192
+# Our current CircleCI workflow is the following:
+# * Push master to dev environment with --unpublished switch.
+# * Push tags that end with "-stage" to stage environment.
+# * Push normal tags to production environment.
+# * No branch is pushed to any environment.
+# * All branches will be built to surface any errors if any early.
 workflows:
   version: 2
   build-test-and-deploy:
@@ -170,6 +177,7 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              ignore: /.*/
             tags:
-              only: /^v?[0-9]+(\.[0-9]+)*$/
+              # match tags such as "v1.1.1" or "v1.1.1-stage"
+              only: /^v?[0-9]+(\.[0-9]+)*(?:-stage)?$/
