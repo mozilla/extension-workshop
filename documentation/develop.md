@@ -3,9 +3,9 @@ layout: sidebar
 title: Develop
 permalink: /documentation/develop/
 published: false
-tags: [label, distribution, install, remove]
-contributors: [caitmuenster, muffinresearch, bqbn]
-author: caitmuenster
+tags:
+contributors:
+author:
 date: 2019-06-24 09:00:00
 ---
 
@@ -17,17 +17,12 @@ date: 2019-06-24 09:00:00
 <div class="cell small-12">
 <div class="overview-hero-description" markdown="1">
 
-# Develop
+# Bring your extension to life
 
-Short and brief description of the sort of content you will find on this page.
-
-</div>
-<div class="overview-hero-cta">
-
-<a href="/documentation/develop/getting-started-with-web-ext/" class="button">Do first thing</a>
-<a href="/documentation/develop/build-an-extension-in-5-minutes" class="button secondary">Do second thing</a>
+Support your development workflow with these straightforward tools and guides.
 
 </div>
+<div class="overview-hero-cta"></div>
 </div>
 </article>
 </div>
@@ -35,86 +30,52 @@ Short and brief description of the sort of content you will find on this page.
 
 <!-- END: Overview Page Hero Banner -->
 
-<!-- Single Column Body Module -->
+<!-- Section 1: Single Column Body Module -->
 
-<section id="section-1" class="module">
+<section id="firefox-tools" class="module">
 <aside class="module-aside table-of-contents" markdown="1">
 
 ###### Contents
 
-1. [Label Title 1](#section-1 'Label Title 1')
-2. [Label Title 2](#section-2 'Label Title 2')
-3. [Label Title 3](#section-3 'Label Title 3')
-4. [Label Title 4](#section-4 'Label Title 4')
+1. [Firefox Tools](#firefox-tools)
+2. [User Experience](#user-experience)
+3. [Firefox for Android](#firefox-for-android)
+4. [Port to Firefox](#port-to-firefox)
+5. [Test and debug](#test-and-debug)
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
-## Label Title 1
+## Firefox Tools
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
+### Development tools
 
-<!-- Note -->
+All you need to create extensions for Firefox is a [text editor](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Available_text_editors) and [a version of Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Choose_a_Firefox_version_for_web_extension_develop) to support your testing. Mozilla and the Firefox extension developer community have also created a number of [extension development tools](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Development_Tools) that can simplify the coding and testing of your extension.
 
-<p class="note">Note that this is a one-way conversion. You cannot update an extension using WebExtensions to use a legacy technology. This means that you must be sure that you are ready to commit to using WebExtension APIs before you submit the updated add-on to AMO.</p>
+### Chromium-based browser extensions
 
-<!-- END: Note -->
+Get familiar with the [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) library if you’re planning on developing for both Firefox and chromium based browsers.
 
-<!-- Table -->
+This enables you to switch between the different Firefox and chromium based namespaces and asynchronous call handling methods for each type of browser.
 
-<div class="table-wrapper table-scroll" markdown="1">
+### web-ext command line tool
 
-| Column Title                          | Column Title                                                      | Column Title                                                             |
-| ------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Content scripts matching URL patterns | <a href="#" title="content-scripts"><code>page-mod</code></a> API | <a href="#" title="content-scripts"><code>content-scripts</code></a> key |
-| Content scripts matching URL patterns | <a href="#" title="content-scripts"><code>page-mod</code></a> API | <a href="#" title="content-scripts"><code>content-scripts</code></a> key |
-| Content scripts matching URL patterns | <a href="#" title="content-scripts"><code>page-mod</code></a> API | <a href="#" title="content-scripts"><code>content-scripts</code></a> key |
+The web-ext tool can help you by:
 
-</div>
-
-<!-- END: Table -->
+- providing features to automatically reload your extension preview as the code changes
+- assist with debugging
+- create extension packages, and more
 
 </div>
 </article>
 </section>
 
-<!-- END: Single Column Body Module -->
+<!-- END: Section 1: Single Column Body Module -->
 
-<!-- Single Column Body Module -->
+<!-- Section 2 -->
 
-<section id="section-2" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
-
-## Label Title 2
-
-You reference all extensions API functions using a namespace, for example, `browser.alarms.create([delayInMinutes]);` would create an alram in Firefox that goes off after the time specified in `code goes here`
-
-[`code link goes here`](https://www.firefox.com 'Code link example') and [`runtime.sendNativeMessage()`](https://www.firefox.com 'Code link example')
-
-<!-- Syntax Highlighting -->
-
-{% highlight javascript linenos %}
-function setCurrentChoice(result) {
-document.querySelector('#color').value = result.color || 'blue';
-}
-{% endhighlight %}
-
-<!-- END: Syntax Highlighting -->
-
-</div>
-</article>
-</section>
-
-<!-- END: Single Column Body Module -->
-
-<!-- Page navigation section
-	(wrap modules in a page section container
-	when they are all part of the section
-	referenced by a table of contents link) -->
-
-<section id="section-3" class="page-section-container">
+<section id="user-experience">
 
 <!-- Single Column Body Module -->
 
@@ -122,11 +83,79 @@ document.querySelector('#color').value = result.color || 'blue';
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
-## Label Title 3
+## User Experience
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
+</div>
+</article>
+</section>
 
-<p class="note alert">Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+<!-- END: Single Column Body Module -->
+
+<!-- Two Column Body Module -->
+
+<section class="module">
+<article class="module-content grid-x grid-padding-x align-middle">
+<div class="cell small-12 medium-6" markdown="1">
+
+![Great user experiences]({% asset "documentation/develop/GreatUserExperiences_promo.jpg" @path @optim %})
+
+</div>
+<div class="cell small-12 medium-6" markdown="1">
+
+Having an exceptional user experience is crucial to attracting, and retaining, users of your extension.
+
+[RememBear](https://addons.mozilla.org/firefox/addon/remembear-app/) is a great example of an extension with an outstanding user experience.
+
+</div>
+</article>
+</section>
+
+<!-- END: Two Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+<section class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+### Make a great first impression
+
+Focus on a slick [onboarding flow](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices) that gets users up to speed with your extension quickly.
+
+If your extension collects user data during onboarding, make sure you follow the [best practices for collecting user data consents](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Prompt_users_for_data_and_privacy_consents). And, it’s important that you [request the right permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions).
+
+### Put your user first
+
+Keep your users engaged and follow the [user experience best practices](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices). And, don’t forget to [build an accessible extension](https://trello.com/c/ez7X6Qy2/129-accessibility-for-extensions), so that everyone can make use of it.
+
+Lastly, [building a secure extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Security_best_practices) is fundamental to delivering an excellent user experience.
+
+### Define your value proposition
+
+Users are less likely to install an extension if they don’t understand what it does and what value it adds to their browsing experience.
+Find out best practices for putting your best foot forward with your extension.
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+</section>
+
+<!-- END: Section 2 -->
+
+<!-- Section 3 -->
+
+<section id="firefox-for-android">
+
+<!-- Single Column Body Module -->
+
+<section class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+## Firefox for Android
 
 </div>
 </article>
@@ -140,14 +169,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <article class="module-content grid-x grid-padding-x align-middle">
 <div class="cell small-12 medium-6 medium-order-2" markdown="1">
 
-![Example Alt Tag Description]({% asset "fpo-half-width-image-1.jpg" @path @optim %} "Example Title Tag Description")
+![Moble Extensions]({% asset "documentation/develop/MobleExtensions_promo.jpg" @path @optim %})
 
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-#### [Laser Cat](https://www.firefox.com)
+### Understanding how to develop extensions for Android
 
-This page provides a succinct description of the extension, clear instructions on how to fire your cat’s lasers, and how to turn your laser cat on and off.
+To offer your extension to Firefox for Android users, you’ll need to consider some [differences between Firefox for the desktop and Android](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_desktop_and_Android).
+
+Get started with everything you need to know about [developing for Firefox for Android](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android).
 
 </div>
 </article>
@@ -155,70 +186,66 @@ This page provides a succinct description of the extension, clear instructions o
 
 <!-- END: Two Column Body Module -->
 
-<!-- Two Column Body Module With Aside -->
+<!-- Single Column Body Module -->
+
+<section class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+### Creating browser experiences for Android apps
+
+If you develop Android apps, when you want to include a browser experience in your app you can take advantage of the browser engine that underpins Firefox using the [GeckoView Extensions Android library](https://github.com/mozilla/geckoview).
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+</section>
+
+<!-- END: Section 3 -->
+
+<!-- Section 4 -->
+
+<section id="port-to-firefox">
+
+<!-- Single Column Body Module -->
+
+<section class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+## Port to Firefox
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+<!-- Two Column Body Module -->
 
 <section class="module">
 <article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6 medium-order-2" markdown="1">
 
-![Example Alt Tag Description]({% asset "fpo-half-width-image-2.png" @path @optim %} "Example Title Tag Description")
-
-</div>
-<div class="cell small-12 medium-6" markdown="1">
-
-#### [Ghostery - Privacy Ad Blocker](https://www.firefox.com)
-
-As the features of Ghostery are mostly silent, this onboarding screen gives users two options for the initial setup: A simple one-click option and a link to the full settings so they can customize how Ghostery works.
+![Chrome To Firefox Extensions]({% asset "documentation/develop/ChromeToFirefoxExtensions_promo.jpg" @path @optim %})
 
 </div>
-</article>
-<aside class="module-aside tile" markdown="1">
+<div class="cell small-12 medium-6" markdown="1">
 
-###### Related Content
+### Bring your Chrome extension to Firefox
 
-Cards contain content and links about a single subject.
+The Firefox extension environment is highly compatible with chromium-based extension technology. Your extension might already be capable of running on Firefox, or need only a few changes.
 
-[Related Article](https://www.firefox.com)
-
-</aside>
-</section>
-
-<!-- END: Two Column Body Module With Aside -->
-
-</section>
-
-<!-- END: page navigation section -->
-
-<!-- Single Column Body Module -->
-
-<section id="section-4" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
-
-## Label Title 4
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
-
-<!-- Expandable List -->
-
-<dl class="expandable-list" aria-label="Accordion Control Button Group">
-<dt><button aria-controls="content-1" aria-expanded="true">How do I change my developer account information?</button></dt>
-<dd aria-hidden="false" id="content-1">Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
-
-<dt><button aria-controls="content-2" aria-expanded="true">How do I manage access to account information for multiple members of my team or company?</button></dt>
-<dd aria-hidden="false" id="content-2">Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
-
-<dt><button aria-controls="content-3" aria-expanded="true">What is the developer's revenue share?</button></dt>
-<dd aria-hidden="false" id="content-3">Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
-</dl>
-
-<!-- END: Expandable List -->
+[Test your extension’s compatibility](https://www.extensiontest.com/) and check out our [porting guide](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension) to get started.
 
 </div>
 </article>
 </section>
 
-<!-- END: Single Column Body Module -->
+<!-- END: Two Column Body Module -->
 
 <!-- Single Column Body Module -->
 
@@ -226,9 +253,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
-## Phase 1 Components
+### Update a legacy Firefox extension
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
+If you have a [legacy Firefox extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on), you can still find out how to get it up and running on the latest version of Firefox. Check out the porting information for the [Add-on SDK](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK) and [XUL/XPCOM](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions) based extensions.
 
 </div>
 </article>
@@ -236,104 +263,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- END: Single Column Body Module -->
 
-<!-- Full Width Image -->
-
-<section class="module image-with-caption">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
-
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @optim @path %} "Screenshot Remembear") Full width image (above)
-
-</div>
-</article>
 </section>
 
-<!-- END: Full Width Image -->
+<!-- END: Section 4 -->
 
-<!-- Half Width Images -->
+<!-- Section 5 -->
 
-<section class="module image-with-caption">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12 medium-6" markdown="1">
-
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear") Half width image (above)
-
-</div>
-<div class="cell small-12 medium-6" markdown="1">
-
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear") Half width image (above)
-
-</div>
-</article>
-</section>
-
-<!-- END: Half Width Images -->
-
-<!-- Video Popup Thumbnail -->
-
-<section class="module video-popup">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
-
-[![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'What’s Great Content and Design?')
-
-</div>
-</article>
-</section>
-
-<!-- END: Video Popup Thumbnail -->
-
-<!-- Half Width Video Popup Thumbnails -->
-
-<section class="module video-popup">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12 medium-6" markdown="1">
-
-![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %} "What’s Great Content and Design?")
-
-#### What’s Great Content and Design?
-
-Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
-
-</div>
-<div class="cell small-12 medium-6" markdown="1">
-
-[![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'What’s Great Content and Design?')
-
-#### What’s Great Content and Design?
-
-Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
-
-</div>
-</article>
-</section>
-
-<!-- END: Half Width Video Popup Thumbnails -->
-
-<!-- Icon Grid *** use "shrink" class to fit grid to image size -OR- use "auto" class to fit images to grid width *** -->
-
-<section class="module icon-grid">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
-
-### Icons
-
-<small>Examples of goood icons</small>
-
-</div>
-<div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
-</div>
-<div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
-</div>
-<div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
-</div>
-</article>
-</section>
-
-<!-- END: Image Grid -->
+<section id="test-and-debug">
 
 <!-- Single Column Body Module -->
 
@@ -341,18 +277,15 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
-Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
+## Test and debug
 
-Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org').
+### Make sure your extension is running right
 
-Between your extension name and subtitle, you have up to 70 characters to use—that’s because 70 is the max character limit for your headline in external search results. It’s best to keep your extension name shorter so you have more characters left over for your subtitle.
+Test and [debug your code](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging) by [temporarily installing](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) it in Firefox.
 
-- Tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Enim facilisis gravida neque convallis a cras.
-- Id diam vel quam elementum pulvinar etiam non. Quam id leo in vitae turpis.
+Understanding [extensions and the Add-on ID](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) will help you test more effectively. You will also want to [test persistent and restart features](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features) along with [permission requests](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Test_permission_requests).
 
-### Extension Name Do’s and Don’ts
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+You can use [web-ext](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext) to automatically install and update your extension while making coding changes.
 
 </div>
 </article>
@@ -360,196 +293,9 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 <!-- END: Single Column Body Module -->
 
-<!-- Do this -->
-
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="do-this" markdown="1"><header><h6>Do This</h6></header>
-
-1. **Make it memorable**
-2. **Make it unique**
-3. **Keep it short for better display on smaller screens**
-4. **Make it easy to read and say**
-5. **Give an idea or hint about what your extension does with an illustrative word or metaphor**
-
-<!-- Example (Block) -->
-
-<div class="example" markdown="1">
-
-Examples: An extension that saves passwords is called **Remembear**
-
-An extension that puts a cat on new tabs is called **Tabbycat**
-
-An extension that improves YouTube is called **Enhancer for YouTube**
-
-</div>
-
-<!-- END: Example (Block) -->
-
-</div>
-</div>
-</article>
 </section>
 
-<!-- END: Do this -->
-
-<!-- Not this -->
-
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="not-this" markdown="1"><header><h6>Not This</h6></header>
-
-###### 1. Don't include a description.
-
-Save these details for your subtitle and description.
-
-<!-- Example (Inline) -->
-
-<span class="example">Example: Videomix, a fast video downloader</span>
-
-<!-- END: Example (Inline) -->
-
-###### 2. Don't stuff it with keywords.
-
-Google is smarter than this and it just makes your extension look untrustworthy.
-
-<!-- Example (Inline) -->
-
-<span class="example">Example: Youtube Download Videos, Convert, Media, MP3, MP4, Free.</span>
-
-<!-- END: Example (Inline) -->
-
-###### 3. Don't use random words to differentiate, like “Barbara Notetaker.”
-
-Instead, create a descriptive name that is not already in use, like “Instant Notetaker.”
-
-###### 4. Don't call it something with no meaning, like “hoyv.”
-
-While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad-blocking extension does because it contains the word “block”.
-
-###### 5. Don't include "WebExtension," “Firefox” or “Mozilla."
-
-###### 6. Don't include version number or a previous name.
-
-<!-- Example (Inline) -->
-
-<span class="example">Example: Weatherchanger (fix version)</span>
-
-<!-- END: Example (Inline) -->
-
-###### 7. Don't make it hard to read or say.
-
-<!-- Example (Inline) -->
-
-<span class="example">Example: TrLrs! Tab Changer.</span>
-
-<!-- END: Example (Inline) -->
-
-###### Remembear Example:
-
-<!-- Full Width Image -->
-
-<section class="image-with-caption" markdown="1">
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear")
-</section>
-
-<!-- END: Full Width Image -->
-
-###### List Example:
-
-- [Honey ](https://firefox.com 'Honey ')
-- [Ghoastery](https://firefox.com 'Ghoastery')
-- [Disconnect](https://firefox.com 'Disconnect')
-- [Ecoesia](https://firefox.com 'Ecoesia')
-- [Mate Translate](https://firefox.com 'Mate Translate')
-
-</div>
-</div>
-</article>
-</section>
-
-<!-- END: Not this -->
-
-<!-- Do this, not this, side-by-side -->
-
-<section class="module do-this-not-this">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12 medium-6">
-<div class="do-this" markdown="1"><header><h6>Do This</h6></header>
-
-1. **Make it memorable**
-2. **Make it unique**
-3. **Keep it short for better display on smaller screens**
-
-<!-- Example (Block) -->
-
-<div class="example" markdown="1">
-
-Examples: An extension that saves passwords is called **Remembear**
-
-An extension that puts a cat on new tabs is called **Tabbycat**
-
-An extension that improves YouTube is called **Enhancer for YouTube**
-
-</div>
-
-<!-- END: Example (Block) -->
-
-</div>
-</div>
-<div class="cell small-12 medium-6">
-<div class="not-this" markdown="1"><header><h6>Not This</h6></header>
-
-1. **Make it memorable**
-2. **Make it unique**
-3. **Keep it short for better display on smaller screens**
-
-<!-- Example (Block) -->
-
-<div class="example" markdown="1">
-
-Examples: An extension that saves passwords is called **Remembear**
-
-An extension that puts a cat on new tabs is called **Tabbycat**
-
-An extension that improves YouTube is called **Enhancer for YouTube**
-
-</div>
-
-<!-- END: Example (Block) -->
-
-</div>
-</div>
-</article>
-</section>
-
-<!-- END: Do this, not this, side-by-side -->
-
-<!-- Tile -->
-
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12 tile" markdown="1">
-
-#### Requirements
-
-- Minimum length: 2 characters
-- Maximum length: 70 characters between extension name and subtitle
-- Lorem ipsum: dolor sit amet, consectetur adipiscing elit
-- Sed do eiusmod: tempor incididunt ut labore et dolore magna aliqua
-- Ut enim ad: minim veniam, quis nostrud exercitation ullamco laboris
-- Nisi ut aliquip: ex ea commodo consequat
-- Duis aute: irure dolor in reprehenderit in voluptate velit esse cillum
-- Excepteur sint: occaecat cupidatat non proident
-- Bunt in culpa: qui officia deserunt mollit anim id est laborum
-
-</div>
-</article>
-</section>
-
-<!-- END: Tile -->
+<!-- END: Section 5 -->
 
 <!-- Meta Data -->
 
