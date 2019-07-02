@@ -78,6 +78,8 @@ On MDN, you’ll find:
 - Explanations of key extension development concepts
 - A guide to extension UI components
 - How to use the extension Javascript APIs.
+- A reference guide for the extension Javascript APIs, including compatibility tables for other popular browsers.
+- A reference guide for the manifest.json file and its keys.
 
 </div>
 </article>
