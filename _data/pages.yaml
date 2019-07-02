@@ -16,6 +16,19 @@
           pages:
             - title: "Build an extension in 5 minutes"
               url: "/documentation/develop/build-an-extension-in-5-minutes"
+            - title: "Browser Extension Development Tools"
+              url: "/documentation/develop/browser-extension-development-tools/"
+              subpageitems: 
+                - title: "Boilerplating tools"
+                  id: "boilerplating-tools"
+                - title: "Coding tools"
+                  id: "coding-tools"
+                - title: "Testing and debugging tools"
+                  id: "testing-and-debugging-tools"
+                - title: "Translation tools"
+                  id: "translation-tools"
+                - title: "Tools for Firefox for Android"
+                  id: "tools-for-firefox-for-android"
             - title: "Getting started with web-ext"
               url: "/documentation/develop/getting-started-with-web-ext/"
               subpageitems:
@@ -65,6 +78,11 @@
       url: "/documentation/themes/"
 - title: "Extension Basics"
   url: "/extension-basics/"
+  subpageitems:
+    - title: "Getting started"
+      id: "getting-started"
+    - title: "Mozilla Developer Network"
+      id: "mozilla-developer-network"
 - title: "Community"
   url: "/community/"
   subpageitems:

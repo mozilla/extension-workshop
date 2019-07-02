@@ -3,10 +3,10 @@ layout: sidebar
 title: Extension Basics
 permalink: /extension-basics/
 published: false
-tags: [label, distribution, install, remove]
-contributors: [caitmuenster, muffinresearch, bqbn]
-author: caitmuenster
-date: 2019-06-24 09:00:00
+tags:
+contributors:
+author:
+date: 2019-07-02 09:00:00
 ---
 
 <!-- Overview Page Hero Banner -->
@@ -17,20 +17,133 @@ date: 2019-06-24 09:00:00
 <div class="cell small-12">
 <div class="overview-hero-description" markdown="1">
 
-# Extension Basics
+# Bring your extension to life
 
-Short and brief description of the sort of content you will find on this page.
-
-</div>
-<div class="overview-hero-cta">
-
-<a href="/documentation/develop/getting-started-with-web-ext/" class="button">Do first thing</a>
-<a href="/documentation/develop/build-an-extension-in-5-minutes" class="button secondary">Do second thing</a>
+Get how-tos, resources, and information to successfully build and ship your extension for Firefox.
 
 </div>
+<div class="overview-hero-cta"></div>
 </div>
 </article>
 </div>
 </section>
 
 <!-- END: Overview Page Hero Banner -->
+
+<!-- Single Column Body Module -->
+
+<section id="getting-started" class="module">
+<aside class="module-aside table-of-contents" markdown="1">
+
+###### Contents
+
+1. [Getting started](#getting-started)
+2. [Mozilla Developer Network](#mozilla-developer-network)
+
+</aside>
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+## Getting started
+
+The Extension Workshop can help you develop extensions for Firefox and give your users simple, yet powerful ways to customize their browsing experience. You’ll find:
+
+- Overview of the Firefox extension features
+- Tools and processes for developing and testing
+- How to publish your extension on addons.mozilla.org or distribute it yourself.
+- How to manage your published extension
+- An enterprise guide for developing and using extensions
+- How to develop themes for Firefox
+- Firefox developer communities
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+<section id="mozilla-developer-network" class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+## Mozilla Developer Network
+
+Documentation for the WebExtensions API can be found on the [Mozilla Developer Network](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions) (MDN).
+
+On MDN, you’ll find:
+
+- Tutorials to help you start
+- Explanations of key extension development concepts
+- A guide to extension UI components
+- How to use the extension Javascript APIs.
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+<!-- Meta Data -->
+
+{%- include page-meta-data.html -%}
+
+<!-- END: Meta Data -->
+
+<!-- Up Next -->
+
+<section class="module up-next">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+###### Up Next
+
+</div>
+
+<!-- Tile -->
+
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Web-ext Webpack plug-in
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+<!-- Tile -->
+
+<a href="/documentation/develop/web-ext-command-reference" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Web-ext command reference
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+<!-- Tile -->
+
+<a href="/documentation/develop/browser-api-polyfill" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Browser API Polyfill
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+</article>
+</section>
+
+<!-- END: Up Next -->
