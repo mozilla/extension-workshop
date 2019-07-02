@@ -72,6 +72,13 @@
               url: "/documentation/develop/developing-for-firefox-for-android/"
     - title: "Publish"
       url: "/documentation/publish/"
+      subpageitems:
+        - title: "Get your extension signed"
+          id: "get-your-extension-signed"
+        - title: "Distribute your signed extension"
+          id: "distribute-your-signed-extension"
+        - title: "Promote your extension"
+          id: "promote-your-extension"
     - title: "Manage"
       url: "/documentation/manage/"
     - title: "Enterprise"
