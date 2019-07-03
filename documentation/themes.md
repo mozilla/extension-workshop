@@ -3,9 +3,9 @@ layout: sidebar
 title: Themes
 permalink: /documentation/themes/
 published: false
-tags: [label, distribution, install, remove]
-contributors: [caitmuenster, muffinresearch, bqbn]
-author: caitmuenster
+tags: []
+contributors: []
+author: 
 date: 2019-06-24 09:00:00
 ---
 
@@ -17,20 +17,134 @@ date: 2019-06-24 09:00:00
 <div class="cell small-12">
 <div class="overview-hero-description" markdown="1">
 
-# Themes
+# Enable creative expression with themes
 
-Short and brief description of the sort of content you will find on this page.
-
-</div>
-<div class="overview-hero-cta">
-
-<a href="/documentation/develop/" class="button">Do first thing</a>
-<a href="/documentation/develop/" class="button secondary">Do second thing</a>
+Users can more deeply personalize Firefox by personalizing the look of their browser.
 
 </div>
+<div class="overview-hero-cta"></div>
 </div>
 </article>
 </div>
 </section>
 
 <!-- END: Overview Page Hero Banner -->
+
+<!-- Section 1: Single Column Body Module -->
+
+<section id="what-themes-are" class="module">
+<aside class="module-aside table-of-contents" markdown="1">
+
+###### Contents
+
+1. [What themes are](#what-themes-are)
+2. [Creating themes](#creating-themes)
+
+</aside>
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+## What themes are
+
+[Themes](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts) add images to the header area of the Firefox browser—the area behind the menu bar, toolbars, address bar, search bar, and tab strip—and can adjust the color of various UI components, such as text and toolbar icons.
+
+</div>
+</article>
+</section>
+
+<!-- END: Section 1: Single Column Body Module -->
+
+
+<!-- Single Column Body Module -->
+
+<section id="creating-themes" class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+## Creating themes
+
+<div class="image-with-caption" markdown="1">
+
+![Themes]({% asset "documentation/develop/Themes_fullwidth.jpg" @optim @path %})
+
+</div>
+
+There are four ways you can create themes:
+
+- __[Use the AMO theme generator](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes/Using_the_AMO_theme_generator):__ Create themes that are hosted on AMO or you distribute yourself. Not all features are available.
+
+- __Use [Firefox Color](https://color.firefox.com):__ Create on-the-fly themes in Firefox. You can generate a URL to share the theme or export the theme as an add-on package. Not all features are available.
+
+- __Code a theme yourself:__ Take advantage of all the theme features available. For instance, add color to more UI components, or utilize the ability to use multiple images.  You can then choose to host these themes on AMO or distribute them yourself.
+
+- __Include themes in your extension:__ Use the [theme API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme) to take advantage of the full range of features in standalone themes.  You can activate these themes based on user requests or dynamic information, like the time of day or the webpage the user is viewing.
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+
+<!-- Meta Data -->
+
+{%- include page-meta-data.html -%}
+
+<!-- END: Meta Data -->
+
+<!-- Up Next -->
+
+<section class="module up-next">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12" markdown="1">
+
+###### Up Next
+
+</div>
+
+<!-- Tile -->
+
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Web-ext Webpack plug-in
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+<!-- Tile -->
+
+<a href="/documentation/develop/web-ext-command-reference" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Web-ext command reference
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+<!-- Tile -->
+
+<a href="/documentation/develop/browser-api-polyfill" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+	
+Develop
+
+##### Browser API Polyfill
+
+</div>
+</a>
+
+<!-- END: Tile -->
+
+</article>
+</section>
+
+<!-- END: Up Next -->
