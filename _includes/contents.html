@@ -1,0 +1,125 @@
+{% for item in site.data.pages %}
+
+    {% if item.categories %}   
+
+        {% if page.url == item.url %}
+            
+            {% if item.subpageitems %}
+                <h6>Contents</h6>
+                <ol>
+                {% for section in item.subpageitems %}
+                    <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                {% endfor %}
+                </ol>
+            {% endif %}
+
+        {% endif %}
+
+        {% for cat in item.categories %}
+
+
+                {% if cat.pages %}
+
+                        {% for pg in cat.pages %}
+
+                            {% if page.url == pg.url %}
+                                
+                                {% if pg.subpageitems %}
+                                    <h6>Contents</h6>
+                                    <ol>
+                                    {% for section in pg.subpageitems %}
+                                        <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                                    {% endfor %}
+                                    </ol>
+                                {% endif %}
+
+                            {% endif %}
+
+                        {% endfor %}
+
+                {% endif %}
+
+
+        {% endfor %}
+
+    {% elsif item.subfolderitems %}
+
+        {% for subitem in item.subfolderitems %}
+
+            {% if subitem.categories %}
+
+                {% if page.url == subitem.url %}
+                    
+                    {% if subitem.subpageitems %}
+                        <h6>Contents</h6>
+                        <ol>
+                        {% for section in subitem.subpageitems %}
+                            <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                        {% endfor %}
+                        </ol>
+                    {% endif %}
+
+                {% endif %}
+
+                {% for cat in subitem.categories %}
+
+                    {% if cat.pages %}
+                        {% for pg in cat.pages %}
+
+                            {% if page.url == pg.url %}
+                                
+                                {% if pg.subpageitems %}
+                                    <h6>Contents</h6>
+                                    <ol>
+                                    {% for section in pg.subpageitems %}
+                                        <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                                    {% endfor %}
+                                    </ol>
+                                {% endif %}
+
+                            {% endif %}
+
+                        {% endfor %}
+
+                    {% endif %}
+
+                {% endfor %}
+
+
+            {% else %}
+
+                {% if page.url == subitem.url %}
+                    
+                    {% if subitem.subpageitems %}
+                        <h6>Contents</h6>
+                        <ol>
+                        {% for section in subitem.subpageitems %}
+                            <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                        {% endfor %}
+                        </ol>
+                    {% endif %}
+
+                {% endif %}
+                
+            {% endif %}
+
+        {% endfor %}
+
+    {% else %}
+
+        {% if page.url == item.url %}
+            
+            {% if item.subpageitems %}
+                <h6>Contents</h6>
+                <ol>
+                {% for section in item.subpageitems %}
+                    <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
+                {% endfor %}
+                </ol>
+            {% endif %}
+
+        {% endif %}
+
+    {% endif %}
+
+{% endfor %}

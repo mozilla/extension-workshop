@@ -33,13 +33,9 @@ Learn how to get your extension signed and distributed worldwide or to your ente
 <!-- Section 1: Single Column Body Module -->
 
 <section id="get-your-extension-signed" class="module">
-<aside class="module-aside table-of-contents" markdown="1">
+<aside class="module-aside table-of-contents">
 
-###### Contents
-
-1. [Get your extension signed](#get-your-extension-signed)
-2. [Distribute your signed extension](#distribute-your-signed-extension)
-3. [Promote your extension](#promote-your-extension)
+{%- include contents.html -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">

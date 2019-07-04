@@ -33,12 +33,9 @@ Users can more deeply personalize Firefox by personalizing the look of their bro
 <!-- Section 1: Single Column Body Module -->
 
 <section id="what-themes-are" class="module">
-<aside class="module-aside table-of-contents" markdown="1">
+<aside class="module-aside table-of-contents">
 
-###### Contents
-
-1. [What themes are](#what-themes-are)
-2. [Creating themes](#creating-themes)
+{%- include contents.html -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">

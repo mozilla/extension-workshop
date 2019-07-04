@@ -33,13 +33,9 @@ Firefox gives your enterprise a high-performance, standards compliant, manageabl
 <!-- Single Column Body Module -->
 
 <section id="introduction" class="module">
-<aside class="module-aside table-of-contents" markdown="1">
+<aside class="module-aside table-of-contents">
 
-###### Contents
-
-1. [Section Title](#introduction)
-2. [Developing your enterprise extension](#developing-your-enterprise-extension)
-3. [Distributing your enterprise extension](#distributing-your-enterprise-extension)
+{%- include contents.html -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">

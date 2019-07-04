@@ -131,7 +131,7 @@ The webextensions-examples GitHub repository is a collection browser extension e
 <!-- Single Column Body Module -->
 
 <section class="module">
-<aside class="module-aside table-of-contents" markdown="1"></aside>
+<aside class="module-aside" markdown="1"></aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
@@ -256,7 +256,7 @@ To get started, install using npm and load the library into the contexts where b
 <!-- Single Column Body Module -->
 
 <section class="module">
-<aside class="module-aside table-of-contents" markdown="1"></aside>
+<aside class="module-aside" markdown="1"></aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
@@ -347,7 +347,7 @@ To get started, enable Browser Toolbox then open about:debugging and click debug
 <!-- Single Column Body Module -->
 
 <section class="module">
-<aside class="module-aside table-of-contents" markdown="1"></aside>
+<aside class="module-aside" markdown="1"></aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
@@ -444,7 +444,7 @@ To get started, [visit the tool online](https://morikko.github.io/translate-web-
 <!-- Single Column Body Module -->
 
 <section class="module">
-<aside class="module-aside table-of-contents" markdown="1"></aside>
+<aside class="module-aside" markdown="1"></aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 

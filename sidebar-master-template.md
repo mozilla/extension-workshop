@@ -39,14 +39,9 @@ Short and brief description of the sort of content you will find on this page.
 <!-- Single Column Body Module -->
 
 <section id="section-1" class="module">
-<aside class="module-aside table-of-contents" markdown="1">
+<aside class="module-aside table-of-contents">
 
-###### Contents
-
-1. [Label Title 1](#section-1 'Label Title 1')
-2. [Label Title 2](#section-2 'Label Title 2')
-3. [Label Title 3](#section-3 'Label Title 3')
-4. [Label Title 4](#section-4 'Label Title 4')
+{%- include contents.html -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">

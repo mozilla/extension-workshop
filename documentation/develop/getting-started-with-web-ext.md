@@ -40,13 +40,9 @@ web-ext is a command line tool designed to speed up various parts of the extensi
 <!-- Single Column Body Module -->
 
 <section id="installation-section" class="module">
-<aside class="module-aside table-of-contents" markdown="1">
+<aside class="module-aside table-of-contents">
 
-###### Contents
-
-1. [Installation](#installation-section 'Installation')
-2. [Using web-ext](#using-web-ext-section 'Using web-ext')
-3. [See also](#see-also-section 'See also')
+{%- include contents.html -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">

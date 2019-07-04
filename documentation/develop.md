@@ -33,15 +33,9 @@ Support your development workflow with these straightforward tools and guides.
 <!-- Section 1: Single Column Body Module -->
 
 <section id="firefox-tools" class="module">
-<aside class="module-aside table-of-contents" markdown="1">
+<aside class="module-aside table-of-contents">
 
-###### Contents
-
-1. [Firefox Tools](#firefox-tools)
-2. [User Experience](#user-experience)
-3. [Firefox for Android](#firefox-for-android)
-4. [Port to Firefox](#port-to-firefox)
-5. [Test and debug](#test-and-debug)
+{%- include contents.html -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">

@@ -33,13 +33,9 @@ Tap into the worldwide network of Firefox developers help improve the Firefox ad
 <!-- Single Column Body Module -->
 
 <section id="who-is-part-of-the-community" class="module">
-<aside class="module-aside table-of-contents" markdown="1">
+<aside class="module-aside table-of-contents">
 
-###### Contents
-
-1. [Who is part of the community?](#who-is-part-of-the-community)
-2. [Connect with the community](#connect-with-the-community)
-3. [Get involved in the community](#get-involved-in-the-community)
+{%- include contents.html -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">

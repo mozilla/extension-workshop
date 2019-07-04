@@ -33,12 +33,9 @@ Get how-tos, resources, and information to successfully build and ship your exte
 <!-- Single Column Body Module -->
 
 <section id="getting-started" class="module">
-<aside class="module-aside table-of-contents" markdown="1">
+<aside class="module-aside table-of-contents">
 
-###### Contents
-
-1. [Getting started](#getting-started)
-2. [Mozilla Developer Network](#mozilla-developer-network)
+{%- include contents.html -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">

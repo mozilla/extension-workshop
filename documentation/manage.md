@@ -33,15 +33,9 @@ Manage your extension to keep it growing, accurate, and integrated with Firefox
 <!-- Single Column Body Module -->
 
 <section id="stay-informed-when-firefox-changes" class="module">
-<aside class="module-aside table-of-contents" markdown="1">
+<aside class="module-aside table-of-contents">
 
-###### Contents
-
-1. [Stay informed when Firefox changes](#stay-informed-when-firefox-changes)
-2. [Promote your extension](#promote-your-extension)
-3. [Publish extension updates](#publish-extension-updates)
-4. [Manage authors of your extension](#manage-authors-of-your-extension)
-5. [Removing your extension from distribution](#removing-your-extension-from-distribution)
+{%- include contents.html -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">

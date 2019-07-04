@@ -31,6 +31,13 @@
                   id: "translation-tools"
                 - title: "Tools for Firefox for Android"
                   id: "tools-for-firefox-for-android"
+            - title: "Choosing a Firefox version for extension development"
+              url: "/documentation/develop/choosing-a-firefox-version-for-extension-development/"
+              subpageitems: 
+                - title: "Firefox editions"
+                  id: "firefox-editions"
+                - title: "Firefox version and their web extension development capabilities"
+                  id: "firefox-version-and-their-web-extension-development-capabilities"
             - title: "Getting started with web-ext"
               url: "/documentation/develop/getting-started-with-web-ext/"
               subpageitems:
