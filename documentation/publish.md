@@ -3,7 +3,7 @@ layout: sidebar
 title: Publish
 permalink: /documentation/publish/
 published: false
-tags:
+tags: []
 contributors: [caitmuenster]
 author: caitmuenster
 date: 2019-07-09 09:00:00
