@@ -4,9 +4,9 @@ title: Manage
 permalink: /documentation/manage/
 published: false
 tags: []
-contributors: []
-author: 
-date: 2019-06-24 09:00:00
+contributors: [caitmuenster]
+author: caitmuenster
+date: 2019-07-09 09:00:00
 ---
 
 <!-- Overview Page Hero Banner -->
