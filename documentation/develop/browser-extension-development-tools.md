@@ -35,14 +35,13 @@ date: 2019-03-21 12:47:53
 Mozilla and the Firefox browser extension developer community have created a range of tools that can simplify and speed up your browser extension development. This page provides a summary of those tools including details on the features each offers, how to get started, where in the development cycle it fits, and links to useful resources.
 
 </div>
+<div class="page-hero-cta"></div>
 </div>
 </article>
 </div>
 </section>
 
 <!-- END: Page Hero Banner -->
-
-<section id="boilerplating-tools">
 
 <!-- Single Column Body Module -->
 
@@ -57,6 +56,8 @@ Mozilla and the Firefox browser extension developer community have created a ran
 </section>
 
 <!-- END: Single Column Body Module -->
+
+<section id="boilerplating-tools">
 
 <!-- Single Column Body Module -->
 
@@ -131,7 +132,6 @@ The webextensions-examples GitHub repository is a collection browser extension e
 <!-- Single Column Body Module -->
 
 <section class="module">
-<aside class="module-aside" markdown="1"></aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
@@ -256,7 +256,6 @@ To get started, install using npm and load the library into the contexts where b
 <!-- Single Column Body Module -->
 
 <section class="module">
-<aside class="module-aside" markdown="1"></aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
@@ -347,7 +346,6 @@ To get started, enable Browser Toolbox then open about:debugging and click debug
 <!-- Single Column Body Module -->
 
 <section class="module">
-<aside class="module-aside" markdown="1"></aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
@@ -444,7 +442,6 @@ To get started, [visit the tool online](https://morikko.github.io/translate-web-
 <!-- Single Column Body Module -->
 
 <section class="module">
-<aside class="module-aside" markdown="1"></aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
