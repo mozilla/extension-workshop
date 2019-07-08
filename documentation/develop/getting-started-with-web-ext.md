@@ -47,25 +47,21 @@ date: 2019-04-16 10:25:55
 
 `web-ext` is a node-based application that you install with the [nodejs/npm](https://nodejs.org/) tool. Install web-ext using the following command:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 npm install --global web-ext
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 `web-ext` requires the current [LTS](https://github.com/nodejs/Release#release-schedule) (long-term support) versions of [NodeJS](https://nodejs.org/).
 
 To test whether the installation worked run the following command, which displays the `web-ext` version number:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext --version
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 </div>
 </article>
@@ -87,13 +83,11 @@ Before you start using `web-ext` locate an example extension to use—if you don
 
 Test an extension in Firefox by `cd`'ing into your extensions’s root directory and entering:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext run
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 This starts Firefox and loads the extension temporarily in the browser, just as you can on the [about:debugging page](https://developer.mozilla.org/en-US/docs/Tools/about:debugging#Add-ons). Note that this `web-ext` method has the same [limitations regarding prompts for permissions and restart features](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Limitations) as about:debugging.
 
@@ -103,25 +97,21 @@ See the [run reference guide](https://developer.mozilla.org/en-US/Add-ons/WebExt
 
 The `run` command watches your source files and tells Firefox to reload the extension after you edit and save a file. For exmaple, if you changed the `name` property in your `manifest.json` file, Firefox displays the new name. This makes it easy to try out new features because you can see the effect immediately. The automatic reloading feature is active by default, you use it like this:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext run
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 You can also press the `r` key in the `web-ext` terminal to trigger an extension reload.
 
 If you experience unexpected behavior with the reloading feature, please [file a bug](https://github.com/mozilla/web-ext/issues). You can also disable reloading like this:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext run --no-reload
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 <p class="note">Extension reloading is only supported in Firefox 49 or higher.</p>
 
@@ -129,23 +119,19 @@ web-ext run --no-reload
 
 To run your extension in a version of [Firefox Desktop](https://www.mozilla.org/en-US/firefox/) other than the default, use the `--firefox` option to specify a full path to the binary file. Here is an example for Mac OS:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext run --firefox=/Applications/FirefoxNightly.app/Contents/MacOS/firefox-bin
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 On Windows, the path needs to include `firefox.exe`, for example:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext run --firefox="C:\Program Files\Mozilla Firefox\firefox.exe"
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 See the [run command](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run) reference to learn more.
 
@@ -153,13 +139,11 @@ See the [run command](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/
 
 Firefox 48 was the first stable version to use the WebExtension platform, but it doesn't allow `web-ext` to install an extension remotely. You need to run your extension in Firefox 48 using:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext run --pre-install
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 ### Testing in Firefox for Android
 
@@ -167,35 +151,29 @@ To run your extension in [Firefox for Android](https://www.mozilla.org/en-US/fir
 
 With your device connected to your development computer, run:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext run --target=firefox-android
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 This command displays the device ID for your connected Android device or devices. If you don't see a list of device IDs, make sure you set up the device for development correctly.
 
 Now, add the device ID to the command:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext run --target=firefox-android --android-device=<device ID>
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 If you've multiple versions of Firefox installed, you may need to choose a specific version. For example:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext run --target=firefox-android ... --firefox-apk=org.mozilla.firefox
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 The first time you run this command, you may need to grant Android permissions for the APK. This is because the command needs read/write access to the device storage, so that Firefox for Android can run on a temporary profile. The `web-ext` output guides you in how to grant these permissions.
 
@@ -207,13 +185,11 @@ See the [run command](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/
 
 When using `web-ext run` to test an extension on Firefox for Android, you'll notice a message like this in the console output:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 You can connect to this Android device on TCP port 51499
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 This is a remote debugger port that you can [connect to with Firefox's developer tools](https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android#Connecting). In this case, you'd connect to host `localhost` on port `51499`.
 
@@ -227,13 +203,11 @@ When you execute [web-ext run](https://developer.mozilla.org/en-US/Add-ons/WebEx
 
 By default, the `run` command will create a temporary Firefox profile. To run your extension with a specific profile use the `--firefox-profile` option, like this:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext run --firefox-profile=your-custom-profile
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 This option accepts a string containing the name of your profile or an absolute path to the profile directory. This is helpful if you want to manually configure some settings that will always be available to the `run` command.
 
@@ -241,13 +215,11 @@ This option accepts a string containing the name of your profile or an absolute 
 
 The `run` command does not save any changes made to the custom profile specified by `--firefox-profile`. To keep changes, add this option:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext run --keep-profile-changes --firefox-profile=your-custom-profile
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 This may be helpful if your extension has many different run states.
 
@@ -257,13 +229,11 @@ This may be helpful if your extension has many different run states.
 
 Once you've tested your extension and verified that it's working, you can turn it into a package for submitting to `addons.mozilla.org` using the following command:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext build
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 This outputs a full path to the generated `.zip` file that can be loaded into a browser.
 
@@ -277,13 +247,11 @@ See the [build reference guide](https://developer.mozilla.org/en-US/Add-ons/WebE
 
 As an alternative to publishing your extension on [addons.mozilla.org](https://addons.mozilla.org/), you can self-host your package file but it needs to be [signed by Mozilla](https://developer.mozilla.org/Add-ons/Distribution) first. The following command packages and signs a ZIP file, then returns it as a signed XPI file for distribution:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 The API options are required to specify your [addons.mozilla.org credentials](https://addons.mozilla.org/en-US/developers/addon/api/key/).
 
@@ -298,25 +266,21 @@ See the [sign reference guide](https://developer.mozilla.org/en-US/Add-ons/WebEx
 
 `web-ext` supports signing extensions that do not declare the [applications.gecko.id](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/applications) property in their manifest. The first time you sign an extension without an explicit ID, [addons.mozilla.org](https://addons.mozilla.org/) will generate an ID and `web-ext` will save it to `.web-extension-id` in the working directory. You should save the ID file so that you can sign future versions of the same extension. If you lose the ID file, you will have to add back the `applications.gecko.id` property or use the `--id` option when signing, for example:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext sign --api-key=... --api-secret=... --id="{c23c69a7-f889-447c-9d6b-7694be8035bc}"
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 ### Signing in a restricted environment
 
 If you're working in an environment that restricts access to certain domains, you can try using a proxy when signing:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext sign --api-key=... --api-secret=... --api-proxy=https://yourproxy:6000
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 See the [--api-proxy](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#--api-proxy) option to learn more.
 
@@ -331,25 +295,21 @@ If you've [listed](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Dist
 
 First, change the version number in your [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) so that it is different from the latest listed version. Then, create the unlisted version by using the [`--channel`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference#web-ext_sign) option like this:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext sign --channel=unlisted --api-key=... --api-secret=...
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 This signs and downloads an XPI file that can be installed into Firefox.
 
 Once you've finished testing, __to publish the extension you must define__ `--channel` __as listed__, as the channel option defaults to the one used previously. So, after incrementing the version in your [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), run:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext sign --channel=listed --api-key=... --api-secret=...
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 This publishes and submits your extension for review as if you had uploaded it to [addons.mozilla.org](https://addons.mozilla.org/).
 
@@ -361,13 +321,11 @@ See the [sign reference guide](https://developer.mozilla.org/en-US/Add-ons/WebEx
 
 Before trying out your extension with the [run](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/), use the `lint` command to make sure your [manifest](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json) and other source files do not contain any errors. You can also set [strict_min_version](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file and lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. Example:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext lint
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 This uses the https://github.com/mozilla/addons-linter[addons-linter](https://github.com/mozilla/addons-linter) library to walk through your source code directory and report any errors, such as the declaration of an unknown permission.
 
@@ -377,17 +335,14 @@ See the [lint reference guide](https://developer.mozilla.org/en-US/Add-ons/WebEx
 
 You can specify `--config=my-config.js` to set default values for any option. Here is an example with the `build` command:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext --config=my-config.js build
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 The file should be a CommonJS module [as understood by NodeJS](https://nodejs.org/docs/latest/api/modules.html#modules_modules) and must export each configuration value. Here is how you would set the default value of [--verbose](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#--verbose_-v) to `true`:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 module.exports = {
@@ -395,11 +350,9 @@ module.exports = {
 };
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 If you want to specify options that only apply to a specific command, you nest the configuration under the command name. Here is an example of adding configuration for [--overwrite-dest](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#--overwrite-dest_-o) that only applies to the `build` command as well as [--firefox](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#--firefox_-f) that only applies to the `run` command:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 module.exports = {
@@ -415,13 +368,11 @@ module.exports = {
 };
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 To create a configuration key for a command line option, you remove the preceding dashes and convert the name to camel case. As you can see from this example, `--overwrite-dest` was converted to `overwriteDest`.
 
 If an option can be specified multiple times on the command line then you define it as an array. For example, here is how to specify multiple [--ignore-files](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#--ignore-files_-i) patterns:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 module.exports = {
@@ -432,12 +383,10 @@ module.exports = {
 };
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 `web-ext` will also try to load its configuration options from a `"webExt"` property included in the `package.json` file in the current directory:
 
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 {
@@ -450,7 +399,6 @@ module.exports = {
 }
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 ### Automatic discovery of configuration files
 
@@ -467,13 +415,11 @@ If a home directory config and a local directory config define the same option, 
 
 To disable automatic loading of configuration files, set this option:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext --no-config-discovery run
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 To diagnose an issue related to config files, re-run your command with `--verbose`. This will tell you which config file affected which option value.
 
@@ -486,47 +432,39 @@ The preceding commands use default directories for the extension source and arti
 
 You can specify different source and destination directories using the `--source-dir` and `--artifacts-dir` options when running your commands. Their values can be relative or absolute paths, but must always be specified as strings. Here is an example of specifying both options when building an extension:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext build --source-dir=webextension-examples/notify-link-clicks-i18n --artifacts-dir=zips
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 ### Outputting verbose messages
 
 To see in detail what web-ext is doing when you run a command, include the --verbose option. For example:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext build --verbose
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 ### Viewing all commands and options
 
 You can list all commands and options like this:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext --help
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 You can list options for a specific command by adding it as an argument:
 
-<!-- Syntax Highlighting -->
 
 {% highlight javascript %}
 web-ext --help run
 {% endhighlight %}
 
-<!-- END: Syntax Highlighting -->
 
 ### Detecting temporary installation
 
