@@ -484,7 +484,6 @@ $sidebar-nav-width: rem-calc(240);
 }
 
 .module-content {
-
   img {
     display: inline-block;
     max-width: 100%;
@@ -493,7 +492,6 @@ $sidebar-nav-width: rem-calc(240);
   }
 
   @include breakpoint(medium) {
-
     img {
       margin-bottom: rem-calc(8);
     }

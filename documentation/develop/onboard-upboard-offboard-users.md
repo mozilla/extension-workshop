@@ -4,7 +4,16 @@ title: Onboard, upboard, offboard users
 permalink: /documentation/develop/onboard-upboard-offboard-users/
 published: false
 topic: Develop
-tags: [distribution, Guide, install, remove, Upgrade, User experience, WebExtensions]
+tags:
+  [
+    distribution,
+    Guide,
+    install,
+    remove,
+    Upgrade,
+    User experience,
+    WebExtensions,
+  ]
 contributors: [mdnwebdocs-bot, alxwrd, NiklasGollenstede, David263, rebloor]
 author: mdnwebdocs-bot
 date: 2019-03-18 17:01:40
@@ -69,19 +78,19 @@ A good onboarding experience is essential for every browser extension and is not
 
 ### Detecting installation
 
-You can listen for your extension’s installation using `runtime.``onInstalled` as follows:
+You can listen for your extension’s installation using ` runtime.``onInstalled ` as follows:
 
 {% highlight javascript linenos %}
 browser.runtime.onInstalled.addListener(async ({ reason, temporary, }) => {
-  if (temporary) return; // skip during development
-  switch (reason) {
-    case "install": {
-      const url = browser.runtime.getURL("views/installed.html");
-      await browser.tabs.create({ url, });
-      // or: await browser.windows.create({ url, type: "popup", height: 600, width: 600, });
-    } break;
-    // see below
-  }
+if (temporary) return; // skip during development
+switch (reason) {
+case "install": {
+const url = browser.runtime.getURL("views/installed.html");
+await browser.tabs.create({ url, });
+// or: await browser.windows.create({ url, type: "popup", height: 600, width: 600, });
+} break;
+// see below
+}
 });
 {% endhighlight %}
 
@@ -179,19 +188,19 @@ When you update to your extension, take the opportunity to tell your users about
 
 ### Detecting an upgrade
 
-You can listen for your extension’s updates using `runtime.``onInstalled` as follows:
+You can listen for your extension’s updates using ` runtime.``onInstalled ` as follows:
 
 {% highlight javascript linenos %}
 browser.runtime.onInstalled.addListener(async ({ reason, temporary, }) => {
-  if (temporary) return; // skip during development
-  switch (reason) {
-    // see above
-    case "update": {
-      const url = browser.runtime.getURL("views/updated.html");
-      await browser.tabs.create({ url, });
-      // or: await browser.windows.create({ url, type: "popup", height: 600, width: 600, });
-    } break;
-  }
+if (temporary) return; // skip during development
+switch (reason) {
+// see above
+case "update": {
+const url = browser.runtime.getURL("views/updated.html");
+await browser.tabs.create({ url, });
+// or: await browser.windows.create({ url, type: "popup", height: 600, width: 600, });
+} break;
+}
 });
 {% endhighlight %}
 

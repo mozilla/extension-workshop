@@ -5,7 +5,15 @@ permalink: /documentation/develop/create-an-appealing-listing/
 published: false
 topic: Develop
 tags: [Add-ons, Beginner, Guide, publishing, WebExtension]
-contributors: [mdnwebdocs-bot, wbamberg, bravetoaster2, caitmuenster, andrewtruongmoz, rebloor]
+contributors:
+  [
+    mdnwebdocs-bot,
+    wbamberg,
+    bravetoaster2,
+    caitmuenster,
+    andrewtruongmoz,
+    rebloor,
+  ]
 author: mdnwebdocs-bot
 date: 2019-03-18 17:05:25
 ---
@@ -159,7 +167,7 @@ If your extension is developed using WebExtension APIs, we offer comprehensive s
 
 You will want to add a localized listing for each language your add-on supports. However, even if your add-on does not offer a wide selection of localized versions, localizing the listing content can help make your add-on more accessible to users around the world.
 
-Also, remember to set the most appropriate default locale, so that users browsing in languages you have not localized to get the best impression of your add-on.  
+Also, remember to set the most appropriate default locale, so that users browsing in languages you have not localized to get the best impression of your add-on.
 
 </div>
 </article>

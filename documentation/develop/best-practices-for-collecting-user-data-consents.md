@@ -4,7 +4,8 @@ title: Best practices for collecting user data consents
 permalink: /documentation/develop/best-practices-for-collecting-user-data-consents/
 published: false
 topic: Develop
-tags: [Add-ons, Extensions, How to, Privacy, UI, User Interface, UX, WebExtensions]
+tags:
+  [Add-ons, Extensions, How to, Privacy, UI, User Interface, UX, WebExtensions]
 contributors: [rebloor]
 author: rebloor
 date: 2019-04-24 14:35:04
@@ -115,7 +116,6 @@ Where you provide the user with an opt-in option, the related feature must be tu
 
 Where you provide the user with an opt-out, option the related features can be turned on by default but must be turned off if the user indicates they want to opt-out.
 
-
 </div>
 </article>
 </section>
@@ -138,13 +138,13 @@ In this example:
 
 1. Your extension should start up with all cookie and data collection functionality disabled.
 2. Either shortly after installation (see [Best practices for onboarding, upboarding, and offboarding users](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices)) or when the user first attempts to uses an extension feature, present them with a consent dialog.  
-  On this dialog:
-  1. The option for collecting personally identifying information must default to disabled so that the user has to actively opt-in.
-  2. The options for technical data and cookies may default to enabled, so that the user may choose to opt-out.
-3. If the user opts:
-  1. IN to all features, continue with all extension features enabled.
-  2. OUT of any feature that cannot be disabled, offer them the option to remove the extension. If they choose not to remove the extension present the consent dialog again.
-  3. OUT only from features that can be disabled, disable those features and continue running the extension.
+   On this dialog:
+3. The option for collecting personally identifying information must default to disabled so that the user has to actively opt-in.
+4. The options for technical data and cookies may default to enabled, so that the user may choose to opt-out.
+5. If the user opts:
+6. IN to all features, continue with all extension features enabled.
+7. OUT of any feature that cannot be disabled, offer them the option to remove the extension. If they choose not to remove the extension present the consent dialog again.
+8. OUT only from features that can be disabled, disable those features and continue running the extension.
 
 </div>
 </article>
