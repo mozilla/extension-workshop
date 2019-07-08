@@ -5,7 +5,22 @@ permalink: /documentation/develop/extensions-and-the-add-on-id/
 published: false
 topic: Develop
 tags: [WebExtensions]
-contributors: [jsantell, mdnwebdocs-bot, charmander, freaktechnik, wbamberg, serv-inc, scheinercc, mconca, DamienCassou, andrewtruongmoz, andymckay-github, timdream, Timendum]
+contributors:
+  [
+    jsantell,
+    mdnwebdocs-bot,
+    charmander,
+    freaktechnik,
+    wbamberg,
+    serv-inc,
+    scheinercc,
+    mconca,
+    DamienCassou,
+    andrewtruongmoz,
+    andymckay-github,
+    timdream,
+    Timendum,
+  ]
 author: jsantell
 date: 2019-06-27 10:50:35
 ---
@@ -103,12 +118,12 @@ You can do the same thing if you are updating from an older add-on type, such as
 - If you use [AMO's API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) for uploading your add-on, rather than uploading it manually on its page, then you need to include the add-on's ID in the request.
 - Some WebExtension APIs use the add-on ID and expect it to be the same from one browser session to the next. If you use these APIs, then you must set the ID explicitly using the `[browser_specific_settings](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)` key. This applies to the following APIs:
   - [`storage.managed`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed "A storage.StorageArea object that represents the managed storage area. Items in managed storage are set by the domain administrator or other native applications installed on user's computer, and are read-only for the extension. Trying to modify this storage area results in an error.")
-  - [`storage.sync`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync "Represents the sync storage area. Items in sync storage are synced by the browser, and are available across all instances of that browser that the user is logged into (e.g. via Firefox sync, or a Google account), across different devices.")
-  - [`identity.getRedirectURL`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL "Generates a URL that you can use as a redirect URL.")
+  - [`storage.sync`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync 'Represents the sync storage area. Items in sync storage are synced by the browser, and are available across all instances of that browser that the user is logged into (e.g. via Firefox sync, or a Google account), across different devices.')
+  - [`identity.getRedirectURL`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL 'Generates a URL that you can use as a redirect URL.')
   - [Native messaging](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging)
-  - [`pkcs11`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11 "The pkcs11 API enables an extension to enumerate PKCS #11 security modules and to make them accessible to the browser as sources of keys and certificates.")
+  - [`pkcs11`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11 'The pkcs11 API enables an extension to enumerate PKCS #11 security modules and to make them accessible to the browser as sources of keys and certificates.')
   - [`runtime.onMessageExternal`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal "This API can't be used in a content script.")
-  - [`runtime.onConnectExternal`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal "Fired when an extension receives a connection request from a different extension.")
+  - [`runtime.onConnectExternal`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal 'Fired when an extension receives a connection request from a different extension.')
 - Using Firefox for Android. See [browser_specific_settings in manifest.json](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
 
 </div>

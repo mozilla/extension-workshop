@@ -485,8 +485,8 @@ $sidebar-nav-width: rem-calc(240);
   width: 75%;
 
   img {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    max-width: 100%;
     margin-bottom: rem-calc(6);
     border-radius: $global-radius;
   }

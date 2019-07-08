@@ -457,4 +457,3 @@ You can use `web-ext` as a `NodeJS module`. Here is [more information](https://g
 {%- include up-next.html -%}
 
 <!-- END: Up Next -->
-
