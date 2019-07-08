@@ -148,3 +148,9 @@ Suggested development use: Use ESR as your primary web extension development and
 {%- include page-meta-data.html -%}
 
 <!-- END: Meta Data -->
+
+<!-- Up Next -->
+
+{%- include up-next.html -%}
+
+<!-- END: Up Next -->

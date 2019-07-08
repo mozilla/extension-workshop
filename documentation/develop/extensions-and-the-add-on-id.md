@@ -122,3 +122,9 @@ You can do the same thing if you are updating from an older add-on type, such as
 {%- include page-meta-data.html -%}
 
 <!-- END: Meta Data -->
+
+<!-- Up Next -->
+
+{%- include up-next.html -%}
+
+<!-- END: Up Next -->

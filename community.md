@@ -114,57 +114,6 @@ You can also propose changes to the API, both for additions or changes, and assi
 
 <!-- Up Next -->
 
-<section class="module up-next">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
-
-###### Up Next
-
-</div>
-
-<!-- Tile -->
-
-<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
-<div class="block-link" markdown="1">
-	
-Develop
-
-##### Web-ext Webpack plug-in
-
-</div>
-</a>
-
-<!-- END: Tile -->
-
-<!-- Tile -->
-
-<a href="/documentation/develop/web-ext-command-reference" class="cell auto tile tile-block-link">
-<div class="block-link" markdown="1">
-	
-Develop
-
-##### Web-ext command reference
-
-</div>
-</a>
-
-<!-- END: Tile -->
-
-<!-- Tile -->
-
-<a href="/documentation/develop/browser-api-polyfill" class="cell auto tile tile-block-link">
-<div class="block-link" markdown="1">
-	
-Develop
-
-##### Browser API Polyfill
-
-</div>
-</a>
-
-<!-- END: Tile -->
-
-</article>
-</section>
+{%- include up-next.html -%}
 
 <!-- END: Up Next -->

@@ -533,3 +533,9 @@ WEB_EXT_VERBOSE=true
 {%- include page-meta-data.html -%}
 
 <!-- END: Meta Data -->
+
+<!-- Up Next -->
+
+{%- include up-next.html -%}
+
+<!-- END: Up Next -->

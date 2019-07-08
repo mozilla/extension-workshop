@@ -195,6 +195,13 @@ jQuery(document).ready(function($) {
     $('.expandable-list').expandableList();
   }
 
+  // 15. Up Next: hide if empty
+  // ------
+
+  if ($('.up-next').length && !$('.up-next a').length) {
+    $('.up-next').hide(0);
+  }
+
   // Init Breakpoint Listeners
   // ------------------
 

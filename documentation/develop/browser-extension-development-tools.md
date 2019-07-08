@@ -447,3 +447,9 @@ For more details, see [Developing extensions for Firefox for Android](https://de
 {%- include page-meta-data.html -%}
 
 <!-- END: Meta Data -->
+
+<!-- Up Next -->
+
+{%- include up-next.html -%}
+
+<!-- END: Up Next -->
