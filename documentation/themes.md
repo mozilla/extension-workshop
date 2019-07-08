@@ -59,11 +59,7 @@ Users can more deeply personalize Firefox by personalizing the look of their bro
 
 ## Creating themes
 
-<div class="image-with-caption" markdown="1">
-
 ![Themes]({% asset "documentation/develop/Themes_fullwidth.jpg" @optim @path %})
-
-</div>
 
 There are four ways you can create themes:
 

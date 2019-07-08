@@ -478,20 +478,33 @@ $sidebar-nav-width: rem-calc(240);
   @include breakpoint(xxlarge) {
     max-width: #{$global-width - $sidebar-nav-width};
   }
+}
 
-  &-content {
-    flex: 0 0 75%;
-    width: 75%;
+.module-content {
+  flex: 0 0 75%;
+  width: 75%;
+
+  img {
+    display: block;
+    width: 100%;
+    margin-bottom: rem-calc(6);
+    border-radius: $global-radius;
   }
 
-  &-aside {
-    flex: 0 0 25%;
-    width: 25%;
-    padding: rem-calc(0 8);
-
-    @include breakpoint(medium) {
-      padding: rem-calc(0 12);
+  @include breakpoint(medium) {
+    img {
+      margin-bottom: rem-calc(8);
     }
+  }
+}
+
+.module-aside {
+  flex: 0 0 25%;
+  width: 25%;
+  padding: rem-calc(0 8);
+
+  @include breakpoint(medium) {
+    padding: rem-calc(0 12);
   }
 }
 

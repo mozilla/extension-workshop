@@ -95,11 +95,7 @@ When you’re ready to improve your extension or receive suggestions for new fea
 
 [Best practices for updating extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Best_practices_for_updating_your_extension)
 
-<div class="image-with-caption" markdown="1">
-
 ![Power Up Extensions]({% asset "documentation/develop/PowerUpExtensions_fullwidth.jpg" @optim @path %})
-
-</div>
 
 </div>
 </article>
