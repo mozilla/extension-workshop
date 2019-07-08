@@ -75,7 +75,12 @@
             - title: "Browser API Polyfill"
               url: "/documentation/develop/browser-api-polyfill"
             - title: "Extensions and the Add-on ID"
-              url: "/documentation/develop/extensions-and-the-add-on-id"
+              url: "/documentation/develop/extensions-and-the-add-on-id/"
+              subpageitems:
+                - title: "Basic workflow with no add-on ID"
+                  id: "basic-workflow-with-no-add-on-id"
+                - title: "When do you need an add-on ID?"
+                  id: "when-do-you-need-an-add-on-id"
             - title: "Request the right permissions"
               url: "/documentation/develop/request-the-right-permissions"
         - category: "User Experience"

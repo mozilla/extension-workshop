@@ -51,7 +51,6 @@ Users can more deeply personalize Firefox by personalizing the look of their bro
 
 <!-- END: Section 1: Single Column Body Module -->
 
-
 <!-- Single Column Body Module -->
 
 <section id="creating-themes" class="module">
@@ -68,20 +67,19 @@ Users can more deeply personalize Firefox by personalizing the look of their bro
 
 There are four ways you can create themes:
 
-- __[Use the AMO theme generator](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes/Using_the_AMO_theme_generator):__ Create themes that are hosted on AMO or you distribute yourself. Not all features are available.
+- **[Use the AMO theme generator](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes/Using_the_AMO_theme_generator):** Create themes that are hosted on AMO or you distribute yourself. Not all features are available.
 
-- __Use [Firefox Color](https://color.firefox.com):__ Create on-the-fly themes in Firefox. You can generate a URL to share the theme or export the theme as an add-on package. Not all features are available.
+- **Use [Firefox Color](https://color.firefox.com):** Create on-the-fly themes in Firefox. You can generate a URL to share the theme or export the theme as an add-on package. Not all features are available.
 
-- __Code a theme yourself:__ Take advantage of all the theme features available. For instance, add color to more UI components, or utilize the ability to use multiple images.  You can then choose to host these themes on AMO or distribute them yourself.
+- **Code a theme yourself:** Take advantage of all the theme features available. For instance, add color to more UI components, or utilize the ability to use multiple images. You can then choose to host these themes on AMO or distribute them yourself.
 
-- __Include themes in your extension:__ Use the [theme API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme) to take advantage of the full range of features in standalone themes.  You can activate these themes based on user requests or dynamic information, like the time of day or the webpage the user is viewing.
+- **Include themes in your extension:** Use the [theme API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme) to take advantage of the full range of features in standalone themes. You can activate these themes based on user requests or dynamic information, like the time of day or the webpage the user is viewing.
 
 </div>
 </article>
 </section>
 
 <!-- END: Single Column Body Module -->
-
 
 <!-- Meta Data -->
 

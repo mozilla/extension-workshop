@@ -19,7 +19,7 @@ date: 2019-07-09 09:00:00
 
 # Join the developer community
 
-Tap into the worldwide network of Firefox developers help improve the Firefox add-ons ecosystem. 
+Tap into the worldwide network of Firefox developers help improve the Firefox add-ons ecosystem.
 
 </div>
 <div class="overview-hero-cta"></div>
@@ -63,7 +63,7 @@ There are several ways to stay up-to-date with Firefox add-on technology and con
 
 ### Add-ons blog.
 
-Stay up to date with the latest information about add-on technology on the [Add-ons blog](https://blog.mozilla.org/addons). 
+Stay up to date with the latest information about add-on technology on the [Add-ons blog](https://blog.mozilla.org/addons).
 
 ### Email list
 
@@ -71,7 +71,7 @@ Subscribe to our [mailing list](https://mail.mozilla.org/listinfo/dev-addons) de
 
 ### Questions about add-on development
 
-You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), [Stack Overflow]()http://stackoverflow.com/questions/tagged/firefox-addon, or the [developer mailing list](https://mail.mozilla.org/listinfo/dev-addons). 
+You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), [Stack Overflow]()http://stackoverflow.com/questions/tagged/firefox-addon, or the [developer mailing list](https://mail.mozilla.org/listinfo/dev-addons).
 
 ### Meetup IRL
 
@@ -80,14 +80,13 @@ Find out whether there is a browser extensions or Mozilla related group or meet 
 - [Mozilla Reps program](https://reps.mozilla.org/events/#/period/future/), where you can find events arranged by volunteer Mozillians from around the world. And, if there are no events local to you, the program can help you get things started.
 
 - [Campus Clubs](https://campus.mozilla.community/), for events arranged by students with a passion for keeping the web open, at universities and colleges worldwide.
-You can also attend Mozilla’s public meetings and events for extension developers, such as add-on demo sessions Details of these events are found in the [Developer Communication Calendar](https://wiki.mozilla.org/Add-ons/developer/communication#Add-on_Developer_Communication_Calendar). 
+  You can also attend Mozilla’s public meetings and events for extension developers, such as add-on demo sessions Details of these events are found in the [Developer Communication Calendar](https://wiki.mozilla.org/Add-ons/developer/communication#Add-on_Developer_Communication_Calendar).
 
 </div>
 </article>
 </section>
 
 <!-- END: Single Column Body Module -->
-
 
 <!-- Single Column Body Module -->
 
@@ -97,7 +96,7 @@ You can also attend Mozilla’s public meetings and events for extension develop
 
 ## Get involved in the community
 
-Help make the add-on ecosystem a better place by being a contributor, from assisting with documentation to fixing bugs and more. For more information, [visit the Contribute page](https://docs.google.com/document/d/1_fRGPgjNF3jX-xEROosUx0jmu6PwCY4UNC42EOoHfKQ/edit). 
+Help make the add-on ecosystem a better place by being a contributor, from assisting with documentation to fixing bugs and more. For more information, [visit the Contribute page](https://docs.google.com/document/d/1_fRGPgjNF3jX-xEROosUx0jmu6PwCY4UNC42EOoHfKQ/edit).
 
 You can also propose changes to the API, both for additions or changes, and assistance with API development. A good place to start is to get familiar with [Mozilla’s goals for the API](https://docs.google.com/document/d/10DoLNszOr94pKV6I1KNC7OYHdMn5TqDP7W6rBju1LEs/edit).
 

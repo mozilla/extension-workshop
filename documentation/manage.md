@@ -59,7 +59,7 @@ We’re constantly improving Firefox and the add-on experience. Use [this list o
 
 ## Promote your extension
 
-Keep your user base growing regularly reviewing your listing to [make sure it’s as appealing](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Listing) as it can be. 
+Keep your user base growing regularly reviewing your listing to [make sure it’s as appealing](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Listing) as it can be.
 
 <!-- Video Popup Thumbnail -->
 
@@ -71,10 +71,9 @@ Keep your user base growing regularly reviewing your listing to [make sure it’
 
 <!-- END: Video Popup Thumbnail -->
 
+However you choose to distribute your extension, you’ll want to promote your extension or theme.
 
-However you choose to distribute your extension, you’ll want to promote your extension or theme. 
-
-Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.org/addons/2019/04/08/recommended-extensions-program-coming-soon/) that meet a high standard of security, utility, and user experience. If you’d like your extension to be included in the program, submit a nomination. 
+Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.org/addons/2019/04/08/recommended-extensions-program-coming-soon/) that meet a high standard of security, utility, and user experience. If you’d like your extension to be included in the program, submit a nomination.
 
 [Making money from browser extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Make_money_from_browser_extensions) is also something you might want to consider as your user base grows.
 
@@ -92,7 +91,7 @@ Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.or
 
 ## Publish extension updates
 
-When you’re ready to improve your extension or receive suggestions for new features from your user community, you might decide to publish an update. 
+When you’re ready to improve your extension or receive suggestions for new features from your user community, you might decide to publish an update.
 
 [Best practices for updating extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Best_practices_for_updating_your_extension)
 
@@ -116,9 +115,9 @@ When you’re ready to improve your extension or receive suggestions for new fea
 
 ## Manage authors of your extension
 
-Add-ons are often the result of the work of a team of developers, which is why [add-ons on AMO can have multiple authors](https://docs.google.com/document/d/1nw5FMHI4pH3iKHEdLS6GuAUl9oRfFd5P4uC7wEAQaCU/edit#heading=h.w6vo7guwwexf). 
+Add-ons are often the result of the work of a team of developers, which is why [add-ons on AMO can have multiple authors](https://docs.google.com/document/d/1nw5FMHI4pH3iKHEdLS6GuAUl9oRfFd5P4uC7wEAQaCU/edit#heading=h.w6vo7guwwexf).
 
-If someone is using your code without your permission, please follow [these instructions](https://www.mozilla.org/about/legal/report-infringement/) to file a DMCA Notice with Mozilla’s legal team to resolve the situation. 
+If someone is using your code without your permission, please follow [these instructions](https://www.mozilla.org/about/legal/report-infringement/) to file a DMCA Notice with Mozilla’s legal team to resolve the situation.
 
 </div>
 </article>
@@ -134,7 +133,7 @@ If someone is using your code without your permission, please follow [these inst
 
 ## Removing your extension from distribution
 
-Sometimes, add-ons outlive their usefulness: features they provide may be added to Firefox, your product or service may evolve, or it could simply be easier to write a new extension than maintain your old one. 
+Sometimes, add-ons outlive their usefulness: features they provide may be added to Firefox, your product or service may evolve, or it could simply be easier to write a new extension than maintain your old one.
 
 Here’s how to [Retire your extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Retiring_your_extension) gracefully.
 

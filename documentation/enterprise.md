@@ -19,7 +19,7 @@ date: 2019-07-09 09:00:00
 
 # Extensions for your enterprise
 
-Firefox gives your enterprise a high-performance, standards compliant, manageable browser environment. 
+Firefox gives your enterprise a high-performance, standards compliant, manageable browser environment.
 
 </div>
 <div class="overview-hero-cta"></div>
@@ -100,7 +100,7 @@ Developing extensions for your enterprise is straightforward – you can follow 
 
 ## Distributing your enterprise extension
 
-Extensions for enterprise deployments of Firefox Extended Support Release (ESR) should be distributed outside of addons.org. 
+Extensions for enterprise deployments of Firefox Extended Support Release (ESR) should be distributed outside of addons.org.
 
 Once your extension is developed and tested, you can use one of the [enterprise distribution](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_in_the_enterprise) methods to install it in Firefox.
 

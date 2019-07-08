@@ -5,7 +5,24 @@ permalink: /documentation/develop/web-ext-command-reference/
 published: false
 topic: Develop
 tags: [commands, Options, Reference, Tools, web-ext, WebExtensions]
-contributors: [rebloor, mdnwebdocs-bot, kumar303, Rob--W, smile4ever, Dietrich, andrewtruongmoz, saintsebastian, niharikak101, wbamberg, aniketkudale, groovecoder, tofumatt, sharang, chrisdavidmills]
+contributors:
+  [
+    rebloor,
+    mdnwebdocs-bot,
+    kumar303,
+    Rob--W,
+    smile4ever,
+    Dietrich,
+    andrewtruongmoz,
+    saintsebastian,
+    niharikak101,
+    wbamberg,
+    aniketkudale,
+    groovecoder,
+    tofumatt,
+    sharang,
+    chrisdavidmills,
+  ]
 author: rebloor
 date: 2019-04-16 10:25:47
 ---
@@ -177,15 +194,14 @@ You can also use aliases, like this:
 
 Here are all available aliases and the executables they map to:
 
-
 <div class="table-wrapper table-scroll" markdown="1">
 
-Alias | Firefox executable
---- | ---
-`firefox` | The [release](https://www.mozilla.org/en-US/firefox/new/) build of Firefox
-`beta` | The [beta](https://www.mozilla.org/en-US/firefox/channel/desktop/) build of Firefox
-`nightly` | The [nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) build of Firefox
-`firefoxdeveloperedition` | The [developer](https://www.mozilla.org/en-US/firefox/channel/desktop/) build of Firefox
+| Alias                     | Firefox executable                                                                       |
+| ------------------------- | ---------------------------------------------------------------------------------------- |
+| `firefox`                 | The [release](https://www.mozilla.org/en-US/firefox/new/) build of Firefox               |
+| `beta`                    | The [beta](https://www.mozilla.org/en-US/firefox/channel/desktop/) build of Firefox      |
+| `nightly`                 | The [nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) build of Firefox   |
+| `firefoxdeveloperedition` | The [developer](https://www.mozilla.org/en-US/firefox/channel/desktop/) build of Firefox |
 
 </div>
 
@@ -197,11 +213,9 @@ The exact [APK](https://en.wikipedia.org/wiki/Android_application_package) name 
 
 Example:
 
-
 {% highlight javascript %}
 web-ext run --target=firefox-android --firefox-apk=org.mozilla.firefox
 {% endhighlight %}
-
 
 Environment variable: `$WEB_EXT_FIREFOX_APK`
 
@@ -253,10 +267,10 @@ Here are the supported targets:
 
 <div class="table-wrapper table-scroll" markdown="1">
 
-Target | Application
---- | ---
-`firefox-desktop` | The extension will run in [Firefox Desktop](https://www.mozilla.org/en-US/firefox/).
-`firefox-android` | The extension will run in [Firefox for Android](https://www.mozilla.org/en-US/firefox/mobile/). You must also specify `--android-device`.
+| Target            | Application                                                                                                                               |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `firefox-desktop` | The extension will run in [Firefox Desktop](https://www.mozilla.org/en-US/firefox/).                                                      |
+| `firefox-android` | The extension will run in [Firefox for Android](https://www.mozilla.org/en-US/firefox/mobile/). You must also specify `--android-device`. |
 
 </div>
 
@@ -306,7 +320,7 @@ Environment variable: `$WEB_EXT_API_URL_PREFIX`
 
 #### --api-proxy
 
-A proxy host to use for all API connections. Example: `https://yourproxy:6000. `Read more about [how proxy requests work](https://github.com/request/request#proxies). There is a separate section about [signing in a restricted environment](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext#Signing_in_a_restricted_environment) if the proxy approach doesn't work for you.
+A proxy host to use for all API connections. Example: `https://yourproxy:6000.`Read more about [how proxy requests work](https://github.com/request/request#proxies). There is a separate section about [signing in a restricted environment](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext#Signing_in_a_restricted_environment) if the proxy approach doesn't work for you.
 
 Environment variable: `$WEB_EXT_API_PROXY`
 
@@ -316,10 +330,10 @@ This specifies the `channel` in which the extension is signed. It defaults to `u
 
 <div class="table-wrapper table-scroll" markdown="1">
 
-Channel | Result
---- | ---
-`listed` | The extension gets submitted for review so it can be listed on [addons.mozilla.org](https://addons.mozilla.org). This type of channel is not well supported and cannot be used for some cases, as documented below.
-`unlisted` | The extension gets signed for publication on your own website.
+| Channel    | Result                                                                                                                                                                                                              |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `listed`   | The extension gets submitted for review so it can be listed on [addons.mozilla.org](https://addons.mozilla.org). This type of channel is not well supported and cannot be used for some cases, as documented below. |
+| `unlisted` | The extension gets signed for publication on your own website.                                                                                                                                                      |
 
 </div>
 
@@ -388,7 +402,7 @@ A list of [glob patterns](https://github.com/isaacs/node-glob#glob-primer) to de
 Here is an example of ignoring any file within your `--source-dir` (or its subdirectories) that ends in the suffix `.api-key`:
 
 {% highlight javascript %}
-web-ext build --ignore-files "**/*.api-key"
+web-ext build --ignore-files "\*_/_.api-key"
 {% endhighlight %}
 
 You can specify multiple patterns by separating them with spaces:
@@ -403,7 +417,7 @@ By default, without the use of `--ignore-files`, the following rules are applied
 - Any hidden file (one that starts with a dot) is ignored
 - Any directory named `node_modules` is ignored
 
-When you specify custom patterns using `--ignore-files`, they are applied *in addition to* the default patterns.
+When you specify custom patterns using `--ignore-files`, they are applied _in addition to_ the default patterns.
 
 <p class="note" markdown="1">__Note__: Order is important: you must specify the web-ext command before specifying the --ignore-files option.</p>
 
@@ -438,6 +452,7 @@ Environment variable: `$WEB_EXT_VERBOSE=true`
 ### --version
 
 Shows the version number of the installed web-ext tool.
+
 </div>
 </article>
 </section>
@@ -504,7 +519,7 @@ WEB_EXT_VERBOSE=true
 
 ## See also
 
-- [web-ext repo](https://github.com/mozilla/web-ext)  
+- [web-ext repo](https://github.com/mozilla/web-ext)
 - [Getting started with web-ext](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)
 
 </div>

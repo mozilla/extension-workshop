@@ -481,10 +481,12 @@ $sidebar-nav-width: rem-calc(240);
 
   &-content {
     flex: 0 0 75%;
+    width: 75%;
   }
 
   &-aside {
     flex: 0 0 25%;
+    width: 25%;
     padding: rem-calc(0 8);
 
     @include breakpoint(medium) {

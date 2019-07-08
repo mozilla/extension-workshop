@@ -61,11 +61,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <div class="table-wrapper table-scroll" markdown="1">
 
-| Column Title                          | Column Title                                                      | Column Title                                                             |
-| ------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Content scripts matching URL patterns | <a href="#" title="content-scripts"><code>page-mod</code></a> API | <a href="#" title="content-scripts"><code>content-scripts</code></a> key |
-| Content scripts matching URL patterns | <a href="#" title="content-scripts"><code>page-mod</code></a> API | <a href="#" title="content-scripts"><code>content-scripts</code></a> key |
-| Content scripts matching URL patterns | <a href="#" title="content-scripts"><code>page-mod</code></a> API | <a href="#" title="content-scripts"><code>content-scripts</code></a> key |
+| Column Title                          | Column Title        | Column Title               |
+| ------------------------------------- | ------------------- | -------------------------- |
+| Content scripts matching URL patterns | [`page-mod`](#) API | [`content-scripts`](#) key |
+| Content scripts matching URL patterns | [`page-mod`](#) API | [`content-scripts`](#) key |
+| Content scripts matching URL patterns | [`page-mod`](#) API | [`content-scripts`](#) key |
 
 </div>
 
