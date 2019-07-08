@@ -61,7 +61,7 @@ Keyboard shortcuts provide an easy way to activate extension features.
 To improve accessibility, add keyboard shortcuts for:
 
 - extension UI elements, such as toolbar and address bar buttons.
-- all of an extension’s features, however, where this is impractical provide shortcuts for commonly used extension features.  
+- all of an extension’s features, however, where this is impractical provide shortcuts for commonly used extension features.
 
 <p class="note">Users can modify an extension’s keyboard shortcuts to suit their needs. However, users cannot add shortcuts, which is why it’s best to add as many as practical.</p>
 
@@ -209,7 +209,7 @@ Add suggestions as per the guide, there are no additional accessibility consider
 </td>
 <td markdown="1">
 
-The markup in the sidebar should follow [standard web accessibility guidelines](/en-US/docs/Web/Accessibility). 
+The markup in the sidebar should follow [standard web accessibility guidelines](/en-US/docs/Web/Accessibility).
 
 Offering a keyboard shortcut to open a devtools panel is recommended.
 
