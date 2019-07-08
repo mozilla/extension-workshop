@@ -72,6 +72,7 @@ $sidebar-nav-width: rem-calc(240);
 
   @include breakpoint(large) {
     flex: 0 0 #{$sidebar-nav-width};
+    width: $sidebar-nav-width;
     position: fixed;
     top: rem-calc(64);
     height: calc(100% - #{rem-calc(64)});
@@ -393,6 +394,7 @@ $sidebar-nav-width: rem-calc(240);
 
   @include breakpoint(large) {
     flex: 0 0 calc(100% - #{$sidebar-nav-width});
+    width: calc(100% - #{$sidebar-nav-width});
   }
 }
 
@@ -413,10 +415,11 @@ $sidebar-nav-width: rem-calc(240);
   h2 {
     margin-top: rem-calc(12);
     border-top: 1px solid $medium-light-gray;
-    padding-top: rem-calc(30);
+    padding-top: rem-calc(45);
 
     @include breakpoint(medium) {
       margin-top: rem-calc(24);
+      padding-top: rem-calc(60);
     }
   }
 }
@@ -481,8 +484,6 @@ $sidebar-nav-width: rem-calc(240);
 }
 
 .module-content {
-  flex: 0 0 75%;
-  width: 75%;
 
   img {
     display: inline-block;
@@ -492,9 +493,15 @@ $sidebar-nav-width: rem-calc(240);
   }
 
   @include breakpoint(medium) {
+
     img {
       margin-bottom: rem-calc(8);
     }
+  }
+
+  @include breakpoint(xlarge) {
+    flex: 0 0 75%;
+    width: 75%;
   }
 }
 
@@ -600,9 +607,14 @@ $sidebar-nav-width: rem-calc(240);
     h1,
     h2 {
       &:first-child {
-        margin-top: 0;
+        margin-top: rem-calc(12);
         border-top: 0;
         padding-top: 0;
+
+        @include breakpoint(medium) {
+          // margin-top: rem-calc(24);
+          // padding-top: rem-calc(60);
+        }
       }
     }
   }
@@ -688,10 +700,19 @@ $sidebar-nav-width: rem-calc(240);
   @include breakpoint(xlarge) {
     order: 2;
     position: relative;
-    padding-left: rem-calc(28) !important;
+    padding-left: 0 !important;
+
+    &__inner {
+      position: absolute;
+      width: 100%;
+      padding-left: rem-calc(28);
+    }
   }
 
   @include breakpoint(large down) {
+    flex: 0 0 100%;
+    width: 100%;
+
     ol {
       padding-bottom: rem-calc(24);
       border-bottom: 1px solid $medium-light-gray;

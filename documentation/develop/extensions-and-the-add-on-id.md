@@ -34,6 +34,8 @@ date: 2019-06-27 10:50:35
 <div class="page-hero-description" markdown="1">
 <p class="section-title"><small>{{ page.topic }}</small></p>
 
+# Extensions and the add-on ID
+
 Firefox add-ons contain a unique ID which is used to distinguish this add-on from any other Firefox add-on.
 
 This article describes how add-on IDs are handled for extensions that are built with WebExtensions APIs.
