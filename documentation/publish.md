@@ -67,7 +67,7 @@ Once your extension is signed, it is subject to review by Mozilla at any time. T
 
 ## Distribute your signed extension
 
-![Multiple Devices And Browsers]({% asset "documentation/develop/MultipleDevicesAndBrowsers_fullwidth.jpg" @optim @path %})
+![Multiple Devices And Browsers]({% asset "documentation/develop/MultipleDevicesAndBrowsers_fullwidth.png" @optim @path %})
 
 There are four ways you can distribute your extension. They are:
 

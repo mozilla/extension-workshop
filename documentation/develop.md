@@ -163,7 +163,7 @@ Find out best practices for putting your best foot forward with your extension.
 <article class="module-content grid-x grid-padding-x align-middle">
 <div class="cell small-12 medium-6 medium-order-2" markdown="1">
 
-![Moble Extensions]({% asset "documentation/develop/MobleExtensions_promo.jpg" @path @optim %})
+![Moble Extensions]({% asset "documentation/develop/MobleExtensions_promo.png" @path @optim %})
 
 </div>
 <div class="cell small-12 medium-6" markdown="1">
@@ -224,7 +224,7 @@ If you develop Android apps, when you want to include a browser experience in yo
 <article class="module-content grid-x grid-padding-x align-middle">
 <div class="cell small-12 medium-6 medium-order-2" markdown="1">
 
-![Chrome To Firefox Extensions]({% asset "documentation/develop/ChromeToFirefoxExtensions_promo.jpg" @path @optim %})
+![Chrome To Firefox Extensions]({% asset "documentation/develop/ChromeToFirefoxExtensions_promo.png" @path @optim %})
 
 </div>
 <div class="cell small-12 medium-6" markdown="1">
