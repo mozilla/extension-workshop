@@ -6,7 +6,7 @@ published: false
 topic: Develop
 tags: [Beginner, Extensions, Intermediate, reviews, Security, WebExtensions]
 contributors: [irenesmith, tomrittervg, mdnwebdocs-bot, rebloor]
-author: irenesmith
+last_updated_by: irenesmith
 date: 2019-05-13 6:35:30
 ---
 

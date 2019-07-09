@@ -15,7 +15,7 @@ tags:
     WebExtensions,
   ]
 contributors: [mdnwebdocs-bot, alxwrd, NiklasGollenstede, David263, rebloor]
-author: mdnwebdocs-bot
+last_updated_by: mdnwebdocs-bot
 date: 2019-03-18 17:01:40
 ---
 

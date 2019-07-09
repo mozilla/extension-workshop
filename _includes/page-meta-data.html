@@ -21,8 +21,8 @@
 
 			{%- if page.date -%}
 				<p><span class="meta-label date">Last update:</span>&nbsp;
-					{%- if page.author -%}
-	                    <a href="https://github.com/{{ page.author }}/" title="View {{ page.author }} on Github" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></a>&nbsp; 
+					{%- if page.last_updated_by -%}
+	                    <a href="https://github.com/{{ page.last_updated_by }}/" title="View {{ page.last_updated_by }} on Github" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.last_updated_by }}</span></a>&nbsp; 
 	                {%- endif -%}
 	                <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
 	                    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}

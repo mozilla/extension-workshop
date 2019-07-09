@@ -6,7 +6,7 @@ published: false
 topic: Develop
 tags: [Development, Extensions, UI, User Interface, UX, Web Extensions]
 contributors: [rebloor]
-author: rebloor
+last_updated_by: rebloor
 date: 2019-05-01 9:08:50
 ---
 

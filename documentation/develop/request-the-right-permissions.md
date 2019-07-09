@@ -7,7 +7,7 @@ topic: Develop
 tags: [Add-ons, Beginner, Extensions, How-to, Intermediate, Permissions]
 contributors:
   [Zearin_Galaurum, mdnwebdocs-bot, rebloor, evilpie, hellosct1, freaktechnik]
-author: Zearin_Galaurum
+last_updated_by: Zearin_Galaurum
 date: 2019-05-31 8:48:40
 ---
 

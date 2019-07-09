@@ -17,7 +17,7 @@ tags:
     'WebExtensions',
   ]
 contributors: [rebloor, mdnwebdocs-bot, hellosct1]
-author: rebloor
+last_updated_by: rebloor
 date: 2019-03-21 12:47:53
 ---
 

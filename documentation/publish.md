@@ -5,7 +5,7 @@ permalink: /documentation/publish/
 published: false
 tags: []
 contributors: [caitmuenster]
-author: caitmuenster
+last_updated_by: caitmuenster
 date: 2019-07-09 09:00:00
 ---
 

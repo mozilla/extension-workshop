@@ -6,7 +6,7 @@ published: false
 topic: Develop
 tags: [Add-ons, Development, Extensions, Guide, Tools]
 contributors: [mdnwebdocs-bot, rebloor]
-author: mdnwebdocs-bot
+last_updated_by: mdnwebdocs-bot
 date: 2019-03-18 16:36:22
 ---
 
