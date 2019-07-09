@@ -699,7 +699,7 @@ $sidebar-nav-width: rem-calc(240);
     position: relative;
     padding-left: 0 !important;
 
-    &__inner {
+    &-inner {
       position: absolute;
       width: 100%;
       padding-left: rem-calc(28);
