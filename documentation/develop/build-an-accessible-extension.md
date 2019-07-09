@@ -1,7 +1,7 @@
 ---
 layout: sidebar
-title: Build a secure extension
-permalink: /documentation/develop/build-a-secure-extension/
+title: Build an accessible extension
+permalink: /documentation/develop/build-an-accessible-extension/
 published: false
 topic: Develop
 tags: [Development, Extensions, UI, User Interface, UX, Web Extensions]

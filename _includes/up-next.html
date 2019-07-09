@@ -18,16 +18,7 @@
             {% for next_page in next_page_ar %}          
               {% if is_next_range < max_steps && next_page.skip_index != false %}
                 
-                <!-- Tile -->
-                <a href="{{ next_page.permalink }}" class="cell auto tile tile-block-link">
-                    <div class="block-link">
-                        {% if next_page.topic %}
-                            <p>{{ next_page.topic }}</p>
-                        {% endif %}
-                        <h5>{{ next_page.title }}</h5>
-                    </div>
-                </a>
-                <!-- END: Tile -->
+                {%- include up-next-tile.html -%}
 
               {% endif %}
               {% assign is_next_range = is_next_range | plus: 1 %}
@@ -51,16 +42,7 @@
                                 {% for next_page in next_page_ar %}          
                                   {% if is_next_range < max_steps && next_page.skip_index != false %}
                                     
-                                    <!-- Tile -->
-                                    <a href="{{ next_page.permalink }}" class="cell auto tile tile-block-link">
-                                        <div class="block-link">
-                                            {% if next_page.topic %}
-                                                <p>{{ next_page.topic }}</p>
-                                            {% endif %}
-                                            <h5>{{ next_page.title }}</h5>
-                                        </div>
-                                    </a>
-                                    <!-- END: Tile -->
+                                    {%- include up-next-tile.html -%}
 
                                   {% endif %}
                                   {% assign is_next_range = is_next_range | plus: 1 %}
@@ -90,16 +72,7 @@
                     {% for next_page in next_page_ar %}          
                       {% if is_next_range < max_steps && next_page.skip_index != false %}
                         
-                        <!-- Tile -->
-                        <a href="{{ next_page.permalink }}" class="cell auto tile tile-block-link">
-                            <div class="block-link">
-                                {% if next_page.topic %}
-                                    <p>{{ next_page.topic }}</p>
-                                {% endif %}
-                                <h5>{{ next_page.title }}</h5>
-                            </div>
-                        </a>
-                        <!-- END: Tile -->
+                        {%- include up-next-tile.html -%}
 
                       {% endif %}
                       {% assign is_next_range = is_next_range | plus: 1 %}
@@ -121,16 +94,7 @@
                                 {% for next_page in next_page_ar %}          
                                   {% if is_next_range < max_steps && next_page.skip_index != false %}
                                     
-                                    <!-- Tile -->
-                                    <a href="{{ next_page.permalink }}" class="cell auto tile tile-block-link">
-                                        <div class="block-link">
-                                            {% if next_page.topic %}
-                                                <p>{{ next_page.topic }}</p>
-                                            {% endif %}
-                                            <h5>{{ next_page.title }}</h5>
-                                        </div>
-                                    </a>
-                                    <!-- END: Tile -->
+                                    {%- include up-next-tile.html -%}
 
                                   {% endif %}
                                   {% assign is_next_range = is_next_range | plus: 1 %}
@@ -156,16 +120,7 @@
                         {% for next_page in next_page_ar %}          
                           {% if is_next_range < max_steps && next_page.skip_index != false %}
                             
-                            <!-- Tile -->
-                            <a href="{{ next_page.permalink }}" class="cell auto tile tile-block-link">
-                                <div class="block-link">
-                                    {% if next_page.topic %}
-                                        <p>{{ next_page.topic }}</p>
-                                    {% endif %}
-                                    <h5>{{ next_page.title }}</h5>
-                                </div>
-                            </a>
-                            <!-- END: Tile -->
+                            {%- include up-next-tile.html -%}
 
                           {% endif %}
                           {% assign is_next_range = is_next_range | plus: 1 %}
@@ -188,16 +143,7 @@
             {% for next_page in next_page_ar %}          
               {% if is_next_range < max_steps && next_page.skip_index != false %}
                 
-                <!-- Tile -->
-                <a href="{{ next_page.permalink }}" class="cell auto tile tile-block-link">
-                    <div class="block-link">
-                        {% if next_page.topic %}
-                            <p>{{ next_page.topic }}</p>
-                        {% endif %}
-                        <h5>{{ next_page.title }}</h5>
-                    </div>
-                </a>
-                <!-- END: Tile -->
+                {%- include up-next-tile.html -%}
 
               {% endif %}
               {% assign is_next_range = is_next_range | plus: 1 %}
