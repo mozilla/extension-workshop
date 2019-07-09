@@ -3,6 +3,7 @@ layout: sidebar
 title: Sidebar Master Template
 permalink: /sidebar-master-template/
 published: false
+topic: Develop
 tags: [label, distribution, install, remove]
 contributors: [lancecummings, caitmuenster, muffinresearch]
 author: lancecummings
@@ -10,23 +11,24 @@ date: 2019-06-24 09:00:00
 skip_index: true
 ---
 
-<!-- Overview Page Hero Banner -->
+<!-- Page Hero Banner -->
 
-<section class="overview-hero" style="background-image: url({% asset "develop-overview-hero-bg.jpg" @optim @path %});">
+<section class="page-hero">
 <div class="module">
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
-<div class="overview-hero-description" markdown="1">
+<div class="page-hero-description" markdown="1">
+<p class="section-title"><small>{{ page.topic }}</small></p>
 
 # Develop
 
 Short and brief description of the sort of content you will find on this page.
 
 </div>
-<div class="overview-hero-cta">
+<div class="page-hero-cta">
 
 <a href="/documentation/develop/getting-started-with-web-ext/" class="button">Do first thing</a>
-<a href="/documentation/develop/build-an-extension-in-5-minutes" class="button secondary">Do second thing</a>
+<a href="/documentation/develop/build-an-extension-in-5-minutes/" class="button secondary">Do second thing</a>
 
 </div>
 </div>
@@ -555,57 +557,6 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 
 <!-- Up Next -->
 
-<section class="module up-next">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
-
-###### Up Next
-
-</div>
-
-<!-- Tile -->
-
-<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
-<div class="block-link" markdown="1">
-	
-Develop
-
-##### Web-ext Webpack plug-in
-
-</div>
-</a>
-
-<!-- END: Tile -->
-
-<!-- Tile -->
-
-<a href="/documentation/develop/web-ext-command-reference" class="cell auto tile tile-block-link">
-<div class="block-link" markdown="1">
-	
-Develop
-
-##### Web-ext command reference
-
-</div>
-</a>
-
-<!-- END: Tile -->
-
-<!-- Tile -->
-
-<a href="/documentation/develop/browser-api-polyfill" class="cell auto tile tile-block-link">
-<div class="block-link" markdown="1">
-	
-Develop
-
-##### Browser API Polyfill
-
-</div>
-</a>
-
-<!-- END: Tile -->
-
-</article>
-</section>
+{%- include up-next.html -%}
 
 <!-- END: Up Next -->
