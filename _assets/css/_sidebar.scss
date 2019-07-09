@@ -71,13 +71,12 @@ $sidebar-nav-width: rem-calc(240);
   }
 
   @include breakpoint(large) {
-    flex: 0 0 #{$sidebar-nav-width};
-    width: $sidebar-nav-width;
     position: fixed;
     top: rem-calc(64);
-    height: calc(100% - #{rem-calc(64)});
     left: 0;
+    flex: 0 0 #{$sidebar-nav-width};
     width: $sidebar-nav-width;
+    height: calc(100% - #{rem-calc(64)});
     border-right: 1px solid $medium-light-gray;
     overflow-y: auto;
     overflow-x: hidden;
