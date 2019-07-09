@@ -65,7 +65,7 @@ Here's an example using markdown - note you need to add `@path` and `@optim`.
 ![Remembear subtitle screenshot]({% asset "content-guidelines/remembear-subtitle.png" @path @optim %} "Remembear subtitle text")
 ```
 
-### How to add a "sidebar" layout page:
+### How to add a "sidebar" layout page
 
 1. Open `_data/pages.yaml`.
 2. Add a node with appropriate attributes, in the appropriate location, for the new page. See below for [details on how to understand the pages.yaml structure](#understanding-the-pagesyaml-structure).
