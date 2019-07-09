@@ -1304,7 +1304,6 @@ $hamburger-hover-transition-timing-function: linear;
 // Search CTA box
 // ------
 
-.tag-cta,
 .search-cta {
   display: flex;
   flex-flow: row nowrap;
@@ -1338,12 +1337,6 @@ $hamburger-hover-transition-timing-function: linear;
       margin: rem-calc(-16 0 48);
     }
   }
-}
-
-.tag-cta::before {
-  @include icon_font($char: $icon-tags);
-
-  line-height: rem-calc(40);
 }
 
 // Search Results

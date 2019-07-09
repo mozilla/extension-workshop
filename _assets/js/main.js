@@ -171,7 +171,7 @@ jQuery(document).ready(function($) {
   }
   if ($('#tag-list').length) {
     $('#tag-list').searchResults({
-      input: '.tag-cta #lunrsearch',
+      input: null,
       default: '.popular-searches',
       search_fields: [
         {
@@ -1035,7 +1035,7 @@ jQuery(document).ready(function($) {
     );
 
     var $container = this;
-    var $local_input = $(settings.input);
+    var $local_input = settings.input ? $(settings.input) : false;
     var $default = $(settings.default);
     var urlParams = new URLSearchParams(window.location.search);
     var myParam = urlParams.get('q');
@@ -1118,14 +1118,18 @@ jQuery(document).ready(function($) {
         });
       });
 
-      $local_input.on('keyup', function() {
-        lunr_search($(this).val());
-      });
+      if ($local_input) {
+        $local_input.on('keyup', function() {
+          lunr_search($(this).val());
+        });
+      }
 
       lunr_search(myParam);
     });
 
-    $local_input.val(myParam);
+    if ($local_input) {
+      $local_input.val(myParam);
+    }
   };
 
   // 13. Sidebar Nav Page Section Highlighting
