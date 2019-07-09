@@ -572,6 +572,10 @@ $sidebar-nav-width: rem-calc(240);
 
   .section-title {
     margin-bottom: 1em;
+
+    small {
+      color: inherit;
+    }
   }
 
   &-description {
@@ -658,18 +662,18 @@ $sidebar-nav-width: rem-calc(240);
 }
 
 .page-hero {
+  background-color: $light-gray;
+
   &-cta {
     padding-bottom: 0;
 
     &::after {
       content: '';
       display: block;
-      height: 1px;
       width: calc(100% - #{rem-calc(16)});
       margin-left: auto;
       margin-right: auto;
       margin-top: rem-calc(20);
-      background-color: $medium-light-gray;
 
       @include breakpoint(large) {
         margin-top: rem-calc(40);
