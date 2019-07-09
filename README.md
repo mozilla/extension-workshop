@@ -72,24 +72,25 @@ Here's an example using markdown - note you need to add `@path` and `@optim`.
 3. Create a new page, nested inside a folder struture that matches the url path. For example, for permalink `/documentation/develop/best-practices-for-collecting-user-data-consents/`, you would create a file called `best-practices-for-collecting-user-data-consents.md` and place it in `documentation` > `develop`.
 4. For reference on how to create a page, review the `sidebar-master-template.md` file, which lists all available modules. Some notes:
    - `published: false` will withhold this content from stage and production, to publish content, remove this line.
-   - `skip_index: true` is used for pages that shouldn't be indexed for search results. 
-   - When creating page sections that will be listed in the table of contents, add an ID attribute to the section container that matches the subpageitem added to Pages.yaml. If your layout requires several sections for one table of contents entry, simply nest your sections inside a containing element which has the ID attribute. 
+   - `skip_index: true` is used for pages that shouldn't be indexed for search results.
+   - When creating page sections that will be listed in the table of contents, add an ID attribute to the section container that matches the subpageitem added to Pages.yaml. If your layout requires several sections for one table of contents entry, simply nest your sections inside a containing element which has the ID attribute.
    - Rull for creating section IDs: use the `h2` title of the section, converted to lowercase, spaces replaced with dashes, all non-alphanumeric characters removed. For example, the section `h2` title "Know your privacy settings" would be converted to `know-your-privacy-settings` for the section ID
-   - The first section following the Page Hero module should have the `table-of-contents` `aside` section prepended to it. 
+   - The first section following the Page Hero module should have the `table-of-contents` `aside` section prepended to it.
 
 <h4 id="understanding-the-pagesyaml-structure">Understanding the Pages.yaml structure</h4>
 
 - Each node is started with a `-`
 - Sub nodes are indented below parent nodes
-- Each new page has a title and url attribute *__Note:__ The url attribute must match exactly the permalink attribute of the page's front matter (including leading and trailing slashes)*
+- Each new page has a title and url attribute _**Note:** The url attribute must match exactly the permalink attribute of the page's front matter (including leading and trailing slashes)_
 - Attributes are indented on new lines
 - Pages can also have a subpageitems node for sections within the page to be referenced in the table of contents for that page:
-  - Each subpageitem node has a title and ID attribute, where the ID matches the ID attribute of the section container *(IDs need to be added to a containing element, rather than the heading element, of the section. This is so that highlighting for that section stays active even when the section title is out of view)*
+  - Each subpageitem node has a title and ID attribute, where the ID matches the ID attribute of the section container _(IDs need to be added to a containing element, rather than the heading element, of the section. This is so that highlighting for that section stays active even when the section title is out of view)_
 - Overview pages have category nodes for each of the sub categories for that section
 - Categories have a category attibute which denotes the category title, and a pages attribute where sub pages of the overview page are listed
-- The Documentation Topics section pages are nested inside a `subfolderitems` node, which creates the dropdown panel 
+- The Documentation Topics section pages are nested inside a `subfolderitems` node, which creates the dropdown panel
 
 General overview of the pages layout:
+
 ```
 - title: "Documentation Topics"
   subfolderitems:
@@ -101,7 +102,7 @@ General overview of the pages layout:
           ...
       categories:
         - category: "Getting Started"
-          pages: 
+          pages:
             - title: "Firefox Workflow Overview"
               url: "/documentation/develop/firefox-workflow-overview/"
         ...
