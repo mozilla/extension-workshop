@@ -612,11 +612,6 @@ $sidebar-nav-width: rem-calc(240);
         margin-top: rem-calc(12);
         border-top: 0;
         padding-top: 0;
-
-        @include breakpoint(medium) {
-          // margin-top: rem-calc(24);
-          // padding-top: rem-calc(60);
-        }
       }
     }
   }
