@@ -82,7 +82,7 @@ Here is a list of best practices you should follow to keep the users of your ext
 - **Don't inject moz-extension paths directly**  
   When injected links, includes, or images include paths to `moz-extension://{hash}` a page’s tracking script could use this information to [fingerprint](https://en.wikipedia.org/wiki/Device_fingerprint) the user, as the hash (UUID) is unique to the extension installation and, therefore, the user.  
   The best way to avoid this issue is to follow the general advice about not injecting content. However, if you believe injecting content is your only practical approach, ensure that moz-extension paths are embedded inside an iframe using a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) or the [srcdoc](/en-US/docs/Web/HTML/Element/iframe#attr-srcdoc) attribute.
-- **Ensure that third-party libraries are up to dat**e  
+- **Ensure that third-party libraries are up to date**  
   Reputable third-party libraries will be updated when any issues are found. The use of outdated (and potentially insecure) third-party libraries is strongly discouraged and, when a significant risk is identified, AMO may act to block extensions using the out of date code.  
   Therefore, always use the latest version of any third-party libraries when you create your extension. Then, be aware of updates to those libraries and be prepared to update your extension to ensure its using an up to date version of the library.
 - **Do not modify third-party libraries**  
