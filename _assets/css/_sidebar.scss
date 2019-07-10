@@ -602,7 +602,8 @@ $sidebar-nav-width: rem-calc(240);
     }
   }
 
-  + .module {
+  + .module,
+  + .page-section-container > .module:first-child {
     margin-top: 0;
 
     h1,

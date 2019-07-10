@@ -43,13 +43,24 @@ Mozilla and the Firefox browser extension developer community have created a ran
 
 <!-- END: Page Hero Banner -->
 
+<section id="boilerplating-tools" class="page-section-container">
+
 <!-- Single Column Body Module -->
 
 <section class="module">
+<aside class="module-aside table-of-contents">
+
+{%- include contents.html -%}
+
+</aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
 ## Boilerplating tools
+
+### Extension scaffolding builder
+
+Create a scaffold for your browser extensions. Provide the tool with extension name, description, and version. Then specify whether you want background and content scripts, browser and page actions, and extension options. create-web-ext then delivers a boilerplate project as a zip download, containing all the folders and files you need to start development.
 
 </div>
 </article>
@@ -57,17 +68,11 @@ Mozilla and the Firefox browser extension developer community have created a ran
 
 <!-- END: Single Column Body Module -->
 
-<section id="boilerplating-tools">
-
 <!-- Single Column Body Module -->
 
 <section class="module">
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
-
-### Extension scaffolding builder
-
-Create a scaffold for your browser extensions. Provide the tool with extension name, description, and version. Then specify whether you want background and content scripts, browser and page actions, and extension options. create-web-ext then delivers a boilerplate project as a zip download, containing all the folders and files you need to start development.
 
 ![Extension Scaffolding Builder]({% asset "documentation/develop/Extension_scaffolding_builder.png" @optim @path %})
 
