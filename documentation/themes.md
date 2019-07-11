@@ -11,51 +11,43 @@ date: 2019-07-09 09:00:00
 
 <!-- Overview Page Hero Banner -->
 
-<section class="overview-hero" style="background-image: url({% asset "develop-overview-hero-bg.jpg" @optim @path %});">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="overview-hero-description" markdown="1">
+{% capture page_hero_banner_content %}
 
 # Enable creative expression with themes
 
 Users can more deeply personalize Firefox by personalizing the look of their browser.
 
-</div>
-<div class="overview-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/overview-page-hero.html
+	content=page_hero_banner_content
+	cta1_label=""
+	cta1_url=""
+	cta2_label=""
+	cta2_url=""
+	background="develop-overview-hero-bg.jpg"
+%}
 
 <!-- END: Overview Page Hero Banner -->
 
-<!-- Section 1: Single Column Body Module -->
+<!-- Content with Table of Contents Module -->
 
-<section id="what-themes-are" class="module">
-<aside class="module-aside table-of-contents">
-
-{%- include contents.html -%}
-
-</aside>
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content_with_toc %}
 
 ## What themes are
 
 [Themes](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes/Theme_concepts) add images to the header area of the Firefox browser—the area behind the menu bar, toolbars, address bar, search bar, and tab strip—and can adjust the color of various UI components, such as text and toolbar icons.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/column-w-toc.html
+	id="what-themes-are"
+	content=content_with_toc
+%}
 
-<!-- END: Section 1: Single Column Body Module -->
+<!-- END: Content with Table of Contents -->
 
 <!-- Single Column Body Module -->
 
-<section id="creating-themes" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Creating themes
 
@@ -71,9 +63,12 @@ There are four ways you can create themes:
 
 - **Include themes in your extension:** Use the [theme API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme) to take advantage of the full range of features in standalone themes. You can activate these themes based on user requests or dynamic information, like the time of day or the webpage the user is viewing.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="creating-themes"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 

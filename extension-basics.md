@@ -11,35 +11,27 @@ date: 2019-07-09 09:00:00
 
 <!-- Overview Page Hero Banner -->
 
-<section class="overview-hero" style="background-image: url({% asset "develop-overview-hero-bg.jpg" @optim @path %});">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="overview-hero-description" markdown="1">
+{% capture page_hero_banner_content %}
 
 # Bring your extension to life
 
 Get how-tos, resources, and information to successfully build and ship your extension for Firefox.
 
-</div>
-<div class="overview-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/overview-page-hero.html
+	content=page_hero_banner_content
+	cta1_label=""
+	cta1_url=""
+	cta2_label=""
+	cta2_url=""
+	background="develop-overview-hero-bg.jpg"
+%}
 
 <!-- END: Overview Page Hero Banner -->
 
-<!-- Single Column Body Module -->
+<!-- Content with Table of Contents Module -->
 
-<section id="getting-started" class="module">
-<aside class="module-aside table-of-contents">
-
-{%- include contents.html -%}
-
-</aside>
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content_with_toc %}
 
 ## Getting started
 
@@ -53,17 +45,17 @@ The Extension Workshop can help you develop extensions for Firefox and give your
 - How to develop themes for Firefox
 - Firefox developer communities
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/column-w-toc.html
+	id="getting-started"
+	content=content_with_toc
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Content with Table of Contents -->
 
 <!-- Single Column Body Module -->
 
-<section id="mozilla-developer-network" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Mozilla Developer Network
 
@@ -78,9 +70,12 @@ On MDN, you’ll find:
 - A reference guide for the extension Javascript APIs, including compatibility tables for other popular browsers.
 - A reference guide for the manifest.json file and its keys.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="mozilla-developer-network"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 

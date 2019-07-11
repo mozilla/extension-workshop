@@ -11,51 +11,43 @@ date: 2019-07-09 09:00:00
 
 <!-- Overview Page Hero Banner -->
 
-<section class="overview-hero" style="background-image: url({% asset "community-overview-hero-bg.jpg" @optim @path %});">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="overview-hero-description" markdown="1">
+{% capture page_hero_banner_content %}
 
 # Join the developer community
 
 Tap into the worldwide network of Firefox developers help improve the Firefox add-ons ecosystem.
 
-</div>
-<div class="overview-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/overview-page-hero.html
+	content=page_hero_banner_content
+	cta1_label=""
+	cta1_url=""
+	cta2_label=""
+	cta2_url=""
+	background="community-overview-hero-bg.jpg"
+%}
 
 <!-- END: Overview Page Hero Banner -->
 
-<!-- Single Column Body Module -->
+<!-- Content with Table of Contents Module -->
 
-<section id="who-is-part-of-the-community" class="module">
-<aside class="module-aside table-of-contents">
-
-{%- include contents.html -%}
-
-</aside>
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content_with_toc %}
 
 ## Who is part of the community?
 
 Firefox extension developers are part of a vibrant, global community of creators who help millions of Firefox users around the world to customize their browsing experience. They’re ready to share their skills and expertise to help you develop your Firefox extension.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/column-w-toc.html
+	id="who-is-part-of-the-community"
+	content=content_with_toc
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Content with Table of Contents -->
 
 <!-- Single Column Body Module -->
 
-<section id="connect-with-the-community" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Connect with the community
 
@@ -82,17 +74,18 @@ Find out whether there is a browser extensions or Mozilla related group or meet 
 - [Campus Clubs](https://campus.mozilla.community/), for events arranged by students with a passion for keeping the web open, at universities and colleges worldwide.
   You can also attend Mozilla’s public meetings and events for extension developers, such as add-on demo sessions Details of these events are found in the [Developer Communication Calendar](https://wiki.mozilla.org/Add-ons/developer/communication#Add-on_Developer_Communication_Calendar).
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="connect-with-the-community"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section id="get-involved-in-the-community" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Get involved in the community
 
@@ -100,9 +93,12 @@ Help make the add-on ecosystem a better place by being a contributor, from assis
 
 You can also propose changes to the API, both for additions or changes, and assistance with API development. A good place to start is to get familiar with [Mozilla’s goals for the API](https://docs.google.com/document/d/10DoLNszOr94pKV6I1KNC7OYHdMn5TqDP7W6rBju1LEs/edit).
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="get-involved-in-the-community"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 

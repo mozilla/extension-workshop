@@ -29,16 +29,9 @@ Support your development workflow with these straightforward tools and guides.
 
 <!-- END: Overview Page Hero Banner -->
 
-<!-- Section 1: Single Column Body Module -->
+<!-- Content with Table of Contents Module -->
 
-<section id="firefox-tools" class="module">
-<aside class="module-aside table-of-contents">
-
-{%- include contents.html -%}
-
-</aside>
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content_with_toc %}
 
 ## Firefox Tools
 
@@ -60,56 +53,60 @@ The web-ext tool can help you by:
 - assist with debugging
 - create extension packages, and more
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/column-w-toc.html
+	id="firefox-tools"
+	content=content_with_toc
+%}
 
-<!-- END: Section 1: Single Column Body Module -->
+<!-- END: Content with Table of Contents -->
 
-<!-- Section 2 -->
+<!-- Page section container -->
 
-<section id="user-experience">
+<section id="user-experience" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## User Experience
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id=""
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Two Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6" markdown="1">
+{% capture col_1_content %}
 
 ![Great user experiences]({% asset "documentation/develop/GreatUserExperiences_promo.jpg" @path @optim %})
 
-</div>
-<div class="cell small-12 medium-6" markdown="1">
+{% endcapture %}
+{% capture col_2_content %}
 
 Having an exceptional user experience is crucial to attracting, and retaining, users of your extension.
 
 [RememBear](https://addons.mozilla.org/firefox/addon/remembear-app/) is a great example of an extension with an outstanding user experience.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/two-column.html
+	id=""
+	col_1=col_1_content
+	col_2=col_2_content
+	aside=""
+	reverse=false
+%}
 
 <!-- END: Two Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### Make a great first impression
 
@@ -128,44 +125,46 @@ Lastly, [building a secure extension](https://developer.mozilla.org/en-US/docs/M
 Users are less likely to install an extension if they don’t understand what it does and what value it adds to their browsing experience.
 Find out best practices for putting your best foot forward with your extension.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id=""
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 </section>
 
-<!-- END: Section 2 -->
+<!-- END: Page section container -->
 
-<!-- Section 3 -->
+<!-- Page section container -->
 
-<section id="firefox-for-android">
+<section id="firefox-for-android" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Firefox for Android
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id=""
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Two Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6 medium-order-2" markdown="1">
+{% capture col_1_content %}
 
 ![Moble Extensions]({% asset "documentation/develop/MobleExtensions_promo.png" @path @optim %})
 
-</div>
-<div class="cell small-12 medium-6" markdown="1">
+{% endcapture %}
+{% capture col_2_content %}
 
 ### Understanding how to develop extensions for Android
 
@@ -173,60 +172,65 @@ To offer your extension to Firefox for Android users, you’ll need to consider 
 
 Get started with everything you need to know about [developing for Firefox for Android](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android).
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/two-column.html
+	id=""
+	col_1=col_1_content
+	col_2=col_2_content
+	aside=""
+	reverse=true
+%}
 
 <!-- END: Two Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### Creating browser experiences for Android apps
 
 If you develop Android apps, when you want to include a browser experience in your app you can take advantage of the browser engine that underpins Firefox using the [GeckoView Extensions Android library](https://github.com/mozilla/geckoview).
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id=""
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 </section>
 
-<!-- END: Section 3 -->
+<!-- END: Page section container -->
 
-<!-- Section 4 -->
+<!-- Page section container -->
 
-<section id="port-to-firefox">
+<section id="port-to-firefox" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Port to Firefox
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id=""
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Two Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6 medium-order-2" markdown="1">
+{% capture col_1_content %}
 
 ![Chrome To Firefox Extensions]({% asset "documentation/develop/ChromeToFirefoxExtensions_promo.png" @path @optim %})
 
-</div>
-<div class="cell small-12 medium-6" markdown="1">
+{% endcapture %}
+{% capture col_2_content %}
 
 ### Bring your Chrome extension to Firefox
 
@@ -234,41 +238,45 @@ The Firefox extension environment is highly compatible with chromium-based exten
 
 [Test your extension’s compatibility](https://www.extensiontest.com/) and check out our [porting guide](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension) to get started.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/two-column.html
+	id=""
+	col_1=col_1_content
+	col_2=col_2_content
+	aside=""
+	reverse=true
+%}
 
 <!-- END: Two Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### Update a legacy Firefox extension
 
 If you have a [legacy Firefox extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on), you can still find out how to get it up and running on the latest version of Firefox. Check out the porting information for the [Add-on SDK](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK) and [XUL/XPCOM](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions) based extensions.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id=""
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 </section>
 
-<!-- END: Section 4 -->
+<!-- END: Page section container -->
 
-<!-- Section 5 -->
+<!-- Page section container -->
 
-<section id="test-and-debug">
+<section id="test-and-debug" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Test and debug
 
@@ -280,15 +288,18 @@ Understanding [extensions and the Add-on ID](https://developer.mozilla.org/en-US
 
 You can use [web-ext](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext) to automatically install and update your extension while making coding changes.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id=""
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 </section>
 
-<!-- END: Section 5 -->
+<!-- END: Page section container -->
 
 <!-- Meta Data -->
 

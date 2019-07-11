@@ -11,51 +11,43 @@ date: 2019-07-09 09:00:00
 
 <!-- Overview Page Hero Banner -->
 
-<section class="overview-hero" style="background-image: url({% asset "develop-overview-hero-bg.jpg" @optim @path %});">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="overview-hero-description" markdown="1">
+{% capture page_hero_banner_content %}
 
 # Optimize and stay up-to-date
 
 Manage your extension to keep it growing, accurate, and integrated with Firefox
 
-</div>
-<div class="overview-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/overview-page-hero.html
+	content=page_hero_banner_content
+	cta1_label=""
+	cta1_url=""
+	cta2_label=""
+	cta2_url=""
+	background="develop-overview-hero-bg.jpg"
+%}
 
 <!-- END: Overview Page Hero Banner -->
 
-<!-- Single Column Body Module -->
+<!-- Content with Table of Contents Module -->
 
-<section id="stay-informed-when-firefox-changes" class="module">
-<aside class="module-aside table-of-contents">
-
-{%- include contents.html -%}
-
-</aside>
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content_with_toc %}
 
 ## Stay informed when Firefox changes
 
 We’re constantly improving Firefox and the add-on experience. Use [this list of resources for publishers](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Resources_for_publishers) to stay up-to-date with Firefox news and developments.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/column-w-toc.html
+	id="stay-informed-when-firefox-changes"
+	content=content_with_toc
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Content with Table of Contents -->
 
 <!-- Single Column Body Module -->
 
-<section id="promote-your-extension" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Promote your extension
 
@@ -63,11 +55,12 @@ Keep your user base growing regularly reviewing your listing to [make sure it’
 
 <!-- Video Popup Thumbnail -->
 
-<div class="video-popup" markdown="1">
-
-[![Tips for great content and design for your extension]({% asset "documentation/develop/extension-workshop-content-and-design.png" @path @optim %})](a0_OsLGI0k4)
-
-</div>
+{% include modules/video-popup.html
+	title="Tips for great content and design for your extension"
+	youtube_id="a0_OsLGI0k4"
+	image="documentation/develop/extension-workshop-content-and-design.png"
+	alt="Tips for great content and design for your extension"
+%}
 
 <!-- END: Video Popup Thumbnail -->
 
@@ -77,17 +70,18 @@ Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.or
 
 [Making money from browser extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Make_money_from_browser_extensions) is also something you might want to consider as your user base grows.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="promote-your-extension"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section id="publish-extension-updates" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Publish extension updates
 
@@ -97,17 +91,18 @@ When you’re ready to improve your extension or receive suggestions for new fea
 
 ![Power Up Extensions]({% asset "documentation/develop/PowerUpExtensions_fullwidth.png" @optim @path %})
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="publish-extension-updates"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section id="manage-authors-of-your-extension" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Manage authors of your extension
 
@@ -115,17 +110,18 @@ Add-ons are often the result of the work of a team of developers, which is why [
 
 If someone is using your code without your permission, please follow [these instructions](https://www.mozilla.org/about/legal/report-infringement/) to file a DMCA Notice with Mozilla’s legal team to resolve the situation.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="manage-authors-of-your-extension"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section id="removing-your-extension-from-distribution" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Removing your extension from distribution
 
@@ -133,9 +129,12 @@ Sometimes, add-ons outlive their usefulness: features they provide may be added 
 
 Here’s how to [Retire your extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Retiring_your_extension) gracefully.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="removing-your-extension-from-distribution"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 

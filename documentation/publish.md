@@ -11,35 +11,27 @@ date: 2019-07-09 09:00:00
 
 <!-- Overview Page Hero Banner -->
 
-<section class="overview-hero" style="background-image: url({% asset "develop-overview-hero-bg.jpg" @optim @path %});">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="overview-hero-description" markdown="1">
+{% capture page_hero_banner_content %}
 
 # Distribute your extension to the right audience
 
 Learn how to get your extension signed and distributed worldwide or to your enterprise.
 
-</div>
-<div class="overview-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/overview-page-hero.html
+	content=page_hero_banner_content
+	cta1_label=""
+	cta1_url=""
+	cta2_label=""
+	cta2_url=""
+	background="develop-overview-hero-bg.jpg"
+%}
 
 <!-- END: Overview Page Hero Banner -->
 
-<!-- Section 1: Single Column Body Module -->
+<!-- Content with Table of Contents Module -->
 
-<section id="get-your-extension-signed" class="module">
-<aside class="module-aside table-of-contents">
-
-{%- include contents.html -%}
-
-</aside>
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content_with_toc %}
 
 ## Get your extension signed
 
@@ -53,17 +45,17 @@ Before submitting your extension for signing, create an extension package either
 
 Once your extension is signed, it is subject to review by Mozilla at any time. To enable this review, you may have to [submit the source code](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Source_Code_Submission) for your extension.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/column-w-toc.html
+	id="get-your-extension-signed"
+	content=content_with_toc
+%}
 
-<!-- END: Section 1: Single Column Body Module -->
+<!-- END: Content with Table of Contents -->
 
-<!-- Section 2: Single Column Body Module -->
+<!-- Single Column Body Module -->
 
-<section id="distribute-your-signed-extension" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Distribute your signed extension
 
@@ -86,19 +78,18 @@ Check out our [publisher’s resources](https://developer.mozilla.org/en-US/docs
 - connect with the add-on developer ecosystem
 - get in touch with who manages the add-on resources
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="distribute-your-signed-extension"
+	content=content
+	aside=""
+%}
 
-<!-- END: Section 2: Single Column Body Module -->
-
-<!-- Section 3: Single Column Body Module -->
+<!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section id="promote-your-extension" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Promote your extension
 
@@ -106,11 +97,12 @@ Grow your user base by [creating creating an appealing listing](https://develope
 
 <!-- Video Popup Thumbnail -->
 
-<div class="video-popup" markdown="1">
-
-[![Tips for great content and design for your extension]({% asset "documentation/develop/extension-workshop-content-and-design.png" @path @optim %})](a0_OsLGI0k4)
-
-</div>
+{% include modules/video-popup.html
+	title="Tips for great content and design for your extension"
+	youtube_id="a0_OsLGI0k4"
+	image="documentation/develop/extension-workshop-content-and-design.png"
+	alt="Tips for great content and design for your extension"
+%}
 
 <!-- END: Video Popup Thumbnail -->
 
@@ -120,15 +112,28 @@ Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.or
 
 [Making money from browser extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Make_money_from_browser_extensions) is also something you might want to consider as your user base grows.
 
-<p class="note">If you’re distributing to an enterprise running the ESR version of Firefox or to users of Developer Edition or Nightly you don’t need to submit your extension to addons.mozilla.org for signing, you can distribute and install unsigned extensions.</p>
+<!-- Note -->
 
-</div>
-</article>
-</section>
+{% capture note %}
+
+If you’re distributing to an enterprise running the ESR version of Firefox or to users of Developer Edition or Nightly you don’t need to submit your extension to addons.mozilla.org for signing, you can distribute and install unsigned extensions.
+
+{% endcapture %}
+{% include modules/note.html
+	content=note
+	alert=false
+%}
+
+<!-- END: Note -->
+
+{% endcapture %}
+{% include modules/one-column.html
+	id="promote-your-extension"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
-
-<!-- END: Section 3: Single Column Body Module -->
 
 <!-- Meta Data -->
 
