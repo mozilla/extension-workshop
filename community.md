@@ -3,82 +3,113 @@ layout: sidebar
 title: Community
 permalink: /community/
 published: false
-tags: [label, distribution, install, remove]
-contributors: [caitmuenster, muffinresearch, bqbn]
+tags: []
+contributors: [caitmuenster]
 author: caitmuenster
-date: 2019-06-24 09:00:00
+date: 2019-07-09 09:00:00
 ---
 
 <!-- Overview Page Hero Banner -->
 
-<section class="overview-hero" style="background-image: url({% asset "community-overview-hero-bg.jpg" @optim @path %});">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="overview-hero-description" markdown="1">
+{% capture page_hero_banner_content %}
 
-# Developer Community
+# Join the developer community
 
-Short and brief description of the sort of content you will find on this page.
+Tap into the worldwide network of Firefox developers help improve the Firefox add-ons ecosystem.
 
-</div>
-<div class="overview-hero-cta">
-
-<a href="/documentation/develop/getting-started-with-web-ext/" class="button">Do first thing</a>
-<a href="/documentation/develop/build-an-extension-in-5-minutes" class="button secondary">Do second thing</a>
-
-</div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/overview-page-hero.html
+	content=page_hero_banner_content
+	cta1_label=""
+	cta1_url=""
+	cta2_label=""
+	cta2_url=""
+	background="community-overview-hero-bg.jpg"
+%}
 
 <!-- END: Overview Page Hero Banner -->
 
+<!-- Content with Table of Contents Module -->
+
+{% capture content_with_toc %}
+
+## Who is part of the community?
+
+Firefox extension developers are part of a vibrant, global community of creators who help millions of Firefox users around the world to customize their browsing experience. They’re ready to share their skills and expertise to help you develop your Firefox extension.
+
+{% endcapture %}
+{% include modules/column-w-toc.html
+	id="who-is-part-of-the-community"
+	content=content_with_toc
+%}
+
+<!-- END: Content with Table of Contents -->
+
 <!-- Single Column Body Module -->
 
-<section id="connect-with-us-container" class="module">
-<aside class="module-aside table-of-contents" markdown="1">
+{% capture content %}
 
-###### Contents
+## Connect with the community
 
-1. [Connect with us](#connect-with-us-container 'Connect with us')
-2. [Become a contributor](#become-a-contributor-container 'Become a contributor')
+There are several ways to stay up-to-date with Firefox add-on technology and connected to the worldwide network of creators.
 
-</aside>
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+### Add-ons blog.
 
-## Connect with us
+Stay up to date with the latest information about add-on technology on the [Add-ons blog](https://blog.mozilla.org/addons).
 
-##### News
+### Email list
 
-Find news about the browser extension technology in Firefox on the [Mozilla Add-ons blog](https://blog.mozilla.org/addons/). You can also get browser extension news and information delivered to your inbox each quarter, sign up from the [Browser Extensions page](https://blog.mozilla.org/addons/).
+Subscribe to our [mailing list](https://mail.mozilla.org/listinfo/dev-addons) dedicated to the development of the add-on ecosystem, including the site addons.mozilla.org (AMO), WebExtensions APIs, and public meetings.
 
-You can also subscribe to our [mailing list](https://blog.mozilla.org/addons/) dedicated to the development of the add-on ecosystem including the site addons.mozilla.org (AMO), WebExtensions APIs, and public meetings.
+### Questions about add-on development
 
-The [Mozilla Tech blog](https://blog.mozilla.org/addons/) is another place where you can find news and views about browser extension development.
+You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), [Stack Overflow]()http://stackoverflow.com/questions/tagged/firefox-addon, or the [developer mailing list](https://mail.mozilla.org/listinfo/dev-addons).
 
-</div>
-</article>
-</section>
+### Meetup IRL
+
+Find out whether there is a browser extensions or Mozilla related group or meet up near you from these resources:
+
+- [Mozilla Reps program](https://reps.mozilla.org/events/#/period/future/), where you can find events arranged by volunteer Mozillians from around the world. And, if there are no events local to you, the program can help you get things started.
+
+- [Campus Clubs](https://campus.mozilla.community/), for events arranged by students with a passion for keeping the web open, at universities and colleges worldwide.
+  You can also attend Mozilla’s public meetings and events for extension developers, such as add-on demo sessions Details of these events are found in the [Developer Communication Calendar](https://wiki.mozilla.org/Add-ons/developer/communication#Add-on_Developer_Communication_Calendar).
+
+{% endcapture %}
+{% include modules/one-column.html
+	id="connect-with-the-community"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section id="become-a-contributor-container" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
-## Become a contributor
+## Get involved in the community
 
-There are many ways to get involved with the community and contribute to the add-ons ecosystem.
+Help make the add-on ecosystem a better place by being a contributor, from assisting with documentation to fixing bugs and more. For more information, [visit the Contribute page](https://docs.google.com/document/d/1_fRGPgjNF3jX-xEROosUx0jmu6PwCY4UNC42EOoHfKQ/edit).
 
-Check our [wiki] for more information.
+You can also propose changes to the API, both for additions or changes, and assistance with API development. A good place to start is to get familiar with [Mozilla’s goals for the API](https://docs.google.com/document/d/10DoLNszOr94pKV6I1KNC7OYHdMn5TqDP7W6rBju1LEs/edit).
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="get-involved-in-the-community"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
+
+<!-- Meta Data -->
+
+{%- include page-meta-data.html -%}
+
+<!-- END: Meta Data -->
+
+<!-- Up Next -->
+
+{%- include up-next.html -%}
+
+<!-- END: Up Next -->

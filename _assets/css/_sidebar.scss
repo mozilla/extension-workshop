@@ -71,12 +71,12 @@ $sidebar-nav-width: rem-calc(240);
   }
 
   @include breakpoint(large) {
-    flex: 0 0 #{$sidebar-nav-width};
     position: fixed;
     top: rem-calc(64);
-    height: calc(100% - #{rem-calc(64)});
     left: 0;
+    flex: 0 0 #{$sidebar-nav-width};
     width: $sidebar-nav-width;
+    height: calc(100% - #{rem-calc(64)});
     border-right: 1px solid $medium-light-gray;
     overflow-y: auto;
     overflow-x: hidden;
@@ -393,6 +393,7 @@ $sidebar-nav-width: rem-calc(240);
 
   @include breakpoint(large) {
     flex: 0 0 calc(100% - #{$sidebar-nav-width});
+    width: calc(100% - #{$sidebar-nav-width});
   }
 }
 
@@ -413,10 +414,11 @@ $sidebar-nav-width: rem-calc(240);
   h2 {
     margin-top: rem-calc(12);
     border-top: 1px solid $medium-light-gray;
-    padding-top: rem-calc(30);
+    padding-top: rem-calc(45);
 
     @include breakpoint(medium) {
       margin-top: rem-calc(24);
+      padding-top: rem-calc(60);
     }
   }
 }
@@ -478,39 +480,54 @@ $sidebar-nav-width: rem-calc(240);
   @include breakpoint(xxlarge) {
     max-width: #{$global-width - $sidebar-nav-width};
   }
+}
 
-  &-content {
-    flex: 0 0 75%;
+.module-content {
+  img {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: rem-calc(6);
+    border-radius: $global-radius;
   }
 
-  &-aside {
-    flex: 0 0 25%;
-    padding: rem-calc(0 8);
-
-    @include breakpoint(medium) {
-      padding: rem-calc(0 12);
+  @include breakpoint(medium) {
+    img {
+      margin-bottom: rem-calc(8);
     }
+  }
+
+  @include breakpoint(xlarge) {
+    flex: 0 0 75%;
+    width: 75%;
+  }
+}
+
+.module-aside {
+  padding: rem-calc(0 8);
+
+  @include breakpoint(medium) {
+    flex: 0 0 50%;
+    width: 50%;
+    padding: rem-calc(0 12);
+  }
+
+  @include breakpoint(large) {
+    flex: 0 0 33.3333%;
+    width: 33.3333%;
+  }
+
+  @include breakpoint(xlarge) {
+    flex: 0 0 25%;
+    width: 25%;
   }
 }
 
 // Aside Tile
 
 .module-aside.tile {
-  margin: rem-calc(12 0 12 0);
+  margin: rem-calc(0 0 36 0);
   font-size: $small-font-size;
   padding: rem-calc(24) !important;
-
-  @include breakpoint(medium) {
-    margin: rem-calc(0 0 24 0);
-  }
-
-  @include breakpoint(large only) {
-    width: 33.3333%;
-  }
-
-  @include breakpoint(medium only) {
-    width: 50%;
-  }
 
   &::before {
     left: rem-calc(12);
@@ -552,6 +569,10 @@ $sidebar-nav-width: rem-calc(240);
 
   .section-title {
     margin-bottom: 1em;
+
+    small {
+      color: inherit;
+    }
   }
 
   &-description {
@@ -579,13 +600,14 @@ $sidebar-nav-width: rem-calc(240);
     }
   }
 
-  + .module {
+  + .module,
+  + .page-section-container > .module:first-child {
     margin-top: 0;
 
     h1,
     h2 {
       &:first-child {
-        margin-top: 0;
+        margin-top: rem-calc(12);
         border-top: 0;
         padding-top: 0;
       }
@@ -633,18 +655,18 @@ $sidebar-nav-width: rem-calc(240);
 }
 
 .page-hero {
+  background-color: $light-gray;
+
   &-cta {
     padding-bottom: 0;
 
     &::after {
       content: '';
       display: block;
-      height: 1px;
       width: calc(100% - #{rem-calc(16)});
       margin-left: auto;
       margin-right: auto;
       margin-top: rem-calc(20);
-      background-color: $medium-light-gray;
 
       @include breakpoint(large) {
         margin-top: rem-calc(40);
@@ -673,10 +695,19 @@ $sidebar-nav-width: rem-calc(240);
   @include breakpoint(xlarge) {
     order: 2;
     position: relative;
-    padding-left: rem-calc(28) !important;
+    padding-left: 0 !important;
+
+    &-inner {
+      position: absolute;
+      width: 100%;
+      padding-left: rem-calc(28);
+    }
   }
 
   @include breakpoint(large down) {
+    flex: 0 0 100%;
+    width: 100%;
+
     ol {
       padding-bottom: rem-calc(24);
       border-bottom: 1px solid $medium-light-gray;
