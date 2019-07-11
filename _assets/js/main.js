@@ -1225,7 +1225,7 @@ jQuery(document).ready(function($) {
 
     var $container = this;
 
-    /* Don't scroll for oviewview pages,
+    /* Don't scroll for overview pages,
      * as they are already the first page element
      * and we want to see the section above them.
      */
