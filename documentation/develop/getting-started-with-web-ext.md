@@ -27,23 +27,20 @@ date: 2019-04-16 10:25:55
 
 <!-- Page Hero Banner -->
 
-<section class="page-hero">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="page-hero-description" markdown="1">
-<p class="section-title"><small>{{ page.topic }}</small></p>
+{% capture page_hero_banner_content %}
 
 # Getting started with web-ext
 
 `web-ext` is a command line tool designed to speed up various parts of the extension development process, making development faster and easier. This article explains how to install and use `web-ext`.
 
-</div>
-<div class="page-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/page-hero.html
+    content=page_hero_banner_content
+    cta1_label=""
+    cta1_url=""
+    cta2_label=""
+    cta2_url=""
+%}
 
 <!-- END: Page Hero Banner -->
 

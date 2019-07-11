@@ -27,12 +27,7 @@ date: 2019-06-27 10:50:35
 
 <!-- Page Hero Banner -->
 
-<section class="page-hero">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="page-hero-description" markdown="1">
-<p class="section-title"><small>{{ page.topic }}</small></p>
+{% capture page_hero_banner_content %}
 
 # Extensions and the add-on ID
 
@@ -52,12 +47,14 @@ Note that the ability to develop and debug WebExtensions that don't include an I
 
 </p>
 
-</div>
-<div class="page-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/page-hero.html
+  content=page_hero_banner_content
+  cta1_label=""
+  cta1_url=""
+  cta2_label=""
+  cta2_url=""
+%}
 
 <!-- END: Page Hero Banner -->
 

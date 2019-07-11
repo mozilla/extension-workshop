@@ -23,23 +23,20 @@ date: 2019-03-21 12:47:53
 
 <!-- Page Hero Banner -->
 
-<section class="page-hero">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="page-hero-description" markdown="1">
-<p class="section-title"><small>{{ page.topic }}</small></p>
+{% capture page_hero_banner_content %}
 
 # Browser Extension Development Tools
 
 Mozilla and the Firefox browser extension developer community have created a range of tools that can simplify and speed up your browser extension development. This page provides a summary of those tools including details on the features each offers, how to get started, where in the development cycle it fits, and links to useful resources.
 
-</div>
-<div class="page-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/page-hero.html
+    content=page_hero_banner_content
+    cta1_label=""
+    cta1_url=""
+    cta2_label=""
+    cta2_url=""
+%}
 
 <!-- END: Page Hero Banner -->
 

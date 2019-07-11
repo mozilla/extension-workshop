@@ -12,23 +12,20 @@ date: 2019-05-13 6:35:30
 
 <!-- Page Hero Banner -->
 
-<section class="page-hero">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="page-hero-description" markdown="1">
-<p class="section-title"><small>{{ page.topic }}</small></p>
+{% capture page_hero_banner_content %}
 
 # Security best practices
 
 Here is a list of best practices you should follow to keep the users of your extension safe. If you don't follow these best practices your extension may fail the reviews on [addons.mozilla.org](https://addons.mozilla.org), preventing you from distributing your add-on or resulting in it being blocked from installation in Firefox.
 
-</div>
-<div class="page-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/page-hero.html
+    content=page_hero_banner_content
+    cta1_label=""
+    cta1_url=""
+    cta2_label=""
+    cta2_url=""
+%}
 
 <!-- END: Page Hero Banner -->
 

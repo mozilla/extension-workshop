@@ -1,0 +1,25 @@
+<section id="{{ include.id }}" class="module">
+<article class="module-content grid-x grid-padding-x align-middle">
+{% if include.reverse == true %}
+<div class="cell small-12 medium-6 medium-order-2" markdown="1">
+{% else %}
+<div class="cell small-12 medium-6" markdown="1">
+{% endif %}
+
+{{ include.col_1 }}
+
+</div>
+<div class="cell small-12 medium-6" markdown="1">
+
+{{ include.col_2 }}
+
+</div>
+</article>
+{% if include.aside != nil and include.aside != empty %}
+<aside class="module-aside tile" markdown="1">
+
+{{ include.aside }}
+
+</aside>
+{% endif %}
+</section>

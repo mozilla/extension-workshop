@@ -1851,6 +1851,7 @@ a.tile-block-link {
         top: calc(50% - #{rem-calc(20)});
         width: rem-calc(40);
         height: rem-calc(40);
+        padding: 0;
       }
 
       &::before {
@@ -1899,32 +1900,32 @@ a.tile-block-link {
     width: 100%;
     border-radius: $global-radius;
   }
+}
 
-  .medium-6 {
-    @include breakpoint(medium) {
-      p:first-child {
-        a {
-          font-size: rem-calc(13);
+.medium-6 .video-popup {
+  @include breakpoint(medium) {
+    p:first-child {
+      a {
+        font-size: rem-calc(13);
 
-          &::before,
-          &::after {
-            left: calc(50% - #{rem-calc(12)});
-            top: calc(50% - #{rem-calc(12)});
-            width: rem-calc(24);
-            height: rem-calc(24);
-          }
+        &::before,
+        &::after {
+          left: calc(50% - #{rem-calc(12)});
+          top: calc(50% - #{rem-calc(12)});
+          width: rem-calc(24);
+          height: rem-calc(24);
+        }
 
-          &::after {
-            line-height: rem-calc(23);
-          }
+        &::after {
+          line-height: rem-calc(23);
         }
       }
     }
+  }
 
-    @include breakpoint(small down) {
-      &:not(:last-child) {
-        margin-bottom: rem-calc(12);
-      }
+  @include breakpoint(small down) {
+    &:not(:last-child) {
+      margin-bottom: rem-calc(12);
     }
   }
 }
@@ -2242,6 +2243,10 @@ span.example {
     margin-bottom: rem-calc(12);
     transition: padding 0.3s ease-in-out, font-size 0.1s ease-in-out,
       color 0.3s ease-in-out;
+
+    p {
+      margin: 0;
+    }
   }
 
   dt.closed + dd {

@@ -21,23 +21,20 @@ date: 2019-03-18 17:01:40
 
 <!-- Page Hero Banner -->
 
-<section class="page-hero">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="page-hero-description" markdown="1">
-<p class="section-title"><small>{{ page.topic }}</small></p>
+{% capture page_hero_banner_content %}
 
 # Best practices for onboarding, upboarding, and offboarding users
 
 The first few minutes after someone installs your extension can be critical to its success. Your new user needs to know where to start and how to use the features of your browser extension.
 
-</div>
-<div class="page-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/page-hero.html
+  content=page_hero_banner_content
+  cta1_label=""
+  cta1_url=""
+  cta2_label=""
+  cta2_url=""
+%}
 
 <!-- END: Page Hero Banner -->
 

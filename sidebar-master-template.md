@@ -13,41 +13,26 @@ skip_index: true
 
 <!-- Page Hero Banner -->
 
-<section class="page-hero">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="page-hero-description" markdown="1">
-<p class="section-title"><small>{{ page.topic }}</small></p>
+{% capture page_hero_banner_content %}
 
 # Develop
 
 Short and brief description of the sort of content you will find on this page.
 
-</div>
-<div class="page-hero-cta">
+{% endcapture %}
+{% include modules/page-hero.html
+	content=page_hero_banner_content
+	cta1_label="Do first thing"
+	cta1_url="#"
+	cta2_label="Do second thing"
+	cta2_url="#"
+%}
 
-<a href="/documentation/develop/getting-started-with-web-ext/" class="button">Do first thing</a>
-<a href="/documentation/develop/build-an-extension-in-5-minutes/" class="button secondary">Do second thing</a>
+<!-- END: Page Hero Banner -->
 
-</div>
-</div>
-</article>
-</div>
-</section>
+<!-- Content with Table of Contents Module -->
 
-<!-- END: Overview Page Hero Banner -->
-
-<!-- Single Column Body Module -->
-
-<section id="section-1" class="module">
-<aside class="module-aside table-of-contents">
-
-{%- include contents.html -%}
-
-</aside>
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content_with_toc %}
 
 ## Label Title 1
 
@@ -55,13 +40,21 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- Note -->
 
-<p class="note">Note that this is a one-way conversion. You cannot update an extension using WebExtensions to use a legacy technology. This means that you must be sure that you are ready to commit to using WebExtension APIs before you submit the updated add-on to AMO.</p>
+{% capture note %}
+
+Note that this is a one-way conversion. You cannot update an extension using WebExtensions to use a legacy technology. This means that you must be sure that you are ready to commit to using WebExtension APIs before you submit the updated add-on to AMO.
+
+{% endcapture %}
+{% include modules/note.html
+	content=note
+	alert=false
+%}
 
 <!-- END: Note -->
 
 <!-- Table -->
 
-<div class="table-wrapper table-scroll" markdown="1">
+{% capture table %}
 
 | Column Title                          | Column Title        | Column Title               |
 | ------------------------------------- | ------------------- | -------------------------- |
@@ -69,21 +62,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | Content scripts matching URL patterns | [`page-mod`](#) API | [`content-scripts`](#) key |
 | Content scripts matching URL patterns | [`page-mod`](#) API | [`content-scripts`](#) key |
 
-</div>
+{% endcapture %}
+{% include modules/table.html
+	content=table
+%}
 
 <!-- END: Table -->
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/column-w-toc.html
+	id="section-1"
+	content=content_with_toc
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Content with Table of Contents -->
 
 <!-- Single Column Body Module -->
 
-<section id="section-2" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Label Title 2
 
@@ -95,82 +91,97 @@ You reference all extensions API functions using a namespace, for example, `brow
 
 {% highlight javascript linenos %}
 function setCurrentChoice(result) {
-document.querySelector('#color').value = result.color || 'blue';
+  document.querySelector('#color').value = result.color || 'blue';
 }
 {% endhighlight %}
 
 <!-- END: Syntax Highlighting -->
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="section-2"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
-<!-- Page navigation section
+<!-- Page section container
 	(wrap modules in a page section container
-	when they are all part of the section
+	when they are all part of the same section
 	referenced by a table of contents link) -->
-
 <section id="section-3" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Label Title 3
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
 
-<p class="note alert">Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+<!-- Alert -->
 
-</div>
-</article>
-</section>
+{% capture alert %}
+
+Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.
+
+{% endcapture %}
+{% include modules/note.html
+	content=alert
+	alert=true
+%}
+
+<!-- END: Alert -->
+
+{% endcapture %}
+{% include modules/one-column.html
+	id=""
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Two Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6 medium-order-2" markdown="1">
+{% capture col_1_content %}
 
 ![Example Alt Tag Description]({% asset "fpo-half-width-image-1.jpg" @path @optim %} "Example Title Tag Description")
 
-</div>
-<div class="cell small-12 medium-6" markdown="1">
+{% endcapture %}
+{% capture col_2_content %}
 
 #### [Laser Cat](https://www.firefox.com)
 
 This page provides a succinct description of the extension, clear instructions on how to fire your cat’s lasers, and how to turn your laser cat on and off.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/two-column.html
+	id=""
+	col_1=col_1_content
+	col_2=col_2_content
+	aside=""
+	reverse=true
+%}
 
 <!-- END: Two Column Body Module -->
 
 <!-- Two Column Body Module With Aside -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6" markdown="1">
+{% capture col_1_content %}
 
 ![Example Alt Tag Description]({% asset "fpo-half-width-image-2.png" @path @optim %} "Example Title Tag Description")
 
-</div>
-<div class="cell small-12 medium-6" markdown="1">
+{% endcapture %}
+{% capture col_2_content %}
 
 #### [Ghostery - Privacy Ad Blocker](https://www.firefox.com)
 
 As the features of Ghostery are mostly silent, this onboarding screen gives users two options for the initial setup: A simple one-click option and a link to the full settings so they can customize how Ghostery works.
 
-</div>
-</article>
-<aside class="module-aside tile" markdown="1">
+{% endcapture %}
+{% capture aside %}
 
 ###### Related Content
 
@@ -178,20 +189,23 @@ Cards contain content and links about a single subject.
 
 [Related Article](https://www.firefox.com)
 
-</aside>
-</section>
+{% endcapture %}
+{% include modules/two-column.html
+	id=""
+	col_1=col_1_content
+	col_2=col_2_content
+	aside=aside
+	reverse=false
+%}
 
 <!-- END: Two Column Body Module With Aside -->
 
 </section>
-
 <!-- END: page navigation section -->
 
 <!-- Single Column Body Module -->
 
-<section id="section-4" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Label Title 4
 
@@ -199,145 +213,265 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- Expandable List -->
 
-<dl class="expandable-list" aria-label="Accordion Control Button Group">
-<dt><button aria-controls="content-1" aria-expanded="true">How do I change my developer account information?</button></dt>
-<dd aria-hidden="false" id="content-1">Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
+{% capture expandable-list %}
 
-<dt><button aria-controls="content-2" aria-expanded="true">How do I manage access to account information for multiple members of my team or company?</button></dt>
-<dd aria-hidden="false" id="content-2">Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
+<!-- List Item 1 -->
 
-<dt><button aria-controls="content-3" aria-expanded="true">What is the developer's revenue share?</button></dt>
-<dd aria-hidden="false" id="content-3">Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, <a href="#" title="link title">read App pricing</a>.</dd>
-</dl>
+{% capture item-content %}
+
+Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, [read App pricing](#).
+
+{% endcapture %}
+{% include modules/expandable-list-item.html
+	id="content-1"
+	title="How do I change my developer account information?"
+	content=item-content
+%}
+
+<!-- END: List Item 1 -->
+
+<!-- List Item 2 -->
+
+{% capture item-content %}
+
+Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, [read App pricing](#).
+
+{% endcapture %}
+{% include modules/expandable-list-item.html
+	id="content-2"
+	title="How do I change my developer account information?"
+	content=item-content
+%}
+
+<!-- END: List Item 2 -->
+
+<!-- List Item 3 -->
+
+{% capture item-content %}
+
+Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, [read App pricing](#).
+
+{% endcapture %}
+{% include modules/expandable-list-item.html
+	id="content-3"
+	title="How do I change my developer account information?"
+	content=item-content
+%}
+
+<!-- END: List Item 3 -->
+
+{% endcapture %}
+{% include modules/expandable-list.html
+	list=expandable-list
+%}
 
 <!-- END: Expandable List -->
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+	id="section-4"
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Phase 1 Components
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
 
-</div>
-</article>
-</section>
+<!-- Image with caption -->
+
+{% include modules/image-with-caption.html
+	source="content-guidelines/example-remembear.png"
+	alt="Screenshot Remembear"
+	caption="Full width image (above)"
+%}
+
+<!-- END: Image with caption -->
+
+{% endcapture %}
+{% include modules/one-column.html
+	id=""
+	content=content
+	aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
-<!-- Full Width Image -->
-
-<section class="module image-with-caption">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
-
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @optim @path %} "Screenshot Remembear") Full width image (above)
-
-</div>
-</article>
-</section>
-
-<!-- END: Full Width Image -->
-
 <!-- Half Width Images -->
 
-<section class="module image-with-caption">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12 medium-6" markdown="1">
+{% capture col_1_content %}
 
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear") Half width image (above)
+<!-- Image with caption -->
 
-</div>
-<div class="cell small-12 medium-6" markdown="1">
+{% include modules/image-with-caption.html
+	source="content-guidelines/example-remembear.png"
+	alt="Screenshot Remembear"
+	caption="Full width image (above)"
+%}
 
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear") Half width image (above)
+<!-- END: Image with caption -->
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% capture col_2_content %}
+
+<!-- Image with caption -->
+
+{% include modules/image-with-caption.html
+	source="content-guidelines/example-remembear.png"
+	alt="Screenshot Remembear"
+	caption="Full width image (above)"
+%}
+
+<!-- END: Image with caption -->
+
+{% endcapture %}
+{% include modules/two-column.html
+	id=""
+	col_1=col_1_content
+	col_2=col_2_content
+	aside=""
+	reverse=false
+%}
 
 <!-- END: Half Width Images -->
 
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 <!-- Video Popup Thumbnail -->
 
-<section class="module video-popup">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
-
-[![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'What’s Great Content and Design?')
-
-</div>
-</article>
-</section>
+{% include modules/video-popup.html
+	title="What’s Great Content and Design?"
+	youtube_id="a0_OsLGI0k4"
+	image="content-guidelines/example-thumbnail.jpg"
+	alt="What’s Great Content and Design?"
+%}
 
 <!-- END: Video Popup Thumbnail -->
 
+{% endcapture %}
+{% include modules/one-column.html
+	id=""
+	content=content
+	aside=""
+%}
+
+<!-- END: Single Column Body Module -->
+
 <!-- Half Width Video Popup Thumbnails -->
 
-<section class="module video-popup">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12 medium-6" markdown="1">
+{% capture col_1_content %}
 
-![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %} "What’s Great Content and Design?")
+<!-- Video Popup Thumbnail -->
 
-#### What’s Great Content and Design?
+{% include modules/video-popup.html
+	title="What’s Great Content and Design?"
+	youtube_id="a0_OsLGI0k4"
+	image="content-guidelines/example-thumbnail.jpg"
+	alt="What’s Great Content and Design?"
+%}
 
-Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
-
-</div>
-<div class="cell small-12 medium-6" markdown="1">
-
-[![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'What’s Great Content and Design?')
+<!-- END: Video Popup Thumbnail -->
 
 #### What’s Great Content and Design?
 
 Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% capture col_2_content %}
+
+<!-- Video Popup Thumbnail -->
+
+{% include modules/video-popup.html
+	title="What’s Great Content and Design?"
+	youtube_id="a0_OsLGI0k4"
+	image="content-guidelines/example-thumbnail.jpg"
+	alt="What’s Great Content and Design?"
+%}
+
+<!-- END: Video Popup Thumbnail -->
+
+#### What’s Great Content and Design?
+
+Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
+
+{% endcapture %}
+{% include modules/two-column.html
+	id=""
+	col_1=col_1_content
+	col_2=col_2_content
+	aside=""
+	reverse=false
+%}
 
 <!-- END: Half Width Video Popup Thumbnails -->
 
-<!-- Icon Grid *** use "shrink" class to fit grid to image size -OR- use "auto" class to fit images to grid width *** -->
+<!-- Icon Grid:
+	 Set fit attribute to "shrink" to fit grid to image size
+	 -OR-
+	 Set fit attribute to "auto" to fit images to grid width
+	 -->
 
-<section class="module icon-grid">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### Icons
 
 <small>Examples of goood icons</small>
 
-</div>
-<div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
-</div>
-<div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
-</div>
-<div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
-</div>
-</article>
-</section>
+{% endcapture %}
+{% capture grid %}
 
-<!-- END: Image Grid -->
+<!-- Icon Cell -->
+
+{% include modules/icon-grid-cell.html
+	image="content-guidelines/example-icon.png"
+	alt="Icon"
+	width="53"
+	fit="shrink"
+%}
+
+<!-- END: Icon Cell -->
+
+<!-- Icon Cell -->
+
+{% include modules/icon-grid-cell.html
+	image="content-guidelines/example-icon.png"
+	alt="Icon"
+	width="53"
+	fit="shrink"
+%}
+
+<!-- END: Icon Cell -->
+
+<!-- Icon Cell -->
+
+{% include modules/icon-grid-cell.html
+	image="content-guidelines/example-icon.png"
+	alt="Icon"
+	width="53"
+	fit="shrink"
+%}
+
+<!-- END: Icon Cell -->
+
+{% endcapture %}
+{% include modules/icon-grid.html
+	content=content
+	grid=grid
+%}
+
+<!-- END: Icon Grid -->
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
 
@@ -352,18 +486,9 @@ Between your extension name and subtitle, you have up to 70 characters to use—
 
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-</div>
-</article>
-</section>
-
-<!-- END: Single Column Body Module -->
-
 <!-- Do this -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="do-this" markdown="1"><header><h6>Do This</h6></header>
+{% capture dothis %}
 
 1. **Make it memorable**
 2. **Make it unique**
@@ -373,7 +498,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 
 <!-- Example (Block) -->
 
-<div class="example" markdown="1">
+{% capture example %}
 
 Examples: An extension that saves passwords is called **Remembear**
 
@@ -381,23 +506,25 @@ An extension that puts a cat on new tabs is called **Tabbycat**
 
 An extension that improves YouTube is called **Enhancer for YouTube**
 
-</div>
+{% endcapture %}
+{% include modules/example.html
+	content=example
+	layout="block"
+%}
 
 <!-- END: Example (Block) -->
 
-</div>
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/do-this.html
+	title="Do This"
+	content=dothis
+%}
 
 <!-- END: Do this -->
 
 <!-- Not this -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="not-this" markdown="1"><header><h6>Not This</h6></header>
+{% capture notthis %}
 
 ###### 1. Don't include a description.
 
@@ -405,7 +532,10 @@ Save these details for your subtitle and description.
 
 <!-- Example (Inline) -->
 
-<span class="example">Example: Videomix, a fast video downloader</span>
+{% include modules/example.html
+	content="Example: Videomix, a fast video downloader"
+	layout="inline"
+%}
 
 <!-- END: Example (Inline) -->
 
@@ -415,7 +545,10 @@ Google is smarter than this and it just makes your extension look untrustworthy.
 
 <!-- Example (Inline) -->
 
-<span class="example">Example: Youtube Download Videos, Convert, Media, MP3, MP4, Free.</span>
+{% include modules/example.html
+	content="Example: Youtube Download Videos, Convert, Media, MP3, MP4, Free."
+	layout="inline"
+%}
 
 <!-- END: Example (Inline) -->
 
@@ -433,7 +566,10 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 <!-- Example (Inline) -->
 
-<span class="example">Example: Weatherchanger (fix version)</span>
+{% include modules/example.html
+	content="Example: Weatherchanger (fix version)"
+	layout="inline"
+%}
 
 <!-- END: Example (Inline) -->
 
@@ -441,19 +577,16 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 <!-- Example (Inline) -->
 
-<span class="example">Example: TrLrs! Tab Changer.</span>
+{% include modules/example.html
+	content="Example: TrLrs! Tab Changer."
+	layout="inline"
+%}
 
 <!-- END: Example (Inline) -->
 
 ###### Remembear Example:
 
-<!-- Full Width Image -->
-
-<section class="image-with-caption" markdown="1">
 ![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear")
-</section>
-
-<!-- END: Full Width Image -->
 
 ###### List Example:
 
@@ -463,19 +596,26 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 - [Ecoesia](https://firefox.com 'Ecoesia')
 - [Mate Translate](https://firefox.com 'Mate Translate')
 
-</div>
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/not-this.html
+	title="Not This"
+	content=notthis
+%}
 
 <!-- END: Not this -->
 
+{% endcapture %}
+{% include modules/one-column.html
+	id="section-2"
+	content=content
+	aside=""
+%}
+
+<!-- END: Single Column Body Module -->
+
 <!-- Do this, not this, side-by-side -->
 
-<section class="module do-this-not-this">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12 medium-6">
-<div class="do-this" markdown="1"><header><h6>Do This</h6></header>
+{% capture do_this_content %}
 
 1. **Make it memorable**
 2. **Make it unique**
@@ -483,7 +623,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 <!-- Example (Block) -->
 
-<div class="example" markdown="1">
+{% capture example %}
 
 Examples: An extension that saves passwords is called **Remembear**
 
@@ -491,14 +631,16 @@ An extension that puts a cat on new tabs is called **Tabbycat**
 
 An extension that improves YouTube is called **Enhancer for YouTube**
 
-</div>
+{% endcapture %}
+{% include modules/example.html
+	content=example
+	layout="block"
+%}
 
 <!-- END: Example (Block) -->
 
-</div>
-</div>
-<div class="cell small-12 medium-6">
-<div class="not-this" markdown="1"><header><h6>Not This</h6></header>
+{% endcapture %}
+{% capture not_this_content %}
 
 1. **Make it memorable**
 2. **Make it unique**
@@ -506,7 +648,7 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 
 <!-- Example (Block) -->
 
-<div class="example" markdown="1">
+{% capture example %}
 
 Examples: An extension that saves passwords is called **Remembear**
 
@@ -514,22 +656,31 @@ An extension that puts a cat on new tabs is called **Tabbycat**
 
 An extension that improves YouTube is called **Enhancer for YouTube**
 
-</div>
+{% endcapture %}
+{% include modules/example.html
+	content=example
+	layout="block"
+%}
 
 <!-- END: Example (Block) -->
 
-</div>
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/do-this-not-this.html
+	do_this_title="Do This"
+	do_this_content=do_this_content
+	not_this_title="Not This"
+	not_this_content=not_this_content
+%}
 
 <!-- END: Do this, not this, side-by-side -->
 
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 <!-- Tile -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12 tile" markdown="1">
+{% capture tile %}
 
 #### Requirements
 
@@ -543,11 +694,21 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 - Excepteur sint: occaecat cupidatat non proident
 - Bunt in culpa: qui officia deserunt mollit anim id est laborum
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/tile.html
+	content=tile
+%}
 
 <!-- END: Tile -->
+
+{% endcapture %}
+{% include modules/one-column.html
+	id=""
+	content=content
+	aside=""
+%}
+
+<!-- END: Single Column Body Module -->
 
 <!-- Meta Data -->
 

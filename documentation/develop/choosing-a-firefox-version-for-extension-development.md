@@ -12,23 +12,20 @@ date: 2019-03-18 16:36:22
 
 <!-- Page Hero Banner -->
 
-<section class="page-hero">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="page-hero-description" markdown="1">
-<p class="section-title"><small>{{ page.topic }}</small></p>
+{% capture page_hero_banner_content %}
 
 # Choose a Firefox version for web extension development
 
 Firefox provides several versions that offer different capabilities for developing web extensions. This article provides an overview of the differences amoung these versions of Firefox and recommends how to use each in the development lifecycle.
 
-</div>
-<div class="page-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/page-hero.html
+	content=page_hero_banner_content
+	cta1_label=""
+	cta1_url=""
+	cta2_label=""
+	cta2_url=""
+%}
 
 <!-- END: Page Hero Banner -->
 

@@ -12,12 +12,7 @@ date: 2019-05-01 9:08:50
 
 <!-- Page Hero Banner -->
 
-<section class="page-hero">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="page-hero-description" markdown="1">
-<p class="section-title"><small>{{ page.topic }}</small></p>
+{% capture page_hero_banner_content %}
 
 # Accessibility guidelines
 
@@ -25,12 +20,14 @@ When it comes to accessibility, extensions should follow the same guidelines as 
 
 There is more information on design and accessibility in the [Photon Design System](https://design.firefox.com/photon/) and [Accessibility and Mozilla](https://developer.mozilla.org/en-US/docs/Mozilla/Accessibility) section on MDN.
 
-</div>
-<div class="page-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/page-hero.html
+    content=page_hero_banner_content
+    cta1_label=""
+    cta1_url=""
+    cta2_label=""
+    cta2_url=""
+%}
 
 <!-- END: Page Hero Banner -->
 

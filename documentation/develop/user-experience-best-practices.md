@@ -24,12 +24,7 @@ date: 2019-03-18 17:05:14
 
 <!-- Page Hero Banner -->
 
-<section class="page-hero">
-<div class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
-<div class="page-hero-description" markdown="1">
-<p class="section-title"><small>{{ page.topic }}</small></p>
+{% capture page_hero_banner_content %}
 
 # User experience best practices
 
@@ -41,12 +36,14 @@ Here we lay out the six steps to creating specific Firefox and extension UX feat
 
 In addition to the steps described here, your extension should follow [Add-on Policies](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews), which include being transparent with users about user security, privacy and control.
 
-</div>
-<div class="page-hero-cta"></div>
-</div>
-</article>
-</div>
-</section>
+{% endcapture %}
+{% include modules/page-hero.html
+    content=page_hero_banner_content
+    cta1_label=""
+    cta1_url=""
+    cta2_label=""
+    cta2_url=""
+%}
 
 <!-- END: Page Hero Banner -->
 
