@@ -42,16 +42,9 @@ Mozilla and the Firefox browser extension developer community have created a ran
 
 <section id="boilerplating-tools" class="page-section-container">
 
-<!-- Single Column Body Module -->
+<!-- Content with Table of Contents Module -->
 
-<section class="module">
-<aside class="module-aside table-of-contents">
-
-{%- include contents.html -%}
-
-</aside>
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content_with_toc %}
 
 ## Boilerplating tools
 
@@ -59,25 +52,24 @@ Mozilla and the Firefox browser extension developer community have created a ran
 
 Create a scaffold for your browser extensions. Provide the tool with extension name, description, and version. Then specify whether you want background and content scripts, browser and page actions, and extension options. create-web-ext then delivers a boilerplate project as a zip download, containing all the folders and files you need to start development.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/column-w-toc.html
+    id=""
+    content=content_with_toc
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Content with Table of Contents -->
 
-<!-- Single Column Body Module -->
+<!-- Single Column Body Module With Aside -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ![Extension Scaffolding Builder]({% asset "documentation/develop/Extension_scaffolding_builder.png" @optim @path %})
 
 To get started, [visit the tool online](http://webextensions.tech/) or [install it locally from npm](https://www.npmjs.com/package/create-web-ext).
 
-</div>
-</article>
-<aside class="module-aside tile" markdown="1">
+{% endcapture %}
+{% capture aside %}
 
 ##### Use during:
 
@@ -90,24 +82,25 @@ To get started, [visit the tool online](http://webextensions.tech/) or [install 
 - [GitHub project](https://github.com/web-ext-labs/create-web-ext)
 - [GitHub UI project](https://github.com/web-ext-labs/ui-tool)
 
-</aside>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=aside
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Single Column Body Module With Aside -->
 
-<!-- Single Column Body Module -->
+<!-- Single Column Body Module With Aside -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### WebExtensions Example
 
 The webextensions-examples GitHub repository is a collection browser extension examples. Each example is a complete working extension that you can install and run in Firefox. You are free to use these examples as the starting point for your browser extensions, as they are made available under the [Mozilla Public License 2.0.](https://www.mozilla.org/en-US/MPL/2.0/)
 
-</div>
-</article>
-<aside class="module-aside tile" markdown="1">
+{% endcapture %}
+{% capture aside %}
 
 ##### Use during:
 
@@ -118,36 +111,39 @@ The webextensions-examples GitHub repository is a collection browser extension e
 - [GitHub project](https://github.com/mdn/webextensions-examples)
 - [Examples page on MDN](https://developer.mozilla.org/Add-ons/WebExtensions/Examples)
 
-</aside>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=aside
+%}
+
+<!-- END: Single Column Body Module With Aside -->
+
 </section>
 
-<!-- END: Single Column Body Module -->
-
-</section>
-
-<section id="coding-tools">
+<section id="coding-tools" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Coding tools
 
 If you're looking for information about text editor in which to write your code, see the [Common questions](https://developer.mozilla.org/en-US/docs/Learn/Common_questions) article [Available text editors](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Available_text_editors).
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
-<!-- Single Column Body Module -->
+<!-- Single Column Body Module With Aside -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### web-ext
 
@@ -163,9 +159,8 @@ To get started with web-ext, install it with the [nodejs/npm](https://nodejs.org
 
 [Get started](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext)
 
-</div>
-</article>
-<aside class="module-aside tile" markdown="1">
+{% endcapture %}
+{% capture aside %}
 
 ##### Use during:
 
@@ -178,16 +173,18 @@ To get started with web-ext, install it with the [nodejs/npm](https://nodejs.org
 - [Command reference](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference)
 - [GitHub project](https://github.com/mozilla/web-ext)
 
-</aside>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=aside
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Single Column Body Module With Aside -->
 
-<!-- Single Column Body Module -->
+<!-- Single Column Body Module With Aside -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### web-ext-webpack-plugin
 
@@ -197,9 +194,8 @@ To get started, add the plug-in to your webpack.config.js.
 
 [Get started](https://github.com/hiikezoe/web-ext-webpack-plugin/blob/master/README.md)
 
-</div>
-</article>
-<aside class="module-aside tile" markdown="1">
+{% endcapture %}
+{% capture aside %}
 
 ##### Use during:
 
@@ -211,16 +207,18 @@ To get started, add the plug-in to your webpack.config.js.
 - [GitHub repo](https://github.com/hiikezoe/web-ext-webpack-plugin)
 - [Example](https://github.com/birtles/rikaichamp/)
 
-</aside>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=aside
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Single Column Body Module With Aside -->
 
-<!-- Single Column Body Module -->
+<!-- Single Column Body Module With Aside -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### WebExtension browser API Polyfill
 
@@ -230,9 +228,8 @@ To get started, install using npm and load the library into the contexts where b
 
 [Get started](https://github.com/mozilla/webextension-polyfill/#installation)
 
-</div>
-</article>
-<aside class="module-aside tile" markdown="1">
+{% endcapture %}
+{% capture aside %}
 
 ##### Use during:
 
@@ -242,34 +239,37 @@ To get started, install using npm and load the library into the contexts where b
 
 - [GitHub project](https://github.com/mozilla/webextension-polyfill/)
 
-</aside>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=aside
+%}
+
+<!-- END: Single Column Body Module With Aside -->
+
 </section>
 
-<!-- END: Single Column Body Module -->
-
-</section>
-
-<section id="testing-and-debugging-tools">
+<section id="testing-and-debugging-tools" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Testing and debugging tools
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
-<!-- Single Column Body Module -->
+<!-- Single Column Body Module With Aside -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### about:debugging
 
@@ -279,9 +279,8 @@ This Firefox page enables you to manually install add-ons into Firefox for testi
 
 To get started, type about:debugging in the Firefox address bar.
 
-</div>
-</article>
-<aside class="module-aside tile" markdown="1">
+{% endcapture %}
+{% capture aside %}
 
 ##### Use during:
 
@@ -291,16 +290,18 @@ To get started, type about:debugging in the Firefox address bar.
 
 - [MDN page](https://developer.mozilla.org/en-US/docs/Tools/about:debugging)
 
-</aside>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=aside
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Single Column Body Module With Aside -->
 
-<!-- Single Column Body Module -->
+<!-- Single Column Body Module With Aside -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### Addon Debugging Window
 
@@ -312,9 +313,8 @@ To get started, enable Browser Toolbox then open about:debugging and click debug
 
 [Get started](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox#Enabling_the_Browser_Toolbox)
 
-</div>
-</article>
-<aside class="module-aside tile" markdown="1">
+{% endcapture %}
+{% capture aside %}
 
 ##### Use during:
 
@@ -324,34 +324,37 @@ To get started, enable Browser Toolbox then open about:debugging and click debug
 
 - [MDN page](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox)
 
-</aside>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=aside
+%}
+
+<!-- END: Single Column Body Module With Aside -->
+
 </section>
 
-<!-- END: Single Column Body Module -->
-
-</section>
-
-<section id="translation-tools">
+<section id="translation-tools" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Translation tools
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
-<!-- Single Column Body Module -->
+<!-- Single Column Body Module With Aside -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### Web Extension Translator
 
@@ -363,9 +366,8 @@ To get started, visit the [online version](https://lusito.github.io/web-ext-tran
 
 [Get started](https://github.com/Lusito/web-ext-translator/blob/master/README.md)
 
-</div>
-</article>
-<aside class="module-aside tile" markdown="1">
+{% endcapture %}
+{% capture aside %}
 
 ##### Use during:
 
@@ -378,16 +380,18 @@ To get started, visit the [online version](https://lusito.github.io/web-ext-tran
 - [npm package](https://www.npmjs.com/package/web-ext-translator)
 - [GitHub repo](https://github.com/Lusito/web-ext-translator)
 
-</aside>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=aside
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Single Column Body Module With Aside -->
 
-<!-- Single Column Body Module -->
+<!-- Single Column Body Module With Aside -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ### Translate Web-Ext
 
@@ -399,9 +403,8 @@ To get started, [visit the tool online](https://morikko.github.io/translate-web-
 
 [Get started](https://morikko.github.io/translate-web-extension/help)
 
-</div>
-</article>
-<aside class="module-aside tile" markdown="1">
+{% endcapture %}
+{% capture aside %}
 
 ##### Use during:
 
@@ -412,20 +415,22 @@ To get started, [visit the tool online](https://morikko.github.io/translate-web-
 
 - [Translate Web-Ext](https://morikko.github.io/translate-web-extension)
 
-</aside>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=aside
+%}
+
+<!-- END: Single Column Body Module With Aside -->
+
 </section>
 
-<!-- END: Single Column Body Module -->
-
-</section>
-
-<section id="tools-for-firefox-for-android">
+<section id="tools-for-firefox-for-android" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
-<section class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Tools for Firefox for Android
 
@@ -436,9 +441,12 @@ When developing browser extensions for Firefox for Android, you can make use of:
 
 For more details, see [Developing extensions for Firefox for Android](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android).
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+    id=""
+    content=content
+    aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 

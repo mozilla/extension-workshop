@@ -32,16 +32,9 @@ A common developer question about these policies is how to translate them into w
 
 <!-- END: Page Hero Banner -->
 
-<!-- Single Column Body Module -->
+<!-- Content with Table of Contents Module -->
 
-<section id="know-your-privacy-settings" class="module">
-<aside class="module-aside table-of-contents">
-
-{%- include contents.html -%}
-
-</aside>
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content_with_toc %}
 
 ## Know your privacy settings
 
@@ -51,17 +44,17 @@ To create the consent flow and consent dialogues your extension needs, you shoul
 2. Does my extension collect technical or interaction data? (If you’re unsure what technical and interaction data is, check out the definition in [Data Disclosure, Collection and Management](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews#Data_Disclosure_Collection_and_Management).) If so, offer the user the opportunity to opt-out of this data collection, although you can always offer opt-in consent if you prefer.
 3. Does my extension collect personally identifying information? If so, get the user’s opt-in consent before collecting any of this data. Remember that personally identifying information includes technical or interaction data tagged with the user’s identity or information that can be used to identify the user, such as an IP address.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/column-w-toc.html
+  id="know-your-privacy-settings"
+  content=content_with_toc
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Content with Table of Contents -->
 
 <!-- Single Column Body Module -->
 
-<section id="get-prepared" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Get prepared
 
@@ -71,33 +64,35 @@ Before designing the data collection and use of cookies consents for your extens
 - design your extension to offer as much functionality as possible if the user declines the collection of data or the use of cookies.
 - create a privacy policy.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+  id="get-prepared"
+  content=content
+  aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section id="create-a-privacy-policy" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Create a privacy policy
 
 When your users arrive at your data and privacy consent dialogue, they need to know what they're consenting to and this is where your privacy policy comes in. The [Data Disclosure, Collection and Management](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews#Data_Disclosure_Collection_and_Management) section of the [Add-on Policies](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews) provides clear guidelines on what the policy should include. If you’re collecting significant quantities of data and making significant use of it, taking legal advice may be prudent. However, your first strategy should be to reduce or eliminate the collection of user data where possible. If your data collection and use is fairly low-level, it’s possible that privacy policy generator—such as [Cooley LLP](https://www.cooleygo.com/documents/privacy-policy/) or [iubenda](http://www.iubenda.com)—may be helpful. You may also want to take a look at [Mozilla's privacy policy](https://www.mozilla.org/en-US/privacy/) as a model to follow.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+  id="create-a-privacy-policy"
+  content=content
+  aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section id="prompt-after-install-or-on-first-use" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Prompt after install or on first use
 
@@ -113,17 +108,18 @@ Where you provide the user with an opt-in option, the related feature must be tu
 
 Where you provide the user with an opt-out, option the related features can be turned on by default but must be turned off if the user indicates they want to opt-out.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+  id="prompt-after-install-or-on-first-use"
+  content=content
+  aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section id="determine-your-consent-flow" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Determine your consent flow
 
@@ -143,17 +139,18 @@ In this example:
 7. OUT of any feature that cannot be disabled, offer them the option to remove the extension. If they choose not to remove the extension present the consent dialog again.
 8. OUT only from features that can be disabled, disable those features and continue running the extension.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+  id="determine-your-consent-flow"
+  content=content
+  aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section id="your-consent-dialogs" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+{% capture content %}
 
 ## Your consent dialogs
 
@@ -170,9 +167,12 @@ Once you understand your privacy consent flow, you can add suitable consent dial
 - The extension won’t work without data or cookies. The default option is your choice.  
   ![Mockup of a prompt that could be used when the user provide insufficient permission for privacy related features so that the extension cannot work. Gives the user the option to uninstall the extension or review their privacy settings.]({% asset "documentation/develop/privacy_prompt_mockup_remove_extension.png" @optim @path %})
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.html
+  id="your-consent-dialogs"
+  content=content
+  aside=""
+%}
 
 <!-- END: Single Column Body Module -->
 

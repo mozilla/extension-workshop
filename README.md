@@ -73,9 +73,9 @@ Here's an example using markdown - note you need to add `@path` and `@optim`.
 4. For reference on how to create a page, review the `sidebar-master-template.md` file, which lists all available modules. Some notes:
    - `published: false` will withhold this content from stage and production, to publish content, remove this line.
    - `skip_index: true` is used for pages that shouldn't be indexed for search results.
-   - When creating page sections that will be listed in the table of contents, add an ID attribute to the section container that matches the subpageitem added to Pages.yaml. If your layout requires several sections for one table of contents entry, simply nest your sections inside a containing element which has the ID attribute.
+   - When creating page sections that will be listed in the table of contents, add an ID attribute to the section container that matches the subpageitem added to Pages.yaml. If your layout requires several sections for one table of contents entry,  nest your sections inside a containing element which has the ID attribute.
    - Rull for creating section IDs: use the `h2` title of the section, converted to lowercase, spaces replaced with dashes, all non-alphanumeric characters removed. For example, the section `h2` title "Know your privacy settings" would be converted to `know-your-privacy-settings` for the section ID
-   - The first section following the Page Hero module should have the `table-of-contents` `aside` section prepended to it.
+   - The first section following the "Page Hero" module should be the "Table of Contents" module: `modules/column-w-toc.html`.
 
 <h4 id="understanding-the-pagesyaml-structure">Understanding the Pages.yaml structure</h4>
 

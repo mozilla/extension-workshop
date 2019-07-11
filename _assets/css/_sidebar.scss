@@ -503,33 +503,31 @@ $sidebar-nav-width: rem-calc(240);
 }
 
 .module-aside {
-  flex: 0 0 25%;
-  width: 25%;
   padding: rem-calc(0 8);
 
   @include breakpoint(medium) {
+    flex: 0 0 50%;
+    width: 50%;
     padding: rem-calc(0 12);
+  }
+
+  @include breakpoint(large) {
+    flex: 0 0 33.3333%;
+    width: 33.3333%;
+  }
+
+  @include breakpoint(xlarge) {
+    flex: 0 0 25%;
+    width: 25%;
   }
 }
 
 // Aside Tile
 
 .module-aside.tile {
-  margin: rem-calc(12 0 12 0);
+  margin: rem-calc(0 0 36 0);
   font-size: $small-font-size;
   padding: rem-calc(24) !important;
-
-  @include breakpoint(medium) {
-    margin: rem-calc(0 0 24 0);
-  }
-
-  @include breakpoint(large only) {
-    width: 33.3333%;
-  }
-
-  @include breakpoint(medium only) {
-    width: 50%;
-  }
 
   &::before {
     left: rem-calc(12);
