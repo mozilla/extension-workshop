@@ -1225,6 +1225,10 @@ jQuery(document).ready(function($) {
 
     var $container = this;
 
+    /* Don't scroll for oviewview pages,
+     * as they are already the first page element
+     * and we want to see the section above them.
+     */
     if (!settings.active.find('a[data-overviewtitle]').length) {
       settings.active.velocity('scroll', {
         container: $container,
