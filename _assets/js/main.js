@@ -202,6 +202,13 @@ jQuery(document).ready(function($) {
     $('.up-next').hide(0);
   }
 
+  // 16. Scroll sidebar to active page position
+  // ------
+
+  if ($('.sidenav-detail .is-active').length) {
+    $('.sidenav').sidenavScrollToActive();
+  }
+
   // Init Breakpoint Listeners
   // ------------------
 
@@ -1203,6 +1210,32 @@ jQuery(document).ready(function($) {
 
       $this.closest(settings.title).toggleClass('closed');
     });
+  };
+
+  // 16. Scroll sidebar to active page position
+  // ------
+
+  $.fn.sidenavScrollToActive = function(options) {
+    var settings = $.extend(
+      {
+        active: $('.sidenav-detail .is-active'),
+      },
+      options
+    );
+
+    var $container = this;
+
+    /* Don't scroll for overview pages,
+     * as they are already the first page element
+     * and we want to see the section above them.
+     */
+    if (!settings.active.find('a[data-overviewtitle]').length) {
+      settings.active.velocity('scroll', {
+        container: $container,
+        duration: 0,
+        delay: 0,
+      });
+    }
   };
 
   // Utilities
