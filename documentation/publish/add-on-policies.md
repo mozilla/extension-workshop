@@ -238,7 +238,7 @@ As a result, we take our security policies very seriously and apply them to all 
 
 ## Monetization
 
-- Monetization mechanisms must comply with the policies in the *Data Disclosure, Collection and Management* section. In particular, an add-on must be accompanied with a clear user control mechanism (and opt-in for personal data) presented during the installation or update process of the add-on. Collecting ancillary information for monetization is prohibited.
+- Monetization mechanisms must comply with the policies in the _Data Disclosure, Collection and Management_ section. In particular, an add-on must be accompanied with a clear user control mechanism (and opt-in for personal data) presented during the installation or update process of the add-on. Collecting ancillary information for monetization is prohibited.
 - An add-on injecting advertising into web page content must clearly identify the injected content as originating from the add-on.
 - The inclusion of any cryptocurrency miners or similar functionality in an add-on is prohibited.
 - Modifying web content or facilitating redirects to include affiliate promotion tags is not permitted. Conversely, the use of affiliate promotion in user interface elements clearly identified as belonging to the add-on are acceptable.

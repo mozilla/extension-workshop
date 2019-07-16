@@ -5,11 +5,11 @@ permalink: /documentation/publish/source-code-submission/
 published: false
 topic: Publish
 tags: [Add-ons, distribution, Extensions, Review Policy]
-contributors:
-  [kewisch, mdnwebdocs-bot, One, rebloor, wbamberg, atsay]
+contributors: [kewisch, mdnwebdocs-bot, One, rebloor, wbamberg, atsay]
 last_updated_by: kewisch
 date: 2019-06-10 06:33:38
 ---
+
 <!-- Page Hero Banner -->
 
 {% capture page_hero_banner_content %}
@@ -47,10 +47,10 @@ Here you can find details of when you must provide your extension’s source cod
 
 You must upload your extension’s source code when its code was created using:
 
-* code minifiers, such as [uglifyJS](https://github.com/mishoo/UglifyJS2) or [Google Closure Compiler](https://developers.google.com/closure/compiler/).
-* tools that generate a single file from other files, such as [browserify](http://browserify.org/) or [webpack](https://webpack.js.org/).
-* template engines, such as [handlebars](http://handlebarsjs.com/) or [css2js](https://github.com/grnadav/css2js).
-* any other custom tool that takes files, applies pre-processing, and generates file(s) to include in the extension.
+- code minifiers, such as [uglifyJS](https://github.com/mishoo/UglifyJS2) or [Google Closure Compiler](https://developers.google.com/closure/compiler/).
+- tools that generate a single file from other files, such as [browserify](http://browserify.org/) or [webpack](https://webpack.js.org/).
+- template engines, such as [handlebars](http://handlebarsjs.com/) or [css2js](https://github.com/grnadav/css2js).
+- any other custom tool that takes files, applies pre-processing, and generates file(s) to include in the extension.
 
 <p class="note" markdown="1">
 
@@ -59,19 +59,19 @@ Any source code that you submit is only accessible to a small group of admin rev
 </p>
 
 ### Provide build instructions
+
 An important aspect of reviewing source code is confirming that it's the same code as used in your extension. This is to ensure that a malware author doesn't provide legitimate-looking sources, but has added a backdoor to the minified code. It is, therefore, necessary for the reviewer to rebuild your extension from the source code.
 
 To reproduce the build, the reviewer runs the instructions you provided and then uses a diff tool to compare the generated sources to those in the extension. There must be no differences. The easiest way to provide the build instructions is to include a README file with the submitted source code. If it’s one or two files that are processed, for example obfuscated, the instructions can be something like `run uglifyjs data/mycoolstuff.js`. If the extension is more complex, provide a script to perform the build. When preparing your instructions, remember to include:
 
-* operating system and environment requirements.
-* details, including required version and installation instructions, of any tools or utilities that need to be downloaded, for example, [yuicompressor](http://yui.github.io/yuicompressor/).
-* a list of all the commands to generate an identical copy of the extension from the source code, for example, npm install or a grunt target. Ideally, you should include every command in the build script file.
+- operating system and environment requirements.
+- details, including required version and installation instructions, of any tools or utilities that need to be downloaded, for example, [yuicompressor](http://yui.github.io/yuicompressor/).
+- a list of all the commands to generate an identical copy of the extension from the source code, for example, npm install or a grunt target. Ideally, you should include every command in the build script file.
 
 The tools you use to minify, or concatenate your source code:
 
-
-* must be open source: we cannot verify a build made with commercial tools.
-* cannot be web-based: all review builds are run locally. Using a web-based tool doesn’t allow the reviewers to be certain that your sources match the minified code. Some web-based tools offer a version that can be run locally, in which case provide a script to run the tool locally.
+- must be open source: we cannot verify a build made with commercial tools.
+- cannot be web-based: all review builds are run locally. Using a web-based tool doesn’t allow the reviewers to be certain that your sources match the minified code. Some web-based tools offer a version that can be run locally, in which case provide a script to run the tool locally.
 
 When using npm, yarn, or other package management tools that support it, be sure to include the lockfile, for example, `package-lock.json`. Otherwise, reviewers may use a different version resulting in differences between the generated code and that in the extension.
 
@@ -87,24 +87,25 @@ If you need to provide it, matching source code must be attached to every extens
 
 </p>
 
-
 You can submit your source code in two ways:
 
-* during the extension upload process, in the step where you upload your extension:
+- during the extension upload process, in the step where you upload your extension:
 
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-10" markdown="1">
 
 ![Upload sources screenshot]({% asset "publish/upload-process-sources.png" @path @optim %})
+
 </div>
 </article>
 
-* if you’ve already uploaded your extension, open Manage Status & Versions, select the version you want to attach source code to, and submit your files in the source code section:
+- if you’ve already uploaded your extension, open Manage Status & Versions, select the version you want to attach source code to, and submit your files in the source code section:
 
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12" markdown="1">
 
 ![Upload sources screenshot]({% asset "publish/version-page-sources.png" @path @optim %})
+
 </div>
 </article>
 
@@ -131,13 +132,11 @@ Not all code that is difficult to read is obfuscated, and we specifically allow 
 
 We also allow tools that combine multiple files into a single file, or transpile code from other languages.
 
-
 <section class="do-this" markdown="1"><header><h5>The allowed approach merely reduces file size but retains the meaning of the code:</h5></header>
 
 `var d=document;var o=JSON.parse(responseText);var e=d.createElement("div");e.className=o.className;e.textContent="Your favorite color is now "+o.color;addonElement.appendChild(e);`
 
 </section>
-
 
 <section class="not-this" markdown="1"><header><h5>While the prohibited use of obfuscators will completely mask the intent of the code:</h5></header>
 
@@ -151,6 +150,7 @@ We also allow tools that combine multiple files into a single file, or transpile
   content=content
   aside=""
 %}
+
 <!-- END: Single Column Body Module -->
 <!-- Single Column Body Module -->
 
@@ -160,21 +160,20 @@ We also allow tools that combine multiple files into a single file, or transpile
 
 Use this checklist to confirm that you are providing the right details with your source code submission:
 
-
-* If you use them, are your build tools:
-    * open source?
-    * able to be run on the reviewer’s computer?
-* Does your source code package include:
-    * source code for any private repositories or frameworks used in your add-on?
-    * a README file that includes:
-        * details of the operating system used for the build?
-        * details of any specific versions of tools or utilities needed?
-        * links to any tools or utilities that need to be downloaded?
-        * guidance for installing any downloaded tools and utilities, for example, links to online instructions?
-        * instructions for building your add-on code or details of any scripts provided?
-    * your build script?
-    * the version lockfile for any package management tools, such as npm or yarn?
-    * anything else needed to complete the build of your extension’s package?
+- If you use them, are your build tools:
+  - open source?
+  - able to be run on the reviewer’s computer?
+- Does your source code package include:
+  - source code for any private repositories or frameworks used in your add-on?
+  - a README file that includes:
+    - details of the operating system used for the build?
+    - details of any specific versions of tools or utilities needed?
+    - links to any tools or utilities that need to be downloaded?
+    - guidance for installing any downloaded tools and utilities, for example, links to online instructions?
+    - instructions for building your add-on code or details of any scripts provided?
+  - your build script?
+  - the version lockfile for any package management tools, such as npm or yarn?
+  - anything else needed to complete the build of your extension’s package?
 
 Remember, if you miss any of the necessary content from your uploaded source code package the reviewer will have to get in touch to request the missing items. This could delay the completion of your extension’s review or, in the worst-case, result in your extension being taken down because we can't confirm it complies with the [add-on policies](/documentation/publish/add-on-policies).
 
@@ -184,6 +183,7 @@ Remember, if you miss any of the necessary content from your uploaded source cod
   content=content
   aside=""
 %}
+
 <!-- END: Single Column Body Module -->
 
 <!-- Meta Data -->
