@@ -389,6 +389,7 @@ $sidebar-nav-width: rem-calc(240);
   flex: 1 0 auto;
   display: flex;
   flex-flow: column nowrap;
+  min-width: 0; // Fix 'Pre' tag overflow bug with flexbox containers
   background-color: $white;
 
   @include breakpoint(large) {
@@ -483,6 +484,8 @@ $sidebar-nav-width: rem-calc(240);
 }
 
 .module-content {
+  min-width: 0; // Fix 'Pre' tag overflow bug with flexbox containers
+
   img {
     display: inline-block;
     max-width: 100%;
