@@ -63,7 +63,7 @@ Subscribe to our [mailing list](https://mail.mozilla.org/listinfo/dev-addons) de
 
 ### Questions about add-on development
 
-You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), [Stack Overflow]()http://stackoverflow.com/questions/tagged/firefox-addon, or the [developer mailing list](https://mail.mozilla.org/listinfo/dev-addons).
+You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon), or the [developer mailing list](https://mail.mozilla.org/listinfo/dev-addons).
 
 ### Meetup IRL
 
