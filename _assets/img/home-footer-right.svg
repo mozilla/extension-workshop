@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="288.1" height="452" viewBox="0 0 288.1 452">
+  <defs>
+    <linearGradient id="linear-gradient" x1="159.29" y1="53.59" x2="447.5" y2="341.8" gradientTransform="matrix(1, 0, 0, -1, 0, 344)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9059ff"/>
+      <stop offset="0.31" stop-color="#9752f9"/>
+      <stop offset="0.78" stop-color="#ac3eea"/>
+      <stop offset="1" stop-color="#b833e1"/>
+    </linearGradient>
+  </defs>
+  <title>home-footer-right</title>
+  <circle cx="207.5" cy="242.2" r="203.8" fill="url(#linear-gradient)"/>
+</svg>

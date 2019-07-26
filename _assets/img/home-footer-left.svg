@@ -1,0 +1,20 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="991" height="452" viewBox="0 0 991 452">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-386.77" y1="760.43" x2="461.38" y2="760.43" gradientTransform="matrix(0.67, -0.74, -0.74, -0.67, 771.75, 646.51)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.26" stop-color="#ff4f5e"/>
+      <stop offset="0.32" stop-color="#f53a6d"/>
+      <stop offset="0.39" stop-color="#eb257b"/>
+      <stop offset="0.46" stop-color="#e51984"/>
+      <stop offset="0.54" stop-color="#e31587"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-89.12" y1="598.96" x2="553.4" y2="740.82" gradientTransform="matrix(0.84, -0.54, -0.54, -0.84, 327.36, 690.82)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.67" stop-color="#ff4f5e"/>
+      <stop offset="0.78" stop-color="#ff5557"/>
+      <stop offset="0.93" stop-color="#ff6744"/>
+      <stop offset="1" stop-color="#ff7139"/>
+    </linearGradient>
+  </defs>
+  <title>home-footer-left</title>
+  <path d="M-52.3,425.8c-292.5-263-316.5-714.9-53.6-1007.4A134.9,134.9,0,0,1,84.6-591.7,134.9,134.9,0,0,1,94.7-401.2C-68.8-219.3-53.8,61.6,128,225.1s462.8,148.6,626.3-33.3A134.89,134.89,0,1,1,954.9,372.2C692.1,664.7,240.2,688.7-52.3,425.8Z" fill="url(#linear-gradient)"/>
+  <path d="M-342.8,265.9C-588-118.3-475-630.4-90.8-875.6-18-922,78.7-900.7,125.1-827.9A156.39,156.39,0,0,1,77.4-612C-161.4-459.6-231.7-141.2-79.3,97.7S391.6,406.9,630.4,254.4a156.39,156.39,0,0,1,215.9,47.7c46.5,72.8,25.1,169.4-47.7,215.9C414.5,763.1-97.6,650.1-342.8,265.9Z" fill="url(#linear-gradient-2)"/>
+</svg>
