@@ -87,6 +87,8 @@ web-ext --version
 
 Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the [webextensions-examples](https://github.com/mdn/webextensions-examples) repo.
 
+<section id="testing-out-an-extension"></section>
+
 ### Testing out an extension
 
 Test an extension in Firefox by `cd`'ing into your extensions’s root directory and entering:
@@ -140,6 +142,9 @@ Firefox 48 was the first stable version to use the WebExtension platform, but it
 {% highlight javascript %}
 web-ext run --pre-install
 {% endhighlight %}
+
+
+<section id="testing-in-firefox-for-android"></section>
 
 ### Testing in Firefox for Android
 
@@ -209,6 +214,8 @@ This may be helpful if your extension has many different run states.
 
 <p class="note alert" markdown="1">This option makes the profile specified by `--firefox-profile` completely insecure for daily use. It turns off auto-updates and allows silent remote connections, among other things. Specifically, it will make destructive changes to the profile that are required for `web-ext` to operate.</p>
 
+<section id="packaging-your-extension"></section>
+
 ### Packaging your extension
 
 Once you've tested your extension and verified that it's working, you can turn it into a package for submitting to `addons.mozilla.org` using the following command:
@@ -224,6 +231,8 @@ This outputs a full path to the generated `.zip` file that can be loaded into a 
 `web-ext build` is designed to ignore files that are commonly not wanted in packages, such as `.git`, `node_modules`, and other artifacts.
 
 See the [build reference guide](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_build) to learn more.
+
+
 
 ### Signing your extension for self-distribution
 
@@ -241,6 +250,7 @@ The API options are required to specify your [addons.mozilla.org credentials](ht
 <p class="note alert" markdown="1">If you've [listed](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on) the extension on [addons.mozilla.org](https://addons.mozilla.org/), see [Signing a test version of a listed extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext#Signing_a_test_version_of_a_listed_extension).</p>
 
 See the [sign reference guide](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_sign) to learn more.
+
 
 ### Signing extensions without an explicit ID
 
