@@ -4,12 +4,26 @@ title: Porting a Google Chrome extension
 permalink: /documentation/develop/porting-a-google-chrome-extension/
 published: false
 topic: Develop
-tags:
-  [WebExtensions]
-contributors: [jennyevans, blossomica, mdnwebdocs-bot, aseffasamson, rebloor, Uemmra3, Makyen, wbamberg, andrewtruongmoz, AndreiPetcu, kumar303, yfdyh000]
+tags: [WebExtensions]
+contributors:
+  [
+    jennyevans,
+    blossomica,
+    mdnwebdocs-bot,
+    aseffasamson,
+    rebloor,
+    Uemmra3,
+    Makyen,
+    wbamberg,
+    andrewtruongmoz,
+    AndreiPetcu,
+    kumar303,
+    yfdyh000,
+  ]
 last_updated_by: jennyevans
 date: 2019-05-19 11:54:36
 ---
+
 <!-- Page Hero Banner -->
 
 {% capture page_hero_banner_content %}

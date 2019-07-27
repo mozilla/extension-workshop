@@ -4,17 +4,29 @@ title: Differences between desktop and Android extensions
 permalink: /documentation/develop/differences-between-desktop-and-android-extensions/
 published: false
 topic: Develop
-tags:
-  [Add-ons, Guide, Mobile, NeedsUpdate, WebExtensions]
-contributors: [mdnwebdocs-bot, ExE-Boss, gokulakrishna, hellosct1, ramkumar.kr94, andrewtruongmoz, PikadudeNo1, rebloor, wbamberg]
-last_updated_by:  mdnwebdocs-bot
+tags: [Add-ons, Guide, Mobile, NeedsUpdate, WebExtensions]
+contributors:
+  [
+    mdnwebdocs-bot,
+    ExE-Boss,
+    gokulakrishna,
+    hellosct1,
+    ramkumar.kr94,
+    andrewtruongmoz,
+    PikadudeNo1,
+    rebloor,
+    wbamberg,
+  ]
+last_updated_by: mdnwebdocs-bot
 date: 2019-03-18
 ---
+
 <!-- Page Hero Banner -->
 
 {% capture page_hero_banner_content %}
 
 # Differences between desktop and Android extensions
+
 {% capture note %}
 
 **Warning: The content of this article may be out of date.** This page has last been updated before Firefox 54.
@@ -47,25 +59,26 @@ A detailed list of the WebExtension APIs supported in Firefox for Android is pro
 <!-- END: Page Hero Banner -->
 
 <!-- Content with Table of Contents Module -->
+
 {% capture content_with_toc %}
 
 ## User interface
 
 Firefox for Android offers a streamlined version of the UI found in desktop Firefox, ensuring Firefox offers an enjoyable and engaging experience on mobile. Some of the differences relate to how the Android UI differs from the desktop UIs found in Linux, Mac OS, and Windows. For example, Android does not support a windowing environment, and devices do not usually include a physical keyboard, from which keyboard shortcuts can be issued. Other differences relate to optimizing usability on smaller mobile device screens.
 
-As a result of the UI differences, extensions for Firefox for Android do not support the following APIs and manifest.json keys: 
+As a result of the UI differences, extensions for Firefox for Android do not support the following APIs and manifest.json keys:
+
 - [`commands`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/commands) and the related [`commands`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/commands) manifest.json key, as Android tablets and smartphones do not usually have a physical keyboard from which ‘commands’ can be issued.
 - [`sidebarAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) and the related [`sidebar_action`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key, due to the limited screen real estate on Android devices sidebars, such as the browser history, are presented in full browser tabs. Where possible, you should move any sidebar content to tabs as well.
 - [`windows`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/windows) as there is only one Firefox on Android 'window', so it has no ability to open or otherwise manipulate additional browser windows.
 
 Support for [`browserAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) and the [browser_action](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest.json key is under development. Firefox 55 will support `default_title` and `default_popup` of the manifest.json key [`browser_action`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), using `default_title` to add an item to the Firefox for Android menu, and the [`browserAction.onClicked()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked) event will be available to listen for the menu item being tapped. Additionally, in Firefox 57 support for the [`browserAction.setTitle`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle) and [`browserAction.getTitle`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle) methods will be added.
 
-
 ### Effect on your add-on UI
 
 These differences impact the way you expose your add-on in the Firefox UI. The most common option, adding a button for your add-on to the Firefox toolbar with [`browserAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), is not available (at least until Firefox 55). Nor can you expose your add-on through a sidebar or context menu. You will, therefore, use an address bar button (through the manifest.json [`page_action`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key and [`pageAction`](https://developer.mozilla.org//Add-ons/WebExtensions/API/pageAction) API) remembering that by default this button is hidden and must be shown programmatically.
 
-The features of [`pageAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) are also reduced in Firefox for Android. The manifest.json key [page_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) enables you to define the button icon and a popup. You then have use of [`pageAction.show()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) and [`pageAction.hide()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) however, once ‘shown’, note that the address bar button is visible in all tabs (unlike the desktop behavior, where the button is shown only for a specified tab.) But you will still be able to hide the pageAction using [`pageAction.hide()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) on a specific tab (say, for example, you wish to hide your extension's page action icon in about:addons or about:memory tabs) And you can set a listener to [`pageAction.onClicked()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked). [`pageAction.setPopup()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup) and [`pageAction.getPopup()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup) are also available, so you can update the popup or create a popup once the add-on is running. 
+The features of [`pageAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) are also reduced in Firefox for Android. The manifest.json key [page_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) enables you to define the button icon and a popup. You then have use of [`pageAction.show()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) and [`pageAction.hide()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) however, once ‘shown’, note that the address bar button is visible in all tabs (unlike the desktop behavior, where the button is shown only for a specified tab.) But you will still be able to hide the pageAction using [`pageAction.hide()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) on a specific tab (say, for example, you wish to hide your extension's page action icon in about:addons or about:memory tabs) And you can set a listener to [`pageAction.onClicked()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked). [`pageAction.setPopup()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup) and [`pageAction.getPopup()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup) are also available, so you can update the popup or create a popup once the add-on is running.
 
 Also, in both [`pageAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) and [`browserAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) popup content is opened in a new tab and persists until the user manually closes the tab.
 
@@ -73,7 +86,7 @@ You can also manipulate tabs on Firefox for Android. The [`tabs`](https://develo
 
 - zoom features, Firefox for Android has one zoom level only, which the user can override with a pinch gesture on the page.
 - features related to selecting and moving tabs, again as these features are not supported on Android.
-- the ability to detect a tab's language or muted status. 
+- the ability to detect a tab's language or muted status.
 
 ### Other UI related API and manifest.json key differences
 
@@ -94,7 +107,6 @@ Developer tools for Firefox for Android are provided through remote debugging me
 - [devtools.network](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network)
 - [devtools.panels](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels) and the related [devtools_page](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/devtools_page) manifest.json key.
 
-
 {% endcapture %}
 {% include modules/column-w-toc.html
     id="user-interface"
@@ -104,6 +116,7 @@ Developer tools for Firefox for Android are provided through remote debugging me
 <!-- END: Content with Table of Contents -->
 
 <!-- Single Column Body Module -->
+
 {% capture content %}
 
 ## Native application interaction
@@ -120,6 +133,7 @@ You do not have the ability to interact with native applications as [`runtime.co
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
+
 {% capture content %}
 
 ## Permissions
@@ -136,6 +150,7 @@ Permissions to use certain WebExtension APIs must be requested in the manifest.j
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
+
 {% capture content %}
 
 ## Other notes

@@ -4,12 +4,12 @@ title: About the WebExtensions API
 permalink: /documentation/develop/about-the-webextensions-api/
 published: false
 topic: Develop
-tags:
-  [WebExtensions, API, Firefox]
+tags: [WebExtensions, API, Firefox]
 contributors: [rebloor, mconca, caitmuenster]
 last_updated_by: caitmuenster
 date: 2019-06-05
 ---
+
 <!-- Page Hero Banner -->
 
 {% capture page_hero_banner_content %}
@@ -28,6 +28,7 @@ WebExtension APIs provide a user-controlled, web-focused extension development p
 {% capture content %}
 
 Designed to offer cross-browser compatibility with Chromium-based browsers—such as Chrome, Edge, and Opera—the APIs:
+
 - Include features to extend the capabilities of Firefox to interact with web content.
 - Simplify the development and maintenance of extensions for Firefox and other browsers.
 - Make it easier for users to personalize Firefox, using extensions and themes.

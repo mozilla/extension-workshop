@@ -4,12 +4,26 @@ title: Porting a legacy Firefox extension
 permalink: /documentation/develop/porting-a-legacy-firefox-extension/
 published: false
 topic: Develop
-tags:
-  [WebExtensions]
-contributors: [mdnwebdocs-bot, rebloor, caitmuenster, wbamberg, ExE-Boss, TheV360, atsay, andrewtruongmoz, Dietrich, david_ross, cricciuto, Croydon]
+tags: [WebExtensions]
+contributors:
+  [
+    mdnwebdocs-bot,
+    rebloor,
+    caitmuenster,
+    wbamberg,
+    ExE-Boss,
+    TheV360,
+    atsay,
+    andrewtruongmoz,
+    Dietrich,
+    david_ross,
+    cricciuto,
+    Croydon,
+  ]
 last_updated_by: mdnwebdocs-bot
 date: 2019-03-18 18:32:18
 ---
+
 <!-- Page Hero Banner -->
 
 {% capture page_hero_banner_content %}
@@ -42,12 +56,14 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 ## Quick start
 
 1. Get an idea of the main things you'll have to change in your extension:
+
 - Familiarize yourself with the [WebExtension format and structure](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension), and [build a basic example](/documentation/develop/your-first-extension).
 - If your extension is based on XUL and XPCOM, whether it's an [overlay extension](https://developer.mozilla.org/Add-ons/Overlay_Extensions) or a [bootstrapped extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Bootstrapped_extensions), see [Comparison with XUL/XPCOM extensions](/documentation/develop/comparison-with-xul-xpcom-extensions) to find out how WebExtensions can correspond with the legacy APIs you're using.
 - If your extension is based on the Add-on SDK, see [Comparison with the Add-on SDK](/documentation/develop/comparison-with-the-add-on-sdk) to find out how WebExtensions can correspond with the legacy SDK APIs you're using.
+
 2. Rewrite your extension code. See below for migration paths for different types of extensions. From Firefox 51 onwards, you can embed an extension built using WebExtension APIs in a bootstrapped extension or an SDK add-on, and can thus port a legacy extension a piece at a time, and have a working extension at each step. See [Embedded WebExtensions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions) for more information.
-3. When you're ready to submit the WebExtension version of your extension to AMO... wait a minute... are you truly ready? Because of the extensions permissions model, you cannot revert from WebExtensions back to using a legacy extension format. So test *thoroughly*, because this is a permanent one-way trip. Also, see the hybrid example below. If you're not ready, you can embed your WebExtension in a legacy extension container, which allows you to test your extension migration but still go back if needed in an emergency.
-4. When you're *really* ready to submit the WebExtension version of your extension to AMO, first port your old add-on ID to the new WebExtension manifest.json file. Your extension must have the same ID as previous versions. Copy the value in the "id" field from your package.json file into the id field in the [applications](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) section of the WebExtension manifest.json file. Then you can submit your extension update to AMO as your normally would.
+3. When you're ready to submit the WebExtension version of your extension to AMO... wait a minute... are you truly ready? Because of the extensions permissions model, you cannot revert from WebExtensions back to using a legacy extension format. So test _thoroughly_, because this is a permanent one-way trip. Also, see the hybrid example below. If you're not ready, you can embed your WebExtension in a legacy extension container, which allows you to test your extension migration but still go back if needed in an emergency.
+4. When you're _really_ ready to submit the WebExtension version of your extension to AMO, first port your old add-on ID to the new WebExtension manifest.json file. Your extension must have the same ID as previous versions. Copy the value in the "id" field from your package.json file into the id field in the [applications](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) section of the WebExtension manifest.json file. Then you can submit your extension update to AMO as your normally would.
 
 {% capture note %}
 
@@ -99,7 +115,6 @@ Here is the comparison chart showing [XUL/XPCOM APIs and their WebExtensions for
 **Develop WebExtension APIs for Firefox** - If you're experienced with Mozilla infrastructure and would like to develop WebExtensions APIs directly for Firefox, here is a list of [approved APIs](https://mzl.la/2dVs5Ys) that you can start contributing to.
 
 **Experiment with new WebExtension APIs** - If you want to prototype and tinker with WebExtensions APIs without having to build Firefox, [WebExtensions Experiments](http://webextensions-experiments.readthedocs.io/en/latest/index.html) is for you!
-
 
 **Request a new WebExtensions API** - If you want to request a new WebExtensions API, please read [this page](https://wiki.mozilla.org/WebExtensions/NewAPIs).
 

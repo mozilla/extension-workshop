@@ -5,15 +5,26 @@ permalink: /documentation/develop/firefox-workflow-overview/
 published: false
 topic: Develop
 tags:
-  [Add-ons, Code, enhance, Extensions, Firefox, prepare, publish, retire, WebExtensions, workflow]
+  [
+    Add-ons,
+    Code,
+    enhance,
+    Extensions,
+    Firefox,
+    prepare,
+    publish,
+    retire,
+    WebExtensions,
+    workflow,
+  ]
 contributors: [irenesmith, hellosct1, rebloor, mdnwebdocs-bot]
 last_updated_by: irenesmith
 date: 2019-05-20 03:25:40
 ---
+
 {% capture page_hero_banner_content %}
 
 # Firefox workflow overview
-
 
 {% endcapture %}
 {% include modules/page-hero.html
@@ -21,6 +32,7 @@ date: 2019-05-20 03:25:40
 %}
 
 {% capture content %}
+
 <table>
     <tr>
         <th style="width:20%"><img src="{% asset "documentation/develop/firefox_workflow_prepare.png" @path @optim %}"></th>
@@ -68,7 +80,7 @@ date: 2019-05-20 03:25:40
 
 <p>* Or distribute your extension for <a href="/documentation/publish/sideloading-add-ons/">sideloading</a>, <a href="/documentation/publish/add-ons-for-desktop-apps/">desktop apps</a>, or <a href="/documentation/enterprise/add-ons-in-the-enterprise/">in an enterprise</a>.</p>
 
-**Have an extension you want to bring to Firefox?**  We provide advice, guidelines, and tools to help making make porting straightforward. To get started, visit [Porting a Google Chrome extension](/documentation/develop/porting-a-google-chrome-extension/).
+**Have an extension you want to bring to Firefox?** We provide advice, guidelines, and tools to help making make porting straightforward. To get started, visit [Porting a Google Chrome extension](/documentation/develop/porting-a-google-chrome-extension/).
 
 {% endcapture %}
 {% include modules/one-column.html

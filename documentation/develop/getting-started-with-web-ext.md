@@ -143,7 +143,6 @@ Firefox 48 was the first stable version to use the WebExtension platform, but it
 web-ext run --pre-install
 {% endhighlight %}
 
-
 <section id="testing-in-firefox-for-android"></section>
 
 ### Testing in Firefox for Android
@@ -232,8 +231,6 @@ This outputs a full path to the generated `.zip` file that can be loaded into a 
 
 See the [build reference guide](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_build) to learn more.
 
-
-
 ### Signing your extension for self-distribution
 
 As an alternative to publishing your extension on [addons.mozilla.org](https://addons.mozilla.org/), you can self-host your package file but it needs to be [signed by Mozilla](https://developer.mozilla.org/Add-ons/Distribution) first. The following command packages and signs a ZIP file, then returns it as a signed XPI file for distribution:
@@ -250,7 +247,6 @@ The API options are required to specify your [addons.mozilla.org credentials](ht
 <p class="note alert" markdown="1">If you've [listed](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on) the extension on [addons.mozilla.org](https://addons.mozilla.org/), see [Signing a test version of a listed extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext#Signing_a_test_version_of_a_listed_extension).</p>
 
 See the [sign reference guide](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference#web-ext_sign) to learn more.
-
 
 ### Signing extensions without an explicit ID
 

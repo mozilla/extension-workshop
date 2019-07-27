@@ -10,6 +10,7 @@ contributors:
 last_updated_by: rebloor
 date: 2019-06-11 11:14:47
 ---
+
 {% capture page_hero_banner_content %}
 
 # Developing extensions for Firefox for Android
@@ -38,15 +39,17 @@ Complete some one-off setup tasks on your computer and Android device.
 On your development computer:
 
 - To test on your computer by running Firefox for Android in the Android emulator and in Firefox for Android running on a device:
-    - Install [Android Studio](https://developer.android.com/studio/index.html).
-    - Use the Android Studio [SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager) or the [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html) command-line tool to install the [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools.html).
 
-- To test in Firefox for Android running on a device only: 
-    - Download and extract the [standalone Android SDK Platform-Tools package](https://developer.android.com/studio/releases/platform-tools.html) to a suitable location on your computer.
-    - On Windows, Mac, or Linux: Add the location into which you extracted the tools package to your operating system’s PATH environment variable.
-    - Alternatively, on Mac or Linux: Link the binary to /usr/local/bin using `sudo ln -s /<extract folder>/platform-tools/adb /usr/local/bin`.
+  - Install [Android Studio](https://developer.android.com/studio/index.html).
+  - Use the Android Studio [SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager) or the [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html) command-line tool to install the [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools.html).
+
+- To test in Firefox for Android running on a device only:
+  - Download and extract the [standalone Android SDK Platform-Tools package](https://developer.android.com/studio/releases/platform-tools.html) to a suitable location on your computer.
+  - On Windows, Mac, or Linux: Add the location into which you extracted the tools package to your operating system’s PATH environment variable.
+  - Alternatively, on Mac or Linux: Link the binary to /usr/local/bin using `sudo ln -s /<extract folder>/platform-tools/adb /usr/local/bin`.
 
 On your device or Android emulator:
+
 - Install [Firefox for Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox&referrer=utm_source%3Dmozilla%26utm_medium%3DReferral%26utm_campaign%3Dmozilla-org) and, if you wish to test the latest features, [Firefox for Android Beta](https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta) or [Firefox Nightly for Developers](https://play.google.com/store/apps/details?id=org.mozilla.fennec_aurora).
 - (If you're using [web-ext](/documentation/develop/getting-started-with-web-ext/), you can skip this step.) Open Firefox for Android and turn off signing by browsing to `about:config` then locating and setting `xpinstall.signatures.required` to false.
 
@@ -67,11 +70,10 @@ If you are using a device:
 
 - Open a command shell.
 - Run `adb devices` <br/>
-You should see output similar to: <br/>
-`List of devices attached` <br/>
-`51800F220F01564 device` <br/>
-Where the hex string is your device’s (or emulator’s) code. This means adb has found your device (or emulator).
-
+  You should see output similar to: <br/>
+  `List of devices attached` <br/>
+  `51800F220F01564 device` <br/>
+  Where the hex string is your device’s (or emulator’s) code. This means adb has found your device (or emulator).
 
 {% endcapture %}
 {% include modules/column-w-toc.html
@@ -99,7 +101,7 @@ similar to this:
 
 {% capture note %}
 
-Lint does not report on APIs that are not implemented by Firefox or Firefox for Android. 
+Lint does not report on APIs that are not implemented by Firefox or Firefox for Android.
 
 {% endcapture %}
 {% include modules/note.html
@@ -112,9 +114,9 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 {% highlight json linenos %}
 
 "browser_specific_settings": {
-  "gecko": {
-    "strict_min_version": "65.0"
-  }
+"gecko": {
+"strict_min_version": "65.0"
+}
 }
 
 {% endhighlight %}
@@ -129,6 +131,7 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 <!-- Single Column Body Module -->
 
 {% capture content %}
+
 ## Install and run your extension in Firefox for Android
 
 In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the manifest.json:
@@ -136,9 +139,9 @@ In your extension, ensure that you've included an application ID using the [brow
 {% highlight javascript %}
 
 "browser_specific_settings": {
-  "gecko": {
-    "id": "borderify@example.com"
-  }
+"gecko": {
+"id": "borderify@example.com"
+}
 },
 
 {% endhighlight %}
@@ -224,7 +227,7 @@ Your device is listed in the left-hand column, click **Connect**.
 
 ![Connect to device]({% asset "documentation/develop/connect-to-device.png" @optim @path %})
 
-If prompted, allow the incoming connection on your Android device. Now start your extension on the Android device. Note, the following instructions assume you are using `web-ext run`.  Click your device in the left-hand column and scroll down to find **Processes** in the list of active features in the browser.
+If prompted, allow the incoming connection on your Android device. Now start your extension on the Android device. Note, the following instructions assume you are using `web-ext run`. Click your device in the left-hand column and scroll down to find **Processes** in the list of active features in the browser.
 
 ![Locate processes]({% asset "documentation/develop/locate-processes.png" @optim @path %})
 
@@ -236,10 +239,9 @@ Load a page in which your extension exercises. Now you can access any of the Jav
 
 ![Device debugging]({% asset "documentation/develop/on-device-debugging.png" @optim @path %})
 
-
 {% capture note %}
 
-Unlike desktop Firefox, where content scripts are debugged in context of the page in which they run,  you debug and view the console messages from content scripts in Firefox for Android together with background scripts in the Toolbox.
+Unlike desktop Firefox, where content scripts are debugged in context of the page in which they run, you debug and view the console messages from content scripts in Firefox for Android together with background scripts in the Toolbox.
 
 {% endcapture %}
 {% include modules/note.html
@@ -267,7 +269,7 @@ This will give output similar to this:
 
 {% highlight javascript %}
 
-I/Gecko   (30440): 1496056181889    addons.xpi    WARN    Addon with ID borderify@example.com already installed, older version will be disabled
+I/Gecko (30440): 1496056181889 addons.xpi WARN Addon with ID borderify@example.com already installed, older version will be disabled
 
 {% endhighlight %}
 
