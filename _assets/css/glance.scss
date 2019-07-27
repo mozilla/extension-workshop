@@ -26,6 +26,7 @@ CSS file.
 @include foundation-visibility-classes;
 
 // Import your custom styles
+@import 'codehighlighting';
 @import 'main';
 @import 'contentguidelines';
 @import 'fullwidth';

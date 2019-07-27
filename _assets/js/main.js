@@ -18,6 +18,13 @@ jQuery(document).ready(function($) {
 
   var is_touch_device = 'ontouchstart' in document.documentElement;
 
+  $('body').on('mousedown', function() {
+    $('body').addClass('using-mouse');
+  });
+  $('body').on('keydown', function() {
+    $('body').removeClass('using-mouse');
+  });
+
   // PLUGINS
   // ------------------
 
@@ -45,6 +52,13 @@ jQuery(document).ready(function($) {
     $(
       '.sidenav-top .primary > .has-subfolder.has-active-children'
     ).sideNavTop();
+  }
+
+  // Secondary Dropdown should not be tabbed through since it repeats functionality above:
+  if ($('.sidenav-top a').length) {
+    $('.sidenav-top a').each(function() {
+      $(this).attr('tabindex', '-1');
+    });
   }
 
   if ($('.sidenav-detail').length) {
@@ -155,6 +169,45 @@ jQuery(document).ready(function($) {
   if ($('#result-list').length) {
     $('#result-list').searchResults();
   }
+  if ($('#tag-list').length) {
+    $('#tag-list').searchResults({
+      input: null,
+      default: '.popular-searches',
+      search_fields: [
+        {
+          title: 'tags',
+        },
+      ],
+    });
+  }
+
+  // 13. Sidebar Nav Page Section Highlighting
+  // ------
+
+  if ($('.is-active > .section').length) {
+    $('.is-active > .section').highlightPageSection();
+  }
+
+  // 14. Expandable List
+  // ------
+
+  if ($('.expandable-list').length) {
+    $('.expandable-list').expandableList();
+  }
+
+  // 15. Up Next: hide if empty
+  // ------
+
+  if ($('.up-next').length && !$('.up-next a').length) {
+    $('.up-next').hide(0);
+  }
+
+  // 16. Scroll sidebar to active page position
+  // ------
+
+  if ($('.sidenav-detail .is-active').length) {
+    $('.sidenav').sidenavScrollToActive();
+  }
 
   // Init Breakpoint Listeners
   // ------------------
@@ -256,8 +309,25 @@ jQuery(document).ready(function($) {
   // 1.b Desktop Menu
 
   $.fn.desktopMenu = function() {
+    var $container = this;
+    var $subnav = $container.find('.subfolder');
+
+    $subnav
+      .on('focus', 'a', function() {
+        $(this)
+          .closest('.has-subfolder')
+          .addClass('over');
+      })
+      .on('blur', 'a', function() {
+        $(this)
+          .closest('.has-subfolder')
+          .removeClass('over');
+      });
+
     return {
-      kill: function() {},
+      kill: function() {
+        $subnav.off('focus').off('blur');
+      },
     };
   };
 
@@ -449,6 +519,15 @@ jQuery(document).ready(function($) {
         var $el = $('#' + id);
         var top = id == 'top' ? $el.offset().top : $el.offset().top - offset;
         $('html').velocity('scroll', { duration: 900, offset: top });
+
+        var url_state =
+          window.location.protocol +
+          '//' +
+          window.location.host +
+          window.location.pathname +
+          '#' +
+          id;
+        window.history.pushState({ href: url_state }, '', url_state);
       }
     });
 
@@ -565,7 +644,7 @@ jQuery(document).ready(function($) {
     var settings = $.extend(
       {
         container:
-          '<a href="" class="cell small-12 large-4 tile tile-block-link no-img"><div class="block-link"></div></a>',
+          '<a href="" class="cell small-12 large-4 tile illustrated-tile tile-block-link no-img"><div class="block-link"></div></a>',
         breakpoint: 'atleast_large',
         num: 3,
       },
@@ -744,6 +823,7 @@ jQuery(document).ready(function($) {
       options
     );
     var $window = $(window);
+    var $body = $('body');
     var $links = this;
     var $panels = $(settings.panels);
 
@@ -764,25 +844,46 @@ jQuery(document).ready(function($) {
 
     function openPopup($link, $panel) {
       if ($panel.length) {
-        var x =
-          $link.offset().left + settings.offset_x > settings.padding_x
-            ? $link.offset().left + settings.offset_x
-            : settings.padding_x;
-        var y =
-          $link.offset().top + settings.offset_y - $window.scrollTop() >
-          settings.padding_y
-            ? $link.offset().top + settings.offset_y - $window.scrollTop()
-            : settings.padding_y;
-        $panel.css({ top: y, left: x });
-        $panel.velocity('transition.slideUpIn', { duration: 300 });
+        positionPanel($panel);
+        $panel.velocity('transition.slideUpIn', {
+          duration: 300,
+          complete: function() {
+            if (!$body.hasClass('using-mouse')) {
+              $panel.find('button.close').focus();
+            }
+          },
+        });
         $panel
           .find('button.close')
           .off('click')
           .on('click', function() {
-            $panel.velocity('transition.slideDownOut', { duration: 300 });
+            $panel.velocity('transition.slideDownOut', {
+              duration: 300,
+              complete: function() {
+                if (!$body.hasClass('using-mouse')) {
+                  $link.focus();
+                }
+              },
+            });
           });
       }
     }
+
+    function positionPanel($panel) {
+      var x = $window.width() / 2;
+      var y = $window.height() / 2;
+      var w = $panel.outerWidth() / 2;
+      var h = $panel.outerHeight() / 2;
+      $panel.css({ top: y - h, left: x - w });
+    }
+
+    function updatePanelPosition() {
+      $panels.filter(':visible').each(function() {
+        positionPanel($(this));
+      });
+    }
+    $window.on('resize', updatePanelPosition);
+    updatePanelPosition();
   };
 
   // 10. Content Guidelines Navigation
@@ -922,68 +1023,219 @@ jQuery(document).ready(function($) {
       {
         input: '.search-cta #lunrsearch',
         default: '.popular-searches',
+        search_fields: [
+          {
+            title: 'tags',
+            boost: 3,
+          },
+          {
+            title: 'title',
+            boost: 2,
+          },
+          {
+            title: 'body',
+            boost: 1,
+          },
+        ],
       },
       options
     );
 
     var $container = this;
-    var $local_input = $(settings.input);
+    var $local_input = settings.input ? $(settings.input) : false;
     var $default = $(settings.default);
     var urlParams = new URLSearchParams(window.location.search);
     var myParam = urlParams.get('q');
+    var idx = null;
+    var data = $.getJSON('/api/v1/pages.json');
 
+    // Lunr Search
     function lunr_search(query) {
-      //var result = index.search(query); --> this will be implemented when we integrate lunr js
-      var num = 0; //result.length && query != '' ? result.length : 0;
-      var query_output = num + ' results for "' + query + '"';
+      var result = idx.search(query);
+      var num = result.length && query != '' ? result.length : 0;
+      var query_output =
+        num + ' ' + $container.data('message') + ' "' + query + '"';
       var $title = $('<h2 class="no-underline"></h2>');
 
-      // Show results
-      $container.empty();
+      data.then(function(loaded_data) {
+        // Show results
+        $container.empty();
 
-      // Add status
-      $title.text(query_output);
-      $container.prepend($title);
+        // Add status
+        $title.text(query_output);
+        $container.prepend($title);
 
-      if (num != 0) {
-        var $list = $('<ol></ol>');
+        if (num != 0) {
+          var $list = $('<ol></ol>');
 
-        // Loop through, match, and add results --> this will be implemented when we integrate lunr js
-        // for (var item in result) {
-        //   var ref = result[item].ref;
-        //   var topic = store[ref].topic
-        //     ? '<p class="post-meta"><small>' + store[ref].topic + '</small></p>'
-        //     : '';
-        //   var searchitem =
-        //     '<li class="result"><a href="' +
-        //     store[ref].link +
-        //     '">' +
-        //     topic +
-        //     '<h3>' +
-        //     store[ref].title +
-        //     '</h3><p>' +
-        //     store[ref].excerpt +
-        //     '</p><p><small>' +
-        //     store[ref].link +
-        //     '</small></p></a></li>';
+          // Loop through, match, and add results
+          for (var item in result) {
+            var ref = result[item].ref;
+            var item = loaded_data.entries[ref];
+            var topic =
+              item.meta && item.meta.topic
+                ? '<p class="post-meta"><small>' +
+                  item.meta.topic +
+                  '</small></p>'
+                : '';
+            var excerpt =
+              $.trim(item.body)
+                .substring(0, 300)
+                .split(' ')
+                .slice(0, -1)
+                .join(' ') + '...';
+            var searchitem =
+              '<li class="result"><a href="' +
+              item.url +
+              '">' +
+              topic +
+              '<h3>' +
+              item.title +
+              '</h3><p>' +
+              excerpt +
+              '</p><p><small>' +
+              window.location.origin +
+              item.url +
+              '</small></p></a></li>';
 
-        //   $list.append(searchitem);
-        // }
+            $list.append(searchitem);
+          }
 
-        $default.hide(0);
-        $container.append($list);
-      } else {
-        $default.show(0);
-      }
+          $default.hide(0);
+          $container.append($list);
+        } else {
+          $default.show(0);
+        }
+      });
     }
 
-    $local_input.on('keyup', function() {
-      lunr_search($(this).val());
+    // Build Lunr
+    data.then(function(loaded_data) {
+      idx = lunr(function() {
+        var l = this;
+        $.each(settings.search_fields, function(i, obj) {
+          l.field(obj.title, { boost: obj.boost ? obj.boost : 1 });
+        });
+        l.ref('id');
+
+        $.each(loaded_data.entries, function(index, value) {
+          if (!value.skip_index) {
+            l.add($.extend({ id: index }, value));
+          }
+        });
+      });
+
+      if ($local_input) {
+        $local_input.on('keyup', function() {
+          lunr_search($(this).val());
+        });
+      }
+
+      lunr_search(myParam);
     });
 
-    $local_input.val(myParam);
+    if ($local_input) {
+      $local_input.val(myParam);
+    }
+  };
 
-    lunr_search(myParam);
+  // 13. Sidebar Nav Page Section Highlighting
+
+  $.fn.highlightPageSection = function(options) {
+    var settings = $.extend(
+      {
+        offset: 38,
+      },
+      options
+    );
+
+    var $window = $(window);
+    var $this = this;
+    var $anchors = this.find('a');
+
+    $window.on('scroll', function() {
+      updateAnchorActive();
+    });
+
+    updateAnchorActive();
+
+    function updateAnchorActive() {
+      $anchors.removeClass('is-in-view');
+      $anchors.each(function() {
+        var $self = $(this);
+        var $el = $($self.attr('href'));
+        if ($el.length && isInFocus($el, 0.75)) {
+          $anchors.removeClass('is-in-view');
+          $self.addClass('is-in-view');
+        }
+      });
+    }
+
+    return this;
+  };
+
+  // 14. Expandable List
+  // ------
+
+  $.fn.expandableList = function(options) {
+    var settings = $.extend(
+      {
+        title: 'dt',
+        title_button: 'dt button',
+        description: 'dd',
+      },
+      options
+    );
+
+    this.find(settings.title).addClass('closed');
+    this.find(settings.title_button).attr('aria-expanded', 'false');
+    this.find(settings.description).attr('aria-hidden', 'true');
+
+    this.on('click', settings.title_button, function() {
+      var $this = $(this);
+
+      if ($this.attr('aria-expanded') == 'true') {
+        $this.attr('aria-expanded', 'false');
+        $this
+          .closest(settings.title)
+          .next(settings.description)
+          .attr('aria-hidden', 'true');
+      } else {
+        $this.attr('aria-expanded', 'true');
+        $this
+          .closest(settings.title)
+          .next(settings.description)
+          .attr('aria-hidden', 'false');
+      }
+
+      $this.closest(settings.title).toggleClass('closed');
+    });
+  };
+
+  // 16. Scroll sidebar to active page position
+  // ------
+
+  $.fn.sidenavScrollToActive = function(options) {
+    var settings = $.extend(
+      {
+        active: $('.sidenav-detail .is-active'),
+      },
+      options
+    );
+
+    var $container = this;
+
+    /* Don't scroll for overview pages,
+     * as they are already the first page element
+     * and we want to see the section above them.
+     */
+    if (!settings.active.find('a[data-overviewtitle]').length) {
+      settings.active.velocity('scroll', {
+        container: $container,
+        duration: 0,
+        delay: 0,
+      });
+    }
   };
 
   // Utilities

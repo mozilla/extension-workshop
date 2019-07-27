@@ -144,7 +144,12 @@ Stylesheet: Full Width Page Stylesheet
     text-decoration: underline;
 
     &:hover {
-      opacity: 0.9;
+      text-decoration: none;
+    }
+
+    &:focus {
+      text-decoration: none;
+      outline: 1px dotted currentcolor;
     }
   }
 
@@ -183,6 +188,8 @@ Stylesheet: Full Width Page Stylesheet
 }
 
 .panel-nested {
+  padding-bottom: rem-calc(16);
+
   @include breakpoint(medium) {
     padding-bottom: rem-calc(32);
   }
@@ -191,20 +198,10 @@ Stylesheet: Full Width Page Stylesheet
   }
 }
 
-// Tiles
+// Illustrated Tiles
 // ------
 
-.cell.tile {
-  z-index: 3;
-  padding: rem-calc(20 26) !important;
-  margin: rem-calc(8 0);
-  color: $body-font-color;
-
-  &::before {
-    left: rem-calc(8);
-    width: calc(100% - #{rem-calc(16)});
-  }
-
+.illustrated-tile {
   h1,
   h2,
   h3,
@@ -229,37 +226,12 @@ Stylesheet: Full Width Page Stylesheet
     }
 
     a:hover img {
-      box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+      box-shadow: $element-shadow-highlight;
       transform: scale(1.01);
     }
   }
 
-  &.tile-block-link {
-    cursor: pointer;
-
-    .block-link-inline {
-      color: $primary-color;
-    }
-
-    &:hover {
-      color: $body-font-color;
-      text-decoration: none;
-
-      .block-link-inline {
-        text-decoration: underline;
-      }
-    }
-  }
-
   @include breakpoint(medium) {
-    padding: rem-calc(24 34 30) !important;
-    margin: rem-calc(12 0);
-
-    &::before {
-      left: rem-calc(12);
-      width: calc(100% - #{rem-calc(24)});
-    }
-
     &:not(.tile-block-link) {
       display: flex;
       flex-flow: column nowrap;
@@ -362,16 +334,6 @@ Stylesheet: Full Width Page Stylesheet
     }
 
     &.tile-block-link {
-      &::before {
-        will-change: transform;
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-      }
-
-      &:hover::before {
-        box-shadow: #{rem-calc(0 4 20)} rgba(12, 12, 13, 0.33);
-        transform: scale(1.01);
-      }
-
       &.medium-12:not(.no-img) .block-link,
       &.medium-6:not(.no-img) .block-link {
         > * {
@@ -416,7 +378,7 @@ Stylesheet: Full Width Page Stylesheet
     height: 100%;
     background-color: $white;
     border-radius: $global-radius;
-    box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+    box-shadow: $element-shadow;
   }
 
   > * {
@@ -449,6 +411,10 @@ Stylesheet: Full Width Page Stylesheet
       img {
         width: rem-calc(32);
       }
+
+      + * {
+        padding-right: rem-calc(40);
+      }
     }
   }
 
@@ -467,6 +433,10 @@ Stylesheet: Full Width Page Stylesheet
 
           img {
             width: rem-calc(32);
+          }
+
+          + * {
+            padding-right: rem-calc(40);
           }
         }
 
@@ -576,7 +546,7 @@ Stylesheet: Full Width Page Stylesheet
       }
 
       &:hover::before {
-        box-shadow: #{rem-calc(0 4 20)} rgba(12, 12, 13, 0.33);
+        box-shadow: $element-shadow-highlight;
         transform: scale(1.01);
       }
     }
@@ -603,7 +573,7 @@ Stylesheet: Full Width Page Stylesheet
   }
 
   a:hover img {
-    box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.33);
+    box-shadow: $element-shadow-highlight;
   }
 
   h1,
@@ -860,7 +830,12 @@ Stylesheet: Full Width Page Stylesheet
       text-decoration: underline;
 
       &:hover {
-        opacity: 0.9;
+        text-decoration: none;
+      }
+
+      &:focus {
+        text-decoration: none;
+        outline: 1px dotted currentcolor;
       }
     }
 
@@ -918,7 +893,7 @@ Stylesheet: Full Width Page Stylesheet
     button {
       position: relative;
       display: block;
-      padding: rem-calc(16 24);
+      padding: rem-calc(16 8 16 8);
       text-align: left;
       color: $primary-color;
       cursor: pointer;
@@ -947,6 +922,7 @@ Stylesheet: Full Width Page Stylesheet
   }
 
   .manifest {
+    margin-top: rem-calc(-48);
     text-align: center;
 
     img {
@@ -1083,14 +1059,23 @@ Stylesheet: Full Width Page Stylesheet
 }
 
 .bottom-of-page {
+  pointer-events: none;
+  z-index: -1;
   position: absolute;
   left: 0;
-  bottom: -7.447916666666675vw;
+  bottom: -10vw;
   width: 100%;
-  height: 44.6875vw;
-  background: no-repeat bottom/100%;
+  height: 47.5vw;
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left, bottom right;
+  background-size: auto 100%, auto 100%;
   @include breakpoint(medium) {
-    bottom: -14.89583333333335vw;
+    bottom: rem-calc(-82.5);
+    height: rem-calc(330);
+  }
+  @include breakpoint(large) {
+    bottom: rem-calc(-110);
+    height: rem-calc(440);
   }
 }
 
@@ -1106,106 +1091,8 @@ Stylesheet: Full Width Page Stylesheet
   color: $dark-gray;
 }
 
-// Social Panel
+// 404 page
 // ------
-
-.social {
-  background-color: #09204d;
-  color: $white;
-  font-size: $small-font-size;
-
-  h1,
-  h2 {
-    &::after {
-      display: none;
-    }
-  }
-
-  h4 {
-    margin-top: rem-calc(10);
-  }
-
-  p {
-    color: #b1b1b3;
-  }
-
-  a {
-    color: $white;
-
-    &::before {
-      display: inline-block;
-    }
-
-    &:hover {
-      color: $white;
-
-      &::before {
-        text-decoration: none;
-      }
-    }
-
-    &.twitter::before {
-      @include icon_font($char: $icon-twitter);
-
-      font-size: rem-calc(24);
-      vertical-align: middle;
-      margin-right: 0.3em;
-    }
-
-    &.telegram::before {
-      @include icon_font($char: $icon-telegram);
-
-      font-size: rem-calc(24);
-      vertical-align: middle;
-      margin-right: 0.3em;
-    }
-
-    &.irc::before {
-      @include icon_font($char: $icon-irc);
-
-      font-size: rem-calc(24);
-      vertical-align: middle;
-      margin-right: 0.3em;
-    }
-
-    &.mailinglist::before {
-      @include icon_font($char: $icon-mail);
-
-      font-size: rem-calc(24);
-      vertical-align: middle;
-      margin-right: 0.3em;
-    }
-  }
-
-  input[type='text'],
-  input[type='email'] {
-    background-color: rgba(#b1b1b3, 0.2);
-    border: 0;
-    margin-bottom: rem-calc(10);
-    color: $white;
-
-    &::placeholder {
-      color: #b1b1b3;
-    }
-  }
-
-  .button {
-    background-color: $white;
-    color: $primary-color;
-    margin-top: rem-calc(16);
-
-    &:hover {
-      background-color: $light-gray;
-    }
-  }
-
-  @include breakpoint(medium down) {
-    .cell {
-      padding-top: rem-calc(8);
-      padding-bottom: rem-calc(8);
-    }
-  }
-}
 
 .page-404 {
   .tiles-intro {

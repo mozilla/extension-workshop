@@ -68,7 +68,8 @@ $sidebar-w: rem-calc(230);
       width: $sidebar-w-sm;
       padding-top: rem-calc(30);
       padding-bottom: rem-calc(30);
-    } //box-shadow: #{rem-calc(0 0 16)} rgba(12,12,13,0.1);
+    }
+
     .site-content {
       flex: 1 1 auto;
     }
@@ -174,13 +175,6 @@ $sidebar-w: rem-calc(230);
         padding: 0.25rem 0;
       }
 
-      a[target='_blank']::after {
-        color: $primary-color;
-        padding-left: 0.3em;
-        display: inline-block;
-        @include icon_font($char: $icon-newtab);
-      }
-
       @include breakpoint(medium) {
         font-size: rem-calc(13);
         margin: rem-calc(24 0 30);
@@ -241,7 +235,7 @@ $sidebar-w: rem-calc(230);
         padding: rem-calc(12 15);
         background-color: $white;
         border-radius: $global-radius;
-        box-shadow: #{rem-calc(0 4 16)} rgba(12, 12, 13, 0.1);
+        box-shadow: $element-shadow;
         position: absolute;
         left: 0;
         top: rem-calc(12);
@@ -342,7 +336,7 @@ $sidebar-w: rem-calc(230);
         padding: #{rem-calc(60)} 8.333333333333333%;
       }
 
-      > .grid-container {
+      .grid-container {
         max-width: $global-width - $sidebar-w;
       }
     }

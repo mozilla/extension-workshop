@@ -53,6 +53,17 @@
     asset_url('inter/Inter-SemiBoldItalic.woff') format('woff');
 }
 
+// Element Shadows
+// ------
+
+$element-shadow: 0 1px 6px 0 rgba(14, 13, 26, 0.12),
+  0 2px 1px 0 rgba(7, 48, 114, 0.12), 0 1px 2px 0 rgba(34, 0, 51, 0.04),
+  0 0 0 1px rgba(32, 18, 58, 0.04); // #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.1);
+$element-shadow-highlight: 0 6px 10px -4px rgba(14, 13, 26, 0.12),
+  0 6px 22px 4px rgba(7, 48, 114, 0.12), 0 12px 18px 2px rgba(34, 0, 51, 0.04);
+$focus-shadow: inset 0 0 0 1px #0a84ff, 0 0 0 1px #0a84ff,
+  0 0 0 4px rgba(10, 132, 255, 0.3);
+
 // 1. Global
 // ---------
 
@@ -61,15 +72,18 @@ $global-width: rem-calc(1680);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #015fdf,
-  // 0060df
-    secondary: #777,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840,
+  secondary: #777,
+  success: #2bc3a2,
+  warning: #ffd568,
+  alert: #ff4f5e,
 );
+
 $primary-color-hover: #003eaa;
-$lighter-gray: #f3f3f3;
-$light-gray: #eee;
+$warning-color-light: #ffeb80;
+$alert-color-light: #ffbdc5;
+$code-bg: #20123a;
+$lighter-gray: #f9f9fb;
+$light-gray: #f0f0f4;
 $medium-light-gray: #e5e5e5;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -145,6 +159,11 @@ $icon-forward: '\e90e';
 $icon-newtab: '\e90f';
 $icon-dont: '\e910';
 $icon-do: '\e911';
+$icon-alert: '\e914';
+$icon-info: '\e915';
+$icon-tags: '\e916';
+$icon-date: '\e917';
+$icon-contributors: '\e918';
 
 // 3. Breakpoints
 // --------------
@@ -268,12 +287,12 @@ $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.5;
 $paragraph-margin-bottom: 1.5rem;
 $paragraph-text-rendering: optimizeLegibility;
-$code-color: $black;
+$code-color: $white;
 $code-font-family: $font-family-monospace;
 $code-font-weight: $global-weight-normal;
-$code-background: $light-gray;
-$code-border: 1px solid $medium-gray;
-$code-padding: rem-calc(2 5 1);
+$code-background: $code-bg;
+$code-border: 0;
+$code-padding: rem-calc(1 5);
 $anchor-color: $primary-color;
 $anchor-color-hover: $primary-color-hover;
 $anchor-text-decoration: none;
@@ -454,17 +473,17 @@ $pagination-arrows: true;
 // 12. Table
 // ---------
 
-$table-background: $white;
-$table-color-scale: 5%;
+$table-background: #f9f9fa;
+$table-color-scale: 7.5%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
-$table-padding: rem-calc(8 10 10);
+$table-padding: rem-calc(8);
 $table-hover-scale: 2%;
 $table-row-hover: darken($table-background, $table-hover-scale);
 $table-row-stripe-hover: darken(
   $table-background,
   $table-color-scale + $table-hover-scale
 );
-$table-is-striped: true;
+$table-is-striped: false;
 $table-striped-background: smart-scale($table-background, $table-color-scale);
 $table-stripe: even;
 $table-head-background: smart-scale($table-background, $table-color-scale / 2);

@@ -33,8 +33,13 @@ google_analytics: UA-77033033-24
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  auto_ids: false
+
 # theme: minima
 plugins:
+  - jekyll-target-blank
 #  - jekyll-feed
 
 # Exclude from processing.
@@ -64,6 +69,7 @@ assets:
     - node_modules/slick-carousel/slick
     - node_modules/jquery/dist
     - node_modules/dompurify/dist
+    - node_modules/lunr/
     - node_modules/velocity-animate
   defaults:
     js:

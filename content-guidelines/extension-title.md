@@ -3,6 +3,7 @@ layout: guides
 title: Extension Name
 permalink: /content-guidelines/extension-title/
 published: false
+skip_index: true
 ---
 
 # Extension Name

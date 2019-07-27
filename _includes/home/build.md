@@ -2,7 +2,7 @@
 <div class="panel-intro bg-dark">
 <div class="bg"></div>
 
-<div class="grid-container grid-x grid-padding-x align-center">
+<div class="grid-container grid-x grid-padding-x align-center align-middle panel-nested">
 <div class="cell small-12 medium-6" markdown="1">
 
 ## Build extensions
@@ -12,7 +12,7 @@ It's easy to create your cross-browser extension for Firefox. Where your develop
 </div>
 <div class="cell small-12 medium-6">
 
-<img src="{% asset "build-extensions.jpg" @path @optim %}" class="image-block" alt="Build extensions" title="Build extensions">
+<img src="{% asset "build-extensions.jpg" @path @optim %}" class="image-block-last" alt="Build extensions" title="Build extensions">
 
 </div>
 </div>
@@ -21,7 +21,7 @@ It's easy to create your cross-browser extension for Firefox. Where your develop
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json" class="cell small-12 medium-12 tile tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json" class="cell small-12 medium-12 tile illustrated-tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Manifest Keys]({% asset "MDN-Docs.svg" @path @optim %} "MDN Docs")
@@ -42,8 +42,8 @@ MDN web docs will onboard you to the basics. With tutorials from simple user int
 <!-- END: Section Intro -->
 
 <!-- Section -->
-<div class="panel-collapse">
-<div class="grid-container grid-x grid-padding-x align-center">
+<div class="panel-collapse quick-links">
+<div class="grid-container grid-x grid-padding-x align-space-between">
 <div class="cell small-12" markdown="1">
 
 ## Ready to build an extension for Firefox?
@@ -51,6 +51,67 @@ MDN web docs will onboard you to the basics. With tutorials from simple user int
 If you know the basics of extension development, you’re ready to create an extension for Firefox. We’ve got all the resources you need right here. Learn about cross-browser development. Get tips on testing. Make user updates smooth and painless.
 
 </div>
+
+<!-- Tile -->
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+
+![Community Forums]({% asset "icons/quick-link-learn.svg" @path @optim %} "Community Forums")
+
+<p><span class="block-link-inline">Learn</span></p>
+
+</div>
+</a>
+<!-- END: Tile -->
+
+<!-- Tile -->
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+
+![Community Forums]({% asset "icons/quick-link-develop.svg" @path @optim %} "Community Forums")
+
+<p><span class="block-link-inline">Develop</span></p>
+
+</div>
+</a>
+<!-- END: Tile -->
+
+<!-- Tile -->
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+
+![Community Forums]({% asset "icons/quick-link-test.svg" @path @optim %} "Community Forums")
+
+<p><span class="block-link-inline">Test & Debug</span></p>
+
+</div>
+</a>
+<!-- END: Tile -->
+
+<!-- Tile -->
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+
+![Community Forums]({% asset "icons/quick-link-publish.svg" @path @optim %} "Community Forums")
+
+<p><span class="block-link-inline">Publish</span></p>
+
+</div>
+</a>
+<!-- END: Tile -->
+
+<!-- Tile -->
+<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<div class="block-link" markdown="1">
+
+![Community Forums]({% asset "icons/quick-link-manage.svg" @path @optim %} "Community Forums")
+
+<p><span class="block-link-inline">Manage</span></p>
+
+</div>
+</a>
+<!-- END: Tile -->
+
 </div>
 </div>
 
@@ -67,15 +128,15 @@ Mozilla takes the safety and privacy of its users very seriously. Be sure to rev
 </div>
 
 <div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-6" markdown="1">
+<div class="cell small-12 medium-6" markdown="1">
 
-<img src="{% asset "Learn-About-Security-Best-Practices.svg" @path @optim %}" class="image-block" alt="Learn about security best practices" title="Learn about security best practices">
+<img src="{% asset "Learn-About-Security-Best-Practices.svg" @path @optim %}" class="image-block-first" alt="Learn about security best practices" title="Learn about security best practices">
 [Learn about security best practices](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 
 </div>
-<div class="cell small-6" markdown="1">
+<div class="cell small-12 medium-6" markdown="1">
 
-<img src="{% asset "Learn-About-Our-Policies.svg" @path @optim %}" class="image-block" alt="Learn about our policies" title="Learn about our policies">
+<img src="{% asset "Learn-About-Our-Policies.svg" @path @optim %}" class="image-block-first" alt="Learn about our policies" title="Learn about our policies">
 [Learn about our policies](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
 
 </div>

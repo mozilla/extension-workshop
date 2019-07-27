@@ -10,7 +10,7 @@ layout: full-width
                 {% include search-bar.html %}
             </section>
 
-            <div id="result-list"></div>
+            <div id="result-list" data-message="results for"></div>
 
             <aside class="popular-searches">
                 {{ content }}
@@ -18,3 +18,5 @@ layout: full-width
         </div>
     </div>
 </div>
+
+{% asset "lunr.min.js" !type %}

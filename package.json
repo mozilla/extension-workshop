@@ -12,20 +12,21 @@
     "foundation-sites": "6.5.3",
     "hamburgers": "1.1.3",
     "jquery": "3.4.1",
+    "lunr": "2.3.6",
     "slick-carousel": "1.8.1",
     "velocity-animate": "1.5.2",
     "velocity-ui-pack": "1.2.2"
   },
   "devDependencies": {
-    "eslint": "6.0.0",
-    "eslint-config-prettier": "5.0.0",
+    "eslint": "6.1.0",
+    "eslint-config-prettier": "6.0.0",
     "eslint-plugin-prettier": "3.1.0",
     "prettier": "1.18.2",
     "pretty-quick": "1.11.1",
     "rimraf": "2.6.3",
     "stylelint": "10.1.0",
     "stylelint-config-standard": "18.3.0",
-    "svgo": "1.2.2"
+    "svgo": "1.3.0"
   },
   "scripts": {
     "lint": "eslint .",
