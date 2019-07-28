@@ -39,7 +39,7 @@ The Extension Workshop can help you develop extensions for Firefox and give your
 
 - Overview of the Firefox extension features
 - [Tools and processes for developing and testing](https://extensionworkshop-dev.allizom.org/documentation/develop/)
-- [How to publish your extension on addons.mozilla.org or distribute it yourself.](https://extensionworkshop-dev.allizom.org/documentation/publish/)
+- [How to publish your extension on addons.mozilla.org or distribute it yourself](https://extensionworkshop-dev.allizom.org/documentation/publish/)
 - [How to manage your published extension](https://extensionworkshop-dev.allizom.org/documentation/manage/)
 - [An enterprise guide for developing and using extensions](https://extensionworkshop-dev.allizom.org/documentation/enterprise/)
 - [How to develop themes for Firefox](https://extensionworkshop-dev.allizom.org/documentation/themes/)
