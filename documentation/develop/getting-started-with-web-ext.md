@@ -87,6 +87,8 @@ web-ext --version
 
 Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the [webextensions-examples](https://github.com/mdn/webextensions-examples) repo.
 
+<section id="testing-out-an-extension"></section>
+
 ### Testing out an extension
 
 Test an extension in Firefox by `cd`'ing into your extensions’s root directory and entering:
@@ -140,6 +142,8 @@ Firefox 48 was the first stable version to use the WebExtension platform, but it
 {% highlight javascript %}
 web-ext run --pre-install
 {% endhighlight %}
+
+<section id="testing-in-firefox-for-android"></section>
 
 ### Testing in Firefox for Android
 
@@ -208,6 +212,8 @@ web-ext run --keep-profile-changes --firefox-profile=your-custom-profile
 This may be helpful if your extension has many different run states.
 
 <p class="note alert" markdown="1">This option makes the profile specified by `--firefox-profile` completely insecure for daily use. It turns off auto-updates and allows silent remote connections, among other things. Specifically, it will make destructive changes to the profile that are required for `web-ext` to operate.</p>
+
+<section id="packaging-your-extension"></section>
 
 ### Packaging your extension
 
