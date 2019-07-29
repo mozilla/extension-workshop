@@ -1051,7 +1051,7 @@ jQuery(document).ready(function($) {
 
     // Lunr Search
     function lunr_search(query) {
-      var result = idx.search(query);
+      var result = idx.search(query+"*");
       var num = result.length && query != '' ? result.length : 0;
       var query_output =
         num + ' ' + $container.data('message') + ' "' + query + '"';
