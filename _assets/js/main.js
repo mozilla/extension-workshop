@@ -1013,6 +1013,12 @@ jQuery(document).ready(function($) {
     $close.on('click', function() {
       $container.velocity('transition.slideRightOut', { duration: 450 });
     });
+
+    $(document).on('keyup.searchheader', function(e) {
+      if (e.key == 'Escape') {
+        $container.velocity('transition.slideRightOut', { duration: 450 });
+      }
+    });
   };
 
   // 12. Search Results
@@ -1026,11 +1032,11 @@ jQuery(document).ready(function($) {
         search_fields: [
           {
             title: 'tags',
-            boost: 3,
+            boost: 5,
           },
           {
             title: 'title',
-            boost: 2,
+            boost: 25,
           },
           {
             title: 'body',
@@ -1051,7 +1057,7 @@ jQuery(document).ready(function($) {
 
     // Lunr Search
     function lunr_search(query) {
-      var result = idx.search(query);
+      var result = idx.search(query + '*');
       var num = result.length && query != '' ? result.length : 0;
       var query_output =
         num + ' ' + $container.data('message') + ' "' + query + '"';

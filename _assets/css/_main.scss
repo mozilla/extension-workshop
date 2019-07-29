@@ -525,6 +525,7 @@ html {
       &.full-width .site-header,
       &.sidebar .site-header {
         height: 100vh;
+        overflow-y: auto;
       }
 
       .search-input-open {
@@ -773,7 +774,7 @@ $hamburger-hover-transition-timing-function: linear;
     top: rem-calc(40);
     left: 0;
     width: 100%;
-    height: calc(100% - #{rem-calc(40)});
+    min-height: calc(100% - #{rem-calc(40)});
     flex-flow: column nowrap;
 
     .primary > li {

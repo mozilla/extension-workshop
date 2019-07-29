@@ -112,7 +112,7 @@ Having an exceptional user experience is crucial to attracting, and retaining, u
 
 Focus on a slick [onboarding flow](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices) that gets users up to speed with your extension quickly.
 
-If your extension collects user data during onboarding, make sure you follow the [best practices for collecting user data consents](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Prompt_users_for_data_and_privacy_consents). And, it’s important that you [request the right permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions).
+If your extension collects user data during onboarding, make sure you follow the [best practices for collecting user data consent](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Prompt_users_for_data_and_privacy_consents). And, it’s important that you [request the right permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions).
 
 ### Put your user first
 
