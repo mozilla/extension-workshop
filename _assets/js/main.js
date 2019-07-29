@@ -1013,6 +1013,12 @@ jQuery(document).ready(function($) {
     $close.on('click', function() {
       $container.velocity('transition.slideRightOut', { duration: 450 });
     });
+
+    $(document).on('keyup.searchheader', function(e) {
+      if (e.key == 'Escape') {
+        $container.velocity('transition.slideRightOut', { duration: 450 });
+      }
+    });
   };
 
   // 12. Search Results
