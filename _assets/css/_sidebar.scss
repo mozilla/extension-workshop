@@ -620,7 +620,6 @@ $sidebar-nav-width: rem-calc(240);
     }
 
     .module-content > .cell > *:first-child {
-
       @include breakpoint(xlarge) {
         padding-top: 0;
         margin-top: rem-calc(72);
