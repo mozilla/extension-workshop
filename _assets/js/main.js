@@ -1032,11 +1032,11 @@ jQuery(document).ready(function($) {
         search_fields: [
           {
             title: 'tags',
-            boost: 3,
+            boost: 5,
           },
           {
             title: 'title',
-            boost: 2,
+            boost: 25,
           },
           {
             title: 'body',
