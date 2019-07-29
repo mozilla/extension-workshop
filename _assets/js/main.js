@@ -829,21 +829,22 @@ jQuery(document).ready(function($) {
 
     $links.on('click', function() {
       var $link = $(this);
-      var $panel = $('#' + $link.data('panel'));
+      var panel = '#' + $link.data('panel');
       if ($panels.filter(':visible').length) {
         $panels.velocity('transition.slideDownOut', {
           duration: 300,
           complete: function() {
-            openPopup($link, $panel);
+            openPanel($link, panel);
           },
         });
       } else {
-        openPopup($link, $panel);
+        openPanel($link, panel);
       }
     });
 
-    function openPopup($link, $panel) {
-      if ($panel.length) {
+    function openPanel($link, panel) {
+      if ($(panel).length) {
+        var $panel = $(panel);
         positionPanel($panel);
         $panel.velocity('transition.slideUpIn', {
           duration: 300,
@@ -857,16 +858,33 @@ jQuery(document).ready(function($) {
           .find('button.close')
           .off('click')
           .on('click', function() {
-            $panel.velocity('transition.slideDownOut', {
-              duration: 300,
-              complete: function() {
-                if (!$body.hasClass('using-mouse')) {
-                  $link.focus();
-                }
-              },
-            });
+            closePanel($link, $panel);
+          });
+        $(document)
+          .off('click keyup')
+          .on('click', function(e) {
+            var $target = $(e.target);
+            if (!$target.closest(panel).length && $panel.is(':visible')) {
+              closePanel($link, $panel);
+            }
+          })
+          .on('keyup', function(e) {
+            if (e.key == 'Escape' && $panel.is(':visible')) {
+              closePanel($link, $panel);
+            }
           });
       }
+    }
+
+    function closePanel($link, $panel) {
+      $panel.velocity('transition.slideDownOut', {
+        duration: 300,
+        complete: function() {
+          if (!$body.hasClass('using-mouse')) {
+            $link.focus();
+          }
+        },
+      });
     }
 
     function positionPanel($panel) {
