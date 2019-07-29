@@ -1030,7 +1030,7 @@ jQuery(document).ready(function($) {
           },
           {
             title: 'title',
-            boost: 10,
+            boost: 25,
           },
           {
             title: 'body',
