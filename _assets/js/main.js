@@ -1032,6 +1032,12 @@ jQuery(document).ready(function($) {
     $close.on('click', function() {
       $container.velocity('transition.slideRightOut', { duration: 450 });
     });
+
+    $(document).on('keyup.searchheader', function(e) {
+      if (e.key == 'Escape') {
+        $container.velocity('transition.slideRightOut', { duration: 450 });
+      }
+    });
   };
 
   // 12. Search Results
@@ -1045,11 +1051,11 @@ jQuery(document).ready(function($) {
         search_fields: [
           {
             title: 'tags',
-            boost: 3,
+            boost: 5,
           },
           {
             title: 'title',
-            boost: 2,
+            boost: 25,
           },
           {
             title: 'body',
