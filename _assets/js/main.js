@@ -861,14 +861,15 @@ jQuery(document).ready(function($) {
             closePanel($link, $panel);
           });
         $(document)
-          .off('click keyup')
-          .on('click', function(e) {
+          .off('click.openpanel')
+          .off('keyup.openpanel')
+          .on('click.openpanel', function(e) {
             var $target = $(e.target);
             if (!$target.closest(panel).length && $panel.is(':visible')) {
               closePanel($link, $panel);
             }
           })
-          .on('keyup', function(e) {
+          .on('keyup.openpanel', function(e) {
             if (e.key == 'Escape' && $panel.is(':visible')) {
               closePanel($link, $panel);
             }
