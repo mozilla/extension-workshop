@@ -1,3 +1,10 @@
+- title: "Extension Basics"
+  url: "/extension-basics/"
+  subpageitems:
+    - title: "Getting started"
+      id: "getting-started"
+    - title: "Mozilla Developer Network"
+      id: "mozilla-developer-network"
 - title: "Documentation Topics"
   subfolderitems:
     - title: "Develop"
@@ -361,13 +368,6 @@
           id: "what-themes-are"
         - title: "Creating themes"
           id: "creating-themes"
-- title: "Extension Basics"
-  url: "/extension-basics/"
-  subpageitems:
-    - title: "Getting started"
-      id: "getting-started"
-    - title: "Mozilla Developer Network"
-      id: "mozilla-developer-network"
 - title: "Community"
   url: "/community/"
   subpageitems:
