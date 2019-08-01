@@ -385,7 +385,7 @@
         - title: "Add-ons Blog"
           url: "https://blog.mozilla.org/addons/"
         - title: "Stack Overflow"
-          url: "https://stackoverflow.com/"
+          url: "https://stackoverflow.com/tags/firefox-addon"
         - title: "Communication Calendar"
           url: "https://calendar.google.com/calendar?cid=bW96aWxsYS5jb21fb2ZqbGN0MDdrMTc4NHYxdTUxYnFrNDc2YmtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
         - title: "Dev Mailing List"
