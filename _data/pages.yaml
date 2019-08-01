@@ -1,3 +1,10 @@
+- title: "Extension Basics"
+  url: "/extension-basics/"
+  subpageitems:
+    - title: "Getting started"
+      id: "getting-started"
+    - title: "Mozilla Developer Network"
+      id: "mozilla-developer-network"
 - title: "Documentation Topics"
   subfolderitems:
     - title: "Develop"
@@ -242,6 +249,19 @@
                   id: "javascript-apis"
             - title: "Comparison with XUL/XPCOM extensions"
               url: "/documentation/develop/comparison-with-xul-xpcom-extensions/"
+              subpageitems:
+                - title: "Manifest"
+                  id: "manifest"
+                - title: "UI"
+                  id: "ui"
+                - title: "Privileged APIs"
+                  id: "privileged-apis"
+                - title: "Interacting with web content"
+                  id: "interacting-with-web-content"
+                - title: "Localization"
+                  id: "localization"
+                - title: "Settings"
+                  id: "settings"
         - category: "Debug and Test"
           pages: 
             - title: "Temporary Installation in Firefox"
@@ -361,13 +381,6 @@
           id: "what-themes-are"
         - title: "Creating themes"
           id: "creating-themes"
-- title: "Extension Basics"
-  url: "/extension-basics/"
-  subpageitems:
-    - title: "Getting started"
-      id: "getting-started"
-    - title: "Mozilla Developer Network"
-      id: "mozilla-developer-network"
 - title: "Community"
   url: "/community/"
   subpageitems:

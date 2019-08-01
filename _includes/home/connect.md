@@ -29,7 +29,7 @@ When you build on Firefox, you build with a community of extension developers. A
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://wiki.mozilla.org/WebExtensions/policy" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://mail.mozilla.org/listinfo/dev-addons" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Get Involved]({% asset "icons/get-involved.svg" @path @optim %} "Get Involved")
