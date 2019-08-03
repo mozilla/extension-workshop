@@ -551,7 +551,7 @@ $sidebar-nav-width: rem-calc(240);
   margin-bottom: rem-calc(32);
 
   @include breakpoint(xlarge) {
-    margin-bottom: rem-calc(64);
+    margin-bottom: rem-calc(4);
   }
 
   .module {
@@ -610,9 +610,19 @@ $sidebar-nav-width: rem-calc(240);
     h1,
     h2 {
       &:first-child {
-        margin-top: rem-calc(12);
         border-top: 0;
+        margin-top: rem-calc(12);
+
+        @include breakpoint(large down) {
+          padding-top: 0;
+        }
+      }
+    }
+
+    .module-content > .cell > *:first-child {
+      @include breakpoint(xlarge) {
         padding-top: 0;
+        margin-top: rem-calc(72);
       }
     }
   }
@@ -681,6 +691,7 @@ $sidebar-nav-width: rem-calc(240);
 // Table of Contents
 
 .table-of-contents {
+  margin-top: rem-calc(32);
   font-size: $small-font-size;
 
   h6 {
@@ -699,6 +710,7 @@ $sidebar-nav-width: rem-calc(240);
     order: 2;
     position: relative;
     padding-left: 0 !important;
+    margin-top: rem-calc(60);
 
     &-inner {
       position: absolute;

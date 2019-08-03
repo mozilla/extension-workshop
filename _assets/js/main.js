@@ -829,21 +829,22 @@ jQuery(document).ready(function($) {
 
     $links.on('click', function() {
       var $link = $(this);
-      var $panel = $('#' + $link.data('panel'));
+      var panel = '#' + $link.data('panel');
       if ($panels.filter(':visible').length) {
         $panels.velocity('transition.slideDownOut', {
           duration: 300,
           complete: function() {
-            openPopup($link, $panel);
+            openPanel($link, panel);
           },
         });
       } else {
-        openPopup($link, $panel);
+        openPanel($link, panel);
       }
     });
 
-    function openPopup($link, $panel) {
-      if ($panel.length) {
+    function openPanel($link, panel) {
+      if ($(panel).length) {
+        var $panel = $(panel);
         positionPanel($panel);
         $panel.velocity('transition.slideUpIn', {
           duration: 300,
@@ -857,16 +858,34 @@ jQuery(document).ready(function($) {
           .find('button.close')
           .off('click')
           .on('click', function() {
-            $panel.velocity('transition.slideDownOut', {
-              duration: 300,
-              complete: function() {
-                if (!$body.hasClass('using-mouse')) {
-                  $link.focus();
-                }
-              },
-            });
+            closePanel($link, $panel);
+          });
+        $(document)
+          .off('click.openpanel')
+          .off('keyup.openpanel')
+          .on('click.openpanel', function(e) {
+            var $target = $(e.target);
+            if (!$target.closest(panel).length && $panel.is(':visible')) {
+              closePanel($link, $panel);
+            }
+          })
+          .on('keyup.openpanel', function(e) {
+            if (e.key == 'Escape' && $panel.is(':visible')) {
+              closePanel($link, $panel);
+            }
           });
       }
+    }
+
+    function closePanel($link, $panel) {
+      $panel.velocity('transition.slideDownOut', {
+        duration: 300,
+        complete: function() {
+          if (!$body.hasClass('using-mouse')) {
+            $link.focus();
+          }
+        },
+      });
     }
 
     function positionPanel($panel) {
@@ -1013,6 +1032,12 @@ jQuery(document).ready(function($) {
     $close.on('click', function() {
       $container.velocity('transition.slideRightOut', { duration: 450 });
     });
+
+    $(document).on('keyup.searchheader', function(e) {
+      if (e.key == 'Escape') {
+        $container.velocity('transition.slideRightOut', { duration: 450 });
+      }
+    });
   };
 
   // 12. Search Results
@@ -1026,11 +1051,11 @@ jQuery(document).ready(function($) {
         search_fields: [
           {
             title: 'tags',
-            boost: 3,
+            boost: 5,
           },
           {
             title: 'title',
-            boost: 2,
+            boost: 25,
           },
           {
             title: 'body',
@@ -1051,7 +1076,7 @@ jQuery(document).ready(function($) {
 
     // Lunr Search
     function lunr_search(query) {
-      var result = idx.search(query);
+      var result = idx.search(query + '*');
       var num = result.length && query != '' ? result.length : 0;
       var query_output =
         num + ' ' + $container.data('message') + ' "' + query + '"';
