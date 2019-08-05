@@ -35,7 +35,7 @@ Learn how to get your extension signed and distributed worldwide or to your ente
 
 ## Get your extension signed
 
-Once your extension is coded and tested, it needs to meet the policies in the [developer agreement](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Agreement) and [add-on policies](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews) before it is signed. If your extension doesn’t meet these policies, it may not get a signature or it could be [blocked](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Blocking_Process) after signing.
+Once your extension is coded and tested, it needs to meet the policies in the [developer agreement](/documentation/publish/firefox-add-on-distribution-agreement/) and [add-on policies](/documentation/publish/add-on-policies/) before it is signed. If your extension doesn’t meet these policies, it may not get a signature or it could be [blocked](/documentation/publish/add-ons-blocking-process/) after signing.
 
 When you’re confident your extension complies with those policies, it needs to be signed before it’s distributed\* for use in the [release](https://www.mozilla.org/en-US/firefox/) and [Beta](https://www.mozilla.org/firefox/channel/desktop/) versions of Firefox. Signing provides Firefox users with the assurance that an extension hasn’t been tampered with and gives Mozilla the ability to block malicious extensions.
 
@@ -93,7 +93,7 @@ Check out our [publisher’s resources](https://developer.mozilla.org/en-US/docs
 
 ## Promote your extension
 
-Grow your user base by [creating creating an appealing listing](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Listing) for your extension.
+Grow your user base by [creating an appealing listing](/documentation/develop/create-an-appealing-listing/) for your extension.
 
 <!-- Video Popup Thumbnail -->
 

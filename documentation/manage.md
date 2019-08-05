@@ -35,7 +35,7 @@ Manage your extension to keep it growing, accurate, and integrated with Firefox
 
 ## Stay informed when Firefox changes
 
-We’re constantly improving Firefox and the add-on experience. Use [this list of resources for publishers](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Resources_for_publishers) to stay up-to-date with Firefox news and developments.
+We’re constantly improving Firefox and the add-on experience. Use [this list of resources for publishers](/documentation/manage/resources-for-publishers/) to stay up-to-date with Firefox news and developments.
 
 {% endcapture %}
 {% include modules/column-w-toc.html
@@ -51,7 +51,7 @@ We’re constantly improving Firefox and the add-on experience. Use [this list o
 
 ## Promote your extension
 
-Keep your user base growing regularly reviewing your listing to [make sure it’s as appealing](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Listing) as it can be.
+Keep your user base growing regularly reviewing your listing to [make sure it’s as appealing](/documentation/develop/create-an-appealing-listing/) as it can be.
 
 <!-- Video Popup Thumbnail -->
 

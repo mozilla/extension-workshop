@@ -365,11 +365,11 @@
           id: "manage-authors-of-your-extension"
         - title: "Removing your extension from distribution"
           id: "removing-your-extension-from-distribution"
-  categories:
-      - category: "Resources"
-        pages:
-          - title: "Resources for publishers"
-            id: "resources-for-publishers"
+      categories:
+        - category: "Manage"
+          pages:
+            - title: "Resources for publishers"
+              url: "/documentation/manage/resources-for-publishers/"
     - title: "Enterprise"
       url: "/documentation/enterprise/"
       subpageitems:
