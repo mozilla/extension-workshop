@@ -6,7 +6,17 @@ published: false
 topic: Develop
 tags: [WebExtensions]
 contributors:
-  [mdnwebdocs-bot, ldevernay, rebloor, Abhro, wbamberg, devSchnitzel, andrewtruongmoz, hellosct1, kumar303]
+  [
+    mdnwebdocs-bot,
+    ldevernay,
+    rebloor,
+    Abhro,
+    wbamberg,
+    devSchnitzel,
+    andrewtruongmoz,
+    hellosct1,
+    kumar303,
+  ]
 last_updated_by: mdnwebdocs-bot
 date: 2019-03-18 18:38:23
 ---
@@ -60,12 +70,11 @@ The extension will be installed, and will stay installed until you restart Firef
 
 <!-- END: Content with Table of Contents -->
 
-
 <!-- Single Column Body Module -->
 
 {% capture content %}
 
-## Reloading a temporary extension 
+## Reloading a temporary extension
 
 Starting in Firefox 48, there's a new button labeled "Reload" next to the extension's entry in about:debugging:
 

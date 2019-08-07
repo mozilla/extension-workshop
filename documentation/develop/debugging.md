@@ -6,7 +6,25 @@ published: false
 topic: Develop
 tags: [Debugging, Firefox, Guide, Mozilla, WebExtensions]
 contributors:
-  [rebloor, irenesmith, hellosct1, janat08, mdnwebdocs-bot, MNizam0802, ExE-Boss, Dietrich, freaktechnik, suterj, andrewtruongmoz, wbamberg, CaemU, carlin-scott, matthewjwein, johnadungan, abdullahdiaa]
+  [
+    rebloor,
+    irenesmith,
+    hellosct1,
+    janat08,
+    mdnwebdocs-bot,
+    MNizam0802,
+    ExE-Boss,
+    Dietrich,
+    freaktechnik,
+    suterj,
+    andrewtruongmoz,
+    wbamberg,
+    CaemU,
+    carlin-scott,
+    matthewjwein,
+    johnadungan,
+    abdullahdiaa,
+  ]
 last_updated_by: rebloor
 date: 2019-06-10 10:01:19
 ---
@@ -36,12 +54,11 @@ An extension can consist of several components—background scripts, popups, opt
 
 You use an implementation of the developer tools called Toolbox to debug extensions. To open Toolbox for an extension:
 
-
 - enter `about:debugging` in the URL bar.
 - in the left-hand menu, click **This Firefox** (or **This Nightly**).
 - click **Inspect** next to your extension.
 
-A new tab opens showing **Inspector** in the Toolbox. 
+A new tab opens showing **Inspector** in the Toolbox.
 
 ![developers tool screenshot]({% asset "documentation/develop/developing_tools_inspector.png" @optim @path %})
 
@@ -52,9 +69,6 @@ To debug your extension, you'll use:
 - [**Debugger**](https://developer.mozilla.org/docs/Tools/Debugger) to set breakpoints and watchpoints in your extension's JavaScript, and examine and modify the extension's state.
 
 For much of the debugging work, it's useful to be able to view **Console** with **Inspector** or **Debugger**. You do this using the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console), press `esc` to activate this mode.
-
-
-
 
 ![developers tool split screenshot]({% asset "documentation/develop/developing_tools_inspector_split.png" @optim @path %})
 
@@ -92,9 +106,7 @@ To debug background scripts, use the [Toolbox](#developer-tools-toolbox) **Debug
 
 To get started, open your background script in **Sources**.
 
-
 ![background script screenshot]({% asset "documentation/develop/locate_background_script.png" @optim @path %})
-
 
 As you run your extension, the **Console** displays logged output, including calls to [`console.log()`](https://developer.mozilla.org/docs/Web/API/Console/log) made by the extension's background scripts and any errors the browser raises as it executes these scripts. Note that the console shows all errors raised by the browser, not just errors related to your extension's code.
 
@@ -103,7 +115,6 @@ For example, the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-
 ![background script console log screenshot]({% asset "documentation/develop/background_script_console_log.png" @optim @path %})
 
 Using the **Console** command line, you can access and modify the objects created by your background scripts. For example, you can call the `notify()` function:
-
 
 ![execute from console screenshot]({% asset "documentation/develop/execute_from_console.png" @optim @path %})
 
@@ -254,7 +265,7 @@ A [content script](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensi
 Because [Firefox is multiprocess](https://developer.mozilla.org/docs/Mozilla/Firefox/Multiprocess_Firefox), content scripts run in a different process to other parts of an extension. Therefore, to debug content scripts, you use the developer tools for the page containing the script. To do this:
 
 - in the Firefox menu (or **Tools** menu if you display the menu bar or are on Mac OS X), click **Web Developer** then **Debugger**.
-- press `Ctrl``Shift``i` (`Command``Option``i` on OS X) and click **Debugger**.
+- press ` Ctrl``Shift``i ` (` Command``Option``i ` on OS X) and click **Debugger**.
 
 If you've already activated the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console) view, so you can view the **Console** below **Debugger**, the tools open in this mode. Otherwise, press `esc` to activate this mode.
 
