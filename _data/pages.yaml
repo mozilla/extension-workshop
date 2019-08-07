@@ -444,11 +444,11 @@
     - category: "Start Contributing"
       pages:
         - title: "Find or create a bug"
-          url: "https://www.firefox.com"
+          url: "https://bugzilla.mozilla.org"
         - title: "\"Good First Bug\""
           url: "https://bugzilla.mozilla.org/buglist.cgi?quicksearch=product%3AWebExtensions%20keyword%3Agood-first-bug&list_id=13160623"
         - title: "Needs documentation"
-          url: "https://www.firefox.com"
+          url: "https://mzl.la/33lVHov"
         - title: "Triaged"
           url: "https://www.firefox.com"
         - title: "Untriaged WebExtension API bugs"
