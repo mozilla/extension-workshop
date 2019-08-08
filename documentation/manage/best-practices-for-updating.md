@@ -4,7 +4,7 @@ title: Best practices for updating your extension
 permalink: /documentation/manage/best-practices-for-updating/
 published: false
 topic: Manage
-tags: [update,  manage, distribution]
+tags: [update, manage, distribution]
 contributors: [rebloor]
 last_updated_by: rebloor
 date: 2019-03-18 05:01:39
@@ -45,7 +45,7 @@ To help you deliver the most productive updates, here are some tips from the Fir
 
 - Provide guided instructions for replaced features, such as retaining old menu items that then provide a message guiding the user to the new feature.
 
-- Provide an appropriate mix of bug fixes and new or enhanced features in an upgrade. Users who are inconvenienced by a bug may react negatively if your upgrades don’t appear to address bugs. However,  if you have several technical fixes to make that have little or no user impact, you may want to consider including those in a separate, silent (no upboarding page) release.
+- Provide an appropriate mix of bug fixes and new or enhanced features in an upgrade. Users who are inconvenienced by a bug may react negatively if your upgrades don’t appear to address bugs. However, if you have several technical fixes to make that have little or no user impact, you may want to consider including those in a separate, silent (no upboarding page) release.
 
 - Remember to update your extension’s AMO listing page. Include your release notes in the dedicated section. Update the description to cover new features, replace or add screenshots, and consider tweaking your extension’s icon to help highlight that you have made changes.
 
@@ -54,8 +54,6 @@ To help you deliver the most productive updates, here are some tips from the Fir
 - After releasing your update, monitor ratings and reviews, feedback, and support channels to make sure there are no unexpected responses that suggest there are errors in your changes or the changes are not working as expected.
 
 - Start planning your next upgrade!
-
-
 
 {% endcapture %}
 {% include modules/column-w-toc.html
