@@ -402,6 +402,13 @@
               url: "/documentation/manage/best-practices-for-updating/"
             - title: "Retiring your extension"
               url: "/documentation/manage/retiring-your-extension/"
+              subpageitems:
+                - title: "Reasons for withdrawing your extension"
+                  id: "reasons-for-withdrawing"
+                - title: "Steps to retiring an extension"
+                  id: "steps-to-retiring-an-extension"
+                - title: Suggested retirement timetable
+                  id: "suggested-retirement-timetable"
     - title: "Enterprise"
       url: "/documentation/enterprise/"
       subpageitems:
