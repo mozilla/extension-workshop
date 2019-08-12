@@ -418,6 +418,29 @@
           id: "developing-your-enterprise-extension"
         - title: "Distributing your enterprise extension"
           id: "distributing-your-enterprise-extension"
+      categories:
+        - category: "Enterprise resources"
+          pages:
+            - title: "Enterprise policies that impact extensions"
+              url: "/documentation/enterprise/enterprise-policies-that-impact-extensions/"
+              subpageitems:
+                - title: "Relevant policies"
+                  id: "relevant-policies"
+                - title: "Other relevant policies"
+                  id: "other-relevant-policies"
+            - title: "Enterprise distribution"
+              url: "/documentation/enterprise/enterprise-distribution/"
+              subpageitems:
+                - title: "Signed vs. unsigned extensions"
+                  id: "signed-vs-unsigned"
+                - title: "Sideloading"
+                  id: "sideloading"
+                - title: "Installation using the Windows registry"
+                  id: "installation-using-windows-registry"
+                - title: "Firefox settings"
+                  id: "firefox-settings"
+                - title: "Bundling add-ons with a custom Firefox"
+                  id: "bundling-add-ons-with-custom-Firefox"
     - title: "Themes"
       url: "/documentation/themes/"
       subpageitems:
