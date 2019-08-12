@@ -9,6 +9,7 @@ contributors: [caitmuenster, rebloor]
 last_updated_by: caitmuenster
 date: 2019-06-05 14:56:00
 ---
+
 <!-- Page Hero Banner -->
 
 {% capture page_hero_banner_content %}
@@ -37,7 +38,7 @@ No interaction with Mozilla representatives is necessary for a transfer of owner
 - Click the X icon next to your email address to remove yourself from the list of authors.
 - Click **Save Changes**.
 
-The new owner can now manage updates, listing information,  and perform all the other add-on listing tasks. 
+The new owner can now manage updates, listing information, and perform all the other add-on listing tasks.
 
 {% endcapture %}
 {% include modules/column-w-toc.html
