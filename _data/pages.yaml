@@ -403,7 +403,7 @@
                     id: "transfer-ownership"
                   - title: "Code disputes"
                     id: "code-disputes"
-              - title: "Developers accounts"
+              - title: "Developer accounts"
                 url: "/documentation/publish/developer-accounts/"
                 subpageitems: 
                   - title: "Setting a display name"
