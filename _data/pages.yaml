@@ -298,7 +298,7 @@
                   id: "debugging-browser-restarts"
             - title: "Testing persistent and restart features"
               url: "/documentation/develop/testing-persistent-and-restart-features/"
-              subpageitems: 
+              subpageitems:
                 - title: "What is an add-on ID?"
                   id: "what-is-an-add-on-id"
                 - title: "What is a Firefox profile?"
@@ -309,7 +309,7 @@
                   id: "what-do-i-do-to-ensure-i-can-test-my-extension"
             - title: "Test permission requests"
               url: "/documentation/develop/test-permission-requests/"
-              subpageitems: 
+              subpageitems:
                 - title: "Permission grant behavior during testing"
                   id: "permission-grant-behavior-during-testing"
                 - title: "Observe or verify install time permission requests"
@@ -398,14 +398,14 @@
                     id: "source-code-checklist"
               - title: "Add-on ownership"
                 url: "/documentation/publish/add-on-ownership/"
-                subpageitems: 
+                subpageitems:
                   - title: "Transfer ownership"
                     id: "transfer-ownership"
                   - title: "Code disputes"
                     id: "code-disputes"
               - title: "Developer accounts"
                 url: "/documentation/publish/developer-accounts/"
-                subpageitems: 
+                subpageitems:
                   - title: "Setting a display name"
                     id: "setting-a-display-name"
                   - title: "Blocked accounts"
@@ -449,6 +449,12 @@
         - title: "Distributing your enterprise extension"
           id: "distributing-your-enterprise-extension"
       categories:
+        - category: "Enterprise support"
+          pages:
+            - title: "Manage add-ons for Firefox for Enterprise"
+              url: "https://support.mozilla.org/products/firefox-enterprise/policies-customization-enterprise/manage-add-ons-enterprise"
+            - title: "Install system add-ons for Firefox for Enterprise"
+              url: "https://support.mozilla.org/kb/install-system-add-ons-firefox-enterprise"
         - category: "Enterprise resources"
           pages:
             - title: "Enterprise policies that impact extensions"
