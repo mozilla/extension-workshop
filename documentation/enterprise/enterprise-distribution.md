@@ -136,8 +136,8 @@ An email address style ID is recommended.
 4. Open Regedit and add keys as follows:
 
    - For all users of the computer, add to the following registry keys:
-    
-    `HKEY_LOCAL_MACHINE\Software\Mozilla\Firefox\Extensions`
+
+   `HKEY_LOCAL_MACHINE\Software\Mozilla\Firefox\Extensions`
 
    or
 
