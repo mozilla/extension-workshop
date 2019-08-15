@@ -33,7 +33,7 @@ Policies enable you to control the capabilities of Firefox. This article summari
 
 These policies control whether users can install, disable, or remove web extensions, and the domains from which they can install extensions.
 
-- **BlockAboutAddons** – This policy removes access to about:addons. Removing this access means that the user is unable to disable or remove extensions, or access extension preferences unless the extension provided alternative access.
+- **BlockAboutAddons** – This policy removes access to `about:addons`. Removing this access means that the user is unable to disable or remove extensions, or access extension preferences unless the extension provided alternative access.
 
 - **Extensions** This policy controls the installation, uninstallation (removal), and locking of extensions. It enables the specification of a list of extensions that are:
 
