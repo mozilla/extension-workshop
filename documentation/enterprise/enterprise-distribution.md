@@ -162,7 +162,7 @@ An email address style ID is recommended.
 
 5. Create a new string value Registry entry with its name equal to the add-on ID, for example, borderify@example.com, and a value equal to the location where the add-on is stored, for example, `c:/webext/borderify@example.com.xpi`.
 
-6. Restart Firefox. The add-on is detected, but the user may be presented with an interstitial or need to enable the add-on in Add-on manager before it can be used. See Firefox settings.
+6. Restart Firefox. The add-on is detected, but the user may be presented with an interstitial or need to enable the add-on in Add-on manager before it can be used. See [Firefox settings](/documentation/enterprise/enterprise-distribution#firefox-settings.
 
 If the same add-on appears under both `HKEY_CURRENT_USER` and `HKEY_LOCAL_MACHINE`, then the instance under `HKEY_CURRENT_USER` will be used. If the same add-on appears in the user's profile directory (for example, if they have already manually installed it), then that version will take precedence over any instances found in the Registry.
 
