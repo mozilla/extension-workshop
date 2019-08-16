@@ -27,7 +27,7 @@ date: 2019-06-26 11:54:51
 
 {% capture page_hero_banner_content %}
 
-# Add-ons in the Enterprise
+# Enterprise distribution
 
 As an enterprise IT administrator you may wish to install add-ons for your users automatically, this page discusses the options.
 
@@ -129,6 +129,8 @@ It is safe to modify the Registry keys while Firefox is running.
 
 An email address style ID is recommended.
 
+{:start="2"}
+
 2. Sign your add-on on addons.mozilla.org (AMO) using the unlisted option. For more details, see Signing and distributing your add-on.
 
 3. Download the signed XPI file and ensure the file name is the add-on ID plus the extension .xpi. For example, `c:/webext/borderify@example.com.xpi`
@@ -163,7 +165,7 @@ An email address style ID is recommended.
 
 5. Create a new string value Registry entry with its name equal to the add-on ID, for example, borderify@example.com, and a value equal to the location where the add-on is stored, for example, `c:/webext/borderify@example.com.xpi`.
 
-6. Restart Firefox. The add-on is detected, but the user may be presented with an interstitial or need to enable the add-on in Add-on manager before it can be used. See [Firefox settings](/documentation/enterprise/enterprise-distribution#firefox-settings.
+6. Restart Firefox. The add-on is detected, but the user may be presented with an interstitial or need to enable the add-on in Add-on manager before it can be used. See [Firefox settings](#firefox-settings).
 
 If the same add-on appears under both `HKEY_CURRENT_USER` and `HKEY_LOCAL_MACHINE`, then the instance under `HKEY_CURRENT_USER` will be used. If the same add-on appears in the user's profile directory (for example, if they have already manually installed it), then that version will take precedence over any instances found in the Registry.
 
