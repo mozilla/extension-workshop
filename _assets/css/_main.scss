@@ -1344,55 +1344,61 @@ $hamburger-hover-transition-timing-function: linear;
 // ------
 
 #tag-list ol,
-#result-list ol {
-  list-style: none;
-  margin: 0;
-
-  li {
-    padding: rem-calc(30 0);
-
-    &:first-child {
-      border-top: 1px solid $medium-light-gray;
-    }
-
-    &:not(:last-child) {
-      border-bottom: 1px solid $medium-light-gray;
-    }
+#result-list {
+  h2 {
+    word-break: break-word;
   }
 
-  a {
-    &:hover {
-      text-decoration: none;
+  ol {
+    list-style: none;
+    margin: 0;
 
-      h3 {
-        text-decoration: underline;
+    li {
+      padding: rem-calc(30 0);
+
+      &:first-child {
+        border-top: 1px solid $medium-light-gray;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $medium-light-gray;
       }
     }
-  }
 
-  h3 {
-    margin-top: 0;
-  }
+    a {
+      &:hover {
+        text-decoration: none;
 
-  p {
-    margin-bottom: 1em;
-    color: $black;
-
-    &:last-child {
-      margin-bottom: 0;
+        h3 {
+          text-decoration: underline;
+        }
+      }
     }
-  }
 
-  .post-meta {
-    margin-bottom: 1em;
-
-    + h3 {
+    h3 {
       margin-top: 0;
     }
-  }
 
-  small {
-    font-size: rem-calc(12);
+    p {
+      margin-bottom: 1em;
+      color: $black;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .post-meta {
+      margin-bottom: 1em;
+
+      + h3 {
+        margin-top: 0;
+      }
+    }
+
+    small {
+      font-size: rem-calc(12);
+    }
   }
 }
 
