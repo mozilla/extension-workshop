@@ -3,7 +3,7 @@ layout: sidebar
 title: Manage
 permalink: /documentation/manage/
 published: false
-tags: []
+tags: [manage]
 contributors: [caitmuenster]
 last_updated_by: caitmuenster
 date: 2019-07-09 09:00:00
@@ -35,7 +35,7 @@ Manage your extension to keep it growing, accurate, and integrated with Firefox
 
 ## Stay informed when Firefox changes
 
-We’re constantly improving Firefox and the add-on experience. Use [this list of resources for publishers](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Resources_for_publishers) to stay up-to-date with Firefox news and developments.
+We’re constantly improving Firefox and the add-on experience. Use [this list of resources for publishers](/documentation/manage/resources-for-publishers/) to stay up-to-date with Firefox news and developments.
 
 {% endcapture %}
 {% include modules/column-w-toc.html
@@ -87,7 +87,7 @@ Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.or
 
 When you’re ready to improve your extension or receive suggestions for new features from your user community, you might decide to publish an update.
 
-[Best practices for updating extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Best_practices_for_updating_your_extension)
+[Best practices for updating extensions](/documentation/manage/best-practices-for-updating/)
 
 ![Power Up Extensions]({% asset "documentation/develop/PowerUpExtensions_fullwidth.png" @optim @path %})
 
@@ -127,7 +127,7 @@ If someone is using your code without your permission, please follow [these inst
 
 Sometimes, add-ons outlive their usefulness: features they provide may be added to Firefox, your product or service may evolve, or it could simply be easier to write a new extension than maintain your old one.
 
-Here’s how to [Retire your extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Retiring_your_extension) gracefully.
+Here’s how to [Retire your extension](/documentation/manage/retiring-your-extension/) gracefully.
 
 {% endcapture %}
 {% include modules/one-column.html

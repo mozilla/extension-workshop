@@ -22,13 +22,13 @@
           id: "test-and-debug"
       categories:
         - category: "Getting Started"
-          pages: 
+          pages:
             - title: "Firefox Workflow Overview"
               url: "/documentation/develop/firefox-workflow-overview/"
             - title: "About the WebExtensions API"
               url: "/documentation/develop/about-the-webextensions-api/"
-        - category: "Cross-Browser Development"         
-          pages: 
+        - category: "Cross-Browser Development"
+          pages:
             - title: "Browser Incompatibilities"
               url: "/documentation/develop/browser-incompatibilities/"
             - title: "Build cross-browser extensions"
@@ -39,7 +39,7 @@
               url: "/documentation/develop/build-an-extension-in-5-minutes/"
             - title: "Browser Extension Development Tools"
               url: "/documentation/develop/browser-extension-development-tools/"
-              subpageitems: 
+              subpageitems:
                 - title: "Boilerplating tools"
                   id: "boilerplating-tools"
                 - title: "Coding tools"
@@ -52,7 +52,7 @@
                   id: "tools-for-firefox-for-android"
             - title: "Choosing a Firefox version for extension development"
               url: "/documentation/develop/choosing-a-firefox-version-for-extension-development/"
-              subpageitems: 
+              subpageitems:
                 - title: "Firefox editions"
                   id: "firefox-editions"
                 - title: "Firefox version and their web extension development capabilities"
@@ -70,7 +70,7 @@
               url: "/documentation/develop/web-ext-webpack-plug-in/"
             - title: "web-ext command reference"
               url: "/documentation/develop/web-ext-command-reference/"
-              subpageitems: 
+              subpageitems:
                 - title: "Commands"
                   id: "commands"
                 - title: "Global options"
@@ -90,7 +90,7 @@
                   id: "when-do-you-need-an-add-on-id"
             - title: "Request the right permissions"
               url: "/documentation/develop/request-the-right-permissions/"
-              subpageitems: 
+              subpageitems:
                 - title: "Introduction"
                   id: "introduction"
                 - title: "Advised permissions"
@@ -133,7 +133,7 @@
                   id: "offboarding"
             - title: "Create an appealing listing"
               url: "/documentation/develop/create-an-appealing-listing/"
-              subpageitems: 
+              subpageitems:
                 - title: "Your add-on’s name"
                   id: "your-add-ons-name"
                 - title: "Create a captivating icon"
@@ -168,7 +168,7 @@
               url: "/documentation/develop/whats-great-content-and-design/"
             - title: "Best practices for collecting user data consents"
               url: "/documentation/develop/best-practices-for-collecting-user-data-consents/"
-              subpageitems: 
+              subpageitems:
                 - title: "Know your privacy settings"
                   id: "know-your-privacy-settings"
                 - title: "Get prepared"
@@ -187,7 +187,7 @@
               url: "/documentation/develop/geckoview-extensions-android-library/"
             - title: "Differences between desktop and Android extensions"
               url: "/documentation/develop/differences-between-desktop-and-android-extensions/"
-              subpageitems: 
+              subpageitems:
                 - title: "User interface"
                   id: "user-interface"
                 - title: "Native application interaction"
@@ -198,7 +198,7 @@
                   id: "other-notes"
             - title: "Developing extensions for Firefox for Android"
               url: "/documentation/develop/developing-extensions-for-firefox-for-android/"
-              subpageitems: 
+              subpageitems:
                 - title: "Set up your computer and Android emulator or device"
                   id: "set-up-your-computer-and-android-emulator-or-device"
                 - title: "Check for Firefox for Android compatibility"
@@ -208,14 +208,14 @@
                 - title: "Debug your extension"
                   id: "debug-your-extension"
         - category: "Port Your Extension"
-          pages: 
+          pages:
             - title: "Extension compatibility test"
               url: "/documentation/develop/extension-compatibility-test/"
             - title: "Porting a Google Chrome Extension"
               url: "/documentation/develop/porting-a-google-chrome-extension/"
             - title: "Porting a legacy Firefox extension"
               url: "/documentation/develop/porting-a-legacy-firefox-extension/"
-              subpageitems: 
+              subpageitems:
                 - title: "Quick start"
                   id: "quick-start"
                 - title: "Migration paths"
@@ -263,15 +263,59 @@
                 - title: "Settings"
                   id: "settings"
         - category: "Debug and Test"
-          pages: 
+          pages:
             - title: "Temporary Installation in Firefox"
               url: "/documentation/develop/temporary-installation-in-firefox/"
+              subpageitems:
+                - title: "Reloading a temporary extension"
+                  id: "reloading-a-temporary-extension"
+                - title: "Using the command line"
+                  id: "using-the-command-line"
+                - title: "Detecting temporary installation"
+                  id: "detecting-temporary-installation"
+                - title: "Limitations"
+                  id: "limitations"
             - title: "Debugging"
               url: "/documentation/develop/debugging/"
+              subpageitems:
+                - title: "Developer tools toolbox"
+                  id: "developer-tools-toolbox"
+                - title: "Debugging background scripts"
+                  id: "debugging-background-scripts"
+                - title: "Debugging options pages"
+                  id: "debugging-options-pages"
+                - title: "Debugging popups"
+                  id: "debugging-popups"
+                - title: "Debugging content scripts"
+                  id: "debugging-content-scripts"
+                - title: "Debugging sidebars"
+                  id: "debugging-sidebars"
+                - title: "Debugging developer tools pages and panels"
+                  id: "debugging-developer-tools-pages-and-panels"
+                - title: "Debug permission requests"
+                  id: "debug-permission-requests"
+                - title: "Debuggging browser restarts"
+                  id: "debugging-browser-restarts"
             - title: "Testing persistent and restart features"
               url: "/documentation/develop/testing-persistent-and-restart-features/"
+              subpageitems:
+                - title: "What is an add-on ID?"
+                  id: "what-is-an-add-on-id"
+                - title: "What is a Firefox profile?"
+                  id: "what-is-a-firefox-profile"
+                - title: "Extension behavior in Firefox"
+                  id: "extension-behavior-in-firefox"
+                - title: "What do I do to ensure I can test my extension?"
+                  id: "what-do-i-do-to-ensure-i-can-test-my-extension"
             - title: "Test permission requests"
               url: "/documentation/develop/test-permission-requests/"
+              subpageitems:
+                - title: "Permission grant behavior during testing"
+                  id: "permission-grant-behavior-during-testing"
+                - title: "Observe or verify install time permission requests"
+                  id: "observe-or-verify-install-time-permission-requests"
+                - title: "Retest runtime permission grants"
+                  id: "retest-runtime-permission-grants"
     - title: "Publish"
       url: "/documentation/publish/"
       subpageitems:
@@ -283,7 +327,7 @@
           id: "promote-your-extension"
       categories:
         - category: "Policies"
-          pages: 
+          pages:
             - title: "Add-on Policies"
               url: "/documentation/publish/add-on-policies/"
               subpageitems:
@@ -305,7 +349,7 @@
                   id: "compliance-and-blocking"
             - title: "Firefox Add-on Distribution Agreement"
               url: "/documentation/publish/firefox-add-on-distribution-agreement/"
-              subpageitems: 
+              subpageitems:
                 - title: "1. Introduction"
                   id: "introduction"
                 - title: "2. Accounts"
@@ -330,7 +374,7 @@
                   id: "general-legal-terms"
             - title: "Add-ons Blocking Process"
               url: "/documentation/publish/add-ons-blocking-process/"
-              subpageitems: 
+              subpageitems:
                 - title: "Security Over Choice"
                   id: "security-over-choice"
                 - title: "Blocking Criteria"
@@ -342,16 +386,64 @@
                 - title: "Blocking Other Types of Third Party Software"
                   id: "blocking-other-types-of-third-party-software"
         - category: "Distribute"
-          pages:  
+          pages:
               - title: "Source code submission"
                 url: "/documentation/publish/source-code-submission/"
-                subpageitems: 
+                subpageitems:
                   - title: "Provide your extension source code"
                     id: "provide-your-extension-source-code"
                   - title: "Use of obfuscated code"
                     id: "use-of-obfuscated-code"
                   - title: "Source code checklist"
                     id: "source-code-checklist"
+              - title: "Add-on ownership"
+                url: "/documentation/publish/add-on-ownership/"
+                subpageitems:
+                  - title: "Transfer ownership"
+                    id: "transfer-ownership"
+                  - title: "Code disputes"
+                    id: "code-disputes"
+              - title: "Developer accounts"
+                url: "/documentation/publish/developer-accounts/"
+                subpageitems:
+                  - title: "Setting a display name"
+                    id: "setting-a-display-name"
+                  - title: "Blocked accounts"
+                    id: "blocked-accounts"
+        - category: "Promote"
+          pages:
+            - title: "Promoting your extension"
+              url: "/documentation/publish/promoting-your-extension/"
+              subpageitems:
+                - title: "Friends, family, and colleagues"
+                  id: "friends-family-colleagues"
+                - title: "Events and meetups"
+                  id: "events-and-meetups"
+                - title: "Current users"
+                  id: "current-users"
+                - title: "Social media"
+                  id: "social-media"
+                - title: "Engage with your users"
+                  id: "engage-with-users"
+                - title: "Create a forum, user group, or similar"
+                  id: "create-a-forum"
+                - title: "Engage with bloggers and news media"
+                  id: "engage-with-media"
+                - title: "Advertising"
+                  id: "advertising"
+            - title: "Make money from browser extensions"
+              url: "/documentation/publish/make-money-from-browser-extensions/"
+              subpageitems:
+                - title: "Will I ever be able to sell through AMO?"
+                  id: "sell-through-AMO"
+                - title: "What can't you do"
+                  id: "what-cant-you-do"
+                - title: "What can you do"
+                  id: "what-can-you-do"
+                - title: "Unsolicited offers"
+                  id: "unsolicited-offers"
+                - title: "How can I maximize my income?"
+                  id: "maximize-income"
     - title: "Manage"
       url: "/documentation/manage/"
       subpageitems:
@@ -365,6 +457,22 @@
           id: "manage-authors-of-your-extension"
         - title: "Removing your extension from distribution"
           id: "removing-your-extension-from-distribution"
+      categories:
+        - category: "Resources"
+          pages:
+            - title: "Resources for publishers"
+              url: "/documentation/manage/resources-for-publishers/"
+            - title: "Best practices for updating your extension"
+              url: "/documentation/manage/best-practices-for-updating/"
+            - title: "Retiring your extension"
+              url: "/documentation/manage/retiring-your-extension/"
+              subpageitems:
+                - title: "Reasons for withdrawing your extension"
+                  id: "reasons-for-withdrawing"
+                - title: "Steps to retiring an extension"
+                  id: "steps-to-retiring-an-extension"
+                - title: Suggested retirement timetable
+                  id: "suggested-retirement-timetable"
     - title: "Enterprise"
       url: "/documentation/enterprise/"
       subpageitems:
@@ -374,6 +482,35 @@
           id: "developing-your-enterprise-extension"
         - title: "Distributing your enterprise extension"
           id: "distributing-your-enterprise-extension"
+      categories:
+        - category: "Enterprise support"
+          pages:
+            - title: "Manage add-ons for Firefox for Enterprise"
+              url: "https://support.mozilla.org/products/firefox-enterprise/policies-customization-enterprise/manage-add-ons-enterprise"
+            - title: "Install system add-ons for Firefox for Enterprise"
+              url: "https://support.mozilla.org/kb/install-system-add-ons-firefox-enterprise"
+        - category: "Enterprise resources"
+          pages:
+            - title: "Enterprise policies that impact extensions"
+              url: "/documentation/enterprise/enterprise-policies-that-impact-extensions/"
+              subpageitems:
+                - title: "Relevant policies"
+                  id: "relevant-policies"
+                - title: "Other relevant policies"
+                  id: "other-relevant-policies"
+            - title: "Enterprise distribution"
+              url: "/documentation/enterprise/enterprise-distribution/"
+              subpageitems:
+                - title: "Signed vs. unsigned extensions"
+                  id: "signed-vs-unsigned"
+                - title: "Sideloading"
+                  id: "sideloading"
+                - title: "Installation using the Windows registry"
+                  id: "installation-using-windows-registry"
+                - title: "Firefox settings"
+                  id: "firefox-settings"
+                - title: "Bundling add-ons with a custom Firefox"
+                  id: "bundling-add-ons-with-custom-Firefox"
     - title: "Themes"
       url: "/documentation/themes/"
       subpageitems:
@@ -416,11 +553,11 @@
     - category: "Start Contributing"
       pages:
         - title: "Find or create a bug"
-          url: "https://www.firefox.com"
+          url: "https://bugzilla.mozilla.org"
         - title: "\"Good First Bug\""
           url: "https://bugzilla.mozilla.org/buglist.cgi?quicksearch=product%3AWebExtensions%20keyword%3Agood-first-bug&list_id=13160623"
         - title: "Needs documentation"
-          url: "https://www.firefox.com"
+          url: "https://mzl.la/33lVHov"
         - title: "Triaged"
           url: "https://www.firefox.com"
         - title: "Untriaged WebExtension API bugs"
