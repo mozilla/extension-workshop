@@ -16,7 +16,7 @@ date: 2019-03-18 05:01:28
 
 # Promoting your extension or theme
 
-So you’ve written a great extension, but only a few people have found and installed it from [addons.mozilla.org](https://addons.mozilla.org) (AMO)—despite your efforts to create an appealing listing. So, how do you encourage more people to install your extension? This page looks at how.
+So you’ve written a great extension, but only a few people have found and installed it from [addons.mozilla.org](https://addons.mozilla.org) (AMO)—despite your efforts to [create an appealing listing](/documentation/develop/create-an-appealing-listing/). So, how do you encourage more people to install your extension? This page looks at how.
 
 However, before you start investing in encouraging more people to install your extension, spend some time to make sure that your extension is well-polished and professional. There is little point chasing new installs if they result in disappointing ratings and reviews. Remember to follow the [content and UX guidelines](/documentation/develop/user-experience-best-practices/), [include proper onboarding](/documentation/develop/onboard-upboard-offboard-users/), and make sure your extension’s performance is good. Even if you think you’ve done this already, it’s always worth checking again.
 
