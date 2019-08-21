@@ -1157,7 +1157,10 @@ jQuery(document).ready(function($) {
 
       if ($local_input) {
         $local_input.on('keyup', function() {
-          lunr_search($(this).val());
+          var searchVal = $(this).val();
+          if (searchVal && searchVal.length && searchVal.length > 3) {
+            lunr_search(searchVal);
+          }
         });
       }
 
