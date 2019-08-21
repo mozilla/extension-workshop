@@ -1620,6 +1620,16 @@ a.tile-block-link {
   opacity: 0;
 }
 
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .video-box {
   position: relative;
 
@@ -1663,6 +1673,7 @@ a.tile-block-link {
       color: $white;
 
       &::before {
+        animation: rotating 0.8s linear infinite;
         content: '';
         position: absolute;
         left: 0;
@@ -1714,6 +1725,7 @@ a.tile-block-link {
           color: $white;
 
           &::before {
+            animation: rotating 0.8s linear infinite;
             content: '';
             position: absolute;
             left: 0;
@@ -1800,6 +1812,7 @@ a.tile-block-link {
 
   &.loading {
     &::before {
+      animation: rotating 0.8s linear infinite;
       content: '';
       position: absolute;
       z-index: 2;
