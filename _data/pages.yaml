@@ -410,6 +410,17 @@
                     id: "setting-a-display-name"
                   - title: "Blocked accounts"
                     id: "blocked-accounts"
+              - title: "Sideloading"
+                url: "/documentation/publish/distribute-sideloading/"
+                subpageitems:
+                  - title: "Preparing your add-on"
+                    id: "preparing-your-addon"
+                  - title: "Install add-on from file"
+                    id: "install-addon-from-file"
+                  - title: "Installation using the standard extension folders"
+                    id: "standard-extension-folders"
+              - title: "For desktop apps"
+                url: "/documentation/publish/distribute-for-desktop-apps/"
         - category: "Promote"
           pages:
             - title: "Promoting your extension"
