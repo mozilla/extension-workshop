@@ -1076,7 +1076,12 @@ jQuery(document).ready(function($) {
 
     // Lunr Search
     function lunr_search(query) {
-      var result = idx.search(query + '*');
+      var result = [];
+      try {
+        result = idx.search(query);
+      } catch (e) {
+        console.error('Search Error: ' + e.message);
+      }
       var num = result.length && query != '' ? result.length : 0;
       var query_output =
         num + ' ' + $container.data('message') + ' "' + query + '"';
@@ -1152,7 +1157,10 @@ jQuery(document).ready(function($) {
 
       if ($local_input) {
         $local_input.on('keyup', function() {
-          lunr_search($(this).val());
+          var searchVal = $(this).val();
+          if (searchVal && searchVal.length && searchVal.length > 3) {
+            lunr_search(searchVal);
+          }
         });
       }
 
