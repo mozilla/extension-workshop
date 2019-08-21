@@ -33,8 +33,6 @@ Firefox gives your enterprise a high-performance, standards compliant, manageabl
 
 {% capture content_with_toc %}
 
-## Section Title
-
 Extensions give you the ability to complement standard browser features and provide richer interfaces to enterprise web applications.
 
 {% endcapture %}
