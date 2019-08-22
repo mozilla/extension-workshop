@@ -84,7 +84,7 @@ An email address style ID is recommended.
 
 ## Install add-on from file
 
-To use Install Add-on From File in Add-on manager, send the user the signed add-on with the following instructions:
+To use Install Add-on From File in Add-on Manager, send the user the signed add-on with the following instructions:
 
 1. Save the add-on file to a suitable location on your computer.
 
@@ -117,9 +117,10 @@ To use Install Add-on From File in Add-on manager, send the user the signed add-
 
 {% capture content %}
 
+<section id="standard-extensions-folder"></section>
 ## Installation using the standard extension folders
 
-This method of add-on installation involves copying the add-on into one of the standard extension folders on the user's computer. Once copied, the next time Firefox launches the add-on will be installed. By default, the user will be asked to approve the installation, and if the user approves, the add-on will be installed and automatically loaded for subsequent launches. If the user has more than one Firefox profile, the approval and installation will occur on the next launch of each profile. For details on controlling whether the user is prompted to approve the installation, see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#firefox-settings).
+This method of add-on installation involves copying the add-on into one of the standard extension folders on the user's computer. Once copied, the next time Firefox launches the add-on will be installed. By default, the user will be asked to approve the installation, and if the user approves, the add-on will be installed and automatically loaded for subsequent launches. If the user has more than one Firefox profile, the approval and installation will occur on the next launch of each profile. For details on controlling whether the user is prompted to approve the installation, see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations).
 
 ### Rename your XPI file
 
@@ -143,9 +144,9 @@ If you are developing an add-on for Firefox you can use an extension proxy file 
 
 In what follows {ec8030f7-c20a-464f-9b0e-13a3a9e97384} is the application ID of Firefox.
 
-The standard installation of Firefox disables the automatic installation of add-ons from these locations (see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#firefox-settings)). As a result, the process for each of the methods described below is as follows:
+The standard installation of Firefox disables the automatic installation of add-ons from these locations (see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations)). As a result, the process for each of the methods described below is as follows:
 
-- Copy the renamed XPI file to the extensions folder for Windows, OSX, or Linux as appropriate. Note that, depending on the desktop OS and its settings, the user may need administrator permission to complete this action.
+- Copy the renamed XPI file to the extensions folder for [Windows](#windows), [OSX](#osx), or [Linux](#linux) as appropriate. Note that, depending on the desktop OS and its settings, the user may need administrator permission to complete this action.
 - Close and restart Firefox.
 - Depending on the OS and version of Firefox one of the the following will happen:
 
@@ -168,7 +169,7 @@ The standard installation of Firefox disables the automatic installation of add-
 
 - The add-on is now installed.
 
-For more details on the interstitial and silent installs, see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#firefox-settings).
+For more details on the interstitial and silent installs, see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations).
 
 <!-- Note -->
 
@@ -184,6 +185,7 @@ To uninstall the add-on, close Firefox and remove the add-on from the location w
 
 <!-- END: Note -->
 
+<section id="windows"></section>
 #### Windows
 
 To install the add-on for a user of the computer, copy the XPI file to:
@@ -206,6 +208,7 @@ Note: To install an add-on for all users of a Windows computer, see [Installatio
 
 <!-- END: Note -->
 
+<section id="osx"></section>
 #### OSX
 
 To install an add-on for use by all Firefox profiles and all users, copy the XPI file to the global extension folder located in Library. If this folder doesn't exist, you will need to create it.
@@ -216,6 +219,7 @@ To install an add-on for a specific user, copy the XPI file to the user's local 
 
 `~/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/`
 
+<section id="linux"></section>
 #### Linux
 
 To install an add-on for use by all users, copy the XPI file to:
