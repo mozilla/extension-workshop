@@ -25,7 +25,7 @@ If you don't provide information about third-party libraries and the reviewer ca
 {% endcapture %}
 {% include modules/page-hero.html
     content=page_hero_banner_content
-%} 
+%}
 
 <!-- END: Page Hero Banner -->
 
@@ -63,11 +63,11 @@ Example: If you’re using the minified version of mousetrap release 1.4.2 (beca
 
 - `https://craig.is/killing/mice`—using the main website, which only shows the latest version.
 - `https://github.com/ccampbell/mousetrap/blob/master/mousetrap.min.js`—using the master branch, which may change anytime.
-- `https://craig.global.ssl.fastly.net/js/mousetrap/mousetrap.min.js?71631`—using the link to a CDN, which could differ from the source. 
+- `https://craig.global.ssl.fastly.net/js/mousetrap/mousetrap.min.js?71631`—using the link to a CDN, which could differ from the source.
 
 </section>
 
-The **correct** link is 
+The **correct** link is
 
 <!-- END: Not this -->
 
@@ -108,7 +108,6 @@ If you miss any of the necessary information for used third-party libraries, the
   content=content
   aside=""
 %}
-
 
 <!-- Meta Data -->
 

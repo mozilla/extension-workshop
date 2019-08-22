@@ -52,7 +52,6 @@ For more information on these processes, see [Submitting an add-on](/documentati
 
 Should your extension be rejected by the human review:
 
-
 - You receive an email that explains the reason for the rejection and what action you need to take to correct the issues identified.
 - If an earlier version of your extension is public, this becomes the one seen by visitors to AMO.
 - If there is no public version of your extension to display, your extension's listing on AMO is suspended. This means that your extension no longer appears in any lists on AMO, nor will it be returned in the results of searches performed by AMO visitors. Should someone follow an external link to your extension listing, they will arrive at a 404 page.
