@@ -115,9 +115,9 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 
 2. Select files and directories needed to implement your extension, excludes those files that aren't needed to run the extension, such as `.git`, graphic sources, and similar files.
 
-3. Open the shortcut menu and click **Compress n Items**.
+3. Open the shortcut menu and click **Compress** **_n_** **Items**.
 
-![Creating package Mac image]({% asset "documentation/publish/creating_package_windows.png" @path @optim %})
+![Creating package Mac image]({% asset "documentation/publish/creating_package_mac.png" @path @optim %})
 
 {% endcapture %}
 {% include modules/one-column.html
@@ -132,7 +132,7 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 
 {% capture content %}
 
-## Linux
+## Linux / Mac OSX Terminal
 
 1. Open Terminal.
 

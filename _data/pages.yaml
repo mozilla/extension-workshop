@@ -421,7 +421,7 @@
                     id: "package-windows"
                   - title: "Mac OSX"
                     id: "package-mac"
-                  - title: "Linux"
+                  - title: "Linux / Mac OSX Terminal"
                     id: "package-linux"
         - category: "Distribute"
           pages:
