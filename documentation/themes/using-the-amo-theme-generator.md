@@ -39,9 +39,9 @@ You will need to be logged in to your Firefox Account to access the Theme Genera
     alert=false
 %}
 
-If you would like to publish your theme on [addons.mozilla.org](https://addons.mozilla.org) (AMO), begin by going to the [listed Theme Generator page](https://addons.mozilla.org/en-US/developers/addon/submit/wizard-listed).
+If you would like to publish your theme on [addons.mozilla.org](https://addons.mozilla.org) (AMO), begin by going to the [listed Theme Generator page](https://addons.mozilla.org/developers/addon/submit/wizard-listed).
 
-Otherwise, if you prefer to self-distribute your theme, go to the [unlisted Theme Generator Page](https://addons.mozilla.org/en-US/developers/addon/submit/wizard-unlisted). For more information on distribution, visit [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
+Otherwise, if you prefer to self-distribute your theme, go to the [unlisted Theme Generator Page](https://addons.mozilla.org/developers/addon/submit/wizard-unlisted). For more information on distribution, visit [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
 
 {% capture note %}
 

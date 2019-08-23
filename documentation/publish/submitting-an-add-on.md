@@ -16,7 +16,7 @@ date: 2019-05-17 13:58:25
 
 # Submitting an add-on
 
-This article walks through the process of publishing an add-on. If you just want to get started, head to the [Submit a New Add-on](https://addons.mozilla.org/en-US/developers/addon/submit/) page on AMO.
+This article walks through the process of publishing an add-on. If you just want to get started, head to the [Submit a New Add-on](https://addons.mozilla.org/developers/addon/submit/) page on AMO.
 
 {% endcapture %}
 {% include modules/page-hero.html
@@ -48,7 +48,7 @@ Create your developer account on [addons.mozilla.org](https://addons.mozilla.org
 - If you have a Firefox Account, connect it with AMO: visit AMO, in the page header click **Log in**, then log in with your Firefox Account.
 - If you don't have a Firefox Account: visit AMO and, in the page header, click **Register**.
 
-Go to the [Add-ons Developer Hub](https://addons.mozilla.org/en-US/developers/) and click **Submit Your First Add-on** or **Submit a New Add-on**. You'll reach the following page:
+Go to the [Add-ons Developer Hub](https://addons.mozilla.org/developers/) and click **Submit Your First Add-on** or **Submit a New Add-on**. You'll reach the following page:
 
 <img src="{% asset "publish/newstepone.PNG" @path @optim %}" style="box-shadow:0 0 0.5em gray;" />
 
