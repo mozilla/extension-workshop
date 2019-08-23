@@ -425,6 +425,15 @@
                     id: "package-linux"
         - category: "Distribute"
           pages:
+              - title: "Submitting an add-on"
+                url: "/documentation/publish/submitting-an-add-on/"
+                subpageitems: 
+                  - title: "Listing on AMO"
+                    id: "listing-on-amo"
+                  - title: "Self-distribution"
+                    id: "self-distribution"
+                  - title: "Get help"
+                    id: "get-help"
               - title: "Source code submission"
                 url: "/documentation/publish/source-code-submission/"
                 subpageitems:
@@ -567,6 +576,16 @@
           id: "what-themes-are"
         - title: "Creating themes"
           id: "creating-themes"
+      categories:
+        - category: "Creating themes"
+          pages:
+            - title: "Using the AMO theme generator"
+              url: "/documentation/themes/using-the-amo-theme-generator/"
+              subpageitems: 
+                - title: "Getting Started"
+                  id: "getting-started"
+                - title: "Submitting your theme"
+                  id: "submitting-your-theme"
 - title: "Community"
   url: "/community/"
   subpageitems:
