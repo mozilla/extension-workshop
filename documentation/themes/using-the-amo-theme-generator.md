@@ -9,6 +9,7 @@ contributors: [irenesmith, andrewtruongmoz, caitmuenster, shiy23]
 last_updated_by: irenesmith
 date: 2019-02-28 12:39:01
 ---
+
 <!-- Page Hero Banner -->
 
 {% capture page_hero_banner_content %}
@@ -42,7 +43,6 @@ If you would like to publish your theme on [addons.mozilla.org](https://addons.m
 
 Otherwise, if you prefer to self-distribute your theme, go to the [unlisted Theme Generator Page](https://addons.mozilla.org/en-US/developers/addon/submit/wizard-unlisted). For more information on distribution, visit [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
 
-
 {% capture note %}
 
 **Note:** You can create a more elaborate theme, for example a theme that uses multiple images, by creating a Static Theme. To get started with Static Themes, take a look at: [Theme concepts](/documentation/publish/theme-concepts).
@@ -53,16 +53,13 @@ Otherwise, if you prefer to self-distribute your theme, go to the [unlisted Them
     alert=false
 %}
 
-
 To use the AMO theme generator, fill out the form with information for your new theme.
 
 <img src="{% asset "documentation/themes/new_theme.png" @path @optim %}" style="border:1px solid black" />
 
-
 Start by giving your new theme a name.
 
 When picking an image for the theme's header, it should be:
-
 
 - 200 pixels tall
 - No larger than 6.9MB
@@ -91,25 +88,25 @@ You can use the [Firefox Color extension](https://color.firefox.com/) to preview
 
 The colors in the following image shows you the colors you can define for your theme. All but the **Header area background** and **Header area text and icons** are optional:
 
-<img src="{% asset "documentation/themes/theme_colors_labeled.png" @path @optim %}" style="border:1px solid black" /> 
+<img src="{% asset "documentation/themes/theme_colors_labeled.png" @path @optim %}" style="border:1px solid black" />
 
 **Header area background** <br/>
-The color of the header area background, displayed in the part of the header not covered or visible through the header image. **Manifest field**: *accentcolor*.
+The color of the header area background, displayed in the part of the header not covered or visible through the header image. **Manifest field**: _accentcolor_.
 
 **Header area text and icons** <br/>
-The color of the text and icons in the header area, except the active tab. **Manifest field**: *textcolor*.
+The color of the text and icons in the header area, except the active tab. **Manifest field**: _textcolor_.
 
 **Toolbar area background (optional)** <br/>
-The background color for the navigation bar, the bookmarks bar, and the selected tab. **Manifest field**: *toolbar*.
+The background color for the navigation bar, the bookmarks bar, and the selected tab. **Manifest field**: _toolbar_.
 
 **Toolbar area text and icons (optional)** <br/>
-The color of the text and icons in the toolbar and the active tab. **Manifest field**: *toolbar_text*.
+The color of the text and icons in the toolbar and the active tab. **Manifest field**: _toolbar_text_.
 
 **Toolbar field area background (optional)** <br/>
-The background color for fields in the toolbar, such as the URL bar. **Manifest field**: *toolbar_field*.
+The background color for fields in the toolbar, such as the URL bar. **Manifest field**: _toolbar_field_.
 
 **Toolbar field area text (optional)** <br/>
-The color of text for fields in the toolbar, such as the URL bar. **Manifest field**: *toolbar_field_text*.
+The color of text for fields in the toolbar, such as the URL bar. **Manifest field**: _toolbar_field_text_.
 
 As you fill in the information, you will see a browser preview of your theme at the bottom of the form.
 
@@ -131,7 +128,6 @@ Themes submitted for self-distribution will be signed immediately and an XPI fil
   content=content_with_toc
 %}
 
-
 <!-- END: Content with Table of Contents -->
 <!-- Single Column Body Module -->
 
@@ -152,6 +148,7 @@ Describe your theme. You have 250 characters in which to describe your theme.
 
 **Select a category (required)** <br/>
 Selecting an accurate category for your theme will help others find it on AMO. The following categories are available:
+
 - Abstract
 - Causes
 - Fashion
@@ -182,7 +179,7 @@ The license under which your theme is published will be by the choices you make 
 
 Once you have filled in all of the required information, you can complete the submission process by clickiing on the **Submit Version** button. You should see something that looks like this:
 
-<img src="{% asset "documentation/themes/theme_after_submit.png" @path @optim %}" style="border:1px solid black" /> 
+<img src="{% asset "documentation/themes/theme_after_submit.png" @path @optim %}" style="border:1px solid black" />
 
 {% endcapture %}
 {% include modules/one-column.html
