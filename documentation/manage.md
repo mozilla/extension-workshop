@@ -51,7 +51,7 @@ We’re constantly improving Firefox and the add-on experience. Use [this list o
 
 ## Promote your extension
 
-Keep your user base growing regularly reviewing your listing to [make sure it’s as appealing](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Listing) as it can be.
+Keep your user base growing regularly reviewing your listing to [make sure it’s as appealing](/documentation/develop/create-an-appealing-listing/) as it can be.
 
 <!-- Video Popup Thumbnail -->
 
@@ -68,7 +68,7 @@ However you choose to distribute your extension, you’ll want to promote your e
 
 Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.org/addons/2019/04/08/recommended-extensions-program-coming-soon/) that meet a high standard of security, utility, and user experience. If you’d like your extension to be included in the program, submit a nomination.
 
-[Making money from browser extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Make_money_from_browser_extensions) is also something you might want to consider as your user base grows.
+[Making money from browser extensions](/documentation/publish/make-money-from-browser-extensions/) is also something you might want to consider as your user base grows.
 
 {% endcapture %}
 {% include modules/one-column.html
