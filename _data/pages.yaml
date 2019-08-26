@@ -36,7 +36,7 @@
         - category: "Firefox Tools"
           pages:
             - title: "Build an extension in 5 minutes"
-              url: "/documentation/develop/build-an-extension-in-5-minutes/"
+              url: "https://www.youtube.com/watch?v=Q3AQ5D2QFwc"
             - title: "Browser Extension Development Tools"
               url: "/documentation/develop/browser-extension-development-tools/"
               subpageitems:
