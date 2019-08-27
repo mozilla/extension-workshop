@@ -427,7 +427,7 @@
           pages:
               - title: "Submitting an add-on"
                 url: "/documentation/publish/submitting-an-add-on/"
-                subpageitems: 
+                subpageitems:
                   - title: "Listing on AMO"
                     id: "listing-on-amo"
                   - title: "Self-distribution"
@@ -457,6 +457,11 @@
                     id: "setting-a-display-name"
                   - title: "Blocked accounts"
                     id: "blocked-accounts"
+              - title: "Self-Distribution"
+                url: "/documentation/publish/self-distribution/"
+                subpageitems:
+                  - title: "Self-distribution options"
+                    id: "options"
               - title: "Sideloading"
                 url: "/documentation/publish/distribute-sideloading/"
                 subpageitems:
@@ -581,7 +586,7 @@
           pages:
             - title: "Using the AMO theme generator"
               url: "/documentation/themes/using-the-amo-theme-generator/"
-              subpageitems: 
+              subpageitems:
                 - title: "Getting Started"
                   id: "getting-started"
                 - title: "Submitting your theme"
