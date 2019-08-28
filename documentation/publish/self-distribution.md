@@ -30,7 +30,7 @@ date: 2019-08-18 11:19:17
 You aren't required to list or distribute your add-on through [addons.mozilla.org](https://addons.mozilla.org) (AMO); you can distribute it yourself. However, before distributing your add-on yourself, here are some things you should consider:
 
 - AMO is a very popular distribution platform, with millions of monthly visitors and installations. It's integrated into the Firefox Add-ons Manager, allowing for easy installation of add-ons published on AMO.
-- When an add-on is listed on AMO, Firefox automatically updates installed copies when a new version is listed on AMO. To enable Firefox to automatically update self-distributed add-ons, the URL where Firefox can find updates needs to be included in the add-on manifest's [`update_link`](https://developer.mozilla.org/en-US/Add-ons/Updates) key.
+- When an add-on is listed on AMO, Firefox automatically updates installed copies when a new version is listed on AMO. To enable Firefox to automatically update self-distributed add-ons, the URL where Firefox can find updates needs to be included in the add-on manifest's [`update_link`](https://developer.mozilla.org/Add-ons/Updates) key.
 
 For self-distributed add-ons that don't have an update URL, Firefox checks AMO for updates and the add-on is updated to a listed version, if one is available.
 
