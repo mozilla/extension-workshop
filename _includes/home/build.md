@@ -21,7 +21,7 @@ It's easy to create your cross-browser extension for Firefox. Where your develop
 <div class="grid-container grid-x grid-padding-x align-center">
 
 <!-- Tile 1 -->
-<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json" class="cell small-12 medium-12 tile illustrated-tile tile-block-link">
+<a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions" class="cell small-12 medium-12 tile illustrated-tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Manifest Keys]({% asset "MDN-Docs.svg" @path @optim %} "MDN Docs")
@@ -53,7 +53,7 @@ If you know the basics of extension development, you’re ready to create an ext
 </div>
 
 <!-- Tile -->
-<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<a href="/extension-basics/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-learn.svg" @path @optim %} "Community Forums")
@@ -65,7 +65,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <!-- END: Tile -->
 
 <!-- Tile -->
-<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<a href="/documentation/develop/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-develop.svg" @path @optim %} "Community Forums")
@@ -77,7 +77,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <!-- END: Tile -->
 
 <!-- Tile -->
-<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<a href="/documentation/develop/temporary-installation-in-firefox/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-test.svg" @path @optim %} "Community Forums")
@@ -89,7 +89,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <!-- END: Tile -->
 
 <!-- Tile -->
-<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<a href="/documentation/publish/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-publish.svg" @path @optim %} "Community Forums")
@@ -101,7 +101,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <!-- END: Tile -->
 
 <!-- Tile -->
-<a href="/documentation/develop/web-ext-webpack-plug-in/" class="cell auto tile tile-block-link">
+<a href="/documentation/manage/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-manage.svg" @path @optim %} "Community Forums")

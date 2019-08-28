@@ -61,6 +61,8 @@ This page lists all the commands and options available under the [web-ext](https
 
 web-ext has the following commands; options specific to these commands are included as subsections.
 
+<section id="web-ext-build"></section>
+
 ### web-ext build
 
 Packages an extension into a `.zip` file, ignoring files that are commonly unwanted in packages, such as `.git` and other artifacts. The name of the `.zip` file is taken from the [name](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) field in the extension [manifest](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
@@ -80,6 +82,8 @@ Environment variable: `$WEB_EXT_OVERWRITE_DEST=true`
 ### web-ext docs
 
 Opens the [web-ext documentation](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext) in the user's default browser.
+
+<section id="web-ext-lint"></section>
 
 ### web-ext lint
 
@@ -120,6 +124,8 @@ Environment variable: `$WEB_EXT_BORING=true`
 Treat warnings as errors by exiting non-zero for warnings.
 
 Environment variable: `$WEB_EXT_WARNINGS_AS_ERRORS=true`
+
+<section id="web-ext-run"></section>
 
 ### web-ext run
 
@@ -290,6 +296,8 @@ web-ext run --start-url www.mozilla.com --start-url developer.mozilla.org
 {% endhighlight %}
 
 Environment variable: `$WEB_EXT_START_URL`
+
+<section id="web-ext-sign"></section>
 
 ### web-ext sign
 

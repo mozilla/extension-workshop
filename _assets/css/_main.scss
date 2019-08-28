@@ -525,6 +525,7 @@ html {
       &.full-width .site-header,
       &.sidebar .site-header {
         height: 100vh;
+        overflow-y: auto;
       }
 
       .search-input-open {
@@ -773,7 +774,7 @@ $hamburger-hover-transition-timing-function: linear;
     top: rem-calc(40);
     left: 0;
     width: 100%;
-    height: calc(100% - #{rem-calc(40)});
+    min-height: calc(100% - #{rem-calc(40)});
     flex-flow: column nowrap;
 
     .primary > li {
@@ -1343,55 +1344,61 @@ $hamburger-hover-transition-timing-function: linear;
 // ------
 
 #tag-list ol,
-#result-list ol {
-  list-style: none;
-  margin: 0;
-
-  li {
-    padding: rem-calc(30 0);
-
-    &:first-child {
-      border-top: 1px solid $medium-light-gray;
-    }
-
-    &:not(:last-child) {
-      border-bottom: 1px solid $medium-light-gray;
-    }
+#result-list {
+  h2 {
+    word-break: break-word;
   }
 
-  a {
-    &:hover {
-      text-decoration: none;
+  ol {
+    list-style: none;
+    margin: 0;
 
-      h3 {
-        text-decoration: underline;
+    li {
+      padding: rem-calc(30 0);
+
+      &:first-child {
+        border-top: 1px solid $medium-light-gray;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $medium-light-gray;
       }
     }
-  }
 
-  h3 {
-    margin-top: 0;
-  }
+    a {
+      &:hover {
+        text-decoration: none;
 
-  p {
-    margin-bottom: 1em;
-    color: $black;
-
-    &:last-child {
-      margin-bottom: 0;
+        h3 {
+          text-decoration: underline;
+        }
+      }
     }
-  }
 
-  .post-meta {
-    margin-bottom: 1em;
-
-    + h3 {
+    h3 {
       margin-top: 0;
     }
-  }
 
-  small {
-    font-size: rem-calc(12);
+    p {
+      margin-bottom: 1em;
+      color: $black;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .post-meta {
+      margin-bottom: 1em;
+
+      + h3 {
+        margin-top: 0;
+      }
+    }
+
+    small {
+      font-size: rem-calc(12);
+    }
   }
 }
 
@@ -1613,6 +1620,16 @@ a.tile-block-link {
   opacity: 0;
 }
 
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .video-box {
   position: relative;
 
@@ -1656,6 +1673,7 @@ a.tile-block-link {
       color: $white;
 
       &::before {
+        animation: rotating 0.8s linear infinite;
         content: '';
         position: absolute;
         left: 0;
@@ -1707,6 +1725,7 @@ a.tile-block-link {
           color: $white;
 
           &::before {
+            animation: rotating 0.8s linear infinite;
             content: '';
             position: absolute;
             left: 0;
@@ -1793,6 +1812,7 @@ a.tile-block-link {
 
   &.loading {
     &::before {
+      animation: rotating 0.8s linear infinite;
       content: '';
       position: absolute;
       z-index: 2;
