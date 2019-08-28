@@ -89,9 +89,9 @@
                 - title: "See also"
                   id: "see-also"
             - title: "Web-ext Webpack plug-in"
-              url: "/documentation/develop/web-ext-webpack-plug-in/"
+              url: "https://github.com/hiikezoe/web-ext-webpack-plugin/blob/master/README.md"
             - title: "Browser API Polyfill"
-              url: "/documentation/develop/browser-api-polyfill/"
+              url: "https://github.com/mozilla/webextension-polyfill"
             - title: "Extensions and the Add-on ID"
               url: "/documentation/develop/extensions-and-the-add-on-id/"
               subpageitems:
@@ -158,7 +158,7 @@
                 - title: "6. Test, test, and then test again"
                   id: "test-test-and-then-test-again"
             - title: "What’s great content and design?"
-              url: "/documentation/develop/whats-great-content-and-design/"
+              url: "https://www.youtube.com/watch?v=a0_OsLGI0k4"
             - title: "Create an appealing listing"
               url: "/documentation/develop/create-an-appealing-listing/"
               subpageitems:
@@ -221,7 +221,7 @@
         - category: "Port Your Extension"
           pages:
             - title: "Extension compatibility test"
-              url: "/documentation/develop/extension-compatibility-test/"
+              url: "https://www.extensiontest.com/"
             - title: "Porting a Google Chrome Extension"
               url: "/documentation/develop/porting-a-google-chrome-extension/"
             - title: "Porting a legacy Firefox extension"
