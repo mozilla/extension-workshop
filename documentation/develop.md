@@ -37,7 +37,7 @@ Support your development workflow with these straightforward tools and guides.
 
 ### Development tools
 
-All you need to create extensions for Firefox is a [text editor](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Available_text_editors) and [a version of Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Choose_a_Firefox_version_for_web_extension_develop) to support your testing. Mozilla and the Firefox extension developer community have also created a number of [extension development tools](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Development_Tools) that can simplify the coding and testing of your extension.
+All you need to create extensions for Firefox is a [text editor](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Available_text_editors) and [a version of Firefox](/documentation/develop/choosing-a-firefox-version-for-extension-development/) to support your testing. Mozilla and the Firefox extension developer community have also created a number of [extension development tools](/documentation/develop/browser-extension-development-tools/) that can simplify the coding and testing of your extension.
 
 ### Chromium-based browser extensions
 
@@ -110,15 +110,15 @@ Having an exceptional user experience is crucial to attracting, and retaining, u
 
 ### Make a great first impression
 
-Focus on a slick [onboarding flow](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices) that gets users up to speed with your extension quickly.
+Focus on a slick [onboarding flow](documentation/develop/onboard-upboard-offboard-users/) that gets users up to speed with your extension quickly.
 
-If your extension collects user data during onboarding, make sure you follow the [best practices for collecting user data consent](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Prompt_users_for_data_and_privacy_consents). And, it’s important that you [request the right permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions).
+If your extension collects user data during onboarding, make sure you follow the [best practices for collecting user data consent](/documentation/develop/best-practices-for-collecting-user-data-consents/). And, it’s important that you [request the right permissions](/documentation/develop/request-the-right-permissions/).
 
 ### Put your user first
 
-Keep your users engaged and follow the [user experience best practices](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices). And, don’t forget to [build an accessible extension](https://trello.com/c/ez7X6Qy2/129-accessibility-for-extensions), so that everyone can make use of it.
+Keep your users engaged and follow the [user experience best practices](/documentation/develop/user-experience-best-practices/). And, don’t forget to [build an accessible extension](/documentation/develop/build-an-accessible-extension/), so that everyone can make use of it.
 
-Lastly, [building a secure extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Security_best_practices) is fundamental to delivering an excellent user experience.
+Lastly, [building a secure extension](/documentation/develop/build-a-secure-extension/) is fundamental to delivering an excellent user experience.
 
 ### Define your value proposition
 
@@ -168,9 +168,9 @@ Find out best practices for putting your best foot forward with your extension.
 
 ### Understanding how to develop extensions for Android
 
-To offer your extension to Firefox for Android users, you’ll need to consider some [differences between Firefox for the desktop and Android](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Differences_between_desktop_and_Android).
+To offer your extension to Firefox for Android users, you’ll need to consider some [differences between Firefox for the desktop and Android](/documentation/develop/differences-between-desktop-and-android-extensions/).
 
-Get started with everything you need to know about [developing for Firefox for Android](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android).
+Get started with everything you need to know about [developing for Firefox for Android](/documentation/develop/developing-extensions-for-firefox-for-android/).
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -236,7 +236,7 @@ If you develop Android apps, when you want to include a browser experience in yo
 
 The Firefox extension environment is highly compatible with chromium-based extension technology. Your extension might already be capable of running on Firefox, or need only a few changes.
 
-[Test your extension’s compatibility](https://www.extensiontest.com/) and check out our [porting guide](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension) to get started.
+[Test your extension’s compatibility](https://www.extensiontest.com/) and check out our [porting guide](/documentation/develop/developing-extensions-for-firefox-for-android/) to get started.
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -255,7 +255,7 @@ The Firefox extension environment is highly compatible with chromium-based exten
 
 ### Update a legacy Firefox extension
 
-If you have a [legacy Firefox extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on), you can still find out how to get it up and running on the latest version of Firefox. Check out the porting information for the [Add-on SDK](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK) and [XUL/XPCOM](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions) based extensions.
+If you have a [legacy Firefox extension](/documentation/develop/porting-a-legacy-firefox-extension/), you can still find out how to get it up and running on the latest version of Firefox. Check out the porting information for the [Add-on SDK](/documentation/develop/comparison-with-the-add-on-sdk/) and [XUL/XPCOM](/documentation/develop/comparison-with-xul-xpcom-extensions/) based extensions.
 
 {% endcapture %}
 {% include modules/one-column.html
@@ -282,11 +282,11 @@ If you have a [legacy Firefox extension](https://developer.mozilla.org/en-US/doc
 
 ### Make sure your extension is running right
 
-Test and [debug your code](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging) by [temporarily installing](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) it in Firefox.
+Test and [debug your code](/documentation/develop/debugging/) by [temporarily installing](/documentation/develop/temporary-installation-in-firefox/) it in Firefox.
 
-Understanding [extensions and the Add-on ID](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) will help you test more effectively. You will also want to [test persistent and restart features](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features) along with [permission requests](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Test_permission_requests).
+Understanding [extensions and the Add-on ID](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) will help you test more effectively. You will also want to [test persistent and restart features](/documentation/develop/testing-persistent-and-restart-features/) along with [permission requests](documentation/develop/test-permission-requests/).
 
-You can use [web-ext](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext) to automatically install and update your extension while making coding changes.
+You can use [web-ext](/documentation/develop/getting-started-with-web-ext/) to automatically install and update your extension while making coding changes.
 
 {% endcapture %}
 {% include modules/one-column.html
