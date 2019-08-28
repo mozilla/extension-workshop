@@ -106,7 +106,7 @@ When you’re ready to improve your extension or receive suggestions for new fea
 
 ## Manage authors of your extension
 
-Add-ons are often the result of the work of a team of developers, which is why [add-ons on AMO can have multiple authors](https://docs.google.com/document/d/1nw5FMHI4pH3iKHEdLS6GuAUl9oRfFd5P4uC7wEAQaCU/edit#heading=h.w6vo7guwwexf).
+Add-ons are often the result of the work of a team of developers, which is why [add-ons on AMO can have multiple authors](/documentation/publish/self-distribution/).
 
 If someone is using your code without your permission, please follow [these instructions](https://www.mozilla.org/about/legal/report-infringement/) to file a DMCA Notice with Mozilla’s legal team to resolve the situation.
 
