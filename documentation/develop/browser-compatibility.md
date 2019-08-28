@@ -55,7 +55,7 @@ You reference all extensions API functions using a namespace, for example, `brow
 
 There are two API namespaces in use:
 
-- `browser`(the proposed standard) is used in Firefox. For example: `browser.browserAction.setIcon({path: "path/to/icon.png"});``
+- `browser`(the proposed standard) is used in Firefox. For example: `browser.browserAction.setIcon({path: "path/to/icon.png"});`
 - `chrome` is used in Chromium-based browsers. For example: `chrome.browserAction.setIcon({path: "path/to/icon.png"});`
 
 {% endcapture %}
@@ -170,7 +170,7 @@ The differences in the supported [manifest.json keys](https://developer.mozilla.
 - Extension information attributes. For example, at the time of writing, Firefox and Opera include the [developer](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key enabling the addition of details about the developer of the extension, as well as the author, to be recorded.
 - Extension features. For example, at the time of writing, Edge did not support the [commands](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) key that enables shortcut keys to be defined for an extension.
 
-Full details of the differences in key support are provided in the ["Browser compatibility"](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json#Browser_compatibility) section of the [manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page on MDN. Where there are caveats regarding support for a manifest key, there is a drop down below the version number that expands to show details of the caveat. The manifest key reference page also explains the caveat.
+Full details of the differences in key support are provided in the [Browser compatibility](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json#Browser_compatibility) section of the [manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page on MDN. Where there are caveats regarding support for a manifest key, there is a drop down below the version number that expands to show details of the caveat. The manifest key reference page also explains the caveat.
 
 ### Variations due to browser behavior
 
@@ -179,7 +179,7 @@ While a web extension API may be compatible between Firefox and the Chromium-bas
 Cases where the extension behavior may be affected include:
 
 - **URLs in CSS**: Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.
-- **[Web accessible resources](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)**: Firefox always use a random UUID to identify an extension in a browser instance. Extensions for Chromium-based browsers can use the ["key"](https://developer.chrome.com/extensions/manifest/key) property to fix the extension ID on different machines. However, the recommendation practice In Chromium-based browsers is not to use this approach.
+- **[Web accessible resources](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)**: Firefox always use a random UUID to identify an extension in a browser instance. Extensions for Chromium-based browsers can use the [key](https://developer.chrome.com/extensions/manifest/key) property to fix the extension ID on different machines. However, the recommendation practice In Chromium-based browsers is not to use this approach.
 - **Content script requests context**: In Chromium-based browsers, when a request is called (for example, using `fetch())` to relative a URL, such as `/api`, from a content script, it is sent to `https://example.com/api`. Firefox uses absolute URLs.
 - **Native messaging**: there are variations in the command-line arguments, manifest key names, and manifest location between Firefox and the Chromium-based browsers.
 
