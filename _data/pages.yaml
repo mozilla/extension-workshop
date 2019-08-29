@@ -550,8 +550,6 @@
     - title: "Enterprise"
       url: "/documentation/enterprise/"
       subpageitems:
-        - title: "Section Title"
-          id: "introduction"
         - title: "Developing your enterprise extension"
           id: "developing-your-enterprise-extension"
         - title: "Distributing your enterprise extension"
