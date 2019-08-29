@@ -91,7 +91,7 @@ Find out whether there is a browser extensions or Mozilla related group or meet 
 
 Help make the add-on ecosystem a better place by being a contributor, from assisting with documentation to fixing bugs and more. For more information, [visit the Contribute page](https://docs.google.com/document/d/1_fRGPgjNF3jX-xEROosUx0jmu6PwCY4UNC42EOoHfKQ/edit).
 
-You can also propose changes to the API, both for additions or changes, and assistance with API development. A good place to start is to get familiar with [Mozilla’s goals for the API](https://docs.google.com/document/d/10DoLNszOr94pKV6I1KNC7OYHdMn5TqDP7W6rBju1LEs/edit).
+You can also propose changes to the API, both for additions or changes, and assistance with API development. A good place to start is to get familiar with [Mozilla’s goals for the API](/documentation/develop/about-the-webextensions-api/).
 
 {% endcapture %}
 {% include modules/one-column.html
