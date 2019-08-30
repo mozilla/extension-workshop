@@ -548,7 +548,7 @@
           url: "/community/onboard-to-the-webextensions-codebase/"
         - title: "Hacking guide for code contribution"
           url: "/community/hacking-guide-for-code-contribution/"
-        - title: "WebExtesions Experiments"
+        - title: "WebExtensions Experiments"
           url: "/community/webextensions-experiments/"
     - category: "Start Contributing"
       pages:
