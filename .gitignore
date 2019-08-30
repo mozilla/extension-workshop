@@ -9,8 +9,6 @@ rvm-installer.asc
 
 .DS_Store
 **/.DS_Store
-/.DS_Store
 __MACOSX/
 
-yarn.lock
 .vscode/*
