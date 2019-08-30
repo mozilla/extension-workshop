@@ -110,7 +110,7 @@ Having an exceptional user experience is crucial to attracting, and retaining, u
 
 ### Make a great first impression
 
-Focus on a slick [onboarding flow](documentation/develop/onboard-upboard-offboard-users/) that gets users up to speed with your extension quickly.
+Focus on a slick [onboarding flow](/documentation/develop/onboard-upboard-offboard-users/) that gets users up to speed with your extension quickly.
 
 If your extension collects user data during onboarding, make sure you follow the [best practices for collecting user data consent](/documentation/develop/best-practices-for-collecting-user-data-consents/). And, it’s important that you [request the right permissions](/documentation/develop/request-the-right-permissions/).
 
@@ -284,7 +284,7 @@ If you have a [legacy Firefox extension](/documentation/develop/porting-a-legacy
 
 Test and [debug your code](/documentation/develop/debugging/) by [temporarily installing](/documentation/develop/temporary-installation-in-firefox/) it in Firefox.
 
-Understanding [extensions and the Add-on ID](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) will help you test more effectively. You will also want to [test persistent and restart features](/documentation/develop/testing-persistent-and-restart-features/) along with [permission requests](documentation/develop/test-permission-requests/).
+Understanding [extensions and the Add-on ID](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) will help you test more effectively. You will also want to [test persistent and restart features](/documentation/develop/testing-persistent-and-restart-features/) along with [permission requests](/documentation/develop/test-permission-requests/).
 
 You can use [web-ext](/documentation/develop/getting-started-with-web-ext/) to automatically install and update your extension while making coding changes.
 
