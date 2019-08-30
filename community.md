@@ -3,7 +3,7 @@ layout: sidebar
 title: Community
 permalink: /community/
 published: false
-tags: []
+tags: [community, contribute, WebExtensions]
 contributors: [caitmuenster]
 author: caitmuenster
 date: 2019-07-09 09:00:00
@@ -53,7 +53,7 @@ Firefox extension developers are part of a vibrant, global community of creators
 
 There are several ways to stay up-to-date with Firefox add-on technology and connected to the worldwide network of creators.
 
-### Add-ons blog.
+### Add-ons blog
 
 Stay up to date with the latest information about add-on technology on the [Add-ons blog](https://blog.mozilla.org/addons).
 
@@ -89,9 +89,13 @@ Find out whether there is a browser extensions or Mozilla related group or meet 
 
 ## Get involved in the community
 
-Help make the add-on ecosystem a better place by being a contributor, from assisting with documentation to fixing bugs and more. For more information, [visit the Contribute page](https://docs.google.com/document/d/1_fRGPgjNF3jX-xEROosUx0jmu6PwCY4UNC42EOoHfKQ/edit).
+Help make the add-on ecosystem a better place by being a contributor, from assisting with documentation to fixing bugs and more. For more information, [please see current contribution opportunities](https://wiki.mozilla.org/Add-ons/Contribute).
 
-You can also propose changes to the API, both for additions or changes, and assistance with API development. A good place to start is to get familiar with [Mozilla’s goals for the API](/documentation/develop/about-the-webextensions-api/).
+You can also propose changes to the API, both for additions or changes, and assistance with API development. A good place to start is to get familiar with [Mozilla’s vision for the API](https://wiki.mozilla.org/WebExtensions/Vision) and [policies for developing the API](https://wiki.mozilla.org/WebExtensions/policy).
+
+If you are ready to start contributing to the API, you can [onboard to the WebExtensions codebase](https://wiki.mozilla.org/WebExtensions/Contribution_Onramp) and read our [hacking guide](https://wiki.mozilla.org/WebExtensions/Hacking). If you would like to create a new API, either for yourself or for uplift to Firefox, please see [WebExtensions Experiments](https://webextensions-experiments.readthedocs.io/en/latest/).
+
+Please file new bugs for the WebExtensions API on [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=WebExtensions). You can also use Bugzilla to search for [existing bugs](https://mzl.la/2zzJwXu) filed to the WebExtensions product.
 
 {% endcapture %}
 {% include modules/one-column.html
