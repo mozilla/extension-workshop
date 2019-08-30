@@ -39,7 +39,6 @@ Support your development workflow with these straightforward tools and guides.
 
 All you need to create extensions for Firefox is a [text editor](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Available_text_editors) and [a version of Firefox](/documentation/develop/choosing-a-firefox-version-for-extension-development/) to support your testing. Mozilla and the Firefox extension developer community have also created a number of [extension development tools](/documentation/develop/browser-extension-development-tools/) that can simplify the coding and testing of your extension.
 
-
 ### Chromium-based browser extensions
 
 Get familiar with the [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) library if you’re planning on developing for both Firefox and chromium based browsers.
