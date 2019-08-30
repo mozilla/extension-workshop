@@ -548,7 +548,7 @@
           url: "/community/onboard-to-the-webextensions-codebase/"
         - title: "Hacking guide for code contribution"
           url: "/community/hacking-guide-for-code-contribution/"
-        - title: "WebExtensions Experiments"
+        - title: "WebExtes Experiments"
           url: "/community/webextensions-experiments/"
     - category: "Start Contributing"
       pages:
@@ -559,6 +559,6 @@
         - title: "Needs documentation"
           url: "https://mzl.la/33lVHov"
         - title: "Triaged"
-          url: "https://www.firefox.com"
+          url: "https://mzl.la/33OoJ0b"
         - title: "Untriaged WebExtension API bugs"
-          url: "https://www.firefox.com"
+          url: "https://mzl.la/2TLQ4vy"
