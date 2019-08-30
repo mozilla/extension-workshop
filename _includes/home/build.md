@@ -130,7 +130,7 @@ Mozilla takes the safety and privacy of its users very seriously. Be sure to rev
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-6" markdown="1">
 
-<img src="{% asset "Learn-About-Security-Best-Practices.svg" @path @optim %}" class="image-block-first" alt="Learn about security best practices" title="Learn about security best practices" src="">
+<img src="{% asset "Learn-About-Security-Best-Practices.svg" @path @optim %}" class="image-block-first" alt="Learn about security best practices" title="Learn about security best practices" >
 [Learn about security best practices](/documentation/develop/build-a-secure-extension.md)
 
 </div>
