@@ -238,7 +238,6 @@ The Firefox extension environment is highly compatible with chromium-based exten
 
 [Test your extension’s compatibility](https://www.extensiontest.com/) and check out our [porting guide](/documentation/develop/porting-a-google-chrome-extension/) to get started.
 
-
 {% endcapture %}
 {% include modules/two-column.html
 	id=""
