@@ -195,7 +195,7 @@
         - category: "Mobile"
           pages:
             - title: "GeckoView Extensions (Android library)"
-              url: "/documentation/develop/geckoview-extensions-android-library/"
+              url: "https://github.com/mozilla/geckoview"
             - title: "Differences between desktop and Android extensions"
               url: "/documentation/develop/differences-between-desktop-and-android-extensions/"
               subpageitems:
