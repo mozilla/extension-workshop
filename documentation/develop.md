@@ -236,7 +236,7 @@ If you develop Android apps, when you want to include a browser experience in yo
 
 The Firefox extension environment is highly compatible with chromium-based extension technology. Your extension might already be capable of running on Firefox, or need only a few changes.
 
-[Test your extension’s compatibility](https://www.extensiontest.com/) and check out our [porting guide](/documentation/develop/developing-extensions-for-firefox-for-android/) to get started.
+[Test your extension’s compatibility](https://www.extensiontest.com/) and check out our [porting guide](/documentation/develop/porting-a-google-chrome-extension/) to get started.
 
 {% endcapture %}
 {% include modules/two-column.html
