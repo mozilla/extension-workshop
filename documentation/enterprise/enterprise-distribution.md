@@ -190,6 +190,7 @@ If you install using the Windows Registry, Firefox will not automatically update
 
 There are two settings that affect the use of alternative installation options. The `extensions.autoDisableScopes` preference controls whether add-ons are installed automatically or after user confirmation. The `extensions.enabledScopes` preference is used to disable installation from most locations. In addition to these options, the method of setting these preferences programmatically is discussed.
 
+<section id="controlling-automatic-installations"></section>
 ### Controlling automatic installation
 
 The standard downloads of Firefox are configured so that sideloads using the standard extensions folder or the Windows Registry, don’t install automatically. Depending on the version of Firefox:

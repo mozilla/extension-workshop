@@ -49,40 +49,6 @@ We’re constantly improving Firefox and the add-on experience. Use [this list o
 
 {% capture content %}
 
-## Promote your extension
-
-Keep your user base growing regularly reviewing your listing to [make sure it’s as appealing](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Listing) as it can be.
-
-<!-- Video Popup Thumbnail -->
-
-{% include modules/video-popup.html
-	title="Tips for great content and design for your extension"
-	youtube_id="a0_OsLGI0k4"
-	image="documentation/develop/extension-workshop-content-and-design.png"
-	alt="Tips for great content and design for your extension"
-%}
-
-<!-- END: Video Popup Thumbnail -->
-
-However you choose to distribute your extension, you’ll want to promote your extension or theme.
-
-Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.org/addons/2019/04/08/recommended-extensions-program-coming-soon/) that meet a high standard of security, utility, and user experience. If you’d like your extension to be included in the program, submit a nomination.
-
-[Making money from browser extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Make_money_from_browser_extensions) is also something you might want to consider as your user base grows.
-
-{% endcapture %}
-{% include modules/one-column.html
-	id="promote-your-extension"
-	content=content
-	aside=""
-%}
-
-<!-- END: Single Column Body Module -->
-
-<!-- Single Column Body Module -->
-
-{% capture content %}
-
 ## Publish extension updates
 
 When you’re ready to improve your extension or receive suggestions for new features from your user community, you might decide to publish an update.
@@ -106,13 +72,47 @@ When you’re ready to improve your extension or receive suggestions for new fea
 
 ## Manage authors of your extension
 
-Add-ons are often the result of the work of a team of developers, which is why [add-ons on AMO can have multiple authors](https://docs.google.com/document/d/1nw5FMHI4pH3iKHEdLS6GuAUl9oRfFd5P4uC7wEAQaCU/edit#heading=h.w6vo7guwwexf).
+Add-ons are often the result of the work of a team of developers, which is why [add-ons on AMO can have multiple authors](/documentation/publish/self-distribution/).
 
 If someone is using your code without your permission, please follow [these instructions](https://www.mozilla.org/about/legal/report-infringement/) to file a DMCA Notice with Mozilla’s legal team to resolve the situation.
 
 {% endcapture %}
 {% include modules/one-column.html
 	id="manage-authors-of-your-extension"
+	content=content
+	aside=""
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
+## Promote your extension
+
+Keep your user base growing regularly reviewing your listing to [make sure it’s as appealing](/documentation/develop/create-an-appealing-listing/) as it can be.
+
+<!-- Video Popup Thumbnail -->
+
+{% include modules/video-popup.html
+	title="Tips for great content and design for your extension"
+	youtube_id="a0_OsLGI0k4"
+	image="documentation/develop/extension-workshop-content-and-design.png"
+	alt="Tips for great content and design for your extension"
+%}
+
+<!-- END: Video Popup Thumbnail -->
+
+However you choose to distribute your extension, you’ll want to promote your extension or theme.
+
+Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.org/addons/2019/04/08/recommended-extensions-program-coming-soon/) that meet a high standard of security, utility, and user experience. If you’d like your extension to be included in the program, submit a nomination.
+
+[Making money from browser extensions](/documentation/publish/make-money-from-browser-extensions/) is also something you might want to consider as your user base grows.
+
+{% endcapture %}
+{% include modules/one-column.html
+	id="promote-your-extension"
 	content=content
 	aside=""
 %}

@@ -18,8 +18,8 @@
     "velocity-ui-pack": "1.2.2"
   },
   "devDependencies": {
-    "eslint": "6.2.0",
-    "eslint-config-prettier": "6.0.0",
+    "eslint": "6.2.2",
+    "eslint-config-prettier": "6.1.0",
     "eslint-plugin-prettier": "3.1.0",
     "prettier": "1.18.2",
     "pretty-quick": "1.11.1",
@@ -37,7 +37,7 @@
     "test": "npm run prettier-ci && npm run lint && npm run stylelint",
     "clean": "rimraf './.jekyll-cache/' && jekyll clean",
     "build": "JEKYLL_ENV=production SVGO_BIN='node_modules/svgo/bin/svgo' jekyll build",
-    "start": "jekyll serve --unpublished --config _config.yml,_config_local.yml",
+    "start": "jekyll serve --unpublished --incremental --config _config.yml,_config_local.yml",
     "start-prodlike": "SVGO_BIN='node_modules/svgo/bin/svgo' jekyll serve"
   }
 }
