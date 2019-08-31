@@ -551,7 +551,7 @@
               url: "/documentation/manage/updating-your-extension/"
               subpageitems:
                 - title: "Enabling updates to your extension"
-                  id: "enable-updates"
+                  id: "enable-update"
                 - title: "Manifest structure"
                   id: "manifest-structure"
                 - title: "Testing automatic updating"
