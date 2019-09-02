@@ -6,3 +6,8 @@ node_modules/
 rvm-installer
 rvm-installer.asc
 *.log
+
+.DS_Store
+__MACOSX/
+
+.vscode/*
