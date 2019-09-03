@@ -545,8 +545,17 @@
                   id: "reasons-for-withdrawing"
                 - title: "Steps to retiring an extension"
                   id: "steps-to-retiring-an-extension"
-                - title: Suggested retirement timetable
+                - title: "Suggested retirement timetable"
                   id: "suggested-retirement-timetable"
+            - title: "Updating your extension"
+              url: "/documentation/manage/updating-your-extension/"
+              subpageitems:
+                - title: "Enabling updates to your extension"
+                  id: "enable-update"
+                - title: "Manifest structure"
+                  id: "manifest-structure"
+                - title: "Testing automatic updating"
+                  id: "testing-automatic-updating"
     - title: "Enterprise"
       url: "/documentation/enterprise/"
       subpageitems:
