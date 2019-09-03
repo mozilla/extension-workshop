@@ -131,13 +131,13 @@ Mozilla takes the safety and privacy of its users very seriously. Be sure to rev
 <div class="cell small-12 medium-6" markdown="1">
 
 <img src="{% asset "Learn-About-Security-Best-Practices.svg" @path @optim %}" class="image-block-first" alt="Learn about security best practices" title="Learn about security best practices">
-[Learn about security best practices](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
+[Learn about security best practices](/documentation/develop/build-a-secure-extension.md)
 
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
 <img src="{% asset "Learn-About-Our-Policies.svg" @path @optim %}" class="image-block-first" alt="Learn about our policies" title="Learn about our policies">
-[Learn about our policies](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
+[Learn about our policies](/documentation/publish/add-on-policies.md)
 
 </div>
 </div>
