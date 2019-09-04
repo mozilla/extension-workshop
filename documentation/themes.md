@@ -15,7 +15,7 @@ date: 2019-07-09 09:00:00
 
 # Enable creative expression with themes
 
- You can use themes to customize how your browser looks by adding images and adjusting the color of various components.
+You can use themes to customize how your browser looks by adding images and adjusting the color of various components.
 
 {% endcapture %}
 {% include modules/overview-page-hero.html
