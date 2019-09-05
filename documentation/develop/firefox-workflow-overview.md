@@ -59,7 +59,7 @@ date: 2019-05-20 03:25:40
         <td><a href="/documentation/develop/getting-started-with-web-ext/">Install web-ext</a></td>
         <td><a href="/documentation/develop/testing-persistent-and-restart-features/">Test persistent and restart features</a></td>
         <td><a href="/documentation/publish/submitting-an-add-on">Submit your extension</a></td>
-        <td>Nominate your extension to be recommended</td>
+        <td><a href="https://blog.mozilla.org/addons/2019/04/08/recommended-extensions-program-coming-soon/">Nominate your extension to be recommended</a></td>
         <td></td>
     </tr>
     <tr>
