@@ -77,7 +77,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <!-- END: Tile -->
 
 <!-- Tile -->
-<a href="/documentation/develop/temporary-installation-in-firefox/" class="cell auto tile tile-block-link">
+<a href="/documentation/develop/debugging/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-test.svg" @path @optim %} "Community Forums")
