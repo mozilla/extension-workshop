@@ -4,7 +4,7 @@ title: Using the AMO theme generator
 permalink: /documentation/themes/using-the-amo-theme-generator/
 published: false
 topic: Themes
-tags: [add-on, Add-ons, AMO, Firefox, Guide, Tutorial]
+tags: [add-on, Add-ons, AMO, Firefox, Guide, Tutorial, themes]
 contributors: [irenesmith, andrewtruongmoz, caitmuenster, shiy23]
 last_updated_by: irenesmith
 date: 2019-02-28 12:39:01

@@ -594,14 +594,11 @@
                   id: "bundling-add-ons-with-custom-Firefox"
     - title: "Themes"
       url: "/documentation/themes/"
-      subpageitems:
-        - title: "What themes are"
-          id: "what-themes-are"
-        - title: "Creating themes"
-          id: "creating-themes"
       categories:
         - category: "Creating themes"
           pages:
+            - title: "Theme concepts"
+              url: "https://developer.mozilla.org/docs/Mozilla/Add-ons/Themes/Theme_concepts"
             - title: "Using the AMO theme generator"
               url: "/documentation/themes/using-the-amo-theme-generator/"
               subpageitems:
