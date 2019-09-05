@@ -43,7 +43,7 @@ date: 2019-05-20 03:25:40
     </tr>
     <tr>
         <td><a href="/documentation/develop/choosing-a-firefox-version-for-extension-development">Choose a Firefox version for web extension development</a></td>
-        <td><a href="/documentation/develop/your-first-extension/">Code your extension</a></td>
+        <td>Code your extension</td>
         <td> Package your extension with <a href="/documentation/develop/getting-started-with-web-ext#packaging-your-extension">web-ext build</a></td>
         <td> Responded to Mozilla extension review</td>
         <td><a href="/documentation/manage/retiring-your-extension">Retire your extension</a></td>
@@ -52,7 +52,7 @@ date: 2019-05-20 03:25:40
         <td>Choose your IDE or code editor</td>
         <td>Run your extension with <a href="/documentation/develop/getting-started-with-web-ext#testing-out-an-extension">web-ext run</a> or <a href="/documentation/develop/temporary-installation-in-firefox/">about:debugging</a></td>
         <td>Create an <a href="https://addons.mozilla.org">addons.mozilla.org</a>account</td>
-        <td><a href="/documentation/publish/promoting-your-extension/"</a>Promote your extension</td>
+      <td><a href="/documentation/publish/promoting-your-extension/"Promote your extension</a></td>
         <td></td>
     </tr>
     <tr>
