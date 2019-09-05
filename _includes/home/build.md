@@ -155,9 +155,9 @@ Mozilla takes the safety and privacy of its users very seriously. Be sure to rev
 
 Firefox is at the forefront of cross-browser compatibility. Firefox extensions are built using the WebExtensions API, so your creation will be accessible to users no matter what browser they use.
 
-[Learn about browser differences](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
+[Learn about browser differences](/documentation/develop/browser-compatibility/)
 
-[Port a Google Chrome Extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)
+[Port a Google Chrome Extension](/documentation/develop/porting-a-google-chrome-extension/)
 
 </div>
 </div>
