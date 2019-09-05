@@ -77,7 +77,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <!-- END: Tile -->
 
 <!-- Tile -->
-<a href="/documentation/develop/temporary-installation-in-firefox/" class="cell auto tile tile-block-link">
+<a href="/documentation/develop/debugging/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
 ![Community Forums]({% asset "icons/quick-link-test.svg" @path @optim %} "Community Forums")
@@ -155,9 +155,9 @@ Mozilla takes the safety and privacy of its users very seriously. Be sure to rev
 
 Firefox is at the forefront of cross-browser compatibility. Firefox extensions are built using the WebExtensions API, so your creation will be accessible to users no matter what browser they use.
 
-[Learn about browser differences](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
+[Learn about browser differences](/documentation/develop/browser-compatibility/)
 
-[Port a Google Chrome Extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)
+[Port a Google Chrome Extension](/documentation/develop/porting-a-google-chrome-extension/)
 
 </div>
 </div>
