@@ -73,6 +73,7 @@ Re-build the extension anytime you edit and save a source file. This allows you 
 
 Environment variable: `$WEB_EXT_AS_NEEDED=true`
 
+<section id="overwrite-dest"></section>
 #### --overwrite-dest, -o
 
 Overwrite destination package file if it exists. Without this option, web-ext will exit in error if the destination file already exists.
@@ -81,7 +82,7 @@ Environment variable: `$WEB_EXT_OVERWRITE_DEST=true`
 
 ### web-ext docs
 
-Opens the [web-ext documentation](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext) in the user's default browser.
+Opens the [web-ext documentation](/documentation/develop/getting-started-with-web-ext/) in the user's default browser.
 
 <section id="web-ext-lint"></section>
 
@@ -139,7 +140,7 @@ Environment variable: `$WEB_EXT_ADB_BIN`
 
 #### --adb-device, --android-device
 
-The ID of your target Android device. If you do not specify this option, `web-ext` will list the IDs of each device connected. If you don't see a list of connected devices, make sure [yours is set up for development](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android#Set_up_your_computer_and_Android_emulator_or_device).
+The ID of your target Android device. If you do not specify this option, `web-ext` will list the IDs of each device connected. If you don't see a list of connected devices, make sure [yours is set up for development](/documentation/develop/developing-extensions-for-firefox-for-android/#set-up-your-computer-and-android-emulator-or-device).
 
 Example:
 
@@ -173,9 +174,10 @@ Environment variable: `$WEB_EXT_BROWSER_CONSOLE=true`
 
 Note: The browser console may not show all debugging output from content-scripts. Use the web console when debugging content-scripts.
 
+<section id="--firefox"></section>
 #### --firefox, -f
 
-Specify a particular version of [Firefox Desktop](https://www.mozilla.org/en-US/firefox/) to run the extension in. The value is an absolute path to the Firefox executable or&nbsp;an alias string. If this is not specified, it will attempt to run the extension inside the system's default installation of Firefox.
+Specify a particular version of [Firefox Desktop](https://www.mozilla.org/firefox/) to run the extension in. The value is an absolute path to the Firefox executable or&nbsp;an alias string. If this is not specified, it will attempt to run the extension inside the system's default installation of Firefox.
 
 Here is an example specifying a full path to a Firefox executable on Windows:
 
@@ -199,12 +201,12 @@ Here are all available aliases and the executables they map to:
 
 <div class="table-wrapper table-scroll" markdown="1">
 
-| Alias                     | Firefox executable                                                                       |
-| ------------------------- | ---------------------------------------------------------------------------------------- |
-| `firefox`                 | The [release](https://www.mozilla.org/en-US/firefox/new/) build of Firefox               |
-| `beta`                    | The [beta](https://www.mozilla.org/en-US/firefox/channel/desktop/) build of Firefox      |
-| `nightly`                 | The [nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) build of Firefox   |
-| `firefoxdeveloperedition` | The [developer](https://www.mozilla.org/en-US/firefox/channel/desktop/) build of Firefox |
+| Alias                     | Firefox executable                                                                 |
+| ------------------------- | ---------------------------------------------------------------------------------- |
+| `firefox`                 | The [release](https://www.mozilla.org/firefox/new/) build of Firefox               |
+| `beta`                    | The [beta](https://www.mozilla.org/firefox/channel/desktop/) build of Firefox      |
+| `nightly`                 | The [nightly](https://www.mozilla.org/firefox/channel/desktop/) build of Firefox   |
+| `firefoxdeveloperedition` | The [developer](https://www.mozilla.org/firefox/channel/desktop/) build of Firefox |
 
 </div>
 
@@ -212,7 +214,7 @@ Environment variable: `$WEB_EXT_FIREFOX`
 
 #### --firefox-apk
 
-The exact [APK](https://en.wikipedia.org/wiki/Android_application_package) name for [Firefox](https://www.mozilla.org/en-US/firefox/mobile/) on your Android device. Without specifying this option, `web-ext` will automatically select it for you. If more than one Firefox APK is installed, `web-ext` will show a list of values to choose from.
+The exact [APK](https://en.wikipedia.org/wiki/Android_application_package) name for [Firefox](https://www.mozilla.org/firefox/mobile/) on your Android device. Without specifying this option, `web-ext` will automatically select it for you. If more than one Firefox APK is installed, `web-ext` will show a list of values to choose from.
 
 Example:
 
@@ -270,10 +272,10 @@ Here are the supported targets:
 
 <div class="table-wrapper table-scroll" markdown="1">
 
-| Target            | Application                                                                                                                               |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `firefox-desktop` | The extension will run in [Firefox Desktop](https://www.mozilla.org/en-US/firefox/).                                                      |
-| `firefox-android` | The extension will run in [Firefox for Android](https://www.mozilla.org/en-US/firefox/mobile/). You must also specify `--android-device`. |
+| Target            | Application                                                                                                                         |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `firefox-desktop` | The extension will run in [Firefox Desktop](https://www.mozilla.org/firefox/).                                                      |
+| `firefox-android` | The extension will run in [Firefox for Android](https://www.mozilla.org/firefox/mobile/). You must also specify `--android-device`. |
 
 </div>
 
@@ -301,9 +303,9 @@ Environment variable: `$WEB_EXT_START_URL`
 
 ### web-ext sign
 
-This command uses the [addons.mozilla.org API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) to sign your extension. If successful, it will download the signed `.xpi` file, which you can use to [self-host your extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on#Self-distribution).
+This command uses the [addons.mozilla.org API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) to sign your extension. If successful, it will download the signed `.xpi` file, which you can use to [self-host your extension](/documentation/publish/self-distribution/).
 
-You need to create [API access credentials](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#access-credentials) to run this command. [Obtain your personal access credentials here](https://addons.mozilla.org/en-US/developers/addon/api/key/).
+You need to create [API access credentials](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#access-credentials) to run this command. [Obtain your personal access credentials here](https://addons.mozilla.org/developers/addon/api/key/).
 
 #### --api-key
 
@@ -323,12 +325,14 @@ The signing API URL prefix. This should always be a string. If not specified, th
 
 Environment variable: `$WEB_EXT_API_URL_PREFIX`
 
+<section id="api-proxy"></section>
 #### --api-proxy
 
-A proxy host to use for all API connections. Example: `https://yourproxy:6000.`Read more about [how proxy requests work](https://github.com/request/request#proxies). There is a separate section about [signing in a restricted environment](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext#Signing_in_a_restricted_environment) if the proxy approach doesn't work for you.
+A proxy host to use for all API connections. Example: `https://yourproxy:6000.`Read more about [how proxy requests work](https://github.com/request/request#proxies). There is a separate section about [signing in a restricted environment](/documentation/develop/getting-started-with-web-ext/#restricted-environment) if the proxy approach doesn't work for you.
 
 Environment variable: `$WEB_EXT_API_PROXY`
 
+<section id="channel"></section>
 #### --channel
 
 This specifies the `channel` in which the extension is signed. It defaults to `unlisted` or the `channel` of your extension's latest version. The values for `channel` are:
@@ -342,11 +346,11 @@ This specifies the `channel` in which the extension is signed. It defaults to `u
 
 </div>
 
-One example of using the `--channel` option is to [create a beta version](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext#Signing_a_test_version_of_a_listed_extension) for a `listed` extension (that is, one you have already [submitted to addons.mozilla.org](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on#Listing_on_AMO)).
+One example of using the `--channel` option is to [create a beta version](/documentation/develop/getting-started-with-web-ext/#signing-test-version-listed) for a `listed` extension (that is, one you have already [submitted to addons.mozilla.org](/documentation/publish/submitting-an-add-on/)).
 
 <p class="note alert" markdown="1">Setting `--channel=listed` for a new extension is not yet supported. See [https://github.com/mozilla/web-ext/issues/804](https://github.com/mozilla/web-ext/issues/804)</p>
 
-<p class="note alert" markdown="1">Setting `--channel=listed` for a new version of a listed extension is not well supported. It will upload your new version to [addons.mozilla.org](https://addons.mozilla.org) as if you'd [submitted it manually](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.</p>
+<p class="note alert" markdown="1">Setting `--channel=listed` for a new version of a listed extension is not well supported. It will upload your new version to [addons.mozilla.org](https://addons.mozilla.org) as if you'd [submitted it manually](/documentation/publish/submitting-an-add-on/). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.</p>
 
 See [documentation on the signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html#uploading-a-version) for more information.
 
@@ -390,16 +394,17 @@ Environment variable: `$WEB_EXT_ARTIFACTS_DIR`
 
 ### --config, -c
 
-Load a config file to set option value defaults. See an example of [what config files look like and how they work](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext#Setting_option_defaults_in_a_configuration_file).
+Load a config file to set option value defaults. See an example of [what config files look like and how they work](/documentation/develop/getting-started-with-web-ext/#setting-option-defaults-in-a-configuration-file).
 
 Environment variable: `$WEB_EXT_CONFIG`
 
 ### --config-discovery=false, --no-config-discovery
 
-Disable [automatic config file discovery](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext#Automatic_discovery_of_configuration_files).
+Disable [automatic config file discovery](/documentation/develop/getting-started-with-web-ext/#automatic-discovery-of-configuration-files).
 
 Environment variable: `$WEB_EXT_CONFIG_DISCOVERY=false` or `$WEB_EXT_NO_CONFIG_DISCOVERY`
 
+<section id="ignore-files"></section>
 ### --ignore-files, -i
 
 A list of [glob patterns](https://github.com/isaacs/node-glob#glob-primer) to define which files should be ignored by `build`, `run`, `lint` and other commands. If you specify relative paths, they will be relative to your `--source-dir`.
@@ -448,6 +453,7 @@ Specifies the directory of the extension's source code, e.g. when building or ru
 
 Environment variable: `$WEB_EXT_SOURCE_DIR`
 
+<section id="verbose"></section>
 ### --verbose, -v
 
 Shows verbose output when commands are run.
@@ -525,7 +531,7 @@ WEB_EXT_VERBOSE=true
 ## See also
 
 - [web-ext repo](https://github.com/mozilla/web-ext)
-- [Getting started with web-ext](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)
+- [Getting started with web-ext](/documentation/develop/getting-started-with-web-ext/)
 
 </div>
 </article>
