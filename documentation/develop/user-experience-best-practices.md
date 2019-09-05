@@ -34,7 +34,7 @@ If you are new to the subject of making software usable, a good place to start i
 
 Here we lay out the six steps to creating specific Firefox and extension UX features so that you can build an extension that entices, informs, delights, and retains your users.
 
-In addition to the steps described here, your extension should follow [Add-on Policies](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews), which include being transparent with users about user security, privacy and control.
+In addition to the steps described here, your extension should follow [Add-on Policies](/documentation/publish/add-on-policies/), which include being transparent with users about user security, privacy and control.
 
 {% endcapture %}
 {% include modules/page-hero.html
@@ -223,7 +223,7 @@ Following Photon will ensure that your extension integrates with the Firefox exp
 
 The first few minutes after someone installs your extension can be critical to its success. Your new user needs to know where to start and how to use the features of your browser extension.
 
-Provide an onboarding page that gives users the essential information they need to get started. Keep the information brief and to the point, and provide simple configuration options if applicable. For more information on creating an onboarding page, see [Best practices for onboarding, upboarding, and offboarding users](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices).
+Provide an onboarding page that gives users the essential information they need to get started. Keep the information brief and to the point, and provide simple configuration options if applicable. For more information on creating an onboarding page, see [Best practices for onboarding, upboarding, and offboarding users](/documentation/develop/onboard-upboard-offboard-users/).
 
 In case the user skips the onboarding page, ensure that your extension is ready to be used immediately after installation. It should be optimized for its main use case, and work as expected for most users without the need for customization.
 
@@ -248,12 +248,12 @@ Testing is a vital part of creating an outstanding UX for your extension. There 
 
 Testing tips:
 
-- In AMO you have the option to [identify your extension as "experimental"](https://developer.mozilla.org/en-US/Add-ons/Distribution/Submitting_an_add-on#Listing_on_AMO) or publish a [beta or other non-final release](https://developer.mozilla.org/en-US/Add-ons/Distribution#Beta_versions).
+- In AMO you have the option to [identify your extension as "experimental"](/documentation/publish/submitting-an-add-on/#listing-on-amo) or publish a [beta or other non-final release](/documentation/publish/signing-and-distribution-overview/).
   - If you flag your extension as experimental it is listed in AMO, but with a lower profile. When the extension is ready for a wider audience, you can turn off the experimental flag in AMO.
   - If you have a published extension, you can use the Development channel to offer an alpha or beta version for testing. You will need to direct your testers to the Development Channel of your extension’s listing or let your testers know the link to use to install your extension.  
     ![The development channel section of an extension's listing page, offering access to alpha and beta versions for testing.]({% asset "documentation/develop/extensions-development-channel.png" @path @optim %})  
     When you are happy with your update, you can publish it as the new release version of your extension.
-- If you want to distribute your extension to users outside AMO, you can find the instructions for doing so, and the installation instructions you need to provide users, in the article on [Sideloading add-ons](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Sideloading_add-ons). Remember that, unlike distribution through AMO, you will need to send users any updated versions of your extension as you make improvements.
+- If you want to distribute your extension to users outside AMO, you can find the instructions for doing so, and the installation instructions you need to provide users, in the article on [Sideloading add-ons](/documentation/publish/distribute-sideloading/). Remember that, unlike distribution through AMO, you will need to send users any updated versions of your extension as you make improvements.
 - Use the [Responsive Design Mode](https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode) to test your extension for its behavior on other screen sizes and device types.
 
 **Creating a great extension is an iterative process. While we’ve laid out the six steps here, you’ll likely revisit these as you learn what works and what doesn’t through user feedback, testing, and time.**
