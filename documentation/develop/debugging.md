@@ -384,7 +384,7 @@ You can [review and modify the custom development tools page HTML and CSS in **I
 
 ## Debug permission requests
 
-For information on debugging permission requests, see [Test permission requests](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Test_permission_requests).
+For information on debugging permission requests, see [Test permission requests](/documentation/develop/test-permission-requests/).
 
 {% endcapture %}
 {% include modules/one-column.html
@@ -403,7 +403,7 @@ For information on debugging permission requests, see [Test permission requests]
 
 If your extension could be affected by the browser restarting, such as when a session is restored, you may want to test to ensure your code works as expected in those conditions.
 
-For more details, see [Testing persistent and restart features](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features).
+For more details, see [Testing persistent and restart features](/documentation/develop/testing-persistent-and-restart-features/).
 
 {% endcapture %}
 {% include modules/one-column.html
