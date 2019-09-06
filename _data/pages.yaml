@@ -534,8 +534,8 @@
       categories:
         - category: "Resources"
           pages:
-          - title: "Updating your extension"
-            url: "/documentation/manage/updating-your-extension/"
+            - title: "Updating your extension"
+              url: "/documentation/manage/updating-your-extension/"
               subpageitems:
                 - title: "Enabling updates to your extension"
                   id: "enable-update"
@@ -640,3 +640,4 @@
           url: "https://webextensions-experiments.readthedocs.io/"
         - title: "Find or create a bug"
           url: "https://bugzilla.mozilla.org"
+          
