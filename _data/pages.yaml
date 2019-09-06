@@ -534,10 +534,19 @@
       categories:
         - category: "Resources"
           pages:
-            - title: "Resources for publishers"
-              url: "/documentation/manage/resources-for-publishers/"
+          - title: "Updating your extension"
+              url: "/documentation/manage/updating-your-extension/"
+              subpageitems:
+                - title: "Enabling updates to your extension"
+                  id: "enable-update"
+                - title: "Manifest structure"
+                  id: "manifest-structure"
+                - title: "Testing automatic updating"
+                  id: "testing-automatic-updating"
             - title: "Best practices for updating your extension"
               url: "/documentation/manage/best-practices-for-updating/"
+            - title: "Resources for publishers"
+              url: "/documentation/manage/resources-for-publishers/"
             - title: "Retiring your extension"
               url: "/documentation/manage/retiring-your-extension/"
               subpageitems:
@@ -547,15 +556,6 @@
                   id: "steps-to-retiring-an-extension"
                 - title: "Suggested retirement timetable"
                   id: "suggested-retirement-timetable"
-            - title: "Updating your extension"
-              url: "/documentation/manage/updating-your-extension/"
-              subpageitems:
-                - title: "Enabling updates to your extension"
-                  id: "enable-update"
-                - title: "Manifest structure"
-                  id: "manifest-structure"
-                - title: "Testing automatic updating"
-                  id: "testing-automatic-updating"
     - title: "Enterprise"
       url: "/documentation/enterprise/"
       subpageitems:
