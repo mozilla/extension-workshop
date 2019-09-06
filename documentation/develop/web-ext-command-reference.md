@@ -65,7 +65,7 @@ web-ext has the following commands; options specific to these commands are inclu
 
 ### web-ext build
 
-Packages an extension into a `.zip` file, ignoring files that are commonly unwanted in packages, such as `.git` and other artifacts. The name of the `.zip` file is taken from the [name](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) field in the extension [manifest](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+Packages an extension into a `.zip` file, ignoring files that are commonly unwanted in packages, such as `.git` and other artifacts. The name of the `.zip` file is taken from the [name](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) field in the extension [manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 #### --as-needed
 
@@ -88,7 +88,7 @@ Opens the [web-ext documentation](/documentation/develop/getting-started-with-we
 
 ### web-ext lint
 
-Reports errors in the extension [manifest](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json) or other source code files. When [strict_min_version](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is set in your extension’s manifest file, lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. See the [addons-linter](https://github.com/mozilla/addons-linter) project for more information about what kind of rules are used to validate extension source.
+Reports errors in the extension [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) or other source code files. When [strict_min_version](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is set in your extension’s manifest file, lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. See the [addons-linter](https://github.com/mozilla/addons-linter) project for more information about what kind of rules are used to validate extension source.
 
 #### --output, -o
 
@@ -164,7 +164,7 @@ Environment variable: `$WEB_EXT_ADB_PORT`
 
 #### --browser-console, -bc
 
-This opens a [Browser Console](https://developer.mozilla.org/en-US/docs/Tools/Browser_Console) on startup,&nbsp;so you can see log messages for your extension. Example:
+This opens a [Browser Console](https://developer.mozilla.org/docs/Tools/Browser_Console) on startup,&nbsp;so you can see log messages for your extension. Example:
 
 {% highlight javascript %}
 web-ext run --browser-console

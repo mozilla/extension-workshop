@@ -183,7 +183,7 @@ When using `web-ext run` to test an extension on Firefox for Android, you'll not
 You can connect to this Android device on TCP port 51499
 {% endhighlight %}
 
-This is a remote debugger port that you can [connect to with Firefox's developer tools](https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android#Connecting). In this case, you'd connect to host `localhost` on port `51499`.
+This is a remote debugger port that you can [connect to with Firefox's developer tools](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Firefox_for_Android#Connecting). In this case, you'd connect to host `localhost` on port `51499`.
 
 See [this guide](/documentation/develop/developing-extensions-for-firefox-for-android/#debug-your-extension) for more information about debugging an extension on Firefox for Android.
 
@@ -225,7 +225,7 @@ web-ext build
 
 This outputs a full path to the generated `.zip` file that can be loaded into a browser.
 
-<p class="note alert" markdown="1">The generated `.zip` file doesn't work on Firefox without signing or adding [`applications.gecko.id`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/applications) key into [`manifest.json`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json). For more information, please refer [WebExtensions and the Add-on ID](/documentation/develop/extensions-and-the-add-on-id/) page.</p>
+<p class="note alert" markdown="1">The generated `.zip` file doesn't work on Firefox without signing or adding [`applications.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/applications) key into [`manifest.json`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json). For more information, please refer [WebExtensions and the Add-on ID](/documentation/develop/extensions-and-the-add-on-id/) page.</p>
 
 `web-ext build` is designed to ignore files that are commonly not wanted in packages, such as `.git`, `node_modules`, and other artifacts.
 
@@ -250,7 +250,7 @@ See the [sign reference guide](/documentation/develop/web-ext-command-reference/
 
 ### Signing extensions without an explicit ID
 
-`web-ext` supports signing extensions that do not declare the [applications.gecko.id](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/applications) property in their manifest. The first time you sign an extension without an explicit ID, [addons.mozilla.org](https://addons.mozilla.org/) will generate an ID and `web-ext` will save it to `.web-extension-id` in the working directory. You should save the ID file so that you can sign future versions of the same extension. If you lose the ID file, you will have to add back the `applications.gecko.id` property or use the `--id` option when signing, for example:
+`web-ext` supports signing extensions that do not declare the [applications.gecko.id](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/applications) property in their manifest. The first time you sign an extension without an explicit ID, [addons.mozilla.org](https://addons.mozilla.org/) will generate an ID and `web-ext` will save it to `.web-extension-id` in the working directory. You should save the ID file so that you can sign future versions of the same extension. If you lose the ID file, you will have to add back the `applications.gecko.id` property or use the `--id` option when signing, for example:
 
 {% highlight javascript %}
 web-ext sign --api-key=... --api-secret=... --id="{c23c69a7-f889-447c-9d6b-7694be8035bc}"
@@ -277,14 +277,14 @@ The following domains are used for signing and downloading files:
 
 If you've [listed](/documentation/publish/submitting-an-add-on/) an extension on [addons.mozilla.org](https://addons.mozilla.org/), use `web-ext` to create a signed but [unlisted](/documentation/publish/self-distribution/) version for testing purposes. For example, you may wish to distribute an alpha or beta version to users for early feedback and testing.
 
-First, change the version number in your [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) so that it is different from the latest listed version. Then, create the unlisted version by using the [`--channel`](/documentation/develop/web-ext-command-reference/#web-ext-sign) option like this:
+First, change the version number in your [manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) so that it is different from the latest listed version. Then, create the unlisted version by using the [`--channel`](/documentation/develop/web-ext-command-reference/#web-ext-sign) option like this:
 {% highlight javascript %}
 web-ext sign --channel=unlisted --api-key=... --api-secret=...
 {% endhighlight %}
 
 This signs and downloads an XPI file that can be installed into Firefox.
 
-Once you've finished testing, **to publish the extension you must define** `--channel` **as listed**, as the channel option defaults to the one used previously. So, after incrementing the version in your [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), run:
+Once you've finished testing, **to publish the extension you must define** `--channel` **as listed**, as the channel option defaults to the one used previously. So, after incrementing the version in your [manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json), run:
 
 {% highlight javascript %}
 web-ext sign --channel=listed --api-key=... --api-secret=...
@@ -423,7 +423,7 @@ web-ext --help run
 
 ### Detecting temporary installation
 
-Your extension can detect whether it was installed using `web-ext run`, rather than as a built and signed extension downloaded from `addons.mozilla.org`. Listen for the [`runtime.onInstalled`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) event and check the value of `details.temporary`.
+Your extension can detect whether it was installed using `web-ext run`, rather than as a built and signed extension downloaded from `addons.mozilla.org`. Listen for the [`runtime.onInstalled`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) event and check the value of `details.temporary`.
 
 ### Using web-ext from a script
 
