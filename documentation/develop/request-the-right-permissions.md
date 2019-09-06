@@ -61,7 +61,7 @@ Because Firefox users haven't seen permission requests during installation befor
 - Request permissions at runtime, which enables you to ask for the permissions in context and offer a fall back if the user doesn't grant them.
 - Describe why your extension is requesting its permissions in its AMO description.
 
-Tip: Permission warnings aren't issued [when you load an unpacked extension](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox). For information on how to see the standard runtime permission flow, see [Test permission requests](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Test_permission_requests).
+Tip: Permission warnings aren't issued [when you load an unpacked extension](/documentation/develop/temporary-installation-in-firefox/). For information on how to see the standard runtime permission flow, see [Test permission requests](/documentation/develop/test-permission-requests/).
 
 </div>
 </article>
