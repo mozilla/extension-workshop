@@ -98,7 +98,7 @@ Developing extensions for your enterprise is straightforward – you can follow 
 
 Extensions for enterprise deployments of Firefox Extended Support Release (ESR) should be distributed outside of addons.org.
 
-Once your extension is developed and tested, you can use one of the [enterprise distribution](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_in_the_enterprise) methods to install it in Firefox.
+Once your extension is developed and tested, you can use one of the [enterprise distribution](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_in_the_enterprise) methods to install it in Firefox.
 
 {% endcapture %}
 {% include modules/one-column.html

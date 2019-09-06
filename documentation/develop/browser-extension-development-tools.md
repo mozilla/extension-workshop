@@ -97,7 +97,7 @@ To get started, [visit the tool online](http://webextensions.tech/) or [install 
 
 ### WebExtensions Example
 
-The webextensions-examples GitHub repository is a collection browser extension examples. Each example is a complete working extension that you can install and run in Firefox. You are free to use these examples as the starting point for your browser extensions, as they are made available under the [Mozilla Public License 2.0.](https://www.mozilla.org/en-US/MPL/2.0/)
+The webextensions-examples GitHub repository is a collection browser extension examples. Each example is a complete working extension that you can install and run in Firefox. You are free to use these examples as the starting point for your browser extensions, as they are made available under the [Mozilla Public License 2.0.](https://www.mozilla.org/MPL/2.0/)
 
 {% endcapture %}
 {% capture aside %}
@@ -130,7 +130,7 @@ The webextensions-examples GitHub repository is a collection browser extension e
 
 ## Coding tools
 
-If you're looking for information about text editor in which to write your code, see the [Common questions](https://developer.mozilla.org/en-US/docs/Learn/Common_questions) article [Available text editors](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Available_text_editors).
+If you're looking for information about text editor in which to write your code, see the [Common questions](https://developer.mozilla.org/docs/Learn/Common_questions) article [Available text editors](https://developer.mozilla.org/docs/Learn/Common_questions/Available_text_editors).
 
 {% endcapture %}
 {% include modules/one-column.html
@@ -157,7 +157,7 @@ Speed up browser extension development and make development tasks easier with th
 
 To get started with web-ext, install it with the [nodejs/npm](https://nodejs.org/) tool.
 
-[Get started](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext)
+[Get started](https://developer.mozilla.org/Add-ons/WebExtensions/Getting_started_with_web-ext)
 
 {% endcapture %}
 {% capture aside %}
@@ -170,7 +170,7 @@ To get started with web-ext, install it with the [nodejs/npm](https://nodejs.org
 
 ##### Resources
 
-- [Command reference](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference)
+- [Command reference](https://developer.mozilla.org/Add-ons/WebExtensions/web-ext_command_reference)
 - [GitHub project](https://github.com/mozilla/web-ext)
 
 {% endcapture %}
@@ -288,7 +288,7 @@ To get started, type about:debugging in the Firefox address bar.
 
 ##### Resources
 
-- [MDN page](https://developer.mozilla.org/en-US/docs/Tools/about:debugging)
+- [MDN page](https://developer.mozilla.org/docs/Tools/about:debugging)
 
 {% endcapture %}
 {% include modules/one-column.html
@@ -305,13 +305,13 @@ To get started, type about:debugging in the Firefox address bar.
 
 ### Addon Debugging Window
 
-Debug your browser extensions with this version of the standard Firefox developer toolbox. With Addon Debugging Window you get access to a [console](https://developer.mozilla.org/en-US/docs/Tools/Browser_Console), [debugger](https://developer.mozilla.org/en-US/docs/Tools/Debugger), [scratchpad](https://developer.mozilla.org/en-US/docs/Tools/Scratchpad), [page inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector), [style editor](https://developer.mozilla.org/en-US/docs/Tools/Style_Editor), [network monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor), [performance analyzer](https://developer.mozilla.org/en-US/docs/Tools/Profiler), [storage inspector](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector), and [accessibility inspector](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector).
+Debug your browser extensions with this version of the standard Firefox developer toolbox. With Addon Debugging Window you get access to a [console](https://developer.mozilla.org/docs/Tools/Browser_Console), [debugger](https://developer.mozilla.org/docs/Tools/Debugger), [scratchpad](https://developer.mozilla.org/docs/Tools/Scratchpad), [page inspector](https://developer.mozilla.org/docs/Tools/Page_Inspector), [style editor](https://developer.mozilla.org/docs/Tools/Style_Editor), [network monitor](https://developer.mozilla.org/docs/Tools/Network_Monitor), [performance analyzer](https://developer.mozilla.org/docs/Tools/Profiler), [storage inspector](https://developer.mozilla.org/docs/Tools/Storage_Inspector), and [accessibility inspector](https://developer.mozilla.org/docs/Tools/Accessibility_inspector).
 
 ![Addon Debugging Window]({% asset "documentation/develop/Addon_Debugging_Window.png" @optim @path %})
 
 To get started, enable Browser Toolbox then open about:debugging and click debug next to the extension you want to debug.
 
-[Get started](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox#Enabling_the_Browser_Toolbox)
+[Get started](https://developer.mozilla.org/docs/Tools/Browser_Toolbox#Enabling_the_Browser_Toolbox)
 
 {% endcapture %}
 {% capture aside %}
@@ -322,7 +322,7 @@ To get started, enable Browser Toolbox then open about:debugging and click debug
 
 ##### Resources
 
-- [MDN page](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox)
+- [MDN page](https://developer.mozilla.org/docs/Tools/Browser_Toolbox)
 
 {% endcapture %}
 {% include modules/one-column.html
@@ -439,7 +439,7 @@ When developing browser extensions for Firefox for Android, you can make use of:
 - web-ext, to automatically load your extension to an Android device as you make code changes.
 - Addon Debugging Window, to debug your extension.
 
-For more details, see [Developing extensions for Firefox for Android](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android).
+For more details, see [Developing extensions for Firefox for Android](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android).
 
 {% endcapture %}
 {% include modules/one-column.html

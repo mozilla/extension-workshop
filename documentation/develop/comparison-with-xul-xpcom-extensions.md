@@ -235,7 +235,7 @@ WebExtensions are multiprocess-compatible by default: code that interacts with w
 
 ### Learn more
 
-- [Content scripts for extensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts)
+- [Content scripts for extensions](https://developer.mozilla.org/Add-ons/WebExtensions/Content_scripts)
 
 {% endcapture %}
 {% include modules/one-column.html

@@ -68,7 +68,7 @@ Unsigned extensions can be installed in [Developer Edition](https://www.mozilla.
 
 Mozilla signs add-ons through the [AMO](https://addons.mozilla.org) website and provides three methods for submitting your add-on for signing:
 
-- upload your add-on through the [Developer Hub on AMO](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on).
+- upload your add-on through the [Developer Hub on AMO](https://developer.mozilla.org/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on).
 - use the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html).
 - use [web-ext sign](/documentation/develop/web-ext-command-reference/#web-ext-sign).
 
@@ -97,7 +97,7 @@ You aren't required to list or distribute your add-on through AMO. You'll, there
 - AMO is a very popular distribution platform, with millions of monthly visitors and installations. It's integrated into the Firefox Add-ons Manager, allowing for easy installation of add-ons published on AMO.
 
 - When an add-on is listed on AMO, updates to installed copies are handled automatically by Firefox each time a new version is listed on AMO.
-  To enable Firefox to automatically update self-distributed add-ons, the URL where Firefox can find updates needs to be included in the add-on manifest's [update_link](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Updates) key. Self-distributed add-ons that don't have an update URL check AMO for updates and are updated to a listed version, if one is available.
+  To enable Firefox to automatically update self-distributed add-ons, the URL where Firefox can find updates needs to be included in the add-on manifest's [update_link](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates) key. Self-distributed add-ons that don't have an update URL check AMO for updates and are updated to a listed version, if one is available.
 
 For more information on how to submit an add-on for distribution on AMO or self-distribution, see [Submitting an add-on](/documentation/publish/submitting-an-add-on/).
 

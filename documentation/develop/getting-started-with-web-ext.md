@@ -239,7 +239,7 @@ As an alternative to publishing your extension on [addons.mozilla.org](https://a
 web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
 {% endhighlight %}
 
-The API options are required to specify your [addons.mozilla.org credentials](https://addons.mozilla.org/en-US/developers/addon/api/key/).
+The API options are required to specify your [addons.mozilla.org credentials](https://addons.mozilla.org/developers/addon/api/key/).
 
 - `--api-key`: the API key (JWT issuer) from `addons.mozilla.org` needed to sign the extension. This is a string that will look something like `user:12345:67`.
 - `--api-secret`: the API secret (JWT secret) from `addons.mozilla.org` needed to sign the extension. This is a string that will look something like `634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009`.

@@ -77,7 +77,7 @@ Tip: Permission warnings aren't issued [when you load an unpacked extension](/do
 
 ## Advised permissions
 
-Not all [permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) result in advice being given to the user. The permissions that trigger the display of a message and the messages they trigger are:
+Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) result in advice being given to the user. The permissions that trigger the display of a message and the messages they trigger are:
 
 <!-- Table -->
 
@@ -109,7 +109,7 @@ Not all [permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/W
 | - `clipboardWrite`                                                                                                                     | Input data to the clipboard                                                                                                                                                                                      |
 | - `clipboardRead`                                                                                                                      | Get data from the clipboard                                                                                                                                                                                      |
 | `unlimitedStorage`                                                                                                                     | Store unlimited amount of client-side data                                                                                                                                                                       |
-| The manifest key ["devtools_page"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) | Extend developer tools to access your data in open tabs                                                                                                                                                          |
+| The manifest key ["devtools_page"](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) | Extend developer tools to access your data in open tabs                                                                                                                                                          |
 
 </div>
 
@@ -151,7 +151,7 @@ This section looks at situations where you might be asking for more permissions 
 
 ### Ask for only the permissions your extension uses
 
-This may seem obvious, but if you create an extension by using an earlier example as a template or you remove a feature during development or testing, you may be asking for permissions your extension doesn't need. Addressing this is a case of doing a manual check of your code against the permissions (`"permissions"` and ["optional_permissions"](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)) that you're requesting in the extension's manifest.json.
+This may seem obvious, but if you create an extension by using an earlier example as a template or you remove a feature during development or testing, you may be asking for permissions your extension doesn't need. Addressing this is a case of doing a manual check of your code against the permissions (`"permissions"` and ["optional_permissions"](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)) that you're requesting in the extension's manifest.json.
 
 ### Use "activeTab" rather than "tabs" and host permissions
 
@@ -204,13 +204,13 @@ Note: Firefox doesn't currently restrict local storage size, although it does as
 
 ## Request permissions at runtime
 
-Users may not understand the context of permissions requested during installation. The alternative approach is to request permissions as they are needed, using the [Permissions API](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/permissions), and thereby provide the user with context.
+Users may not understand the context of permissions requested during installation. The alternative approach is to request permissions as they are needed, using the [Permissions API](https://developer.mozilla.org/Add-ons/WebExtensions/API/permissions), and thereby provide the user with context.
 
 A typical scenario for using this approach is the `"geoLocation"` permission. Say you've written a note-taking extension that includes the ability to add a minimap of the note takers location. Requesting location access during installation might leave the user unclear why the extension needs to access location, so they might not install it. However, if permission to use location is requested when the user first tries the feature to add a minimap, they'll get a clearer understanding of why the permission is needed and be more likely to grant it. And should they choose not to grant the permission, the extension can offer a graceful fall-back—in this example, not adding the minimap—but the important outcome of this approach is that the user has installed and used your extension.
 
 ![Example of an additional or runtime permission request message]({% asset "documentation/develop/Permissions_optional_request.png" @path @optim %})
 
-Making a runtime permission request is straightforward. Include any permissions you want to request under the manifest.json `"[optional_permissions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/optional_permissions)"` key. Then pass the permissions you want granted to [`WebExtAPIRef("permissions.request")`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. true is returned if the user grants the request, false if they don't.
+Making a runtime permission request is straightforward. Include any permissions you want to request under the manifest.json `"[optional_permissions](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions)"` key. Then pass the permissions you want granted to [`WebExtAPIRef("permissions.request")`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. true is returned if the user grants the request, false if they don't.
 
 You can't request all the permissions available to `"permissions"` using optional permissions. You can't request the following API permissions:
 
@@ -239,7 +239,7 @@ There are a couple of things to note:
 - You can only request permissions inside the handler for a user action, such as from a toolbar button (browser action), shortcut menu item, or similar.
 - If you request several permissions at once they are either all granted or all declined, the user cannot choose to grant some and not others.
 
-For more information about optional permissions, see [optional_permissions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/optional_permissions) and the [permissions](https://github.com/mdn/webextensions-examples/tree/master/permissions) example.
+For more information about optional permissions, see [optional_permissions](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions) and the [permissions](https://github.com/mdn/webextensions-examples/tree/master/permissions) example.
 
 </div>
 </article>
@@ -259,7 +259,7 @@ Permissions messages are most likely to prevent a user from installing your exte
 
 To address this issue, provide information in your extension's AMO description that explains what permissions your extension is requesting and why.
 
-A good example of this approach is [Gesturefy](https://addons.mozilla.org/en-US/firefox/addon/gesturefy/), which offers users the following advice:
+A good example of this approach is [Gesturefy](https://addons.mozilla.org/firefox/addon/gesturefy/), which offers users the following advice:
 
 ![Extract from Gesturefy's AMO description providing information on thepermissions requested by this extension]({% asset "documentation/develop/gesturefy_permissions_explanation.png" @path @optim %})
 
