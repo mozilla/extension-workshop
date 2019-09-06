@@ -189,7 +189,7 @@ See [this guide](/documentation/develop/developing-extensions-for-firefox-for-an
 
 ### Testing unsigned extensions
 
-When you execute [web-ext run](/documentation/develop/web-ext-command-reference/#web-ext-run), the extension gets installed temporarily until you close Firefox. This does not violate any signing restrictions. If instead you create a zip file with [web-ext build](/documentation/develop/web-ext-command-reference/#web-ext_build) and try to install it into Firefox, you will see an error telling you that the add-on is not signed. You will need to use an [unbranded build](https://wiki.mozilla.org/Addons/Extension_Signing#Unbranded_Builds) or use a [development build](https://www.mozilla.org/firefox/developer/) to install unsigned extensions.
+When you execute [web-ext run](/documentation/develop/web-ext-command-reference/#web-ext-run), the extension gets installed temporarily until you close Firefox. This does not violate any signing restrictions. If instead you create a zip file with [web-ext build](/documentation/develop/web-ext-command-reference/#web-ext-build) and try to install it into Firefox, you will see an error telling you that the add-on is not signed. You will need to use an [unbranded build](https://wiki.mozilla.org/Addons/Extension_Signing#Unbranded_Builds) or use a [development build](https://www.mozilla.org/firefox/developer/) to install unsigned extensions.
 
 ### Using a custom profile
 
