@@ -83,7 +83,7 @@ In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the follo
 - Add-ons must disclose when payment is required to enable any functionality.
 - The add-on listing should have an easy-to-read description about everything it does, and any information it collects. Please consult our best practices guide for [creating an appealing listing](/documentation/develop/create-an-appealing-listing/).
 - Includes features or functionality not related to the add-on’s core function(s)
-- Add-ons that are intended for internal or private use, are only accessible to a closed user group, or for distribution testing may not be listed on AMO. Such add-ons may be [uploaded for self-distribution](/documentation/publish/signing-and-distributing-your-add-on/) instead.
+- Add-ons that are intended for internal or private use, are only accessible to a closed user group, or for distribution testing may not be listed on AMO. Such add-ons may be [uploaded for self-distribution](/documentation/publish/submitting-an-add-on/#self-distribution) instead.
 - If the add-on is a fork of another add-on, the name must clearly distinguish it from the original and provide a significant difference in functionality and/or code.
 
 {% endcapture %}
@@ -145,7 +145,7 @@ While any code, method or practice in a submitted add-on is subject to review an
 - Add-on code must be written in a way that is reviewable and understandable. Reviewers may ask you to refactor parts of the code if it is not reviewable.
 - Add-ons must not negatively impact the performance or stability of Firefox.
 - Only release versions of third-party libraries and/or frameworks may be included with an add-on. Modifications to these libraries/frameworks are not permitted.
-- Please read our [third party library guidelines](/documentation/Publish/third-party-library-usage/) to avoid unexpected rejections.
+- Please read our [third party library guidelines](/documentation/publish/third-party-library-usage/) to avoid unexpected rejections.
 
 {% endcapture %}
 {% include modules/one-column.html
@@ -264,7 +264,7 @@ Mozilla may attempt to contact the add-on’s developer(s) and provide a reasona
 
 Mozilla reserves the right to block or delete any developer’s account on addons.mozilla.org, thereby preventing further use of the service.
 
-For information about how rejection and blocking affects users, see [What does review rejection mean to users?](/documentation/Publish/what-does-review-rejection-mean-to-users/)
+For information about how rejection and blocking affects users, see [What does review rejection mean to users?](/documentation/publish/what-does-review-rejection-mean-to-users/)
 
 {% endcapture %}
 {% include modules/one-column.html

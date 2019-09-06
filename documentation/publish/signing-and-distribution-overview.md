@@ -99,7 +99,7 @@ You aren't required to list or distribute your add-on through AMO. You'll, there
 - When an add-on is listed on AMO, updates to installed copies are handled automatically by Firefox each time a new version is listed on AMO.
   To enable Firefox to automatically update self-distributed add-ons, the URL where Firefox can find updates needs to be included in the add-on manifest's [update_link](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Updates) key. Self-distributed add-ons that don't have an update URL check AMO for updates and are updated to a listed version, if one is available.
 
-For more information on how to submit an add-on for distribution on AMO or self-distribution, see [Submitting an add-on](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on).
+For more information on how to submit an add-on for distribution on AMO or self-distribution, see [Submitting an add-on](/documentation/publish/submitting-an-add-on/).
 
 {% endcapture %}
 {% include modules/one-column.html

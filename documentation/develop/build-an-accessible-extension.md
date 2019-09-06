@@ -18,7 +18,7 @@ date: 2019-05-01 9:08:50
 
 When it comes to accessibility, extensions should follow the same guidelines as websites. However, extensions have unique features that deserve consideration when designing for accessibility. Here is a breakdown of extension features and how they should be used to make an extension accessible.
 
-There is more information on design and accessibility in the [Photon Design System](https://design.firefox.com/photon/) and [Accessibility and Mozilla](https://developer.mozilla.org/en-US/docs/Mozilla/Accessibility) section on MDN.
+There is more information on design and accessibility in the [Photon Design System](https://design.firefox.com/photon/) and [Accessibility and Mozilla](https://developer.mozilla.org/docs/Mozilla/Accessibility) section on MDN.
 
 {% endcapture %}
 {% include modules/page-hero.html
@@ -48,7 +48,7 @@ There is more information on design and accessibility in the [Photon Design Syst
 <tr>
 <td markdown="1">
 
-[Keyboard shortcuts (commands)](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)
+[Keyboard shortcuts (commands)](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)
 
 </td>
 <td markdown="1">
@@ -67,12 +67,12 @@ To improve accessibility, add keyboard shortcuts for:
 <tr>
 <td markdown="1">
 
-[Toolbar button (browser action)](/Add-ons/WebExtensions/user_interface/Browser_action)
+[Toolbar button (browser action)](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)
 
 </td>
 <td markdown="1">
 
-To account for the active theme, provide [toolbar buttons icons for themes with light and dark text](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#theme_icons).
+To account for the active theme, provide [toolbar buttons icons for themes with light and dark text](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#theme_icons).
 
 Follow the Photon Design System guidelines on [Iconography](https://design.firefox.com/photon/visuals/iconography.html). Use different images to convey state, such as toggled or active. Don’t use colored icons or color changes to indicate state changes as these may not be visible to all users.
 
@@ -88,19 +88,19 @@ Add a shortcut to the button’s action, using the special shortcut `option _exe
 <tr>
 <td markdown="1">
 
-[Toolbar button with a popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
+[Toolbar button with a popup](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
 
 </td>
 <td markdown="1">
 
-The markup in the popup should follow [standard web accessibility guidelines](/en-US/docs/Web/Accessibility).
+The markup in the popup should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
 
 </td>
 </tr>
 <tr>
 <td markdown="1">
 
-[Address bar button (page action)](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
+[Address bar button (page action)](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
 
 </td>
 <td markdown="1">
@@ -114,19 +114,19 @@ Add a shortcut to the button’s action, using the special shortcut `option _exe
 <tr>
 <td markdown="1">
 
-[Address bar button with a popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
+[Address bar button with a popup](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)
 
 </td>
 <td markdown="1">
 
-The markup in the popup should follow [standard web accessibility guidelines](/en-US/docs/Web/Accessibility).
+The markup in the popup should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
 
 </td>
 </tr>
 <tr>
 <td markdown="1">
 
-[Context menu item](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items)
+[Context menu item](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items)
 
 </td>
 <td markdown="1">
@@ -138,12 +138,12 @@ Context menu items provide an accessible way for users to discover extension fea
 <tr>
 <td markdown="1">
 
-[Sidebar](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
+[Sidebar](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)
 
 </td>
 <td markdown="1">
 
-The markup in the sidebar should follow [standard web accessibility guidelines](/en-US/docs/Web/Accessibility).
+The markup in the sidebar should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
 
 Add a keyboard shortcut to open a sidebar, using the special shortcut `option _execute_sidebar_action`.
 
@@ -152,32 +152,32 @@ Add a keyboard shortcut to open a sidebar, using the special shortcut `option _e
 <tr>
 <td markdown="1">
 
-[Options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
+[Options page](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
 
 </td>
 <td markdown="1">
 
-The markup in the options page should follow [standard web accessibility guidelines](/en-US/docs/Web/Accessibility).
-
-</td>
-</tr>
-<tr>
-<td markdown="1">
-
-[Extension page](/Add-ons/WebExtensions/user_interface/Extension_pages)
-
-</td>
-<td markdown="1">
-
-The markup in the extension page should follow [standard web accessibility guidelines](/en-US/docs/Web/Accessibility).
+The markup in the options page should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
 
 </td>
 </tr>
 <tr>
+<td markdown="1">
+
+[Extension page](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)
+
+</td>
+<td markdown="1">
+
+The markup in the extension page should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+
+</td>
+</tr>
+<tr>
 
 <td markdown="1">
 
-[Notification](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications)
+[Notification](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications)
 
 </td>
 <td markdown="1">
@@ -189,7 +189,7 @@ Provide notifications for events that happen in the background or are not otherw
 <tr>
 <td markdown="1">
 
-[Address bar suggestion](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox)
+[Address bar suggestion](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox)
 
 </td>
 <td markdown="1">
@@ -201,12 +201,12 @@ Add suggestions as per the guide, there are no additional accessibility consider
 <tr>
 <td markdown="1">
 
-[Developer tools panel](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels)
+[Developer tools panel](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels)
 
 </td>
 <td markdown="1">
 
-The markup in the sidebar should follow [standard web accessibility guidelines](/en-US/docs/Web/Accessibility).
+The markup in the sidebar should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
 
 Offering a keyboard shortcut to open a devtools panel is recommended.
 
