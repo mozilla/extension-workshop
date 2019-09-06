@@ -48,12 +48,12 @@ This table summarizes the edition information, features for extension developmen
 
 <div class="table-wrapper table-scroll" markdown="1">
 
-| Edition                                                                               | Version      | Stable | Tools for extension development | Installs unsigned extensions | Recommended extension development use           |
-| ------------------------------------------------------------------------------------- | ------------ | ------ | ------------------------------- | ---------------------------- | ----------------------------------------------- |
+| Edition                                                                         | Version      | Stable | Tools for extension development | Installs unsigned extensions | Recommended extension development use           |
+| ------------------------------------------------------------------------------- | ------------ | ------ | ------------------------------- | ---------------------------- | ----------------------------------------------- |
 | [Release](https://www.mozilla.org/firefox/)                                     | Current      | Yes    | Yes                             | No                           | Regression testing, User alpha and beta testing |
-| [Beta](https://beta.mozilla.org/)                                                     | Current +1   | Yes    | Yes                             | No                           | Regression testing, User alpha and beta testing |
+| [Beta](https://beta.mozilla.org/)                                               | Current +1   | Yes    | Yes                             | No                           | Regression testing, User alpha and beta testing |
 | [Developer Edition](https://www.mozilla.org/firefox/channel/desktop/#developer) | Current +1   | Yes    | Yes                             | Yes                          | Extension development                           |
-| [Nightly](https://nightly.mozilla.org/)                                               | Current +2   | No     | Yes                             | Yes                          | Early access to the latest WebExtension API     |
+| [Nightly](https://nightly.mozilla.org/)                                         | Current +2   | No     | Yes                             | Yes                          | Early access to the latest WebExtension API     |
 | [ESR](https://www.mozilla.org/firefox/organizations/)                           | Current - >1 | Yes    | Yes                             | Yes                          | Extension development within enterprises        |
 
 </div>
