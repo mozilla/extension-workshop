@@ -534,19 +534,6 @@
       categories:
         - category: "Resources"
           pages:
-            - title: "Resources for publishers"
-              url: "/documentation/manage/resources-for-publishers/"
-            - title: "Best practices for updating your extension"
-              url: "/documentation/manage/best-practices-for-updating/"
-            - title: "Retiring your extension"
-              url: "/documentation/manage/retiring-your-extension/"
-              subpageitems:
-                - title: "Reasons for withdrawing your extension"
-                  id: "reasons-for-withdrawing"
-                - title: "Steps to retiring an extension"
-                  id: "steps-to-retiring-an-extension"
-                - title: "Suggested retirement timetable"
-                  id: "suggested-retirement-timetable"
             - title: "Updating your extension"
               url: "/documentation/manage/updating-your-extension/"
               subpageitems:
@@ -556,6 +543,19 @@
                   id: "manifest-structure"
                 - title: "Testing automatic updating"
                   id: "testing-automatic-updating"
+            - title: "Best practices for updating your extension"
+              url: "/documentation/manage/best-practices-for-updating/"
+            - title: "Resources for publishers"
+              url: "/documentation/manage/resources-for-publishers/"
+            - title: "Retiring your extension"
+              url: "/documentation/manage/retiring-your-extension/"
+              subpageitems:
+                - title: "Reasons for withdrawing your extension"
+                  id: "reasons-for-withdrawing"
+                - title: "Steps to retiring an extension"
+                  id: "steps-to-retiring-an-extension"
+                - title: "Suggested retirement timetable"
+                  id: "suggested-retirement-timetable"
     - title: "Enterprise"
       url: "/documentation/enterprise/"
       subpageitems:
@@ -640,3 +640,4 @@
           url: "https://webextensions-experiments.readthedocs.io/"
         - title: "Find or create a bug"
           url: "https://bugzilla.mozilla.org"
+          
