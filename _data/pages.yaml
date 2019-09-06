@@ -535,7 +535,7 @@
         - category: "Resources"
           pages:
           - title: "Updating your extension"
-              url: "/documentation/manage/updating-your-extension/"
+            url: "/documentation/manage/updating-your-extension/"
               subpageitems:
                 - title: "Enabling updates to your extension"
                   id: "enable-update"
