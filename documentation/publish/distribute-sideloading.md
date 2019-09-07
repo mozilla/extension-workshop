@@ -68,7 +68,7 @@ An email address style ID is recommended.
 
 {:start="2"}
 
-2. Sign the add-on in [addons.mozilla.org](https://addons.mozilla.org) (AMO). Depending on how you want to make your add-on available, you can use either the unlisted (if you are distributing the add-on exclusively) or listed options. For more details, see [Signing and distributing your add-on](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution).
+2. Sign the add-on in [addons.mozilla.org](https://addons.mozilla.org) (AMO). Depending on how you want to make your add-on available, you can use either the unlisted (if you are distributing the add-on exclusively) or listed options. For more details, see [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
 
 {% endcapture %}
 {% include modules/column-w-toc.html
