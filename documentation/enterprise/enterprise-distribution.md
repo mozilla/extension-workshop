@@ -64,7 +64,7 @@ The alternative, and recommended, approach is to use the option for unlisted add
 
 ## Sideloading
 
-You can sideload an add-on using one of the standard extensions folders, as described in [Installation using standard extension folders](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Distribution_options/Sideloading_add-ons#Installation_using_the_standard_extension_folders).
+You can sideload an add-on using one of the standard extensions folders, as described in [Installation using standard extension folders](/documentation/publish/distribute-sideloading/#standard-extension-folders).
 
 {% endcapture %}
 {% include modules/one-column.html
@@ -250,7 +250,7 @@ It is impossible to disable loading add-ons from the profile directory.
 
 Use the following logic to set the values of `extensions.autoDisableScopes` and `extensions.enabledScopes` programmatically to ensure add-ons are installed automatically:
 
-1. Edit the [administrative config](https://developer.mozilla.org/docs/Mozilla/Firefox/Enterprise_deployment#Configuration) file.
+1. Edit the [administrative config](https://support.mozilla.org/products/firefox-enterprise/policies-customization-enterprise/policies-overview-enterprise) file.
 2. Check for the presence of lines that set the `extensions.autoDisableScopes` and/or `extensions.enabledScopes` preferences and replace/add them as needed.
 3. These preference lines should be used like below, with values of your choice as explained in the top of this section:
 

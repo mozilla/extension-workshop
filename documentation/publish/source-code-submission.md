@@ -18,7 +18,7 @@ date: 2019-06-10 06:33:38
 
 To complete the review process at [addons.mozilla.org](https://addons.mozilla.org) (AMO), reviewers must be able to read the code in your extension. Some build processes render extension code difficult to read. These processes include minifying your code, as well as the use of module bundlers or similar tools, such as [webpack](https://webpack.js.org/). In this case, when you upload your extension to AMO, you will need to provide your source code and instructions for building that source code, where build processes render your extension’s code hard to read.
 
-If your add-on uses third-party libraries, please see [our requirements](/documentation/Publish/third-party-library-usage/) for those.
+If your add-on uses third-party libraries, please see [our requirements](/documentation/publish/third-party-library-usage/) for those.
 
 <p class="note" markdown="1">
 
