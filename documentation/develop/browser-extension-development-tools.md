@@ -157,7 +157,7 @@ Speed up browser extension development and make development tasks easier with th
 
 To get started with web-ext, install it with the [nodejs/npm](https://nodejs.org/) tool.
 
-[Get started](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext)
+[Get started](/documentation/develop/getting-started-with-web-ext/)
 
 {% endcapture %}
 {% capture aside %}
@@ -439,7 +439,7 @@ When developing browser extensions for Firefox for Android, you can make use of:
 - web-ext, to automatically load your extension to an Android device as you make code changes.
 - Addon Debugging Window, to debug your extension.
 
-For more details, see [Developing extensions for Firefox for Android](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android).
+For more details, see [Developing extensions for Firefox for Android](/documentation/develop/developing-extensions-for-firefox-for-android/).
 
 {% endcapture %}
 {% include modules/one-column.html

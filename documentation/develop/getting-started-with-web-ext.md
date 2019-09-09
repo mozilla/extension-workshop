@@ -441,7 +441,7 @@ You can use `web-ext` as a `NodeJS module`. Here is [more information](https://g
 ## See also
 
 [web-ext repo](https://github.com/mozilla/web-ext)  
-[web-ext command reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference)
+[web-ext command reference](/documentation/develop/web-ext-command-reference/)
 
 </div>
 </article>
