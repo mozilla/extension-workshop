@@ -68,7 +68,7 @@ Unsigned extensions can be installed in [Developer Edition](https://www.mozilla.
 
 Mozilla signs add-ons through the [AMO](https://addons.mozilla.org) website and provides three methods for submitting your add-on for signing:
 
-- upload your add-on through the [Developer Hub on AMO](https://developer.mozilla.org/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on).
+- upload your add-on through the [Developer Hub on AMO](/documentation/publish/submitting-an-add-on/#listing-on-amo).
 - use the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html).
 - use [web-ext sign](/documentation/develop/web-ext-command-reference/#web-ext-sign).
 
