@@ -284,7 +284,7 @@ If you have a [legacy Firefox extension](/documentation/develop/porting-a-legacy
 
 Test and [debug your code](/documentation/develop/debugging/) by [temporarily installing](/documentation/develop/temporary-installation-in-firefox/) it in Firefox.
 
-Understanding [extensions and the Add-on ID](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) will help you test more effectively. You will also want to [test persistent and restart features](/documentation/develop/testing-persistent-and-restart-features/) along with [permission requests](/documentation/develop/test-permission-requests/).
+Understanding [extensions and the Add-on ID](/documentation/develop/extensions-and-the-add-on-id/) will help you test more effectively. You will also want to [test persistent and restart features](/documentation/develop/testing-persistent-and-restart-features/) along with [permission requests](/documentation/develop/test-permission-requests/).
 
 You can use [web-ext](/documentation/develop/getting-started-with-web-ext/) to automatically install and update your extension while making coding changes.
 
