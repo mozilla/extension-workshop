@@ -40,12 +40,12 @@ Here is a list of best practices you should follow to keep the users of your ext
 - **Ensure you insert remote content safely**  
   Make sure you follow best practices when your extension makes use of remote content:
 
-  - insert strings using safe native DOM manipulation methods: [document.createElement](/en-US/docs/Web/API/Document/createElement), [Element.setAtttribute](/en-US/docs/Web/API/Element/setAttribute), and [Node.textContent](/en-US/docs/Web/API/Node/textContent).
+  - insert strings using safe native DOM manipulation methods: [document.createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement), [Element.setAtttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute), and [Node.textContent](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent).
   - use jQuery functions `attr()` and `text()` to insert strings.
   - sanitize HTML content with  [DOMPurify](https://github.com/cure53/DOMPurify).
   - use templating engine commands that escape any HTML before inserting it.
 
-  For more information, see [Safely inserting external content into a page](/en-US/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page).
+  For more information, see [Safely inserting external content into a page](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page).
 
 - **Use XHR for Google Analytics**  
   If you want to add Google Analytics to your extension don't insert the Google Analytics JavaScript code. Rather, it’s recommended that the Google Analytics REST API is used in an XHR call, such as:
@@ -63,22 +63,22 @@ Here is a list of best practices you should follow to keep the users of your ext
   You can find more information in the blog post [Using Google Analytics in Extensions](https://blog.mozilla.org/addons/2016/05/31/using-google-analytics-in-extensions/).
 
 - **Use the standard extension content security policy (CSP)**  
-  The standard policy restricts the sources from which your extension can load [`<script>`](/en-US/docs/Web/HTML/Element/script) and [`<object>`](/en-US/docs/Web/HTML/Element/object) resources, and disallows potentially unsafe practices such as the use of [eval()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). While the manifest.json key [content_security_policy](/en-US/Add-ons/WebExtensions/manifest.json/content_security_policy) enables you to modify the content security policy for your extension, this isn’t recommended as the policy helps prevent extensions from inadvertently executing malicious content. If your modified CSP allows remote script injection your extension will get rejected from AMO during review.  
-  For more information, see [Default content security policy](/en-US/Add-ons/WebExtensions/Content_Security_Policy#Default_content_security_policy).
+  The standard policy restricts the sources from which your extension can load [`<script>`](/en-US/docs/Web/HTML/Element/script) and [`<object>`](/en-US/docs/Web/HTML/Element/object) resources, and disallows potentially unsafe practices such as the use of [eval()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). While the manifest.json key [content_security_policy](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) enables you to modify the content security policy for your extension, this isn’t recommended as the policy helps prevent extensions from inadvertently executing malicious content. If your modified CSP allows remote script injection your extension will get rejected from AMO during review.  
+  For more information, see [Default content security policy](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#Default_content_security_policy).
 - **Share objects with in-page JavaScript with care**  
   Firefox provides `wrappedJSObject` so a content script can access JavaScript objects created by page scripts. The danger here is that a malicious web page could, for example, modify the functions of JavaScript objects to run code of its own.  
-  For more information, see [Accessing page script objects from content scripts](/en-US/Add-ons/WebExtensions/Sharing_objects_with_page_scripts).
+  For more information, see [Accessing page script objects from content scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Sharing_objects_with_page_scripts).
 - **Use `window.eval()` in content scripts with caution**  
   You should be very careful when running code in the context of a page. A malicious web page could attempt to run code of its own by exploiting the use of `window.eval()`. It might do this by, for example, redefining objects your code might want to evaluate.  
-  For more information, see [Don't use eval needlessly!](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#Don't_use_eval_needlessly!)
+  For more information, see [Don't use eval needlessly!](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#Don't_use_eval_needlessly!)
 - **Create your UI with extension components**  
-  Create the UI for your extension using the [built-in extension UI features](/en-US/Add-ons/WebExtensions/user_interface), such as bundled pages, pageAction, and popups on pageAction and browserAction. Don’t add UI elements, such as buttons or toolbars, directly to web pages. If you do, scripts on the web page could compromise your extension. See [Keybase Browser Extension Insecure](https://www.grepular.com/Keybase_Browser_Extension_Insecure) for an example of the potential issues.  
-  If the standard UI components aren’t sufficient for your needs use iframes with [data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) to prevent fingerprinting, or add iframes to the extension code so a page can’t interact with your UI content, such as buttons.
+  Create the UI for your extension using the [built-in extension UI features](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface), such as bundled pages, pageAction, and popups on pageAction and browserAction. Don’t add UI elements, such as buttons or toolbars, directly to web pages. If you do, scripts on the web page could compromise your extension. See [Keybase Browser Extension Insecure](https://www.grepular.com/Keybase_Browser_Extension_Insecure) for an example of the potential issues.  
+  If the standard UI components aren’t sufficient for your needs use iframes with [data URLs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) to prevent fingerprinting, or add iframes to the extension code so a page can’t interact with your UI content, such as buttons.
 - **Add eslint-plugin-no-unsanitized to ESLint**  
   If you make use of ESLint to check your extension code, consider adding eslint-plugin-no-unsanitized. This ESLint rules plug-in will flag instances where unsanitized code from APIs or user input could cause issues.
 - **Don't inject moz-extension paths directly**  
   When injected links, includes, or images include paths to `moz-extension://{hash}` a page’s tracking script could use this information to [fingerprint](https://en.wikipedia.org/wiki/Device_fingerprint) the user, as the hash (UUID) is unique to the extension installation and, therefore, the user.  
-  The best way to avoid this issue is to follow the general advice about not injecting content. However, if you believe injecting content is your only practical approach, ensure that moz-extension paths are embedded inside an iframe using a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) or the [srcdoc](/en-US/docs/Web/HTML/Element/iframe#attr-srcdoc) attribute.
+  The best way to avoid this issue is to follow the general advice about not injecting content. However, if you believe injecting content is your only practical approach, ensure that moz-extension paths are embedded inside an iframe using a [data URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) or the [srcdoc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-srcdoc) attribute.
 - **Ensure that third-party libraries are up to date**  
   Reputable third-party libraries will be updated when any issues are found. The use of outdated (and potentially insecure) third-party libraries is strongly discouraged and, when a significant risk is identified, AMO may act to block extensions using the out of date code.  
   Therefore, always use the latest version of any third-party libraries when you create your extension. Then, be aware of updates to those libraries and be prepared to update your extension to ensure its using an up to date version of the library.
