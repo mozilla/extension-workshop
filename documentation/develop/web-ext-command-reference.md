@@ -33,7 +33,7 @@ date: 2019-04-16 10:25:47
 
 # web-ext command reference
 
-This page lists all the commands and options available under the [web-ext](/documentation/develop/web-ext-command-reference/) command line tool.
+This page lists all the commands and options available under the [web-ext](https://github.com/mozilla/web-ext) command line tool.
 
 {% endcapture %}
 {% include modules/page-hero.html

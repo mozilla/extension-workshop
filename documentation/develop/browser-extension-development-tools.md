@@ -170,7 +170,7 @@ To get started with web-ext, install it with the [nodejs/npm](https://nodejs.org
 
 ##### Resources
 
-- [Command reference](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/web-ext_command_reference)
+- [Command reference](/documentation/develop/web-ext-command-reference/)
 - [GitHub project](https://github.com/mozilla/web-ext)
 
 {% endcapture %}
