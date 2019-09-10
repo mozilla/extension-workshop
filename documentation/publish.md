@@ -37,7 +37,7 @@ Learn how to get your extension signed and distributed worldwide or to your ente
 
 Once your extension is coded and tested, it needs to meet the policies in the [developer agreement](/documentation/publish/firefox-add-on-distribution-agreement/) and [add-on policies](/documentation/publish/add-on-policies/) before it is signed. If your extension doesn’t meet these policies, it may not get a signature or it could be [blocked](/documentation/publish/add-ons-blocking-process/) after signing.
 
-When you’re confident your extension complies with those policies, it needs to be signed before it’s distributed\* for use in the [release](https://www.mozilla.org/en-US/firefox/) and [Beta](https://www.mozilla.org/firefox/channel/desktop/) versions of Firefox. Signing provides Firefox users with the assurance that an extension hasn’t been tampered with and gives Mozilla the ability to block malicious extensions.
+When you’re confident your extension complies with those policies, it needs to be signed before it’s distributed\* for use in the [release](https://www.mozilla.org/firefox/) and [Beta](https://www.mozilla.org/firefox/channel/desktop/) versions of Firefox. Signing provides Firefox users with the assurance that an extension hasn’t been tampered with and gives Mozilla the ability to block malicious extensions.
 
 All extensions can be submitted for signing through [addons.mozilla.org](https://addons.mozilla.org).
 
@@ -63,7 +63,7 @@ Once your extension is signed, it is subject to review by Mozilla at any time. T
 
 There are four ways you can distribute your extension. They are:
 
-- Use [addons.mozilla.org](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on) (most popular, broadest audience)
+- Use [addons.mozilla.org](https://developer.mozilla.org/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on) (most popular, broadest audience)
 - Provide a download location for the signed extension file for users to self-install or [sideload](/documentation/publish/distribute-sideloading/) into Firefox.
 - Include the extension installation as part of the installation of a [desktop application](/documentation/publish/distribute-for-desktop-apps/).
 - Use one of the [mechanisms designed to enable enterprise browser administrators to install add-ons](/documentation/enterprise/enterprise-distribution/)

@@ -45,7 +45,7 @@ There are four ways you can create themes:
 
 - **[Code a theme yourself](https://developer.mozilla.org/docs/Mozilla/Add-ons/Themes/Theme_concepts):** Take advantage of all the theme features available. For instance, add color to more UI components, or utilize the ability to use multiple images. You can then choose to host these themes on AMO or distribute them yourself.
 
-- **Include themes in your extension:** Use the [theme API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme) to take advantage of the full range of features in standalone themes. You can activate these themes based on user requests or dynamic information, like the time of day or the webpage the user is viewing.
+- **Include themes in your extension:** Use the [theme API](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/theme) to take advantage of the full range of features in standalone themes. You can activate these themes based on user requests or dynamic information, like the time of day or the webpage the user is viewing.
 
 {% endcapture %}
 {% include modules/one-column.html

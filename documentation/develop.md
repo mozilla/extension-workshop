@@ -37,7 +37,7 @@ Support your development workflow with these straightforward tools and guides.
 
 ### Development tools
 
-All you need to create extensions for Firefox is a [text editor](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Available_text_editors) and [a version of Firefox](/documentation/develop/choosing-a-firefox-version-for-extension-development/) to support your testing. Mozilla and the Firefox extension developer community have also created a number of [extension development tools](/documentation/develop/browser-extension-development-tools/) that can simplify the coding and testing of your extension.
+All you need to create extensions for Firefox is a [text editor](https://developer.mozilla.org/docs/Learn/Common_questions/Available_text_editors) and [a version of Firefox](/documentation/develop/choosing-a-firefox-version-for-extension-development/) to support your testing. Mozilla and the Firefox extension developer community have also created a number of [extension development tools](/documentation/develop/browser-extension-development-tools/) that can simplify the coding and testing of your extension.
 
 ### Chromium-based browser extensions
 
@@ -284,7 +284,7 @@ If you have a [legacy Firefox extension](/documentation/develop/porting-a-legacy
 
 Test and [debug your code](/documentation/develop/debugging/) by [temporarily installing](/documentation/develop/temporary-installation-in-firefox/) it in Firefox.
 
-Understanding [extensions and the Add-on ID](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) will help you test more effectively. You will also want to [test persistent and restart features](/documentation/develop/testing-persistent-and-restart-features/) along with [permission requests](/documentation/develop/test-permission-requests/).
+Understanding [extensions and the Add-on ID](/documentation/develop/extensions-and-the-add-on-id/) will help you test more effectively. You will also want to [test persistent and restart features](/documentation/develop/testing-persistent-and-restart-features/) along with [permission requests](/documentation/develop/test-permission-requests/).
 
 You can use [web-ext](/documentation/develop/getting-started-with-web-ext/) to automatically install and update your extension while making coding changes.
 

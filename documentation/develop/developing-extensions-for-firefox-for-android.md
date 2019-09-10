@@ -233,7 +233,7 @@ If prompted, allow the incoming connection on your Android device. Now start you
 
 Click **Inspect** next to **Main Process**. The web developer toolbox displays in **Debugger**.
 
-For much of the debugging work, it's useful to be able to view **Console** with **Inspector** or **Debugger**. You do this using the [split console](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Split_console), press `esc` to activate this mode.
+For much of the debugging work, it's useful to be able to view **Console** with **Inspector** or **Debugger**. You do this using the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console), press `esc` to activate this mode.
 
 Load a page in which your extension exercises. Now you can access any of the JavaScript in your extension.
 
@@ -249,7 +249,7 @@ Unlike desktop Firefox, where content scripts are debugged in context of the pag
     alert=false
 %}
 
-In the **Debugger** you can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/en-US/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
+In the **Debugger** you can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
 
 To inspect the popup's HTML and CSS, use **Inspector**. First, click the page select icon (![Device debugging]({% asset "documentation/develop/page-selector.png" @optim @path %})) to open the HTML document you want to inspect. You can [review and modify the document's HTML and CSS in **Inspector**](https://developer.mozilla.org/docs/Tools/Page_Inspector), as you would with any webpage.
 
