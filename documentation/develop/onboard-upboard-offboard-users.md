@@ -138,7 +138,7 @@ Here are some examples of good onboarding pages:
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-#### [Laser Cat](https://addons.mozilla.org/en-US/firefox/addon/the-laser-cat/)
+#### [Laser Cat](https://addons.mozilla.org/firefox/addon/the-laser-cat/)
 
 This page provides a succinct description of the extension, clear instructions on how to fire your cat’s lasers, and how to turn your laser cat on and off.
 
@@ -159,7 +159,7 @@ This page provides a succinct description of the extension, clear instructions o
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-#### [Ghostery – Privacy Ad Blocker](https://addons.mozilla.org/en-US/firefox/addon/ghostery/)
+#### [Ghostery – Privacy Ad Blocker](https://addons.mozilla.org/firefox/addon/ghostery/)
 
 As the features of Ghostery are mostly silent, this onboarding screen gives users two options for the initial setup: A simple one-click option and a link to the full settings so they can customize how Ghostery works.
 
@@ -231,7 +231,7 @@ Here are some examples of good upboarding pages:
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-#### [Snap Links Plus](https://addons.mozilla.org/en-US/firefox/addon/snaplinksplus/)
+#### [Snap Links Plus](https://addons.mozilla.org/firefox/addon/snaplinksplus/)
 
 This page provides a brief description of Snap Links Plus before listing the improvements made in the release. Clint, the developer, also makes it clear that the project is an unpaid personal one and provides users with details of where they can contribute. He also kindly mentions the people who helped create the extension.
 
@@ -257,7 +257,7 @@ When a user decides to remove your extension, don’t miss the opportunity to ga
 
 ### Setting up an offboarding page link
 
-To gather information from leaving users, you need to set up an external webpage and then specify this in [`runtime.setUninstallURL()`](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/Runtime/setUninstallURL). This page then opens when a user removes the extension.
+To gather information from leaving users, you need to set up an external webpage and then specify this in [`runtime.setUninstallURL()`](https://developer.mozilla.org/Add-ons/WebExtensions/API/Runtime/setUninstallURL). This page then opens when a user removes the extension.
 
 ### Page content
 
@@ -289,7 +289,7 @@ Here are some examples of good offboarding pages:
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-#### [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/)
+#### [Grammarly for Firefox](https://addons.mozilla.org/firefox/addon/grammarly-1/)
 
 This page provides a personal message from one of the Grammarly developers, a short list of reasons why the user might be removing the extension, and a text box where they can provide more information.
 
@@ -310,7 +310,7 @@ This page provides a personal message from one of the Grammarly developers, a sh
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-#### [Adblock Plus](https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/)
+#### [Adblock Plus](https://addons.mozilla.org/firefox/addon/adblock-plus/)
 
 This page provides a link to reinstalling the extension, guarding against accidental removal. Then it offers a list of reasons why the user might have removed the extension, with the final option expanding into a textbox for details of other reasons. There is also a handy reminder that this information is sent to Adblock Plus and a link to their privacy policy.
 
