@@ -160,7 +160,7 @@ Similarly, when you are adding version details, be crisp and to-the-point. Make 
 
 ## Make it local
 
-If your extension is developed using WebExtension APIs, we offer comprehensive support for internationalizing your extension, using the [`i18n`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n) API, so you can add translations and localize your extension. You also have the option to localize almost all the text content of your add-on’s listing, including its name.
+If your extension is developed using WebExtension APIs, we offer comprehensive support for internationalizing your extension, using the [`i18n`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/i18n) API, so you can add translations and localize your extension. You also have the option to localize almost all the text content of your add-on’s listing, including its name.
 
 You will want to add a localized listing for each language your add-on supports. However, even if your add-on does not offer a wide selection of localized versions, localizing the listing content can help make your add-on more accessible to users around the world.
 
@@ -196,7 +196,7 @@ If your add-on is an experiment, flag this when you submit it to AMO. While doin
 
 ## Select the right platforms and versions
 
-If your add-on does not work on Android be sure to select only Linux, Mac OS, and Windows as the supported platforms. This will avoid issues with users giving poor reviews because your add-on does not work on their platform or Firefox version. For more information on defining version support, if you need to, see the manifest.json [applications key](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/applications).
+If your add-on does not work on Android be sure to select only Linux, Mac OS, and Windows as the supported platforms. This will avoid issues with users giving poor reviews because your add-on does not work on their platform or Firefox version. For more information on defining version support, if you need to, see the manifest.json [applications key](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/applications).
 
 </div>
 </article>

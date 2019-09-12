@@ -58,7 +58,7 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 1. Get an idea of the main things you'll have to change in your extension:
 
 - Familiarize yourself with the [WebExtension format and structure](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension), and [build a basic example](/documentation/develop/your-first-extension).
-- If your extension is based on XUL and XPCOM, whether it's an [overlay extension](https://developer.mozilla.org/Add-ons/Overlay_Extensions) or a [bootstrapped extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Bootstrapped_extensions), see [Comparison with XUL/XPCOM extensions](/documentation/develop/comparison-with-xul-xpcom-extensions) to find out how WebExtensions can correspond with the legacy APIs you're using.
+- If your extension is based on XUL and XPCOM, whether it's an [overlay extension](https://developer.mozilla.org/Add-ons/Overlay_Extensions) or a [bootstrapped extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/Bootstrapped_extensions), see [Comparison with XUL/XPCOM extensions](/documentation/develop/comparison-with-xul-xpcom-extensions) to find out how WebExtensions can correspond with the legacy APIs you're using.
 - If your extension is based on the Add-on SDK, see [Comparison with the Add-on SDK](/documentation/develop/comparison-with-the-add-on-sdk) to find out how WebExtensions can correspond with the legacy SDK APIs you're using.
 
 2. Rewrite your extension code. See below for migration paths for different types of extensions. From Firefox 51 onwards, you can embed an extension built using WebExtension APIs in a bootstrapped extension or an SDK add-on, and can thus port a legacy extension a piece at a time, and have a working extension at each step. See [Embedded WebExtensions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions) for more information.
@@ -160,7 +160,7 @@ Here is the comparison chart showing [XUL/XPCOM APIs and their WebExtensions for
 - [Comparison with the Add-on SDK](/documentation/develop/comparison-with-the-add-on-sdk)
 - [Comparison with XUL/XPCOM extensions](/documentation/develop/comparison-with-xul-xpcom-extensions)
 - [Browser compatibility table](https://developer.mozilla.org/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) for all WebExtensions APIs
-- [Examples of extensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples)
+- [Examples of extensions](https://developer.mozilla.org/Add-ons/WebExtensions/Examples)
 
 {% endcapture %}
 {% include modules/one-column.html

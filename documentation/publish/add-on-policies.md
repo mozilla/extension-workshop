@@ -75,11 +75,11 @@ Should an add-on include any unexpected feature that falls into one of the follo
 
 ## Content
 
-Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Policy](https://www.mozilla.org/en-US/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “<Add-on name> for Firefox”.
+Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Policy](https://www.mozilla.org/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “<Add-on name> for Firefox”.
 
 In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the following policies:
 
-- All add-ons submitted for listing on AMO are subject to Mozilla’s [Conditions of Use](https://www.mozilla.org/en-US/about/legal/acceptable-use/).
+- All add-ons submitted for listing on AMO are subject to Mozilla’s [Conditions of Use](https://www.mozilla.org/about/legal/acceptable-use/).
 - Add-ons must disclose when payment is required to enable any functionality.
 - The add-on listing should have an easy-to-read description about everything it does, and any information it collects. Please consult our best practices guide for [creating an appealing listing](/documentation/develop/create-an-appealing-listing/).
 - Includes features or functionality not related to the add-on’s core function(s)
@@ -162,7 +162,7 @@ While any code, method or practice in a submitted add-on is subject to review an
 
 ## Data Disclosure, Collection and Management
 
-You must disclose how the add-on collects, uses, stores and shares user data in the privacy policy field on AMO. Mozilla expects that the add-on limits data collection whenever possible, in keeping with Mozilla’s [Lean Data Practices](https://www.mozilla.org/en-US/about/policy/lean-data/) and Mozilla’s [Data Privacy Principles](https://www.mozilla.org/en-US/privacy/principles/), and uses the data only for the purpose for which it was originally collected.
+You must disclose how the add-on collects, uses, stores and shares user data in the privacy policy field on AMO. Mozilla expects that the add-on limits data collection whenever possible, in keeping with Mozilla’s [Lean Data Practices](https://www.mozilla.org/about/policy/lean-data/) and Mozilla’s [Data Privacy Principles](https://www.mozilla.org/privacy/principles/), and uses the data only for the purpose for which it was originally collected.
 
 User data includes all information the add-on collects, regardless of the manner. It can be personal data actively provided by the user (such as a name or email address), technical data (such as operating system, build ID, version numbers, crash reports, activation, updates), and interaction or activity data (add-on activity data, visited URLs, console logs), including interactions with Firefox.
 

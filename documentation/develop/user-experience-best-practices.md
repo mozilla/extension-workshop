@@ -85,27 +85,27 @@ Choosing the right way, or combination of ways, to make your extension's functio
 
 ### Does my extension work on most websites and web pages?
 
-If your extension provides the user with features they can use on almost every website or page, give the user access to it from a **[toolbar button](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Browser_action) using the [browser action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)**.
+If your extension provides the user with features they can use on almost every website or page, give the user access to it from a **[toolbar button](https://developer.mozilla.org/Add-ons/WebExtensions/user_interface/Browser_action) using the [browser action](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)**.
 
 - This might include providing access to your image editor or opening a page from your website.
 
 ![]({% asset "documentation/develop/browser-action.png" @path @optim %})
 
-Where you have several features you want to give the user access, you can add a [popup](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups) to the button (a popup appears like a door hanger that opens when the user selects the browser action button).
+Where you have several features you want to give the user access, you can add a [popup](https://developer.mozilla.org/Add-ons/WebExtensions/Popups) to the button (a popup appears like a door hanger that opens when the user selects the browser action button).
 
 ### Does my extension work for only some web sites and pages?
 
-If your extension offers a feature for a type of web page or specific domains, give the user access to it **from an [address bar button](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) using a [page action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)**.
+If your extension offers a feature for a type of web page or specific domains, give the user access to it **from an [address bar button](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) using a [page action](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction)**.
 
 - This might include providing access to your RSS reader on pages with RSS feeds or providing an extended feature to pages on your website.
 
 ![]({% asset "documentation/develop/page-action.png" @path @optim %})
 
-Where you have several features you want to give the user access, you can add a [popup](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Popups) to the button.
+Where you have several features you want to give the user access, you can add a [popup](https://developer.mozilla.org/Add-ons/WebExtensions/Popups) to the button.
 
 ### Does my extension need to show information or offer actions in parallel with web pages?
 
-If your extension includes information or actions that a user would want immediate access to while viewing any web page, **use a [sidebar](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)**.
+If your extension includes information or actions that a user would want immediate access to while viewing any web page, **use a [sidebar](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)**.
 
 - This might include notes the user can make about a page’s content or a feature offering various font substitutions to improve readability.
 
@@ -113,7 +113,7 @@ If your extension includes information or actions that a user would want immedia
 
 ### Does my extension offer functionality specific to page content or other browser features?
 
-If your extension offers features the user might want to access in context, **add them to an appropriate [context menu](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/user_interface/Context_menu_items)**.
+If your extension offers features the user might want to access in context, **add them to an appropriate [context menu](https://developer.mozilla.org/Add-ons/WebExtensions/user_interface/Context_menu_items)**.
 
 - This might include offering access to an image editor on the image context menu or offering extended copy features on the context menu for selected page content.
 
@@ -121,7 +121,7 @@ If your extension offers features the user might want to access in context, **ad
 
 ### Does my extension have settings the user can adjust?
 
-If your extension enables the user to change and save settings that affect the behavior of the extension, use an **[options page](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) to provide a standard Preferences link to settings** from the Add-on Manager.
+If your extension enables the user to change and save settings that affect the behavior of the extension, use an **[options page](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) to provide a standard Preferences link to settings** from the Add-on Manager.
 
 ![Typical preferences button, to access an extension's settings, from the Add-on Manager]({% asset "documentation/develop/add-on-manager-preferences-button.png" @path @optim %})
 
@@ -129,19 +129,19 @@ If your extension enables the user to change and save settings that affect the b
 
 ### Does my extension need to gather a lot of information or display content in addition to the current tabs?
 
-Where your extension needs to gather or display significant amounts of information (more than is suitable for an [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) or would benefit from additional formatting) **use [bundled web pages](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages) to deliver forms and similar content.**
+Where your extension needs to gather or display significant amounts of information (more than is suitable for an [alert](https://developer.mozilla.org/docs/Web/API/Window/alert) or would benefit from additional formatting) **use [bundled web pages](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages) to deliver forms and similar content.**
 
 ![Example of a simple bundled page displayed as a detached panel.]({% asset "documentation/develop/bundled_page_as_panel.png" @path @optim %})
 
 ### Does my extension try to help the user find web pages or content?
 
-If your extension includes functionality to locate web pages or content, such as offering a site-specific search, use [address bar suggestions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox) to deliver those recommendations.
+If your extension includes functionality to locate web pages or content, such as offering a site-specific search, use [address bar suggestions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox) to deliver those recommendations.
 
 ![Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions.]({% asset "documentation/develop/omnibox_example_full.png" @path @optim %})
 
 ### Does my extension offer tools for developers?
 
-If you are providing tools for developers, add them to the Firefox developer tools using [developer tools panels](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels).
+If you are providing tools for developers, add them to the Firefox developer tools using [developer tools panels](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels).
 
 </div>
 </article>
@@ -170,7 +170,7 @@ Users should understand what will happen when they click a button:
 
 ### If something is _really_ important and the user may not be aware, notify them
 
-If your extension has completed a critical, long running background task, use the operating system’s native [notifications](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications) to update the user when the task completes. This can be useful where the user may not be focusing on the extension or the browser, when the task finishes.
+If your extension has completed a critical, long running background task, use the operating system’s native [notifications](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications) to update the user when the task completes. This can be useful where the user may not be focusing on the extension or the browser, when the task finishes.
 
 However, use notifications sparingly. If it is sufficient for the user to discover that a process has completed when they return to the browser or extension, do **not** use notifications.
 
@@ -178,9 +178,9 @@ However, use notifications sparingly. If it is sufficient for the user to discov
 
 ### Use browserAction badges sparingly
 
-To inform users of important events, you can [add a badge](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText) over the toolbar icon of a [browserAction](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction). Do so sparingly—do not use badges to provide regular or persistent status updates.
+To inform users of important events, you can [add a badge](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText) over the toolbar icon of a [browserAction](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction). Do so sparingly—do not use badges to provide regular or persistent status updates.
 
-When it comes to [coloring a badge](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor), using one of four colors for notifications of different severity is recommended:
+When it comes to [coloring a badge](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor), using one of four colors for notifications of different severity is recommended:
 
 - Casual: blue
 - Success: green
@@ -254,7 +254,7 @@ Testing tips:
     ![The development channel section of an extension's listing page, offering access to alpha and beta versions for testing.]({% asset "documentation/develop/extensions-development-channel.png" @path @optim %})  
     When you are happy with your update, you can publish it as the new release version of your extension.
 - If you want to distribute your extension to users outside AMO, you can find the instructions for doing so, and the installation instructions you need to provide users, in the article on [Sideloading add-ons](/documentation/publish/distribute-sideloading/). Remember that, unlike distribution through AMO, you will need to send users any updated versions of your extension as you make improvements.
-- Use the [Responsive Design Mode](https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode) to test your extension for its behavior on other screen sizes and device types.
+- Use the [Responsive Design Mode](https://developer.mozilla.org/docs/Tools/Responsive_Design_Mode) to test your extension for its behavior on other screen sizes and device types.
 
 **Creating a great extension is an iterative process. While we’ve laid out the six steps here, you’ll likely revisit these as you learn what works and what doesn’t through user feedback, testing, and time.**
 
