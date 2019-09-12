@@ -68,7 +68,7 @@ An email address style ID is recommended.
 
 {:start="2"}
 
-2. Sign the add-on in [addons.mozilla.org](https://addons.mozilla.org) (AMO). Depending on how you want to make your add-on available, you can use either the unlisted (if you are distributing the add-on exclusively) or listed options. For more details, see [Signing and distributing your add-on](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution).
+2. Sign the add-on in [addons.mozilla.org](https://addons.mozilla.org) (AMO). Depending on how you want to make your add-on available, you can use either the unlisted (if you are distributing the add-on exclusively) or listed options. For more details, see [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
 
 {% endcapture %}
 {% include modules/column-w-toc.html
@@ -123,7 +123,7 @@ This method of add-on installation involves copying the add-on into one of the s
 
 ### Rename your XPI file
 
-To use this method, your XPI file must be named using the add-on or application ID, as set in [Preparing your add-on](#preparing-your-addon). The signed add-on file you downloaded from AMO will be named something like borderify-1.0-an+fx.xpi (see [Signing and distributing your add-on](https://developer.mozilla.org/docs/Mozilla/Add-ons/Distribution) for more details), change this to, for example, borderify@example.com.xpi.
+To use this method, your XPI file must be named using the add-on or application ID, as set in [Preparing your add-on](#preparing-your-addon). The signed add-on file you downloaded from AMO will be named something like borderify-1.0-an+fx.xpi (see [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/) for more details), change this to, for example, borderify@example.com.xpi.
 
 <!-- Note -->
 
