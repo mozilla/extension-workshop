@@ -3,7 +3,7 @@ layout: sidebar
 title: Enterprise
 permalink: /documentation/enterprise/
 published: false
-tags: []
+tags: [enterprise]
 contributors: [caitmuenster]
 last_updated_by: caitmuenster
 date: 2019-07-09 09:00:00
@@ -73,7 +73,7 @@ Extensions give you the ability to complement standard browser features and prov
 
 Developing extensions for your enterprise is straightforward – you can follow the standard extension development path.
 
-[Some Firefox enterprise policies](/documentation/enterprise/enterprise-policies-that-impact-extensions/) might affect the extension.com
+[Some Firefox enterprise policies](/documentation/enterprise/enterprise-policies-that-impact-extensions/) might affect the installation, behavior, and update of extensions
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -96,9 +96,9 @@ Developing extensions for your enterprise is straightforward – you can follow 
 
 ## Distributing your enterprise extension
 
-Extensions for enterprise deployments of Firefox Extended Support Release (ESR) should be distributed outside of addons.org.
+Extensions for enterprise deployments of Firefox Extended Support Release (ESR) should be distributed outside of [addons.mozilla.org](https://addons.mozilla.org).
 
-Once your extension is developed and tested, you can use one of the [enterprise distribution](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_in_the_enterprise) methods to install it in Firefox.
+Once your extension is developed and tested, you can use one of the [enterprise distribution](/documentation/enterprise/enterprise-distribution/) methods to install it in Firefox.
 
 {% endcapture %}
 {% include modules/one-column.html
