@@ -93,7 +93,7 @@ In order to distribute an Add-on, You'll need to create an account. During regis
 
 ### 3. Privacy policy
 
-Our [Websites, Communications and Cookies Privacy Notice](https://www.mozilla.org/en-US/privacy/websites/) describes what information we receive from Developers and how we use that information. We use the information we receive as described in our [Mozilla Privacy Policy](https://www.mozilla.org/privacy/).
+Our [Websites, Communications and Cookies Privacy Notice](https://www.mozilla.org/privacy/websites/) describes what information we receive from Developers and how we use that information. We use the information we receive as described in our [Mozilla Privacy Policy](https://www.mozilla.org/privacy/).
 
 {% endcapture %}
 {% include modules/one-column.html
