@@ -73,7 +73,7 @@ Extensions give you the ability to complement standard browser features and prov
 
 Developing extensions for your enterprise is straightforward – you can follow the standard extension development path.
 
-[Some Firefox enterprise policies](/documentation/enterprise/enterprise-policies-that-impact-extensions/) might affect the installation, behavior, and update of extensions
+[Some Firefox enterprise policies](/documentation/enterprise/enterprise-policies-that-impact-extensions/) might affect the installation, behavior, and update of extensions.
 
 {% endcapture %}
 {% include modules/two-column.html
