@@ -2,9 +2,22 @@
 
 # Extension Workshop
 
-Launchpad for why and how to build Firefox extensions.
+Welcome to Extension Workshop, a launchpad for building Firefox extensions! 🚀
 
-## Getting Started
+## Updating Content
+
+If you would like to update content or other resources on Extension Workshop, please:
+
+    - Make a fork of this repository.
+    - Create a new branch to contain your change. Give your branch a descriptive name, such as update-distribution-options, or add-object-fit-example.
+    - Clone your fork locally.
+    - Make your change. Please be sure to add your Github username to the lists for 'contributors' and 'last updated by', as well as the date of your update, for each file you change.
+    - Push the branch to your remote fork.
+    - Make a pull request to the original repo.
+
+If you are not sure how to complete the above steps, GitHub's [Fork a Repo guide](https://help.github.com/en/articles/fork-a-repo#fork-an-example-repository) is a good place to start.
+
+## Development Guide: Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -38,7 +51,7 @@ Note: Running locally will show unpublished content that uses the `published: fa
 | yarn start          | Starts jekyll and includes unpublished content. (Note the first run is slow!)           |
 | yarn start-prodlike | Starts jekyll and doesn't include unpublished content for a production-like experience. |
 
-## Content Updates
+## Development Guide: Content Updates
 
 This site has three templates: a full-width page, a sidebar page for documentation, and a Content Guidelines page
 
