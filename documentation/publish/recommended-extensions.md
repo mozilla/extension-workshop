@@ -76,7 +76,7 @@ The add-ons team may remove extensions from the Recommended list at any time. Re
 
 Due to the heightened exposure Recommended extensions receive and because Firefox puts its brand endorsement behind these extensions, we only consider collaborating with developers who are committed to actively maintaining their extensions. This means:
 
-- Strict adherence to AMO’s [add-on policies](/documentation/publish/add-on-policies/). If security concerns arise, developers must be responsive addressing fixes.
+- Strict adherence to AMO’s [add-on policies](/documentation/publish/add-on-policies/). If security concerns arise, developers must be responsive to addressing fixes.
 - Work with staff to polish user experience issues (e.g. copy edits, user flow optimization, etc.)
 - Address bug fixes in a timely manner.
 
