@@ -11,7 +11,7 @@ contributors:
     mdnwebdocs-bot,
     musakarakas,
     MeridelW,
-    Jorge.villalobos,
+    jvillalobos,
     rebloor,
     andymckay-github,
     wbamberg,

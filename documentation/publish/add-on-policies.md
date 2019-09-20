@@ -13,7 +13,7 @@ contributors:
     One,
     jyotsna17gupta,
     atsay,
-    Jorge.villalobos,
+    jvillalobos,
     wbamberg,
     david_ross,
     Lazaro08,

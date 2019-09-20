@@ -93,7 +93,7 @@ Check out our [publisher’s resources](/documentation/manage/resources-for-publ
 
 ## Promote your extension
 
-Grow your user base by [creating creating an appealing listing](/documentation/develop/create-an-appealing-listing/) for your extension.
+Grow your user base by [creating an appealing listing](/documentation/develop/create-an-appealing-listing/) for your extension.
 
 <!-- Video Popup Thumbnail -->
 
