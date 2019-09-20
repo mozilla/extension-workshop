@@ -201,12 +201,12 @@ Here are all available aliases and the executables they map to:
 
 <div class="table-wrapper table-scroll" markdown="1">
 
-| Alias                     | Firefox executable                                                                 |
-| ------------------------- | ---------------------------------------------------------------------------------- |
-| `firefox`                 | The [release](https://www.mozilla.org/firefox/new/) build of Firefox               |
-| `beta`                    | The [beta](https://www.mozilla.org/firefox/channel/desktop/) build of Firefox      |
-| `nightly`                 | The [nightly](https://www.mozilla.org/firefox/channel/desktop/) build of Firefox   |
-| `firefoxdeveloperedition` | The [developer](https://www.mozilla.org/firefox/channel/desktop/) build of Firefox |
+| Alias                     | Firefox executable                                                                           |
+| ------------------------- | -------------------------------------------------------------------------------------------- |
+| `firefox`                 | The [release](https://www.mozilla.org/firefox/new/) build of Firefox                         |
+| `beta`                    | The [beta](https://www.mozilla.org/firefox/channel/desktop/#beta) build of Firefox           |
+| `nightly`                 | The [nightly](https://www.mozilla.org/firefox/channel/desktop/#nightly) build of Firefox     |
+| `firefoxdeveloperedition` | The [developer](https://www.mozilla.org/firefox/channel/desktop/#developer) build of Firefox |
 
 </div>
 
