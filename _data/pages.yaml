@@ -518,6 +518,17 @@
                   id: "unsolicited-offers"
                 - title: "How can I maximize my income?"
                   id: "maximize-income"
+            - title: "Recommended extensions"
+              url: "/documentation/publish/recommended-extensions"
+              subpageitems:
+                - title: "Overview"
+                  id: "overview"
+                - title: "Criteria for Recommended extensions"
+                  id: "criteria"
+                - title: "Developer partnership"
+                  id: "partnership"
+                - title: "Selection process"
+                  id: "selection"
     - title: "Manage"
       url: "/documentation/manage/"
       subpageitems:
@@ -640,4 +651,3 @@
           url: "https://webextensions-experiments.readthedocs.io/"
         - title: "Find or create a bug"
           url: "https://bugzilla.mozilla.org"
-          
