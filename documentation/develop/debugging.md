@@ -141,7 +141,7 @@ For more information about using the debugger, see the [Debugger](https://develo
 
 {% capture note %}
 
-We use the [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colourbeastify) extension example to illustrate the debugging features relevant to options pages. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
+We use the [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) extension example to illustrate the debugging features relevant to options pages. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
 
 {% endcapture %}
 {% include modules/note.html
