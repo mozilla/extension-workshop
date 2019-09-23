@@ -34,12 +34,12 @@ date: 2019-05-20 03:25:40
 {% capture content %}
 
 <table>
-    <tr>
-        <th style="width:20%"><img src="{% asset "documentation/develop/firefox_workflow_prepare.png" @path @optim %}"></th>
-        <th style="width:20%"><img src="{% asset "documentation/develop/firefox_workflow_code.png" @path @optim %}"></th>
-        <th style="width:20%"><img src="{% asset "documentation/develop/firefox_workflow_publish.png" @path @optim %}"></th>
-        <th style="width:20%"><img src="{% asset "documentation/develop/firefox_workflow_enhance.png" @path @optim %}"></th>
-        <th style="width:20%"><img src="{% asset "documentation/develop/firefox_workflow_retire.png" @path @optim %}"></th>
+    <tr align="left">
+        <th><h3>Prepare</h3></th>
+        <th><h3>Code</h3></th>
+        <th><h3>Publish*</h3></th>
+        <th><h3>Enhance</h3></th>
+        <th><h3>Retire</h3></th>
     </tr>
     <tr>
         <td><a href="/documentation/develop/choosing-a-firefox-version-for-extension-development">Choose a Firefox version for web extension development</a></td>
