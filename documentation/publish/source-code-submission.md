@@ -87,27 +87,9 @@ If you need to provide it, matching source code must be attached to every extens
 
 </p>
 
-You can submit your source code in two ways:
-
-- during the extension upload process, in the step where you upload your extension:
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-10" markdown="1">
+Code submission process happens after the add-on validation step.
 
 ![Upload sources screenshot]({% asset "publish/upload-process-sources.png" @path @optim %})
-
-</div>
-</article>
-
-- if you’ve already uploaded your extension, open Manage Status & Versions, select the version you want to attach source code to, and submit your files in the source code section:
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
-
-![Upload sources screenshot]({% asset "publish/version-page-sources.png" @path @optim %})
-
-</div>
-</article>
 
 {% endcapture %}
 {% include modules/column-w-toc.html
