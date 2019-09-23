@@ -64,7 +64,7 @@ Then install the extension using **Install Add-on From File** in the Add-on mana
 
 ![installing unpacked extension]({% asset "documentation/develop/installing_unpackaged_extension.png" @optim @path %})
 
-Note that the caution message relates to this being an unsigned extension; this message isn’t displayed during installation from [addons.mozilla.org](https://addon.mozilla.org).
+Note that the caution message relates to this being an unsigned extension; this message isn’t displayed during installation from [addons.mozilla.org](https://addons.mozilla.org).
 
 ### Permission requests for extension upgrade
 
