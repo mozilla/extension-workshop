@@ -57,7 +57,7 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 
 1. Get an idea of the main things you'll have to change in your extension:
 
-- Familiarize yourself with the [WebExtension format and structure](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension), and [build a basic example](/documentation/develop/your-first-extension).
+- Familiarize yourself with the [WebExtension format and structure](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension), and [build a basic example](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#Writing_the_extension).
 - If your extension is based on XUL and XPCOM, whether it's an [overlay extension](https://developer.mozilla.org/Add-ons/Overlay_Extensions) or a [bootstrapped extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/Bootstrapped_extensions), see [Comparison with XUL/XPCOM extensions](/documentation/develop/comparison-with-xul-xpcom-extensions) to find out how WebExtensions can correspond with the legacy APIs you're using.
 - If your extension is based on the Add-on SDK, see [Comparison with the Add-on SDK](/documentation/develop/comparison-with-the-add-on-sdk) to find out how WebExtensions can correspond with the legacy SDK APIs you're using.
 

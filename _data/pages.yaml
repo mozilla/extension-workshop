@@ -519,7 +519,7 @@
                 - title: "How can I maximize my income?"
                   id: "maximize-income"
             - title: "Recommended extensions"
-              url: "/documentation/publish/recommended-extensions"
+              url: "/documentation/publish/recommended-extensions/"
               subpageitems:
                 - title: "Overview"
                   id: "overview"
