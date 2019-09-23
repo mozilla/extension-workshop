@@ -34,12 +34,12 @@ date: 2019-05-20 03:25:40
 {% capture content %}
 
 <table>
-    <tr align="left">
-        <th><h3>Prepare</h3></th>
-        <th><h3>Code</h3></th>
-        <th><h3>Publish*</h3></th>
-        <th><h3>Enhance</h3></th>
-        <th><h3>Retire</h3></th>
+    <tr align="left" style="font-size: 28px">
+        <th>Prepare</th>
+        <th>Code</th>
+        <th>Publish<a href="#distribute-extension">*</a></th>
+        <th>Enhance</th>
+        <th>Retire</th>
     </tr>
     <tr>
         <td><a href="/documentation/develop/choosing-a-firefox-version-for-extension-development">Choose a Firefox version for web extension development</a></td>
@@ -78,6 +78,7 @@ date: 2019-05-20 03:25:40
     </tr>
 </table>
 
+ <section id="distribute-extension"></section>
 <p>* Or distribute your extension for <a href="/documentation/publish/distribute-sideloading/">sideloading</a>, <a href="/documentation/publish/distribute-for-desktop-apps/">desktop apps</a>, or <a href="/documentation/enterprise/enterprise-distribution/">in an enterprise</a>.</p>
 
 **Have an extension you want to bring to Firefox?** We provide advice, guidelines, and tools to help making make porting straightforward. To get started, visit [Porting a Google Chrome extension](/documentation/develop/porting-a-google-chrome-extension/).
