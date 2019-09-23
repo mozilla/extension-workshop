@@ -145,7 +145,7 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 
 {% capture note %}
 
-See [http://www.info-zip.org/mans/zip.html](http://www.info-zip.org/mans/zip.html)
+See [http://infozip.sourceforge.net/Zip.html](http://infozip.sourceforge.net/Zip.html)
 
 {% endcapture %}
 {% include modules/note.html
