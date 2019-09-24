@@ -1,7 +1,7 @@
 ---
 layout: sidebar
 title: Recommended extensions
-permalink: /documentation/publish/recommended-extensions
+permalink: /documentation/publish/recommended-extensions/
 published: false
 topic: Publish
 tags: [promote, recommended]
