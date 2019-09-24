@@ -67,6 +67,16 @@
     if (settings.default_target.length) {
       settings.default_target.find('.bg').on('click', closeVideo);
     }
+
+    $('body')
+      // Deregister to avoiding multiple bindings.
+      .off('keyup.escCloseVideo')
+      .on('keyup.escCloseVideo', function(e) {
+        if (e.originalEvent.keyCode === 27 && closeVideo) {
+          closeVideo();
+        }
+      });
+
     if ($(settings.close).length) {
       $(settings.close).on('click', closeVideo);
     }
@@ -171,6 +181,12 @@
     }
 
     function closeVideo(options) {
+      // Bail if yt_player is falsey or required
+      // methods not present.
+      if (!yt_player || !yt_player.stopVideo) {
+        return;
+      }
+
       var v = $.extend(
         {
           fast: false,
