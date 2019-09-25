@@ -57,28 +57,36 @@ You must host your update manifest file on a secure (HTTPS) server.
 A typical update manifest looks something like:
 
 <!-- Syntax Highlighting -->
+<!-- prettier-ignore-start -->
 
 {% highlight json linenos %}
 
 {
-"addons": {
-"{abcd1234-1abc-1234-12ab-abcdef123456}": {
-"updates": [
-{ "version": "0.1",
-"update_link": "https://example.com/addon-0.1.xpi" },
-{ "version": "0.2",
-"update_link": "http://example.com/addon-0.2.xpi",
-"update_hash": "sha256:fe93c2156f05f20621df1723b0f39c8ab28cdbeec342efa95535d3abff932096" },
-{ "version": "0.3",
-"update_link": "https://example.com/addon-0.3.xpi",
-"applications": {
-"gecko": { "strict_min_version": "44" } } }
-]
+  "addons": {
+    "{abcd1234-1abc-1234-12ab-abcdef123456}": {
+      "updates": [
+        {
+          "version": "0.1",
+          "update_link": "https://example.com/addon-0.1.xpi"
+        },
+        {
+          "version": "0.2",
+          "update_link": "http://example.com/addon-0.2.xpi",
+          "update_hash": "sha256:fe93c2156f05f20621df1723b0f39c8ab28cdbeec342efa95535d3abff932096"
+        },
+        {
+          "version": "0.3",
+          "update_link": "https://example.com/addon-0.3.xpi",
+          "applications": {
+            "gecko": { "strict_min_version": "44" }
+          }
+        }
+      ]
+    }
+  }
 }
-}
-}
-
 {% endhighlight %}
+<!-- prettier-ignore-end -->
 
 <!-- END: Syntax Highlighting -->
 
@@ -95,16 +103,17 @@ A typical update manifest looks something like:
 If your extension is not hosted on AMO, you must specify the location of your update manifest in your extension. For extensions developed with WebExtension APIs, add the following to your manifest:
 
 <!-- Syntax Highlighting -->
-
+<!-- prettier-ignore-start -->
 {% highlight json linenos %}
 
 "applications": {
-"gecko": {
-"update_url": "https://example.com/updates.json"
-}
+  "gecko": {
+    "update_url": "https://example.com/updates.json"
+  }
 }
 
 {% endhighlight %}
+<!-- prettier-ignore-end -->
 
 <!-- END: Syntax Highlighting -->
 
