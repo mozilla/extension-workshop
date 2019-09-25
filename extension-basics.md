@@ -39,7 +39,7 @@ Get how-tos, resources, and information to successfully build and ship your exte
 
 The Extension Workshop can help you develop extensions for Firefox and give your users simple, yet powerful ways to customize their browsing experience. You’ll find:
 
-- [Overview of the Firefox extension features](/#about)
+- [Overview of the Firefox extension features](/#about/)
 - [Tools and processes for developing and testing](/documentation/develop/)
 - [How to publish your extension on addons.mozilla.org or distribute it yourself](/documentation/publish/)
 - [How to manage your published extension](/documentation/manage/)
