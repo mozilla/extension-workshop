@@ -111,15 +111,18 @@ Lint does not report on APIs that are not implemented by Firefox or Firefox for 
 
 When setting `strict_min_version`, unless you’re targeting a specific version of Firefox, choose the most recent version of Firefox you expect your extension to be compatible with. For example, you can reasonably expect that most installations of Firefox for Android will be the current or previous version. So, if the current version is 66, consider setting 65 is the minimum version:
 
+<!-- prettier-ignore-start -->
 {% highlight json linenos %}
 
 "browser_specific_settings": {
-"gecko": {
-"strict_min_version": "65.0"
-}
+  "gecko": {
+    "strict_min_version": "65.0"
+  }
 }
 
 {% endhighlight %}
+<!-- prettier-ignore-end -->
+
 {% endcapture %}
 {% include modules/one-column.html
   id="check-for-firefox-for-android-compatibility"
@@ -136,15 +139,17 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 
 In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the manifest.json:
 
-{% highlight javascript %}
+<!-- prettier-ignore-start -->
+{% highlight javascript linenos %}
 
 "browser_specific_settings": {
-"gecko": {
-"id": "borderify@example.com"
+  "gecko": {
+    "id": "borderify@example.com"
+  }
 }
-},
 
 {% endhighlight %}
+<!-- prettier-ignore-end -->
 
 If you’re using web-ext, follow the [Testing in Firefox for Android](/documentation/develop/getting-started-with-web-ext#testing-in-firefox-for-android) instructions.
 
