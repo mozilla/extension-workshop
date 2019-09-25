@@ -86,17 +86,14 @@ In Chrome, asynchronous APIs use callbacks to return values, and [`runtime.lastE
 {% highlight javascript linenos %}
 
 function logCookie(c) {
-if (chrome.extension.lastError) {
-console.error(chrome.extension.lastError);
-} else {
-console.log(c);
-}
+  if (chrome.extension.lastError) {
+    console.error(chrome.extension.lastError);
+  } else {
+    console.log(c);
+  }
 }
 
-chrome.cookies.set(
-{url: "https://developer.mozilla.org/"},
-logCookie
-);
+chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 
 {% endhighlight %}
 
@@ -109,16 +106,14 @@ The equivalent WebExtensions API code using [promise](https://developer.mozilla.
 {% highlight javascript linenos %}
 
 function logCookie(c) {
-console.log(c);
+  console.log(c);
 }
 
 function logError(e) {
-console.error(e);
+  console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-{url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 
 {% endhighlight %}
