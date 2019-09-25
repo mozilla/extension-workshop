@@ -38,6 +38,7 @@
     "clean": "rimraf './.jekyll-cache/' && jekyll clean",
     "build": "JEKYLL_ENV=production SVGO_BIN='node_modules/svgo/bin/svgo' jekyll build",
     "start": "jekyll serve --unpublished --incremental --config _config.yml,_config_local.yml",
+    "start-no-increment": "jekyll serve --unpublished --config _config.yml,_config_local.yml",
     "start-prodlike": "SVGO_BIN='node_modules/svgo/bin/svgo' jekyll serve"
   }
 }
