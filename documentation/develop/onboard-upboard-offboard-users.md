@@ -196,14 +196,14 @@ You can listen for your extension’s updates using ` runtime.``onInstalled ` as
 browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
   if (temporary) return; // skip during development
   switch (reason) {
-    case "install":
+    // see above
+    case "update":
       {
-        const url = browser.runtime.getURL("views/installed.html");
+        const url = browser.runtime.getURL("views/updated.html");
         await browser.tabs.create({ url });
         // or: await browser.windows.create({ url, type: "popup", height: 600, width: 600, });
       }
       break;
-    // see below
   }
 });
 {% endhighlight %}
