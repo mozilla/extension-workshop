@@ -67,6 +67,17 @@
     if (settings.default_target.length) {
       settings.default_target.find('.bg').on('click', closeVideo);
     }
+
+    $('body')
+      // Deregister to avoiding multiple bindings.
+      .off('keyup.escCloseVideo')
+      .on('keyup.escCloseVideo', function(e) {
+        // 27 is the escape key.
+        if (e.originalEvent.keyCode === 27 && closeVideo) {
+          closeVideo();
+        }
+      });
+
     if ($(settings.close).length) {
       $(settings.close).on('click', closeVideo);
     }
@@ -171,6 +182,13 @@
     }
 
     function closeVideo(options) {
+      if (!yt_player || !yt_player.stopVideo) {
+        console.log(
+          'Bailing early from closeVideo due to yt_player being undefined or stopVideo method missing.'
+        );
+        return;
+      }
+
       var v = $.extend(
         {
           fast: false,
