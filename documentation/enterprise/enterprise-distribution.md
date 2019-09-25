@@ -116,14 +116,15 @@ It is safe to modify the Registry keys while Firefox is running.
 1. Ensure the add-on has an add-on ID, by including the following to its manifest.json file, replacing _your-add-on-name@your-domain.com_ with a suitable ID for your add-on:
 
 <!-- Syntax Highlighting -->
-
+<!-- prettier-ignore-start -->
 {% highlight javascript linenos %}
 "applications": {
-"gecko": {
-"id": "your-add-on-name@your-domain.com"
-}
+  "gecko": {
+    "id": "your-add-on-name@your-domain.com"
+  }
 }
 {% endhighlight %}
+<!-- prettier-ignore-end -->
 
 <!-- END: Syntax Highlighting -->
 
