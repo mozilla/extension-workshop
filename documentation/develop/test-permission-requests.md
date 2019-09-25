@@ -89,7 +89,6 @@ To perform the test you'll need to:
   - give your extension an ID, if you’ve not done so already.
   - define the update URL where you’ll host your [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates). For example:
 
-<!-- prettier-ignore-start -->
 {% highlight javascript linenos %}
 "applications": {
   "gecko": {
@@ -99,7 +98,6 @@ To perform the test you'll need to:
   }
 },
 {% endhighlight %}
-<!-- prettier-ignore-end -->
 
 - if necessary, [create a package](/documentation/publish/package-your-extension) containing your original extension.
 - update your extension and add details of the new permissions required to the manifest.json file, not forgetting to update the version number. Create a package containing your updated extension.
@@ -116,7 +114,6 @@ If the packages were generated with .zip extensions change them to .xpi, otherwi
 
 - create the [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates) with details of both extension versions, which should be similar to this:
 
-<!-- prettier-ignore-start -->
 {% highlight javascript linenos %}
 "applications": {
   "gecko": {
@@ -126,7 +123,6 @@ If the packages were generated with .zip extensions change them to .xpi, otherwi
   }
 },
 {% endhighlight %}
-<!-- prettier-ignore-end -->
 
 - upload the two extension packages and the updates manifest to your HTTP or HTTPS server.
 - run the [Nightly](https://nightly.mozilla.org/) or [Developer Edition](https://www.mozilla.org/firefox/developer/) versions of Firefox.

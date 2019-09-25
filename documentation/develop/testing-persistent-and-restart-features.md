@@ -57,7 +57,6 @@ The add-on ID is used to uniquely identify each extension and in turn that ID is
 
 An extension can be assigned an add-on ID using the manifest.json file `"applications"` key.
 
-<!-- prettier-ignore-start -->
 {% highlight javascript linenos %}
 "applications": {
   "gecko": {
@@ -65,7 +64,6 @@ An extension can be assigned an add-on ID using the manifest.json file `"applica
   }
 }
 {% endhighlight %}
-<!-- prettier-ignore-end -->
 
 If the extension doesn't have an add-on ID defined with the `"applications"` key, it gets an add-on ID through one of the following:
 

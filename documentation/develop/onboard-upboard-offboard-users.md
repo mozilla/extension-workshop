@@ -77,7 +77,6 @@ A good onboarding experience is essential for every browser extension and is not
 
 You can listen for your extension’s installation using ` runtime.``onInstalled ` as follows:
 
-<!-- prettier-ignore-start -->
 {% highlight javascript linenos %}
 browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
   if (temporary) return; // skip during development
@@ -93,7 +92,6 @@ browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
   }
 });
 {% endhighlight %}
-<!-- prettier-ignore-end -->
 
 ### Onboarding page content
 
@@ -191,7 +189,6 @@ When you update to your extension, take the opportunity to tell your users about
 
 You can listen for your extension’s updates using ` runtime.``onInstalled ` as follows:
 
-<!-- prettier-ignore-start -->
 {% highlight javascript linenos %}
 browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
   if (temporary) return; // skip during development
@@ -207,7 +204,6 @@ browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
   }
 });
 {% endhighlight %}
-<!-- prettier-ignore-end -->
 
 ### Upboarding page content
 

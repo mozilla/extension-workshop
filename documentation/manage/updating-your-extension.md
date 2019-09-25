@@ -57,8 +57,6 @@ You must host your update manifest file on a secure (HTTPS) server.
 A typical update manifest looks something like:
 
 <!-- Syntax Highlighting -->
-<!-- prettier-ignore-start -->
-
 {% highlight json linenos %}
 
 {
@@ -86,8 +84,6 @@ A typical update manifest looks something like:
   }
 }
 {% endhighlight %}
-<!-- prettier-ignore-end -->
-
 <!-- END: Syntax Highlighting -->
 
 {% endcapture %}
@@ -103,7 +99,6 @@ A typical update manifest looks something like:
 If your extension is not hosted on AMO, you must specify the location of your update manifest in your extension. For extensions developed with WebExtension APIs, add the following to your manifest:
 
 <!-- Syntax Highlighting -->
-<!-- prettier-ignore-start -->
 {% highlight json linenos %}
 
 "applications": {
@@ -113,7 +108,6 @@ If your extension is not hosted on AMO, you must specify the location of your up
 }
 
 {% endhighlight %}
-<!-- prettier-ignore-end -->
 
 <!-- END: Syntax Highlighting -->
 
