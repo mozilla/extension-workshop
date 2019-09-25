@@ -4,9 +4,13 @@ title: Extension Basics
 permalink: /extension-basics/
 published: false
 tags: []
-contributors: [caitmuenster]
-last_updated_by: caitmuenster
-date: 2019-07-09 09:00:00
+contributors:
+  [
+    caitmuenster,
+	rbrishabh,
+  ]
+last_updated_by: rbrishabh
+date: 2019-09-24 19:34:00
 ---
 
 <!-- Overview Page Hero Banner -->
@@ -37,7 +41,7 @@ Get how-tos, resources, and information to successfully build and ship your exte
 
 The Extension Workshop can help you develop extensions for Firefox and give your users simple, yet powerful ways to customize their browsing experience. You’ll find:
 
-- Overview of the Firefox extension features
+- [Overview of the Firefox extension features](https://extensionworkshop.allizom.org/#about)
 - [Tools and processes for developing and testing](/documentation/develop/)
 - [How to publish your extension on addons.mozilla.org or distribute it yourself](/documentation/publish/)
 - [How to manage your published extension](/documentation/manage/)
