@@ -14,6 +14,7 @@
  * Changelog:
  * v 1.0 20.09.2013
  * v 2.0 28.02.2014 -- added configurable breakpoints
+ * v 2.1 25.09.2019 -- fixed breakpoints to publish if matches is defined.
  *
  * --------------------------------------------------------------------
  */
@@ -55,7 +56,7 @@
     // media query change
     // ------------------
     function breakpoint(mq) {
-      if (mq.matches) {
+      if (typeof mq.matches !== 'undefined') {
         var media = {};
         for (var i = 0; i < matches.length; i++) {
           media[matches[i].label] = matches[i].match.matches;
