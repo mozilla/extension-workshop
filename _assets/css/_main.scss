@@ -240,6 +240,7 @@ table {
 
 code {
   border-radius: $global-radius;
+  overflow-wrap: break-word;
 }
 
 a code {
