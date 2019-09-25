@@ -59,9 +59,9 @@ An extension can be assigned an add-on ID using the manifest.json file `"applica
 
 {% highlight javascript linenos %}
 "applications": {
-"gecko": {
-"id": "addon@example.com"
-}
+  "gecko": {
+    "id": "addon@example.com"
+  }
 }
 {% endhighlight %}
 

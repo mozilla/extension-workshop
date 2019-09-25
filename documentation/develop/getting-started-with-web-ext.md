@@ -321,7 +321,7 @@ The file should be a CommonJS module [as understood by NodeJS](https://nodejs.or
 
 {% highlight javascript %}
 module.exports = {
-verbose: true,
+  verbose: true,
 };
 {% endhighlight %}
 
@@ -329,15 +329,15 @@ If you want to specify options that only apply to a specific command, you nest t
 
 {% highlight javascript %}
 module.exports = {
-// Global options:
-verbose: true,  
- // Command options:
-build: {
-overwriteDest: true,
-},
-run: {
-firefox: 'nightly',
-},
+  // Global options:
+  verbose: true,
+  // Command options:
+  build: {
+    overwriteDest: true,
+  },
+  run: {
+    firefox: 'nightly',
+  },
 };
 {% endhighlight %}
 
@@ -347,10 +347,10 @@ If an option can be specified multiple times on the command line then you define
 
 {% highlight javascript %}
 module.exports = {
-ignoreFiles: [
-'package-lock.json',
-'yarn.lock',
-],
+  ignoreFiles: [
+    'package-lock.json',
+    'yarn.lock',
+  ],
 };
 {% endhighlight %}
 
@@ -358,12 +358,12 @@ ignoreFiles: [
 
 {% highlight javascript %}
 {
-"name": "an-extension-src-dir-with-a-package-json",
-"version": "1.0.0",
-...
-"webExt": {
-"sourceDir": "dist/extension/"
-}
+  "name": "an-extension-src-dir-with-a-package-json",
+  "version": "1.0.0",
+  ...
+  "webExt": {
+    "sourceDir": "dist/extension/"
+  }
 }
 {% endhighlight %}
 
@@ -443,7 +443,7 @@ You can use `web-ext` as a `NodeJS module`. Here is [more information](https://g
 
 ## See also
 
-[web-ext repo](https://github.com/mozilla/web-ext)  
+[web-ext repo](https://github.com/mozilla/web-ext)
 [web-ext command reference](/documentation/develop/web-ext-command-reference/)
 
 </div>

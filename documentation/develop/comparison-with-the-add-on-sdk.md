@@ -362,7 +362,7 @@ One big limitation of WebExtensions compared with the SDK is that SDK add-ons ca
 
 To access privileged APIs in the SDK, you use require():
 
-{% highlight json linenos %}
+{% highlight javascript linenos %}
 
 var tabs = require("sdk/tabs");
 tabs.open("https://developer.mozilla.org/");
@@ -371,11 +371,9 @@ tabs.open("https://developer.mozilla.org/");
 
 With WebExtensions most APIs are made available already, with no need to import them:
 
-{% highlight json linenos %}
+{% highlight javascript linenos %}
 
-browser.tabs.create({
-"url": "https://developer.mozilla.org/"
-});
+browser.tabs.create({ "url": "https://developer.mozilla.org/" });
 
 {% endhighlight %}
 
@@ -388,7 +386,7 @@ For some WebExtension APIs, you need to ask permission first, using the [`permis
 ...
 
 "permissions": [
-"tabs"
+  "tabs"
 ]
 
 ...
@@ -397,15 +395,16 @@ For some WebExtension APIs, you need to ask permission first, using the [`permis
 
 **background script:**
 
-{% highlight json linenos %}
+{% highlight javascript linenos %}
 
 function logUrl(tabs) {
-console.log(tabs[0].url);
+  console.log(tabs[0].url);
 }
 
-var querying = browser.tabs.query(
-{active: true, currentWindow: true}
-);
+var querying = browser.tabs.query({
+  active: true,
+  currentWindow: true
+});
 
 querying.then(logUrl);
 
@@ -433,8 +432,8 @@ The first table covers high-level SDK APIs, the second covers low-level APIs.
 | [notifications](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/notifications)       | [`notifications`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/notifications)                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | [page-mod](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod)                 | [`content_scripts`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)                                                                                                                                                                                                                                                                                                                                                                                                               |
 | [page-worker](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-worker)           | Porting isn't complete and being treated in [Bug 1318532](https://bugzilla.mozilla.org/show_bug.cgi?id=1318532) <br/><br/> Workarounds (that might require webrequestBlocking to access all webpages [[example](https://stackoverflow.com/questions/15532791/getting-around-x-frame-options-deny-in-a-chrome-extension)]): <br/><br/> - Use the background page <br/> - load remote iframes into the background page <br/> - make an [ajax](https://developer.mozilla.org/docs/AJAX) call to get static information from the page |
-| [panel](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel)                       | See [UI elements](#ui-elements) above.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| [passwords](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/passwords)               | [Experimental logins API](https://github.com/web-ext-experiments/logins)                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| /[panel](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel)                       | See [UI elements](#ui-elements) above.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|/ [passwords](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/passwords)               | [Experimental logins API](https://github.com/web-ext-experiments/logins)                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | [private-browsing](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/private-browsing) | [`Tab.incognito`](https://developer.mozilla.org/Add-ons/WebExtensions/API/Tabs/Tab) and [`Window.incognito`](https://developer.mozilla.org/Add-ons/WebExtensions/API/windows/Window).                                                                                                                                                                                                                                                                                                                                             |
 | [querystring](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/querystring)           | [`window.URLSearchParams`](https://developer.mozilla.org/docs/Web/API/URLSearchParams)                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | [request](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/request)                   | [`window.fetch`](https://developer.mozilla.org/docs/Web/API/Fetch_API) or [`window.XMLHttpRequest`](https://developer.mozilla.org/docs/Web/API/XMLHttpRequest)                                                                                                                                                                                                                                                                                                                                                                    |

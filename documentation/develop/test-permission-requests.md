@@ -90,15 +90,13 @@ To perform the test you'll need to:
   - define the update URL where you’ll host your [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates). For example:
 
 {% highlight javascript linenos %}
-…
 "applications": {
-"gecko": {
-"strict_min_version": "54.0a1",
-"update_url": "https://your-account.github.io/webextensions/upgrade.json",
-"id": "test@your-address.com"
-}
+  "gecko": {
+    "strict_min_version": "54.0a1",
+    "update_url": "https://your-account.github.io/webextensions/upgrade.json",
+    "id": "test@your-address.com"
+  }
 },
-…
 {% endhighlight %}
 
 - if necessary, [create a package](/documentation/publish/package-your-extension) containing your original extension.
@@ -117,15 +115,13 @@ If the packages were generated with .zip extensions change them to .xpi, otherwi
 - create the [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates) with details of both extension versions, which should be similar to this:
 
 {% highlight javascript linenos %}
-…
 "applications": {
-"gecko": {
-"strict_min_version": "54.0a1",
-"update_url": "https://your-account.github.io/webextensions/upgrade.json",
-"id": "test@your-address.com"
-}
+  "gecko": {
+    "strict_min_version": "54.0a1",
+    "update_url": "https://your-account.github.io/webextensions/upgrade.json",
+    "id": "test@your-address.com"
+  }
 },
-…
 {% endhighlight %}
 
 - upload the two extension packages and the updates manifest to your HTTP or HTTPS server.

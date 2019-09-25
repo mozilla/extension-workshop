@@ -78,16 +78,18 @@ A good onboarding experience is essential for every browser extension and is not
 You can listen for your extension’s installation using ` runtime.``onInstalled ` as follows:
 
 {% highlight javascript linenos %}
-browser.runtime.onInstalled.addListener(async ({ reason, temporary, }) => {
-if (temporary) return; // skip during development
-switch (reason) {
-case "install": {
-const url = browser.runtime.getURL("views/installed.html");
-await browser.tabs.create({ url, });
-// or: await browser.windows.create({ url, type: "popup", height: 600, width: 600, });
-} break;
-// see below
-}
+browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
+  if (temporary) return; // skip during development
+  switch (reason) {
+    case "install":
+      {
+        const url = browser.runtime.getURL("views/installed.html");
+        await browser.tabs.create({ url });
+        // or: await browser.windows.create({ url, type: "popup", height: 600, width: 600, });
+      }
+      break;
+    // see below
+  }
 });
 {% endhighlight %}
 
@@ -99,14 +101,14 @@ Consider adding the following information to the onboarding page, in roughly the
 
 - Your extension’s name, as it appears on [addons.mozilla.org](http://addons.mozilla.org/), along with its icon or logo.
 - A brief overview of your extension’s features and functions, enough information to reassure the new user they’ve installed the right extension.
-- Practical information on how to use the extension, including details on how to access its features from a toolbar button, address bar button, sidebar, or context menu. Include at least one simple activity that the user can do immediately. If your extension has many features, focus on providing instructions for the things users do first.  
+- Practical information on how to use the extension, including details on how to access its features from a toolbar button, address bar button, sidebar, or context menu. Include at least one simple activity that the user can do immediately. If your extension has many features, focus on providing instructions for the things users do first.
   <u>Tip</u>: Provide an introductory video: showing someone how to use your extension can be a lot more effective than telling them. If you do create a video, provide closed captioning or a transcript to make sure it’s accessible.
-- If your extension features can be customized, explain the options available and provide a link to the settings page. If settings are a significant feature of the extension or the range of settings is large, don’t expect your new user to be happy working through several pages of settings now: consider providing quick links to specific configurations.  
+- If your extension features can be customized, explain the options available and provide a link to the settings page. If settings are a significant feature of the extension or the range of settings is large, don’t expect your new user to be happy working through several pages of settings now: consider providing quick links to specific configurations.
   <u>Tip</u>: Use `runtime.openOptionsPage()` to open the settings page.
 - If the user needs an account for your web service to make use of the extension, provide them with a link to sign in or register.
-- If your extension has paid features, let the user know what those features are and how much they cost. If you have tiered payments, provide a comparison chart or link to one on the extension’s website.  
+- If your extension has paid features, let the user know what those features are and how much they cost. If you have tiered payments, provide a comparison chart or link to one on the extension’s website.
   <u>Tip</u>: If you fund the extension’s development from donations, now is a good time to tell people and provide a link to the donate page.
-- Provide links to additional information such as the extension support page, help guide, tutorials, and alike.  
+- Provide links to additional information such as the extension support page, help guide, tutorials, and alike.
   <u>Tip</u>: If you have other extensions, give them a mention.
 
 Having read your onboarding page, your new user should be confident about starting to use the extension immediately and know where to go if they need more information or support. If possible, they should have had some hands-on experience with key features.
@@ -188,16 +190,18 @@ When you update to your extension, take the opportunity to tell your users about
 You can listen for your extension’s updates using ` runtime.``onInstalled ` as follows:
 
 {% highlight javascript linenos %}
-browser.runtime.onInstalled.addListener(async ({ reason, temporary, }) => {
-if (temporary) return; // skip during development
-switch (reason) {
-// see above
-case "update": {
-const url = browser.runtime.getURL("views/updated.html");
-await browser.tabs.create({ url, });
-// or: await browser.windows.create({ url, type: "popup", height: 600, width: 600, });
-} break;
-}
+browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
+  if (temporary) return; // skip during development
+  switch (reason) {
+    // see above
+    case "update":
+      {
+        const url = browser.runtime.getURL("views/updated.html");
+        await browser.tabs.create({ url });
+        // or: await browser.windows.create({ url, type: "popup", height: 600, width: 600, });
+      }
+      break;
+  }
 });
 {% endhighlight %}
 

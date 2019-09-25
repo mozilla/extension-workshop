@@ -114,12 +114,13 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 {% highlight json linenos %}
 
 "browser_specific_settings": {
-"gecko": {
-"strict_min_version": "65.0"
-}
+  "gecko": {
+    "strict_min_version": "65.0"
+  }
 }
 
 {% endhighlight %}
+
 {% endcapture %}
 {% include modules/one-column.html
   id="check-for-firefox-for-android-compatibility"
@@ -136,13 +137,13 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 
 In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the manifest.json:
 
-{% highlight javascript %}
+{% highlight javascript linenos %}
 
 "browser_specific_settings": {
-"gecko": {
-"id": "borderify@example.com"
+  "gecko": {
+    "id": "borderify@example.com"
+  }
 }
-},
 
 {% endhighlight %}
 
