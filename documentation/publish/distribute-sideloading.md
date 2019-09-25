@@ -52,17 +52,19 @@ Regardless of the sideloading method used, you must prepare the add-on as follow
 
 1. Ensure the add-on includes an ID, by adding the following to its manifest.json file, replacing **_your-add-on-name@your-domain.com_** with a suitable ID for your add-on:
 
+<!-- prettier-ignore-start -->
 <!-- Syntax Highlighting -->
 
 {% highlight javascript linenos %}
 "applications": {
-"gecko": {
-"id": "your-add-on-name@your-domain.com"
-}
+  "gecko": {
+    "id": "your-add-on-name@your-domain.com"
+  }
 }
 {% endhighlight %}
 
 <!-- END: Syntax Highlighting -->
+<!-- prettier-ignore-end -->
 
 An email address style ID is recommended.
 
