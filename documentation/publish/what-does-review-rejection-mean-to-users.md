@@ -2,7 +2,7 @@
 layout: sidebar
 title: What does review rejection mean to users?
 permalink: /documentation/publish/what-does-review-rejection-mean-to-users/
-published: false
+published: true
 topic: Publish
 tags: [Add-ons, Extensions, Guide, publication, Review, WebExtensions]
 contributors: [potterwrit, rebloor]

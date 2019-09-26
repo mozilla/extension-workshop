@@ -2,7 +2,7 @@
 layout: sidebar
 title: Developing extensions for Firefox for Android
 permalink: /documentation/develop/developing-extensions-for-firefox-for-android/
-published: false
+published: true
 topic: Develop
 tags: [Add-ons, Beginner, Guide, Mobile, WebExtensions]
 contributors:

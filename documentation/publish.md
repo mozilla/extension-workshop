@@ -2,7 +2,7 @@
 layout: sidebar
 title: Publish
 permalink: /documentation/publish/
-published: false
+published: true
 tags: []
 contributors: [caitmuenster]
 last_updated_by: caitmuenster

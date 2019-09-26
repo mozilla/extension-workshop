@@ -2,7 +2,7 @@
 layout: sidebar
 title: Add-ons Blocking Process
 permalink: /documentation/publish/add-ons-blocking-process/
-published: false
+published: true
 topic: Publish
 contributors: [kewisch]
 last_updated_by: kewisch

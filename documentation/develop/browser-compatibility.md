@@ -2,7 +2,7 @@
 layout: sidebar
 title: Browser compatibility
 permalink: /documentation/develop/browser-compatibility/
-published: false
+published: true
 topic: Develop
 tags: [Beginner, Extensions, WebExtensions, compatibility, cross-browser]
 contributors: [rebloor]

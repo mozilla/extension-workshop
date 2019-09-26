@@ -2,7 +2,7 @@
 layout: sidebar
 title: Enterprise distribution
 permalink: /documentation/enterprise/enterprise-distribution/
-published: false
+published: true
 topic: Enterprise
 tags: [enterprise, policies, distribution, guide, installation]
 contributors:

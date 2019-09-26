@@ -2,7 +2,7 @@
 layout: sidebar
 title: Themes
 permalink: /documentation/themes/
-published: false
+published: true
 tags: [themes]
 contributors: [caitmuenster]
 last_updated_by: caitmuenster

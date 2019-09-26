@@ -2,7 +2,7 @@
 layout: sidebar
 title: Add-ons for desktop apps
 permalink: /documentation/publish/distribute-sideloading/
-published: false
+published: true
 topic: Publish
 tags: [add-on, distribution, sideloading, guide, installation]
 contributors: [irenesmith, jwilk, hellosct1, gray_-_wolf, luanmm, rebloor]

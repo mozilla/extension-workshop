@@ -2,7 +2,7 @@
 layout: sidebar
 title: Best practices for collecting user data consents
 permalink: /documentation/develop/best-practices-for-collecting-user-data-consents/
-published: false
+published: true
 topic: Develop
 tags:
   [Add-ons, Extensions, How to, Privacy, UI, User Interface, UX, WebExtensions]
