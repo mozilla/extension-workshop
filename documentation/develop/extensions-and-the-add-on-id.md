@@ -2,7 +2,7 @@
 layout: sidebar
 title: Extensions and the Add-on ID
 permalink: /documentation/develop/extensions-and-the-add-on-id/
-published: false
+published: true
 topic: Develop
 tags: [WebExtensions]
 contributors:

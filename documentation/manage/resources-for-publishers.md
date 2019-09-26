@@ -2,7 +2,7 @@
 layout: sidebar
 title: Resources for publishers
 permalink: /documentation/manage/resources-for-publishers/
-published: false
+published: true
 topic: Manage
 tags: [publish, manage, distribution]
 contributors: [One, sideshowbarker, kingleo713, rebloor]

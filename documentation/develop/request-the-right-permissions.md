@@ -2,7 +2,7 @@
 layout: sidebar
 title: Request the right permissions
 permalink: /documentation/develop/request-the-right-permissions/
-published: false
+published: true
 topic: Develop
 tags: [Add-ons, Beginner, Extensions, How-to, Intermediate, Permissions]
 contributors:

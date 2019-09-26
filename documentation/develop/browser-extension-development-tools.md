@@ -2,7 +2,7 @@
 layout: sidebar
 title: Browser Extension Development Tools
 permalink: /documentation/develop/browser-extension-development-tools/
-published: false
+published: true
 topic: Develop
 tags:
   [

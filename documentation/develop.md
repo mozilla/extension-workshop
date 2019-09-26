@@ -2,7 +2,7 @@
 layout: sidebar
 title: Develop
 permalink: /documentation/develop/
-published: false
+published: true
 tags: []
 contributors: [caitmuenster]
 last_updated_by: caitmuenster

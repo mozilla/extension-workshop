@@ -2,7 +2,7 @@
 layout: sidebar
 title: Testing persistent and restart features
 permalink: /documentation/develop/testing-persistent-and-restart-features/
-published: false
+published: true
 topic: Develop
 tags:
   [

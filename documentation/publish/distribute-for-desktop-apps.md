@@ -2,7 +2,7 @@
 layout: sidebar
 title: Add-ons for desktop apps
 permalink: /documentation/publish/distribute-for-desktop-apps/
-published: false
+published: true
 topic: Publish
 tags: [add-on, distribution, apps, desktop, guide, installation]
 contributors: [SphinxKnight, irenesmith, rebloor]

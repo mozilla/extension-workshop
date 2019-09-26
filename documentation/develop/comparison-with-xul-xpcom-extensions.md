@@ -2,7 +2,7 @@
 layout: sidebar
 title: Comparison with XUL/XPCOM extensions
 permalink: /documentation/develop/comparison-with-xul-xpcom-extensions/
-published: false
+published: true
 topic: Develop
 tags: [WebExtensions]
 contributors:

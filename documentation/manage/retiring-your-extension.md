@@ -2,7 +2,7 @@
 layout: sidebar
 title: Retiring your extension
 permalink: /documentation/manage/retiring-your-extension/
-published: false
+published: true
 topic: Manage
 tags: [manage, end-of-life]
 contributors: [rebloor]

@@ -2,7 +2,7 @@
 layout: sidebar
 title: Build an accessible extension
 permalink: /documentation/develop/build-an-accessible-extension/
-published: false
+published: true
 topic: Develop
 tags: [Development, Extensions, UI, User Interface, UX, Web Extensions]
 contributors: [rebloor]

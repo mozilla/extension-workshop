@@ -2,7 +2,7 @@
 layout: sidebar
 title: Porting a legacy Firefox extension
 permalink: /documentation/develop/porting-a-legacy-firefox-extension/
-published: false
+published: true
 topic: Develop
 tags: [WebExtensions]
 contributors:

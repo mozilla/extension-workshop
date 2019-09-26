@@ -2,7 +2,7 @@
 layout: sidebar
 title: Manage
 permalink: /documentation/manage/
-published: false
+published: true
 tags: [manage]
 contributors: [caitmuenster]
 last_updated_by: caitmuenster

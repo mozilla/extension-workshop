@@ -2,7 +2,7 @@
 layout: sidebar
 title: Enterprise policies that impact extensions
 permalink: /documentation/enterprise/enterprise-policies-that-impact-extensions/
-published: false
+published: true
 topic: Enterprise
 tags: [enterprise, policies]
 contributors: [rebloor]

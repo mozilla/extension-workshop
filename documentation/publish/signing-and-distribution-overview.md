@@ -2,7 +2,7 @@
 layout: sidebar
 title: Signing and distribution overview
 permalink: /documentation/publish/signing-and-distribution-overview/
-published: false
+published: true
 topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
 contributors:
