@@ -2,7 +2,7 @@
 layout: sidebar
 title: Extension Basics
 permalink: /extension-basics/
-published: false
+published: true
 tags: []
 contributors:
   - caitmuenster

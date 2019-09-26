@@ -2,7 +2,7 @@
 layout: sidebar
 title: Community
 permalink: /community/
-published: false
+published: true
 tags: [community, contribute, WebExtensions]
 contributors: [caitmuenster]
 author: caitmuenster
