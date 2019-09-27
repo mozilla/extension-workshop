@@ -132,7 +132,7 @@ jobs:
       - run:
           name: extension workshop deployment
           command: |
-            if [[ "$CIRCLE_BRANCH" =~ -stage$ ]] ; then
+            if [[ "$CIRCLE_TAG" =~ -stage$ ]] ; then
               AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
               AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"         \
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
@@ -144,11 +144,11 @@ jobs:
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
               EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}" \
               ./.utils/circleci/invalidate-cloudfront-cache.sh
-            elif [[ "$CIRCLE_BRANCH" =~ ^v?[0-9]+(\.[0-9]+)*$ ]] ; then
+            elif [[ "$CIRCLE_TAG" =~ ^v?[0-9]+(\.[0-9]+)*$ ]] ; then
               ./.utils/deploy.sh
               ./.utils/circleci/invalidate-cloudfront-cache.sh
             else
-              echo "Unrecognized tag: \`${CIRCLE_BRANCH}'. A good tag example is v1.1.1, or v1.1.1-stage" 1>&2
+              echo "Unrecognized tag: \`${CIRCLE_TAG}'. A good tag example is v1.1.1, or v1.1.1-stage" 1>&2
               exit 1
             fi
 
