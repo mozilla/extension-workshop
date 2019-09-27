@@ -171,7 +171,17 @@ workflows:
           filters:
             branches:
               only: master
-      - build
+      - build:
+          # The filter in this step matches what's used for "deploy" step.
+          # Also note that the tags filter is needed because "CircleCI does
+          # not run workflows for tags unless you explicitly specify tag
+          # filters. Additionally, if a job requires any other jobs (directly
+          # or indirectly), you must specify tag filters for those jobs".
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v?[0-9]+(\.[0-9]+)*(?:-stage)?$/
       - deploy:
           requires:
             - build
