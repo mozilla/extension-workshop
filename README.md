@@ -6,7 +6,7 @@ Welcome to Extension Workshop, a launchpad for building Firefox extensions! 🚀
 
 ## Updating Content
 
-If you would like to update content or other resources on Extension Workshop, please refer to [Contributing.md](.github/contributing.md)
+If you would like to update content or other resources on Extension Workshop, please refer to [contributing.md](.github/contributing.md)
 
 ## Development Guide: Getting Started
 
