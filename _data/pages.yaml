@@ -534,10 +534,10 @@
       subpageitems:
         - title: "Stay informed when Firefox changes"
           id: "stay-informed-when-firefox-changes"
-        - title: "Promote your extension"
-          id: "promote-your-extension"
         - title: "Publish extension updates"
           id: "publish-extension-updates"
+        - title: "Promote your extension"
+          id: "promote-your-extension"
         - title: "Manage authors of your extension"
           id: "manage-authors-of-your-extension"
         - title: "Removing your extension from distribution"
