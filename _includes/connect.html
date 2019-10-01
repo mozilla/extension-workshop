@@ -21,7 +21,8 @@
             <p>Stay up-to-date on news and events for Firefox extension developers.</p>
 
             <div class="newsletter" id="newsletter_wrap">
-                <form id="newsletter_form" name="newsletter_form" action="https://www.mozilla.org/newsletter/" method="post" data-no-csrf>
+                <!-- Do not change this action URL it needs an en-US locale to work -->
+                <form id="newsletter_form" name="newsletter_form" action="https://www.mozilla.org/en-US/newsletter/" method="post" data-no-csrf>
                     <input type="hidden" id="fmt" name="fmt" value="H">
                     <input type="hidden" id="newsletters" name="newsletters" value="about-addons">
 
