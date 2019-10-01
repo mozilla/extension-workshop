@@ -32,12 +32,12 @@ CSPSTATIC="\"content-security-policy\": \"default-src 'none'; "\
 "base-uri 'none'; "\
 "form-action 'none'; "\
 "object-src 'none'\""
+
+# DO NOT REMOVE the locale from the newsletter form url. See #476.
 CSP="\"content-security-policy\": \"default-src 'none'; "\
 "base-uri 'self'; "\
-# DO NOT REMOVE the locale from the newsletter form url. See #476.
 "connect-src 'self' https://blog.mozilla.org/addons/feed/ https://www.mozilla.org/en-US/newsletter/ https://www.google-analytics.com/; "\
 "font-src 'self'; "\
-# DO NOT REMOVE the locale from the newsletter form url. See #476.
 "form-action 'self' https://www.mozilla.org/en-US/newsletter/; "\
 "frame-ancestors 'none'; "\
 "frame-src https://www.youtube.com/embed/; "\
