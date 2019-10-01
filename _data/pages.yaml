@@ -536,10 +536,10 @@
           id: "stay-informed-when-firefox-changes"
         - title: "Publish extension updates"
           id: "publish-extension-updates"
-        - title: "Promote your extension"
-          id: "promote-your-extension"
         - title: "Manage authors of your extension"
           id: "manage-authors-of-your-extension"
+        - title: "Promote your extension"
+          id: "promote-your-extension"
         - title: "Removing your extension from distribution"
           id: "removing-your-extension-from-distribution"
       categories:
