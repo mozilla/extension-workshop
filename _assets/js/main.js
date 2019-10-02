@@ -336,16 +336,6 @@ jQuery(document).ready(function($) {
   // 1.c Persistant Menu
 
   $.fn.persistantMenu = function() {
-    // Don't enable the scroll hidden menu for touch devices.
-    if (typeof window !== 'undefined' && 'ontouchstart' in window) {
-      console.debug('No-op persistantMenu for touch enabled devices');
-      return {
-        kill: function() {
-          console.debug('No-op persistantMenu.kill()');
-        },
-      };
-    }
-
     var $container = this;
     var $window = $(window);
     var scrollTop = $window.scrollTop();
