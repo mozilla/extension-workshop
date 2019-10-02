@@ -84,19 +84,21 @@ jQuery(document).ready(function($) {
   // **    the plugin code is found in parallax.js     **
   // *****                                         ******
 
-  if ($('.parallax').length) {
-    $('.parallax').parallax({ offsetIntertia: -0.15 });
+  if (typeof window !== 'undefined' && !('ontouchstart' in window)) {
+    console.debug('Parallax effects enabled');
+    if ($('.parallax').length) {
+      $('.parallax').parallax({ offsetIntertia: -0.15 });
+    }
+    if ($('.parallaxFG').length) {
+      $('.parallaxFG').parallaxFG({ offsetIntertia: 0.15 });
+    }
+    if ($('.parallaxFG-right').length) {
+      $('.parallaxFG-right').parallaxFG({ offsetIntertia: 0.075, axis: 'x' });
+    }
+    if ($('.parallaxFG-left').length) {
+      $('.parallaxFG-left').parallaxFG({ offsetIntertia: -0.075, axis: 'x' });
+    }
   }
-  if ($('.parallaxFG').length) {
-    $('.parallaxFG').parallaxFG({ offsetIntertia: 0.15 });
-  }
-  if ($('.parallaxFG-right').length) {
-    $('.parallaxFG-right').parallaxFG({ offsetIntertia: 0.075, axis: 'x' });
-  }
-  if ($('.parallaxFG-left').length) {
-    $('.parallaxFG-left').parallaxFG({ offsetIntertia: -0.075, axis: 'x' });
-  }
-
   // 5. Video Popup
   // ------
 
@@ -334,6 +336,16 @@ jQuery(document).ready(function($) {
   // 1.c Persistant Menu
 
   $.fn.persistantMenu = function() {
+    // Don't enable the scroll hidden menu for touch devices.
+    if (typeof window !== 'undefined' && 'ontouchstart' in window) {
+      console.debug('No-op persistantMenu for touch enabled devices');
+      return {
+        kill: function() {
+          console.debug('No-op persistantMenu.kill()');
+        },
+      };
+    }
+
     var $container = this;
     var $window = $(window);
     var scrollTop = $window.scrollTop();
