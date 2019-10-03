@@ -81,8 +81,8 @@ In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the follo
 
 - All add-ons submitted for listing on AMO are subject to Mozilla’s [Conditions of Use](https://www.mozilla.org/about/legal/acceptable-use/).
 - Add-ons must disclose when payment is required to enable any functionality.
+- Any add-ons, or add-on content, hosted on Mozilla site(s) must conform to the laws of the United States.
 - The add-on listing should have an easy-to-read description about everything it does, and any information it collects. Please consult our best practices guide for [creating an appealing listing](/documentation/develop/create-an-appealing-listing/).
-- Includes features or functionality not related to the add-on’s core function(s)
 - Add-ons that are intended for internal or private use, are only accessible to a closed user group, or for distribution testing may not be listed on AMO. Such add-ons may be [uploaded for self-distribution](/documentation/publish/submitting-an-add-on/#self-distribution) instead.
 - If the add-on is a fork of another add-on, the name must clearly distinguish it from the original and provide a significant difference in functionality and/or code.
 
