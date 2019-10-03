@@ -61,6 +61,12 @@ Should an add-on include any unexpected feature that falls into one of the follo
 - Makes unexpected changes to the browser or web content
 - Includes features or functionality not related to the add-on’s core function(s)
 
+Then the “unexpected” feature(s) must adhere to all of the following requirements:
+
+- The add-on description must clearly state what changes the add-on makes.
+- All changes must be “opt-in”, meaning the user has to take non-default action to enact the change. Changes that prompt users via the permissions system don’t require an additional opt-in.
+- The opt-in interface must clearly state the name of the add-on requesting the change.
+
 {% endcapture %}
 {% include modules/column-w-toc.html
   id="no-surprises"
@@ -75,7 +81,7 @@ Should an add-on include any unexpected feature that falls into one of the follo
 
 ## Content
 
-Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Policy](https://www.mozilla.org/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “<Add-on name> for Firefox”.
+Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Policy](https://www.mozilla.org/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “&lt;Add-on name&gt; for Firefox”.
 
 In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the following policies:
 
