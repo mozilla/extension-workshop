@@ -61,6 +61,12 @@ Should an add-on include any unexpected feature that falls into one of the follo
 - Makes unexpected changes to the browser or web content
 - Includes features or functionality not related to the add-on’s core function(s)
 
+Then the “unexpected” feature(s) must adhere to all of the following requirements:
+
+- The add-on description must clearly state what changes the add-on makes.
+- All changes must be “opt-in”, meaning the user has to take non-default action to enact the change. Changes that prompt users via the permissions system don’t require an additional opt-in.
+- The opt-in interface must clearly state the name of the add-on requesting the change.
+
 {% endcapture %}
 {% include modules/column-w-toc.html
   id="no-surprises"
@@ -75,14 +81,14 @@ Should an add-on include any unexpected feature that falls into one of the follo
 
 ## Content
 
-Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Policy](https://www.mozilla.org/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “<Add-on name> for Firefox”.
+Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Policy](https://www.mozilla.org/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “&lt;Add-on name&gt; for Firefox”.
 
 In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the following policies:
 
 - All add-ons submitted for listing on AMO are subject to Mozilla’s [Conditions of Use](https://www.mozilla.org/about/legal/acceptable-use/).
 - Add-ons must disclose when payment is required to enable any functionality.
+- Any add-ons, or add-on content, hosted on Mozilla site(s) must conform to the laws of the United States.
 - The add-on listing should have an easy-to-read description about everything it does, and any information it collects. Please consult our best practices guide for [creating an appealing listing](/documentation/develop/create-an-appealing-listing/).
-- Includes features or functionality not related to the add-on’s core function(s)
 - Add-ons that are intended for internal or private use, are only accessible to a closed user group, or for distribution testing may not be listed on AMO. Such add-ons may be [uploaded for self-distribution](/documentation/publish/submitting-an-add-on/#self-distribution) instead.
 - If the add-on is a fork of another add-on, the name must clearly distinguish it from the original and provide a significant difference in functionality and/or code.
 
@@ -102,8 +108,6 @@ In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the follo
 ## Submission Guidelines
 
 Add-ons must function only as described, and should provide an appealing user experience. Based on the description of the add-on, a user must be able to understand and use the add-on’s features without requiring expert knowledge. Tips on how to create a good user experience for your add-on can be found [here](/documentation/develop/user-experience-best-practices/).
-
-In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the following policies:
 
 During review, the add-on undergoes basic testing in addition to code review. To facilitate the functional testing, the add-on author must provide testing information and, if applicable, testing credentials required to use the add-on if an account is needed for any part of the add-on’s functionality.
 
