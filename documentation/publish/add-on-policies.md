@@ -81,7 +81,7 @@ Then the “unexpected” feature(s) must adhere to all of the following require
 
 ## Content
 
-Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Policy](https://www.mozilla.org/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “<Add-on name> for Firefox”.
+Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Policy](https://www.mozilla.org/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “&lt;Add-on name&gt; for Firefox”.
 
 In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the following policies:
 
