@@ -103,8 +103,6 @@ In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the follo
 
 Add-ons must function only as described, and should provide an appealing user experience. Based on the description of the add-on, a user must be able to understand and use the add-on’s features without requiring expert knowledge. Tips on how to create a good user experience for your add-on can be found [here](/documentation/develop/user-experience-best-practices/).
 
-In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the following policies:
-
 During review, the add-on undergoes basic testing in addition to code review. To facilitate the functional testing, the add-on author must provide testing information and, if applicable, testing credentials required to use the add-on if an account is needed for any part of the add-on’s functionality.
 
 Issues brought up during review must be addressed using best efforts. If corrections have been requested, the new version should not contain unrelated changes, as this complicates the review process and can lead to further rejections.
