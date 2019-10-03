@@ -50,7 +50,7 @@ When you build on Firefox, you build with a community of extension developers. A
 
 [Learn more about the community](https://wiki.mozilla.org/Add-ons/Community/)
 
-[Learn about enhancing the API](https://wiki.mozilla.org/Add-ons/Community/#get-involved-in-the-community)
+[Learn about enhancing the API](https://extensionworkshop.com/community/#get-involved-in-the-community)
 
 </div>
 </div>
