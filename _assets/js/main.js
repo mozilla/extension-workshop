@@ -84,19 +84,21 @@ jQuery(document).ready(function($) {
   // **    the plugin code is found in parallax.js     **
   // *****                                         ******
 
-  if ($('.parallax').length) {
-    $('.parallax').parallax({ offsetIntertia: -0.15 });
+  if (typeof window !== 'undefined' && !('ontouchstart' in window)) {
+    console.debug('Parallax effects enabled');
+    if ($('.parallax').length) {
+      $('.parallax').parallax({ offsetIntertia: -0.15 });
+    }
+    if ($('.parallaxFG').length) {
+      $('.parallaxFG').parallaxFG({ offsetIntertia: 0.15 });
+    }
+    if ($('.parallaxFG-right').length) {
+      $('.parallaxFG-right').parallaxFG({ offsetIntertia: 0.075, axis: 'x' });
+    }
+    if ($('.parallaxFG-left').length) {
+      $('.parallaxFG-left').parallaxFG({ offsetIntertia: -0.075, axis: 'x' });
+    }
   }
-  if ($('.parallaxFG').length) {
-    $('.parallaxFG').parallaxFG({ offsetIntertia: 0.15 });
-  }
-  if ($('.parallaxFG-right').length) {
-    $('.parallaxFG-right').parallaxFG({ offsetIntertia: 0.075, axis: 'x' });
-  }
-  if ($('.parallaxFG-left').length) {
-    $('.parallaxFG-left').parallaxFG({ offsetIntertia: -0.075, axis: 'x' });
-  }
-
   // 5. Video Popup
   // ------
 
