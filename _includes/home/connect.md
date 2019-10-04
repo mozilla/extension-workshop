@@ -48,9 +48,9 @@ When you build on Firefox, you build with a community of extension developers. A
 <div class="grid-container grid-x grid-padding-x align-center tiles-footer">
 <div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
 
-[Learn more about the community](/Community/)
+[Learn more about the community](/community/)
 
-[Learn about enhancing the API](https://extensionworkshop.com/community/#get-involved-in-the-community)
+[Learn about enhancing the API](/community/#get-involved-in-the-community)
 
 </div>
 </div>
