@@ -875,6 +875,10 @@ jQuery(document).ready(function($) {
             if (e.key == 'Escape' && $panel.is(':visible')) {
               closePanel($link, $panel);
             }
+          })
+          .on('scroll', function() {
+            closePanel($link, $panel);
+            $(document).off('scroll');
           });
       }
     }
