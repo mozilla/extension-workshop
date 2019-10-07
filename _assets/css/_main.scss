@@ -425,9 +425,12 @@ html {
     width: 100%;
   }
 
+  &.full-width .site-header {
+    position: fixed;
+  }
+
   &.full-width .site-header,
   &.sidebar .site-header {
-    position: fixed;
     z-index: 20;
     width: 100%;
     padding: rem-calc(6 0);
@@ -461,6 +464,7 @@ html {
 
     @include breakpoint(large) {
       padding: rem-calc(12 0);
+      position: fixed;
 
       .cell {
         position: relative;

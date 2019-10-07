@@ -6,10 +6,6 @@ Stylesheet: Side Bar Page Stylesheet
 
 // Template Body
 
-.site.sidebar {
-  background-color: $lighter-gray;
-}
-
 // Wrapper
 
 .site.sidebar .site-wrapper {
@@ -33,81 +29,105 @@ Stylesheet: Side Bar Page Stylesheet
   }
 }
 
+.site.sidebar.scroll-menu-enabled .site-header {
+  position: fixed;
+}
+
 // Side Nav
 
 $sidebar-nav-width: rem-calc(240);
 
-.site.sidebar .sidenav {
-  ul {
-    list-style: none;
-    margin: 0;
-  }
-
-  li {
-    margin: 0;
-  }
-
-  a {
-    color: inherit;
-
-    &:hover {
-      color: $primary-color;
-    }
-  }
-
-  .is-active,
-  .has-active-children {
-    > a:hover {
-      text-decoration: none;
-    }
-  }
-
-  .primary > li:not(.is-active):not(.has-active-children) {
-    display: none;
-  }
-
-  .section {
-    display: none;
-  }
-
-  @include breakpoint(large) {
-    position: fixed;
-    top: rem-calc(64);
-    left: 0;
-    flex: 0 0 #{$sidebar-nav-width};
-    width: $sidebar-nav-width;
-    height: calc(100% - #{rem-calc(64)});
-    border-right: 1px solid $medium-light-gray;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transition: top 0.4s ease-in-out, height 0.4s ease-in-out;
-  }
+.site.sidebar {
+  background-color: $lighter-gray;
 
   @include breakpoint(medium down) {
-    position: fixed;
-    z-index: 19;
-    left: 0;
-    top: rem-calc(-40);
-    padding-top: rem-calc(40);
-    transform: translateY(#{rem-calc(40)});
-    width: 100%;
-    height: rem-calc(90);
-    transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
-    overflow-y: auto;
-    background-color: $lighter-gray;
-    box-shadow: $element-shadow;
+    &:not(.scroll-menu-enabled) {
+      .site-wrapper {
+        padding-top: 0;
+      }
 
-    .primary > .is-active.has-children,
-    .primary > .has-active-children {
-      .subfolder {
-        > a {
-          display: none;
-        }
+      .sidenav {
+        position: sticky;
+        top: 0;
+      }
+    }
 
-        > li:not(.is-active):not(.has-active-children) {
-          display: none;
+    &.scroll-menu-enabled .sidenav {
+      height: rem-calc(90);
+      left: 0;
+      padding-top: rem-calc(40);
+      position: fixed;
+      top: rem-calc(-40);
+      transform: translateY(#{rem-calc(40)});
+      width: 100%;
+    }
+  }
+
+  .sidenav {
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    .is-active,
+    .has-active-children {
+      > a:hover {
+        text-decoration: none;
+      }
+    }
+
+    .primary > li:not(.is-active):not(.has-active-children) {
+      display: none;
+    }
+
+    .section {
+      display: none;
+    }
+
+    @include breakpoint(medium down) {
+      background-color: $lighter-gray;
+      overflow-y: auto;
+      box-shadow: $element-shadow;
+      transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
+      z-index: 10;
+
+      .primary > .is-active.has-children,
+      .primary > .has-active-children {
+        .subfolder {
+          > a {
+            display: none;
+          }
+
+          > li:not(.is-active):not(.has-active-children) {
+            display: none;
+          }
         }
       }
+    }
+
+    @include breakpoint(large) {
+      position: fixed;
+      top: rem-calc(64);
+      left: 0;
+      flex: 0 0 #{$sidebar-nav-width};
+      width: $sidebar-nav-width;
+      height: calc(100% - #{rem-calc(64)});
+      border-right: 1px solid $medium-light-gray;
+      overflow-y: auto;
+      overflow-x: hidden;
+      transition: top 0.4s ease-in-out, height 0.4s ease-in-out;
     }
   }
 }
@@ -232,7 +252,6 @@ $sidebar-nav-width: rem-calc(240);
 
   @include breakpoint(medium down) {
     display: none;
-    border-top: 1px solid $medium-light-gray;
 
     a,
     .label {
@@ -249,7 +268,7 @@ $sidebar-nav-width: rem-calc(240);
 // Side Nav Detail Loop
 
 .site.sidebar .sidenav-detail {
-  padding-bottom: rem-calc(16);
+  padding-bottom: rem-calc(64);
   font-size: $small-font-size;
 
   a,
@@ -349,6 +368,16 @@ $sidebar-nav-width: rem-calc(240);
 
     .sidenav {
       height: 100vh;
+      width: 100%;
+      z-index: 19;
+    }
+
+    .sidenav-status {
+      top: 0;
+      position: sticky;
+      background-color: $lighter-gray;
+      border-bottom: 1px solid $medium-light-gray;
+      z-index: 10;
     }
 
     .sidenav-status::after {
