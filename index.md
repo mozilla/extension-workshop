@@ -3,6 +3,8 @@
 layout: home
 ---
 
-# Build a better web
+# Extend the Web
 
-New to extension development? Ready to launch your innovation or create a custom enterprise solution? We’ve got the resources you need to make browsing smarter, safer, faster.
+Get help creating and publishing Firefox extensions that make browsing smarter, safer, and faster.
+<br><br>
+You’ll find the resources you need, whether you’re getting started with extension development, preparing to launch your innovation, or developing a custom enterprise solution.
