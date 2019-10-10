@@ -828,7 +828,9 @@ jQuery(document).ready(function($) {
 
     // Fallback for touch devices using full-width layout.
     if (is_touch_device) {
-      $('#anatomy-of-an-extension-graphic, #anatomy-control').addClass('step-one step-two');
+      $('#anatomy-of-an-extension-graphic, #anatomy-control').addClass(
+        'step-one step-two'
+      );
     }
   };
 
