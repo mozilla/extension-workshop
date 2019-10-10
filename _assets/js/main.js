@@ -3,6 +3,7 @@
  * lance@glance.ca
  *
  */
+window.is_touch_device = 'ontouchstart' in document.documentElement;
 
 jQuery(document).ready(function($) {
   // SETTINGS
@@ -16,7 +17,9 @@ jQuery(document).ready(function($) {
   // Device
   // ------
 
-  var is_touch_device = 'ontouchstart' in document.documentElement;
+  if (is_touch_device) {
+    $('body').addClass('touch-device');
+  }
 
   $('body').on('mousedown', function() {
     $('body').addClass('using-mouse');
@@ -84,7 +87,7 @@ jQuery(document).ready(function($) {
   // **    the plugin code is found in parallax.js     **
   // *****                                         ******
 
-  if (typeof window !== 'undefined' && !('ontouchstart' in window)) {
+  if (!is_touch_device) {
     console.debug('Parallax effects enabled');
     if ($('.parallax').length) {
       $('.parallax').parallax({ offsetIntertia: -0.15 });
@@ -337,7 +340,7 @@ jQuery(document).ready(function($) {
 
   $.fn.persistantMenu = function() {
     // Don't enable the scroll hidden menu for touch devices.
-    if (typeof window !== 'undefined' && 'ontouchstart' in window) {
+    if (is_touch_device) {
       console.debug('No-op persistantMenu for touch enabled devices');
       return {
         kill: function() {
@@ -346,7 +349,6 @@ jQuery(document).ready(function($) {
       };
     }
 
-    $('body').addClass('scroll-menu-enabled');
     var $container = this;
     var $window = $(window);
     var scrollTop = $window.scrollTop();
@@ -551,6 +553,10 @@ jQuery(document).ready(function($) {
   // ------
 
   $.fn.showOnView = function(options) {
+    if (is_touch_device) {
+      console.debug('showOnView disabled for touch device');
+      return;
+    }
     var settings = $.extend(
       {
         count: 'once',
@@ -819,6 +825,11 @@ jQuery(document).ready(function($) {
         $tile_content.removeClass('hover');
         $tile_background.removeClass('hover');
       });
+
+    // Fallback for touch devices using full-width layout.
+    if (is_touch_device) {
+      $('#anatomy-of-an-extension-graphic, #anatomy-control').addClass('step-one step-two');
+    }
   };
 
   // 9. Popups
