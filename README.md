@@ -191,6 +191,24 @@ If you don't want the page to be labelled as a draft, as and when it's ready rem
 
 ## Deployment
 
-The site is auto-deployed on commits to master to https://extensionworkshop.allizom.org/
+All deploys for stage and prod are handled via the [releases](https://github.com/mozilla/extension-workshop/releases) page.
 
-Tagged commits will be auto deployed to production.
+### Dev Deploys 
+
+The site is auto-deployed on commits to master to https://extensionworkshop-dev.allizom.org/. You can check the version on -dev with [the dev version link](https://extensionworkshop-dev.allizom.org/__version__)
+
+### Stage Deploys
+
+Tags with a version ending in `-stage` will be deployed to https://extensionworkshop.allizom.org/. You can check the version on stage with [the stage version link](https://extensionworkshop.allizom.org/__version__)
+
+A good example of a tag for stage would be `v2.0.1-stage`. 
+
+### Production Deploys
+
+Tags of the format `vN.N.N` will be deployed to https://extensionworkshop.com/. You can check the version on prod with [the prod version link](https://extensionworkshop.com/__version__)
+
+A good example tag would be `v2.0.1`.
+
+### Version numbers
+
+Tag versions should aim to follow follow the [semver](https://semver.org/) format.
