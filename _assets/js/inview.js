@@ -1,4 +1,9 @@
 (function(d) {
+  if (typeof window !== 'undefined' && 'ontouchstart' in window) {
+    console.debug('Inview disabled for touch device.');
+    return;
+  }
+
   var p = {},
     e,
     a,

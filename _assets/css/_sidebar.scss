@@ -29,7 +29,7 @@ Stylesheet: Side Bar Page Stylesheet
   }
 }
 
-.site.sidebar.scroll-menu-enabled .site-header {
+.site.sidebar:not(.touch-device) .site-header {
   position: fixed;
 }
 
@@ -41,7 +41,7 @@ $sidebar-nav-width: rem-calc(240);
   background-color: $lighter-gray;
 
   @include breakpoint(medium down) {
-    &:not(.scroll-menu-enabled) {
+    &.touch-device {
       .site-wrapper {
         padding-top: 0;
       }
@@ -52,7 +52,7 @@ $sidebar-nav-width: rem-calc(240);
       }
     }
 
-    &.scroll-menu-enabled .sidenav {
+    &:not(.touch-device) .sidenav {
       height: rem-calc(90);
       left: 0;
       padding-top: rem-calc(40);
