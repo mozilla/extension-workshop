@@ -172,7 +172,7 @@ The alternative is to request `"activeTab"`. This permission provides your exten
 
 Importantly, `"activeTab"` doesn't result in the display of a permissions message when installing the extension.
 
-### Avoid host permission "<all_urls>" if you can
+### Avoid host permission "&lt;all_urls&gt;" if you can
 
 As noted in the previous example, requesting host permission `"<all_urls>"` results in the permissions request message Access your data for all websites. If your extension is designed to work with one or a small number of websites or domains, narrow the request. On installation users will get details for the first four websites or domains you request access to.
 
