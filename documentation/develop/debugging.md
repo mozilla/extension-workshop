@@ -7,6 +7,7 @@ topic: Develop
 tags: [Debugging, Firefox, Guide, Mozilla, WebExtensions]
 contributors:
   [
+    majordwarf,
     rebloor,
     irenesmith,
     hellosct1,
@@ -25,8 +26,8 @@ contributors:
     johnadungan,
     abdullahdiaa,
   ]
-last_updated_by: rebloor
-date: 2019-06-10 10:01:19
+last_updated_by: majordwarf
+date: 2019-14-10 17:12:00
 ---
 
 <!-- Page Hero Banner -->
