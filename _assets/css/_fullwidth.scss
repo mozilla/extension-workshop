@@ -189,7 +189,12 @@ Stylesheet: Full Width Page Stylesheet
 
     &.alt {
       background-color: #ff9400;
-      background-image: linear-gradient(47deg, #e31586 0%, #fc4054 51%, #ff9641 100%);
+      background-image: linear-gradient(
+        47deg,
+        #e31586 0%,
+        #fc4054 51%,
+        #ff9641 100%
+      );
     }
   }
 }
@@ -376,7 +381,7 @@ Stylesheet: Full Width Page Stylesheet
   color: $body-font-color;
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: rem-calc(8);
@@ -766,7 +771,7 @@ Stylesheet: Full Width Page Stylesheet
       margin: rem-calc(16 0 20 0);
 
       &::before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         left: rem-calc(8);
