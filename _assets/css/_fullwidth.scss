@@ -23,6 +23,7 @@ Stylesheet: Full Width Page Stylesheet
   }
 
   @include breakpoint(medium) {
+    padding-top: rem-calc(72);
     height: calc(100vh - #{rem-calc(88)});
     max-height: 66vw;
     min-height: rem-calc(360);
