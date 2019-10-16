@@ -30,7 +30,7 @@ Stylesheet: Full Width Page Stylesheet
   }
 
   @include breakpoint(large) {
-    height: calc(100vh - #{rem-calc(64)});
+    height: calc(100vh - #{rem-calc(72)});
     max-height: 50vw;
 
     &#top {
