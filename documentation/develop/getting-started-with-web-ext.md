@@ -103,7 +103,7 @@ See the [run reference guide](/documentation/develop/web-ext-command-reference/#
 
 ### Automatic extension reloading
 
-The `run` command watches your source files and tells Firefox to reload the extension after you edit and save a file. For exmaple, if you changed the `name` property in your `manifest.json` file, Firefox displays the new name. This makes it easy to try out new features because you can see the effect immediately. The automatic reloading feature is active by default, you use it like this:
+The `run` command watches your source files and tells Firefox to reload the extension after you edit and save a file. For example, if you changed the `name` property in your `manifest.json` file, Firefox displays the new name. This makes it easy to try out new features because you can see the effect immediately. The automatic reloading feature is active by default, you use it like this:
 
 {% highlight javascript %}
 web-ext run
