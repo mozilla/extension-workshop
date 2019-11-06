@@ -7,6 +7,7 @@ topic: Develop
 tags: [Guide, Installing, packaging, Testing, Tools, web-ext, WebExtension]
 contributors:
   [
+    caitmuenster,
     rebloor,
     mdnwebdocs-bot,
     Sheppy,
@@ -21,8 +22,8 @@ contributors:
     tofumatt,
     chrisdavidmills,
   ]
-last_updated_by: rebloor
-date: 2019-04-16 10:25:55
+last_updated_by: caitmuenster
+date: 2019-11-06 10:25:55
 ---
 
 <!-- Page Hero Banner -->
@@ -70,6 +71,18 @@ To test whether the installation worked run the following command, which display
 {% highlight javascript %}
 web-ext --version
 {% endhighlight %}
+
+<!-- Note -->
+
+{% capture note %}
+
+`web-ext` will notify you when it is time to update to the newest version. To update, use the command `npm install -g web-ext`.
+
+{% endcapture %}
+{% include modules/note.html
+	content=note
+	alert=false
+%}
 
 </div>
 </article>
