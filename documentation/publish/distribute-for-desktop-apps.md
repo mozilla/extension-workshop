@@ -27,18 +27,17 @@ date: 2019-07-30 02:28:37
 
 {% capture content %}
 
-If you have developed an add-on to complement a desktop application, there are several ways you can install the add-on:
+If you have developed an add-on to complement a desktop application, there are two ways you can install the add-on:
 
-- Direct the user to install from [addons.mozilla.org (AMO)](https://addons.mozilla.org) by offering a link.
-- Sideloading.
-- Using the Windows registry.
+- Direct the user to install the add-on from the web, either from [addons.mozilla.org (AMO)](https://addons.mozilla.org) or your own site.
+- Sideloading via standard extension folders or the Windows registry.
 
-Of these options, directing the user to install from AMO by offering a link is recommended. The reasons for recommending this option are:
+Of these options, directing the user to install from AMO is recommended. The reasons for recommending this option are:
 
 - It avoids any issues with the installation process; the user will not get an interstitial messages during the installation of the add-on, find the add-on installed but disabled, or find that the add-on was not installed.
-- If you update the add-on, the new version will be automatically installed, once you have uploaded it to AMO.
+- If you update the add-on, the new version will be automatically installed.
 
-By contrast, sideloading using the [standard extension folders](/documentation/publish/distribute-sideloading/#standard-extension-folders) or [Windows registry](/documentation/enterprise/enterprise-distribution/#installation-using-windows-registry) will require your desktop app to install any update to the add-on. Also, based on the default Firefox settings, the installation process will present the user with warnings (an interstitial message) or silently install the add-on but disable it. The worst case is that the installation will fail silently if [Firefox is setup to disable automatic installation](/documentation/enterprise/enterprise-distribution/#firefox-settings). You can update the [Firefox configuration](/documentation/enterprise/enterprise-distribution/#firefox-settings) to avoid these issues, but that is not recommended.
+By contrast, sideloading using the [standard extension folders](/documentation/publish/distribute-sideloading/#standard-extension-folders) or [Windows registry](/documentation/enterprise/enterprise-distribution/#installation-using-windows-registry) will require your desktop app to install any update to the add-on. As noted in these articles, these methods are deprecated and won't work in future versions of Firefox.
 
 {% endcapture %}
 {% include modules/one-column.html
