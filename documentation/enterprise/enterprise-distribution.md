@@ -85,7 +85,7 @@ This section explains how to install add-ons into Firefox using the Windows Regi
 
 {% capture alert %}
 
-Starting in Firefox 73, it will no longer be possible to have an extension be installed as part of another application installs. See the [Add-ons Blog](https://blog.mozilla.org/addons/2019/10/31/firefox-to-discontinue-sideloaded-extensions/) for more information.
+Starting in Firefox 73, it will no longer be possible to have an extension be installed as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2019/10/31/firefox-to-discontinue-sideloaded-extensions/) for more information.
 
 {% endcapture %}
 {% include modules/note.html
