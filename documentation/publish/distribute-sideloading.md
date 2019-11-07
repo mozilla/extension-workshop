@@ -5,9 +5,9 @@ permalink: /documentation/publish/distribute-sideloading/
 published: true
 topic: Publish
 tags: [add-on, distribution, sideloading, guide, installation]
-contributors: [irenesmith, jwilk, hellosct1, gray_-_wolf, luanmm, rebloor]
-last_updated_by: hellosct1
-date: 2019-03-18 05:05:42
+contributors: [caitmuenster, irenesmith, jwilk, hellosct1, gray_-_wolf, luanmm, rebloor]
+last_updated_by: caitmuenster
+date: 2019-11-06 04:05:42
 ---
 
 <!-- Page Hero Banner -->
@@ -116,6 +116,20 @@ To use Install Add-on From File in Add-on Manager, send the user the signed add-
 {% capture content %}
 
 ## Installation using the standard extension folders
+
+<!-- Alert -->
+
+{% capture alert %}
+
+Starting in Firefox 73, it will no longer be possible to have an extension be installed as part of another application installs. See the [Add-ons Blog](https://blog.mozilla.org/addons/2019/10/31/firefox-to-discontinue-sideloaded-extensions/) for more information.
+
+{% endcapture %}
+{% include modules/note.html
+	content=alert
+	alert=true
+%}
+
+<!-- END: Alert -->
 
 This method of add-on installation involves copying the add-on into one of the standard extension folders on the user's computer. Once copied, the next time Firefox launches the add-on will be installed. By default, the user will be asked to approve the installation, and if the user approves, the add-on will be installed and automatically loaded for subsequent launches. If the user has more than one Firefox profile, the approval and installation will occur on the next launch of each profile. For details on controlling whether the user is prompted to approve the installation, see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations).
 
