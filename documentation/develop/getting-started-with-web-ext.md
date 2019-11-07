@@ -76,7 +76,7 @@ web-ext --version
 
 {% capture note %}
 
-`web-ext` will notify you when it is time to update to the newest version. To update, use the command `npm install -g web-ext`.
+`web-ext` will notify you when it is time to update to the newest version. To update your global install, use the command `npm install -g web-ext`. 
 
 {% endcapture %}
 {% include modules/note.html
