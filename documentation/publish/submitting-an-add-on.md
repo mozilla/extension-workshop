@@ -131,7 +131,7 @@ Learn how to make your add-on listing appealing with these [tips](/documentation
 
 {% capture note %}
 
-If you want Firefox to handle updates to your add-on, remember to include the [`applications`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) key in your manifest.json with the `update_url` attribute set to point to an [update manifest file](https://developer.mozilla.org/Add-ons/Updates).
+If you want Firefox to handle updates to your add-on, remember to include the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in your manifest.json with the `update_url` attribute set to point to an [update manifest file](https://developer.mozilla.org/Add-ons/Updates).
 
 {% endcapture %}
 {% include modules/note.html

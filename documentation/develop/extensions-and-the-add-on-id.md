@@ -43,7 +43,7 @@ However, from Firefox 48 you can develop, debug, publish, and update extensions 
 
 <p class="note" markdown="1">
 
-Note that the ability to develop and debug WebExtensions that don't include an ID is new in Firefox 48\. If you need to use an earlier version of Firefox, then you must use the [`applications`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key to set an ID explicitly.
+Note that the ability to develop and debug WebExtensions that don't include an ID is new in Firefox 48\. If you need to use an earlier version of Firefox, then you must use the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key to set an ID explicitly.
 
 </p>
 
@@ -123,7 +123,7 @@ You can do the same thing if you are updating from an older add-on type, such as
   - [`pkcs11`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11 'The pkcs11 API enables an extension to enumerate PKCS #11 security modules and to make them accessible to the browser as sources of keys and certificates.')
   - [`runtime.onMessageExternal`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal "This API can't be used in a content script.")
   - [`runtime.onConnectExternal`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal 'Fired when an extension receives a connection request from a different extension.')
-- Using Firefox for Android. See [browser_specific_settings in manifest.json](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
+- Using Firefox for Android. See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
 
 </div>
 </article>
