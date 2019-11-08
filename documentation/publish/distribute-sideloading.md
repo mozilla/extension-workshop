@@ -54,7 +54,7 @@ Regardless of the sideloading method used, you must prepare the add-on as follow
 
 <!-- Syntax Highlighting -->
 {% highlight javascript linenos %}
-"applications": {
+"browser_specific_settings": {
   "gecko": {
     "id": "your-add-on-name@your-domain.com"
   }

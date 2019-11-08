@@ -127,7 +127,7 @@ It is safe to modify the Registry keys while Firefox is running.
 
 <!-- Syntax Highlighting -->
 {% highlight javascript linenos %}
-"applications": {
+"browser_specific_settings": {
   "gecko": {
     "id": "your-add-on-name@your-domain.com"
   }

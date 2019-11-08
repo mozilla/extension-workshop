@@ -75,7 +75,7 @@ A typical update manifest looks something like:
         {
           "version": "0.3",
           "update_link": "https://example.com/addon-0.3.xpi",
-          "applications": {
+          "browser_specific_settings": {
             "gecko": { "strict_min_version": "44" }
           }
         }
@@ -101,7 +101,7 @@ If your extension is not hosted on AMO, you must specify the location of your up
 <!-- Syntax Highlighting -->
 {% highlight json linenos %}
 
-"applications": {
+"browser_specific_settings": {
   "gecko": {
     "update_url": "https://example.com/updates.json"
   }
@@ -183,14 +183,14 @@ Update description objects must be object literals. They may have the following 
 
 {% capture table %}
 
-| Property                  | Type                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `version`                 | `string`                          | The version number this update entry describes. If an update URL is specified, it must use this version. If any compatibility information is specified, it will override the compatibility information of any installed version with this version number.                                                                                                                                                                                                                                    |
-| `update_link`             | `string` (Optional)               | A link to the XPI file containing this version of the add-on. This must be an HTTPS URL, or an `update_hash` must be provided to verify it.                                                                                                                                                                                                                                                                                                                                                  |
-| `update_hash`             | `string` (Optional)               | A cryptographic hash of the file pointed to by `update_link`. This must be provided if `update_link` is not a secure URL. If present, this must be a string beginning with either `sha256:` or `sha512:`, followed by the hexadecimal-encoded hash of the matching type.                                                                                                                                                                                                                     |
-| `update_info_url`         | `string` (Optional)               | A link to an HTML file containing information about the update.                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `multiprocess_compatible` | `bool` (Optional) (default: true) | If false, this add-on requires compatibility shims to run in a [multi-process Firefox](https://developer.mozilla.org/docs/Mozilla/Firefox/Multiprocess_Firefox) environment.                                                                                                                                                                                                                                                                                                                 |
-| `applications`            | `object` (Optional)               | An object containing application-specific compatibility information. Each property must contain an <a href="#application-objects">application object</a>, as described below. The only application currently supported is `gecko`, which includes Firefox, and all other applications built on the same runtime. If this property is omitted, support for Gecko is assumed. Otherwise, if this property is defined, it must contain a `gecko` property, or the update entry will be ignored. |
+| Property                    | Type                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| --------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `version`                   | `string`                          | The version number this update entry describes. If an update URL is specified, it must use this version. If any compatibility information is specified, it will override the compatibility information of any installed version with this version number.                                                                                                                                                                                                                                    |
+| `update_link`               | `string` (Optional)               | A link to the XPI file containing this version of the add-on. This must be an HTTPS URL, or an `update_hash` must be provided to verify it.                                                                                                                                                                                                                                                                                                                                                  |
+| `update_hash`               | `string` (Optional)               | A cryptographic hash of the file pointed to by `update_link`. This must be provided if `update_link` is not a secure URL. If present, this must be a string beginning with either `sha256:` or `sha512:`, followed by the hexadecimal-encoded hash of the matching type.                                                                                                                                                                                                                     |
+| `update_info_url`           | `string` (Optional)               | A link to an HTML file containing information about the update.                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `multiprocess_compatible`   | `bool` (Optional) (default: true) | If false, this add-on requires compatibility shims to run in a [multi-process Firefox](https://developer.mozilla.org/docs/Mozilla/Firefox/Multiprocess_Firefox) environment.                                                                                                                                                                                                                                                                                                                 |
+| `browser_specific_settings` | `object` (Optional)               | An object containing browser-specific compatibility information. Each property must contain a <a href="#browser-specific-settings-objects">browser specific settings object</a>, as described below. The only browser currently supported is `gecko`, which includes Firefox, and all other browsers built on the same runtime. If this property is omitted, support for Gecko is assumed. Otherwise, if this property is defined, it must contain a `gecko` property, or the update entry will be ignored. |
 
 {% endcapture %}
 {% include modules/table.html
@@ -199,12 +199,12 @@ Update description objects must be object literals. They may have the following 
 
 <!-- END: Table -->
 
-<section id="application-objects"></section>
-### Application objects
+<section id="browser-specific-settings-objects"></section>
+### Browser specific settings objects
 
-`addons[*].updates[*].applications.gecko`
+`addons[*].updates[*].browser_specific_settings.gecko`
 
-Application objects specify compatibility information for a specific application. They must be object literals, and may have the following properties:
+Browser specific settings objects specify compatibility information for a specific browser. They must be object literals, and may have the following properties:
 
 <!-- Table -->
 
@@ -212,9 +212,9 @@ Application objects specify compatibility information for a specific application
 
 | Property               | Type                                  | Description                                                                                                     |
 | ---------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `strict_min_version`   | `string` (Optional) (default: 42.0a1) | The minimum version of the application this add-on will run on.                                                 |
-| `strict_max_version`   | `string` (Optional) (default: \*)     | The maximum version of the application this add-on will run on.                                                 |
-| `advisory_max_version` | `string` (Optional) (default: \*)     | The maximum version of the application this add-on is likely to run on. This property is ignored in most cases. |
+| `strict_min_version`   | `string` (Optional) (default: 42.0a1) | The minimum version of the browser this add-on will run on.                                                 |
+| `strict_max_version`   | `string` (Optional) (default: \*)     | The maximum version of the browser this add-on will run on.                                                 |
+| `advisory_max_version` | `string` (Optional) (default: \*)     | The maximum version of the browser this add-on is likely to run on. This property is ignored in most cases. |
 
 {% endcapture %}
 {% include modules/table.html
