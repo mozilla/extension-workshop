@@ -8,36 +8,20 @@ tags: [Add-ons, Review Policy]
 contributors:
   [
     kewisch,
-    mdnwebdocs-bot,
     rebloor,
-    One,
-    jyotsna17gupta,
+    wagnerand,
     atsay,
     jvillalobos,
     wbamberg,
-    david_ross,
-    Lazaro08,
-    jswisher,
-    zenmeso,
     kmaglione,
   ]
-last_updated_by: kewisch
-date: 2019-06-10 04:12:33
+last_updated_by: wagnerand
+date: 2019-12-02
 ---
 
 <!-- Page Hero Banner -->
 
 {% capture page_hero_banner_content %}
-
-<!-- Note -->
-{% capture note %}
-[The Add-on policies are going to be updated on December 2, 2019.](/documentation/publish/add-on-policies-2019-12/)
-{% endcapture %}
-{% include modules/note.html
-    content=note
-    alert=false
-%}
-<!-- END: Note -->
 
 # Add-on Policies
 
@@ -58,7 +42,7 @@ All add-ons are subject to these policies, regardless of how they are distribute
 
 ## No Surprises
 
-Surprises can be appropriate in many situations, but they are not welcome when user security, privacy and control are at stake. It is extremely important to be as transparent as possible when submitting an add-on. Users should be able to easily discern what the functionality of your add-on is and not be presented with unexpected user experiences after installing it.
+Surprises can be appropriate in many situations, but they are not welcome when user security, privacy and control are at stake. It is extremely important to be as transparent as possible when submitting an add-on. The user should be able to easily discern what the functionality of your add-on is and not be presented with unexpected user experiences after installing it.
 
 ### Unexpected features
 
@@ -74,7 +58,7 @@ Should an add-on include any unexpected feature that falls into one of the follo
 Then the “unexpected” feature(s) must adhere to all of the following requirements:
 
 - The add-on description must clearly state what changes the add-on makes.
-- All changes must be “opt-in”, meaning the user has to take non-default action to enact the change. Changes that prompt users via the permissions system don’t require an additional opt-in.
+- All changes must be “opt-in”, meaning the user has to take non-default action to enact the change. Changes that prompt the user via the permissions system don’t require an additional opt-in.
 - The opt-in interface must clearly state the name of the add-on requesting the change.
 
 {% endcapture %}
@@ -154,6 +138,7 @@ While any code, method or practice in a submitted add-on is subject to review an
 
 - Add-ons must only request those permissions that are necessary for function
 - Add-ons must be self-contained and not load remote code for execution
+- Add-ons must not load or redirect to a remote new tab page. The new tab page must be contained within the add-on.
 - Add-ons must use encrypted channels for sending sensitive user data
 - Add-ons should avoid including duplicate or unnecessary files
 - Add-on code must be written in a way that is reviewable and understandable. Reviewers may ask you to refactor parts of the code if it is not reviewable.
@@ -193,20 +178,22 @@ Please refer to our [best practices](/documentation/develop/best-practices-for-c
 
 ### User Interactions & Technical Data
 
-- Users must be provided a clear way to control this data collection. The control mechanism must be shown during the installation process of the add-on.
+- The user must be provided a clear way to control this data collection. The control mechanism must be shown at first-run of the add-on.
 - Add-ons must only collect information about add-on performance and/or use.
+- Search functionality provided or loaded by the add-on must not collect search terms or intercept searches that are going to a third-party search provider.
+- If the collection of visited URLs or user search terms is required for the add-on to work, the user must provide affirmative consent (i.e., explicit opt-in from the user) at first-run, since that information can contain personal information.
 - Collecting ancillary information (e.g. any data not explicitly required for the add-on’s basic functionality) is prohibited.
 
 ### Cookies
 
 - If your add-on installs cookies, this must also be disclosed in the add-on’s privacy policy.
 - The add-on privacy policy must clearly express the placing and purposes of the cookie(s). It is highly recommended that you disclose the types of cookies being used.
-- Users must be provided an opportunity to refuse the storage of or access to cookies, and must be informed of the consequences of doing so (e.g., without a functional cookie, the add-on may not work).
+- The user must be provided an opportunity to refuse the storage of or access to cookies, and must be informed of the consequences of doing so (e.g., without a functional cookie, the add-on may not work).
 - Installing cookies that are not explicitly required for the add-on’s functionality is prohibited.
 
 ### Personal Data
 
-- If you are collecting any personal information, the users must provide affirmative consent (i.e., explicit opt-in from the user). It must be clear to the user that they give consent to the collection of personal data.
+- If you are collecting any personal information, the user must provide affirmative consent (i.e., explicit opt-in from the user). It must be clear to the user that they give consent to the collection of personal data.
 - Collecting ancillary personal information (e.g., any data not explicitly required for the add-on’s basic functionality) is prohibited.
 - Any transmission of this type of data must use secure, encrypted connections.
 
@@ -252,7 +239,7 @@ As a result, we take our security policies very seriously and apply them to all 
 
 ## Monetization
 
-- Monetization mechanisms must comply with the policies in the _Data Disclosure, Collection and Management_ section. In particular, an add-on must be accompanied with a clear user control mechanism (and opt-in for personal data) presented during the installation or update process of the add-on. Collecting ancillary information for monetization is prohibited.
+- Monetization mechanisms must comply with the policies in the _Data Disclosure, Collection and Management_ section. In particular, an add-on must be accompanied with a clear user control mechanism (and opt-in for personal data) presented at first-run of the add-on. Collecting ancillary information for monetization is prohibited.
 - An add-on injecting advertising into web page content must clearly identify the injected content as originating from the add-on.
 - The inclusion of any cryptocurrency miners or similar functionality in an add-on is prohibited.
 - Modifying web content or facilitating redirects to include affiliate promotion tags is not permitted. Conversely, the use of affiliate promotion in user interface elements clearly identified as belonging to the add-on are acceptable.
