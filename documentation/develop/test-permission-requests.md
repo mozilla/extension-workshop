@@ -56,7 +56,7 @@ To view the install time permission warnings users see when installing your exte
 
 To do this with an unsigned \*.xpi or \*.zip file you need to:
 
-- give your extension an ID using the manifest.json [applications](https://developer.mozilla.org/docs/applications) key.
+- give your extension an ID using the manifest.json [`browser_specific_settings`](https://developer.mozilla.org/docs/browser_specific_settings) key.
 - run the [Nightly](https://nightly.mozilla.org/) or [Developer Edition](https://www.mozilla.org/firefox/developer/) versions of Firefox.
 - set the `about:config` preference `xpinstall.signatures.required` to `false`.
 
@@ -85,12 +85,12 @@ You can use an HTTP server (such as a simple [Python localhost server](https://d
 To perform the test you'll need to:
 
 - determine the address of the HTTP or HTTPS server where you can host files.
-- use the manifest.json [applications](https://developer.mozilla.org/docs/applications) key to:
+- use the manifest.json [`browser_specific_settings`](https://developer.mozilla.org/docs/browser_specific_settings) key to:
   - give your extension an ID, if you’ve not done so already.
   - define the update URL where you’ll host your [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates). For example:
 
 {% highlight javascript linenos %}
-"applications": {
+"browser_specific_settings": {
   "gecko": {
     "strict_min_version": "54.0a1",
     "update_url": "https://your-account.github.io/webextensions/upgrade.json",
@@ -115,7 +115,7 @@ If the packages were generated with .zip extensions change them to .xpi, otherwi
 - create the [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates) with details of both extension versions, which should be similar to this:
 
 {% highlight javascript linenos %}
-"applications": {
+"browser_specific_settings": {
   "gecko": {
     "strict_min_version": "54.0a1",
     "update_url": "https://your-account.github.io/webextensions/upgrade.json",

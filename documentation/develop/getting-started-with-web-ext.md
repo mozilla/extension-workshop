@@ -238,7 +238,7 @@ web-ext build
 
 This outputs a full path to the generated `.zip` file that can be loaded into a browser.
 
-<p class="note alert" markdown="1">The generated `.zip` file doesn't work on Firefox without signing or adding [`applications.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/applications) key into [`manifest.json`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json). For more information, please refer [WebExtensions and the Add-on ID](/documentation/develop/extensions-and-the-add-on-id/) page.</p>
+<p class="note alert" markdown="1">The generated `.zip` file doesn't work on Firefox without signing or adding [`browser_specific_settings.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key into [`manifest.json`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json). For more information, please refer [WebExtensions and the Add-on ID](/documentation/develop/extensions-and-the-add-on-id/) page.</p>
 
 `web-ext build` is designed to ignore files that are commonly not wanted in packages, such as `.git`, `node_modules`, and other artifacts.
 
@@ -263,7 +263,7 @@ See the [sign reference guide](/documentation/develop/web-ext-command-reference/
 
 ### Signing extensions without an explicit ID
 
-`web-ext` supports signing extensions that do not declare the [applications.gecko.id](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/applications) property in their manifest. The first time you sign an extension without an explicit ID, [addons.mozilla.org](https://addons.mozilla.org/) will generate an ID and `web-ext` will save it to `.web-extension-id` in the working directory. You should save the ID file so that you can sign future versions of the same extension. If you lose the ID file, you will have to add back the `applications.gecko.id` property or use the `--id` option when signing, for example:
+`web-ext` supports signing extensions that do not declare the [`browser_specific_settings.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings) property in their manifest. The first time you sign an extension without an explicit ID, [addons.mozilla.org](https://addons.mozilla.org/) will generate an ID and `web-ext` will save it to `.web-extension-id` in the working directory. You should save the ID file so that you can sign future versions of the same extension. If you lose the ID file, you will have to add back the `browser_specific_settings.gecko.id` property or use the `--id` option when signing, for example:
 
 {% highlight javascript %}
 web-ext sign --api-key=... --api-secret=... --id="{c23c69a7-f889-447c-9d6b-7694be8035bc}"
@@ -311,7 +311,7 @@ See the [sign reference guide](/documentation/develop/web-ext-command-reference/
 
 ### Checking for code "lint"
 
-Before trying out your extension with the [run](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to make sure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files do not contain any errors. You can also set [strict_min_version](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file and lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. Example:
+Before trying out your extension with the [`run`](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to make sure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files do not contain any errors. You can also set [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file and lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. Example:
 
 {% highlight javascript %}
 web-ext lint
