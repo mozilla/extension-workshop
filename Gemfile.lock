@@ -128,4 +128,4 @@ DEPENDENCIES
   uglifier (~> 4.1, >= 4.1.20)
 
 BUNDLED WITH
-   1.17.2
+   2.0.1
