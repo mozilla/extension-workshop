@@ -58,7 +58,7 @@ The extension installs and remains installed until you remove it or restart Fire
 
 {% include modules/video-popup.html
     title="borderify WebExtension - part 1"
-    youtube_id="cer9EUKegG4"
+    youtube_id="J7el77F1ckg "
     image="documentation/develop/borderify-part-1.png"
     alt="borderify part 1"
 %}
@@ -92,7 +92,7 @@ This:
 
 {% include modules/video-popup.html
     title="borderify WebExtension - part 3"
-    youtube_id="NuajE60jfGY"
+    youtube_id="d3hgLMVJAzY"
     image="documentation/develop/borderify-part-3.png"
     alt="borderify part 3"
 %}
