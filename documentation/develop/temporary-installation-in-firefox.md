@@ -57,10 +57,10 @@ The extension installs and remains installed until you remove it or restart Fire
 <!-- Video Popup Thumbnail -->
 
 {% include modules/video-popup.html
-    title="borderify WebExtension - part 1"
-    youtube_id="J7el77F1ckg "
+    title="Temporarily Install Extension"
+    youtube_id="J7el77F1ckg"
     image="documentation/develop/borderify-part-1.png"
-    alt="borderify part 1"
+    alt="temporarily install extension"
 %}
 
 <!-- END: Video Popup Thumbnail -->
@@ -91,15 +91,14 @@ This:
 <!-- Video Popup Thumbnail -->
 
 {% include modules/video-popup.html
-    title="borderify WebExtension - part 3"
+    title="Reload Temporary Extension"
     youtube_id="d3hgLMVJAzY"
     image="documentation/develop/borderify-part-3.png"
-    alt="borderify part 3"
+    alt="reload temporary extension"
 %}
 
 <!-- END: Video Popup Thumbnail -->
 
-<!-- 
 {% capture note %}
 
 Note that in Firefox 48 only, "Reload" does not update the extension's name and description that are displayed in about:debugging and about:addons. This is fixed in Firefox 49.
@@ -119,7 +118,7 @@ Note that in Firefox 48 only, "Reload" does not update the extension's name and 
 
 <!-- END: Single Column Body Module -->
 
-<!-- Single Column Body Module 
+<!-- Single Column Body Module -->
 
 {% capture content %}
 
@@ -133,7 +132,7 @@ If you use the command line for development, check out [web-ext](/documentation/
   content=content
   aside=""
 %}
--->
+
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
