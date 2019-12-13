@@ -27,9 +27,11 @@ date: 2019-03-18 18:38:23
 
 # Temporary installation in Firefox
 
-This article describes how an add-on developer can temporarily install an extension in Firefox for testing and debugging. The extension will stay installed until you restart Firefox. You can use this method with any kind of restartless extension, including [bootstrapped extensions](https://developer.mozilla.org/docs/Mozilla/Add-ons/Bootstrapped_extensions) and [Add-on SDK add-ons](https://developer.mozilla.org//docs/Mozilla/Add-ons/SDK).
+This article describes how you can temporarily install an extension in Firefox for testing and debugging. The extension stays installed until you remove it or restart Firefox.
 
-Note that this is not how end users should install add-ons in Firefox. End users will install add-ons by downloading and opening packaged add-ons that have been signed by Mozilla. To learn how an extension developer can get an add-on packaged and signed, see [Publishing your extension](/documentation/publish/package-your-extension).
+For extension development, automate the processes described on this page by using [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/).
+
+Note that this is not how end-users should install add-ons in Firefox. End-users install add-ons by downloading and opening packaged add-ons that have been signed by Mozilla. To learn how you get an add-on packaged and signed, see [Publishing your extension](/documentation/publish/package-your-extension).
 
 {% endcapture %}
 {% include modules/page-hero.html
@@ -44,20 +46,21 @@ To install an extension temporarily:
 
 - open Firefox
 - enter "about:debugging" in the URL bar
+- click "This Firefox"
 - click "Load Temporary Add-on"
 - open the extension's directory and select any file inside the extension.
 
-The extension will be installed, and will stay installed until you restart Firefox.
+The extension installs and remains installed until you remove it or restart Firefox.
 
 <!-- Single Column Body Module -->
 
 <!-- Video Popup Thumbnail -->
 
 {% include modules/video-popup.html
-    title="borderify WebExtension - part 1"
-    youtube_id="cer9EUKegG4"
+    title="Temporarily Install Extension"
+    youtube_id="J7el77F1ckg"
     image="documentation/develop/borderify-part-1.png"
-    alt="borderify part 1"
+    alt="temporarily install extension"
 %}
 
 <!-- END: Video Popup Thumbnail -->
@@ -76,22 +79,22 @@ The extension will be installed, and will stay installed until you restart Firef
 
 ## Reloading a temporary extension
 
-Starting in Firefox 48, there's a new button labeled "Reload" next to the extension's entry in about:debugging:
+To reload the extension, click "Reload":
 
 ![reload-extension]({% asset "documentation/develop/reload-extension.png" @optim @path %})
 
-This does what it says:
+This:
 
-- reloading any persistent scripts, such as [background scripts](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)
-- parsing the `manifest.json` file again, so changes to [`permissions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), [`content_scripts`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), [`browser_action`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) or any other keys will take effect.
+- reloads any persistent scripts, such as [background scripts](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)
+- parses the `manifest.json` file, so changes to [`permissions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), [`content_scripts`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), [`browser_action`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), or any other keys take effect.
 
 <!-- Video Popup Thumbnail -->
 
 {% include modules/video-popup.html
-    title="borderify WebExtension - part 3"
-    youtube_id="NuajE60jfGY"
+    title="Reload Temporary Extension"
+    youtube_id="d3hgLMVJAzY"
     image="documentation/develop/borderify-part-3.png"
-    alt="borderify part 3"
+    alt="reload temporary extension"
 %}
 
 <!-- END: Video Popup Thumbnail -->
@@ -121,7 +124,7 @@ Note that in Firefox 48 only, "Reload" does not update the extension's name and 
 
 ## Using the command line
 
-If you are already using the command line for development, check out the [web-ext](/documentation/develop/getting-started-with-web-ext) tool. It automates the temporary installation step and automatically reloads your extension when its source code changes.
+If you use the command line for development, check out [web-ext](/documentation/develop/getting-started-with-web-ext). It automates the temporary installation and automatically reloads your extension when its source code changes.
 
 {% endcapture %}
 {% include modules/one-column.html
@@ -138,7 +141,7 @@ If you are already using the command line for development, check out the [web-ex
 
 ## Detecting temporary installation
 
-Your extension can detect whether it was installed from about:debugging rather than as a built and signed extension downloaded from [addons.mozilla.org](https://addons.mozilla.org). Listen for the [`runtime.onInstalled`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) event, and check the value of `details.temporary`.
+An extension can detect whether it was installed from about:debugging, rather than as a signed extension downloaded from [addons.mozilla.org](https://addons.mozilla.org). It does this by listening for the [`runtime.onInstalled`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) event, and checking the value of `details.temporary`.
 
 {% endcapture %}
 {% include modules/one-column.html
@@ -155,9 +158,9 @@ Your extension can detect whether it was installed from about:debugging rather t
 
 ## Limitations
 
-Temporary installation of an extension doesn’t fully mimic the behavior of a signed extension. For example, if the extension makes installation time permission requests, these are not displayed as part of the temporary installation process. Also, features, such as local storage, persist even if the extension is removed and the browser restarted.
+The temporary installation of an extension doesn’t fully mimic the behavior of a signed extension. For example, if the extension makes installation time permission requests, these are not displayed as part of the temporary installation process. Also, features, such as local storage, persist even if the extension is removed and the browser restarted.
 
-For information on how to address these situations, see [Test permission requests](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Test_permission_requests) and [Testing persistent and restart features.](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features)
+For information on how to address these situations, see [Test permission requests](/documentation/develop/test-permission-requests/) and [Testing persistent and restart features.](/documentation/develop/testing-persistent-and-restart-features/)
 
 {% endcapture %}
 {% include modules/one-column.html
