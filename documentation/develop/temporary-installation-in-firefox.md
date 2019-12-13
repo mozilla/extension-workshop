@@ -108,7 +108,7 @@ Note that in Firefox 48 only, "Reload" does not update the extension's name and 
     content=note
     alert=false
 %}
--->
+
 {% endcapture %}
 {% include modules/one-column.html
   id="reloading-a-temporary-extension"
