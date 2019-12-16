@@ -30,7 +30,7 @@ gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 
 # Image optimization
 gem 'image_optim', '~> 0.26.3'
-gem 'image_optim_pack', '~> 0.5.1.20190105'
+gem 'image_optim_pack', '~> 0.6.0.0'
 
 # Uglifier for JS minification
 gem 'uglifier', '~> 4.1', '>= 4.1.20'
