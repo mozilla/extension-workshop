@@ -7,6 +7,7 @@ topic: Develop
 tags: [WebExtensions]
 contributors:
   [
+    caitmuenster
     mdnwebdocs-bot,
     ldevernay,
     rebloor,
@@ -18,7 +19,7 @@ contributors:
     kumar303,
   ]
 last_updated_by: mdnwebdocs-bot
-date: 2019-03-18 18:38:23
+date: 2019-12-19 08:45:00
 ---
 
 <!-- Page Hero Banner -->
@@ -59,7 +60,7 @@ The extension installs and remains installed until you remove it or restart Fire
 {% include modules/video-popup.html
     title="Temporarily Install Extension"
     youtube_id="J7el77F1ckg"
-    image="documentation/develop/borderify-part-1.png"
+    image="documentation/develop/temp-install-extension.png"
     alt="temporarily install extension"
 %}
 
@@ -93,7 +94,7 @@ This:
 {% include modules/video-popup.html
     title="Reload Temporary Extension"
     youtube_id="d3hgLMVJAzY"
-    image="documentation/develop/borderify-part-3.png"
+    image="documentation/develop/reload-temp-extension.png"
     alt="reload temporary extension"
 %}
 
