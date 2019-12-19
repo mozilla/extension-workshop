@@ -7,7 +7,7 @@ topic: Develop
 tags: [WebExtensions]
 contributors:
   [
-    caitmuenster
+    caitmuenster,
     mdnwebdocs-bot,
     ldevernay,
     rebloor,
