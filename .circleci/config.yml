@@ -84,6 +84,7 @@ jobs:
             JEKYLL_ENV: production
             SVGO_BIN: node_modules/svgo/bin/svgo
           command: bundle exec jekyll build --unpublished
+          no_output_timeout: 15m
       - *persist_build_workspace
 
   build:
@@ -101,6 +102,7 @@ jobs:
             JEKYLL_ENV: production
             SVGO_BIN: node_modules/svgo/bin/svgo
           command: bundle exec jekyll build
+          no_output_timeout: 15m
       - *persist_build_workspace
 
   # unpublished contents only deployed to -dev
