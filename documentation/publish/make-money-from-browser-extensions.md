@@ -33,7 +33,7 @@ This article reviews your options for generating revenue from browser extensions
 
 ## Will I ever be able to sell through AMO?
 
-Mozilla intends to maintain AMO as a free to download source of browser extensions and themes. Mozilla also has no plans to provide mechanisms for in-app purchases within extensions.
+Mozilla intends to maintain AMO as a free to download source of browser extensions and themes. 
 
 {% endcapture %}
 {% include modules/column-w-toc.html
