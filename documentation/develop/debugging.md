@@ -68,6 +68,7 @@ To debug your extension, you'll use:
 - [**Inspector**](https://developer.mozilla.org/docs/Tools/Page_Inspector) to examine and modify the HTML and CSS used to build your extension's pages.
 - [**Console**](https://developer.mozilla.org/docs/Tools/Web_Console) to view messages logged by the extension and error messages logged by the browser as it runs the extension. It also provides a command line, where you can execute JavaScript in the extension's context.
 - [**Debugger**](https://developer.mozilla.org/docs/Tools/Debugger) to set breakpoints and watchpoints in your extension's JavaScript, and examine and modify the extension's state.
+- [**Storage**](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector) to view details of data stored by the extension.
 
 For much of the debugging work, it's useful to be able to view **Console** with **Inspector** or **Debugger**. You do this using the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console), press `esc` to activate this mode.
 
@@ -328,6 +329,35 @@ If your extension has multiple HTML documents open, click the page select icon (
 {% endcapture %}
 {% include modules/one-column.html
   id="debugging-sidebars"
+  content=content
+  aside=""
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
+## Debugging storage
+
+{% capture note %}
+
+We use the [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) extension example to illustrate the debugging features relevant to extension storage. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
+
+{% endcapture %}
+{% include modules/note.html
+    content=note
+    alert=false
+%}
+
+An extension can store data using the [Storage API](https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage). To view this data, in the [Toolbox](#developer-tools-toolbox) open the **Storage** tab and locate **Extension Storage**.
+
+![sidebar script in debugger]({% asset "documentation/develop/sidebar_data_in_storage.png" @optim @path %})
+
+{% endcapture %}
+{% include modules/one-column.html
+  id="debugging-storage"
   content=content
   aside=""
 %}
