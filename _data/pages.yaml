@@ -290,6 +290,8 @@
                   id: "debugging-content-scripts"
                 - title: "Debugging sidebars"
                   id: "debugging-sidebars"
+                - title: "Debugging storage"
+                  id: "debugging-storage"
                 - title: "Debugging developer tools pages and panels"
                   id: "debugging-developer-tools-pages-and-panels"
                 - title: "Debug permission requests"
