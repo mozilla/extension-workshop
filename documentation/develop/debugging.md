@@ -25,9 +25,10 @@ contributors:
     matthewjwein,
     johnadungan,
     abdullahdiaa,
+    aroraharsh010
   ]
-last_updated_by: majordwarf
-date: 2019-10-14 17:12:00
+last_updated_by: aroraharsh010
+date: 2020-01-24 20:07:00
 ---
 
 <!-- Page Hero Banner -->

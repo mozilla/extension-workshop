@@ -296,7 +296,7 @@
                   id: "debugging-developer-tools-pages-and-panels"
                 - title: "Debug permission requests"
                   id: "debug-permission-requests"
-                - title: "Debuggging browser restarts"
+                - title: "Debugging browser restarts"
                   id: "debugging-browser-restarts"
             - title: "Temporary Installation in Firefox"
               url: "/documentation/develop/temporary-installation-in-firefox/"
