@@ -143,7 +143,7 @@ The equivalent WebExtension scripts are called [background script](https://devel
 
 There are vastly more APIs available to XUL/XPCOM extensions than are available to WebExtensions, and for many XUL/XPCOM APIs, there isn't a WebExtensions substitute. The table below lists every API in the popular [Services.jsm](https://developer.mozilla.org/docs/Mozilla/JavaScript_code_modules/Services.jsm) module, describe what the equivalent WebExtensions API would be, if there is one.
 
-You'll see that many APIs have no WebExtensions equivalent yet. However, we are intending to extend the WebExtension APIs to support the needs of add-on developers, so if you have ideas, we'd love to hear them. You can reach us on the [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) or [#webextensions](irc://irc.mozilla.org/webextensions) on [IRC](https://wiki.mozilla.org/IRC).
+You'll see that many APIs have no WebExtensions equivalent yet. However, we are intending to extend the WebExtension APIs to support the needs of add-on developers, so if you have ideas, we'd love to hear them. You can reach us on the [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) or `#addons` channel on [Matrix](https://chat.mozilla.org).
 
 {% capture table %}
 

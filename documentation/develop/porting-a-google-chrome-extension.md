@@ -46,7 +46,7 @@ The browser extension APIs are designed to promote cross-browser compatibility a
 1. Review your use of `manifest.json` features and Chrome extension APIs against the [Chrome incompatibilities reference](https://developer.mozilla.org/Add-ons/WebExtensions/Chrome_incompatibilities). Mozilla provides a service that can help to automate this step: [extensiontest.com](https://www.extensiontest.com/). If you're using features or APIs that aren't supported in Firefox, you might not be able to port your extension.
 2. Install your extension in Firefox by using [about:debugging](https://developer.mozilla.org/docs/Tools/about:debugging) or the [web-ext tool](/documentation/develop/getting-started-with-web-ext#testing-out-an-extension) (similar to Chrome’s command-line tools).
 3. [Test your extension](/documentation/develop/debugging).
-4. If you have any problems, contact us on the [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) or [#webextensions](irc://irc.mozilla.org/webextensions) on [IRC](https://wiki.mozilla.org/IRC).
+4. If you have any problems, contact us on the [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) or `#addons` channel on [Matrix](https://chat.mozilla.org).
 5. Package your extension, [manually](/documentation/publish/package-your-extension) or using the [web-ext](/documentation/develop/getting-started-with-web-ext#packaging-your-extension) tool.
 6. [Create an account on addons.mozilla.org then submit your add-on for signing and distribution](/documentation/publish/submitting-an-add-on).
 
