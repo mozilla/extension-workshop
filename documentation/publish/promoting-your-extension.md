@@ -35,10 +35,10 @@ However, before you start investing in encouraging more people to install your e
 
 Add a snazzy button to your website or blog telling people to "Get the add-on." We offer buttons in two sizes:
 
-- 172 x 60 pixels
+- *172 x 60 pixels*  
 {% asset "documentation/publish/get-the-addon-178x60px.png" @optim %}
 
-- 129 x 45 pixels
+- *129 x 45 pixels*  
 {% asset "documentation/publish/get-the-addon-129x45px.png" @optim %}
 
 Simply save these images, put them on your website, and link them to your add-on’s listing on [addons.mozilla.org](https://addons.mozilla.org).
