@@ -66,7 +66,7 @@ For finer control you can use:
 Here's an example using markdown - note you need to add `@path` and `@optim`.
 
 ```markdown
-![Remembear subtitle screenshot]({% asset "content-guidelines/remembear-subtitle.png" @path @optim %} "Remembear subtitle text")
+![Remember subtitle screenshot]({% asset "content-guidelines/remembear-subtitle.png" @path @optim %} "Remember subtitle text")
 ```
 
 ### How to add a "sidebar" layout page
