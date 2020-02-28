@@ -491,6 +491,8 @@
             - title: "Promoting your extension"
               url: "/documentation/publish/promoting-your-extension/"
               subpageitems:
+                - title: "Promote your add-on from your website"
+                  id: "promote-your-addon"
                 - title: "Friends, family, and colleagues"
                   id: "friends-family-colleagues"
                 - title: "Events and meetups"
