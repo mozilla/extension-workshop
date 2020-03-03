@@ -63,9 +63,9 @@ Subscribe to our [mailing list](https://mail.mozilla.org/listinfo/dev-addons) de
 
 ### Questions about add-on development
 
-You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), [Matrix Chat Rooms](https://wiki.mozilla.org/Matrix): [#add-ons](https://matrix.to/#/#add-ons:mozilla.org), [#addons-reviewers](https://matrix.to/#/#addon-reviewers:mozilla.org), [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon), or the [developer mailing list](https://mail.mozilla.org/listinfo/dev-addons).
+You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), [Matrix Chat Rooms](https://wiki.mozilla.org/Matrix): [#add-ons](https://bit.ly/2PKCHuH), [#addons-reviewers](https://bit.ly/32Odp4i), [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon), or the [developer mailing list](https://mail.mozilla.org/listinfo/dev-addons).
 
-If you already use Matrix, then connect to *#addon-reviewers:mozilla.org*. If you have a Firefox account you can use [chat.mozilla.org/#/room/#addon-reviewers:mozilla.org](https://chat.mozilla.org/#/room/#addon-reviewers:mozilla.org) .
+If you already use Matrix, then connect to *#addon-reviewers:mozilla.org*. If you have a Firefox account you can use [chat.mozilla.org/#/room/#addon-reviewers:mozilla.org](https://mzl.la/2x5jNs1) .
 
 ### Meetup IRL
 
