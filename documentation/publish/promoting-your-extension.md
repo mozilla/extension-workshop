@@ -31,17 +31,44 @@ However, before you start investing in encouraging more people to install your e
 
 {% capture content_with_toc %}
 
+## Promote your add-on from your website
+
+Add a snazzy button to your website or blog telling people to "Get the add-on." We offer buttons in two sizes:
+
+- **172 x 60 pixels**  
+
+{% asset "documentation/publish/get-the-addon-178x60px.png" @optim %}
+
+- **129 x 45 pixels**  
+
+{% asset "documentation/publish/get-the-addon-129x45px.png" @optim %}
+
+Simply save these images, put them on your website, and link them to your add-on’s listing on [addons.mozilla.org](https://addons.mozilla.org).
+
+{% endcapture %}
+{% include modules/column-w-toc.html
+  id="promote-your-addon"
+  content=content_with_toc
+%}
+
+<!-- END: Content with Table of Contents -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 ## Friends, family, and colleagues
 
 Real world word-of-mouth can still be a surprisingly effective driver of extension installs. Whether you’re a solo first-time extension developer or an established commercial developer, spreading the word among friends, family, and school, college, or work colleagues can be a very cost-effective way to drive installs of your extension.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/one-column.html
   id="friends-family-colleagues"
-  content=content_with_toc
+  content=content
+  aside=""
 %}
 
-<!-- END: Content with Table of Contents -->
+<!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
