@@ -4,7 +4,7 @@ title: Community
 permalink: /community/
 published: true
 tags: [community, contribute, WebExtensions]
-contributors: [grlwholifts]
+contributors: [caitmuenster, grlwholifts]
 author: caitmuenster
 date: 2020-03-06 09:00:00
 ---
