@@ -121,6 +121,7 @@ for fn in $(find _site -name 'index.html' -not -path '_site/index.html'); do
     --include "*.html" \
     --metadata "{${CSP}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
     --metadata-directive "REPLACE" \
+    --website-redirect "/${s3path}/" \
     --acl "public-read" \
     $fn s3://${EXTENSION_WORKSHOP_BUCKET}/${s3path}
 done
