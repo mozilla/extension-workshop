@@ -13,10 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.url }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Extension Workshop
+title: Get help creating & publishing Firefox extensions
 description: >- # this means to ignore newlines until "url:"
-  Firefox Extension Workshop. Make the web do what you want. If you can dream it,
-  our open souce API and your HTML, CSS, and JavaScript skills can make it happen.
+  Extension Workshop
 url: "https://extensionworkshop.com" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: UA-77033033-24
 
