@@ -4,9 +4,9 @@ title: Community
 permalink: /community/
 published: true
 tags: [community, contribute, WebExtensions]
-contributors: [caitmuenster]
+contributors: [caitmuenster, grlwholifts]
 author: caitmuenster
-date: 2019-07-09 09:00:00
+date: 2020-03-06 09:00:00
 ---
 
 <!-- Overview Page Hero Banner -->
@@ -63,7 +63,7 @@ Subscribe to our [mailing list](https://mail.mozilla.org/listinfo/dev-addons) de
 
 ### Questions about add-on development
 
-You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon), or the [developer mailing list](https://mail.mozilla.org/listinfo/dev-addons).
+You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon), or the [developer mailing list](https://mail.mozilla.org/listinfo/dev-addons). You can also talk with us on [Matrix](https://wiki.mozilla.org/Matrix) in the [Add-ons room](https://mzl.la/2u8ZGbg) (for general development questions) or in the [add-on reviewers room](https://mzl.la/2IJ2Oi1) (for questions about an add-on review).
 
 ### Meetup IRL
 
