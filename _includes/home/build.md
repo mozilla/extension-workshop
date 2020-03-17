@@ -153,7 +153,7 @@ Mozilla takes the safety and privacy of its users very seriously. Be sure to rev
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-Firefox is at the forefront of cross-browser compatibility. Firefox extensions are built using the WebExtensions API, so your creation will be accessible to users no matter what browser they use.
+Firefox is at the forefront of cross-browser compatibility. Firefox add-ons are built using the WebExtensions API, so your creation will be accessible to users no matter what browser they use.
 
 [Learn about browser differences](/documentation/develop/browser-compatibility/)
 
