@@ -6,7 +6,7 @@
 
 ## Need some extra help along the way?
 
-When you build on Firefox, you build with a community of extension developers. And they’re eager to share their expertise and answer your questions.
+When you build on Firefox, you build with a community of add-on developers. And they’re eager to share their expertise and answer your questions.
 
 </div>
 </div>
