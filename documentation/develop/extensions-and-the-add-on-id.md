@@ -124,6 +124,7 @@ You can do the same thing if you are updating from an older add-on type, such as
   - [`runtime.onMessageExternal`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal "This API can't be used in a content script.")
   - [`runtime.onConnectExternal`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal 'Fired when an extension receives a connection request from a different extension.')
 - Using Firefox for Android. See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
+- Using the [`dictionaries` key in manifest.json](https://developer.mozilla.org/Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries).
 
 </div>
 </article>
