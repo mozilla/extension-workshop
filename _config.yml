@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Firefox Extension Workshop
 description: >- # this means to ignore newlines until "url:"
-  Extension Workshop
+  Get help creating & publishing Firefox extensions.
 url: "https://extensionworkshop.com" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: UA-77033033-24
 
