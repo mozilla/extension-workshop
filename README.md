@@ -1,12 +1,12 @@
 [![CircleCI](https://circleci.com/gh/mozilla/extension-workshop/tree/master.svg?style=svg)](https://circleci.com/gh/mozilla/extension-workshop/tree/master)
 
-# Extension Workshop
+# Firefox Extension Workshop
 
-Welcome to Extension Workshop, a launchpad for building Firefox extensions! 🚀
+Welcome to Firefox Extension Workshop, a launchpad for building Firefox extensions! 🚀
 
 ## Updating Content
 
-If you would like to update content or other resources on Extension Workshop, please refer to [contributing.md](.github/contributing.md)
+If you would like to update content or other resources on Firefox Extension Workshop, please refer to [contributing.md](.github/contributing.md)
 
 ## Development Guide: Getting Started
 
