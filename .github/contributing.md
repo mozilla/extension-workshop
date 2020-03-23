@@ -1,6 +1,6 @@
 ## Updating Content
 
-If you would like to update content or other resources on Extension Workshop, please:
+If you would like to update content or other resources on Firefox Extension Workshop, please:
 
     - Make a fork of this repository.
     - Clone your fork locally.

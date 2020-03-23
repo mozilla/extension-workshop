@@ -112,7 +112,7 @@ jobs:
       - *attach_deploy_workspace
       - *run_install_aws_cli
       - run:
-          name: extension workshop deployment (unpublished)
+          name: firefox extension workshop deployment (unpublished)
           command: |
             AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
             AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
@@ -132,7 +132,7 @@ jobs:
       - *attach_deploy_workspace
       - *run_install_aws_cli
       - run:
-          name: extension workshop deployment
+          name: firefox extension workshop deployment
           command: |
             if [[ "$CIRCLE_TAG" =~ -stage$ ]] ; then
               AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \

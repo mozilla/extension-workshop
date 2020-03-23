@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This file is used to deploy Extension Workshop to an S3 bucket. It
+# This file is used to deploy Firefox Extension Workshop to an S3 bucket. It
 # expects to be run from the root of the extensions-challenge directory and
 # you'll need your S3 bucket name in an environment variable
 # $EXTENSION_WORKSHOP_BUCKET
