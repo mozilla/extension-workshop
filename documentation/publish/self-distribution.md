@@ -52,9 +52,9 @@ For more information on how to submit an add-on for distribution on AMO or self-
 
 When you choose to distribute an add-on yourself, they can be installed using the following methods:
 
-- Web download—make your extension available on a suitable web accessible server and when the user downloads the signed add-on file Firefox will install it.
-- [Sideloading add-ons](/documentation/publish/distribute-sideloading/)—enables a user to install an add-on using an XPI file saved on their computer.
-- [Add-ons for use with a desktop app](/documentation/publish/distribute-for-desktop-apps/)—this section describes the best practices for delivering an extension for use with a desktop application.
+- [Web download](/documentation/publish/submitting-an-add-on/#self-distribution)—make your extension available on a suitable web accessible server and when the user downloads the signed add-on file Firefox will install it.
+- [Installing add-on from file](/documentation/publish/distribute-sideloading)—enables a user to install an add-on using an .xpi file saved on their computer.
+- Add-ons for use with a desktop app—starting with Firefox 74, it is no longer be possible to have an extension be automatically installed as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2020/03/10/support-for-extension-sideloading-has-ended/) for more information.
 - [Add-ons in an enterprise environment](/documentation/enterprise/enterprise-distribution/)—this page discusses the use of signed compared to unsigned extensions, installation options, the Firefox settings affecting installation, and including add-ons with a custom Firefox install package.
 
 {% endcapture %}
