@@ -40,6 +40,6 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 - Get additional content and design support in the [Discourse Forum](https://discourse.mozilla.org/c/add-ons 'discourse.mozilla.org/c/add-ons').
 - Learn how to [localize your creation](developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Internationalization 'developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Internationalization'). Solicit translation help from the community on [GitHub](https://github.com 'github.com'), and then upload the translations on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org').
 - [Technical documentation on MDN](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions 'developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions').
-- Creating your very first extension? Get started on the [Extension Workshop](https://extensionworkshop.com/ 'extensionworkshop.com/').
+- Creating your very first extension? Get started on the [Firefox Extension Workshop](https://extensionworkshop.com/ 'extensionworkshop.com/').
 
 _Note, you may be required to include additional information in your product page, beyond the content guidelines here. This includes things like privacy policy or disclosures when payment is required to enable features. See the [Add-on policies](https://developer.mozilla.org/docs/Mozilla/Add-ons/AMO/Policy/Reviews 'developer.mozilla.org/docs/Mozilla/Add-ons/AMO/Policy/Reviews') for more information._

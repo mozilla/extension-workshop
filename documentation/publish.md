@@ -64,8 +64,7 @@ Once your extension is signed, it is subject to review by Mozilla at any time. T
 There are four ways you can distribute your extension. They are:
 
 - Use [addons.mozilla.org](https://developer.mozilla.org/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on) (most popular, broadest audience)
-- Provide a download location for the signed extension file for users to self-install or [sideload](/documentation/publish/distribute-sideloading/) into Firefox.
-- Include the extension installation as part of the installation of a [desktop application](/documentation/publish/distribute-for-desktop-apps/).
+- Provide a [download location for the signed extension](/documentation/publish/distribute-sideloading/) file for users to self-install into Firefox.
 - Use one of the [mechanisms designed to enable enterprise browser administrators to install add-ons](/documentation/enterprise/enterprise-distribution/)
 
 Regardless of what you choose, you’ll need to set up a developer account on [addons.mozilla.org](https://addons.mozilla.org) and host your extension to get it signed, even if you do not distribute it there. Just satisfy a few simple requirements and get your account up and running.
