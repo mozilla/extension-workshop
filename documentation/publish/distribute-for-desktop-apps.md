@@ -5,9 +5,9 @@ permalink: /documentation/publish/distribute-for-desktop-apps/
 published: true
 topic: Publish
 tags: [add-on, distribution, apps, desktop, guide, installation]
-contributors: [SphinxKnight, irenesmith, rebloor]
-last_updated_by: hellosct1
-date: 2019-07-30 02:28:37
+contributors: [SphinxKnight, irenesmith, rebloor, ani-sha]
+last_updated_by: ani-sha
+date: 2020-03-20 22:38:00
 ---
 
 <!-- Page Hero Banner -->
@@ -27,17 +27,27 @@ date: 2019-07-30 02:28:37
 
 {% capture content %}
 
-If you have developed an add-on to complement a desktop application, there are two ways you can install the add-on:
+<!-- Alert -->
 
-- Direct the user to install the add-on from the web, either from [addons.mozilla.org (AMO)](https://addons.mozilla.org) or your own site.
-- Sideloading via standard extension folders or the Windows registry.
+{% capture alert %}
 
-Of these options, directing the user to install from AMO is recommended. The reasons for recommending this option are:
+Starting with Firefox 74, it is no longer be possible to have an extension be automatically installed as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2020/03/10/support-for-extension-sideloading-has-ended/) for more information.
 
-- It avoids any issues with the installation process; the user will not get an interstitial messages during the installation of the add-on, find the add-on installed but disabled, or find that the add-on was not installed.
-- If you update the add-on, the new version will be automatically installed.
+{% endcapture %}
+{% include modules/note.html
+	content=alert
+	alert=true
+%}
 
-By contrast, sideloading using the [standard extension folders](/documentation/publish/distribute-sideloading/#standard-extension-folders) or [Windows registry](/documentation/enterprise/enterprise-distribution/#installation-using-windows-registry) will require your desktop app to install any update to the add-on. As noted in these articles, these methods are deprecated and won't work in future versions of Firefox.
+<!-- END: Alert -->
+
+If you have developed an add-on to complement a desktop application, you will need to provide a way for users to install your extension. You can direct the user to install the add-on from your website or list it on [addons.mozilla.org (AMO)](https://addons.mozilla.org)
+
+Of these options, directing the user to install from AMO is recommended. It avoids any issues with the installation process; the user will not get an interstitial messages during the installation of the add-on, find the add-on installed but disabled, or find that the add-on was not installed.
+
+If you would like to direct users to install the add-on from your website, please read this article on [self-distribution](/documentation/publish/submitting-an-add-on/#self-distribution) to learn how to prepare the .xpi file for web installs.
+
+Enterprise administrators and people who distribute their own builds of Firefox (such as some Linux and Selenium distributions) will be able to continue to deploy extensions to users. Enterprise administrators can do this via [policies](https://github.com/mozilla/policy-templates#extensionsettings). Additionally, Firefox Extended Support Release (ESR) will continue to support sideloading as an extension installation method.
 
 {% endcapture %}
 {% include modules/one-column.html
