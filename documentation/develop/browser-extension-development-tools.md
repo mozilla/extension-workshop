@@ -16,9 +16,9 @@ tags:
     'Translation',
     'WebExtensions',
   ]
-contributors: [rebloor, mdnwebdocs-bot, hellosct1]
-last_updated_by: rebloor
-date: 2019-03-21 12:47:53
+contributors: [rebloor, mdnwebdocs-bot, hellosct1, ani-sha]
+last_updated_by: ani-sha
+date: 2020-03-24 12:47:00
 ---
 
 <!-- Page Hero Banner -->
@@ -66,7 +66,7 @@ Create a scaffold for your browser extensions. Provide the tool with extension n
 
 ![Extension Scaffolding Builder]({% asset "documentation/develop/Extension_scaffolding_builder.png" @optim @path %})
 
-To get started, [visit the tool online](http://webextensions.tech/) or [install it locally from npm](https://www.npmjs.com/package/create-web-ext).
+To get started, [visit the tool online](https://webextensions.in/) or [install it locally from npm](https://www.npmjs.com/package/create-web-ext).
 
 {% endcapture %}
 {% capture aside %}
@@ -77,7 +77,7 @@ To get started, [visit the tool online](http://webextensions.tech/) or [install 
 
 ##### Resources
 
-- [create-web-ext online (webextensions.tech)](http://webextensions.tech/)
+- [create-web-ext online (webextensions.in)](https://webextensions.in/)
 - [create-web-ext on npm](https://www.npmjs.com/package/create-web-ext)
 - [GitHub project](https://github.com/web-ext-labs/create-web-ext)
 - [GitHub UI project](https://github.com/web-ext-labs/ui-tool)
