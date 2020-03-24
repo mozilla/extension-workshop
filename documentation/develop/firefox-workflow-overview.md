@@ -17,9 +17,9 @@ tags:
     WebExtensions,
     workflow,
   ]
-contributors: [irenesmith, hellosct1, rebloor, mdnwebdocs-bot]
-last_updated_by: irenesmith
-date: 2019-05-20 03:25:40
+contributors: [irenesmith, hellosct1, rebloor, mdnwebdocs-bot, ani-sha]
+last_updated_by: ani-sha
+date: 2020-03-24 12:47:00
 ---
 
 {% capture page_hero_banner_content %}
@@ -66,7 +66,7 @@ date: 2019-05-20 03:25:40
             <td></td>
         </tr>
         <tr>
-            <td><a href="http://webextensions.tech/">Create your extension scaffold</a></td>
+            <td><a href="http://webextensions.in/">Create your extension scaffold</a></td>
             <td>Debug with the <a href="https://developer.mozilla.org/docs/Tools/Browser_Toolbox/">Add-on Debugging Window</a></td>
             <td><a href="/documentation/publish/source-code-submission/">Submit your source code</a> (if required)</td>
             <td><a href="/documentation/manage/updating-your-extension/">Update and improve your extension</a></td>
