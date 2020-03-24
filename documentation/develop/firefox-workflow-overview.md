@@ -66,7 +66,7 @@ date: 2020-03-24 12:47:00
             <td></td>
         </tr>
         <tr>
-            <td><a href="http://webextensions.in/">Create your extension scaffold</a></td>
+            <td><a href="https://webextensions.in/">Create your extension scaffold</a></td>
             <td>Debug with the <a href="https://developer.mozilla.org/docs/Tools/Browser_Toolbox/">Add-on Debugging Window</a></td>
             <td><a href="/documentation/publish/source-code-submission/">Submit your source code</a> (if required)</td>
             <td><a href="/documentation/manage/updating-your-extension/">Update and improve your extension</a></td>

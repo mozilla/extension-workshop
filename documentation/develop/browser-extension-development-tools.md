@@ -66,7 +66,7 @@ Create a scaffold for your browser extensions. Provide the tool with extension n
 
 ![Extension Scaffolding Builder]({% asset "documentation/develop/Extension_scaffolding_builder.png" @optim @path %})
 
-To get started, [visit the tool online](http://webextensions.in/) or [install it locally from npm](https://www.npmjs.com/package/create-web-ext).
+To get started, [visit the tool online](https://webextensions.in/) or [install it locally from npm](https://www.npmjs.com/package/create-web-ext).
 
 {% endcapture %}
 {% capture aside %}
@@ -77,7 +77,7 @@ To get started, [visit the tool online](http://webextensions.in/) or [install it
 
 ##### Resources
 
-- [create-web-ext online (webextensions.in)](http://webextensions.in/)
+- [create-web-ext online (webextensions.in)](https://webextensions.in/)
 - [create-web-ext on npm](https://www.npmjs.com/package/create-web-ext)
 - [GitHub project](https://github.com/web-ext-labs/create-web-ext)
 - [GitHub UI project](https://github.com/web-ext-labs/ui-tool)
