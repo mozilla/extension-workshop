@@ -8,7 +8,7 @@ skip_index: true
 
 # Extension Subtitle
 
-The subtitle is one of your extension’s most important pieces of content. It’s the thing that shows up in search results, drawing a potential user’s attention. It makes your extension more discoverable. And, it’s used everywhere—in search results, throughout [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the Firefox browser.
+The subtitle is one of your extension’s most important pieces of content. It’s the thing that shows up in search results, drawing a potential user’s attention. It makes your extension more discoverable. And, it’s used everywhere—in search results, throughout [addons.mozilla.org][https://addons.mozilla.org 'addons.mozilla.org'], and in the Firefox browser.
 
 **A subtitle is a short phrase that clearly, concisely explains what your extension does.** It’s short for a reason: extension name + subtitle become your headline on search. While the name may appear by itself in some contexts, the subtitle will never appear without the name.
 
@@ -103,3 +103,6 @@ Example, “Ghostery”: Privacy ad blocker
 _\_\_\_ [Action/what your extension does] where/how/by \_\_\_\_ [more detail about extension]_
 
 Example, “Spotter”: Automatic connecting with public rooms
+
+[addons.mozilla.org/developers]: https://addons.mozilla.org/developers/'addons.mozilla.org/developers/'
+

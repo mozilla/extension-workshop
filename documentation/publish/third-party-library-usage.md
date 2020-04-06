@@ -120,3 +120,6 @@ If you miss any of the necessary information for used third-party libraries, the
 {%- include up-next.html -%}
 
 <!-- END: Up Next -->
+
+
+[1]: https://addons.mozilla.org

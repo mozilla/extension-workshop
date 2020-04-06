@@ -193,3 +193,5 @@ For resources that can help now you've published an add-on and details of how to
 {%- include up-next.html -%}
 
 <!-- END: Up Next -->
+
+[1]: https://addons.mozilla.org

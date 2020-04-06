@@ -86,9 +86,9 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 </section>
 <!-- END: Image Grid -->
 
-Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
+Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org][https://addons.mozilla.org 'addons.mozilla.org'], and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
 
-Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org').
+Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org][https://addons.mozilla.org 'addons.mozilla.org'].
 
 Between your extension name and subtitle, you have up to 70 characters to use—that’s because 70 is the max character limit for your headline in external search results. It’s best to keep your extension name shorter so you have more characters left over for your subtitle.
 
@@ -287,6 +287,10 @@ Pull out the key words (nouns, adjectives, verbs) and phrases from your descript
 
 Remembear: dolore eu fugiat nulla pariatur lemera dosada peel.
 
-- [Extension Link ](https://firefox.com 'Extension Link ')
-- [Extension Link ](https://firefox.com 'Extension Link ')
-- [Extension Link ](https://firefox.com 'Extension Link ')
+- [Extension Link ][(https://firefox.com 'Extension Link ')]
+- [Extension Link ][(https://firefox.com 'Extension Link ')]
+- [Extension Link ][(https://firefox.com 'Extension Link ')]
+
+[addons.mozilla.org/developers]: https://addons.mozilla.org/developers/'addons.mozilla.org/developers/'
+
+

@@ -177,7 +177,7 @@ Note: The browser console may not show all debugging output from content-scripts
 <section id="--firefox"></section>
 #### \--firefox, -f
 
-Specify a particular version of [Firefox Desktop](https://www.mozilla.org/firefox/) to run the extension in. The value is an absolute path to the Firefox executable or&nbsp;an alias string. If this is not specified, it will attempt to run the extension inside the system's default installation of Firefox.
+Specify a particular version of [Firefox Desktop][https://www.mozilla.org/firefox/] to run the extension in. The value is an absolute path to the Firefox executable or&nbsp;an alias string. If this is not specified, it will attempt to run the extension inside the system's default installation of Firefox.
 
 Here is an example specifying a full path to a Firefox executable on Windows:
 
@@ -274,7 +274,7 @@ Here are the supported targets:
 
 | Target            | Application                                                                                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `firefox-desktop` | The extension will run in [Firefox Desktop](https://www.mozilla.org/firefox/).                                                      |
+| `firefox-desktop` | The extension will run in [Firefox Desktop][https://www.mozilla.org/firefox/]).                                                      |
 | `firefox-android` | The extension will run in [Firefox for Android](https://www.mozilla.org/firefox/mobile/). You must also specify `--android-device`. |
 
 </div>

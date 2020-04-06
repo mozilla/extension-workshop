@@ -16,7 +16,7 @@ date: 2019-05-13 6:35:30
 
 # Security best practices
 
-Here is a list of best practices you should follow to keep the users of your extension safe. If you don't follow these best practices your extension may fail the reviews on [addons.mozilla.org](https://addons.mozilla.org), preventing you from distributing your add-on or resulting in it being blocked from installation in Firefox.
+Here is a list of best practices you should follow to keep the users of your extension safe. If you don't follow these best practices your extension may fail the reviews on [addons.mozilla.org][https://addons.mozilla.org], preventing you from distributing your add-on or resulting in it being blocked from installation in Firefox.
 
 {% endcapture %}
 {% include modules/page-hero.html
