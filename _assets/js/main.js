@@ -1046,6 +1046,7 @@ jQuery(document).ready(function($) {
     var $input = $(settings.input);
 
     $open.on('click', function() {
+      $input.val('');
       $container.velocity('transition.slideRightIn', {
         duration: 450,
         display: 'flex',
