@@ -75,7 +75,7 @@ A good onboarding experience is essential for every browser extension and is not
 
 ### Detecting installation
 
-You can listen for your extension’s installation using ` runtime.``onInstalled ` as follows:
+You can listen for your extension’s installation using `runtime.onInstalled` as follows:
 
 {% highlight javascript linenos %}
 browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
@@ -187,7 +187,7 @@ When you update to your extension, take the opportunity to tell your users about
 
 ### Detecting an upgrade
 
-You can listen for your extension’s updates using ` runtime.``onInstalled ` as follows:
+You can listen for your extension’s updates using `runtime.onInstalled` as follows:
 
 {% highlight javascript linenos %}
 browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
@@ -204,6 +204,8 @@ browser.runtime.onInstalled.addListener(async ({ reason, temporary }) => {
   }
 });
 {% endhighlight %}
+
+<u>Tip</u>: If your upgrade involves requesting additional permissions, see [Test permission requests](/documentation/develop/test-permission-requests) for details on how to test those changes.
 
 ### Upboarding page content
 
