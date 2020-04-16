@@ -276,12 +276,20 @@ Here are the supported targets:
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `firefox-desktop` | The extension will run in [Firefox Desktop](https://www.mozilla.org/firefox/).                                                      |
 | `firefox-android` | The extension will run in [Firefox for Android](https://www.mozilla.org/firefox/mobile/). You must also specify `--android-device`. |
+| `chromium`        | The extension will run in a Chromium-based browser.                                                                                   |
 
 </div>
 
 If no target is specified, the extension will run in `firefox-desktop`.
 
 Environment variable: `$WEB_EXT_TARGET`
+
+### \--chromium-binary
+Path or alias to a Chromium executable such as google-chrome, google-chrome.exe or opera.exe etc.
+If not specified, the default Google Chrome will be used.
+
+### \--chromium-profile
+Path to a custom Chromium profile.
 
 #### \--start-url
 
