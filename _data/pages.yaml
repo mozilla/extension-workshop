@@ -23,6 +23,8 @@
       categories:
         - category: "Getting Started"
           pages:
+            - title: "Firefox differentiators"
+              url: "/documentation/develop/firefox-differentiators/"
             - title: "Firefox Workflow Overview"
               url: "/documentation/develop/firefox-workflow-overview/"
             - title: "About the WebExtensions API"
