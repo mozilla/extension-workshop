@@ -7,7 +7,7 @@ topic: Develop
 tags: [Getting started, WebExtensions, API, Firefox]
 contributors: [rebloor, caitmuenster]
 last_updated_by: caitmuenster
-date: 2019-06-05
+date: 2020-04-23
 ---
 
 <!-- Page Hero Banner -->
