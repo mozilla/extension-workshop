@@ -1,6 +1,6 @@
 ---
 layout: sidebar
-title: Firefox differentiators
+title: Unique Firefox Capabilities
 permalink: /documentation/develop/unique-firefox-capabilities/
 published: true
 topic: Develop
