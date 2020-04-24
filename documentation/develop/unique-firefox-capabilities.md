@@ -1,20 +1,22 @@
 ---
 layout: sidebar
 title: Firefox differentiators
-permalink: /documentation/develop/firefox-differentiators/
+permalink: /documentation/develop/unique-firefox-capabilities/
 published: true
 topic: Develop
 tags: [Getting started, WebExtensions, API, Firefox]
 contributors: [rebloor, caitmuenster]
 last_updated_by: caitmuenster
-date: 2020-04-23
+date: 2020-04-24
 ---
 
 <!-- Page Hero Banner -->
 
 {% capture page_hero_banner_content %}
 
-# Firefox differentiators
+# Unique Firefox Capabilities
+
+Take advantage of features unique to Firefox to extend the Web even further.
 
 {% endcapture %}
 {% include modules/page-hero.html
@@ -42,7 +44,7 @@ Firefox also offers some unique features that you can use to build more secure, 
 
 {% capture col_1_content %}
 
-Help users separate their browser activities with [Contextual Identities](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities) a.k.a. Containers. Give groups of tabs their own local browser storage: cookie store and local data in localStorage and indexedDB. This keeps details such as site preferences, signed in sessions, and ad tracking data private to the tabs.
+Help users separate their browser activities with [Contextual Identities](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities) a.k.a. Containers. Give groups of tabs their own local browser storage: cookie store and local data in localStorage and indexedDB. This keeps details such as site preferences, signed in sessions, and ad tracking data private to the tabs.
 
 {% endcapture %}
 
@@ -64,7 +66,7 @@ Help users separate their browser activities with [Contextual Identities](https:
 
 {% capture col_1_content %}
 
-Record and display additional or complementary information about a web page with the [Sidebar](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) UI component, a panel that sits alongside web pages.
+Record and display additional or complementary information about a web page with the [Sidebar](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) UI component, a panel that sits alongside web pages.
 
 {% endcapture %}
 
@@ -108,7 +110,7 @@ Better integrate your extension with the browser using the ability to pick up th
 
 {% capture col_1_content %}
 
-Help users locate content of interest in a web page, with the ability to [find and highlight text in a webpage](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/find).
+Help users locate content of interest in a web page, with the ability to [find and highlight text in a webpage](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/find).
 
 {% endcapture %}
 
@@ -130,7 +132,7 @@ Help users locate content of interest in a web page, with the ability to [find a
 
 {% capture col_1_content %}
 
-Perform searches directly from your extension, with features to [get details of search engines and perform a search](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/search).
+Perform searches directly from your extension, with features to [get details of search engines and perform a search](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/search).
 
 {% endcapture %}
 
@@ -152,7 +154,7 @@ Perform searches directly from your extension, with features to [get details of 
 
 {% capture col_1_content %}
 
-Add an extra dimension to your themes by [updating the browser theme at runtime](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/theme). With this feature you can alternate themes by time of day, apply a different theme when users browse your website, reflect user actions in your extension, and more.
+Add an extra dimension to your themes by [updating the browser theme at runtime](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/theme). With this feature you can alternate themes by time of day, apply a different theme when users browse your website, reflect user actions in your extension, and more.
 
 {% endcapture %}
 
@@ -174,7 +176,7 @@ Add an extra dimension to your themes by [updating the browser theme at runtime]
 
 {% capture col_1_content %}
 
-Provide users with control over their browsing experience from your extension with the ability to [modify (some) global browser settings](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings).
+Provide users with control over their browsing experience from your extension with the ability to [modify (some) global browser settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings).
 
 {% endcapture %}
 
@@ -196,7 +198,7 @@ Provide users with control over their browsing experience from your extension wi
 
 {% capture col_1_content %}
 
-Enable users to reliably add your extension’s features to new pages and sites, with the ability to [register and unregister content scripts at runtime](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts).
+Enable users to reliably add your extension’s features to new pages and sites, with the ability to [register and unregister content scripts at runtime](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts).
 
 {% endcapture %}
 
@@ -218,7 +220,7 @@ Enable users to reliably add your extension’s features to new pages and sites,
 
 {% capture col_1_content %}
 
-Take advantage of external services to handle protocols or content types by registering [protocol handlers](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) in the `manifest.json`.
+Take advantage of external services to handle protocols or content types by registering [protocol handlers](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) in the `manifest.json`.
 
 {% endcapture %}
 
@@ -240,7 +242,7 @@ Take advantage of external services to handle protocols or content types by regi
 
 {% capture col_1_content %}
 
-Perform additional web tasks such as [resolving domain names](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/dns) and [proxying web requests](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy).
+Perform additional web tasks such as [resolving domain names](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/dns) and [proxying web requests](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/proxy).
 
 {% endcapture %}
 
@@ -262,7 +264,7 @@ Perform additional web tasks such as [resolving domain names](https://developer.
 
 {% capture col_1_content %}
 
-Add advanced security capabilities using [PKCS #11 security modules to source keys and certificates](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11).
+Add advanced security capabilities using [PKCS #11 security modules to source keys and certificates](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11).
 
 {% endcapture %}
 
