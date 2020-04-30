@@ -18,9 +18,10 @@ contributors:
     david_ross,
     wbamberg,
     mrj,
+    mickro,
   ]
-last_updated_by: potterwrit
-date: 2019-07-15 1:14:39
+last_updated_by: mickro
+date: 2020-04-26
 ---
 
 <!-- Page Hero Banner -->
@@ -139,7 +140,7 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 2. Open the directory containing your extension's files, using the command
    `cd path/to/my-extension/`.
 
-3. ZIP the content of the directory—remembering to excludes those files that aren't needed to run the extension, such as `.git`, graphic sources, and similar files—using the command `zip -r -FS ../my-extension.zip * --exclude *.git*`.
+3. ZIP the content of the directory—remembering to excludes those files that aren't needed to run the extension, such as `.git`, graphic sources, and similar files—using the command `zip -r -FS ../my-extension.zip * --exclude '*.git*'`.
 
 <!-- Note -->
 
