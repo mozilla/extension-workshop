@@ -61,7 +61,7 @@ Once your extension is signed, it is subject to review by Mozilla at any time. T
 
 ![Multiple Devices And Browsers]({% asset "documentation/develop/MultipleDevicesAndBrowsers_fullwidth.png" @optim @path %})
 
-There are four ways you can distribute your extension. They are:
+There are three ways you can distribute your extension. They are:
 
 - Use [addons.mozilla.org](https://developer.mozilla.org/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on) (most popular, broadest audience)
 - Provide a [download location for the signed extension](/documentation/publish/self-distribution/) file for users to self-install into Firefox.
