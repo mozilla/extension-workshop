@@ -440,6 +440,8 @@
                     id: "package-linux"
         - category: "Distribute"
           pages:
+              - title: "Distribute pre-release versions"
+                url: "/documentation/publish/distribute-pre-release-versions/"
               - title: "Submitting an add-on"
                 url: "/documentation/publish/submitting-an-add-on/"
                 subpageitems:
