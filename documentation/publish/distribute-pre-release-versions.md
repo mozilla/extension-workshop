@@ -29,9 +29,9 @@ Learn how to distribute an alpha or beta pre-release version of your extension f
 
 Pre-release channels are not supported on [addons.mozilla.org](https://addons.mozilla.org) (AMO), so if you would like to have a limited group of users test a beta version of your extension, you will need to take the following steps to set up your own channel using an self-hosted version of your extension:
 
-1. In manifest.json of the beta version, [specify the location of your update manifest](/documentation/manage/updating-your-extension/#enable-update). This will ensure that your beta users will receive future updates. If your release channel is also self-hosted, you will need to use a different update URL for the beta channel.
+1. In the `manifest.json` of the beta version, [specify the location of your update manifest](/documentation/manage/updating-your-extension/#enable-update). This will ensure that your beta users will receive future updates. If your release channel is also self-hosted, you will need to use a different update URL for the beta channel.
 
-2. Submit your extension for signing on [addons.mozilla.org](https://addons.mozilla.org) using the [self-distribution workflow](/documentation/publish/submitting-an-add-on/#self-distribution). If you prefer to use the command line, you can use web-ext to sign the extension.
+2. Submit your extension for signing on [addons.mozilla.org](https://addons.mozilla.org) using the [self-distribution workflow](/documentation/publish/submitting-an-add-on/#self-distribution). If you prefer to use the command line, you can [use web-ext to sign the extension](/documentation/develop/getting-started-with-web-ext).
 
 <!-- Note -->
 
@@ -45,7 +45,7 @@ If your extension’s release version is listed on [addons.mozilla.org](https://
 	alert=false
 %}
 
-3. After the extension has been signed, host the .xpi file on a web property that you own, such as a Github repository or Wordpress site.
+3. After the extension has been signed, host the `.xpi` file on a web property that you own, such as a Github repository or Wordpress site.
 
 4. Direct your beta users to install the extension from the web property.
 
