@@ -219,7 +219,7 @@ You can't request all the permissions available to `"permissions"` using optiona
 
 - `alarms`
 - `background`
-- `browsingData`
+- `browsingData` until Firefox 76. it becomes optional in Firefox 77
 - `contentSettings`
 - `contextualIdentities`
 - `debugger`
@@ -230,10 +230,10 @@ You can't request all the permissions available to `"permissions"` using optiona
 - `menus`
 - `nativeMessaging`
 - `pageCapture`
-- `pkcs11`
+- `pkcs11` until Firefox 76. it becomes optional in Firefox 77
 - `privacy`
-- `proxy`
-- `sessions`
+- `proxy` until Firefox 76. it becomes optional in Firefox 77
+- `sessions` until Firefox 76. it becomes optional in Firefox 77
 - `storage`
 - `theme`
 
