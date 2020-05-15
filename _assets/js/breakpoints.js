@@ -19,8 +19,8 @@
  * --------------------------------------------------------------------
  */
 
-(function($) {
-  $.fn.breakpoints = function(options) {
+(function ($) {
+  $.fn.breakpoints = function (options) {
     var settings = $.extend(
       {
         matchMedia: Array(

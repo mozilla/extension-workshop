@@ -18,8 +18,8 @@
  * --------------------------------------------------------------------
  */
 
-(function($) {
-  $.fn.parallax = function(settings) {
+(function ($) {
+  $.fn.parallax = function (settings) {
     var config = {
       container: '.slideshow',
       offsetIntertia: 0.15,
@@ -30,7 +30,7 @@
     var $window = $(window);
     var is_touch_device = 'ontouchstart' in document.documentElement;
 
-    this.each(function() {
+    this.each(function () {
       $(this).parallaxBg({
         container: config.container,
         offsetIntertia: config.offsetIntertia,
@@ -40,14 +40,14 @@
       });
     })
       .closest(config.container)
-      .on('transition_out', function(obj, $slide, $next, direction) {
+      .on('transition_out', function (obj, $slide, $next, direction) {
         $next.trigger('resizecheck');
       });
 
     return this;
   };
 
-  $.fn.parallaxBg = function(settings) {
+  $.fn.parallaxBg = function (settings) {
     var config = {};
     if (settings) $.extend(config, settings);
 
@@ -118,7 +118,7 @@
       });
     }
 
-    $self.getBackgroundSize(function(obj) {
+    $self.getBackgroundSize(function (obj) {
       bgHeight = obj.height;
       bgWidth = obj.width;
       obj.self = null;
@@ -129,7 +129,7 @@
     });
 
     if (is_slideshow) {
-      $self.on('resizecheck', function() {
+      $self.on('resizecheck', function () {
         resizecheck();
       });
     }
@@ -143,21 +143,21 @@
     return this;
   };
 
-  var distanceFromView = function($element, $window) {
+  var distanceFromView = function ($element, $window) {
     return $window.scrollTop() - $element.offset().top;
   };
 
-  var aboveView = function($element, $window) {
+  var aboveView = function ($element, $window) {
     return (
       $window.scrollTop() >= $element.offset().top + $element.outerHeight()
     );
   };
 
-  var belowView = function($element, $window) {
+  var belowView = function ($element, $window) {
     return $window.height() + $window.scrollTop() < $element.offset().top;
   };
 
-  var isInView = function($element, $window) {
+  var isInView = function ($element, $window) {
     return (
       aboveView($element, $window) != true &&
       belowView($element, $window) != true &&
@@ -165,14 +165,14 @@
     );
   };
 
-  $.fn.getBackgroundSize = function(callback) {
+  $.fn.getBackgroundSize = function (callback) {
     var urlRegex = /url\('*(.*?)'*\)/g;
     var url = this.css('background-image')
       .replace(urlRegex, '$1')
       .replace(/"/g, '');
     var img = new Image();
 
-    img.onload = function() {
+    img.onload = function () {
       callback({ width: this.width, height: this.height, self: this });
     };
 

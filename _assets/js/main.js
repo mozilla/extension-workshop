@@ -5,7 +5,7 @@
  */
 window.is_touch_device = 'ontouchstart' in document.documentElement;
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   // SETTINGS
   // ------------------
 
@@ -21,10 +21,10 @@ jQuery(document).ready(function($) {
     $('body').addClass('touch-device');
   }
 
-  $('body').on('mousedown', function() {
+  $('body').on('mousedown', function () {
     $('body').addClass('using-mouse');
   });
-  $('body').on('keydown', function() {
+  $('body').on('keydown', function () {
     $('body').removeClass('using-mouse');
   });
 
@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
     $('.site-header').switchNav();
   }
 
-  $('.has-children').each(function() {
+  $('.has-children').each(function () {
     if ($(this).find('.is-active').length) {
       $(this).addClass('has-active-children');
     }
@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
 
   // Secondary Dropdown should not be tabbed through since it repeats functionality above:
   if ($('.sidenav-top a').length) {
-    $('.sidenav-top a').each(function() {
+    $('.sidenav-top a').each(function () {
       $(this).attr('tabindex', '-1');
     });
   }
@@ -223,11 +223,11 @@ jQuery(document).ready(function($) {
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 // PLUGINS
 
-(function($) {
+(function ($) {
   // 1. Top Navigation : toggle mobile and desktop
   // ------
 
-  $.fn.switchNav = function(options) {
+  $.fn.switchNav = function (options) {
     var settings = $.extend(
       {
         breakpoint: 'atleast_large',
@@ -267,7 +267,7 @@ jQuery(document).ready(function($) {
 
   // 1.a Mobile Menu
 
-  $.fn.mobileMenu = function() {
+  $.fn.mobileMenu = function () {
     var $body = $('body');
     var $container = this;
     var $nav = $container.find('.topNav');
@@ -275,7 +275,7 @@ jQuery(document).ready(function($) {
 
     $nav.velocity('transition.slideUpOut', { duration: 0, display: 'none' });
 
-    $primaryDropdown.on('click', function(e) {
+    $primaryDropdown.on('click', function (e) {
       e.preventDefault();
       if ($body.hasClass('nav-open')) {
         $primaryDropdown
@@ -297,12 +297,12 @@ jQuery(document).ready(function($) {
     });
 
     return {
-      kill: function() {
+      kill: function () {
         $primaryDropdown.off('click').removeClass('is-active');
         $nav.velocity('transition.slideDownIn', {
           duration: 0,
           display: 'flex',
-          complete: function() {
+          complete: function () {
             $nav.attr('style', '');
             $body.removeClass('nav-open');
           },
@@ -313,24 +313,20 @@ jQuery(document).ready(function($) {
 
   // 1.b Desktop Menu
 
-  $.fn.desktopMenu = function() {
+  $.fn.desktopMenu = function () {
     var $container = this;
     var $subnav = $container.find('.subfolder');
 
     $subnav
-      .on('focus', 'a', function() {
-        $(this)
-          .closest('.has-subfolder')
-          .addClass('over');
+      .on('focus', 'a', function () {
+        $(this).closest('.has-subfolder').addClass('over');
       })
-      .on('blur', 'a', function() {
-        $(this)
-          .closest('.has-subfolder')
-          .removeClass('over');
+      .on('blur', 'a', function () {
+        $(this).closest('.has-subfolder').removeClass('over');
       });
 
     return {
-      kill: function() {
+      kill: function () {
         $subnav.off('focus').off('blur');
       },
     };
@@ -338,12 +334,12 @@ jQuery(document).ready(function($) {
 
   // 1.c Persistant Menu
 
-  $.fn.persistantMenu = function() {
+  $.fn.persistantMenu = function () {
     // Don't enable the scroll hidden menu for touch devices.
     if (is_touch_device) {
       console.debug('No-op persistantMenu for touch enabled devices');
       return {
-        kill: function() {
+        kill: function () {
           console.debug('No-op persistantMenu.kill()');
         },
       };
@@ -387,7 +383,7 @@ jQuery(document).ready(function($) {
     scrollState();
 
     return {
-      kill: function() {
+      kill: function () {
         $container.removeClass('minimize');
         $window.off('scroll');
       },
@@ -396,7 +392,7 @@ jQuery(document).ready(function($) {
 
   // 1.d Sidebar Nav
 
-  $.fn.sideNav = function(options) {
+  $.fn.sideNav = function (options) {
     var settings = $.extend(
       {
         breakpoint: 'atleast_large',
@@ -427,7 +423,7 @@ jQuery(document).ready(function($) {
 
   // 1.e Mobile Side Menu
 
-  $.fn.mobileSideNav = function() {
+  $.fn.mobileSideNav = function () {
     var $body = $('body');
     var $container = this;
     var $nav = $container.find('.sidenav-top, .sidenav-detail');
@@ -435,7 +431,7 @@ jQuery(document).ready(function($) {
 
     $nav.velocity('transition.slideUpOut', { duration: 0, display: 'none' });
 
-    $primaryDropdown.on('click', function(e) {
+    $primaryDropdown.on('click', function (e) {
       e.preventDefault();
       if ($body.hasClass('subnav-open')) {
         $primaryDropdown.removeClass('is-active');
@@ -455,12 +451,12 @@ jQuery(document).ready(function($) {
     });
 
     return {
-      kill: function() {
+      kill: function () {
         $primaryDropdown.off('click').removeClass('is-active');
         $nav.velocity('transition.slideDownIn', {
           duration: 0,
           display: 'block',
-          complete: function() {
+          complete: function () {
             $nav.attr('style', '');
             $body.removeClass('subnav-open');
           },
@@ -472,7 +468,7 @@ jQuery(document).ready(function($) {
   // 1.f Sidebar Nav Top
   // ------
 
-  $.fn.sideNavTop = function() {
+  $.fn.sideNavTop = function () {
     var $label = this.find('> a, > .label');
     var $active_parent = this.find(
       '.subfolder > .has-active-children > a, .subfolder > .is-active > a'
@@ -483,8 +479,8 @@ jQuery(document).ready(function($) {
     $label.text(title);
   };
 
-  $.fn.sideNavDetail = function() {
-    this.find('a[data-overviewtitle]').each(function() {
+  $.fn.sideNavDetail = function () {
+    this.find('a[data-overviewtitle]').each(function () {
       var $this = $(this);
       var attr = $this.data('overviewtitle');
       $this.text(attr);
@@ -494,7 +490,7 @@ jQuery(document).ready(function($) {
   // 1.g Sidebar Status
   // ------
 
-  $.fn.sideNavStatus = function(options) {
+  $.fn.sideNavStatus = function (options) {
     var settings = $.extend(
       {
         active_el: '.sidenav-detail .is-active > a',
@@ -508,7 +504,7 @@ jQuery(document).ready(function($) {
   // 2. Anchor scroll
   // ------
 
-  $.fn.scrollto = function(options) {
+  $.fn.scrollto = function (options) {
     var settings = $.extend(
       {
         offset_lg: 0,
@@ -520,11 +516,11 @@ jQuery(document).ready(function($) {
 
     var offset = settings.offset_lg;
 
-    $.subscribe('breakpoints', function(obj, media) {
+    $.subscribe('breakpoints', function (obj, media) {
       offset = media.small ? settings.offset_sm : settings.offset_lg;
     });
 
-    this.on('click.scrollto', function(event) {
+    this.on('click.scrollto', function (event) {
       var $anchor = $(this);
       var id = $anchor.attr('href').split('#')[1];
 
@@ -552,7 +548,7 @@ jQuery(document).ready(function($) {
   // 3. Show On Inview
   // ------
 
-  $.fn.showOnView = function(options) {
+  $.fn.showOnView = function (options) {
     if (is_touch_device) {
       console.debug('showOnView disabled for touch device');
       return;
@@ -582,23 +578,23 @@ jQuery(document).ready(function($) {
     if (settings.staggerGroup && $(settings.staggerGroup).length) {
       var ar = settings.staggerGroup.split(' ');
       var $groups = $(ar[0]);
-      $groups.each(function() {
+      $groups.each(function () {
         var increment = settings.staggerIncrement;
         var $els = $(this).find(ar[1]);
-        $els.each(function() {
+        $els.each(function () {
           $(this).data('onscrolldelay', increment);
           increment += settings.staggerIncrement;
         });
       });
     }
 
-    $window.on('scroll.onLoad', function() {
+    $window.on('scroll.onLoad', function () {
       onLoad = false;
       $window.off('scroll.onLoad');
     });
 
     function activate() {
-      $elements.each(function() {
+      $elements.each(function () {
         var $el = $(this);
         var delay =
           $el.data('onscrolldelay') !== undefined
@@ -611,7 +607,7 @@ jQuery(document).ready(function($) {
             ? $el.data('display')
             : settings.display;
         if (settings.count == 'once') {
-          $el.one('inview', function(event, isInView) {
+          $el.one('inview', function (event, isInView) {
             if (isInView) {
               thisDelay =
                 onLoad && onLoadDelay != undefined ? onLoadDelay : delay;
@@ -624,7 +620,7 @@ jQuery(document).ready(function($) {
             }
           });
         } else if (settings.count == 'everytime') {
-          $el.on('inview', function(event, isInView) {
+          $el.on('inview', function (event, isInView) {
             if (isInView) {
               thisDelay =
                 onLoad && onLoadDelay != undefined ? onLoadDelay : delay;
@@ -644,7 +640,7 @@ jQuery(document).ready(function($) {
       });
     }
 
-    $.subscribe('breakpoints', function(obj, media) {
+    $.subscribe('breakpoints', function (obj, media) {
       active =
         settings.breakpoint == null ||
         media[settings.breakpoint] ||
@@ -659,7 +655,7 @@ jQuery(document).ready(function($) {
   // 7. RSS Feed
   // ------
 
-  $.fn.rss_feed = function(options) {
+  $.fn.rss_feed = function (options) {
     var settings = $.extend(
       {
         container:
@@ -672,10 +668,10 @@ jQuery(document).ready(function($) {
 
     var $container = this;
 
-    $.get('https://blog.mozilla.org/addons/feed/', function(data) {
+    $.get('https://blog.mozilla.org/addons/feed/', function (data) {
       var $xml = $(data); // DOMPurify.sanitize(data) doesn't work here because data is not html
       var i = settings.num;
-      $xml.find('item').each(function() {
+      $xml.find('item').each(function () {
         if (i--) {
           var $this = $(this),
             item = {
@@ -750,7 +746,7 @@ jQuery(document).ready(function($) {
   // 8. Anatomy of an extenstion
   // ------
 
-  $.fn.extenstionAnatomy = function(options) {
+  $.fn.extenstionAnatomy = function (options) {
     var settings = $.extend(
       {
         control: $('#anatomy-control'),
@@ -766,39 +762,39 @@ jQuery(document).ready(function($) {
     var $tile_background = $('#background');
 
     $tile_interface
-      .on('mouseenter', function() {
+      .on('mouseenter', function () {
         $tile_interface.addClass('hover');
       })
-      .on('mouseleave', function() {
+      .on('mouseleave', function () {
         $tile_interface.removeClass('hover');
       });
 
     $tile_content
-      .on('mouseenter', function() {
+      .on('mouseenter', function () {
         $tile_content.addClass('hover');
       })
-      .on('mouseleave', function() {
+      .on('mouseleave', function () {
         $tile_content.removeClass('hover');
       });
 
     $tile_background
-      .on('mouseenter', function() {
+      .on('mouseenter', function () {
         $tile_background.addClass('hover');
       })
-      .on('mouseleave', function() {
+      .on('mouseleave', function () {
         $tile_background.removeClass('hover');
       });
 
-    $this.on('inview', function(event, isInView) {
+    $this.on('inview', function (event, isInView) {
       clearTimeout(timer1);
       clearTimeout(timer2);
       if (isInView) {
         var delay = first ? 700 : 100;
-        timer1 = setTimeout(function() {
+        timer1 = setTimeout(function () {
           $this.addClass('step-one');
           settings.control.addClass('step-one');
         }, delay);
-        timer2 = setTimeout(function() {
+        timer2 = setTimeout(function () {
           $this.addClass('step-two');
           settings.control.addClass('step-two');
         }, delay + 200);
@@ -810,7 +806,7 @@ jQuery(document).ready(function($) {
     });
 
     settings.control
-      .on('mouseenter', 'button', function() {
+      .on('mouseenter', 'button', function () {
         var panel = $(this).data('panel');
         if (panel == 'anatomy-ui') {
           $tile_interface.addClass('hover');
@@ -820,7 +816,7 @@ jQuery(document).ready(function($) {
           $tile_background.addClass('hover');
         }
       })
-      .on('mouseleave', 'button', function() {
+      .on('mouseleave', 'button', function () {
         $tile_interface.removeClass('hover');
         $tile_content.removeClass('hover');
         $tile_background.removeClass('hover');
@@ -837,7 +833,7 @@ jQuery(document).ready(function($) {
   // 9. Popups
   // ------
 
-  $.fn.popups = function(options) {
+  $.fn.popups = function (options) {
     var settings = $.extend(
       {
         panels: '.popup-panel',
@@ -853,13 +849,13 @@ jQuery(document).ready(function($) {
     var $links = this;
     var $panels = $(settings.panels);
 
-    $links.on('click', function() {
+    $links.on('click', function () {
       var $link = $(this);
       var panel = '#' + $link.data('panel');
       if ($panels.filter(':visible').length) {
         $panels.velocity('transition.slideDownOut', {
           duration: 300,
-          complete: function() {
+          complete: function () {
             openPanel($link, panel);
           },
         });
@@ -874,7 +870,7 @@ jQuery(document).ready(function($) {
         positionPanel($panel);
         $panel.velocity('transition.slideUpIn', {
           duration: 300,
-          complete: function() {
+          complete: function () {
             if (!$body.hasClass('using-mouse')) {
               $panel.find('button.close').focus();
             }
@@ -883,19 +879,19 @@ jQuery(document).ready(function($) {
         $panel
           .find('button.close')
           .off('click')
-          .on('click', function() {
+          .on('click', function () {
             closePanel($link, $panel);
           });
         $(document)
           .off('click.openpanel')
           .off('keyup.openpanel')
-          .on('click.openpanel', function(e) {
+          .on('click.openpanel', function (e) {
             var $target = $(e.target);
             if (!$target.closest(panel).length && $panel.is(':visible')) {
               closePanel($link, $panel);
             }
           })
-          .on('keyup.openpanel', function(e) {
+          .on('keyup.openpanel', function (e) {
             if (e.key == 'Escape' && $panel.is(':visible')) {
               closePanel($link, $panel);
             }
@@ -906,7 +902,7 @@ jQuery(document).ready(function($) {
     function closePanel($link, $panel) {
       $panel.velocity('transition.slideDownOut', {
         duration: 300,
-        complete: function() {
+        complete: function () {
           if (!$body.hasClass('using-mouse')) {
             $link.focus();
           }
@@ -923,7 +919,7 @@ jQuery(document).ready(function($) {
     }
 
     function updatePanelPosition() {
-      $panels.filter(':visible').each(function() {
+      $panels.filter(':visible').each(function () {
         positionPanel($(this));
       });
     }
@@ -934,7 +930,7 @@ jQuery(document).ready(function($) {
   // 10. Content Guidelines Navigation
   // ------
 
-  $.fn.switchContentGuidelinesNav = function(options) {
+  $.fn.switchContentGuidelinesNav = function (options) {
     var settings = $.extend(
       {
         breakpoint: 'atleast_medium',
@@ -973,14 +969,14 @@ jQuery(document).ready(function($) {
 
   // 10.a Mobile Menu
 
-  $.fn.mobileContentGuidelinesMenu = function() {
+  $.fn.mobileContentGuidelinesMenu = function () {
     var $container = this;
     var $nav = $container.find('nav');
     var $links = $container.find('p, li:not(.current)');
     var open = $nav.hasClass('open');
     var $window = $(window);
 
-    $window.on('scroll.mobile', function() {
+    $window.on('scroll.mobile', function () {
       if ($window.scrollTop() >= $container.offset().top) {
         $container.addClass('sticky');
       } else {
@@ -992,14 +988,14 @@ jQuery(document).ready(function($) {
       $links.velocity('slideUp', { duration: 0 });
     }
 
-    $nav.on('click', function() {
+    $nav.on('click', function () {
       if (open) {
         $nav.removeClass('open');
         $links.velocity('slideUp');
       } else {
         $nav.addClass('open');
         $links.velocity('slideDown', {
-          complete: function() {
+          complete: function () {
             // if ($nav.outerHeight() + $nav.offset().top > $window.height() + $window.scrollTop()) {
             //     $nav.velocity('scroll', {duration: 900, offset: -($nav.outerHeight() - 16)});
             // }
@@ -1010,7 +1006,7 @@ jQuery(document).ready(function($) {
     });
 
     return {
-      kill: function() {
+      kill: function () {
         $nav.off('click');
         $nav.removeClass('open');
         $links.attr('style', '');
@@ -1021,16 +1017,16 @@ jQuery(document).ready(function($) {
 
   // 10.b Desktop Menu
 
-  $.fn.desktopContentGuidelinesMenu = function() {
+  $.fn.desktopContentGuidelinesMenu = function () {
     return {
-      kill: function() {},
+      kill: function () {},
     };
   };
 
   // 11. Search Header
   // ------
 
-  $.fn.searchHeader = function(options) {
+  $.fn.searchHeader = function (options) {
     var settings = $.extend(
       {
         open: '.search-input-open',
@@ -1045,22 +1041,22 @@ jQuery(document).ready(function($) {
     var $close = $(settings.close);
     var $input = $(settings.input);
 
-    $open.on('click', function() {
+    $open.on('click', function () {
       $input.val('');
       $container.velocity('transition.slideRightIn', {
         duration: 450,
         display: 'flex',
-        complete: function() {
+        complete: function () {
           $input.focus();
         },
       });
     });
 
-    $close.on('click', function() {
+    $close.on('click', function () {
       $container.velocity('transition.slideRightOut', { duration: 450 });
     });
 
-    $(document).on('keyup.searchheader', function(e) {
+    $(document).on('keyup.searchheader', function (e) {
       if (e.key == 'Escape') {
         $container.velocity('transition.slideRightOut', { duration: 450 });
       }
@@ -1070,7 +1066,7 @@ jQuery(document).ready(function($) {
   // 12. Search Results
   // ------
 
-  $.fn.searchResults = function(options) {
+  $.fn.searchResults = function (options) {
     var settings = $.extend(
       {
         input: '.search-cta #lunrsearch',
@@ -1114,7 +1110,7 @@ jQuery(document).ready(function($) {
         num + ' ' + $container.data('message') + ' "' + query + '"';
       var $title = $('<h2 class="no-underline"></h2>');
 
-      data.then(function(loaded_data) {
+      data.then(function (loaded_data) {
         // Show results
         $container.empty();
 
@@ -1167,15 +1163,15 @@ jQuery(document).ready(function($) {
     }
 
     // Build Lunr
-    data.then(function(loaded_data) {
-      idx = lunr(function() {
+    data.then(function (loaded_data) {
+      idx = lunr(function () {
         var l = this;
-        $.each(settings.search_fields, function(i, obj) {
+        $.each(settings.search_fields, function (i, obj) {
           l.field(obj.title, { boost: obj.boost ? obj.boost : 1 });
         });
         l.ref('id');
 
-        $.each(loaded_data.entries, function(index, value) {
+        $.each(loaded_data.entries, function (index, value) {
           if (!value.skip_index) {
             l.add($.extend({ id: index }, value));
           }
@@ -1183,7 +1179,7 @@ jQuery(document).ready(function($) {
       });
 
       if ($local_input) {
-        $local_input.on('keyup', function() {
+        $local_input.on('keyup', function () {
           var searchVal = $(this).val();
           if (searchVal && searchVal.length && searchVal.length > 3) {
             lunr_search(searchVal);
@@ -1201,7 +1197,7 @@ jQuery(document).ready(function($) {
 
   // 13. Sidebar Nav Page Section Highlighting
 
-  $.fn.highlightPageSection = function(options) {
+  $.fn.highlightPageSection = function (options) {
     var settings = $.extend(
       {
         offset: 38,
@@ -1213,7 +1209,7 @@ jQuery(document).ready(function($) {
     var $this = this;
     var $anchors = this.find('a');
 
-    $window.on('scroll', function() {
+    $window.on('scroll', function () {
       updateAnchorActive();
     });
 
@@ -1221,7 +1217,7 @@ jQuery(document).ready(function($) {
 
     function updateAnchorActive() {
       $anchors.removeClass('is-in-view');
-      $anchors.each(function() {
+      $anchors.each(function () {
         var $self = $(this);
         var $el = $($self.attr('href'));
         if ($el.length && isInFocus($el, 0.75)) {
@@ -1237,7 +1233,7 @@ jQuery(document).ready(function($) {
   // 14. Expandable List
   // ------
 
-  $.fn.expandableList = function(options) {
+  $.fn.expandableList = function (options) {
     var settings = $.extend(
       {
         title: 'dt',
@@ -1251,7 +1247,7 @@ jQuery(document).ready(function($) {
     this.find(settings.title_button).attr('aria-expanded', 'false');
     this.find(settings.description).attr('aria-hidden', 'true');
 
-    this.on('click', settings.title_button, function() {
+    this.on('click', settings.title_button, function () {
       var $this = $(this);
 
       if ($this.attr('aria-expanded') == 'true') {
@@ -1275,7 +1271,7 @@ jQuery(document).ready(function($) {
   // 16. Scroll sidebar to active page position
   // ------
 
-  $.fn.sidenavScrollToActive = function(options) {
+  $.fn.sidenavScrollToActive = function (options) {
     var settings = $.extend(
       {
         active: $('.sidenav-detail .is-active'),
@@ -1325,20 +1321,20 @@ jQuery(document).ready(function($) {
     return vars;
   }
 
-  var aboveView = function(element) {
+  var aboveView = function (element) {
     return (
       $(window).scrollTop() >= element.offset().top + element.outerHeight()
     );
   };
 
-  var belowFocus = function(element, focusMultipliers) {
+  var belowFocus = function (element, focusMultipliers) {
     return (
       $(window).height() + $(window).scrollTop() <
       element.offset().top + $(window).height() * focusMultipliers
     );
   };
 
-  var isInFocus = function(element, focusMultipliers) {
+  var isInFocus = function (element, focusMultipliers) {
     return (
       aboveView(element) != true &&
       belowFocus(element, focusMultipliers) != true

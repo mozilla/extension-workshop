@@ -7,7 +7,7 @@ if (typeof Mzp === 'undefined') {
   var Mzp = {};
 }
 
-(function() {
+(function () {
   'use strict';
 
   var LangSwitcher = {};
@@ -19,7 +19,7 @@ if (typeof Mzp === 'undefined') {
    * @param {String} Newly selected language code e.g. `de`
    * @return {String} pathname e.g. `/de/firefox/`
    */
-  LangSwitcher.switchPath = function(location, newLang) {
+  LangSwitcher.switchPath = function (location, newLang) {
     var parts = location.pathname.slice(1).split('/');
     var currentLang = '/' + parts[0] + '/';
 
@@ -36,7 +36,7 @@ if (typeof Mzp === 'undefined') {
    * Redirect page to destination URL if valid
    * @param {String} destination
    */
-  LangSwitcher.doRedirect = function(destination) {
+  LangSwitcher.doRedirect = function (destination) {
     if (destination) {
       window.location.href = destination;
     }
@@ -46,7 +46,7 @@ if (typeof Mzp === 'undefined') {
    * Initialize footer lang switcher.
    * @param {function} Custom callback for analytics.
    */
-  LangSwitcher.init = function(callback) {
+  LangSwitcher.init = function (callback) {
     var language = document.querySelectorAll(
       '.mzp-js-language-switcher-select'
     );
@@ -56,7 +56,7 @@ if (typeof Mzp === 'undefined') {
 
       language[i].addEventListener(
         'change',
-        function(e) {
+        function (e) {
           var newLanguage = e.target.value;
           var previousLanguage = e.target.getAttribute(
             'data-previous-language'

@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-(function() {
+(function () {
   'use strict';
 
   // !! this file assumes only one signup form per page !!
@@ -73,7 +73,7 @@
 
     var xhr = new XMLHttpRequest();
 
-    xhr.onload = function(r) {
+    xhr.onload = function (r) {
       if (r.target.status >= 200 && r.target.status < 300) {
         // response is null if handled by service worker
         if (response === null) {
@@ -97,7 +97,7 @@
       }
     };
 
-    xhr.onerror = function(e) {
+    xhr.onerror = function (e) {
       newsletterError(e);
     };
 
