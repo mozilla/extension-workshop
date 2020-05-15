@@ -1,9 +1,9 @@
-(function($) {
+(function ($) {
   // create deferred object
   // ------
 
   var YTdeferred = $.Deferred();
-  window.onYouTubeIframeAPIReady = function() {
+  window.onYouTubeIframeAPIReady = function () {
     // resolve when youtube callback is called passing YT as a parameter
     YTdeferred.resolve(window.YT);
   };
@@ -19,9 +19,9 @@
   // document ready
   // ------
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     // whenever youtube callback was called = deferred resolved your custom function will be executed with YT as an argument
-    YTdeferred.done(function(YT) {
+    YTdeferred.done(function (YT) {
       $(document).video_cta({
         yt_object: YT,
         cta: '.video-link, a[title|="Open Popup Video"], .video-popup a',
@@ -29,7 +29,7 @@
       });
 
       if ($('.video-banner').length) {
-        $('.video-banner').each(function() {
+        $('.video-banner').each(function () {
           $(this).video_banner({ yt_object: YT });
         });
       }
@@ -39,7 +39,7 @@
   // Call to action overlay video
   // ------
 
-  $.fn.video_cta = function(options) {
+  $.fn.video_cta = function (options) {
     var settings = $.extend(
       {
         yt_object: null,
@@ -71,7 +71,7 @@
     $('body')
       // Deregister to avoiding multiple bindings.
       .off('keyup.escCloseVideo')
-      .on('keyup.escCloseVideo', function(e) {
+      .on('keyup.escCloseVideo', function (e) {
         // 27 is the escape key.
         if (e.originalEvent.keyCode === 27 && closeVideo) {
           closeVideo();
@@ -82,7 +82,7 @@
       $(settings.close).on('click', closeVideo);
     }
 
-    this.on('click', settings.cta, function(e) {
+    this.on('click', settings.cta, function (e) {
       e.preventDefault();
 
       if ($('#' + settings.container_id).length && playing) {
@@ -207,7 +207,7 @@
         yt_player = null;
         $container.remove();
       } else {
-        setTimeout(function() {
+        setTimeout(function () {
           yt_player = null;
           $container.remove();
         }, 1000);
@@ -218,7 +218,7 @@
   // Banner background video
   // ------
 
-  $.fn.video_banner = function(options) {
+  $.fn.video_banner = function (options) {
     var settings = $.extend(
       {
         yt_object: null,
@@ -285,7 +285,7 @@
       }
     }
 
-    $window.on('load resize', function() {
+    $window.on('load resize', function () {
       videoSize();
     });
   };

@@ -1,4 +1,4 @@
-(function(d) {
+(function (d) {
   if (typeof window !== 'undefined' && 'ontouchstart' in window) {
     console.debug('Inview disabled for touch device.');
     return;
@@ -12,28 +12,28 @@
     f = h.documentElement,
     j = d.expando;
   d.event.special.inview = {
-    add: function(a) {
+    add: function (a) {
       p[a.guid + '-' + this[j]] = { data: a, $element: d(this) };
     },
-    remove: function(a) {
+    remove: function (a) {
       try {
         delete p[a.guid + '-' + this[j]];
       } catch (d) {}
     },
   };
-  d(i).bind('scroll resize', function() {
+  d(i).bind('scroll resize', function () {
     e = a = null;
   });
   !f.addEventListener &&
     f.attachEvent &&
-    f.attachEvent('onfocusin', function() {
+    f.attachEvent('onfocusin', function () {
       a = null;
     });
-  setInterval(function() {
+  setInterval(function () {
     var k = d(),
       j,
       n = 0;
-    d.each(p, function(a, b) {
+    d.each(p, function (a, b) {
       var c = b.data.selector,
         d = b.$element;
       k = k.add(c ? d.find(c) : d);
