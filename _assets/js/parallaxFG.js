@@ -16,8 +16,8 @@
  * --------------------------------------------------------------------
  */
 
-(function($) {
-  $.fn.parallaxFG = function(options) {
+(function ($) {
+  $.fn.parallaxFG = function (options) {
     var settings = $.extend(
       {
         offsetIntertia: 0.15,

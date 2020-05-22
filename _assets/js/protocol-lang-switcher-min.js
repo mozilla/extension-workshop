@@ -1,8 +1,8 @@
 if (void 0 === Mzp) var Mzp = {};
-!(function() {
+!(function () {
   'use strict';
   var a = {
-    switchPath: function(t, e) {
+    switchPath: function (t, e) {
       var i = t.pathname.slice(1).split('/'),
         n = '/' + i[0] + '/',
         a;
@@ -11,10 +11,10 @@ if (void 0 === Mzp) var Mzp = {};
         '/' + e + '/' + i.slice(1).join('/') + t.search
       );
     },
-    doRedirect: function(t) {
+    doRedirect: function (t) {
       t && (window.location.href = t);
     },
-    init: function(n) {
+    init: function (n) {
       for (
         var t = document.querySelectorAll('.mzp-js-language-switcher-select'),
           e = 0;
@@ -24,7 +24,7 @@ if (void 0 === Mzp) var Mzp = {};
         t[e].setAttribute('data-previous-language', t[e].value),
           t[e].addEventListener(
             'change',
-            function(t) {
+            function (t) {
               var e = t.target.value,
                 i = t.target.getAttribute('data-previous-language');
               'function' == typeof n && n(i, e),
