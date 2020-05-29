@@ -109,7 +109,6 @@ Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExte
 | `clipboardWrite`                                                                                                               | Input data to the clipboard                                                                                                                                                                                      |
 | `clipboardRead`                                                                                                                | Get data from the clipboard                                                                                                                                                                                      |
 | Other permissions:                                                                                                               |
-| `unlimitedStorage` (up to Firefox version 76)                                                                                    | Store unlimited amount of client-side data                                                                                                                                                                       |
 | The manifest key ["devtools_page"](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) | Extend developer tools to access your data in open tabs                                                                                                                                                          |
 
 </div>
@@ -133,7 +132,7 @@ The following permissions don't get alerted to users:
   - `webRequest`
   - `webRequestBlocking`
 - Other permissions:
-  - `unlimitedStorage` (from Firefox version 77)
+  - `unlimitedStorage`
   - `activeTab`
 
 </div>
@@ -219,7 +218,6 @@ You can't request all the permissions available to `"permissions"` using optiona
 
 - `alarms`
 - `background`
-- `browsingData` until Firefox 76. it becomes optional in Firefox 77
 - `contentSettings`
 - `contextualIdentities`
 - `debugger`
@@ -230,10 +228,7 @@ You can't request all the permissions available to `"permissions"` using optiona
 - `menus`
 - `nativeMessaging`
 - `pageCapture`
-- `pkcs11` until Firefox 76. it becomes optional in Firefox 77
 - `privacy`
-- `proxy` until Firefox 76. it becomes optional in Firefox 77
-- `sessions` until Firefox 76. it becomes optional in Firefox 77
 - `storage`
 - `theme`
 
