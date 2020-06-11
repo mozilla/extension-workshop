@@ -80,6 +80,8 @@ Overwrite destination package file if it exists. Without this option, web-ext wi
 
 Environment variable: `$WEB_EXT_OVERWRITE_DEST=true`
 
+<section id="web-ext-docs"></section>
+
 ### web-ext docs
 
 Opens the [web-ext documentation](/documentation/develop/getting-started-with-web-ext/) in the user's default browser.
