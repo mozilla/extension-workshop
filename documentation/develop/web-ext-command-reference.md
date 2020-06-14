@@ -7,6 +7,7 @@ topic: Develop
 tags: [commands, Options, Reference, Tools, web-ext, WebExtensions]
 contributors:
   [
+    lfilho
     rebloor,
     mdnwebdocs-bot,
     kumar303,
@@ -23,8 +24,8 @@ contributors:
     sharang,
     chrisdavidmills,
   ]
-last_updated_by: rebloor
-date: 2019-04-16 10:25:47
+last_updated_by: lfilho
+date: 2020-06-14 00:11:47
 ---
 
 <!-- Page Hero Banner -->
@@ -286,11 +287,18 @@ If no target is specified, the extension will run in `firefox-desktop`.
 
 Environment variable: `$WEB_EXT_TARGET`
 
-### \--chromium-binary
+#### \--args, --arg
+Additional CLI options passed to the Browser binary. Example:
+
+{% highlight javascript %}
+--arg "'--search=mozilla'" --arg "'--new-tab=https://duckduckgo.com'"
+{% endhighlight %}
+
+#### \--chromium-binary
 Path or alias to a Chromium executable such as google-chrome, google-chrome.exe or opera.exe etc.
 If not specified, the default Google Chrome will be used.
 
-### \--chromium-profile
+#### \--chromium-profile
 Path to a custom Chromium profile.
 
 #### \--start-url
@@ -560,3 +568,4 @@ WEB_EXT_VERBOSE=true
 {%- include up-next.html -%}
 
 <!-- END: Up Next -->
+
