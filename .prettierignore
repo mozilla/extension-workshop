@@ -8,7 +8,7 @@ Gemfile
 rvm-installer
 _site/
 *.lock
-# white-list files we want to process
+# Allow files we want to process
 !*.js
 !*.scss
 
