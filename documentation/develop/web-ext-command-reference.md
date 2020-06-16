@@ -7,7 +7,7 @@ topic: Develop
 tags: [commands, Options, Reference, Tools, web-ext, WebExtensions]
 contributors:
   [
-    lfilho
+    lfilho,
     rebloor,
     mdnwebdocs-bot,
     kumar303,
