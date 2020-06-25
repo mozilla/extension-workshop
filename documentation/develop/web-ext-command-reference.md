@@ -291,7 +291,7 @@ Environment variable: `$WEB_EXT_TARGET`
 Additional CLI options passed to the Browser binary. Example:
 
 {% highlight javascript %}
---arg "'--search=mozilla'" --arg "'--new-tab=https://duckduckgo.com'"
+--arg="--search=mozilla" --arg="--new-tab=https://duckduckgo.com"
 {% endhighlight %}
 
 #### \--chromium-binary
