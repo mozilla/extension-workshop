@@ -3,7 +3,7 @@ version: 2.1
 references:
   build_container: &build_container
     docker:
-      - image: circleci/ruby:2.6
+      - image: circleci/ruby:2.7
     working_directory: ~/extension-workshop
 
   restore_build_cache: &restore_build_cache
