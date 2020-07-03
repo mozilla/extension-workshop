@@ -6,15 +6,15 @@ layout: full-width
 
     <header id="top" class="banner intro">
         <div class="graphic-bg">
-            <div class="parallaxFG-left left" style="background-image: url({% asset "header-v2-a.svg" @path @optim %});"></div>
-            <div class="parallaxFG-right right" style="background-image: url({% asset "header-v2-b.svg" @path @optim %});"></div>
+            <div class="parallaxFG-left left" style="background-image: url('_assets/img/header-v2-a.svg');"></div>
+            <div class="parallaxFG-right right" style="background-image: url('_assets/img/header-v2-b.svg');"></div>
         </div>
         <div class="grid-container grid-x grid-padding-x align-middle banner-content">
             <div class="cell small-12 text-center">
                 {{ content }}
             </div>
         </div>
-        
+
         <div class="bottom-content">
             <div class="grid-container grid-x grid-padding-x align-bottom">
                 <div class="cell small-12">
@@ -30,13 +30,13 @@ layout: full-width
 
         <section id="{{ section.id }}">
             {% capture section_description %}{% include home/{{ section.description }} %}{% endcapture %}
-            {{ section_description | markdownify }}
+            {{ section_description }}
         </section>
 
     {% endfor %}
 
     <section id="news">
-        <div class="bottom-of-page parallaxFG" style="background-image: url({% asset "home-footer-left.svg" @path @optim %}), url({% asset "home-footer-right.svg" @path @optim %});"></div>
+        <div class="bottom-of-page parallaxFG" style="background-image: url('_assets/img/home-footer-left.svg'), url('_assets/img/home-footer-right.svg')"></div>
 
         <div class="grid-container grid-x grid-padding-x align-center tiles-intro">
             <div class="cell small-12">
@@ -53,6 +53,6 @@ layout: full-width
                 <p><a href="https://blog.mozilla.org/addons/">Visit add-ons blog</a></p>
             </div>
         </div>
-    </section> 
+    </section>
 
 </div>

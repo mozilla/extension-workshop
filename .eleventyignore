@@ -9,3 +9,4 @@ rvm-installer
 rvm-installer.asc
 yarn-error.log
 yarn.lock
+*.scss

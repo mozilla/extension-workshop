@@ -4,7 +4,7 @@
         {% if item.categories %}
 
             <li class="has-children {% if page.url == item.url %}is-active{% endif %}">
-                <a href="{{ item.url | relative_url }}" data-overviewtitle="{{ item.title }} Overview">{{ item.title }}</a>
+                <a href="{{ item.url }}" data-overviewtitle="{{ item.title }} Overview">{{ item.title }}</a>
 
                 {% if item.subpageitems %}
                     <ul class="section">
@@ -13,7 +13,7 @@
                         {% endfor %}
                     </ul>
                 {% endif %}
-                
+
                 {% for cat in item.categories %}
                     <div class="category">
                         <h6>{{ cat.category }}</h6>
@@ -21,9 +21,9 @@
                             <ul>
                                 {% for pg in cat.pages %}
                                     <li class="{% if page.url == pg.url %}is-active{% endif %}">
-                                        <a href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
-    
-                                        {% if pg.subpageitems %}                                    
+                                        <a href="{{ pg.url }}">{{ pg.title }}</a>
+
+                                        {% if pg.subpageitems %}
                                             <ul class="section">
                                                 {% for section in pg.subpageitems %}
                                                     <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
@@ -44,7 +44,7 @@
 
             <li class="has-children has-subfolder {% if page.url == item.url %}is-active{% endif %}">
                 {% if item.url %}
-                    <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    <a href="{{ item.url }}">{{ item.title }}</a>
                 {% else %}
                     <span class="label">{{ item.title }}</span>
                 {% endif %}
@@ -55,7 +55,7 @@
                         {% if subitem.categories %}
 
                             <li class="has-children {% if page.url == subitem.url %}is-active{% endif %}">
-                                <a href="{{ subitem.url | relative_url }}" data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a>
+                                <a href="{{ subitem.url }}" data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a>
 
                                 {% if subitem.subpageitems %}
                                     <ul class="section">
@@ -72,7 +72,7 @@
                                             <ul>
                                                 {% for pg in cat.pages %}
                                                     <li class="{% if page.url == pg.url %}is-active{% endif %}">
-                                                        <a href="{{ pg.url | relative_url }}">{{ pg.title }}</a>
+                                                        <a href="{{ pg.url }}">{{ pg.title }}</a>
 
                                                         {% if pg.subpageitems %}
                                                             <ul class="section">
@@ -94,8 +94,8 @@
                         {% else %}
 
                             <li class="{% if page.url == subitem.url %}is-active{% endif %}">
-                                <a href="{{ subitem.url | relative_url }}" data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a>
-                                
+                                <a href="{{ subitem.url }}" data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a>
+
                                 {% if subitem.subpageitems %}
                                     <ul class="section">
                                         {% for section in subitem.subpageitems %}
@@ -115,8 +115,8 @@
         {% else %}
 
             <li class="{% if page.url == item.url %}is-active{% endif %}">
-                <a href="{{ item.url | relative_url }}" data-overviewtitle="{{ item.title }} Overview">{{ item.title }}</a>
-                
+                <a href="{{ item.url }}" data-overviewtitle="{{ item.title }} Overview">{{ item.title }}</a>
+
                 {% if item.subpageitems %}
                     <ul class="section">
                         {% for section in item.subpageitems %}
@@ -124,7 +124,7 @@
                         {% endfor %}
                     </ul>
                 {% endif %}
-            
+
             </li>
         {% endif %}
     {% endfor %}
