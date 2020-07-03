@@ -12,7 +12,7 @@ It's easy to create your cross-browser extension for Firefox. Where your develop
 </div>
 <div class="cell small-12 medium-6">
 
-<img src="{% asset "build-extensions.jpg" @path @optim %}" class="image-block-last" alt="Build extensions" title="Build extensions">
+<img src="/_assets/img/build-extensions.jpg" class="image-block-last" alt="Build extensions" title="Build extensions">
 
 </div>
 </div>
@@ -24,7 +24,9 @@ It's easy to create your cross-browser extension for Firefox. Where your develop
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions" class="cell small-12 medium-12 tile illustrated-tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Manifest Keys]({% asset "MDN-Docs.svg" @path @optim %} "MDN Docs")
+
+![Manifest Keys](/_assets/img/MDN-Docs.svg "MDN Docs")
+
 
 #### Brand new to extensions development?
 
@@ -56,7 +58,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <a href="/extension-basics/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Community Forums]({% asset "icons/quick-link-learn.svg" @path @optim %} "Community Forums")
+![Community Forums](/_assets/img/icons/quick-link-learn.svg "Community Forums")
 
 <p><span class="block-link-inline">Learn</span></p>
 
@@ -68,7 +70,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <a href="/documentation/develop/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Community Forums]({% asset "icons/quick-link-develop.svg" @path @optim %} "Community Forums")
+![Community Forums](/_assets/img/icons/quick-link-develop.svg "Community Forums")
 
 <p><span class="block-link-inline">Develop</span></p>
 
@@ -80,7 +82,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <a href="/documentation/develop/debugging/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Community Forums]({% asset "icons/quick-link-test.svg" @path @optim %} "Community Forums")
+![Community Forums](/_assets/img/icons/quick-link-test.svg "Community Forums")
 
 <p><span class="block-link-inline">Test & Debug</span></p>
 
@@ -92,7 +94,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <a href="/documentation/publish/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Community Forums]({% asset "icons/quick-link-publish.svg" @path @optim %} "Community Forums")
+![Community Forums](/_assets/img/icons/quick-link-publish.svg "Community Forums")
 
 <p><span class="block-link-inline">Publish</span></p>
 
@@ -104,7 +106,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <a href="/documentation/manage/" class="cell auto tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Community Forums]({% asset "icons/quick-link-manage.svg" @path @optim %} "Community Forums")
+![Community Forums](/_assets/img/icons/quick-link-manage.svg "Community Forums")
 
 <p><span class="block-link-inline">Manage</span></p>
 
@@ -130,13 +132,15 @@ Mozilla takes the safety and privacy of its users very seriously. Be sure to rev
 <div class="grid-container grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-6" markdown="1">
 
-<img src="{% asset "Learn-About-Security-Best-Practices.svg" @path @optim %}" class="image-block-first" alt="Learn about security best practices" title="Learn about security best practices">
+<img src="/_assets/img/Learn-About-Security-Best-Practices.svg" class="image-block-first" alt="Learn about security best practices" title="Learn about security best practices">
+
 [Learn about security best practices](/documentation/develop/build-a-secure-extension/)
 
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-<img src="{% asset "Learn-About-Our-Policies.svg" @path @optim %}" class="image-block-first" alt="Learn about our policies" title="Learn about our policies">
+<img src="/_assets/img/Learn-About-Our-Policies.svg" class="image-block-first" alt="Learn about our policies" title="Learn about our policies">
+
 [Learn about our policies](/documentation/publish/add-on-policies/)
 
 </div>
@@ -164,8 +168,8 @@ Firefox is at the forefront of cross-browser compatibility. Firefox add-ons are 
 </div>
 
 <!-- Section CTA -->
-<div class="section-cta bg-dark" style="background-image: url({% asset "extension-bg.svg" @path @optim %});">
-<div class="img" style="background-image: url({% asset "extension-v2.svg" @path @optim %});"></div>
+<div class="section-cta bg-dark" style="background-image: url('/_assets/img/extension-bg.svg');">
+<div class="img" style="background-image: url('/_assets/img/extension-v2.svg');"></div>
 <div class="grid-container grid-x grid-padding-x align-middle">
 <div class="cell small-12 large-4 xlarge-3 xlarge-offset-1" markdown="1">
 

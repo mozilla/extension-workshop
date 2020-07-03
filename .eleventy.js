@@ -1,5 +1,5 @@
-module.exports = function(eleventyConfig) {
 
+module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_assets");
 
   eleventyConfig.setLiquidOptions({
@@ -9,6 +9,17 @@ module.exports = function(eleventyConfig) {
       '_includes',
       '.',
     ],
+  });
+
+  const md = require("markdown-it")({
+    html: true,
+    breaks: true,
+    linkify: true
+  });
+
+  eleventyConfig.setLibrary("md", md);
+  eleventyConfig.addFilter("markdownify", function(value) {
+    return md.render(value.toString());
   });
 
   return {
