@@ -1,12 +1,7 @@
-.jekyll-cache
-Gemfile
-Gemfile.lock
 node_modules
 package.json
 README.md
 renovate.json
-rvm-installer
-rvm-installer.asc
 yarn-error.log
 yarn.lock
 *.scss
