@@ -50,7 +50,7 @@ Help users separate their browser activities with [Contextual Identities](https:
 
 {% capture col_2_content %}
 
-![Containers-screenshot]({% asset "documentation/develop/containers.png" @optim @path %} "A screenshot of a container dropdown menu, which includes Personal, Work, Banking, and Shopping containers, and the option to Manage Containers")
+![Containers-screenshot](/_assets/img/documentation/develop/containers.png "A screenshot of a container dropdown menu, which includes Personal, Work, Banking, and Shopping containers, and the option to Manage Containers")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -72,7 +72,7 @@ Record and display additional or complementary information about a web page with
 
 {% capture col_2_content %}
 
-![Sidebar-screenshot]({% asset "documentation/develop/sidebar.png" @optim @path %} "A screenshot of the Annotator extension, which adds a sidebar to the browser window and lets users write text in a box")
+![Sidebar-screenshot](/_assets/img/documentation/develop/sidebar.png "A screenshot of the Annotator extension, which adds a sidebar to the browser window and lets users write text in a box")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -94,7 +94,7 @@ Better integrate your extension with the browser using the ability to pick up th
 
 {% capture col_2_content %}
 
-![Sidebar-screenshot]({% asset "documentation/develop/icon_placement.png" @optim @path %} "A screenshot the Firefox toolbar that shows extension icons. The icon for the Beastify is clicked to show a dropdown menu.")
+![Sidebar-screenshot](/_assets/img/documentation/develop/icon_placement.png "A screenshot the Firefox toolbar that shows extension icons. The icon for the Beastify is clicked to show a dropdown menu.")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -116,7 +116,7 @@ Help users locate content of interest in a web page, with the ability to [find a
 
 {% capture col_2_content %}
 
-![Find-screenshot]({% asset "documentation/develop/find.png" @optim @path %} "A screenshot of text on a page with the word Color highlighted in purple")
+![Find-screenshot](/_assets/img/documentation/develop/find.png" @optim @path %} "A screenshot of text on a page with the word Color highlighted in purple")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -138,7 +138,7 @@ Perform searches directly from your extension, with features to [get details of 
 
 {% capture col_2_content %}
 
-![Search-extension-screenshot]({% asset "documentation/develop/search_extension.png" @optim @path %} "A screenshot of the Wikipedia entry for Extension")
+![Search-extension-screenshot](/_assets/img/documentation/develop/search_extension.png" @optim @path %} "A screenshot of the Wikipedia entry for Extension")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -160,7 +160,7 @@ Add an extra dimension to your themes by [updating the browser theme at runtime]
 
 {% capture col_2_content %}
 
-![Dynamic-theme-screenshot]({% asset "documentation/develop/dynamic_theme.png" @optim @path %} "A screenshot a yellow browser theme with a timer that transforms it into an earth-colored browser theme")
+![Dynamic-theme-screenshot](/_assets/img/documentation/develop/dynamic_theme.png" @optim @path %} "A screenshot a yellow browser theme with a timer that transforms it into an earth-colored browser theme")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -182,7 +182,7 @@ Provide users with control over their browsing experience from your extension wi
 
 {% capture col_2_content %}
 
-![Extension-controlling-settings]({% asset "documentation/develop/extension_controlling_settings.png" @optim @path %} "A screenshot of the user preferences screen for New Windows and Tabs, which shows an extension is controlling the user's home page and New Tab page.")
+![Extension-controlling-settings](/_assets/img/documentation/develop/extension_controlling_settings.png" @optim @path %} "A screenshot of the user preferences screen for New Windows and Tabs, which shows an extension is controlling the user's home page and New Tab page.")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -204,7 +204,7 @@ Enable users to reliably add your extension’s features to new pages and sites,
 
 {% capture col_2_content %}
 
-![Script-inject-screenshot]({% asset "documentation/develop/script_inject.png" @optim @path %} "A screenshot of code showing how the protocol for IRC can be handled.")
+![Script-inject-screenshot](/_assets/img/documentation/develop/script_inject.png" @optim @path %} "A screenshot of code showing how the protocol for IRC can be handled.")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -226,7 +226,7 @@ Take advantage of external services to handle protocols or content types by regi
 
 {% capture col_2_content %}
 
-![Protocol-handlers--screenshot]({% asset "documentation/develop/protocol.png" @optim @path %} "A screenshot of a configuration page for setting proxy access to the Internet")
+![Protocol-handlers--screenshot](/_assets/img/documentation/develop/protocol.png" @optim @path %} "A screenshot of a configuration page for setting proxy access to the Internet")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -248,7 +248,7 @@ Perform additional web tasks such as [resolving domain names](https://developer.
 
 {% capture col_2_content %}
 
-![Proxy-settings-screenshot]({% asset "documentation/develop/proxy_settings.png" @optim @path %} "A screenshot of a configuration page for setting proxy access to the Internet")
+![Proxy-settings-screenshot](/_assets/img/documentation/develop/proxy_settings.png "A screenshot of a configuration page for setting proxy access to the Internet")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -270,7 +270,7 @@ Add advanced security capabilities using [PKCS #11 security modules to source ke
 
 {% capture col_2_content %}
 
-![Certificate-key--screenshot]({% asset "documentation/develop/certificate_key.png" @optim @path %} "A graphic of a scroll with an award on it and a key next to it.")
+![Certificate-key--screenshot](/_assets/img/documentation/develop/certificate_key.png "A graphic of a scroll with an award on it and a key next to it.")
 
 {% endcapture %}
 {% include modules/two-column.html

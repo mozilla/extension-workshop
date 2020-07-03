@@ -64,7 +64,7 @@ Create a scaffold for your browser extensions. Provide the tool with extension n
 
 {% capture content %}
 
-![Extension Scaffolding Builder]({% asset "documentation/develop/Extension_scaffolding_builder.png" @optim @path %})
+![Extension Scaffolding Builder](/_assets/img/documentation/develop/Extension_scaffolding_builder.png)
 
 To get started, [visit the tool online](https://webextensions.in/) or [install it locally from npm](https://www.npmjs.com/package/create-web-ext).
 
@@ -275,7 +275,7 @@ To get started, install using npm and load the library into the contexts where b
 
 This Firefox page enables you to manually install add-ons into Firefox for testing and to kickoff debugging, using the Addon Debugging Window, for any browser extension installed in Firefox.
 
-![About Debugging]({% asset "documentation/develop/about-debugging.png" @optim @path %})
+![About Debugging](/_assets/img/documentation/develop/about-debugging.png)
 
 To get started, type about:debugging in the Firefox address bar.
 
@@ -307,7 +307,7 @@ To get started, type about:debugging in the Firefox address bar.
 
 Debug your browser extensions with this version of the standard Firefox developer toolbox. With Addon Debugging Window you get access to a [console](https://developer.mozilla.org/docs/Tools/Browser_Console), [debugger](https://developer.mozilla.org/docs/Tools/Debugger), [scratchpad](https://developer.mozilla.org/docs/Tools/Scratchpad), [page inspector](https://developer.mozilla.org/docs/Tools/Page_Inspector), [style editor](https://developer.mozilla.org/docs/Tools/Style_Editor), [network monitor](https://developer.mozilla.org/docs/Tools/Network_Monitor), [performance analyzer](https://developer.mozilla.org/docs/Tools/Profiler), [storage inspector](https://developer.mozilla.org/docs/Tools/Storage_Inspector), and [accessibility inspector](https://developer.mozilla.org/docs/Tools/Accessibility_inspector).
 
-![Addon Debugging Window]({% asset "documentation/develop/Addon_Debugging_Window.png" @optim @path %})
+![Addon Debugging Window](/_assets/img/documentation/develop/Addon_Debugging_Window.png)
 
 To get started, enable Browser Toolbox then open about:debugging and click debug next to the extension you want to debug.
 
@@ -360,7 +360,7 @@ To get started, enable Browser Toolbox then open about:debugging and click debug
 
 A tool for creating and managing `_locales` folder `messages.json` files. Import browser extensions from GitHub or a browser extension zip file, compare translations, add new locales, export updated translations, and more.
 
-![Web Extension Translator]({% asset "documentation/develop/Web_Extension_Translator.png" @optim @path %})
+![Web Extension Translator](/_assets/img/documentation/develop/Web_Extension_Translator.png)
 
 To get started, visit the [online version](https://lusito.github.io/web-ext-translator/) or install the [npm package](https://www.npmjs.com/package/web-ext-translator) locally.
 
@@ -397,7 +397,7 @@ To get started, visit the [online version](https://lusito.github.io/web-ext-tran
 
 A tool for creating and managing `_locales` folder `messages.json` files. Import previous and current source files as well as the destination file, with options to import from a URL or local file. See details of changes requiring translation, save work in progress locally, and export completed `messages.json` files.
 
-![Translate Web-ext]({% asset "documentation/develop/Translate_Web-ext.png" @optim @path %})
+![Translate Web-ext](/_assets/img/documentation/develop/Translate_Web-ext.png)
 
 To get started, [visit the tool online](https://morikko.github.io/translate-web-extension).
 

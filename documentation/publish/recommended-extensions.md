@@ -31,7 +31,7 @@ date: 2019-09-19 12:01:01
 
 Recommended extensions are easy to identify because of their distinctive “Recommended” badge.
 
-![Add-ons Manager setting cog]({% asset "documentation/publish/RecEx_badge.png" @optim @path 50%})
+![Add-ons Manager setting cog](/_assets/img/documentation/publish/RecEx_badge.png)
 
 {% endcapture %}
 {% include modules/column-w-toc.html

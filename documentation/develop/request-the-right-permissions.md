@@ -45,11 +45,11 @@ Or how to avoid permissions discouraging users from installing your extensions.
 
 With the introduction of Firefox Quantum (57) the handling of permissions when installing an extension changed. Previously, extensions were granted permissions silently. However, users are now informed of the permissions an extension is requesting when it's installed, with a message something like this:
 
-![Example of the permissions messages from the Gesturefy extension]({% asset "documentation/develop/General_permissions_message_example.png" @optim @path %})
+![Example of the permissions messages from the Gesturefy extension](/_assets/img/documentation/develop/General_permissions_message_example.png" @optim @path %})
 
 Also, if an extension update requires additional permissions the user is prompted to approve the permissions before the updated version is installed:
 
-![Example of the message displayed when an extension update requests additional permissions]({% asset "documentation/develop/Permissions_update.png" @optim @path %})
+![Example of the message displayed when an extension update requests additional permissions](/_assets/img/documentation/develop/Permissions_update.png" @optim @path %})
 
 If the user chooses not to approve the permissions and cancels the update, the previous version remains installed and available for use.
 
@@ -168,7 +168,7 @@ Take an extension you're developing to help-color blind users. At the user's req
 
 Requesting these permissions results in the user getting this advice:
 
-![Example of the "Access your data for all websites" permission message]({% asset "documentation/develop/All_Websites_permissions.png" @path @optim %})
+![Example of the "Access your data for all websites" permission message](/_assets/img/documentation/develop/All_Websites_permissions.png)
 
 The alternative is to request `"activeTab"`. This permission provides your extension with the same capabilities but only for the active tab and only when run from the extension's UI (that is from a toolbar button, navigation bar button, context menu, or shortcut key).
 
@@ -178,17 +178,17 @@ Importantly, `"activeTab"` doesn't result in the display of a permissions messag
 
 As noted in the previous example, requesting host permission `"<all_urls>"` results in the permissions request message Access your data for all websites. If your extension is designed to work with one or a small number of websites or domains, narrow the request. On installation users will get details for the first four websites or domains you request access to.
 
-![Example of the permissions message when host permission for four websites as requested]({% asset "documentation/develop/Permissions_host_four.png" @path @optim %})
+![Example of the permissions message when host permission for four websites as requested](/_assets/img/documentation/develop/Permissions_host_four.png)
 
 If you request access to more than four websites or domains, the message will list the first three and indicate the number of other requests.
 
-![Example of the permissions message when hosts permission for 5 or more website is requested]({% asset "documentation/develop/Permissions_host_four_plus.png" @path @optim %})
+![Example of the permissions message when hosts permission for 5 or more website is requested](/_assets/img/documentation/develop/Permissions_host_four_plus.png)
 
 ### Avoid the "unlimitedStorage" permission
 
 Only ask for `"unlimitedStorage"` permission if you expect your extension's local data storage to exceed 5MB if it's not going to exceed that amount, don't ask for it.
 
-![Example of the permission message when requesting access to unlimited client-side data storage]({% asset "documentation/develop/Permissions_unlimiteddata.png" @path @optim %})
+![Example of the permission message when requesting access to unlimited client-side data storage](/_assets/img/documentation/develop/Permissions_unlimiteddata.png)
 
 Note: Firefox doesn't currently restrict local storage size, although it does ask users to approve this permission request if you make it. Firefox may add a restriction in the future. If that happens, the limit is unlikely to be less than Chrome's current 5 MB restriction.
 
@@ -210,7 +210,7 @@ Users may not understand the context of permissions requested during installatio
 
 A typical scenario for using this approach is the `"geoLocation"` permission. Say you've written a note-taking extension that includes the ability to add a minimap of the note takers location. Requesting location access during installation might leave the user unclear why the extension needs to access location, so they might not install it. However, if permission to use location is requested when the user first tries the feature to add a minimap, they'll get a clearer understanding of why the permission is needed and be more likely to grant it. And should they choose not to grant the permission, the extension can offer a graceful fall-back—in this example, not adding the minimap—but the important outcome of this approach is that the user has installed and used your extension.
 
-![Example of an additional or runtime permission request message]({% asset "documentation/develop/Permissions_optional_request.png" @path @optim %})
+![Example of an additional or runtime permission request message](/_assets/img/documentation/develop/Permissions_optional_request.png)
 
 Making a runtime permission request is straightforward. Include any permissions you want to request under the manifest.json `"[optional_permissions](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions)"` key. Then pass the permissions you want granted to [`WebExtAPIRef("permissions.request")`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. true is returned if the user grants the request, false if they don't.
 
@@ -259,7 +259,7 @@ To address this issue, provide information in your extension's AMO description t
 
 A good example of this approach is [Gesturefy](https://addons.mozilla.org/firefox/addon/gesturefy/), which offers users the following advice:
 
-![Extract from Gesturefy's AMO description providing information on thepermissions requested by this extension]({% asset "documentation/develop/gesturefy_permissions_explanation.png" @path @optim %})
+![Extract from Gesturefy's AMO description providing information on thepermissions requested by this extension](/_assets/img/documentation/develop/gesturefy_permissions_explanation.png)
 
 </div>
 </article>

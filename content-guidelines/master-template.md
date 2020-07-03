@@ -13,7 +13,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
 
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @optim @path %} "Screenshot Remembear") Full width image (above)
+![Screenshot Remembear](/_assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Full width image (above)
 
 </section>
 <!-- END: Full Width Image -->
@@ -22,12 +22,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <section class="image-with-caption grid-container grid-x grid-padding-x">
 <div class="cell small-6" markdown="1">
 
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear") Half width image (above)
+![Screenshot Remembear](/_assets/content-guidelines/example-remembear.png "Screenshot Remembear") Half width image (above)
 
 </div>
 <div class="cell small-6" markdown="1">
 
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear") Half width image (above)
+![Screenshot Remembear](/_assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Half width image (above)
 
 </div>
 </section>
@@ -40,7 +40,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- Video Popup Thumbnail -->
 <section class="video-popup" markdown="1">
 
-[![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'What’s Great Content and Design?')
+[![What’s Great Content and Design?](/_assets/img/content-guidelines/example-thumbnail.jpg)](a0_OsLGI0k4 'What’s Great Content and Design?')
 
 </section>
 <!-- END: Video Popup Thumbnail -->
@@ -49,7 +49,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <section class="video-popup grid-container grid-x grid-padding-x">
 <div class="cell small-12 medium-6" markdown="1">
 
-![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %} "What’s Great Content and Design?")
+![What’s Great Content and Design?](/_assets/img/content-guidelines/example-thumbnail.jpg "What’s Great Content and Design?")
 
 #### What’s Great Content and Design?
 
@@ -58,7 +58,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 </div>
 <div class="cell small-12 medium-6" markdown="1">
 
-[![What’s Great Content and Design?]({% asset "content-guidelines/example-thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'What’s Great Content and Design?')
+[![What’s Great Content and Design?](/_assets/img/content-guidelines/example-thumbnail.jpg)](a0_OsLGI0k4 'What’s Great Content and Design?')
 
 #### What’s Great Content and Design?
 
@@ -75,13 +75,13 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 <!-- Icon Grid *** use "shrink" class to fit grid to image size -OR- use "auto" class to fit images to grid width *** -->
 <section class="icon-grid grid-container grid-x grid-padding-x">
 <div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
+	<p><img src="/_assets/img/content-guidelines/example-icon.png" alt="Icon" title="Icon" width="53"></p>
 </div>
 <div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
+	<p><img src="/_assets/img/content-guidelines/example-icon.png" alt="Icon" title="Icon" width="53"></p>
 </div>
 <div class="cell shrink">
-	<p><img src="{% asset "content-guidelines/example-icon.png" @path @optim %}" alt="Icon" title="Icon" width="53"></p>
+	<p><img src="/_assets/img/content-guidelines/example-icon.png" alt="Icon" title="Icon" width="53"></p>
 </div>
 </section>
 <!-- END: Image Grid -->
@@ -175,7 +175,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear")
+![Screenshot Remembear](/_assets/img/content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear")
 </section>
 <!-- END: Full Width Image -->
 

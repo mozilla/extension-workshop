@@ -33,7 +33,7 @@ This article reviews your options for generating revenue from browser extensions
 
 ## Will I ever be able to sell through AMO?
 
-Mozilla intends to maintain AMO as a free to download source of browser extensions and themes. 
+Mozilla intends to maintain AMO as a free to download source of browser extensions and themes.
 
 {% endcapture %}
 {% include modules/column-w-toc.html
@@ -194,11 +194,11 @@ You can add a “contributions” button to your extension’s AMO page that lin
 - In the AMO developer hub, for the extension or theme you want to add a contributions button to, click Edit details.
 - In the Basic information section add your donations page link to Contributions URL.
 
-{% asset "Contributions_URL.png" @optim %}
+<img src="/_assets/img/Contributions_URL.png" alt="" />
 
 A contribution section is then added to your extension’s AMO page.
 
-{% asset "Contribute_section_AMO.png" @optim %}
+<img src="/_assets/img/Contribute_section_AMO.png" alt="" />
 
 #### Requesting donations from your browser extension
 

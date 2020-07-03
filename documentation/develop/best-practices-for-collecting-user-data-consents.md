@@ -125,12 +125,12 @@ Where you provide the user with an opt-out, option the related features can be t
 
 Before designing your consent dialogs, you should determine the privacy consent flow for your extension, based on the data it collects and whether it uses cookies. Here is an example of a consent flow where an extension collects personally identifying information and technical data and uses cookies:
 
-![Illustrating an example of the application flow for handling privacy consents.]({% asset "documentation/develop/MDN_Privacy_Flags_Flow_Diagram.png" @optim @path %})
+![Illustrating an example of the application flow for handling privacy consents.](/_assets/img/documentation/develop/MDN_Privacy_Flags_Flow_Diagram.png)
 
 In this example:
 
 1. Your extension should start up with all cookie and data collection functionality disabled.
-2. Either shortly after installation (see [Best practices for onboarding, upboarding, and offboarding users](/documentation/develop/onboard-upboard-offboard-users/)) or when the user first attempts to uses an extension feature, present them with a consent dialog.  
+2. Either shortly after installation (see [Best practices for onboarding, upboarding, and offboarding users](/documentation/develop/onboard-upboard-offboard-users/)) or when the user first attempts to uses an extension feature, present them with a consent dialog.
    On this dialog:
 3. The option for collecting personally identifying information must default to disabled so that the user has to actively opt-in.
 4. The options for technical data and cookies may default to enabled, so that the user may choose to opt-out.
@@ -156,16 +156,16 @@ In this example:
 
 Once you understand your privacy consent flow, you can add suitable consent dialogues. The following are suggestions on how to present data collection and cookie consent dialogs. Where the mockups include the linked text “our Privacy Policy”, this should go to your extension’s privacy policy page on AMO. If you choose to follow these mockups, remember to modify them appropriately for your extension.
 
-- Only Cookies. The option to add cookies can be set as the default response.  
-  ![Mockup of a prompt that could be used when an extension requires user consent to use cookies alone.]({% asset "documentation/develop/privacy_prompt_mockup_cookies_only.png" @optim @path %})
-- Only personally identifying information. The default option is not to collect personally identifying information. If you do, the user needs to actively opt-in. Remember to list the data you’re collecting; don’t make the user read your privacy policy to determine what data you are collecting and why.  
-  ![Mockup of a prompt that could be used when an extension requires consent for processing personal data only.]({% asset "documentation/develop/privacy_prompt_mockup_personal_data.png" @optim @path %})
-- Only technical data, (no user identifiers). The option to collect technical data can be set as the default response.  
-  ![Mockup of a prompt that could be used when an extension requires consent for processing technical data only.]({% asset "documentation/develop/privacy_prompt_mockup_anonymous_data.png" @optim @path %})
-- Combination: Cookies, Personal, and Technical Data.  
-  ![Mockup of a prompt that could be used when extension requires consent for cookies and processing personal and technical data.]({% asset "documentation/develop/privacy_prompt_mockup_all_three.png" @optim @path %})
-- The extension won’t work without data or cookies. The default option is your choice.  
-  ![Mockup of a prompt that could be used when the user provide insufficient permission for privacy related features so that the extension cannot work. Gives the user the option to uninstall the extension or review their privacy settings.]({% asset "documentation/develop/privacy_prompt_mockup_remove_extension.png" @optim @path %})
+- Only Cookies. The option to add cookies can be set as the default response.
+  ![Mockup of a prompt that could be used when an extension requires user consent to use cookies alone.](/_assets/img/documentation/develop/privacy_prompt_mockup_cookies_only.png)
+- Only personally identifying information. The default option is not to collect personally identifying information. If you do, the user needs to actively opt-in. Remember to list the data you’re collecting; don’t make the user read your privacy policy to determine what data you are collecting and why.
+  ![Mockup of a prompt that could be used when an extension requires consent for processing personal data only.](/_assets/img/documentation/develop/privacy_prompt_mockup_personal_data.png)
+- Only technical data, (no user identifiers). The option to collect technical data can be set as the default response.
+  ![Mockup of a prompt that could be used when an extension requires consent for processing technical data only.](/_assets/img/documentation/develop/privacy_prompt_mockup_anonymous_data.png)
+- Combination: Cookies, Personal, and Technical Data.
+  ![Mockup of a prompt that could be used when extension requires consent for cookies and processing personal and technical data.](/_assets/img/documentation/develop/privacy_prompt_mockup_all_three.png)
+- The extension won’t work without data or cookies. The default option is your choice.
+  ![Mockup of a prompt that could be used when the user provide insufficient permission for privacy related features so that the extension cannot work. Gives the user the option to uninstall the extension or review their privacy settings.](/_assets/img/documentation/develop/privacy_prompt_mockup_remove_extension.png)
 
 {% endcapture %}
 {% include modules/one-column.html

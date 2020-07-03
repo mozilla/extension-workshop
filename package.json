@@ -42,6 +42,7 @@
     "test": "npm run prettier-ci && npm run lint && npm run stylelint",
     "clean": "rimraf './site/'",
     "start": "eleventy --serve --port=8081",
+    "start-debug": "DEBUG=Eleventy* eleventy --serve --port=8081",
     "sass": "sass --style=compressed --load-path=node_modules/foundation-sites/scss/ --load-path=node_modules/slick-carousel/slick/ _assets/css/styles.scss _assets/css/styles.css",
     "uglify": "uglifyjs node_modules/jquery/dist/jquery.js node_modules/dompurify/dist/purify.js node_modules/velocity-animate/velocity.js node_modules/velocity-ui-pack/velocity.ui.js node_modules/slick-carousel/slick/slick.js _assets/js/tinypubsub.js _assets/js/breakpoints.js _assets/js/parallax.js _assets/js/parallaxFG.js _assets/js/inview.js _assets/js/youtubeplayer.js _assets/js/main.js -o _assets/js/bundle.js"
   }

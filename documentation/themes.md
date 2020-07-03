@@ -35,7 +35,7 @@ You can use themes to customize how your browser looks by adding images and adju
 
 ## How to create themes
 
-![Themes]({% asset "documentation/develop/Themes_fullwidth.jpg" @optim @path %})
+![Themes](/_assets/img/documentation/develop/Themes_fullwidth.jpg)
 
 There are four ways you can create themes:
 

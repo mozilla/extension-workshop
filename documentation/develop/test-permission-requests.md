@@ -62,7 +62,7 @@ To do this with an unsigned \*.xpi or \*.zip file you need to:
 
 Then install the extension using **Install Add-on From File** in the Add-on manager (`about:addons`). As the extension installs, the request to grant the install-time permissions displays, similar to this:
 
-![installing unpacked extension]({% asset "documentation/develop/installing_unpackaged_extension.png" @optim @path %})
+![installing unpacked extension](/_assets/img/documentation/develop/installing_unpackaged_extension.png)
 
 Note that the caution message relates to this being an unsigned extension; this message isn’t displayed during installation from [addons.mozilla.org](https://addons.mozilla.org).
 
@@ -131,14 +131,14 @@ If the packages were generated with .zip extensions change them to .xpi, otherwi
   - set the preference `xpinstall.signatures.required` to `false`.
   - If you’re using [Nightly](https://nightly.mozilla.org/) and hosting your update on an HTTP server create and set `extensions.checkUpdateSecurity` and `extensions.install.requireSecureOrigin` preferences to `false`. To do this:
     - enter the preference name in the search box.
-    - click **Add**. <br/> ![add preference]({% asset "documentation/develop/preference_create_2.png" @optim @path %})
-    - toggle the preference to set it to false. <br/> ![toggle preferences]({% asset "documentation/develop/preference_toggle_2.png" @optim @path %})
+    - click **Add**. <br/> ![add preference](/_assets/img/documentation/develop/preference_create_2.png)
+    - toggle the preference to set it to false. <br/> ![toggle preferences](/_assets/img/documentation/develop/preference_toggle_2.png)
 
 - open the link to the first XPI file to install it.
 - open `about:addons`, click the gear icon, and click **Check for Updates**.
 - you’ll get a permission warnings prompt, similar to the one below, detailing the additional permissions requested:
 
-![permissions prompt]({% asset "documentation/develop/upgrade_install_2.png" @optim @path %})
+![permissions prompt](/_assets/img/documentation/develop/upgrade_install_2.png)
 
 {% capture note %}
 
@@ -169,7 +169,7 @@ To retest your extension’s runtime permission grants and its post-install beha
 
 - remove the extension using `about:debugging` and reinstall it, or Firefox restart.
 
-![remove extension from debugging]({% asset "documentation/develop/reload_to_retest.png" @optim @path %})
+![remove extension from debugging](/_assets/img/documentation/develop/reload_to_retest.png)
 
 - if you’re using [Nightly](https://nightly.mozilla.org/) or [Developer Edition](https://www.mozilla.org/firefox/developer/), use the [Extensions Permission Manager](https://github.com/rpl/dev-webext-permissions-manager) web extension to clear permissions.
 

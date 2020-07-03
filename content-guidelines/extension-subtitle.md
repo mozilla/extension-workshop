@@ -15,7 +15,7 @@ The subtitle is one of your extensionâ€™s most important pieces of content. Itâ€
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
 
-![Remembear subtitle screenshot]({% asset "content-guidelines/remembear-subtitle.png" @path @optim %} "Remembear subtitle text")
+![Remembear subtitle screenshot](/_assets/img/content-guidelines/remembear-subtitle.png "Remembear subtitle text")
 
 </section>
 
@@ -43,19 +43,19 @@ To determine your keywords, think about what words a person would use when searc
 <div class="example" markdown="1">
 <header><h5>Examples:</h5></header>
 
-**Name:** Facebook Container  
+**Name:** Facebook Container
 **Subtitle:** Prevent Facebook from tracking you around the web.
 
-**Name:** Remembear  
+**Name:** Remembear
 **Subtitle:** The easiest way to remember passwords
 
-**Name:** Emoji to English  
+**Name:** Emoji to English
 **Subtitle:** Translates emojis to their Unicode names
 
-**Name:** Honey  
+**Name:** Honey
 **Subtitle:** Automatic Coupons, Promo Codes, & Deals
 
-**Name:** Spotter  
+**Name:** Spotter
 **Subtitle:** Automatic connecting with public rooms
 
 </div>

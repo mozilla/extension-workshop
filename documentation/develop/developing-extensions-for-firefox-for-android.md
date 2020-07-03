@@ -56,7 +56,7 @@ On your device or Android emulator:
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-6" markdown="1">
 
-![about:config screenshot]({% asset "documentation/develop/set_xpinstall.png" @optim @path %})
+![about:config screenshot](/_assets/img/documentation/develop/set_xpinstall.png)
 
 </div>
 </article>
@@ -97,7 +97,7 @@ In the lint report:
 
 similar to this:
 
-![linter screenshot]({% asset "documentation/develop/linter_output2.png" @optim @path %})
+![linter screenshot](/_assets/img/documentation/develop/linter_output2.png)
 
 {% capture note %}
 
@@ -162,7 +162,7 @@ On your Android device or in the emulator, open Firefox for Android and browse t
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-6" markdown="1">
 
-![xpi file on memory card]({% asset "documentation/develop/xpi-file-on-memory-card.png" @optim @path %})
+![xpi file on memory card](/_assets/img/documentation/develop/xpi-file-on-memory-card.png)
 
 </div>
 </article>
@@ -172,7 +172,7 @@ Tap on `<extension file name>.xpi` to install it. You will get a warning about t
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-6" markdown="1">
 
-![Blocked add-on message]({% asset "documentation/develop/blocked-add-on-message.png" @optim @path %})
+![Blocked add-on message](/_assets/img/documentation/develop/blocked-add-on-message.png)
 
 </div>
 </article>
@@ -182,7 +182,7 @@ An additional warning will tell you the extension is unverified, tap INSTALL:
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-6" markdown="1">
 
-![Unverified add-on message]({% asset "documentation/develop/unverified-add-on-messages.png" @optim @path %})
+![Unverified add-on message](/_assets/img/documentation/develop/unverified-add-on-messages.png)
 
 </div>
 </article>
@@ -192,7 +192,7 @@ Your extension will start running (in this case a copy of the [borderify](https:
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-6" markdown="1">
 
-![Borderify sample extension in action]({% asset "documentation/develop/borderify-in-action.png" @optim @path %})
+![Borderify sample extension in action](/_assets/img/documentation/develop/borderify-in-action.png)
 
 </div>
 </article>
@@ -222,15 +222,15 @@ You can debug your extension in the web developer tools and view any `manifest.j
 
 With your device connected over USB or Wi-Fi, open `about:debugging` and enable the device connection.
 
-![Enable USB Devices]({% asset "documentation/develop/enable-device-connection.png" @optim @path %})
+![Enable USB Devices](/_assets/img/documentation/develop/enable-device-connection.png)
 
 Your device is listed in the left-hand column, click **Connect**.
 
-![Connect to device]({% asset "documentation/develop/connect-to-device.png" @optim @path %})
+![Connect to device](/_assets/img/documentation/develop/connect-to-device.png)
 
 If prompted, allow the incoming connection on your Android device. Now start your extension on the Android device. Note, the following instructions assume you are using `web-ext run`. Click your device in the left-hand column and scroll down to find **Processes** in the list of active features in the browser.
 
-![Locate processes]({% asset "documentation/develop/locate-processes.png" @optim @path %})
+![Locate processes](/_assets/img/documentation/develop/locate-processes.png)
 
 Click **Inspect** next to **Main Process**. The web developer toolbox displays in **Debugger**.
 
@@ -238,7 +238,7 @@ For much of the debugging work, it's useful to be able to view **Console** with 
 
 Load a page in which your extension exercises. Now you can access any of the JavaScript in your extension.
 
-![Device debugging]({% asset "documentation/develop/on-device-debugging.png" @optim @path %})
+![Device debugging](/_assets/img/documentation/develop/on-device-debugging.png)
 
 {% capture note %}
 
@@ -252,7 +252,7 @@ Unlike desktop Firefox, where content scripts are debugged in context of the pag
 
 In the **Debugger** you can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
 
-To inspect the popup's HTML and CSS, use **Inspector**. First, click the page select icon (![Device debugging]({% asset "documentation/develop/page-selector.png" @optim @path %})) to open the HTML document you want to inspect. You can [review and modify the document's HTML and CSS in **Inspector**](https://developer.mozilla.org/docs/Tools/Page_Inspector), as you would with any webpage.
+To inspect the popup's HTML and CSS, use **Inspector**. First, click the page select icon (![Device debugging](/_assets/img/documentation/develop/page-selector.png)) to open the HTML document you want to inspect. You can [review and modify the document's HTML and CSS in **Inspector**](https://developer.mozilla.org/docs/Tools/Page_Inspector), as you would with any webpage.
 
 For more details on using the web developer tools, see [Firefox Developer Tools](https://developer.mozilla.org/docs/Tools).
 

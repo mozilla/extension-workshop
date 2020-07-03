@@ -14,7 +14,7 @@ When you build an extension, you make the web better. To get your great idea out
 
 <div class="cell small-12 large-6 tile-borderless" markdown="1">
 
-[![What’s Great Content and Design?]({% asset "content_video_thumbnail.jpg" @path @optim %})](a0_OsLGI0k4 'Open Popup Video')
+[![What’s Great Content and Design?](/_assets/img/content_video_thumbnail.jpg)](a0_OsLGI0k4 'Open Popup Video')
 
 #### What’s Great Content and Design?
 

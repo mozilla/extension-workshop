@@ -50,7 +50,7 @@ Create your developer account on [addons.mozilla.org](https://addons.mozilla.org
 
 Go to the [Add-ons Developer Hub](https://addons.mozilla.org/developers/) and click **Submit Your First Add-on** or **Submit a New Add-on**. You'll reach the following page:
 
-<img src="{% asset "publish/newstepone.PNG" @path @optim %}" style="box-shadow:0 0 0.5em gray;" />
+<img src="/_assets/img/publish/newstepone.PNG" style="box-shadow:0 0 0.5em gray;" />
 
 Choose:
 
@@ -70,22 +70,22 @@ Choose:
 
 ## Listing on AMO
 
-1. The Upload Version page displays. <br/><br/> ![Submit an add-on page]({% asset "publish/Submit_add_on_before_upload.png" @path @optim %})
+1. The Upload Version page displays. <br/><br/> ![Submit an add-on page](/_assets/img/publish/Submit_add_on_before_upload.png)
 
 2. Click **Select a file**, select and upload your add-on.
 
-3. The validator checks the add-on for issues and the page updates. <br/><br/> <img src="{% asset "publish/Submit_add_on_after_upload.png" @path @optim %}" style="box-shadow:0 0 0.5em gray;" />
+3. The validator checks the add-on for issues and the page updates. <br/><br/> <img src="/_assets/img/publish/Submit_add_on_after_upload.png" style="box-shadow:0 0 0.5em gray;" />
 
-4. If your add-on passes all the checks, you receive the following message: <br/><br/> <img src="{% asset "publish/uploadsuccess.PNG" @path @optim %}" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+4. If your add-on passes all the checks, you receive the following message: <br/><br/> <img src="/_assets/img/publish/uploadsuccess.PNG" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
 
    You may receive a message that you only have warnings. It's advisable to address these warnings, particularly those flagged as security or privacy issues, as they may result in your add-on failing review. However, you can continue with the submission.
-   Otherwise, you receive a message similar to this: <br/><br/> <img src="{% asset "publish/errorsubmit.PNG" @path @optim %}" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
+   Otherwise, you receive a message similar to this: <br/><br/> <img src="/_assets/img/publish/errorsubmit.PNG" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
    The message informs you of what failed. You'll not be able to continue. Address the issues and return to step 1.
 
 5. If you need to provide source code, click **Browse** and locate and upload your source code package.
 6. Select the add-on's compatible platform(s).
 7. Click **Continue**.
-8. The Describe Add-on page displays. <br/> ![Submit an add-on page]({% asset "publish/Submit_add_on_describe add_on.png" @path @optim %}) <br/>
+8. The Describe Add-on page displays. <br/> ![Submit an add-on page](/_assets/img/publish/Submit_add_on_describe add_on.png) <br/>
    Provide the following:
    - Name: your add-on's name.
    - Add-on URL: the URL for your add-on on AMO. A URL will be automatically assigned based on your add-on's name, to change this, click Edit. Note: The URL must be unique, you'll be warned if another add-on is using your chosen URL and you'll have to enter a different one before you can set the URL.
@@ -99,7 +99,7 @@ Choose:
    - This add-on has a privacy policy: if any data is being transmitted from the user’s device, a privacy policy is required explaining what is being sent and how it’s used. Check this box and provide the privacy policy.
    - Notes to Reviewer: information that will assist the AMO reviewer, such as log in details for a dummy account, source code information, or similar.
 9. Click **Submit Version**
-10. The Version Submitted page displays. You'll also receive an email confirmation. <br/><br/> <img src="{% asset "publish/Submit_add_on_version_submitted.png" @path @optim %}" style="box-shadow:0 0 0.5em gray;" /> <br/>
+10. The Version Submitted page displays. You'll also receive an email confirmation. <br/><br/> <img src="/_assets/img/publish/Submit_add_on_version_submitted.png" style="box-shadow:0 0 0.5em gray;" /> <br/>
 
 Your add-on is published and available on AMO for users to discover and install. Note, however, that your add-on may still be subject to further review, if it is you'll receive notification of the outcome of the review later.
 
@@ -139,20 +139,20 @@ If you want Firefox to handle updates to your add-on, remember to include the [`
     alert=false
 %}
 
-1. The Upload Version page displays. <br/><br/> ![Submit an add-on page]({% asset "publish/Submit_add_on_before_upload.png" @path @optim %})
+1. The Upload Version page displays. <br/><br/> ![Submit an add-on page](/_assets/img/publish/Submit_add_on_before_upload.png)
 
 2. Click **Select a file**, select and upload your add-on.
-3. The validator checks the add-on for issues and the page updates. <br/><br/> <img src="{% asset "publish/Submit_add_on_after_upload.png" @path @optim %}" style="box-shadow:0 0 0.5em gray;" />
-4. If your add-on passes all the checks, you receive the following message: <br/><br/> <img src="{% asset "publish/uploadsuccess.PNG" @path @optim %}" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+3. The validator checks the add-on for issues and the page updates. <br/><br/> <img src="_assets/img/publish/Submit_add_on_after_upload.png" style="box-shadow:0 0 0.5em gray;" />
+4. If your add-on passes all the checks, you receive the following message: <br/><br/> <img src="/_assets/img/publish/uploadsuccess.PNG" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
 
    You may receive a message that you only have warnings. It's advisable to address these warnings, particularly those flagged as security or privacy issues, as they may result in your add-on failing review. However, you can continue with the submission.
-   Otherwise, you receive a message similar to this: <br/><br/> <img src="{% asset "publish/errorsubmit.PNG" @path @optim %}" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
+   Otherwise, you receive a message similar to this: <br/><br/> <img src="/_assets/img/publish/errorsubmit.PNG" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
    The message informs you of what failed. You'll not be able to continue. Address the issues and return to step 1.
 
 5. If you need to provide source code, click **Browse** and locate and upload your source code package.
 6. Select the add-on's compatible platform(s).
 7. Click **Sign Add-on**.
-8. The Version Signed page displays. You'll also receive an email confirmation. <br/><br/> <img src="{% asset "publish/Submit_add_version_signed.png" @path @optim %}" style="box-shadow:0 0 0.5em gray;" />
+8. The Version Signed page displays. You'll also receive an email confirmation. <br/><br/> <img src="/_assets/img/publish/Submit_add_version_signed.png" style="box-shadow:0 0 0.5em gray;" />
 9. Click **Download** to obtain a signed copy of your add-on.
 
 You can now distribute your add-on. Note, however, that your add-on may still be subject to further review, if it is you'll receive notification of the outcome of the review later.

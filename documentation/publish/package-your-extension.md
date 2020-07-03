@@ -95,7 +95,7 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 
 3. Open the shortcut menu and click **Send to** then **Compressed (zipped) folder**.
 
-![Creating package windows image]({% asset "documentation/publish/creating_package_windows.png" @path @optim %})
+![Creating package windows image](/_assets/img/documentation/publish/creating_package_windows.png)
 
 {% endcapture %}
 {% include modules/one-column.html
@@ -118,7 +118,7 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 
 3. Open the shortcut menu and click **Compress** **_n_** **Items**.
 
-![Creating package Mac image]({% asset "documentation/publish/creating_package_mac.png" @path @optim %})
+![Creating package Mac image](/_assets/img/documentation/publish/creating_package_mac.png)
 
 {% endcapture %}
 {% include modules/one-column.html

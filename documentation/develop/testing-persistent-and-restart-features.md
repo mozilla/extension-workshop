@@ -71,7 +71,7 @@ If the extension doesn't have an add-on ID defined with the `browser_specific_se
 - If the extension is submitted AMO and signed, it's given an ID when it's signed.
 - If the extension is loaded using Load Temporary Add-on in about:debugging it's assigned a temporary add-on ID.
 
-![temporary extensions]({% asset "documentation/develop/Temporary_extensions.png" @optim @path %})
+![temporary extensions](/_assets/img/documentation/develop/Temporary_extensions.png)
 
 You'll notice an additional ID in the image above, the Internal UUID. This is a unique identifier given to the extension on installation. It's used to define the storage location for resources included in the extension and identify an extension's data in [window.localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) or [indexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). However, you don't need to know its value. Its use in `window.localStorage` or `indexedDB` is transparent and to access resources included in the extension you use [`runtime.getURL`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL), which returns the path to the resources. And, because it's unique to each installation, it doesn't provide an ID that can be relied upon for other purposes.
 
@@ -154,9 +154,9 @@ To get your extension to behave like a signed extension during development testi
   - install the [Nightly](https://www.mozilla.org/firefox/nightly/all/) or [Developer](https://www.mozilla.org/firefox/developer/) editions of Firefox. Note: You can also use [unbranded Beta and Release builds](https://wiki.mozilla.org/Add-ons/Extension_Signing#Unbranded_Builds).
   - go to about:config and set `xpinstall.signatures.required` to `false`.
   - package your extension into a ZIP file [using web-ext](/documentation/develop/web-ext-command-reference#web-ext-build) or by [zipping it manually](/documentation/publish/package-your-extension).
-  - install your extension using Install Add-on From File in the Add-on manager (about:addons). <br/> Note: Remember you'll need to reload your extension each time you change it. <br/> Note: If you don't set the add-on ID, when you load the extension you get an error like this: <br/> ![ID failure]({% asset "documentation/develop/ID_failure.png" @optim @path %}) <br/> with a matching error in the browser console.
+  - install your extension using Install Add-on From File in the Add-on manager (about:addons). <br/> Note: Remember you'll need to reload your extension each time you change it. <br/> Note: If you don't set the add-on ID, when you load the extension you get an error like this: <br/> ![ID failure](/_assets/img/documentation/develop/ID_failure.png) <br/> with a matching error in the browser console.
 
-  ![ID failure in console]({% asset "documentation/develop/ID_failure_console.png" @optim @path %})
+  ![ID failure in console](/_assets/img/documentation/develop/ID_failure_console.png)
 
 {% endcapture %}
 {% include modules/one-column.html

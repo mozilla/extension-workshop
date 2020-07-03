@@ -11,7 +11,7 @@ skip_index: true
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
 
-![Screenshot Remembear]({% asset content-guidelines/example-remembear.png @path @optim  %} "Screenshot Remembear") Example extension name from RememBear
+![Screenshot Remembear](/_assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Example extension name from RememBear
 
 </section>
 <!-- END: Full Width Image -->

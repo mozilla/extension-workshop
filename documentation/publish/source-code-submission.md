@@ -89,7 +89,7 @@ If you need to provide it, matching source code must be attached to every extens
 
 Code submission process happens after the add-on validation step.
 
-![Upload sources screenshot]({% asset "publish/upload-process-sources.png" @path @optim %})
+![Upload sources screenshot](/_assets/img/publish/upload-process-sources.png)
 
 {% endcapture %}
 {% include modules/column-w-toc.html

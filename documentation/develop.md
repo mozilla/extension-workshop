@@ -84,7 +84,7 @@ The web-ext tool can help you by:
 
 {% capture col_1_content %}
 
-![Great user experiences]({% asset "documentation/develop/GreatUserExperiences_promo.jpg" @path @optim %})
+![Great user experiences](/_assets/img/documentation/develop/GreatUserExperiences_promo.jpg)
 
 {% endcapture %}
 {% capture col_2_content %}
@@ -161,7 +161,7 @@ Find out best practices for putting your best foot forward with your extension.
 
 {% capture col_1_content %}
 
-![Moble Extensions]({% asset "documentation/develop/MobleExtensions_promo.png" @path @optim %})
+![Moble Extensions](/_assets/img/documentation/develop/MobleExtensions_promo.png)
 
 {% endcapture %}
 {% capture col_2_content %}
@@ -227,7 +227,7 @@ If you develop Android apps, when you want to include a browser experience in yo
 
 {% capture col_1_content %}
 
-![Chrome To Firefox Extensions]({% asset "documentation/develop/ChromeToFirefoxExtensions_promo.png" @path @optim %})
+![Chrome To Firefox Extensions](/_assets/img/documentation/develop/ChromeToFirefoxExtensions_promo.png)
 
 {% endcapture %}
 {% capture col_2_content %}

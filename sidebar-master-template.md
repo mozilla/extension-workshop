@@ -147,7 +147,7 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 
 {% capture col_1_content %}
 
-![Example Alt Tag Description]({% asset "fpo-half-width-image-1.jpg" @path @optim %} "Example Title Tag Description")
+![Example Alt Tag Description](/_assets/img/fpo-half-width-image-1.jpg "Example Title Tag Description")
 
 {% endcapture %}
 {% capture col_2_content %}
@@ -171,7 +171,7 @@ This page provides a succinct description of the extension, clear instructions o
 
 {% capture col_1_content %}
 
-![Example Alt Tag Description]({% asset "fpo-half-width-image-2.png" @path @optim %} "Example Title Tag Description")
+![Example Alt Tag Description](/_assets/img/fpo-half-width-image-2.png "Example Title Tag Description")
 
 {% endcapture %}
 {% capture col_2_content %}
@@ -586,7 +586,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 ###### Remembear Example:
 
-![Screenshot Remembear]({% asset "content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear")
+![Screenshot Remembear](/_assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
 
 ###### List Example:
 

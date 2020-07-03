@@ -66,7 +66,7 @@ Extensions give you the ability to complement standard browser features and prov
 
 {% capture col_1_content %}
 
-![Enterprise Extensions]({% asset "documentation/develop/EnterpriseExtensions_promo.jpg" @path @optim %})
+![Enterprise Extensions](/_assets/img/documentation/develop/EnterpriseExtensions_promo.jpg)
 
 {% endcapture %}
 {% capture col_2_content %}
