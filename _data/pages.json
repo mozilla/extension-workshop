@@ -1,0 +1,1342 @@
+[
+  {
+    "title": "Extension Basics",
+    "url": "/extension-basics/",
+    "subpageitems": [
+      {
+        "title": "Getting started",
+        "id": "getting-started"
+      },
+      {
+        "title": "Mozilla Developer Network",
+        "id": "mozilla-developer-network"
+      }
+    ]
+  },
+  {
+    "title": "Documentation Topics",
+    "subfolderitems": [
+      {
+        "title": "Develop",
+        "url": "/documentation/develop/",
+        "subpageitems": [
+          {
+            "title": "Firefox Tools",
+            "id": "firefox-tools"
+          },
+          {
+            "title": "User Experience",
+            "id": "user-experience"
+          },
+          {
+            "title": "Firefox for Android",
+            "id": "firefox-for-android"
+          },
+          {
+            "title": "Port to Firefox",
+            "id": "port-to-firefox"
+          },
+          {
+            "title": "Test and debug",
+            "id": "test-and-debug"
+          }
+        ],
+        "categories": [
+          {
+            "category": "Getting Started",
+            "pages": [
+              {
+                "title": "Unique Firefox Capabilities",
+                "url": "/documentation/develop/unique-firefox-capabilities/"
+              },
+              {
+                "title": "Firefox Workflow Overview",
+                "url": "/documentation/develop/firefox-workflow-overview/"
+              },
+              {
+                "title": "About the WebExtensions API",
+                "url": "/documentation/develop/about-the-webextensions-api/"
+              }
+            ]
+          },
+          {
+            "category": "Cross-Browser Development",
+            "pages": [
+              {
+                "title": "Browser Compatibility",
+                "url": "/documentation/develop/browser-compatibility/",
+                "subpageitems": [
+                  {
+                    "title": "Namespace",
+                    "id": "namespace"
+                  },
+                  {
+                    "title": "Asynchronous",
+                    "id": "asynchronous"
+                  },
+                  {
+                    "title": "API Coverage",
+                    "id": "api-coverage"
+                  },
+                  {
+                    "title": "Manifest keys",
+                    "id": "manifest-keys"
+                  },
+                  {
+                    "title": "More information",
+                    "id": "more-information"
+                  }
+                ]
+              },
+              {
+                "title": "Build cross-browser extensions",
+                "url": "https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension"
+              }
+            ]
+          },
+          {
+            "category": "Firefox Tools",
+            "pages": [
+              {
+                "title": "Build an extension in 5 minutes",
+                "url": "https://www.youtube.com/watch?v=Q3AQ5D2QFwc"
+              },
+              {
+                "title": "Browser Extension Development Tools",
+                "url": "/documentation/develop/browser-extension-development-tools/",
+                "subpageitems": [
+                  {
+                    "title": "Boilerplating tools",
+                    "id": "boilerplating-tools"
+                  },
+                  {
+                    "title": "Coding tools",
+                    "id": "coding-tools"
+                  },
+                  {
+                    "title": "Testing and debugging tools",
+                    "id": "testing-and-debugging-tools"
+                  },
+                  {
+                    "title": "Translation tools",
+                    "id": "translation-tools"
+                  },
+                  {
+                    "title": "Tools for Firefox for Android",
+                    "id": "tools-for-firefox-for-android"
+                  }
+                ]
+              },
+              {
+                "title": "Choosing a Firefox version for extension development",
+                "url": "/documentation/develop/choosing-a-firefox-version-for-extension-development/",
+                "subpageitems": [
+                  {
+                    "title": "Firefox editions",
+                    "id": "firefox-editions"
+                  },
+                  {
+                    "title": "Firefox version and their web extension development capabilities",
+                    "id": "firefox-version-and-their-web-extension-development-capabilities"
+                  }
+                ]
+              },
+              {
+                "title": "Getting started with web-ext",
+                "url": "/documentation/develop/getting-started-with-web-ext/",
+                "subpageitems": [
+                  {
+                    "title": "Installation",
+                    "id": "installation-section"
+                  },
+                  {
+                    "title": "Using web-ext",
+                    "id": "using-web-ext-section"
+                  },
+                  {
+                    "title": "See also",
+                    "id": "see-also-section"
+                  }
+                ]
+              },
+              {
+                "title": "web-ext command reference",
+                "url": "/documentation/develop/web-ext-command-reference/",
+                "subpageitems": [
+                  {
+                    "title": "Commands",
+                    "id": "commands"
+                  },
+                  {
+                    "title": "Global options",
+                    "id": "global-options"
+                  },
+                  {
+                    "title": "Setting option environment variables",
+                    "id": "setting-option-environment-variables"
+                  },
+                  {
+                    "title": "See also",
+                    "id": "see-also"
+                  }
+                ]
+              },
+              {
+                "title": "Web-ext Webpack plug-in",
+                "url": "https://github.com/hiikezoe/web-ext-webpack-plugin/blob/master/README.md"
+              },
+              {
+                "title": "Browser API Polyfill",
+                "url": "https://github.com/mozilla/webextension-polyfill"
+              },
+              {
+                "title": "Extensions and the Add-on ID",
+                "url": "/documentation/develop/extensions-and-the-add-on-id/",
+                "subpageitems": [
+                  {
+                    "title": "Basic workflow with no add-on ID",
+                    "id": "basic-workflow-with-no-add-on-id"
+                  },
+                  {
+                    "title": "When do you need an add-on ID?",
+                    "id": "when-do-you-need-an-add-on-id"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "category": "User Experience",
+            "pages": [
+              {
+                "title": "Build a secure extension",
+                "url": "/documentation/develop/build-a-secure-extension/"
+              },
+              {
+                "title": "Request the right permissions",
+                "url": "/documentation/develop/request-the-right-permissions/",
+                "subpageitems": [
+                  {
+                    "title": "Introduction",
+                    "id": "introduction"
+                  },
+                  {
+                    "title": "Advised permissions",
+                    "id": "advised-permissions"
+                  },
+                  {
+                    "title": "Avoid unnecessary permissions",
+                    "id": "avoid-unnecessary-permissions"
+                  },
+                  {
+                    "title": "Request permissions at runtime",
+                    "id": "request-permissions-at-runtime"
+                  },
+                  {
+                    "title": "Add information about permissions to your extensions AMO page",
+                    "id": "add-information-about-permissions-to-your-extensions-amo-page"
+                  }
+                ]
+              },
+              {
+                "title": "Best practices for collecting user data consents",
+                "url": "/documentation/develop/best-practices-for-collecting-user-data-consents/",
+                "subpageitems": [
+                  {
+                    "title": "Know your privacy settings",
+                    "id": "know-your-privacy-settings"
+                  },
+                  {
+                    "title": "Get prepared",
+                    "id": "get-prepared"
+                  },
+                  {
+                    "title": "Create a privacy policy",
+                    "id": "create-a-privacy-policy"
+                  },
+                  {
+                    "title": "Prompt after install or on first use",
+                    "id": "prompt-after-install-or-on-first-use"
+                  },
+                  {
+                    "title": "Determine your consent flow",
+                    "id": "determine-your-consent-flow"
+                  },
+                  {
+                    "title": "Your consent dialogs",
+                    "id": "your-consent-dialogs"
+                  }
+                ]
+              },
+              {
+                "title": "Build an accessible extension",
+                "url": "/documentation/develop/build-an-accessible-extension/"
+              },
+              {
+                "title": "Onboard, upboard, offboard users",
+                "url": "/documentation/develop/onboard-upboard-offboard-users/",
+                "subpageitems": [
+                  {
+                    "title": "Onboarding",
+                    "id": "onboarding"
+                  },
+                  {
+                    "title": "Upboarding",
+                    "id": "upboarding"
+                  },
+                  {
+                    "title": "Offboarding",
+                    "id": "offboarding"
+                  }
+                ]
+              },
+              {
+                "title": "User experience best practices",
+                "url": "/documentation/develop/user-experience-best-practices/",
+                "subpageitems": [
+                  {
+                    "title": "1. Keep it focused",
+                    "id": "keep-it-focused"
+                  },
+                  {
+                    "title": "2. Give users what they need, where they need it",
+                    "id": "give-users-what-they-need-where-they-need-it"
+                  },
+                  {
+                    "title": "3. Keep the user informed",
+                    "id": "keep-the-user-informed"
+                  },
+                  {
+                    "title": "4. Be Firefoxy in look and feel",
+                    "id": "be-firefoxy-in-look-and-feel"
+                  },
+                  {
+                    "title": "5. Great onboarding experience",
+                    "id": "great-onboarding-experience"
+                  },
+                  {
+                    "title": "6. Test, test, and then test again",
+                    "id": "test-test-and-then-test-again"
+                  }
+                ]
+              },
+              {
+                "title": "What’s great content and design?",
+                "url": "https://www.youtube.com/watch?v=a0_OsLGI0k4"
+              },
+              {
+                "title": "Create an appealing listing",
+                "url": "/documentation/develop/create-an-appealing-listing/",
+                "subpageitems": [
+                  {
+                    "title": "Your add-on’s name",
+                    "id": "your-add-ons-name"
+                  },
+                  {
+                    "title": "Create a captivating icon",
+                    "id": "create-a-captivating-icon"
+                  },
+                  {
+                    "title": "Create a meaningful set of keywords",
+                    "id": "create-a-meaningful-set-of-keywords"
+                  },
+                  {
+                    "title": "Make sure your summary is just long enough",
+                    "id": "make-sure-your-summary-is-just-long-enough"
+                  },
+                  {
+                    "title": "Focus on key features in your screenshots",
+                    "id": "focus-on-key-features-in-your-screenshots"
+                  },
+                  {
+                    "title": "The add-on description can be longer, but not too long",
+                    "id": "the-add-on-description-can-be-longer-but-not-too-long"
+                  },
+                  {
+                    "title": "Make it local",
+                    "id": "make-it-local"
+                  },
+                  {
+                    "title": "Make it experimental",
+                    "id": "make-it-experimental"
+                  },
+                  {
+                    "title": "Select the right platforms and versions",
+                    "id": "select-the-right-platforms-and-versions"
+                  },
+                  {
+                    "title": "Categorize well",
+                    "id": "categorize-well"
+                  },
+                  {
+                    "title": "Be prepared to provide support",
+                    "id": "be-prepared-to-provide-support"
+                  },
+                  {
+                    "title": "Set up a developer profile",
+                    "id": "set-up-a-developer-profile"
+                  },
+                  {
+                    "title": "Use plain language in any privacy policy or license agreement",
+                    "id": "use-plain-language-in-any-privacy-policy-or-license-agreement"
+                  },
+                  {
+                    "title": "Gently ask for a review",
+                    "id": "gently-ask-for-a-review"
+                  },
+                  {
+                    "title": "Some other points",
+                    "id": "some-other-points"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "category": "Mobile",
+            "pages": [
+              {
+                "title": "GeckoView Extensions (Android library)",
+                "url": "https://github.com/mozilla/geckoview"
+              },
+              {
+                "title": "Differences between desktop and Android extensions",
+                "url": "/documentation/develop/differences-between-desktop-and-android-extensions/",
+                "subpageitems": [
+                  {
+                    "title": "User interface",
+                    "id": "user-interface"
+                  },
+                  {
+                    "title": "Native application interaction",
+                    "id": "native-application-interaction"
+                  },
+                  {
+                    "title": "Permissions",
+                    "id": "permissions"
+                  },
+                  {
+                    "title": "Other notes",
+                    "id": "other-notes"
+                  }
+                ]
+              },
+              {
+                "title": "Developing extensions for Firefox for Android",
+                "url": "/documentation/develop/developing-extensions-for-firefox-for-android/",
+                "subpageitems": [
+                  {
+                    "title": "Set up your computer and Android emulator or device",
+                    "id": "set-up-your-computer-and-android-emulator-or-device"
+                  },
+                  {
+                    "title": "Check for Firefox for Android compatibility",
+                    "id": "check-for-firefox-for-android-compatibility"
+                  },
+                  {
+                    "title": "Install and run your extension in Firefox for Android",
+                    "id": "install-and-run-your-extension-in-firefox-for-android"
+                  },
+                  {
+                    "title": "Debug your extension",
+                    "id": "debug-your-extension"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "category": "Port Your Extension",
+            "pages": [
+              {
+                "title": "Extension compatibility test",
+                "url": "https://www.extensiontest.com/"
+              },
+              {
+                "title": "Porting a Google Chrome Extension",
+                "url": "/documentation/develop/porting-a-google-chrome-extension/"
+              },
+              {
+                "title": "Porting a legacy Firefox extension",
+                "url": "/documentation/develop/porting-a-legacy-firefox-extension/",
+                "subpageitems": [
+                  {
+                    "title": "Quick start",
+                    "id": "quick-start"
+                  },
+                  {
+                    "title": "Migration paths",
+                    "id": "migration-paths"
+                  },
+                  {
+                    "title": "Don't see the WebExtensions APIs you need?",
+                    "id": "dont-see-the-webextensions-apis-you-need"
+                  },
+                  {
+                    "title": "Tools",
+                    "id": "tools"
+                  },
+                  {
+                    "title": "Documentation",
+                    "id": "documentation"
+                  },
+                  {
+                    "title": "Contact",
+                    "id": "contact"
+                  }
+                ]
+              },
+              {
+                "title": "Comparison with the Add-on SDK",
+                "url": "/documentation/develop/comparison-with-the-add-on-sdk/",
+                "subpageitems": [
+                  {
+                    "title": "Manifest files",
+                    "id": "manifest-files"
+                  },
+                  {
+                    "title": "Persistent scripts",
+                    "id": "persistent-scripts"
+                  },
+                  {
+                    "title": "Content scripts",
+                    "id": "content-scripts"
+                  },
+                  {
+                    "title": "UI elements",
+                    "id": "ui-elements"
+                  },
+                  {
+                    "title": "Settings",
+                    "id": "settings"
+                  },
+                  {
+                    "title": "Internationalization",
+                    "id": "internationalization"
+                  },
+                  {
+                    "title": "Command-line tool",
+                    "id": "command-line-tool"
+                  },
+                  {
+                    "title": "JavaScript APIs",
+                    "id": "javascript-apis"
+                  }
+                ]
+              },
+              {
+                "title": "Comparison with XUL/XPCOM extensions",
+                "url": "/documentation/develop/comparison-with-xul-xpcom-extensions/",
+                "subpageitems": [
+                  {
+                    "title": "Manifest",
+                    "id": "manifest"
+                  },
+                  {
+                    "title": "UI",
+                    "id": "ui"
+                  },
+                  {
+                    "title": "Privileged APIs",
+                    "id": "privileged-apis"
+                  },
+                  {
+                    "title": "Interacting with web content",
+                    "id": "interacting-with-web-content"
+                  },
+                  {
+                    "title": "Localization",
+                    "id": "localization"
+                  },
+                  {
+                    "title": "Settings",
+                    "id": "settings"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "category": "Debug and Test",
+            "pages": [
+              {
+                "title": "Debugging",
+                "url": "/documentation/develop/debugging/",
+                "subpageitems": [
+                  {
+                    "title": "Developer tools toolbox",
+                    "id": "developer-tools-toolbox"
+                  },
+                  {
+                    "title": "Debugging background scripts",
+                    "id": "debugging-background-scripts"
+                  },
+                  {
+                    "title": "Debugging options pages",
+                    "id": "debugging-options-pages"
+                  },
+                  {
+                    "title": "Debugging popups",
+                    "id": "debugging-popups"
+                  },
+                  {
+                    "title": "Debugging content scripts",
+                    "id": "debugging-content-scripts"
+                  },
+                  {
+                    "title": "Debugging sidebars",
+                    "id": "debugging-sidebars"
+                  },
+                  {
+                    "title": "Debugging storage",
+                    "id": "debugging-storage"
+                  },
+                  {
+                    "title": "Debugging developer tools pages and panels",
+                    "id": "debugging-developer-tools-pages-and-panels"
+                  },
+                  {
+                    "title": "Debug permission requests",
+                    "id": "debug-permission-requests"
+                  },
+                  {
+                    "title": "Debugging browser restarts",
+                    "id": "debugging-browser-restarts"
+                  }
+                ]
+              },
+              {
+                "title": "Temporary Installation in Firefox",
+                "url": "/documentation/develop/temporary-installation-in-firefox/",
+                "subpageitems": [
+                  {
+                    "title": "Reloading a temporary extension",
+                    "id": "reloading-a-temporary-extension"
+                  },
+                  {
+                    "title": "Using the command line",
+                    "id": "using-the-command-line"
+                  },
+                  {
+                    "title": "Detecting temporary installation",
+                    "id": "detecting-temporary-installation"
+                  },
+                  {
+                    "title": "Limitations",
+                    "id": "limitations"
+                  }
+                ]
+              },
+              {
+                "title": "Testing persistent and restart features",
+                "url": "/documentation/develop/testing-persistent-and-restart-features/",
+                "subpageitems": [
+                  {
+                    "title": "What is an add-on ID?",
+                    "id": "what-is-an-add-on-id"
+                  },
+                  {
+                    "title": "What is a Firefox profile?",
+                    "id": "what-is-a-firefox-profile"
+                  },
+                  {
+                    "title": "Extension behavior in Firefox",
+                    "id": "extension-behavior-in-firefox"
+                  },
+                  {
+                    "title": "What do I do to ensure I can test my extension?",
+                    "id": "what-do-i-do-to-ensure-i-can-test-my-extension"
+                  }
+                ]
+              },
+              {
+                "title": "Test permission requests",
+                "url": "/documentation/develop/test-permission-requests/",
+                "subpageitems": [
+                  {
+                    "title": "Permission grant behavior during testing",
+                    "id": "permission-grant-behavior-during-testing"
+                  },
+                  {
+                    "title": "Observe or verify install time permission requests",
+                    "id": "observe-or-verify-install-time-permission-requests"
+                  },
+                  {
+                    "title": "Retest runtime permission grants",
+                    "id": "retest-runtime-permission-grants"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Publish",
+        "url": "/documentation/publish/",
+        "subpageitems": [
+          {
+            "title": "Get your extension signed",
+            "id": "get-your-extension-signed"
+          },
+          {
+            "title": "Distribute your signed extension",
+            "id": "distribute-your-signed-extension"
+          },
+          {
+            "title": "Promote your extension",
+            "id": "promote-your-extension"
+          }
+        ],
+        "categories": [
+          {
+            "category": "Policies",
+            "pages": [
+              {
+                "title": "Add-on Policies",
+                "url": "/documentation/publish/add-on-policies/",
+                "subpageitems": [
+                  {
+                    "title": "No Surprises",
+                    "id": "no-surprises"
+                  },
+                  {
+                    "title": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "title": "Submission Guidelines",
+                    "id": "submission-guidelines"
+                  },
+                  {
+                    "title": "Development Practices",
+                    "id": "development-practices"
+                  },
+                  {
+                    "title": "Data Disclosure, Collection and Management",
+                    "id": "data-disclosure-collection-and-management"
+                  },
+                  {
+                    "title": "Security Vulnerabilities",
+                    "id": "security-vulnerabilities"
+                  },
+                  {
+                    "title": "Monetization",
+                    "id": "monetization"
+                  },
+                  {
+                    "title": "Compliance & Blocking",
+                    "id": "compliance-and-blocking"
+                  }
+                ]
+              },
+              {
+                "title": "Firefox Add-on Distribution Agreement",
+                "url": "/documentation/publish/firefox-add-on-distribution-agreement/",
+                "subpageitems": [
+                  {
+                    "title": "1. Introduction",
+                    "id": "introduction"
+                  },
+                  {
+                    "title": "2. Accounts",
+                    "id": "accounts"
+                  },
+                  {
+                    "title": "3. Privacy Policy",
+                    "id": "privacy-policy"
+                  },
+                  {
+                    "title": "4. Distribution, certificates, & review process",
+                    "id": "distribution-certificates-and-review-process"
+                  },
+                  {
+                    "title": "5. Your obligations",
+                    "id": "your-obligations"
+                  },
+                  {
+                    "title": "6. Licenses; proprietary rights",
+                    "id": "licenses-proprietary-rights"
+                  },
+                  {
+                    "title": "7. Content removal",
+                    "id": "content-removal"
+                  },
+                  {
+                    "title": "8. Disclaimer of warranties",
+                    "id": "disclaimer-of-warranties"
+                  },
+                  {
+                    "title": "9. Limitation of liability",
+                    "id": "limitation-of-liability"
+                  },
+                  {
+                    "title": "10. Release; indemnification",
+                    "id": "release-idemnification"
+                  },
+                  {
+                    "title": "11. General legal terms",
+                    "id": "general-legal-terms"
+                  }
+                ]
+              },
+              {
+                "title": "Add-ons Blocking Process",
+                "url": "/documentation/publish/add-ons-blocking-process/",
+                "subpageitems": [
+                  {
+                    "title": "Security Over Choice",
+                    "id": "security-over-choice"
+                  },
+                  {
+                    "title": "Blocking Criteria",
+                    "id": "blocking-criteria"
+                  },
+                  {
+                    "title": "Developer Outreach",
+                    "id": "developer-outreach"
+                  },
+                  {
+                    "title": "Requesting a Block",
+                    "id": "requesting-a-block"
+                  },
+                  {
+                    "title": "Blocking Other Types of Third Party Software",
+                    "id": "blocking-other-types-of-third-party-software"
+                  }
+                ]
+              },
+              {
+                "title": "Third Party Library Usage",
+                "url": "/documentation/publish/third-party-library-usage/",
+                "subpageitems": [
+                  {
+                    "title": "When must links for third-party libraries be provided?",
+                    "id": "when-must-links-for-third-party-libraries-be-provided"
+                  },
+                  {
+                    "title": "How to determine the third-party library link",
+                    "id": "how-to-determine-the-third-party-library-link"
+                  },
+                  {
+                    "title": "Communicating third-party library links to reviewers",
+                    "id": "communicating-third-party-library-links-to-the-reviewer"
+                  }
+                ]
+              },
+              {
+                "title": "What does review rejection mean to users?",
+                "url": "/documentation/publish/what-does-review-rejection-mean-to-users/",
+                "subpageitems": [
+                  {
+                    "title": "Review overview",
+                    "id": "review-overview"
+                  },
+                  {
+                    "title": "Impact of review rejection",
+                    "id": "impact-of-review-rejection"
+                  },
+                  {
+                    "title": "Blocklisting",
+                    "id": "blocklisting"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "category": "Sign",
+            "pages": [
+              {
+                "title": "Signing and distribution overview",
+                "url": "/documentation/publish/signing-and-distribution-overview/",
+                "subpageitems": [
+                  {
+                    "title": "Signing your add-ons",
+                    "id": "signing-your-addons"
+                  },
+                  {
+                    "title": "Distributing your add-on",
+                    "id": "distributing-your-addon"
+                  },
+                  {
+                    "title": "More information about AMO",
+                    "id": "about-amo"
+                  }
+                ]
+              },
+              {
+                "title": "Package your extension",
+                "url": "/documentation/publish/package-your-extension/",
+                "subpageitems": [
+                  {
+                    "title": "Windows",
+                    "id": "package-windows"
+                  },
+                  {
+                    "title": "Mac OSX",
+                    "id": "package-mac"
+                  },
+                  {
+                    "title": "Linux / Mac OSX Terminal",
+                    "id": "package-linux"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "category": "Distribute",
+            "pages": [
+              {
+                "title": "Distribute pre-release versions",
+                "url": "/documentation/publish/distribute-pre-release-versions/"
+              },
+              {
+                "title": "Submitting an add-on",
+                "url": "/documentation/publish/submitting-an-add-on/",
+                "subpageitems": [
+                  {
+                    "title": "Listing on AMO",
+                    "id": "listing-on-amo"
+                  },
+                  {
+                    "title": "Self-distribution",
+                    "id": "self-distribution"
+                  },
+                  {
+                    "title": "Get help",
+                    "id": "get-help"
+                  }
+                ]
+              },
+              {
+                "title": "Source code submission",
+                "url": "/documentation/publish/source-code-submission/",
+                "subpageitems": [
+                  {
+                    "title": "Provide your extension source code",
+                    "id": "provide-your-extension-source-code"
+                  },
+                  {
+                    "title": "Use of obfuscated code",
+                    "id": "use-of-obfuscated-code"
+                  },
+                  {
+                    "title": "Source code checklist",
+                    "id": "source-code-checklist"
+                  }
+                ]
+              },
+              {
+                "title": "Add-on ownership",
+                "url": "/documentation/publish/add-on-ownership/",
+                "subpageitems": [
+                  {
+                    "title": "Transfer ownership",
+                    "id": "transfer-ownership"
+                  },
+                  {
+                    "title": "Code disputes",
+                    "id": "code-disputes"
+                  }
+                ]
+              },
+              {
+                "title": "Developer accounts",
+                "url": "/documentation/publish/developer-accounts/",
+                "subpageitems": [
+                  {
+                    "title": "Setting a display name",
+                    "id": "setting-a-display-name"
+                  },
+                  {
+                    "title": "Blocked accounts",
+                    "id": "blocked-accounts"
+                  }
+                ]
+              },
+              {
+                "title": "Self-Distribution",
+                "url": "/documentation/publish/self-distribution/",
+                "subpageitems": [
+                  {
+                    "title": "Self-distribution options",
+                    "id": "options"
+                  }
+                ]
+              },
+              {
+                "title": "Sideloading",
+                "url": "/documentation/publish/distribute-sideloading/",
+                "subpageitems": [
+                  {
+                    "title": "Preparing your add-on",
+                    "id": "preparing-your-addon"
+                  },
+                  {
+                    "title": "Install add-on from file",
+                    "id": "install-addon-from-file"
+                  },
+                  {
+                    "title": "Installation using the standard extension folders",
+                    "id": "standard-extension-folders"
+                  }
+                ]
+              },
+              {
+                "title": "For desktop apps",
+                "url": "/documentation/publish/distribute-for-desktop-apps/"
+              }
+            ]
+          },
+          {
+            "category": "Promote",
+            "pages": [
+              {
+                "title": "Promoting your extension",
+                "url": "/documentation/publish/promoting-your-extension/",
+                "subpageitems": [
+                  {
+                    "title": "Promote your add-on from your website",
+                    "id": "promote-your-addon"
+                  },
+                  {
+                    "title": "Friends, family, and colleagues",
+                    "id": "friends-family-colleagues"
+                  },
+                  {
+                    "title": "Events and meetups",
+                    "id": "events-and-meetups"
+                  },
+                  {
+                    "title": "Current users",
+                    "id": "current-users"
+                  },
+                  {
+                    "title": "Social media",
+                    "id": "social-media"
+                  },
+                  {
+                    "title": "Engage with your users",
+                    "id": "engage-with-users"
+                  },
+                  {
+                    "title": "Create a forum, user group, or similar",
+                    "id": "create-a-forum"
+                  },
+                  {
+                    "title": "Engage with bloggers and news media",
+                    "id": "engage-with-media"
+                  },
+                  {
+                    "title": "Advertising",
+                    "id": "advertising"
+                  }
+                ]
+              },
+              {
+                "title": "Make money from browser extensions",
+                "url": "/documentation/publish/make-money-from-browser-extensions/",
+                "subpageitems": [
+                  {
+                    "title": "Will I ever be able to sell through AMO?",
+                    "id": "sell-through-AMO"
+                  },
+                  {
+                    "title": "What can't you do",
+                    "id": "what-cant-you-do"
+                  },
+                  {
+                    "title": "What can you do",
+                    "id": "what-can-you-do"
+                  },
+                  {
+                    "title": "Unsolicited offers",
+                    "id": "unsolicited-offers"
+                  },
+                  {
+                    "title": "How can I maximize my income?",
+                    "id": "maximize-income"
+                  }
+                ]
+              },
+              {
+                "title": "Recommended extensions",
+                "url": "/documentation/publish/recommended-extensions/",
+                "subpageitems": [
+                  {
+                    "title": "Overview",
+                    "id": "overview"
+                  },
+                  {
+                    "title": "Criteria for Recommended extensions",
+                    "id": "criteria"
+                  },
+                  {
+                    "title": "Developer partnership",
+                    "id": "partnership"
+                  },
+                  {
+                    "title": "Selection process",
+                    "id": "selection"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Manage",
+        "url": "/documentation/manage/",
+        "subpageitems": [
+          {
+            "title": "Stay informed when Firefox changes",
+            "id": "stay-informed-when-firefox-changes"
+          },
+          {
+            "title": "Publish extension updates",
+            "id": "publish-extension-updates"
+          },
+          {
+            "title": "Manage authors of your extension",
+            "id": "manage-authors-of-your-extension"
+          },
+          {
+            "title": "Promote your extension",
+            "id": "promote-your-extension"
+          },
+          {
+            "title": "Removing your extension from distribution",
+            "id": "removing-your-extension-from-distribution"
+          }
+        ],
+        "categories": [
+          {
+            "category": "Resources",
+            "pages": [
+              {
+                "title": "Updating your extension",
+                "url": "/documentation/manage/updating-your-extension/",
+                "subpageitems": [
+                  {
+                    "title": "Enabling updates to your extension",
+                    "id": "enable-update"
+                  },
+                  {
+                    "title": "Manifest structure",
+                    "id": "manifest-structure"
+                  },
+                  {
+                    "title": "Testing automatic updating",
+                    "id": "testing-automatic-updating"
+                  }
+                ]
+              },
+              {
+                "title": "Best practices for updating your extension",
+                "url": "/documentation/manage/best-practices-for-updating/"
+              },
+              {
+                "title": "Resources for publishers",
+                "url": "/documentation/manage/resources-for-publishers/"
+              },
+              {
+                "title": "Retiring your extension",
+                "url": "/documentation/manage/retiring-your-extension/",
+                "subpageitems": [
+                  {
+                    "title": "Reasons for withdrawing your extension",
+                    "id": "reasons-for-withdrawing"
+                  },
+                  {
+                    "title": "Steps to retiring an extension",
+                    "id": "steps-to-retiring-an-extension"
+                  },
+                  {
+                    "title": "Suggested retirement timetable",
+                    "id": "suggested-retirement-timetable"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Enterprise",
+        "url": "/documentation/enterprise/",
+        "subpageitems": [
+          {
+            "title": "Developing your enterprise extension",
+            "id": "developing-your-enterprise-extension"
+          },
+          {
+            "title": "Distributing your enterprise extension",
+            "id": "distributing-your-enterprise-extension"
+          }
+        ],
+        "categories": [
+          {
+            "category": "Enterprise support",
+            "pages": [
+              {
+                "title": "Manage add-ons for Firefox for Enterprise",
+                "url": "https://support.mozilla.org/products/firefox-enterprise/policies-customization-enterprise/manage-add-ons-enterprise"
+              },
+              {
+                "title": "Install system add-ons for Firefox for Enterprise",
+                "url": "https://support.mozilla.org/kb/install-system-add-ons-firefox-enterprise"
+              }
+            ]
+          },
+          {
+            "category": "Enterprise resources",
+            "pages": [
+              {
+                "title": "Enterprise policies that impact extensions",
+                "url": "/documentation/enterprise/enterprise-policies-that-impact-extensions/",
+                "subpageitems": [
+                  {
+                    "title": "Relevant policies",
+                    "id": "relevant-policies"
+                  },
+                  {
+                    "title": "Other relevant policies",
+                    "id": "other-relevant-policies"
+                  }
+                ]
+              },
+              {
+                "title": "Enterprise distribution",
+                "url": "/documentation/enterprise/enterprise-distribution/",
+                "subpageitems": [
+                  {
+                    "title": "Signed vs. unsigned extensions",
+                    "id": "signed-vs-unsigned"
+                  },
+                  {
+                    "title": "Sideloading",
+                    "id": "sideloading"
+                  },
+                  {
+                    "title": "Installation using the Windows registry",
+                    "id": "installation-using-windows-registry"
+                  },
+                  {
+                    "title": "Firefox settings",
+                    "id": "firefox-settings"
+                  },
+                  {
+                    "title": "Bundling add-ons with a custom Firefox",
+                    "id": "bundling-add-ons-with-custom-Firefox"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Themes",
+        "url": "/documentation/themes/",
+        "categories": [
+          {
+            "category": "Creating themes",
+            "pages": [
+              {
+                "title": "Theme concepts",
+                "url": "https://developer.mozilla.org/docs/Mozilla/Add-ons/Themes/Theme_concepts"
+              },
+              {
+                "title": "Using the AMO theme generator",
+                "url": "/documentation/themes/using-the-amo-theme-generator/",
+                "subpageitems": [
+                  {
+                    "title": "Getting Started",
+                    "id": "getting-started"
+                  },
+                  {
+                    "title": "Submitting your theme",
+                    "id": "submitting-your-theme"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Community",
+    "url": "/community/",
+    "subpageitems": [
+      {
+        "title": "Who is part of the community?",
+        "id": "who-is-part-of-the-community"
+      },
+      {
+        "title": "Connect with the community",
+        "id": "connect-with-the-community"
+      },
+      {
+        "title": "Get involved in the community",
+        "id": "get-involved-in-the-community"
+      }
+    ],
+    "categories": [
+      {
+        "category": "Get in touch",
+        "pages": [
+          {
+            "title": "Community Forum",
+            "url": "https://discourse.mozilla.org/c/add-ons"
+          },
+          {
+            "title": "Add-ons Blog",
+            "url": "https://blog.mozilla.org/addons/"
+          },
+          {
+            "title": "Stack Overflow",
+            "url": "https://stackoverflow.com/tags/firefox-addon"
+          },
+          {
+            "title": "Communication Calendar",
+            "url": "https://calendar.google.com/calendar?cid=bW96aWxsYS5jb21fb2ZqbGN0MDdrMTc4NHYxdTUxYnFrNDc2YmtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+          },
+          {
+            "title": "Dev Mailing List",
+            "url": "https://mail.mozilla.org/listinfo/dev-addons"
+          }
+        ]
+      },
+      {
+        "category": "Contribute",
+        "pages": [
+          {
+            "title": "Contribution opportunities",
+            "url": "https://wiki.mozilla.org/Add-ons/Contribute"
+          },
+          {
+            "title": "Onboard to the WebExtensions codebase",
+            "url": "https://wiki.mozilla.org/WebExtensions/Contribution_Onramp"
+          },
+          {
+            "title": "Hacking guide for WebExtensions code contributions",
+            "url": "https://wiki.mozilla.org/WebExtensions/Hacking"
+          },
+          {
+            "title": "WebExtensions Experiments",
+            "url": "https://webextensions-experiments.readthedocs.io/"
+          },
+          {
+            "title": "Find or create a bug",
+            "url": "https://bugzilla.mozilla.org"
+          }
+        ]
+      }
+    ]
+  }
+]
