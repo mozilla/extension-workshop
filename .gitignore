@@ -9,3 +9,4 @@ __MACOSX/
 .vscode/*
 _assets/css/*.css
 _assets/css/*.css.map
+_assets/js/bundle.js
