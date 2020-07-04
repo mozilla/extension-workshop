@@ -1,5 +1,5 @@
 ---
-layout: sidebar
+layout: sidebar.html
 title: web-ext command reference
 permalink: /documentation/develop/web-ext-command-reference/
 published: true

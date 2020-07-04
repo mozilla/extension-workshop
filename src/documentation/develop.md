@@ -1,5 +1,5 @@
 ---
-layout: sidebar
+layout: sidebar.html
 title: Develop
 permalink: /documentation/develop/
 published: true

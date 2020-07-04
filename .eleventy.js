@@ -16,7 +16,7 @@ module.exports = function(eleventyConfig) {
     root: [
       './src/_includes',
       './src/_layouts',
-      './src',
+    // '.',
     ],
   });
 
@@ -29,8 +29,10 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
+    templateFormats: ['md', 'liquid', 'html'],
+
     dir: {
-      input: "src/documentation/develop/**.md",
+      input: "src",
       output: "src/_site",
       includes: "_includes",
       layouts: "_layouts"

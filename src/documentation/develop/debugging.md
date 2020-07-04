@@ -103,6 +103,10 @@ We use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-exampl
     alert: false
 %}
 
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 [Background scripts](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) enable an extension to maintain a long-term state or perform long-term operations, independently of any web page or browser window. These scripts remain loaded for the lifetime of the extension. Background scripts are loaded inside an invisible background page: by default, this is an empty HTML document, but you can specify a custom page and define it as the background page using the manifest.json [`background`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key.
 
 To debug background scripts, use the [Toolbox](#developer-tools-toolbox) **Debugger** in the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console) view so you can view the **Console** below **Debugger**.
@@ -128,15 +132,15 @@ In the **Debugger** you can set breakpoints, step through code, modify the exten
 For more information about using the debugger, see the [Debugger](https://developer.mozilla.org/docs/Tools/Debugger) guide.
 
 {% endcapture %}
+
 {% include modules/one-column.html
   id: "debugging-background-scripts"
   content: content
+%}
 
 <!-- END: Single Column Body Module -->
 
-<!-- Single Column Body Module -->
 
-{% capture content %}
 
 ## Debugging options pages
 

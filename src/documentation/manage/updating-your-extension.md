@@ -115,7 +115,7 @@ For XUL add-ons, add the following to the `<Description about="urn:mozilla:insta
 
 <!-- Syntax Highlighting -->
 
-{% highlight XML linenos %}
+{% highlight xml linenos %}
 
 <em:updateURL>https://example.com/updates.json</em:updateURL>
 

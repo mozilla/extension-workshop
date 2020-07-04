@@ -3,10 +3,10 @@
     	<aside class="documentation-topics">
     		<div class="grid-container grid-x grid-padding-x">
 		        <div class="cell small-12">
-		        	<h6>{{ item.title }}</h6>       
+		        	<h6>{{ item.title }}</h6>
 		            <ul>
 		                {% for subitem in item.subfolderitems %}
-		                    <li><a href="{{ subitem.url | relative_url }}"{% if pg.target %} target="{{ pg.target }}"{% endif %}>{{ subitem.title }}</a></li>
+		                    <li><a href="{{ subitem.url }}"{% if pg.target %} target="{{ pg.target }}"{% endif %}>{{ subitem.title }}</a></li>
 		                {% endfor %}
 		            </ul>
 		        </div>
