@@ -1,4 +1,3 @@
-_site
 .sass-cache
 node_modules/
 *.log
@@ -7,6 +6,8 @@ node_modules/
 __MACOSX/
 
 .vscode/*
-_assets/css/*.css
-_assets/css/*.css.map
-_assets/js/bundle.js
+
+src/_site
+src/_assets/css/*.css
+src/_assets/css/*.css.map
+src/_assets/js/bundle.js

@@ -1,0 +1,22 @@
+<section class="page-hero">
+<div class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12">
+<div class="page-hero-description" markdown="1">
+<p class="section-title"><small>{{ page.topic }}</small></p>
+
+{{ content }}
+
+</div>
+<div class="page-hero-cta">
+{% if cta1_label != nil and cta1_url != nil and cta1_label != empty and cta1_url != empty %}
+<a href="{{ cta1_url }}" class="button">{{ cta1_label }}</a>
+{% endif %}
+{% if cta2_label != nil and cta2_url != nil and cta2_label != empty and cta2_url != empty %}
+<a href="{{ cta2_url }}" class="button secondary">{{ cta2_label }}</a>
+{% endif %}
+</div>
+</div>
+</article>
+</div>
+</section>
