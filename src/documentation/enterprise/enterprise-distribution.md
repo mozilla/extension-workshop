@@ -33,7 +33,7 @@ As an enterprise IT administrator you may wish to install add-ons for your users
 
 {% endcapture %}
 {% include modules/page-hero.html
-	content: page_hero_banner_content
+  content: page_hero_banner_content
 %}
 
 <!-- END: Page Hero Banner -->
@@ -124,19 +124,15 @@ It is safe to modify the Registry keys while Firefox is running.
 
 1. Ensure the add-on has an add-on ID, by including the following to its manifest.json file, replacing _your-add-on-name@your-domain.com_ with a suitable ID for your add-on:
 
-<!-- Syntax Highlighting -->
-{% highlight javascript linenos %}
-"browser_specific_settings": {
-  "gecko": {
-    "id": "your-add-on-name@your-domain.com"
-  }
-}
-{% endhighlight %}
-<!-- END: Syntax Highlighting -->
+   ```json
+   "browser_specific_settings": {
+     "gecko": {
+       "id": "your-add-on-name@your-domain.com"
+     }
+   }
+   ```
 
 An email address style ID is recommended.
-
-{:start="2"}
 
 2. Sign your add-on on addons.mozilla.org (AMO) using the unlisted option. For more details, see Signing and distributing your add-on.
 
@@ -152,23 +148,19 @@ An email address style ID is recommended.
 
    `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Mozilla\Firefox\Extensions`
 
-   <!-- Note -->
-
-   {% capture note %}
+{% capture note %}
 
    `HKEY_LOCAL_MACHINE\Software\Mozilla\Firefox\Extensions` is not available when running 32-bit Firefox on a 64-bit machine, you can only install for all users using the `Wow6432Node` key.
 
-   {% endcapture %}
-   {% include modules/note.html
-   	content: note
-   	alert: false
-   %}
+{% endcapture %}
+{% include modules/note.html
+	content: note
+	alert: false
+%}
 
-   <!-- END: Note -->
+   - For the current user, add to the following registry key:
 
-- For the current user, add to the following registry key:
-
-`HKEY_CURRENT_USER\Software\Mozilla\Firefox\Extensions`
+   `HKEY_CURRENT_USER\Software\Mozilla\Firefox\Extensions`
 
 5. Create a new string value Registry entry with its name equal to the add-on ID, for example, borderify@example.com, and a value equal to the location where the add-on is stored, for example, `c:/webext/borderify@example.com.xpi`.
 
@@ -197,6 +189,7 @@ If you install using the Windows Registry, Firefox will not automatically update
 There are two settings that affect the use of alternative installation options. The `extensions.autoDisableScopes` preference controls whether add-ons are installed automatically or after user confirmation. The `extensions.enabledScopes` preference is used to disable installation from most locations. In addition to these options, the method of setting these preferences programmatically is discussed.
 
 <section id="controlling-automatic-installations"></section>
+
 ### Controlling automatic installation
 
 The standard downloads of Firefox are configured so that sideloads using the standard extensions folder or the Windows Registry, don’t install automatically. Depending on the version of Firefox:
@@ -256,20 +249,18 @@ It is impossible to disable loading add-ons from the profile directory.
 
 Use the following logic to set the values of `extensions.autoDisableScopes` and `extensions.enabledScopes` programmatically to ensure add-ons are installed automatically:
 
-1. Edit the [administrative config](https://support.mozilla.org/products/firefox-enterprise/policies-customization-enterprise/policies-overview-enterprise) file.
-2. Check for the presence of lines that set the `extensions.autoDisableScopes` and/or `extensions.enabledScopes` preferences and replace/add them as needed.
-3. These preference lines should be used like below, with values of your choice as explained in the top of this section:
+ 1. Edit the [administrative config](https://support.mozilla.org/products/firefox-enterprise/policies-customization-enterprise/policies-overview-enterprise) file.
+ 2. Check for the presence of lines that set the `extensions.autoDisableScopes` and/or `extensions.enabledScopes` preferences and replace/add them as needed.
+ 3. These preference lines should be used like below, with values of your choice as explained in the top of this section:
 
 <!-- Syntax Highlighting -->
 
-{% highlight javascript linenos %}
+```js
 defaultPref("extensions.autoDisableScopes", 0);
 defaultPref("extensions.enabledScopes", 15);
 // Or use binary value like this
 defaultPref("extensions.enabledScopes", 0b1111);
-{% endhighlight %}
-
-<!-- END: Syntax Highlighting -->
+```
 
 <!-- Note -->
 

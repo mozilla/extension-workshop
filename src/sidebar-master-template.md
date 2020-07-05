@@ -89,11 +89,11 @@ You reference all extensions API functions using a namespace, for example, `brow
 
 <!-- Syntax Highlighting -->
 
-{% highlight javascript linenos %}
+```js
 function setCurrentChoice(result) {
   document.querySelector('#color').value = result.color || 'blue';
 }
-{% endhighlight %}
+```
 
 <!-- END: Syntax Highlighting -->
 

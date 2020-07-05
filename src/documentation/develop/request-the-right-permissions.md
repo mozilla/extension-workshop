@@ -111,7 +111,11 @@ Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExte
 
 <!-- END: Table -->
 
-<p class="note" markdown="1">The permissions that display messages and the messages they display may be different in other browsers. For information about viewing the permission message in Chrome, see [Viewing Warnings.](https://developer.chrome.com/apps/permission_warnings#view_warnings)</p>
+<div class="note" markdown="1">
+
+The permissions that display messages and the messages they display may be different in other browsers. For information about viewing the permission message in Chrome, see [Viewing Warnings.](https://developer.chrome.com/apps/permission_warnings#view_warnings)
+
+</div>
 
 The following permissions don't get alerted to users:
 
@@ -155,12 +159,12 @@ This may seem obvious, but if you create an extension by using an earlier exampl
 
 Take an extension you're developing to help-color blind users. At the user's request you're going to look for and update CSS in a web page to replace colors the user may have difficulty distinguishing with safe colors. You obviously need to access and update CSS on every page your user visits. You could do this by requesting the `"tabs"` permission and host permission for `"<all_urls>"`.
 
-{% highlight json linenos %}
+```json
 "permissions": [
   "<all_urls>",
   "tabs"
 ]
-{% endhighlight %}
+```
 
 Requesting these permissions results in the user getting this advice:
 
@@ -255,7 +259,7 @@ To address this issue, provide information in your extension's AMO description t
 
 A good example of this approach is [Gesturefy](https://addons.mozilla.org/firefox/addon/gesturefy/), which offers users the following advice:
 
-![Extract from Gesturefy's AMO description providing information on thepermissions requested by this extension](/_assets/img/documentation/develop/gesturefy_permissions_explanation.png)
+![Extract from Gesturefy's AMO description providing information on the permissions requested by this extension](/_assets/img/documentation/develop/gesturefy_permissions_explanation.png)
 
 </div>
 </article>

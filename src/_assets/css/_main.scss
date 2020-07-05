@@ -252,6 +252,11 @@ code {
   overflow-wrap: break-word;
 }
 
+
+code[class*="language-"] {
+  padding: 0;
+}
+
 a code {
   color: #00b3f4;
 }
