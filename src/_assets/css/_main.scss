@@ -1535,8 +1535,8 @@ a.tile-block-link {
     }
   }
 
-  &[target='_blank']::after {
-    display: none;
+  &::after {
+    display: none !important;
   }
 
   @include breakpoint(large) {
