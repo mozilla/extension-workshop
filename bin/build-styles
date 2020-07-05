@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+const fetch = require('node-fetch');
+const fs = require('fs-extra');
+const util = require('util');
+const sass = require('node-sass');
+
+const renderSass = util.promisify(sass.render);
+const inputFile = './src/_assets/css/styles.scss';
+const outputFile = './src/_site/_assets/css/styles.css';
+
+const buildSass = async function() {
+  const { css } = await renderSass({
+    file: inputFile,
+    includePaths: [
+      'node_modules/foundation-sites/scss/',
+      'node_modules/slick-carousel/slick/',
+      'node_modules/hamburgers/_sass/hamburgers',
+      'node_modules/prismjs/themes',
+    ],
+  });
+
+  try {
+    await fs.ensureFile(outputFile);
+    await fs.writeFile(outputFile, css)
+  } catch(error) {
+    console.error(`Error writing generated CSS: ${error}`);
+  }
+
+  // Tell browserSync to reload.
+  try {
+    await fetch('http://localhost:8081/__browser_sync__?method=reload&args=styles.css');
+  } catch(error) {
+    console.error(`Couldn't communicate with browserSync. Maybe it hasn't started yet.`);
+  }
+}
+
+buildSass();

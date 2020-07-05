@@ -7,7 +7,7 @@ Stylesheet: Main Stylesheet
 // SLICK SLIDESHOW
 // ------
 
-@import 'slick';
+@import 'slick.scss';
 
 // TYPOGRAPHY
 // -------------------------------------------------------------------------------------------------------------------
@@ -66,11 +66,20 @@ a:not(.button) {
   }
 }
 
-a[target='_blank']::after {
-  color: inherit;
-  padding-left: 0.3em;
-  display: inline-block;
-  @include icon_font($char: $icon-newtab);
+.sidenav,
+main {
+  a[href*="//"]:not([href*="extension-workshop.com"]),
+  a[href*="//"]:not([href*="extensionworkshop.allizom.org"]),
+  a[href*="//"]:not([href*="extensionworkshop-dev.allizom.org"]),
+  a[href*="//"]:not([href*="localhost"]),
+  a[target='_blank'] {
+    &::after {
+      color: inherit;
+      padding: 0 0.25em;
+      display: inline-block;
+      @include icon_font($char: $icon-newtab);
+    }
+  }
 }
 
 small {
@@ -632,7 +641,7 @@ $hamburger-hover-opacity: 1;
 $hamburger-hover-transition-duration: 0.15s;
 $hamburger-hover-transition-timing-function: linear;
 
-@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+@import 'hamburgers';
 
 .site-header .hamburger {
   position: absolute;
@@ -2165,6 +2174,7 @@ span.example {
   border-left: #{rem-calc(2)} solid $warning-color;
   background-color: $warning-color-light;
   border-radius: $global-radius;
+  margin-bottom: 1.5rem;
 
   &::before {
     @include icon_font($char: $icon-info);
@@ -2174,6 +2184,10 @@ span.example {
     font-size: rem-calc(16);
     left: rem-calc(12);
     top: rem-calc(14);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 

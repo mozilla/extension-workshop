@@ -8,16 +8,13 @@
         </div>
 
 
-{% for item in site.data.pages %}
-
-    {% if item.categories %}   
-
+{% for item in pages %}
+    {% if item.categories %}
         {% if on_current_page == true %}
-
-            {% assign next_page_ar = site.pages | where: 'permalink', item.url %}
-            {% for next_page in next_page_ar %}          
+            {% assign next_page_ar = collections.all | where: "permalink", item.url %}
+            {% for next_page in next_page_ar %}
               {% if is_next_range < max_steps && next_page.skip_index != false %}
-                
+
                 {%- include up-next-tile.html -%}
 
               {% endif %}
@@ -30,18 +27,13 @@
         {% endif %}
 
         {% for cat in item.categories %}
-
-
                 {% if cat.pages %}
-
                         {% for pg in cat.pages %}
-
                             {% if on_current_page == true %}
-
-                                {% assign next_page_ar = site.pages | where: 'permalink', pg.url %}
-                                {% for next_page in next_page_ar %}          
+                                {% assign next_page_ar = collections.all | where: "permalink", pg.url %}
+                                {% for next_page in next_page_ar %}
                                   {% if is_next_range < max_steps && next_page.skip_index != false %}
-                                    
+
                                     {%- include up-next-tile.html -%}
 
                                   {% endif %}
@@ -52,26 +44,17 @@
                                 {% assign on_current_page = true %}
                                 {% assign is_next_range = 0 %}
                             {% endif %}
-
                         {% endfor %}
-
                 {% endif %}
-
-
         {% endfor %}
-
     {% elsif item.subfolderitems %}
-
         {% for subitem in item.subfolderitems %}
-
             {% if subitem.categories %}
-
                 {% if on_current_page == true %}
-
-                    {% assign next_page_ar = site.pages | where: 'permalink', subitem.url %}
-                    {% for next_page in next_page_ar %}          
+                    {% assign next_page_ar = collections.all | where: 'permalink', subitem.url %}
+                    {% for next_page in next_page_ar %}
                       {% if is_next_range < max_steps && next_page.skip_index != false %}
-                        
+
                         {%- include up-next-tile.html -%}
 
                       {% endif %}
@@ -84,16 +67,13 @@
                 {% endif %}
 
                 {% for cat in subitem.categories %}
-
                     {% if cat.pages %}
                         {% for pg in cat.pages %}
-
                             {% if on_current_page == true %}
-
-                                {% assign next_page_ar = site.pages | where: 'permalink', pg.url %}
-                                {% for next_page in next_page_ar %}          
+                                {% assign next_page_ar = collections.all | where: 'permalink', pg.url %}
+                                {% for next_page in next_page_ar %}
                                   {% if is_next_range < max_steps && next_page.skip_index != false %}
-                                    
+
                                     {%- include up-next-tile.html -%}
 
                                   {% endif %}
@@ -104,22 +84,15 @@
                                 {% assign on_current_page = true %}
                                 {% assign is_next_range = 0 %}
                             {% endif %}
-
                         {% endfor %}
-
                     {% endif %}
-
                 {% endfor %}
-
-
             {% else %}
-
                 {% if on_current_page == true %}
-
-                        {% assign next_page_ar = site.pages | where: 'permalink', subitem.url %}
-                        {% for next_page in next_page_ar %}          
+                        {% assign next_page_ar = collections.all | where: 'permalink', subitem.url %}
+                        {% for next_page in next_page_ar %}
                           {% if is_next_range < max_steps && next_page.skip_index != false %}
-                            
+
                             {%- include up-next-tile.html -%}
 
                           {% endif %}
@@ -130,7 +103,7 @@
                     {% assign on_current_page = true %}
                     {% assign is_next_range = 0 %}
                 {% endif %}
-                
+
             {% endif %}
 
         {% endfor %}
@@ -139,10 +112,10 @@
 
         {% if on_current_page == true %}
 
-            {% assign next_page_ar = site.pages | where: 'permalink', item.url %}
-            {% for next_page in next_page_ar %}          
+            {% assign next_page_ar = collections.all | where: 'permalink', item.url %}
+            {% for next_page in next_page_ar %}
               {% if is_next_range < max_steps && next_page.skip_index != false %}
-                
+
                 {%- include up-next-tile.html -%}
 
               {% endif %}

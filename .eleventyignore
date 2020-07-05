@@ -4,4 +4,3 @@ README.md
 renovate.json
 yarn-error.log
 yarn.lock
-*.scss

@@ -1,0 +1,53 @@
+#!/usr/bin/env node
+
+const fetch = require('node-fetch');
+const fs = require('fs-extra');
+const util = require('util');
+const UglifyJS = require("uglify-js");
+
+const inputFiles = [
+  'node_modules/jquery/dist/jquery.js',
+  'node_modules/dompurify/dist/purify.js',
+  'node_modules/velocity-animate/velocity.js',
+  'node_modules/velocity-ui-pack/velocity.ui.js',
+  'node_modules/slick-carousel/slick/slick.js',
+  'src/_assets/js/tinypubsub.js',
+  'src/_assets/js/breakpoints.js',
+  'src/_assets/js/parallax.js',
+  'src/_assets/js/parallaxFG.js',
+  'src/_assets/js/inview.js',
+  'src/_assets/js/youtubeplayer.js',
+  'src/_assets/js/main.js'
+];
+
+const outputFile = './src/_site/_assets/js/bundle.js';
+
+const buildJS = async function() {
+  const data = [];
+  for(const file of inputFiles) {
+    const content = await fs.readFile(file, "utf8");
+    data.push(content);
+  }
+
+  const result = UglifyJS.minify(data.join('\n'));
+
+  if (result.error) {
+    throw new Error(result.error);
+  }
+
+  try {
+    await fs.ensureFile(outputFile);
+    await fs.writeFile(outputFile, result.code)
+  } catch(error) {
+    console.error(`Error writing generated JS: ${error}`);
+  }
+
+  try {
+    // Tell browserSync to reload.
+    await fetch('http://localhost:8081/__browser_sync__?method=reload&args=bundle.js');
+  } catch (error) {
+    console.error(`Couldn't communicate with browserSync. Maybe it hasn't started yet.`);
+  }
+}
+
+buildJS();

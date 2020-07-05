@@ -52,13 +52,10 @@ You must host your update manifest file on a secure (HTTPS) server.
 	alert: false
 %}
 
-<!-- END: Note -->
-
 A typical update manifest looks something like:
 
 <!-- Syntax Highlighting -->
-{% highlight json linenos %}
-
+```json
 {
   "addons": {
     "{abcd1234-1abc-1234-12ab-abcdef123456}": {
@@ -83,7 +80,7 @@ A typical update manifest looks something like:
     }
   }
 }
-{% endhighlight %}
+```
 <!-- END: Syntax Highlighting -->
 
 {% endcapture %}
@@ -98,30 +95,19 @@ A typical update manifest looks something like:
 
 If your extension is not hosted on AMO, you must specify the location of your update manifest in your extension. For extensions developed with WebExtension APIs, add the following to your manifest:
 
-<!-- Syntax Highlighting -->
-{% highlight json linenos %}
-
+```json
 "browser_specific_settings": {
   "gecko": {
     "update_url": "https://example.com/updates.json"
   }
 }
-
-{% endhighlight %}
-
-<!-- END: Syntax Highlighting -->
+```
 
 For XUL add-ons, add the following to the `<Description about="urn:mozilla:install-manifest">` element of your [`install.rdf`](https://developer.mozilla.org/Add-ons/Install_Manifests) file:
 
-<!-- Syntax Highlighting -->
-
-{% highlight xml linenos %}
-
+```xml
 <em:updateURL>https://example.com/updates.json</em:updateURL>
-
-{% endhighlight %}
-
-<!-- END: Syntax Highlighting -->
+```
 
 {% endcapture %}
 {% include modules/column-w-toc.html
@@ -151,6 +137,7 @@ The manifest is a JSON file, with a top-level object literal. This object may ha
 <!-- END: Table -->
 
 <section id="addon-objects"></section>
+
 ### Addon objects
 
 `addons[*]`
@@ -173,6 +160,7 @@ Properties of the `addons` object must contain object literals, each describing 
 <!-- END: Table -->
 
 <section id="addons-updates"></section>
+
 ### Update objects
 
 `addons[*].updates[*]`
@@ -200,6 +188,7 @@ Update description objects must be object literals. They may have the following 
 <!-- END: Table -->
 
 <section id="browser-specific-settings-objects"></section>
+
 ### Browser specific settings objects
 
 `addons[*].updates[*].browser_specific_settings.gecko`
