@@ -62,7 +62,6 @@ There are two API namespaces in use:
 {% include modules/one-column.html
   id: "namespace"
   content: content
-
 %}
 
 <!-- END: Single Column Body Module -->
@@ -81,10 +80,7 @@ As a porting aid, the Firefox WebExtension APIs supports `chrome` using callback
 
 In Chrome, asynchronous APIs use callbacks to return values, and [`runtime.lastError`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/lastError) to communicate errors:
 
-<!-- Syntax Highlighting -->
-
-{% highlight javascript linenos %}
-
+```js
 function logCookie(c) {
   if (chrome.extension.lastError) {
     console.error(chrome.extension.lastError);
@@ -94,17 +90,11 @@ function logCookie(c) {
 }
 
 chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
-
-{% endhighlight %}
-
-<!-- END: Syntax Highlighting -->
+```
 
 The equivalent WebExtensions API code using [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise):
 
-<!-- Syntax Highlighting -->
-
-{% highlight javascript linenos %}
-
+```js
 function logCookie(c) {
   console.log(c);
 }
@@ -115,10 +105,7 @@ function logError(e) {
 
 var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
-
-{% endhighlight %}
-
-<!-- END: Syntax Highlighting -->
+```
 
 If you are unfamiliar with how JavaScript can handle asynchronous events or promises, take a look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Using_promises) page.
 

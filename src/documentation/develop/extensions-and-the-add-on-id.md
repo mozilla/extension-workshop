@@ -41,11 +41,11 @@ With older types of Firefox add-on, the add-on developer must set the add-on ID 
 
 However, from Firefox 48 you can develop, debug, publish, and update extensions without needing to set an explicit ID at all.
 
-<p class="note" markdown="1">
+<div class="note" markdown="1">
 
 Note that the ability to develop and debug WebExtensions that don't include an ID is new in Firefox 48\. If you need to use an earlier version of Firefox, then you must use the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key to set an ID explicitly.
 
-</p>
+</div>
 
 {% endcapture %}
 {% include modules/page-hero.html
@@ -87,11 +87,11 @@ Note that once an extension has been given a permanent ID, you can't then update
 
 Even after this point, though, you don't generally have to deal with the ID at all. You can continue to develop the add-on without an ID, and when you want to update, upload the new version by visiting the add-on's AMO page. Because you are uploading the add-on through that page, AMO knows that this is an update to this particular add-on, even though it doesn't contain an ID.
 
-<p class="note" markdown="1">
+<div class="note" markdown="1">
 
 It's essential with this workflow that you update the add-on _manually using its page on AMO_, otherwise AMO will not understand that the submission is an update to an existing add-on, and will treat the update as a brand-new add-on.
 
-</p>
+</div>
 
 You can do the same thing if you are updating from an older add-on type, such as a XUL/XPCOM add-on, to use WebExtensions APIs. Just visit the old add-on's page on AMO, upload the new extension there, and it will be treated as an update to the old version.
 

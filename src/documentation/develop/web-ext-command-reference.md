@@ -71,6 +71,7 @@ Re-build the extension anytime you edit and save a source file. This allows you 
 Environment variable: `$WEB_EXT_AS_NEEDED=true`
 
 <section id="overwrite-dest"></section>
+
 #### \--overwrite-dest, -o
 
 Overwrite destination package file if it exists. Without this option, web-ext will exit in error if the destination file already exists.
@@ -143,9 +144,9 @@ The ID of your target Android device. If you do not specify this option, `web-ex
 
 Example:
 
-{% highlight javascript %}
+```shell
 web-ext run --target=firefox-android --android-device FA4AX0201736
-{% endhighlight %}
+```
 
 Environment variable: `$WEB_EXT_ADB_DEVICE`
 
@@ -165,36 +166,37 @@ Environment variable: `$WEB_EXT_ADB_PORT`
 
 This opens a [Browser Console](https://developer.mozilla.org/docs/Tools/Browser_Console) on startup,&nbsp;so you can see log messages for your extension. Example:
 
-{% highlight javascript %}
+```shell
 web-ext run --browser-console
-{% endhighlight %}
+```
 
 Environment variable: `$WEB_EXT_BROWSER_CONSOLE=true`
 
 Note: The browser console may not show all debugging output from content-scripts. Use the web console when debugging content-scripts.
 
 <section id="--firefox"></section>
+
 #### \--firefox, -f
 
 Specify a particular version of [Firefox Desktop](https://www.mozilla.org/firefox/) to run the extension in. The value is an absolute path to the Firefox executable or&nbsp;an alias string. If this is not specified, it will attempt to run the extension inside the system's default installation of Firefox.
 
 Here is an example specifying a full path to a Firefox executable on Windows:
 
-{% highlight javascript %}
+```shell
 --firefox="C:\Program Files\Mozilla Firefox\firefox.exe"
-{% endhighlight %}
+```
 
 Here is an example specifying an executable path on Mac OS:
 
-{% highlight javascript %}
+```shell
 --firefox=/Applications/FirefoxNightly.app/Contents/MacOS/firefox-bin
-{% endhighlight %}
+```
 
 You can also use aliases, like this:
 
-{% highlight javascript %}
+```shell
 --firefox=beta
-{% endhighlight %}
+```
 
 Here are all available aliases and the executables they map to:
 
@@ -217,9 +219,9 @@ The exact [APK](https://en.wikipedia.org/wiki/Android_application_package) name 
 
 Example:
 
-{% highlight javascript %}
+```shell
 web-ext run --target=firefox-android --firefox-apk=org.mozilla.firefox
-{% endhighlight %}
+```
 
 Environment variable: `$WEB_EXT_FIREFOX_APK`
 
@@ -235,7 +237,11 @@ Environment variable: `$WEB_EXT_FIREFOX_PROFILE`
 
 With this option, any changes made to the profile directory (specified by `--firefox-profile`) are saved. Without this option, profile changes are not saved.
 
-<p class="note alert" markdown="1">This option makes the profile specified by `--firefox-profile` completely insecure for daily use. It turns off auto-updates and allows silent remote connections, among other things. Specifically, it will make destructive changes to the profile that are required for `web-ext` to operate.</p>
+<div class="note alert" markdown="1">
+
+This option makes the profile specified by `--firefox-profile` completely insecure for daily use. It turns off auto-updates and allows silent remote connections, among other things. Specifically, it will make destructive changes to the profile that are required for `web-ext` to operate.
+
+</div>
 
 Environment variable: `$WEB_EXT_KEEP_PROFILE_CHANGES=true`
 
@@ -255,9 +261,9 @@ Environment variable: `$WEB_EXT_PRE_INSTALL=true`
 
 Customize any Firefox preference without creating or modifying the profile. Use the equal sign to set values, for example:
 
-{% highlight javascript %}
+```shell
 --pref general.useragent.locale=fr-FR
-{% endhighlight %}
+```
 
 Specify this option multiple times to set more than one preference.
 
@@ -286,9 +292,9 @@ Environment variable: `$WEB_EXT_TARGET`
 #### \--args, --arg
 Additional CLI options passed to the Browser binary. Example:
 
-{% highlight javascript %}
+```shell
 --arg="--search=mozilla" --arg="--new-tab=https://duckduckgo.com"
-{% endhighlight %}
+```
 
 #### \--chromium-binary
 Path or alias to a Chromium executable such as google-chrome, google-chrome.exe or opera.exe etc.
@@ -301,15 +307,15 @@ Path to a custom Chromium profile.
 
 This will open a tab at the specified URL when the browser starts. Example:
 
-{% highlight javascript %}
+```shell
 web-ext run --start-url www.mozilla.com
-{% endhighlight %}
+```
 
 Declare this option multiple times to open multiple tabs. Example:
 
-{% highlight javascript %}
+```shell
 web-ext run --start-url www.mozilla.com --start-url developer.mozilla.org
-{% endhighlight %}
+```
 
 Environment variable: `$WEB_EXT_START_URL`
 
@@ -362,9 +368,17 @@ This specifies the `channel` in which the extension is signed. It defaults to `u
 
 One example of using the `--channel` option is to [create a beta version](/documentation/develop/getting-started-with-web-ext/#signing-test-version-listed) for a `listed` extension (that is, one you have already [submitted to addons.mozilla.org](/documentation/publish/submitting-an-add-on/)).
 
-<p class="note alert" markdown="1">Setting `--channel=listed` for a new extension is not yet supported. See [https://github.com/mozilla/web-ext/issues/804](https://github.com/mozilla/web-ext/issues/804)</p>
+<div class="note alert" markdown="1">
 
-<p class="note alert" markdown="1">Setting `--channel=listed` for a new version of a listed extension is not well supported. It will upload your new version to [addons.mozilla.org](https://addons.mozilla.org) as if you'd [submitted it manually](/documentation/publish/submitting-an-add-on/). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.</p>
+Setting `--channel=listed` for a new extension is not yet supported. See [https://github.com/mozilla/web-ext/issues/804](https://github.com/mozilla/web-ext/issues/804)
+
+</div>
+
+<div class="note alert" markdown="1">
+
+Setting `--channel=listed` for a new version of a listed extension is not well supported. It will upload your new version to [addons.mozilla.org](https://addons.mozilla.org) as if you'd [submitted it manually](/documentation/publish/submitting-an-add-on/). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.
+
+</div>
 
 See [documentation on the signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html#uploading-a-version) for more information.
 
@@ -402,7 +416,11 @@ web-ext has the following global options that may apply to multiple commands.
 
 Specifies a particular directory to save artifacts in, e.g the `.zip` file, once you've built an extension. This can be specified as a relative or absolute path, and should always be a string.
 
-<p class="note" markdown="1">__Note__: If this is not specified, the default is the relative path `./web-ext-artifacts`.</p>
+<div class="note" markdown="1">
+
+**Note**: If this is not specified, the default is the relative path `./web-ext-artifacts`.
+
+</div>
 
 Environment variable: `$WEB_EXT_ARTIFACTS_DIR`
 
@@ -419,21 +437,22 @@ Disable [automatic config file discovery](/documentation/develop/getting-started
 Environment variable: `$WEB_EXT_CONFIG_DISCOVERY=false` or `$WEB_EXT_NO_CONFIG_DISCOVERY`
 
 <section id="ignore-files"></section>
+
 ### \--ignore-files, -i
 
 A list of [glob patterns](https://github.com/isaacs/node-glob#glob-primer) to define which files should be ignored by `build`, `run`, `lint` and other commands. If you specify relative paths, they will be relative to your `--source-dir`.
 
 Here is an example of ignoring any file within your `--source-dir` (or its subdirectories) that ends in the suffix `.api-key`:
 
-{% highlight javascript %}
+```shell
 web-ext build --ignore-files "\*_/_.api-key"
-{% endhighlight %}
+```
 
 You can specify multiple patterns by separating them with spaces:
 
-{% highlight javascript %}
+```shell
 web-ext build --ignore-files path/to/first.js path/to/second.js
-{% endhighlight %}
+```
 
 By default, without the use of `--ignore-files`, the following rules are applied:
 
@@ -443,7 +462,11 @@ By default, without the use of `--ignore-files`, the following rules are applied
 
 When you specify custom patterns using `--ignore-files`, they are applied _in addition to_ the default patterns.
 
-<p class="note" markdown="1">__Note__: Order is important: you must specify the web-ext command before specifying the --ignore-files option.</p>
+<div class="note" markdown="1">
+
+**Note**: Order is important: you must specify the web-ext command before specifying the --ignore-files option.
+
+</div>
 
 Environment variable: `$WEB_EXT_IGNORE_FILES`
 
@@ -451,7 +474,11 @@ Environment variable: `$WEB_EXT_IGNORE_FILES`
 
 Lists all the available commands and options available for the web-ext tool.
 
-<p class="note" markdown="1">__Note__: You can list the options available for a specific command by including the command name as you request help, for example `web-ext --help run`.</p>
+<div class="note" markdown="1">
+
+**Note**: You can list the options available for a specific command by including the command name as you request help, for example `web-ext --help run`.
+
+</div>
 
 ### \--no-input
 
@@ -463,7 +490,11 @@ Environment variable: `$WEB_EXT_NO_INPUT=true`
 
 Specifies the directory of the extension's source code, e.g. when building or running an extension. This can be specified as a relative or absolute path, and should always be a string.
 
-<p class="note" markdown="1">__Note__: If this is not specified, the default is the directory you are currently inside in your terminal.</p>
+<div class="note" markdown="1">
+
+**Note**: If this is not specified, the default is the directory you are currently inside in your terminal.
+
+</div>
 
 Environment variable: `$WEB_EXT_SOURCE_DIR`
 
@@ -502,33 +533,33 @@ Environment variables can be set for any option. You:
 
 So, for example, instead of specifying the following source option every time you wish to run the extension:
 
-{% highlight javascript %}
+```shell
 web-ext run --source-dir=/path/to/my/extension
-{% endhighlight %}
+```
 
 You could set the source directory as an environment variable like this:
 
-{% highlight javascript %}
+```shell
 WEB_EXT_SOURCE_DIR=/path/to/my/extension
-{% endhighlight %}
+```
 
 Then you can just specify the run command without options:
 
-{% highlight javascript %}
+```shell
 web-ext run
-{% endhighlight %}
+```
 
 A command line option will always override the environment variable. For example, this ignores the environment variable:
 
-{% highlight javascript %}
+```shell
 web-ext run --source-dir=/another/path/to/source
-{% endhighlight %}
+```
 
 To define a `true` / `false` flag option (which does not have a value on the command line), set it to a literal string value of either `true` or `false`. Example:
 
-{% highlight javascript %}
+```shell
 WEB_EXT_VERBOSE=true
-{% endhighlight %}
+```
 
 </div>
 </article>

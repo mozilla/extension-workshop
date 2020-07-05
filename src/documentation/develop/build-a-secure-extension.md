@@ -46,7 +46,8 @@ Here is a list of best practices you should follow to keep the users of your ext
 - **Use XHR for Google Analytics**
   If you want to add Google Analytics to your extension don't insert the Google Analytics JavaScript code. Rather, it’s recommended that the Google Analytics REST API is used in an XHR call, such as:
 
-  {% highlight javascript linenos %}
+
+  ```js
   let request = new XMLHttpRequest();
   let message =
     "v=1&tid=" + GA_TRACKING_ID + "&cid= " + GA_CLIENT_ID + "&aip=1" +
@@ -54,7 +55,7 @@ Here is a list of best practices you should follow to keep the users of your ext
 
   request.open("POST", "https://www.google-analytics.com/collect", true);
   request.send(message);
-  {% endhighlight %}
+  ```
 
   You can find more information in the blog post [Using Google Analytics in Extensions](https://blog.mozilla.org/addons/2016/05/31/using-google-analytics-in-extensions/).
 
