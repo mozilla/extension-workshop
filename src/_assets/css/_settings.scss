@@ -116,7 +116,8 @@ $print-transparent-backgrounds: true;
 @font-face {
   font-family: 'icomoon';
   src: url('/_assets/fonts/icomoon/fonts/icomoon.eot');
-  src: url('/_assets/fonts/icomoon/fonts/icomoon.eot#iefix') format('embedded-opentype'),
+  src: url('/_assets/fonts/icomoon/fonts/icomoon.eot#iefix')
+      format('embedded-opentype'),
     url('/_assets/fonts/icomoon/fonts/icomoon.woff2') format('woff2'),
     url('/_assets/fonts/icomoon/fonts/icomoon.ttf') format('truetype'),
     url('/_assets/fonts/icomoon/fonts/icomoon.woff') format('woff'),

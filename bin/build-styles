@@ -9,7 +9,7 @@ const renderSass = util.promisify(sass.render);
 const inputFile = './src/_assets/css/styles.scss';
 const outputFile = './src/_site/_assets/css/styles.css';
 
-const buildSass = async function() {
+const buildSass = async function () {
   const { css } = await renderSass({
     file: inputFile,
     includePaths: [
@@ -22,17 +22,21 @@ const buildSass = async function() {
 
   try {
     await fs.ensureFile(outputFile);
-    await fs.writeFile(outputFile, css)
-  } catch(error) {
+    await fs.writeFile(outputFile, css);
+  } catch (error) {
     console.error(`Error writing generated CSS: ${error}`);
   }
 
   // Tell browserSync to reload.
   try {
-    await fetch('http://localhost:8081/__browser_sync__?method=reload&args=styles.css');
-  } catch(error) {
-    console.error(`Couldn't communicate with browserSync. Maybe it hasn't started yet.`);
+    await fetch(
+      'http://localhost:8081/__browser_sync__?method=reload&args=styles.css'
+    );
+  } catch (error) {
+    console.error(
+      `Couldn't communicate with browserSync. Maybe it hasn't started yet.`
+    );
   }
-}
+};
 
 buildSass();

@@ -3,7 +3,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs-extra');
 const util = require('util');
-const UglifyJS = require("uglify-js");
+const UglifyJS = require('uglify-js');
 
 const inputFiles = [
   'node_modules/jquery/dist/jquery.js',
@@ -17,15 +17,15 @@ const inputFiles = [
   'src/_assets/js/parallaxFG.js',
   'src/_assets/js/inview.js',
   'src/_assets/js/youtubeplayer.js',
-  'src/_assets/js/main.js'
+  'src/_assets/js/main.js',
 ];
 
 const outputFile = './src/_site/_assets/js/bundle.js';
 
-const buildJS = async function() {
+const buildJS = async function () {
   const data = [];
-  for(const file of inputFiles) {
-    const content = await fs.readFile(file, "utf8");
+  for (const file of inputFiles) {
+    const content = await fs.readFile(file, 'utf8');
     data.push(content);
   }
 
@@ -37,17 +37,21 @@ const buildJS = async function() {
 
   try {
     await fs.ensureFile(outputFile);
-    await fs.writeFile(outputFile, result.code)
-  } catch(error) {
+    await fs.writeFile(outputFile, result.code);
+  } catch (error) {
     console.error(`Error writing generated JS: ${error}`);
   }
 
   try {
     // Tell browserSync to reload.
-    await fetch('http://localhost:8081/__browser_sync__?method=reload&args=bundle.js');
+    await fetch(
+      'http://localhost:8081/__browser_sync__?method=reload&args=bundle.js'
+    );
   } catch (error) {
-    console.error(`Couldn't communicate with browserSync. Maybe it hasn't started yet.`);
+    console.error(
+      `Couldn't communicate with browserSync. Maybe it hasn't started yet.`
+    );
   }
-}
+};
 
 buildJS();
