@@ -41,11 +41,11 @@ Or how to avoid permissions discouraging users from installing your extensions.
 
 With the introduction of Firefox Quantum (57) the handling of permissions when installing an extension changed. Previously, extensions were granted permissions silently. However, users are now informed of the permissions an extension is requesting when it's installed, with a message something like this:
 
-![Example of the permissions messages from the Gesturefy extension](/_assets/img/documentation/develop/General_permissions_message_example.png" @optim @path %})
+![Example of the permissions messages from the Gesturefy extension](/_assets/img/documentation/develop/General_permissions_message_example.png)
 
 Also, if an extension update requires additional permissions the user is prompted to approve the permissions before the updated version is installed:
 
-![Example of the message displayed when an extension update requests additional permissions](/_assets/img/documentation/develop/Permissions_update.png" @optim @path %})
+![Example of the message displayed when an extension update requests additional permissions](/_assets/img/documentation/develop/Permissions_update.png)
 
 If the user chooses not to approve the permissions and cancels the update, the previous version remains installed and available for use.
 

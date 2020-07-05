@@ -108,7 +108,7 @@ Help users locate content of interest in a web page, with the ability to [find a
 
 {% capture col_2_content %}
 
-![Find-screenshot](/_assets/img/documentation/develop/find.png" @optim @path %} "A screenshot of text on a page with the word Color highlighted in purple")
+![Find-screenshot](/_assets/img/documentation/develop/find.png "A screenshot of text on a page with the word Color highlighted in purple")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -128,7 +128,7 @@ Perform searches directly from your extension, with features to [get details of 
 
 {% capture col_2_content %}
 
-![Search-extension-screenshot](/_assets/img/documentation/develop/search_extension.png" @optim @path %} "A screenshot of the Wikipedia entry for Extension")
+![Search-extension-screenshot](/_assets/img/documentation/develop/search_extension.png "A screenshot of the Wikipedia entry for Extension")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -148,7 +148,7 @@ Add an extra dimension to your themes by [updating the browser theme at runtime]
 
 {% capture col_2_content %}
 
-![Dynamic-theme-screenshot](/_assets/img/documentation/develop/dynamic_theme.png" @optim @path %} "A screenshot a yellow browser theme with a timer that transforms it into an earth-colored browser theme")
+![Dynamic-theme-screenshot](/_assets/img/documentation/develop/dynamic_theme.png "A screenshot a yellow browser theme with a timer that transforms it into an earth-colored browser theme")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -168,7 +168,7 @@ Provide users with control over their browsing experience from your extension wi
 
 {% capture col_2_content %}
 
-![Extension-controlling-settings](/_assets/img/documentation/develop/extension_controlling_settings.png" @optim @path %} "A screenshot of the user preferences screen for New Windows and Tabs, which shows an extension is controlling the user's home page and New Tab page.")
+![Extension-controlling-settings](/_assets/img/documentation/develop/extension_controlling_settings.png "A screenshot of the user preferences screen for New Windows and Tabs, which shows an extension is controlling the user's home page and New Tab page.")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -188,7 +188,7 @@ Enable users to reliably add your extension’s features to new pages and sites,
 
 {% capture col_2_content %}
 
-![Script-inject-screenshot](/_assets/img/documentation/develop/script_inject.png" @optim @path %} "A screenshot of code showing how the protocol for IRC can be handled.")
+![Script-inject-screenshot](/_assets/img/documentation/develop/script_inject.png "A screenshot of code showing how the protocol for IRC can be handled.")
 
 {% endcapture %}
 {% include modules/two-column.html
@@ -209,7 +209,7 @@ Take advantage of external services to handle protocols or content types by regi
 
 {% capture col_2_content %}
 
-![Protocol-handlers--screenshot](/_assets/img/documentation/develop/protocol.png" @optim @path %} "A screenshot of a configuration page for setting proxy access to the Internet")
+![Protocol-handlers--screenshot](/_assets/img/documentation/develop/protocol.png "A screenshot of a configuration page for setting proxy access to the Internet")
 
 {% endcapture %}
 {% include modules/two-column.html

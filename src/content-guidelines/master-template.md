@@ -175,7 +175,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
-![Screenshot Remembear](/_assets/img/content-guidelines/example-remembear.png" @path @optim %} "Screenshot Remembear")
+![Screenshot Remembear](/_assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
 </section>
 <!-- END: Full Width Image -->
 
