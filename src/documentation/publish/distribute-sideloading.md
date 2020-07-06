@@ -28,7 +28,7 @@ You may want to send a user your add-on’s XPI file by some means other than a 
 No automatic updates will be performed for add-ons installed using these methods. You will have to deliver a new XPI file to your user for each update. However, automatic compatibility checks are still performed.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -36,7 +36,7 @@ No automatic updates will be performed for add-ons installed using these methods
 <!-- END: Note -->
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -69,7 +69,7 @@ An email address style ID is recommended.
 2. Sign the add-on in [addons.mozilla.org](https://addons.mozilla.org) (AMO). Depending on how you want to make your add-on available, you can use either the unlisted (if you are distributing the add-on exclusively) or listed options. For more details, see [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
 	id: "preparing-your-addon"
 	content: content_with_toc
 %}
@@ -103,7 +103,7 @@ To use Install Add-on From File in Add-on Manager, send the user the signed add-
    ![add-on appears in add-ons manager](/_assets/img/documentation/publish/add_on_added.png)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "install-addon-from-file"
   content: content
 %}
@@ -123,7 +123,7 @@ To use Install Add-on From File in Add-on Manager, send the user the signed add-
 Starting in Firefox 73, it will no longer be possible to have an extension be automatically installed as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2019/10/31/firefox-to-discontinue-sideloaded-extensions/) for more information.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: alert
 	alert: true
 %}
@@ -143,7 +143,7 @@ To use this method, your XPI file must be named using the add-on or application 
 If you are developing an add-on for Firefox you can use an extension proxy file to install an add-on without copying the files over to the standard extensions folders.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -188,7 +188,7 @@ For more details on the interstitial and silent installs, see [Controlling autom
 To uninstall the add-on, close Firefox and remove the add-on from the location where it was added.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -211,7 +211,7 @@ If this folder does not exist, create it. You can also identify the current user
 Note: To install an add-on for all users of a Windows computer, see [Installation using the Windows registry](/documentation/enterprise/enterprise-distribution/#installation-using-windows-registry).
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -249,7 +249,7 @@ To install an add-on for a specific user, copy the XPI file to:
 `~/.mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/`
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "standard-extension-folders"
   content: content
 %}
@@ -258,12 +258,12 @@ To install an add-on for a specific user, copy the XPI file to:
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

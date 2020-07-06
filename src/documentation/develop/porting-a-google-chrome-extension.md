@@ -31,7 +31,7 @@ date: 2019-05-19 11:54:36
 # Porting a Google Chrome extension
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -53,7 +53,7 @@ The browser extension APIs are designed to promote cross-browser compatibility a
 If you use the Chrome command-line option for loading an unpacked extension, check out the [web-ext](/documentation/develop/getting-started-with-web-ext/) tool which automates temporary installation in Firefox for development.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "create-a-privacy-policy"
   content: content
 %}
@@ -62,12 +62,12 @@ If you use the Chrome command-line option for loading an unpacked extension, che
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

@@ -28,7 +28,7 @@ date: 2020-04-24
 The first few minutes after someone installs your extension can be critical to its success. Your new user needs to know where to start and how to use the features of your browser extension.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
   content: page_hero_banner_content
 %}
 
@@ -39,7 +39,7 @@ The first few minutes after someone installs your extension can be critical to i
 <section class="module">
 <aside class="module-aside table-of-contents">
 
-{%- include contents.html -%}
+{%- include contents.liquid -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
@@ -326,12 +326,12 @@ This page provides a link to reinstalling the extension, guarding against accide
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

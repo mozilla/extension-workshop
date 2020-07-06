@@ -1,5 +1,5 @@
 ---
-layout: sidebar.html
+layout: sidebar.liquid
 title: Best practices for collecting user data consents
 permalink: /documentation/develop/best-practices-for-collecting-user-data-consents/
 published: true
@@ -22,7 +22,7 @@ If your extension uses cookies or collects user data, it needs to comply with th
 A common developer question about these policies is how to translate them into web extension features that can pass the addons.mozilla.org reviews. This how-to is the result of those requests and offers advice on implementing prompts to meet the data collection and add-on policies. This article suggests how you can implement suitable prompts but it doesn’t replace or supersede the policies; you still need to confirm that your extension complies with the policies.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -41,7 +41,7 @@ To create the consent flow and consent dialogues your extension needs, you shoul
 3. Does my extension collect personally identifying information? If so, get the user’s opt-in consent before collecting any of this data. Remember that personally identifying information includes technical or interaction data tagged with the user’s identity or information that can be used to identify the user, such as an IP address.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "know-your-privacy-settings"
   content: content_with_toc
 %}
@@ -61,7 +61,7 @@ Before designing the data collection and use of cookies consents for your extens
 - create a privacy policy.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "get-prepared"
   content: content
 %}
@@ -77,7 +77,7 @@ Before designing the data collection and use of cookies consents for your extens
 When your users arrive at your data and privacy consent dialogue, they need to know what they're consenting to and this is where your privacy policy comes in. The [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management) section of the [Add-on Policies](/documentation/publish/add-on-policies/) provides clear guidelines on what the policy should include. If you’re collecting significant quantities of data and making significant use of it, taking legal advice may be prudent. However, your first strategy should be to reduce or eliminate the collection of user data where possible. If your data collection and use is fairly low-level, it’s possible that privacy policy generator—such as [Cooley LLP](https://www.cooleygo.com/documents/privacy-policy/) or [iubenda](http://www.iubenda.com)—may be helpful. You may also want to take a look at [Mozilla's privacy policy](https://www.mozilla.org/privacy/) as a model to follow.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "create-a-privacy-policy"
   content: content
 %}
@@ -103,7 +103,7 @@ Where you provide the user with an opt-in option, the related feature must be tu
 Where you provide the user with an opt-out, option the related features can be turned on by default but must be turned off if the user indicates they want to opt-out.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "prompt-after-install-or-on-first-use"
   content: content
 %}
@@ -133,7 +133,7 @@ In this example:
 8. OUT only from features that can be disabled, disable those features and continue running the extension.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "determine-your-consent-flow"
   content: content
 %}
@@ -160,7 +160,7 @@ Once you understand your privacy consent flow, you can add suitable consent dial
   ![Mockup of a prompt that could be used when the user provide insufficient permission for privacy related features so that the extension cannot work. Gives the user the option to uninstall the extension or review their privacy settings.](/_assets/img/documentation/develop/privacy_prompt_mockup_remove_extension.png)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "your-consent-dialogs"
   content: content
   aside: ""
@@ -170,12 +170,12 @@ Once you understand your privacy consent flow, you can add suitable consent dial
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

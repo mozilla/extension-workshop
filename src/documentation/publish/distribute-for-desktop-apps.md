@@ -17,7 +17,7 @@ date: 2020-03-20 22:38:00
 ## Add-ons for desktop apps
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -34,7 +34,7 @@ date: 2020-03-20 22:38:00
 Starting with Firefox 74, it is no longer be possible to have an extension be automatically installed as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2020/03/10/support-for-extension-sideloading-has-ended/) for more information.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: alert
 	alert: true
 %}
@@ -50,7 +50,7 @@ If you would like to direct users to install the add-on from your website, pleas
 Enterprise administrators and people who distribute their own builds of Firefox (such as some Linux and Selenium distributions) will be able to continue to deploy extensions to users. Enterprise administrators can do this via [policies](https://github.com/mozilla/policy-templates#extensionsettings). Additionally, Firefox Extended Support Release (ESR) will continue to support sideloading as an extension installation method.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "what-cant-you-do"
   content: content
 %}
@@ -59,12 +59,12 @@ Enterprise administrators and people who distribute their own builds of Firefox 
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

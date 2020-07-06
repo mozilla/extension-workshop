@@ -17,7 +17,7 @@ date: 2019-08-18 11:19:17
 # Distributing an add-on yourself
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -37,7 +37,7 @@ For self-distributed add-ons that don't have an update URL, Firefox checks AMO f
 For more information on how to submit an add-on for distribution on AMO or self-distribution, see [Submitting an add-on](/documentation/publish/submitting-an-add-on/).
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
 	id: "self-distribution-introduction"
 	content: content_with_toc
 %}
@@ -58,7 +58,7 @@ When you choose to distribute an add-on yourself, they can be installed using th
 - [Add-ons in an enterprise environment](/documentation/enterprise/enterprise-distribution/)—this page discusses the use of signed compared to unsigned extensions, installation options, the Firefox settings affecting installation, and including add-ons with a custom Firefox install package.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "options"
   content: content
 %}
@@ -67,12 +67,12 @@ When you choose to distribute an add-on yourself, they can be installed using th
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

@@ -20,7 +20,7 @@ date: 2019-05-31 8:48:40
 Or how to avoid permissions discouraging users from installing your extensions.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -31,7 +31,7 @@ Or how to avoid permissions discouraging users from installing your extensions.
 <section id="introduction" class="module">
 <aside class="module-aside table-of-contents">
 
-{%- include contents.html -%}
+{%- include contents.liquid -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
@@ -269,12 +269,12 @@ A good example of this approach is [Gesturefy](https://addons.mozilla.org/firefo
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+  {%- include head.liquid -%}
 
   <body class="site full-width">
 
-    {%- include header.html -%}
+    {%- include header.liquid -%}
 
     <main class="site-content" aria-label="Content">
 
@@ -13,9 +13,9 @@
 
     </main>
 
-    {%- include connect.html -%}
+    {%- include connect.liquid -%}
 
-    {%- include footer.html -%}
+    {%- include footer.liquid -%}
 
     <aside id="video-popup">
         <div class="bg"></div>

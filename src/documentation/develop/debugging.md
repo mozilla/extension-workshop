@@ -42,7 +42,7 @@ This article explains how to use the Firefox developer tools to debug extensions
 An extension can consist of several components—background scripts, popups, options pages, content scripts, sidebars, and alike—and you'll use slightly different workflows to debug each component. Each component has a section in this article, and you can read each section in isolation. We'll begin by introducing the developer tools, which you'll use to debug all the pieces of your extension.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -80,7 +80,7 @@ You can now drag the toolbox tab to a separate window, so you can place it along
 ![developers tool split screenshot](/_assets/img/documentation/develop/arranging_tools.png)
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "developer-tools-toolbox"
   content: content_with_toc
 %}
@@ -98,7 +98,7 @@ You can now drag the toolbox tab to a separate window, so you can place it along
 We use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension example to illustrate the debugging features relevant to background scripts. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -133,7 +133,7 @@ For more information about using the debugger, see the [Debugger](https://develo
 
 {% endcapture %}
 
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "debugging-background-scripts"
   content: content
 %}
@@ -149,7 +149,7 @@ For more information about using the debugger, see the [Debugger](https://develo
 We use the [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) extension example to illustrate the debugging features relevant to options pages. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -182,7 +182,7 @@ To debug the options page's HTML and CSS, point the tools at the iframe that hos
 For more information about using **Inspector**, see the [Inspector](https://developer.mozilla.org/docs/Tools/Page_Inspector) guide.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "debugging-options-pages"
   content: content
 %}
@@ -200,7 +200,7 @@ For more information about using **Inspector**, see the [Inspector](https://deve
 We use the [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) extension example to illustrate the debugging features relevant to popups. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -224,7 +224,7 @@ Now, when you open a popup it stays open and its code remains loaded.
 Internally, this option toggles the `ui.popup.disable_autohide` preference, which you can toggle manually from `about:config`.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -240,7 +240,7 @@ To inspect the popup's HTML and CSS, use **Inspector** in the [split console](ht
 If your extension has multiple HTML documents open, click the page select icon (![pages selector](/_assets/img/documentation/develop/page-selector.png)) to open the popup's document.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "debugging-popups"
   content: content
   aside: ""
@@ -259,7 +259,7 @@ If your extension has multiple HTML documents open, click the page select icon (
 We use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension example to illustrate the debugging features relevant to content scripts. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -282,13 +282,13 @@ Select your content scripts listed in **Sources**. You can set breakpoints, step
 If the developer tools tab was not open when the content script injected, the content script may not be list in **Sources**. If you experience this behavior, reloading the page with the developer tools open should provide a fix.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "debugging-content-scripts"
   content: content
 %}
@@ -306,7 +306,7 @@ If the developer tools tab was not open when the content script injected, the co
 We use the [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) extension example to illustrate the debugging features relevant to sidebars. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -328,7 +328,7 @@ To inspect the sidebar's HTML and CSS, use **Inspector** in the [split console](
 If your extension has multiple HTML documents open, click the page select icon (![pages selector](/_assets/img/documentation/develop/page-selector.png)) to open the sidebar's document.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "debugging-sidebars"
   content: content
 %}
@@ -346,7 +346,7 @@ If your extension has multiple HTML documents open, click the page select icon (
 We use the [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) extension example to illustrate the debugging features relevant to extension storage. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -356,7 +356,7 @@ An extension can store data using the [Storage API](https://wiki.developer.mozil
 ![sidebar script in debugger](/_assets/img/documentation/develop/sidebar_data_in_storage.png)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "debugging-storage"
   content: content
 %}
@@ -374,7 +374,7 @@ An extension can store data using the [Storage API](https://wiki.developer.mozil
 We use the [devtools-panels](https://github.com/mdn/webextensions-examples/tree/master/devtools-panels) extension example to illustrate the debugging features relevant to developer tools pages and panels. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -400,7 +400,7 @@ To debug the custom developer tools pages' HTML and CSS:
 You can [review and modify the custom development tools page HTML and CSS in **Inspector**](https://developer.mozilla.org/docs/Tools/Page_Inspector), as you would with any webpage.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "debugging-developer-tools-pages-and-panels"
   content: content
   aside: ""
@@ -417,7 +417,7 @@ You can [review and modify the custom development tools page HTML and CSS in **I
 For information on debugging permission requests, see [Test permission requests](/documentation/develop/test-permission-requests/).
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "debug-permission-requests"
   content: content
 %}
@@ -435,7 +435,7 @@ If your extension could be affected by the browser restarting, such as when a se
 For more details, see [Testing persistent and restart features](/documentation/develop/testing-persistent-and-restart-features/).
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "debugging-browser-restarts"
   content: content
 %}
@@ -444,12 +444,12 @@ For more details, see [Testing persistent and restart features](/documentation/d
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-    {%- include head.html -%}
+    {%- include head.liquid -%}
 
     <body class="site sidebar">
-        {%- include header.html -%}
+        {%- include header.liquid -%}
 
         <div class="site-wrapper">
 
@@ -16,11 +16,11 @@
                 </div>
 
                 <div class="sidenav-top" aria-hidden="true">
-                    {%- include nav.html -%}
+                    {%- include nav.liquid -%}
                 </div>
 
                 <div class="sidenav-detail">
-                    {%- include nav.html -%}
+                    {%- include nav.liquid -%}
                 </div>
 
             </nav>
@@ -35,12 +35,12 @@
 
                 {% assign parts = page.url | split: "/" %}
                 {% if parts[1] == "documentation" %}
-                    {%- include documentation-topics.html -%}
+                    {%- include documentation-topics.liquid -%}
                 {% endif %}
 
-                {%- include connect.html -%}
+                {%- include connect.liquid -%}
 
-                {%- include footer.html -%}
+                {%- include footer.liquid -%}
             </div>
 
         </div>

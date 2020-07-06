@@ -19,7 +19,7 @@ date: 2019-05-17 13:58:25
 This article walks through the process of publishing an add-on. If you just want to get started, head to the [Submit a New Add-on](https://addons.mozilla.org/developers/addon/submit/) page on AMO.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -36,7 +36,7 @@ Next, prepare your add-on for publication by adding all its files to a ZIP archi
 The maximum file size accepted is 200 MB. If your add-on is larger than 200 MB, it will fail validation.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -58,7 +58,7 @@ Choose:
 - **On your own**, if you plan to distribute the add-on yourself and don't want it listed on AMO. <br/> Click **Continue** and follow the [Self-distribution guide](#self-distribution) to find out how.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "transfer-ownership"
   content: content_with_toc
 %}
@@ -108,7 +108,7 @@ Your add-on is published and available on AMO for users to discover and install.
 When you're ready to release a new version of your add-on, update it by visiting the add-on's page on [addons.mozilla.org](https://addons.mozilla.org) and uploading the new version. You must update it on the add-on's page, so AMO recognizes it as an update to an existing add-on and not a new one.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -116,7 +116,7 @@ When you're ready to release a new version of your add-on, update it by visiting
 Learn how to make your add-on listing appealing with these [tips](/documentation/develop/create-an-appealing-listing/).
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "listing-on-amo"
   content: content
 %}
@@ -133,7 +133,7 @@ Learn how to make your add-on listing appealing with these [tips](/documentation
 If you want Firefox to handle updates to your add-on, remember to include the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in your manifest.json with the `update_url` attribute set to point to an [update manifest file](https://developer.mozilla.org/Add-ons/Updates).
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -157,7 +157,7 @@ If you want Firefox to handle updates to your add-on, remember to include the [`
 You can now distribute your add-on. Note, however, that your add-on may still be subject to further review, if it is you'll receive notification of the outcome of the review later.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "self-distribution"
   content: content
 %}
@@ -172,7 +172,7 @@ You can now distribute your add-on. Note, however, that your add-on may still be
 For resources that can help now you've published an add-on and details of how to get help if you encounter issues, check out [Resources for publishers](/documentation/manage/resources-for-publishers/).
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "get-help"
   content: content
 %}
@@ -181,12 +181,12 @@ For resources that can help now you've published an add-on and details of how to
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

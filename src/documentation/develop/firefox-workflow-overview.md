@@ -27,7 +27,7 @@ date: 2020-03-24 12:47:00
 # Firefox workflow overview
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -87,19 +87,19 @@ date: 2020-03-24 12:47:00
 **Have an extension you want to bring to Firefox?** We provide advice, guidelines, and tools to help making make porting straightforward. To get started, visit [Porting a Google Chrome extension](/documentation/develop/porting-a-google-chrome-extension/).
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
     id: "workflow-table"
     content: content
 %}
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

@@ -19,7 +19,7 @@ date: 2019-03-21 12:27:40
 Your extension may contain two types of permission request: install time and runtime permission requests. This page explains how you can test the way your users will see requests for these permissions.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -35,7 +35,7 @@ When you’re testing with an unpackaged extension, using either `about:debuggin
 - runtime permission requests display the door hanger request as normal. These permissions remain in place until they are revoked programmatically by the extension, the extension is removed using `about:debugging`, or Firefox restart.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "permission-grant-behavior-during-testing"
   content: content_with_toc
 %}
@@ -73,7 +73,7 @@ Note that the caution message relates to this being an unsigned extension; this 
 For details on how to deliver web extension updates when self-hosting your extension, see [Updates](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates).
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -107,7 +107,7 @@ To perform the test you'll need to:
 If the packages were generated with .zip extensions change them to .xpi, otherwise your browser may try to download rather than install the extension.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: true
 %}
@@ -145,13 +145,13 @@ If the packages were generated with .zip extensions change them to .xpi, otherwi
 If the upgrade doesn't happen, look for `addons.update-checker` logs in the [Browser Console](https://developer.mozilla.org/docs/Tools/Browser_Console). Any errors encountered during the upgrade process will be reported in the log.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "observe-or-verify-install-time-permission-requests"
   content: content
 %}
@@ -175,7 +175,7 @@ To retest your extension’s runtime permission grants and its post-install beha
 You can then rerun the extension and any runtime permission requests will be displayed as if the extension was being run for the first time.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "retest-runtime-permission-grants"
   content: content
 %}
@@ -184,12 +184,12 @@ You can then rerun the extension and any runtime permission requests will be dis
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

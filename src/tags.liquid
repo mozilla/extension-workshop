@@ -1,0 +1,29 @@
+---
+layout: tag-search-results
+skip_index: true
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+---
+
+<h2 class="no-underline">Results for tag “{{ tag }}”</h2>
+
+<ol>
+{% assign taglist = collections[ tag ] %}
+{% for post in taglist | reverse %}
+    <li class="result">
+        <a href="{{ post.url | url }}">
+            <h3>{{ post.data.title }}</h3>
+            <p>{{ post.templateContent | strip_html | truncatewords: 45 }}</p>
+            <p>
+              <small>
+                  {{ post.url | url }}
+              </small>
+            </p>
+        </a>
+    </li>
+{% endfor %}
+</ol>

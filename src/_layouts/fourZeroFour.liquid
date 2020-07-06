@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+  {%- include head.liquid -%}
 
   <body class="site full-width page-404">
 
-    {%- include header.html -%}
+    {%- include header.liquid -%}
 
     <main class="site-content" aria-label="Content">
     	<div class="grid-container grid-x grid-padding-x align-center align-middle tiles-intro">
@@ -15,9 +15,9 @@
 		</div>
     </main>
 
-    {%- include connect.html -%}
+    {%- include connect.liquid -%}
 
-    {%- include footer.html -%}
+    {%- include footer.liquid -%}
 
     <script src="/_assets/js/bundle.js"></script>
     <script src="/_assets/js/basket-client.js"></script>

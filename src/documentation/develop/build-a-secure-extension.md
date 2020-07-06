@@ -1,5 +1,5 @@
 ---
-layout: sidebar.html
+layout: sidebar.liquid
 title: Build a secure extension
 permalink: /documentation/develop/build-a-secure-extension/
 published: true
@@ -19,7 +19,7 @@ date: 2019-05-13 6:35:30
 Here is a list of best practices you should follow to keep the users of your extension safe. If you don't follow these best practices your extension may fail the reviews on [addons.mozilla.org](https://addons.mozilla.org), preventing you from distributing your add-on or resulting in it being blocked from installation in Firefox.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -90,12 +90,12 @@ Here is a list of best practices you should follow to keep the users of your ext
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

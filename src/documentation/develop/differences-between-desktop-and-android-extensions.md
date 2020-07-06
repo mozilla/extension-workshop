@@ -32,7 +32,7 @@ date: 2019-03-18
 **Warning: The content of this article may be out of date.** This page has last been updated before Firefox 54.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: true
 %}
@@ -44,7 +44,7 @@ Firefox for Android offers a subset of the WebExtensions APIs available to the d
 This summary is based on the features planned for Firefox version 54.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -52,7 +52,7 @@ This summary is based on the features planned for Firefox version 54.
 A detailed list of the WebExtension APIs supported in Firefox for Android is provided on the [Browser support for JavaScript APIs](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) page and details of the supported manifest.json keys are provided on the [manifest.json section](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) page.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -108,7 +108,7 @@ Developer tools for Firefox for Android are provided through remote debugging me
 - [devtools.panels](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels) and the related [devtools_page](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/devtools_page) manifest.json key.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
     id: "user-interface"
     content: content_with_toc
 %}
@@ -124,7 +124,7 @@ Developer tools for Firefox for Android are provided through remote debugging me
 You do not have the ability to interact with native applications as [`runtime.connectNative()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connectNative) and [`runtime.sendNativeMessage()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage) are not available.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
     id: "native-application-interaction"
     content: content
 %}
@@ -140,7 +140,7 @@ You do not have the ability to interact with native applications as [`runtime.co
 Permissions to use certain WebExtension APIs must be requested in the manifest.json file. On the desktop version of Firefox users are warned when an extension requests a permission and are given the option to deny the add-on that permission. However, on Firefox for Android permissions are granted automatically and the user isn’t given the option to deny them. It is currently planned to resolve this issue in Firefox 57.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
     id: "permissions"
     content: content
 %}
@@ -158,13 +158,13 @@ Permissions to use certain WebExtension APIs must be requested in the manifest.j
 At the time of writing there was an issue with [`storage.sync()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) and data is not synchronized with the user’s Firefox account from Firefox for Android. More details can be found in [bug 1316442](https://bugzilla.mozilla.org/show_bug.cgi?id=1316442).
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
     id: "other-notes"
     content: content
 %}
@@ -173,12 +173,12 @@ At the time of writing there was an issue with [`storage.sync()`](https://develo
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

@@ -29,7 +29,7 @@ There are two essential steps to getting people to use your add-on: they need to
 So, let us look at some of the ways you can encourage users to get to your listing page and, once there, install your add-on.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -40,7 +40,7 @@ So, let us look at some of the ways you can encourage users to get to your listi
 <section id="your-add-ons-name" class="module">
 <aside class="module-aside table-of-contents">
 
-{%- include contents.html -%}
+{%- include contents.liquid -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
@@ -310,12 +310,12 @@ And, when users suggest improvements or highlight issues in the reviews, use the
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

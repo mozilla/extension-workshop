@@ -34,7 +34,7 @@ This article is a technical comparison between the WebExtensions technology and 
 Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: true
 %}
@@ -42,7 +42,7 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 This article covers both [overlay extension](https://developer.mozilla.org/Add-ons/Overlay_Extensions) and [bootstrapped extensions](https://developer.mozilla.org/docs/Mozilla/Add-ons/Bootstrapped_extensions), but not extensions developed using the Add-on SDK. For the Add-on SDK, please see [Comparison with the Add-on SDK](/documentation/develop/comparison-with-the-add-on-sdk).
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -62,7 +62,7 @@ Beyond that, though, the systems are very different. In particular:
 - WebExtensions can only access web content by injecting separate scripts into web pages and communicating with them using a messaging API (note, though, that this is also true of XUL/XPCOM extensions that expect to work with multiprocess Firefox).
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "intro"
   content: content_with_toc
 %}
@@ -88,7 +88,7 @@ WebExtensions have a single manifest file called [manifest.json](https://develop
 - [Anatomy of a extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "manifest"
   content: content
 %}
@@ -115,12 +115,12 @@ Extensions built with WebExtension APIs don't get this kind of direct access. In
 | Context menu   | Adds items and submenus to the browser's context menu.       | [`contextMenus`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus) API                                                                                                                                        |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
     content: table
 %}
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "ui"
   content: content
 %}
@@ -193,7 +193,7 @@ You'll see that many APIs have no WebExtensions equivalent yet. However, we are 
 | [`nsIWindowWatcher`](https://developer.mozilla.org/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWindowWatcher)                                                                                                                                                                                                                                 | None                                                                                                                                                                                                                                       |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
     content: table
 %}
 
@@ -203,7 +203,7 @@ You'll see that many APIs have no WebExtensions equivalent yet. However, we are 
 - [Background scripts for extensions](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "privileged-apis"
   content: content
 %}
@@ -235,7 +235,7 @@ WebExtensions are multiprocess-compatible by default: code that interacts with w
 - [Content scripts for extensions](https://developer.mozilla.org/Add-ons/WebExtensions/Content_scripts)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "interacting-with-web-content"
   content: content
 %}
@@ -260,7 +260,7 @@ WebExtensions don't have direct support for localizing strings appearing in HTML
 - [Example internationalized extension.](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "localization"
   content: content
 %}
@@ -288,7 +288,7 @@ Some browser-specific preferences can however still be controlled through the [`
 - [An example extension that has an options page](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "settings"
   content: content
 %}
@@ -297,12 +297,12 @@ Some browser-specific preferences can however still be controlled through the [`
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

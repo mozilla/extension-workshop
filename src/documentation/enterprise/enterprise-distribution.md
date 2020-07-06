@@ -32,7 +32,7 @@ date: 2019-06-26 11:54:51
 As an enterprise IT administrator you may wish to install add-ons for your users automatically, this page discusses the options.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
   content: page_hero_banner_content
 %}
 
@@ -51,7 +51,7 @@ If you want to install unsigned add-ons, deploying an [ESR](https://www.mozilla.
 The alternative, and recommended, approach is to use the option for unlisted add-ons on [addons.mozilla.org](https://addons.mozilla.org) (AMO). This option means that you can get a signed add-on without it being listed in the public add-ons directory. This feature provides a signed add-on immediately. This signed add-on can then be installed from a web page behind the firewall, or installed using one of the options described here.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "signed-vs-unsigned"
   content: content_with_toc
 %}
@@ -67,7 +67,7 @@ The alternative, and recommended, approach is to use the option for unlisted add
 You can sideload an add-on using one of the standard extensions folders, as described in [Installation using standard extension folders](/documentation/publish/distribute-sideloading/#standard-extension-folders).
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "sideloading"
   content: content
 %}
@@ -87,7 +87,7 @@ This section explains how to install add-ons into Firefox using the Windows Regi
 Starting in Firefox 73, it will no longer be possible to have an extension be installed automatically as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2019/10/31/firefox-to-discontinue-sideloaded-extensions/) for more information.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: alert
 	alert: true
 %}
@@ -101,7 +101,7 @@ Before Firefox 62 it was possible to load unpacked extensions by making the Wind
 From Firefox 62 this is no longer possible, and the key must point to a packaged XPI file, as described in this section.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: alert
 	alert: true
 %}
@@ -115,7 +115,7 @@ From Firefox 62 this is no longer possible, and the key must point to a packaged
 It is safe to modify the Registry keys while Firefox is running.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -153,7 +153,7 @@ An email address style ID is recommended.
    `HKEY_LOCAL_MACHINE\Software\Mozilla\Firefox\Extensions` is not available when running 32-bit Firefox on a 64-bit machine, you can only install for all users using the `Wow6432Node` key.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -173,7 +173,7 @@ To remove an add-on installed using the Windows Registry simply remove the Regis
 If you install using the Windows Registry, Firefox will not automatically update your add-on. You will have to arrange to update the add-on using whatever installation process you choose external to Firefox.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "installation-using-windows-registry"
   content: content
 %}
@@ -219,7 +219,7 @@ The availability of automatic installation is controlled by the `extensions.auto
 | 15 (or '0b1111') | The combination of all scopes.           |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
@@ -238,7 +238,7 @@ In some circumstances, you may want Firefox to ignore some or all of the additio
 It is impossible to disable loading add-ons from the profile directory.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -269,7 +269,7 @@ defaultPref("extensions.enabledScopes", 0b1111);
 According to [this page](http://www.favbrowser.com/how-to-create-a-new-default-firefox-experience-in-your-enterprise/) (dated: September 28, 2012), "_“You cannot set this preference remotely using autoconfig files._" Which recommends you only set these preference in a local autoconfig file. If this is wrong info please adjust or remove this note.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -277,7 +277,7 @@ According to [this page](http://www.favbrowser.com/how-to-create-a-new-default-f
 <!-- END: Note -->
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "firefox-settings"
   content: content
 %}
@@ -291,7 +291,7 @@ According to [this page](http://www.favbrowser.com/how-to-create-a-new-default-f
 You can bundle add-ons within a customized Firefox, and they will be installed automatically when the user starts up the application for the first time. See [Deploying Firefox with extensions](https://support.mozilla.org/kb/deploying-firefox-with-extensions) for details.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "bundling-add-ons-with-custom-Firefox"
   content: content
 %}
@@ -300,12 +300,12 @@ You can bundle add-ons within a customized Firefox, and they will be installed a
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

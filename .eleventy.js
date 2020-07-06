@@ -47,7 +47,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    templateFormats: ['md', 'liquid', 'html'],
+    // templateFormats: ['md', 'liquid', 'html'],
     dir: {
       input: 'src',
       output: 'src/_site',

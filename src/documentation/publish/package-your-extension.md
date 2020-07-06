@@ -41,7 +41,7 @@ Packaged extensions in Firefox are called "XPI files", which are ZIP files with 
 You don't have to use the XPI extension when uploading to AMO.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -49,7 +49,7 @@ You don't have to use the XPI extension when uploading to AMO.
 <!-- END: Note -->
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -68,7 +68,7 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 **Tip:** The ZIP file must be a ZIP of the extension's files themselves, not of the directory containing them.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -76,7 +76,7 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 <!-- END: Note -->
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
 	id: "package-intro"
 	content: content_with_toc
 %}
@@ -98,7 +98,7 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 ![Creating package windows image](/_assets/img/documentation/publish/creating_package_windows.png)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "package-windows"
   content: content
 %}
@@ -120,7 +120,7 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 ![Creating package Mac image](/_assets/img/documentation/publish/creating_package_mac.png)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "package-mac"
   content: content
 %}
@@ -147,7 +147,7 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 See [the documentation for the `zip` command](https://linux.die.net/man/1/zip) for more information.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -155,7 +155,7 @@ See [the documentation for the `zip` command](https://linux.die.net/man/1/zip) f
 <!-- END: Note -->
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "package-linux"
   content: content
   aside: ""
@@ -165,12 +165,12 @@ See [the documentation for the `zip` command](https://linux.die.net/man/1/zip) f
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

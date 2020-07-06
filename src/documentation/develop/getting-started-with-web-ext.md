@@ -35,7 +35,7 @@ date: 2019-11-06 10:25:55
 `web-ext` is a command line tool designed to speed up various parts of the extension development process, making development faster and easier. This article explains how to install and use `web-ext`.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -46,7 +46,7 @@ date: 2019-11-06 10:25:55
 <section id="installation-section" class="module">
 <aside class="module-aside table-of-contents">
 
-{%- include contents.html -%}
+{%- include contents.liquid -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
@@ -75,7 +75,7 @@ web-ext --version
 `web-ext` will notify you when it is time to update to the newest version. To update your global install, use the command `npm install -g web-ext`.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -480,12 +480,12 @@ You can use `web-ext` as a `NodeJS module`. Here is [more information](https://g
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

@@ -18,7 +18,7 @@ date: 2019-07-09 09:00:00
 You can use themes to customize how your browser looks by adding images and adjusting the color of various components.
 
 {% endcapture %}
-{% include modules/overview-page-hero.html
+{% include modules/overview-page-hero.liquid
 	content: page_hero_banner_content
 	background: "develop-overview-hero-bg.jpg"
 %}
@@ -44,7 +44,7 @@ There are four ways you can create themes:
 - **Include themes in your extension:** Use the [theme API](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/theme) to take advantage of the full range of features in standalone themes. You can activate these themes based on user requests or dynamic information, like the time of day or the webpage the user is viewing.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	id: "creating-themes"
 	content: content
 %}
@@ -53,12 +53,12 @@ There are four ways you can create themes:
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

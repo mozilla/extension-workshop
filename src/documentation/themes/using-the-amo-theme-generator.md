@@ -19,7 +19,7 @@ date: 2019-02-28 12:39:01
 The theme generator on [addons.mozilla.org](https://addons.mozilla.org) (AMO) guides you through the process of creating a theme for Firefox. Once you have defined the colors and image for your theme, the generator will submit your new theme to AMO. You may submit themes for publishing on AMO or for self-distribution.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -34,7 +34,7 @@ The theme generator on [addons.mozilla.org](https://addons.mozilla.org) (AMO) gu
 You will need to be logged in to your Firefox Account to access the Theme Generator.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -48,7 +48,7 @@ Otherwise, if you prefer to self-distribute your theme, go to the [unlisted Them
 **Note:** You can create a more elaborate theme, for example a theme that uses multiple images, by creating a Static Theme. To get started with Static Themes, take a look at: [Theme concepts](https://developer.mozilla.org/docs/Mozilla/Add-ons/Themes/Theme_concepts).
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -81,7 +81,7 @@ Once the color input field loses focus, the color format will be converted to rg
 You can use the [Firefox Color extension](https://color.firefox.com/) to preview your creation.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -117,13 +117,13 @@ When you have finished filling in the information, click the **Finish Theme** bu
 Themes submitted for self-distribution will be signed immediately and an XPI file will be generated for download.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "getting-started"
   content: content_with_toc
 %}
@@ -182,7 +182,7 @@ Once you have filled in all of the required information, you can complete the su
 <img src="/_assets/img/documentation/themes/theme_after_submit.png" style="border:1px solid black" />
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "submitting-your-theme"
   content: content
   aside: ""
@@ -192,12 +192,12 @@ Once you have filled in all of the required information, you can complete the su
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

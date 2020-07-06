@@ -37,7 +37,7 @@ This article is a technical comparison of the Add-on SDK and WebExtensions techn
 Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: true
 %}
@@ -45,7 +45,7 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 If you're planning to port an [overlay extension](https://developer.mozilla.org/Add-ons/Overlay_Extensions) or a [bootstrapped extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/Bootstrapped_extensions), see [Comparison with XUL/XPCOM extensions](/documentation/develop/comparison-with-xul-xpcom-extensions).
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -65,7 +65,7 @@ The basic structure and concepts of the Add-on SDK are shared by WebExtensions. 
 Beyond these broad similarities, there are a lot of differences in the details, and these are summarised in the following sections.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "intro"
   content: content_with_toc
 %}
@@ -91,7 +91,7 @@ However, "manifest.json" includes many keys that define parts of the extension's
 | Access privileged APIs                | `require()` function                                                                                             | [`permissions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) key         |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
@@ -102,7 +102,7 @@ With the SDK you'll typically use [`jpm init`](https://developer.mozilla.org/Add
 - [Learn more about manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "manifest-files"
   content: content
 %}
@@ -130,7 +130,7 @@ Also note that by default, extensions have a [Content Security Policy](https://d
 - [Background scripts for extensions](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "persistent-scripts"
   content: content
 %}
@@ -159,7 +159,7 @@ In both technologies, there are two ways to attach scripts: you can automaticall
 | Content scripts matching URL patterns        | [`tab.attach()`](https://developer.mozilla.org/Add-ons/SDK/High-Level_APIs/tabs#Run_scripts_in_a_tab) | [`tabs.executeScript()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript)       |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
@@ -180,7 +180,7 @@ In both technologies, content scripts can communicate with persistent scripts us
 | Receive message | [`port.on()`](<https://developer.mozilla.org/Add-ons/SDK/Guides/Content_Scripts/port#on()>)     | [`runtime.onMessage`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)                                                                                                                       |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
@@ -198,7 +198,7 @@ In the SDK, content scripts can [share objects with page scripts](https://develo
 - [Content scripts for WebExtensions](https://developer.mozilla.org/Add-ons/WebExtensions/Content_scripts)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "content-scripts"
   content: content
 %}
@@ -225,7 +225,7 @@ Both technologies provide APIs to create a UI for your extension. UI options for
 | Context menu  | [`context-menu`](https://developer.mozilla.org/docs/Archive/Add-ons/Add-on_SDK/High-Level_APIs/context-menu) | [`contextMenus`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus)                                                                                                                |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
@@ -238,7 +238,7 @@ Unlike panels, popups are always attached to a button (either a browser action o
 Also unlike panels, popup scripts get access to all the same APIs that background scripts do. They can even get direct access to the background page, via [`runtime.getBackgroundPage()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage).
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "ui-elements"
   content: content
 %}
@@ -267,7 +267,7 @@ Note that WebExtensions does not provide an equivalent of the SDK's [`preference
 - [An example extension that has an options page](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "settings"
   content: content
 %}
@@ -295,7 +295,7 @@ The Add-on SDK and WebExtensions both include tools for localizing user-visible 
 | Placeholders               | Yes        | Yes           |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
@@ -312,7 +312,7 @@ WebExtensions don't have direct support for localizing strings appearing in HTML
 - [Example script for an extension using WebExtensions to translate HTML in the SDK style](https://gist.github.com/freaktechnik/4a72bc0711d9bc82cf3b075bcc292953)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "internationalization"
   content: content
 %}
@@ -336,7 +336,7 @@ It's also now possible to install (and reload) SDK add-ons and extensions built 
 - [Temporary installation in Firefox](/documentation/develop/temporary-installation-in-firefox)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "command-line-tool"
   content: content
 %}
@@ -443,7 +443,7 @@ The first table covers high-level SDK APIs, the second covers low-level APIs.
 | [windows](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows)                   | [`windows`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/windows)                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
@@ -512,12 +512,12 @@ The first table covers high-level SDK APIs, the second covers low-level APIs.
 | [window/utils](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/window_utils)                         | None                                                                                                                                                                                                                                  |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "javascript-apis"
   content: content
 %}
@@ -526,12 +526,12 @@ The first table covers high-level SDK APIs, the second covers low-level APIs.
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

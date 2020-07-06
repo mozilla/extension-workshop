@@ -21,7 +21,7 @@ So you’ve written a great extension, but only a few people have found and inst
 However, before you start investing in encouraging more people to install your extension, spend some time to make sure that your extension is well-polished and professional. There is little point chasing new installs if they result in disappointing ratings and reviews. Remember to follow the [content and UX guidelines](/documentation/develop/user-experience-best-practices/), [include proper onboarding](/documentation/develop/onboard-upboard-offboard-users/), and make sure your extension’s performance is good. Even if you think you’ve done this already, it’s always worth checking again.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -46,7 +46,7 @@ Add a snazzy button to your website or blog telling people to "Get the add-on." 
 Simply save these images, put them on your website, and link them to your add-on’s listing on [addons.mozilla.org](https://addons.mozilla.org).
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "promote-your-addon"
   content: content_with_toc
 %}
@@ -62,7 +62,7 @@ Simply save these images, put them on your website, and link them to your add-on
 Real world word-of-mouth can still be a surprisingly effective driver of extension installs. Whether you’re a solo first-time extension developer or an established commercial developer, spreading the word among friends, family, and school, college, or work colleagues can be a very cost-effective way to drive installs of your extension.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "friends-family-colleagues"
   content: content
 %}
@@ -78,7 +78,7 @@ Real world word-of-mouth can still be a surprisingly effective driver of extensi
 If you’ve created a great extension, get on and talk about it. Look for events where speakers are welcome or meetups where potential users might gather. If your extension focuses on fishing, look for a local fishing club and see if they have a regular meet you could talk to. Other options might include a computer society or maker group. You should consider any group that is likely to be interested in hearing about extension development in general or the features of your extension in particular.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "events-and-meetups"
   content: content
 %}
@@ -94,7 +94,7 @@ If you’ve created a great extension, get on and talk about it. Look for events
 If this isn’t your first extension or you are creating an extension to complement a web service, make your users aware of the new offering. If you contact your users directly, using email for example, make sure you do so within the parameters of your privacy policy. Remember, you have many other channels you can use, such as social media, forums, or your newsletter. Don’t forget that you can promote your new extension when you upgrade your existing extensions (see [Best practices for onboarding, upboarding, and offboarding users](/documentation/develop/onboard-upboard-offboard-users/)).
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "current-users"
   content: content
 %}
@@ -115,7 +115,7 @@ Using social media can be a very effective way of promoting your extension. Cons
 - Draw up a calendar of messages, to ensure your campaign delivers a regular stream of updates and doesn’t get sidelined by other activities.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "social-media"
   content: content
 %}
@@ -134,7 +134,7 @@ Enthusiastic and engaged users can often be your greatest advocates. The power o
 - Try to reply to all support and general emails; consider creating templates for common replies to manage the effort. Again, always keep your replies positive.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "engage-with-users"
   content: content
 %}
@@ -152,7 +152,7 @@ Your social media account may provide an adequate vehicle for user interaction a
 If you don’t feel you’re ready to manage a forum or user group you can also create a support thread on the [Mozilla add-on forum](https://discourse.mozilla.org/c/add-ons/add-on-support): tag the thread title with “[Support]” and include your extension name. This is also an unobtrusive way of making the Mozilla forum community more aware of your extension.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "create-a-forum"
   content: content
 %}
@@ -175,7 +175,7 @@ Once you have a target list of bloggers and media, create a “press pack.” Th
 - Screenshots from your extension, suitably captioned so it is clear what is shown.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "engage-with-media"
   content: content
 %}
@@ -193,7 +193,7 @@ If you have a modest budget, consider running a small search term campaign using
 If you haven’t used online advertising before, [Google Academy for Ads](https://landing.google.com/academyforads/) provides courses on how to run an effective online ad campaign.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "advertising"
   content: content
 %}
@@ -202,12 +202,12 @@ If you haven’t used online advertising before, [Google Academy for Ads](https:
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

@@ -18,7 +18,7 @@ date: 2019-07-09 09:00:00
 Learn how to get your extension signed and distributed worldwide or to your enterprise.
 
 {% endcapture %}
-{% include modules/overview-page-hero.html
+{% include modules/overview-page-hero.liquid
 	content: page_hero_banner_content
 	background: "develop-overview-hero-bg.jpg"
 %}
@@ -42,7 +42,7 @@ Before submitting your extension for signing, create an extension package either
 Once your extension is signed, it is subject to review by Mozilla at any time. To enable this review, you may have to [submit the source code](/documentation/publish/source-code-submission/) for your extension.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
 	id: "get-your-extension-signed"
 	content: content_with_toc
 %}
@@ -74,7 +74,7 @@ Check out our [publisher’s resources](/documentation/manage/resources-for-publ
 - get in touch with who manages the add-on resources
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	id: "distribute-your-signed-extension"
 	content: content
 %}
@@ -91,7 +91,7 @@ Grow your user base by [creating an appealing listing](/documentation/develop/cr
 
 <!-- Video Popup Thumbnail -->
 
-{% include modules/video-popup.html
+{% include modules/video-popup.liquid
 	title: "Tips for great content and design for your extension"
 	youtube_id: "a0_OsLGI0k4"
 	image: "documentation/develop/extension-workshop-content-and-design.png"
@@ -113,7 +113,7 @@ Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.or
 If you’re distributing to an enterprise running the ESR version of Firefox or to users of Developer Edition or Nightly you don’t need to submit your extension to addons.mozilla.org for signing, you can distribute and install unsigned extensions.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -121,7 +121,7 @@ If you’re distributing to an enterprise running the ESR version of Firefox or 
 <!-- END: Note -->
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	id: "promote-your-extension"
 	content: content
 %}
@@ -130,12 +130,12 @@ If you’re distributing to an enterprise running the ESR version of Firefox or 
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

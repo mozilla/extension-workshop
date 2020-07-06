@@ -29,7 +29,7 @@ Minifying your code isn't recommended. It rarely protects your code, as these te
 If you do not provide source code with clear instructions and the reviewer cannot evaluate your extension, it may be rejected.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -92,7 +92,7 @@ Code submission process happens after the add-on validation step.
 ![Upload sources screenshot](/_assets/img/publish/upload-process-sources.png)
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "provide-your-extension-source-code"
   content: content_with_toc
 %}
@@ -127,7 +127,7 @@ We also allow tools that combine multiple files into a single file, or transpile
 </section>
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "use-of-obfuscated-code"
   content: content
 %}
@@ -159,7 +159,7 @@ Use this checklist to confirm that you are providing the right details with your
 Remember, if you miss any of the necessary content from your uploaded source code package the reviewer will have to get in touch to request the missing items. This could delay the completion of your extension’s review or, in the worst-case, result in your extension being taken down because we can't confirm it complies with the [add-on policies](/documentation/publish/add-on-policies).
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "source-code-checklist"
   content: content
 %}
@@ -168,12 +168,12 @@ Remember, if you miss any of the necessary content from your uploaded source cod
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

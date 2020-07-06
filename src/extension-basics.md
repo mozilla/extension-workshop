@@ -19,7 +19,7 @@ date: 2019-09-25 05:48:00
 Get how-tos, resources, and information to successfully build and ship your extension for Firefox.
 {% endcapture %}
 
-{% include modules/overview-page-hero.html
+{% include modules/overview-page-hero.liquid
 	content: page_hero_banner_content
 	background: "develop-overview-hero-bg.jpg"
 %}
@@ -42,7 +42,7 @@ The Firefox Extension Workshop can help you develop extensions for Firefox and g
 - [Firefox developer communities](/community/)
 {% endcapture %}
 
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
 	id: "getting-started"
 	content: content_with_toc
 %}
@@ -68,7 +68,7 @@ On MDN, you’ll find:
 
 {% endcapture %}
 
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	id: "mozilla-developer-network"
 	content: content
 %}
@@ -77,12 +77,12 @@ On MDN, you’ll find:
 
 <!-- Meta Data -->
 
-{% include page-meta-data.html %}
+{% include page-meta-data.liquid %}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{% include up-next.html %}
+{% include up-next.liquid %}
 
 <!-- END: Up Next -->

@@ -1,5 +1,5 @@
 ---
-layout: sidebar.html
+layout: sidebar.liquid
 title: Develop
 permalink: /documentation/develop/
 published: true
@@ -18,7 +18,7 @@ date: 2019-07-09 09:00:00
 Support your development workflow with these straightforward tools and guides.
 
 {% endcapture %}
-{% include modules/overview-page-hero.html
+{% include modules/overview-page-hero.liquid
 	content: page_hero_banner_content
 	background: "develop-overview-hero-bg.jpg"
 %}
@@ -50,7 +50,7 @@ The web-ext tool can help you by:
 - create extension packages, and more
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
 	id: "firefox-tools"
 	content: content_with_toc
 %}
@@ -68,7 +68,7 @@ The web-ext tool can help you by:
 ## User Experience
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	content: content
 %}
 
@@ -88,7 +88,7 @@ Having an exceptional user experience is crucial to attracting, and retaining, u
 [RememBear](https://addons.mozilla.org/firefox/addon/remembear-app/) is a great example of an extension with an outstanding user experience.
 
 {% endcapture %}
-{% include modules/two-column.html
+{% include modules/two-column.liquid
 	col_1: col_1_content
 	col_2: col_2_content
 	reverse: false
@@ -118,7 +118,7 @@ Users are less likely to install an extension if they don’t understand what it
 Find out best practices for putting your best foot forward with your extension.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	content: content
 %}
 
@@ -139,7 +139,7 @@ Find out best practices for putting your best foot forward with your extension.
 ## Firefox for Android
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	content: content
 %}
 
@@ -161,7 +161,7 @@ To offer your extension to Firefox for Android users, you’ll need to consider 
 Get started with everything you need to know about [developing for Firefox for Android](/documentation/develop/developing-extensions-for-firefox-for-android/).
 
 {% endcapture %}
-{% include modules/two-column.html
+{% include modules/two-column.liquid
 	col_1: col_1_content
 	col_2: col_2_content
 	reverse: true
@@ -178,7 +178,7 @@ Get started with everything you need to know about [developing for Firefox for A
 If you develop Android apps, when you want to include a browser experience in your app you can take advantage of the browser engine that underpins Firefox using the [GeckoView Extensions Android library](https://github.com/mozilla/geckoview).
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	content: content
 %}
 
@@ -199,7 +199,7 @@ If you develop Android apps, when you want to include a browser experience in yo
 ## Port to Firefox
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	content: content
 %}
 
@@ -221,7 +221,7 @@ The Firefox extension environment is highly compatible with chromium-based exten
 [Test your extension’s compatibility](https://www.extensiontest.com/) and check out our [porting guide](/documentation/develop/porting-a-google-chrome-extension/) to get started.
 
 {% endcapture %}
-{% include modules/two-column.html
+{% include modules/two-column.liquid
 	col_1: col_1_content
 	col_2: col_2_content
 	reverse: true
@@ -238,7 +238,7 @@ The Firefox extension environment is highly compatible with chromium-based exten
 If you have a [legacy Firefox extension](/documentation/develop/porting-a-legacy-firefox-extension/), you can still find out how to get it up and running on the latest version of Firefox. Check out the porting information for the [Add-on SDK](/documentation/develop/comparison-with-the-add-on-sdk/) and [XUL/XPCOM](/documentation/develop/comparison-with-xul-xpcom-extensions/) based extensions.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	content: content
 %}
 
@@ -267,7 +267,7 @@ Understanding [extensions and the Add-on ID](/documentation/develop/extensions-a
 You can use [web-ext](/documentation/develop/getting-started-with-web-ext/) to automatically install and update your extension while making coding changes.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	content: content
 %}
 
@@ -279,12 +279,12 @@ You can use [web-ext](/documentation/develop/getting-started-with-web-ext/) to a
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

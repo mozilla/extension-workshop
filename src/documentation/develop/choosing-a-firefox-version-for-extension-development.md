@@ -19,7 +19,7 @@ date: 2019-03-18 16:36:22
 Firefox provides several versions that offer different capabilities for developing web extensions. This article provides an overview of the differences among these versions of Firefox and recommends how to use each in the development lifecycle.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -30,7 +30,7 @@ Firefox provides several versions that offer different capabilities for developi
 <section id="firefox-editions" class="module">
 <aside class="module-aside table-of-contents">
 
-{%- include contents.html -%}
+{%- include contents.liquid -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
@@ -138,12 +138,12 @@ Suggested development use: Use ESR as your primary web extension development and
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

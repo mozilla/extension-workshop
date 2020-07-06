@@ -1,5 +1,5 @@
 ---
-layout: sidebar.html
+layout: sidebar.liquid
 title: Browser compatibility
 permalink: /documentation/develop/browser-compatibility/
 published: true
@@ -17,7 +17,7 @@ date: 2019-05-27 6:35:30
 # Browser compatibility
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -38,7 +38,7 @@ While work continues to standardize the APIs used for browser extension developm
 Firefox is the most compliant with the proposed standard, and is, therefore, your best place to start when developing browser extensions. A simple way of addressing many of these differences is by using the [web extension polyfill library](https://github.com/mozilla/webextension-polyfill). For an introduction to using this tool, see [Building a cross-browser extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension). Note, however, that the polyfill does not support Firefox exclusive APIs that are not available in Chrome.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "quick-start"
   content: content_with_toc
 %}
@@ -59,7 +59,7 @@ There are two API namespaces in use:
 - `chrome` is used in Chromium-based browsers. For example: `chrome.browserAction.setIcon({path: "path/to/icon.png"});`
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "namespace"
   content: content
 %}
@@ -110,7 +110,7 @@ setCookie.then(logCookie, logError);
 If you are unfamiliar with how JavaScript can handle asynchronous events or promises, take a look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Using_promises) page.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "asynchronous"
   content: content
 %}
@@ -132,7 +132,7 @@ The differences in the extensions API function implementations among the browser
 Full details of the differences in API support are provided in [Browser support for JavaScript APIs](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) on MDN. Where there are caveats regarding support for an API feature, there is a drop down below the version number that expands to show details of the caveat. The API features reference page also explains the caveat.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "api-coverage"
   content: content
 %}
@@ -168,7 +168,7 @@ For example, in Firefox notifications are cleared immediately when the user clic
 Details of these variations are documented as part of the API feature reference pages.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "manifest-keys"
   content: content
 %}
@@ -187,7 +187,7 @@ You can find more detailed information about the differences in the supported br
 - [Browser compatibility for manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "more-information"
   content: content
 %}
@@ -196,12 +196,12 @@ You can find more detailed information about the differences in the supported br
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

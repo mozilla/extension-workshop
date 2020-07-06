@@ -28,7 +28,7 @@ date: 2019-06-20 01:44:23
 # Updating your extension
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -47,7 +47,7 @@ Firefox supports automated updates to add-ons using JSON update manifests. Add-o
 You must host your update manifest file on a secure (HTTPS) server.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -84,7 +84,7 @@ A typical update manifest looks something like:
 <!-- END: Syntax Highlighting -->
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: ""
   content: content_with_toc
 %}
@@ -110,7 +110,7 @@ For XUL add-ons, add the following to the `<Description about="urn:mozilla:insta
 ```
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
     id: "enable-update"
     content: content
 %}
@@ -130,7 +130,7 @@ The manifest is a JSON file, with a top-level object literal. This object may ha
 | `addons` | `object` | An object containing one entry for each add-on to be updated. For each such entry, the name of the property must be the add-on's UUID, and the value must be an <a href="#addon-objects">object describing the add-on</a> and its updates. |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
@@ -153,7 +153,7 @@ Properties of the `addons` object must contain object literals, each describing 
 | `updates` | `Array` (Optional) | An array containing zero or more <a href="#addons-updates">update description objects</a> for the add-on. |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
@@ -181,7 +181,7 @@ Update description objects must be object literals. They may have the following 
 | `browser_specific_settings` | `object` (Optional)               | An object containing browser-specific compatibility information. Each property must contain a <a href="#browser-specific-settings-objects">browser specific settings object</a>, as described below. The only browser currently supported is `gecko`, which includes Firefox, and all other browsers built on the same runtime. If this property is omitted, support for Gecko is assumed. Otherwise, if this property is defined, it must contain a `gecko` property, or the update entry will be ignored. |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
@@ -206,14 +206,14 @@ Browser specific settings objects specify compatibility information for a specif
 | `advisory_max_version` | `string` (Optional) (default: \*)     | The maximum version of the browser this add-on is likely to run on. This property is ignored in most cases. |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
 <!-- END: Table -->
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
     id: "manifest-structure"
     content: content
 %}
@@ -227,7 +227,7 @@ By default, Firefox checks for updates every 86400 seconds (24 hours). If you wa
 If your extension does not update as expected, open the console: Tools > Web Developer > Browser Console, filter for the name of your extension or update URL, and see if there are any errors logged. If you see an error indicating that the downloaded file hash … did not match provided hash …, look up for the previous `GET` of your extension. If it indicates that the download time was around zero milliseconds, for example `[HTTP/1.1 200 OK 0ms]`, Firefox may have used a cached download, which might be your prior version if you just recently uploaded a new version, and this may explain the hash mismatch.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "testing-automatic-updating"
   content: content
 %}
@@ -236,12 +236,12 @@ If your extension does not update as expected, open the console: Tools > Web Dev
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

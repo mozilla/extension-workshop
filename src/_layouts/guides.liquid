@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-    {%- include head.html -%}
+    {%- include head.liquid -%}
 
     <body class="site content-guidelines">
         <div class="site-wrapper">
-            {%- include guides-header.html -%}
+            {%- include guides-header.liquid -%}
 
             <main class="site-content" aria-label="Content">
 
@@ -59,7 +59,7 @@
             </main>
         </div>
 
-        {%- include footer.html -%}
+        {%- include footer.liquid -%}
 
         <aside id="video-popup">
             <div class="bg"></div>

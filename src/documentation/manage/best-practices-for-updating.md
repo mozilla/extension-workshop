@@ -19,7 +19,7 @@ date: 2019-03-18 05:01:39
 Almost every extension needs to be updated from time to time, whether that be to correct bugs or add new features. Updating your extension is something that is worth planning methodically, not only to ensure the quality of the changes but also to maximize the opportunities to engage or re-engage with your audience.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -56,7 +56,7 @@ To help you deliver the most productive updates, here are some tips from the Fir
 - Start planning your next upgrade!
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "security-over-choice"
   content: content_with_toc
 %}
@@ -65,12 +65,12 @@ To help you deliver the most productive updates, here are some tips from the Fir
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

@@ -11,11 +11,12 @@
 {% for item in pages %}
     {% if item.categories %}
         {% if on_current_page == true %}
-            {% assign next_page_ar = collections.all | where: "permalink", item.url %}
+            {% assign next_page_ar = collections.all | where: "url", item.url %}
             {% for next_page in next_page_ar %}
               {% if is_next_range < max_steps && next_page.skip_index != false %}
 
-                {%- include up-next-tile.html -%}
+                {%- include up-next-tile.liquid
+                    next_page: next_page -%}
 
               {% endif %}
               {% assign is_next_range = is_next_range | plus: 1 %}
@@ -30,11 +31,13 @@
                 {% if cat.pages %}
                         {% for pg in cat.pages %}
                             {% if on_current_page == true %}
-                                {% assign next_page_ar = collections.all | where: "permalink", pg.url %}
+                                {% assign next_page_ar = collections.all | where: "url", pg.url %}
                                 {% for next_page in next_page_ar %}
                                   {% if is_next_range < max_steps && next_page.skip_index != false %}
 
-                                    {%- include up-next-tile.html -%}
+                {%- include up-next-tile.liquid
+                    next_page: next_page -%}
+
 
                                   {% endif %}
                                   {% assign is_next_range = is_next_range | plus: 1 %}
@@ -55,7 +58,10 @@
                     {% for next_page in next_page_ar %}
                       {% if is_next_range < max_steps && next_page.skip_index != false %}
 
-                        {%- include up-next-tile.html -%}
+
+
+                        {%- include up-next-tile.liquid
+                    next_page: next_page -%}
 
                       {% endif %}
                       {% assign is_next_range = is_next_range | plus: 1 %}
@@ -74,7 +80,9 @@
                                 {% for next_page in next_page_ar %}
                                   {% if is_next_range < max_steps && next_page.skip_index != false %}
 
-                                    {%- include up-next-tile.html -%}
+                        {%- include up-next-tile.liquid
+                    next_page: next_page -%}
+
 
                                   {% endif %}
                                   {% assign is_next_range = is_next_range | plus: 1 %}
@@ -93,7 +101,9 @@
                         {% for next_page in next_page_ar %}
                           {% if is_next_range < max_steps && next_page.skip_index != false %}
 
-                            {%- include up-next-tile.html -%}
+                        {%- include up-next-tile.liquid
+                    next_page: next_page -%}
+
 
                           {% endif %}
                           {% assign is_next_range = is_next_range | plus: 1 %}
@@ -116,7 +126,9 @@
             {% for next_page in next_page_ar %}
               {% if is_next_range < max_steps && next_page.skip_index != false %}
 
-                {%- include up-next-tile.html -%}
+                        {%- include up-next-tile.liquid
+                    next_page: next_page -%}
+
 
               {% endif %}
               {% assign is_next_range = is_next_range | plus: 1 %}

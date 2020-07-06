@@ -20,7 +20,7 @@ skip_index: true
 Short and brief description of the sort of content you will find on this page.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 	cta1_label: "Do first thing"
 	cta1_url: "#"
@@ -45,7 +45,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Note that this is a one-way conversion. You cannot update an extension using WebExtensions to use a legacy technology. This means that you must be sure that you are ready to commit to using WebExtension APIs before you submit the updated add-on to AMO.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -63,14 +63,14 @@ Note that this is a one-way conversion. You cannot update an extension using Web
 | Content scripts matching URL patterns | [`page-mod`](#) API | [`content-scripts`](#) key |
 
 {% endcapture %}
-{% include modules/table.html
+{% include modules/table.liquid
 	content: table
 %}
 
 <!-- END: Table -->
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
 	id: "section-1"
 	content: content_with_toc
 %}
@@ -98,7 +98,7 @@ function setCurrentChoice(result) {
 <!-- END: Syntax Highlighting -->
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	id: "section-2"
 	content: content
 	aside: ""
@@ -127,7 +127,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: alert
 	alert: true
 %}
@@ -135,7 +135,7 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 <!-- END: Alert -->
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	id: ""
 	content: content
 	aside: ""
@@ -157,7 +157,7 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 This page provides a succinct description of the extension, clear instructions on how to fire your cat’s lasers, and how to turn your laser cat on and off.
 
 {% endcapture %}
-{% include modules/two-column.html
+{% include modules/two-column.liquid
 	col_1: col_1_content
 	col_2: col_2_content
 	reverse: true
@@ -188,7 +188,7 @@ Cards contain content and links about a single subject.
 [Related Article](https://www.firefox.com)
 
 {% endcapture %}
-{% include modules/two-column.html
+{% include modules/two-column.liquid
 	col_1: col_1_content
 	col_2: col_2_content
 	aside: aside
@@ -219,7 +219,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, [read App pricing](#).
 
 {% endcapture %}
-{% include modules/expandable-list-item.html
+{% include modules/expandable-list-item.liquid
 	id: "content-1"
 	title: "How do I change my developer account information?"
 	content: item-content
@@ -234,7 +234,7 @@ Developers receive 70% of the pre-VAT and fee amount. For instance, if the US pr
 Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, [read App pricing](#).
 
 {% endcapture %}
-{% include modules/expandable-list-item.html
+{% include modules/expandable-list-item.liquid
 	id: "content-2"
 	title: "How do I change my developer account information?"
 	content: item-content
@@ -249,7 +249,7 @@ Developers receive 70% of the pre-VAT and fee amount. For instance, if the US pr
 Developers receive 70% of the pre-VAT and fee amount. For instance, if the US price is $.99 (Tier 10), the Euro price is €.89, and the VAT is 20% (based on a UK standard VAT rate), the pre-VAT price is €.74, which is around $.99 (sometimes the equivalent price tier may be higher and sometimes lower). Developers receive 70% of the €. For more information on price tiers and pricing, [read App pricing](#).
 
 {% endcapture %}
-{% include modules/expandable-list-item.html
+{% include modules/expandable-list-item.liquid
 	id: "content-3"
 	title: "How do I change my developer account information?"
 	content: item-content
@@ -258,14 +258,14 @@ Developers receive 70% of the pre-VAT and fee amount. For instance, if the US pr
 <!-- END: List Item 3 -->
 
 {% endcapture %}
-{% include modules/expandable-list.html
+{% include modules/expandable-list.liquid
 	list: expandable-list
 %}
 
 <!-- END: Expandable List -->
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	id: "section-4"
 	content: content
 	aside: ""
@@ -283,7 +283,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- Image with caption -->
 
-{% include modules/image-with-caption.html
+{% include modules/image-with-caption.liquid
 	source: "content-guidelines/example-remembear.png"
 	alt: "Screenshot Remembear"
 	caption: "Full width image (above)"
@@ -292,7 +292,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- END: Image with caption -->
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	content: content
 %}
 
@@ -304,7 +304,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- Image with caption -->
 
-{% include modules/image-with-caption.html
+{% include modules/image-with-caption.liquid
 	source: "content-guidelines/example-remembear.png"
 	alt: "Screenshot Remembear"
 	caption: "Full width image (above)"
@@ -317,7 +317,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- Image with caption -->
 
-{% include modules/image-with-caption.html
+{% include modules/image-with-caption.liquid
 	source: "content-guidelines/example-remembear.png"
 	alt: "Screenshot Remembear"
 	caption: "Full width image (above)"
@@ -326,7 +326,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- END: Image with caption -->
 
 {% endcapture %}
-{% include modules/two-column.html
+{% include modules/two-column.liquid
 	col_1: col_1_content
 	col_2: col_2_content
 	reverse: false
@@ -340,7 +340,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- Video Popup Thumbnail -->
 
-{% include modules/video-popup.html
+{% include modules/video-popup.liquid
 	title: "What’s Great Content and Design?"
 	youtube_id: "a0_OsLGI0k4"
 	image: "content-guidelines/example-thumbnail.jpg"
@@ -350,7 +350,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <!-- END: Video Popup Thumbnail -->
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	content: content
 %}
 
@@ -362,7 +362,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- Video Popup Thumbnail -->
 
-{% include modules/video-popup.html
+{% include modules/video-popup.liquid
 	title: "What’s Great Content and Design?"
 	youtube_id: "a0_OsLGI0k4"
 	image: "content-guidelines/example-thumbnail.jpg"
@@ -380,7 +380,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 
 <!-- Video Popup Thumbnail -->
 
-{% include modules/video-popup.html
+{% include modules/video-popup.liquid
 	title: "What’s Great Content and Design?"
 	youtube_id: "a0_OsLGI0k4"
 	image: "content-guidelines/example-thumbnail.jpg"
@@ -394,7 +394,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
 
 {% endcapture %}
-{% include modules/two-column.html
+{% include modules/two-column.liquid
 	col_1: col_1_content
 	col_2: col_2_content
 	reverse: false
@@ -419,7 +419,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 
 <!-- Icon Cell -->
 
-{% include modules/icon-grid-cell.html
+{% include modules/icon-grid-cell.liquid
 	image: "content-guidelines/example-icon.png"
 	alt: "Icon"
 	width: "53"
@@ -430,7 +430,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 
 <!-- Icon Cell -->
 
-{% include modules/icon-grid-cell.html
+{% include modules/icon-grid-cell.liquid
 	image: "content-guidelines/example-icon.png"
 	alt: "Icon"
 	width: "53"
@@ -441,7 +441,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 
 <!-- Icon Cell -->
 
-{% include modules/icon-grid-cell.html
+{% include modules/icon-grid-cell.liquid
 	image: "content-guidelines/example-icon.png"
 	alt: "Icon"
 	width: "53"
@@ -451,7 +451,7 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 <!-- END: Icon Cell -->
 
 {% endcapture %}
-{% include modules/icon-grid.html
+{% include modules/icon-grid.liquid
 	content: content
 	grid: grid
 %}
@@ -496,7 +496,7 @@ An extension that puts a cat on new tabs is called **Tabbycat**
 An extension that improves YouTube is called **Enhancer for YouTube**
 
 {% endcapture %}
-{% include modules/example.html
+{% include modules/example.liquid
 	content: example
 	layout: "block"
 %}
@@ -504,7 +504,7 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 <!-- END: Example (Block) -->
 
 {% endcapture %}
-{% include modules/do-this.html
+{% include modules/do-this.liquid
 	title: "Do This"
 	content: dothis
 %}
@@ -521,7 +521,7 @@ Save these details for your subtitle and description.
 
 <!-- Example (Inline) -->
 
-{% include modules/example.html
+{% include modules/example.liquid
 	content: "Example: Videomix, a fast video downloader"
 	layout: "inline"
 %}
@@ -534,7 +534,7 @@ Google is smarter than this and it just makes your extension look untrustworthy.
 
 <!-- Example (Inline) -->
 
-{% include modules/example.html
+{% include modules/example.liquid
 	content: "Example: Youtube Download Videos, Convert, Media, MP3, MP4, Free."
 	layout: "inline"
 %}
@@ -555,7 +555,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 <!-- Example (Inline) -->
 
-{% include modules/example.html
+{% include modules/example.liquid
 	content: "Example: Weatherchanger (fix version)"
 	layout: "inline"
 %}
@@ -566,7 +566,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 <!-- Example (Inline) -->
 
-{% include modules/example.html
+{% include modules/example.liquid
 	content: "Example: TrLrs! Tab Changer."
 	layout: "inline"
 %}
@@ -586,7 +586,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 - [Mate Translate](https://firefox.com 'Mate Translate')
 
 {% endcapture %}
-{% include modules/not-this.html
+{% include modules/not-this.liquid
 	title: "Not This"
 	content: notthis
 %}
@@ -594,7 +594,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 <!-- END: Not this -->
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	id: "section-2"
 	content: content
 %}
@@ -620,7 +620,7 @@ An extension that puts a cat on new tabs is called **Tabbycat**
 An extension that improves YouTube is called **Enhancer for YouTube**
 
 {% endcapture %}
-{% include modules/example.html
+{% include modules/example.liquid
 	content: example
 	layout: "block"
 %}
@@ -645,7 +645,7 @@ An extension that puts a cat on new tabs is called **Tabbycat**
 An extension that improves YouTube is called **Enhancer for YouTube**
 
 {% endcapture %}
-{% include modules/example.html
+{% include modules/example.liquid
 	content: example
 	layout: "block"
 %}
@@ -653,7 +653,7 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 <!-- END: Example (Block) -->
 
 {% endcapture %}
-{% include modules/do-this-not-this.html
+{% include modules/do-this-not-this.liquid
 	do_this_title: "Do This"
 	do_this_content: do_this_content
 	not_this_title: "Not This"
@@ -683,14 +683,14 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 - Bunt in culpa: qui officia deserunt mollit anim id est laborum
 
 {% endcapture %}
-{% include modules/tile.html
+{% include modules/tile.liquid
 	content tile
 %}
 
 <!-- END: Tile -->
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
 	content: content
 %}
 
@@ -698,12 +698,12 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

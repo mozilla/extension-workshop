@@ -19,7 +19,7 @@ date: 2020-05-06
 Learn how to distribute an alpha or beta pre-release version of your extension for Firefox.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -40,7 +40,7 @@ Pre-release channels are not supported on [addons.mozilla.org](https://addons.mo
 If your extension’s release version is listed on [addons.mozilla.org](https://addons.mozilla.org), you will need to [define which channel you are signing with web-ext](/documentation/develop/getting-started-with-web-ext/#signing-test-version-listed).
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
 	content: note
 	alert: false
 %}
@@ -55,7 +55,7 @@ If you decide to discontinue your beta channel and your add-on is listed on AMO,
 
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "listing-on-amo"
   content: content
 %}
@@ -64,12 +64,12 @@ If you decide to discontinue your beta channel and your add-on is listed on AMO,
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

@@ -37,7 +37,7 @@ Here we lay out the six steps to creating specific Firefox and extension UX feat
 In addition to the steps described here, your extension should follow [Add-on Policies](/documentation/publish/add-on-policies/), which include being transparent with users about user security, privacy and control.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -48,7 +48,7 @@ In addition to the steps described here, your extension should follow [Add-on Po
 <section id="keep-it-focused" class="module">
 <aside class="module-aside table-of-contents">
 
-{%- include contents.html -%}
+{%- include contents.liquid -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
@@ -262,12 +262,12 @@ Testing tips:
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

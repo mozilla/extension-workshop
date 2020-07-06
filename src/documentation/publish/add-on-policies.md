@@ -30,7 +30,7 @@ Add-ons extend the core capabilities of Firefox, enabling users to modify and pe
 All add-ons are subject to these policies, regardless of how they are distributed. When an add-on is given human review or otherwise assessed by Mozilla, these policies act as guiding principles for those reviews. Add-ons that do not comply with these policies may be rejected or disabled by Mozilla. Therefore, follow these policies when making add-on design and development decisions.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -62,7 +62,7 @@ Then the “unexpected” feature(s) must adhere to all of the following require
 - The opt-in interface must clearly state the name of the add-on requesting the change.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "no-surprises"
   content: content_with_toc
 %}
@@ -87,7 +87,7 @@ In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the follo
 - If the add-on is a fork of another add-on, the name must clearly distinguish it from the original and provide a significant difference in functionality and/or code.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "content"
   content: content
 %}
@@ -117,7 +117,7 @@ Add-ons are not allowed to contain obfuscated code, nor code that hides the purp
 Please read our [Source Code Submission guidelines](/documentation/publish/source-code-submission/) to avoid unexpected rejections or blocks.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "submission-guidelines"
   content: content
 %}
@@ -145,7 +145,7 @@ While any code, method or practice in a submitted add-on is subject to review an
 - Please read our [third party library guidelines](/documentation/publish/third-party-library-usage/) to avoid unexpected rejections.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "development-practices"
   content: content
 %}
@@ -203,7 +203,7 @@ Please refer to our [best practices](/documentation/develop/best-practices-for-c
 - Identity information must not be leaked to web content in private browsing sessions.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "data-disclosure-collection-and-management"
   content: content
 %}
@@ -221,7 +221,7 @@ Because add-ons run in an environment with elevated privileges relative to ordin
 As a result, we take our security policies very seriously and apply them to all add-ons, whether hosted on AMO or not. We expect all add-ons to be secure and well-maintained in handling both their own data and their user’s data. They must also securely manage all of their interactions with the web, the browser and the operating system.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "security-vulnerabilities"
   content: content
 %}
@@ -240,7 +240,7 @@ As a result, we take our security policies very seriously and apply them to all 
 - Modifying web content or facilitating redirects to include affiliate promotion tags is not permitted. Conversely, the use of affiliate promotion in user interface elements clearly identified as belonging to the add-on are acceptable.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "monetization"
   content: content
 %}
@@ -262,7 +262,7 @@ Mozilla reserves the right to block or delete any developer’s account on addon
 For information about how rejection and blocking affects users, see [What does review rejection mean to users?](/documentation/publish/what-does-review-rejection-mean-to-users/)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "compliance-and-blocking"
   content: content
 %}
@@ -271,12 +271,12 @@ For information about how rejection and blocking affects users, see [What does r
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

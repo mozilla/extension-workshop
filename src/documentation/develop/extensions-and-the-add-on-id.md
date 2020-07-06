@@ -48,7 +48,7 @@ Note that the ability to develop and debug WebExtensions that don't include an I
 </div>
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
   content: page_hero_banner_content
 %}
 
@@ -59,7 +59,7 @@ Note that the ability to develop and debug WebExtensions that don't include an I
 <section id="basic-workflow-with-no-add-on-id" class="module">
 <aside class="module-aside table-of-contents">
 
-{%- include contents.html -%}
+{%- include contents.liquid -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
@@ -130,12 +130,12 @@ You can do the same thing if you are updating from an older add-on type, such as
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

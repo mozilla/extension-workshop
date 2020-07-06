@@ -1,5 +1,5 @@
 ---
-layout: sidebar.html
+layout: sidebar.liquid
 title: web-ext command reference
 permalink: /documentation/develop/web-ext-command-reference/
 published: true
@@ -37,7 +37,7 @@ date: 2020-06-14 00:11:47
 This page lists all the commands and options available under the [web-ext](https://github.com/mozilla/web-ext) command line tool.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -48,7 +48,7 @@ This page lists all the commands and options available under the [web-ext](https
 <section id="commands" class="module">
 <aside class="module-aside table-of-contents">
 
-{%- include contents.html -%}
+{%- include contents.liquid -%}
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
@@ -586,13 +586,13 @@ WEB_EXT_VERBOSE=true
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->
 

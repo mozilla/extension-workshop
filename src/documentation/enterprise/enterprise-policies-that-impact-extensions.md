@@ -19,7 +19,7 @@ date: 2019-08-12 05:01:39
 Policies enable you to control the capabilities of Firefox. This article summarizes the policies that affect the installation, behavior, and update of web extensions. For a full list of policies, see [mozilla/policy-templates](https://github.com/mozilla/policy-templates) on GitHub. For details on how to implement policies, see [Manage settings via policy](https://support.mozilla.org/products/firefox-enterprise/policies-customization-enterprise/manage-settings-policy).
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -46,7 +46,7 @@ These policies control whether users can install, disable, or remove web extensi
 - **InstallAddonsPermission** – This policy sets whether the user can install extensions and which domains web extensions can be installed from.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "relevant-policies"
   content: content_with_toc
 %}
@@ -76,7 +76,7 @@ Other useful information:
 - How to [manage add-ons](https://support.mozilla.org/products/firefox-enterprise/policies-customization-enterprise/manage-add-ons-enterprise) in your organization
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "other-relevant-policies"
   content: content
 %}
@@ -85,12 +85,12 @@ Other useful information:
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

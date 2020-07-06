@@ -50,7 +50,7 @@ Add-ons need to be signed before they can be installed into release and beta ver
 Here we look at the signing requirements and the related reviews, before discussing how to choose between distributing on AMO or distributing an add-on yourself. We also look at the channels available on AMO and answer questions about code ownership and disputes.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
 	content: page_hero_banner_content
 %}
 
@@ -79,7 +79,7 @@ Using the signing API or web-ext returns you signed add-ons, with no distributio
 Regardless of the method used all add-ons must pass an automated validation before they are signed. They may also be subject to a manual code review. The review criteria applied to add-ons are found in the [Add-on Policies](/documentation/publish/add-on-policies/).
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
 	id: "signing-your-addons"
 	content: content_with_toc
 %}
@@ -102,7 +102,7 @@ You aren't required to list or distribute your add-on through AMO. You'll, there
 For more information on how to submit an add-on for distribution on AMO or self-distribution, see [Submitting an add-on](/documentation/publish/submitting-an-add-on/).
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "distributing-your-addon"
   content: content
   aside: ""
@@ -138,7 +138,7 @@ If we're notified of a copyright or license infringement, we will take steps to 
 If you are unsure of the current copyright status of an add-on's source code, you must contact the author and get explicit permission before using the source code.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "about-amo"
   content: content
 %}
@@ -147,12 +147,12 @@ If you are unsure of the current copyright status of an add-on's source code, yo
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

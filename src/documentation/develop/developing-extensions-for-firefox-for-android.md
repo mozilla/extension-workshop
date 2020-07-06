@@ -22,7 +22,7 @@ Using [web-ext](/documentation/develop/getting-started-with-web-ext/) in your ex
 However, instructions are provided for the steps you need to take should you choose not to use [web-ext](/documentation/develop/getting-started-with-web-ext/).
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -76,7 +76,7 @@ If you are using a device:
   Where the hex string is your device’s (or emulator’s) code. This means adb has found your device (or emulator).
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "set-up-your-computer-and-android-emulator-or-device"
   content: content_with_toc
 %}
@@ -104,7 +104,7 @@ similar to this:
 Lint does not report on APIs that are not implemented by Firefox or Firefox for Android.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: true
 %}
@@ -122,7 +122,7 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 {% endhighlight %}
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "check-for-firefox-for-android-compatibility"
   content: content
 %}
@@ -201,7 +201,7 @@ Your extension will start running (in this case a copy of the [borderify](https:
 Upload your xpi file to your website and make it accessible over HTTP. Browse to the file and download it. Follow the installation instructions, which will be similar to those for an extension transferred using adb.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "install-and-run-your-extension-in-firefox-for-android"
   content: content
 %}
@@ -243,7 +243,7 @@ Load a page in which your extension exercises. Now you can access any of the Jav
 Unlike desktop Firefox, where content scripts are debugged in context of the page in which they run, you debug and view the console messages from content scripts in Firefox for Android together with background scripts in the Toolbox.
 
 {% endcapture %}
-{% include modules/note.html
+{% include modules/note.liquid
     content: note
     alert: false
 %}
@@ -275,7 +275,7 @@ I/Gecko (30440): 1496056181889 addons.xpi WARN Addon with ID borderify@example.c
 If your add-on fails to run, check these messages as they may provide information explaining why.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "debug-your-extension"
   content: content
 %}
@@ -284,12 +284,12 @@ If your add-on fails to run, check these messages as they may provide informatio
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->

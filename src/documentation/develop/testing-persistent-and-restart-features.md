@@ -34,7 +34,7 @@ This article explains why you see these behaviors. It then shows you what to do 
 Before we look at how Firefox treats the extension you're testing; there are a couple of features of Firefox and extensions that you need to be aware of: the add-on ID and Firefox profiles.
 
 {% endcapture %}
-{% include modules/page-hero.html
+{% include modules/page-hero.liquid
     content: page_hero_banner_content
 %}
 
@@ -76,7 +76,7 @@ If the extension doesn't have an add-on ID defined with the `browser_specific_se
 You'll notice an additional ID in the image above, the Internal UUID. This is a unique identifier given to the extension on installation. It's used to define the storage location for resources included in the extension and identify an extension's data in [window.localStorage](https://developer.mozilla.org/docs/Web/API/Window/localStorage) or [indexedDB](https://developer.mozilla.org/docs/Web/API/IndexedDB_API). However, you don't need to know its value. Its use in `window.localStorage` or `indexedDB` is transparent and to access resources included in the extension you use [`runtime.getURL`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL), which returns the path to the resources. And, because it's unique to each installation, it doesn't provide an ID that can be relied upon for other purposes.
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
   id: "what-is-an-add-on-id"
   content: content_with_toc
 %}
@@ -92,7 +92,7 @@ You'll notice an additional ID in the image above, the Internal UUID. This is a 
 Data that defines how the user has configured Firefox, along with information generated as they browse the web such as history and cookies, is stored in a special folder, called a [profile](https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data). In addition to cookies, the profile holds local storage and other profile related content.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "what-is-a-firefox-profile"
   content: content
 %}
@@ -122,7 +122,7 @@ The consequences of this behavior, when reloading an extension, is that:
 - `browserAction` positions are not carried over.
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "extension-behavior-in-firefox"
   content: content
 %}
@@ -157,7 +157,7 @@ To get your extension to behave like a signed extension during development testi
   ![ID failure in console](/_assets/img/documentation/develop/ID_failure_console.png)
 
 {% endcapture %}
-{% include modules/one-column.html
+{% include modules/one-column.liquid
   id: "what-do-i-do-to-ensure-i-can-test-my-extension"
   content: content
 %}
@@ -166,12 +166,12 @@ To get your extension to behave like a signed extension during development testi
 
 <!-- Meta Data -->
 
-{%- include page-meta-data.html -%}
+{%- include page-meta-data.liquid -%}
 
 <!-- END: Meta Data -->
 
 <!-- Up Next -->
 
-{%- include up-next.html -%}
+{%- include up-next.liquid -%}
 
 <!-- END: Up Next -->
