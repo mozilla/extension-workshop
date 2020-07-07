@@ -11,83 +11,70 @@
 {% for item in pages %}
     {% if item.categories %}
         {% if on_current_page == true %}
-            {% assign next_page_ar = collections.all | where: "url", item.url %}
+            {% assign next_page_ar = collections.all | where: 'url', item.url %}
             {% for next_page in next_page_ar %}
-              {% if is_next_range < max_steps && next_page.skip_index != false %}
-
-                {%- include up-next-tile.liquid
-                    next_page: next_page -%}
-
-              {% endif %}
-              {% assign is_next_range = is_next_range | plus: 1 %}
-          {% endfor %}
+                {% if is_next_range < max_steps && next_page.skip_index != false %}
+                    {%- include up-next-tile.liquid -%}
+                {% endif %}
+                {% assign is_next_range = is_next_range | plus: 1 %}
+            {% endfor %}
         {% endif %}
+
         {% if page.url == item.url %}
             {% assign on_current_page = true %}
             {% assign is_next_range = 0 %}
         {% endif %}
 
         {% for cat in item.categories %}
-                {% if cat.pages %}
-                        {% for pg in cat.pages %}
-                            {% if on_current_page == true %}
-                                {% assign next_page_ar = collections.all | where: "url", pg.url %}
-                                {% for next_page in next_page_ar %}
-                                  {% if is_next_range < max_steps && next_page.skip_index != false %}
-
-                {%- include up-next-tile.liquid
-                    next_page: next_page -%}
-
-
-                                  {% endif %}
-                                  {% assign is_next_range = is_next_range | plus: 1 %}
-                              {% endfor %}
+            {% if cat.collections.all %}
+                {% for pg in cat.collections.all %}
+                    {% if on_current_page == true %}
+                        {% assign next_page_ar = collections.all | where: 'url', pg.url %}
+                        {% for next_page in next_page_ar %}
+                            {% if is_next_range < max_steps && next_page.skip_index != false %}
+                                {%- include up-next-tile.liquid -%}
                             {% endif %}
-                            {% if page.url == pg.url %}
-                                {% assign on_current_page = true %}
-                                {% assign is_next_range = 0 %}
-                            {% endif %}
+                            {% assign is_next_range = is_next_range | plus: 1 %}
                         {% endfor %}
-                {% endif %}
+                    {% endif %}
+                    {% if page.url == pg.url %}
+                        {% assign on_current_page = true %}
+                        {% assign is_next_range = 0 %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
         {% endfor %}
     {% elsif item.subfolderitems %}
         {% for subitem in item.subfolderitems %}
             {% if subitem.categories %}
                 {% if on_current_page == true %}
-                    {% assign next_page_ar = collections.all | where: 'permalink', subitem.url %}
+                    {% assign next_page_ar = collections.all | where: 'url', subitem.url %}
                     {% for next_page in next_page_ar %}
-                      {% if is_next_range < max_steps && next_page.skip_index != false %}
-
-
-
-                        {%- include up-next-tile.liquid
-                    next_page: next_page -%}
-
-                      {% endif %}
-                      {% assign is_next_range = is_next_range | plus: 1 %}
-                  {% endfor %}
+                        {% if is_next_range < max_steps && next_page.skip_index != false %}
+                            {%- include up-next-tile.liquid -%}
+                        {% endif %}
+                        {% assign is_next_range = is_next_range | plus: 1 %}
+                    {% endfor %}
                 {% endif %}
+
                 {% if page.url == subitem.url %}
                     {% assign on_current_page = true %}
                     {% assign is_next_range = 0 %}
                 {% endif %}
 
-                {% for cat in subitem.categories %}
-                    {% if cat.pages %}
-                        {% for pg in cat.pages %}
-                            {% if on_current_page == true %}
-                                {% assign next_page_ar = collections.all | where: 'permalink', pg.url %}
+                {% for cat in subitem.categories  %}
+                    {% if cat.collections.all %}
+                        {% for pg in ca t.collections.all %}
+                            {% if on_cur rent_page == true %}
+                                {% assign next_page_ar = collections.all | where: 'url', pg.url %}
                                 {% for next_page in next_page_ar %}
-                                  {% if is_next_range < max_steps && next_page.skip_index != false %}
-
-                        {%- include up-next-tile.liquid
-                    next_page: next_page -%}
-
-
-                                  {% endif %}
-                                  {% assign is_next_range = is_next_range | plus: 1 %}
-                              {% endfor %}
+                                    {% if is_next_range < max_steps && next_page.skip_index != false %}
+                                        {%- include up-next-tile.liquid -%}
+                                    {% endif  %}
+                                    {% assign is_next_range = is_next_range | plus: 1 %}
+                                {% endfor %}
                             {% endif %}
+
                             {% if page.url == pg.url %}
                                 {% assign on_current_page = true %}
                                 {% assign is_next_range = 0 %}
@@ -97,50 +84,36 @@
                 {% endfor %}
             {% else %}
                 {% if on_current_page == true %}
-                        {% assign next_page_ar = collections.all | where: 'permalink', subitem.url %}
-                        {% for next_page in next_page_ar %}
-                          {% if is_next_range < max_steps && next_page.skip_index != false %}
+                    {% assign next_page_ar = collections.all | where: 'url', subitem.url %}
+                    {% for next_page in next_page_ar %}
+                        {% if is_next_range < max_steps && next_page.skip_index != false %}
+                            {%- include up-next-tile.liquid -%}
+                        {% endif %}
+                        {% assign is_next_range = is_next_range | plus: 1 %}
+                    {% endfor %}
+                {% endif %}
 
-                        {%- include up-next-tile.liquid
-                    next_page: next_page -%}
-
-
-                          {% endif %}
-                          {% assign is_next_range = is_next_range | plus: 1 %}
-                      {% endfor %}
-                    {% endif %}
                 {% if page.url == subitem.url %}
                     {% assign on_current_page = true %}
                     {% assign is_next_range = 0 %}
                 {% endif %}
-
             {% endif %}
-
         {% endfor %}
-
     {% else %}
-
         {% if on_current_page == true %}
-
-            {% assign next_page_ar = collections.all | where: 'permalink', item.url %}
+            {% assign next_page_ar = collections.all | where: 'url', item.url %}
             {% for next_page in next_page_ar %}
-              {% if is_next_range < max_steps && next_page.skip_index != false %}
-
-                        {%- include up-next-tile.liquid
-                    next_page: next_page -%}
-
-
-              {% endif %}
-              {% assign is_next_range = is_next_range | plus: 1 %}
-          {% endfor %}
+                {% if is_next_range < max_steps && next_page.skip_index != false %}
+                    {%- include up-next-tile.liquid -%}
+                {% endif %}
+                {% assign is_next_range = is_next_range | plus: 1 %}
+            {% endfor %}
         {% endif %}
         {% if page.url == item.url %}
             {% assign on_current_page = true %}
             {% assign is_next_range = 0 %}
         {% endif %}
-
     {% endif %}
-
 {% endfor %}
 
     </article>

@@ -1,37 +1,28 @@
 <div class="table-of-contents-inner">
 
-{% for item in site.data.pages %}
-
-    {% if item.categories %}   
-
+{% for item in pages %}
+    {% if item.categories %}
         {% if page.url == item.url %}
-            
             {% if item.subpageitems %}
                 <h6>Contents</h6>
                 <ol>
-                {% for section in item.subpageitems %}
+                {%- for section in item.subpageitems -%}
                     <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                {% endfor %}
+                {%- endfor -%}
                 </ol>
             {% endif %}
-
         {% endif %}
-
         {% for cat in item.categories %}
-
-
                 {% if cat.pages %}
-
                         {% for pg in cat.pages %}
-
                             {% if page.url == pg.url %}
-                                
+
                                 {% if pg.subpageitems %}
                                     <h6>Contents</h6>
                                     <ol>
-                                    {% for section in pg.subpageitems %}
+                                    {%- for section in pg.subpageitems -%}
                                         <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                                    {% endfor %}
+                                    {%- endfor -%}
                                     </ol>
                                 {% endif %}
 
@@ -51,13 +42,13 @@
             {% if subitem.categories %}
 
                 {% if page.url == subitem.url %}
-                    
+
                     {% if subitem.subpageitems %}
                         <h6>Contents</h6>
                         <ol>
-                        {% for section in subitem.subpageitems %}
+                        {%- for section in subitem.subpageitems -%}
                             <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                        {% endfor %}
+                        {%- endfor -%}
                         </ol>
                     {% endif %}
 
@@ -69,13 +60,13 @@
                         {% for pg in cat.pages %}
 
                             {% if page.url == pg.url %}
-                                
+
                                 {% if pg.subpageitems %}
                                     <h6>Contents</h6>
                                     <ol>
-                                    {% for section in pg.subpageitems %}
+                                    {%- for section in pg.subpageitems -%}
                                         <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                                    {% endfor %}
+                                    {%- endfor -%}
                                     </ol>
                                 {% endif %}
 
@@ -91,18 +82,18 @@
             {% else %}
 
                 {% if page.url == subitem.url %}
-                    
+
                     {% if subitem.subpageitems %}
                         <h6>Contents</h6>
                         <ol>
-                        {% for section in subitem.subpageitems %}
+                        {%- for section in subitem.subpageitems -%}
                             <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                        {% endfor %}
+                        {%- endfor -%}
                         </ol>
                     {% endif %}
 
                 {% endif %}
-                
+
             {% endif %}
 
         {% endfor %}
@@ -110,13 +101,13 @@
     {% else %}
 
         {% if page.url == item.url %}
-            
+
             {% if item.subpageitems %}
                 <h6>Contents</h6>
                 <ol>
-                {% for section in item.subpageitems %}
+                {%- for section in item.subpageitems -%}
                     <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                {% endfor %}
+                {%- endfor -%}
                 </ol>
             {% endif %}
 

@@ -3,10 +3,9 @@ const md = require('markdown-it')({
   html: true,
   breaks: true,
   linkify: true,
-});
+}).disable('code');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
-const safeExternalLinks = require('eleventy-plugin-safe-external-links');
 
 module.exports = function (eleventyConfig) {
   const liquidParser = new Liquid({
@@ -25,20 +24,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/_assets/img/');
   eleventyConfig.addPassthroughCopy('./src/_assets/fonts/');
   eleventyConfig.addPassthroughCopy('./src/_assets/js/basket-client.js');
+  eleventyConfig.addPassthroughCopy({ './node_modules/lunr/lunr.min.js': '_assets/js/lunr.min.js' });
 
   // Plugins
   eleventyConfig.addPlugin(xmlFiltersPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
-  /*
-  eleventyConfig.addPlugin(safeExternalLinks, {
-    pattern: 'https://', // RegExp pattern for external links
-    noopener: true, // Whether to include noopener
-    noreferrer: true, // Whether to include noreferrer
-    files: [ // What output file extensions to work on
-      '.html'
-    ],
-  });
-  */
 
   // Markdown instance in general plus for filter in templates.
   eleventyConfig.setLibrary('md', md);
