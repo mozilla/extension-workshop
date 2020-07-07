@@ -48,7 +48,7 @@ This site has three templates: a full-width page, a sidebar page for documentati
 
 ### Uploading media
 
-1. Add the image files to `_assets/img/`
+1. Add the image files to `assets/img/`
 2. In your page, link to images using this page structure:
 
 This tag will output an entire `img` element. Note: that using `@optim` enables the jekyll asset pipeline to optimize the image. This is always recommended unless you see an issue with the output.
@@ -71,7 +71,7 @@ Here's an example using markdown - note you need to add `@path` and `@optim`.
 
 ### How to add a "sidebar" layout page
 
-1. Open `_data/pages.yaml`.
+1. Open `data/pages.yaml`.
 2. Add a node with appropriate attributes, in the appropriate location, for the new page. See below for [details on how to understand the pages.yaml structure](#understanding-the-pagesyaml-structure).
 3. Create a new page, nested inside a folder struture that matches the url path. For example, for permalink `/documentation/develop/best-practices-for-collecting-user-data-consents/`, you would create a file called `best-practices-for-collecting-user-data-consents.md` and place it in `documentation` > `develop`.
 4. For reference on how to create a page, review the `sidebar-master-template.md` file, which lists all available modules. Some notes:
@@ -177,7 +177,7 @@ Note: `published: false` will withhold this content from stage and production, t
 
 #### Add the page to the menu
 
-Go to `_data/content-guidelines-pages.yaml` and add a new entry for your page:
+Go to `data/content-guidelines-pages.yaml` and add a new entry for your page:
 
 ```
 - title: "Page Name"
@@ -187,13 +187,13 @@ Go to `_data/content-guidelines-pages.yaml` and add a new entry for your page:
 
 #### Controlling draft labelling
 
-If you don't want the page to be labelled as a draft, as and when it's ready remove `draft-label: true` from the relevant entry in `_data/content-guidelines.yaml`
+If you don't want the page to be labelled as a draft, as and when it's ready remove `draft-label: true` from the relevant entry in `data/content-guidelines.yaml`
 
 ## Deployment
 
 All deploys for stage and prod are handled via the [releases](https://github.com/mozilla/extension-workshop/releases) page.
 
-### Dev Deploys 
+### Dev Deploys
 
 The site is auto-deployed on commits to master to https://extensionworkshop-dev.allizom.org/. You can check the version on -dev with [the dev version link](https://extensionworkshop-dev.allizom.org/__version__)
 
@@ -201,7 +201,7 @@ The site is auto-deployed on commits to master to https://extensionworkshop-dev.
 
 Tags with a version ending in `-stage` will be deployed to https://extensionworkshop.allizom.org/. You can check the version on stage with [the stage version link](https://extensionworkshop.allizom.org/__version__)
 
-A good example of a tag for stage would be `v2.0.1-stage`. 
+A good example of a tag for stage would be `v2.0.1-stage`.
 
 ### Production Deploys
 

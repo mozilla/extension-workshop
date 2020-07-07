@@ -6,10 +6,10 @@ Dockerfile
 /node_modules/
 Gemfile
 rvm-installer
-_site/
+build/
 *.lock
 # Allow files we want to process
 !*.js
 !*.scss
 
-_assets/js/bundle.js
+assets/js/bundle.js

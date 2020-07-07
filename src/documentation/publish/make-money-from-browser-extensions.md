@@ -193,11 +193,11 @@ You can add a “contributions” button to your extension’s AMO page that lin
 - In the AMO developer hub, for the extension or theme you want to add a contributions button to, click Edit details.
 - In the Basic information section add your donations page link to Contributions URL.
 
-<img src="/_assets/img/Contributions_URL.png" alt="" />
+<img src="/assets/img/Contributions_URL.png" alt="" />
 
 A contribution section is then added to your extension’s AMO page.
 
-<img src="/_assets/img/Contribute_section_AMO.png" alt="" />
+<img src="/assets/img/Contribute_section_AMO.png" alt="" />
 
 #### Requesting donations from your browser extension
 

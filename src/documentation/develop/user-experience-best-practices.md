@@ -85,7 +85,7 @@ If your extension provides the user with features they can use on almost every w
 
 - This might include providing access to your image editor or opening a page from your website.
 
-![](/_assets/img/documentation/develop/browser-action.png)
+![](/assets/img/documentation/develop/browser-action.png)
 
 Where you have several features you want to give the user access, you can add a [popup](https://developer.mozilla.org/Add-ons/WebExtensions/Popups) to the button (a popup appears like a door hanger that opens when the user selects the browser action button).
 
@@ -95,7 +95,7 @@ If your extension offers a feature for a type of web page or specific domains, g
 
 - This might include providing access to your RSS reader on pages with RSS feeds or providing an extended feature to pages on your website.
 
-![](/_assets/img/documentation/develop/page-action.png)
+![](/assets/img/documentation/develop/page-action.png)
 
 Where you have several features you want to give the user access, you can add a [popup](https://developer.mozilla.org/Add-ons/WebExtensions/Popups) to the button.
 
@@ -105,7 +105,7 @@ If your extension includes information or actions that a user would want immedia
 
 - This might include notes the user can make about a page’s content or a feature offering various font substitutions to improve readability.
 
-![](/_assets/img/documentation/develop/bookmarks-sidebar.png)
+![](/assets/img/documentation/develop/bookmarks-sidebar.png)
 
 ### Does my extension offer functionality specific to page content or other browser features?
 
@@ -113,13 +113,13 @@ If your extension offers features the user might want to access in context, **ad
 
 - This might include offering access to an image editor on the image context menu or offering extended copy features on the context menu for selected page content.
 
-![Example of content menu items added by a WebExtension, from the context-menu-demo example](/_assets/img/documentation/develop/context_menu_example.png)
+![Example of content menu items added by a WebExtension, from the context-menu-demo example](/assets/img/documentation/develop/context_menu_example.png)
 
 ### Does my extension have settings the user can adjust?
 
 If your extension enables the user to change and save settings that affect the behavior of the extension, use an **[options page](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) to provide a standard Preferences link to settings** from the Add-on Manager.
 
-![Typical preferences button, to access an extension's settings, from the Add-on Manager](/_assets/img/documentation/develop/add-on-manager-preferences-button.png)
+![Typical preferences button, to access an extension's settings, from the Add-on Manager](/assets/img/documentation/develop/add-on-manager-preferences-button.png)
 
 <p class="note">In the Windows operating system, the “Preferences” button is labeled “Options”.</p>
 
@@ -127,13 +127,13 @@ If your extension enables the user to change and save settings that affect the b
 
 Where your extension needs to gather or display significant amounts of information (more than is suitable for an [alert](https://developer.mozilla.org/docs/Web/API/Window/alert) or would benefit from additional formatting) **use [bundled web pages](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages) to deliver forms and similar content.**
 
-![Example of a simple bundled page displayed as a detached panel.](/_assets/img/documentation/develop/bundled_page_as_panel.png)
+![Example of a simple bundled page displayed as a detached panel.](/assets/img/documentation/develop/bundled_page_as_panel.png)
 
 ### Does my extension try to help the user find web pages or content?
 
 If your extension includes functionality to locate web pages or content, such as offering a site-specific search, use [address bar suggestions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox) to deliver those recommendations.
 
-![Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions.](/_assets/img/documentation/develop/omnibox_example_full.png)
+![Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions.](/assets/img/documentation/develop/omnibox_example_full.png)
 
 ### Does my extension offer tools for developers?
 
@@ -170,7 +170,7 @@ If your extension has completed a critical, long running background task, use th
 
 However, use notifications sparingly. If it is sufficient for the user to discover that a process has completed when they return to the browser or extension, do **not** use notifications.
 
-![](/_assets/img/documentation/develop/notify-shadowed.png)
+![](/assets/img/documentation/develop/notify-shadowed.png)
 
 ### Use browserAction badges sparingly
 
@@ -247,7 +247,7 @@ Testing tips:
 - In AMO you have the option to [identify your extension as "experimental"](/documentation/publish/submitting-an-add-on/#listing-on-amo) or publish a [beta or other non-final release](/documentation/publish/signing-and-distribution-overview/).
   - If you flag your extension as experimental it is listed in AMO, but with a lower profile. When the extension is ready for a wider audience, you can turn off the experimental flag in AMO.
   - If you have a published extension, you can use the Development channel to offer an alpha or beta version for testing. You will need to direct your testers to the Development Channel of your extension’s listing or let your testers know the link to use to install your extension.
-    ![The development channel section of an extension's listing page, offering access to alpha and beta versions for testing.](/_assets/img/documentation/develop/extensions-development-channel.png)
+    ![The development channel section of an extension's listing page, offering access to alpha and beta versions for testing.](/assets/img/documentation/develop/extensions-development-channel.png)
     When you are happy with your update, you can publish it as the new release version of your extension.
 - If you want to distribute your extension to users outside AMO, you can find the instructions for doing so, and the installation instructions you need to provide users, in the article on [Sideloading add-ons](/documentation/publish/distribute-sideloading/). Remember that, unlike distribution through AMO, you will need to send users any updated versions of your extension as you make improvements.
 - Use the [Responsive Design Mode](https://developer.mozilla.org/docs/Tools/Responsive_Design_Mode) to test your extension for its behavior on other screen sizes and device types.

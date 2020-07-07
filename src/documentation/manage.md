@@ -51,7 +51,7 @@ When you’re ready to improve your extension or receive suggestions for new fea
 
 [Best practices for updating extensions](/documentation/manage/best-practices-for-updating/)
 
-![Power Up Extensions](/_assets/img/documentation/develop/PowerUpExtensions_fullwidth.png)
+![Power Up Extensions](/assets/img/documentation/develop/PowerUpExtensions_fullwidth.png)
 
 {% endcapture %}
 {% include modules/one-column.liquid

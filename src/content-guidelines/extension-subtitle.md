@@ -15,7 +15,7 @@ The subtitle is one of your extensionâ€™s most important pieces of content. Itâ€
 <!-- Full Width Image -->
 <section class="image-with-caption" markdown="1">
 
-![Remembear subtitle screenshot](/_assets/img/content-guidelines/remembear-subtitle.png "Remembear subtitle text")
+![Remembear subtitle screenshot](/assets/img/content-guidelines/remembear-subtitle.png "Remembear subtitle text")
 
 </section>
 

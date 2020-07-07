@@ -55,7 +55,7 @@ Otherwise, if you prefer to self-distribute your theme, go to the [unlisted Them
 
 To use the AMO theme generator, fill out the form with information for your new theme.
 
-<img src="/_assets/img/documentation/themes/new_theme.png" style="border:1px solid black" />
+<img src="/assets/img/documentation/themes/new_theme.png" style="border:1px solid black" />
 
 Start by giving your new theme a name.
 
@@ -70,7 +70,7 @@ In the example above, the image fades into a solid color, keeping the image size
 
 Color values can be entered using hex, rgb, or rgba. You can also use the color selector to pick the colors for your theme:
 
-<img src="/_assets/img/documentation/themes/theme_colors.png" style="border:1px solid black" />
+<img src="/assets/img/documentation/themes/theme_colors.png" style="border:1px solid black" />
 
 The color you select will be displayed in the example below the color settings so you can play with colors until you find just the right combination for your theme. The largest block represents the intensity of the color, the rainbow slider to its right allows you to select the hue, and the rightmost slider defines the opacity of the color.
 
@@ -88,7 +88,7 @@ You can use the [Firefox Color extension](https://color.firefox.com/) to preview
 
 The colors in the following image shows you the colors you can define for your theme. All but the **Header area background** and **Header area text and icons** are optional:
 
-<img src="/_assets/img/documentation/themes/theme_colors_labeled.png" style="border:1px solid black" />
+<img src="/assets/img/documentation/themes/theme_colors_labeled.png" style="border:1px solid black" />
 
 **Header area background** <br/>
 The color of the header area background, displayed in the part of the header not covered or visible through the header image. **Manifest field**: _accentcolor_.
@@ -179,7 +179,7 @@ The license under which your theme is published will be by the choices you make 
 
 Once you have filled in all of the required information, you can complete the submission process by clickiing on the **Submit Version** button. You should see something that looks like this:
 
-<img src="/_assets/img/documentation/themes/theme_after_submit.png" style="border:1px solid black" />
+<img src="/assets/img/documentation/themes/theme_after_submit.png" style="border:1px solid black" />
 
 {% endcapture %}
 {% include modules/one-column.liquid

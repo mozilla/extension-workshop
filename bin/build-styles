@@ -6,8 +6,8 @@ const util = require('util');
 const sass = require('node-sass');
 
 const renderSass = util.promisify(sass.render);
-const inputFile = './src/_assets/css/styles.scss';
-const outputFile = './src/_site/_assets/css/styles.css';
+const inputFile = './src/assets/css/styles.scss';
+const outputFile = './src/build/assets/css/styles.css';
 
 const buildSass = async function () {
   const { css } = await renderSass({

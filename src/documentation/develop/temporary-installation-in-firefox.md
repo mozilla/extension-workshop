@@ -82,7 +82,7 @@ The extension installs and remains installed until you remove it or restart Fire
 
 To reload the extension, click "Reload":
 
-![reload-extension](/_assets/img/documentation/develop/reload-extension.png)
+![reload-extension](/assets/img/documentation/develop/reload-extension.png)
 
 This:
 

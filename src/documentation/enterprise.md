@@ -60,7 +60,7 @@ Extensions give you the ability to complement standard browser features and prov
 
 {% capture col_1_content %}
 
-![Enterprise Extensions](/_assets/img/documentation/develop/EnterpriseExtensions_promo.jpg)
+![Enterprise Extensions](/assets/img/documentation/develop/EnterpriseExtensions_promo.jpg)
 
 {% endcapture %}
 {% capture col_2_content %}

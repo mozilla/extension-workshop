@@ -7,8 +7,8 @@
 
 set -ex
 
-if [ ! -d "_site" ]; then
-    echo "Can't find /_site/ directory. Are you running from the correct"\
+if [ ! -d "src/build" ]; then
+    echo "Can't find /src/build/ directory. Are you running from the correct"\
          "root directory?"
     exit 1
 fi
@@ -57,7 +57,7 @@ ACAO="\"Access-Control-Allow-Origin\": \"*\""
 [ -e version.json ] || $(dirname $0)/build-version-json.sh
 
 if [ -e version.json ]; then
-    mv version.json _site/__version__
+    mv version.json src/build/__version__
     # __version__ JSON; short cache
     aws s3 cp \
       --cache-control "max-age=${TEN_MINUTES}" \
@@ -65,7 +65,7 @@ if [ -e version.json ]; then
       --metadata "{${ACAO}, ${CSPSTATIC}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
       --metadata-directive "REPLACE" \
       --acl "public-read" \
-      _site/__version__ s3://${EXTENSION_WORKSHOP_BUCKET}/__version__
+      src/build/__version__ s3://${EXTENSION_WORKSHOP_BUCKET}/__version__
 fi
 
 # HTML; short cache
@@ -77,7 +77,7 @@ aws s3 sync \
   --metadata "{${CSP}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
-  _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
+  src/build/ s3://${EXTENSION_WORKSHOP_BUCKET}/
 
 # JSON; short cache
 aws s3 sync \
@@ -88,7 +88,7 @@ aws s3 sync \
   --metadata "{${ACAO}, ${CSPSTATIC}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
-  _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
+  src/build/ s3://${EXTENSION_WORKSHOP_BUCKET}/
 
 # SVG; cache forever, assign correct content-type
 aws s3 sync \
@@ -99,7 +99,7 @@ aws s3 sync \
   --metadata "{${CSPSTATIC}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
-  _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
+  src/build/ s3://${EXTENSION_WORKSHOP_BUCKET}/
 
 # Everything else; cache forever, because it has hashes in the filenames
 aws s3 sync \
@@ -108,11 +108,11 @@ aws s3 sync \
   --metadata "{${CSPSTATIC}, ${HSTS}, ${TYPE}, ${XSS}, ${XFRAME}, ${REFERRER}}" \
   --metadata-directive "REPLACE" \
   --acl "public-read" \
-  _site/ s3://${EXTENSION_WORKSHOP_BUCKET}/
+  src/build/ s3://${EXTENSION_WORKSHOP_BUCKET}/
 
 # HTML - `path/index.html` to `path` resources; short cache
-for fn in $(find _site -name 'index.html' -not -path '_site/index.html'); do
-  s3path=${fn#_site/}
+for fn in $(find src/build -name 'index.html' -not -path 'src/build/index.html'); do
+  s3path=${fn#src/build/}
   s3path=${s3path%/index.html}
   aws s3 cp \
     --cache-control "max-age=${TEN_MINUTES}" \

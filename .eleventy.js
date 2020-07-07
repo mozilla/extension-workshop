@@ -9,7 +9,7 @@ const xmlFiltersPlugin = require('eleventy-xml-plugin');
 
 module.exports = function (eleventyConfig) {
   const liquidParser = new Liquid({
-    root: ['./src/_includes', './src/_layouts'],
+    root: ['./src/includes', './src/layouts'],
     extname: '.liquid',
     dynamicPartials: false,
     strictFilters: true,
@@ -21,10 +21,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
   // Explicitly copy through the built files needed.
-  eleventyConfig.addPassthroughCopy('./src/_assets/img/');
-  eleventyConfig.addPassthroughCopy('./src/_assets/fonts/');
-  eleventyConfig.addPassthroughCopy('./src/_assets/js/basket-client.js');
-  eleventyConfig.addPassthroughCopy({ './node_modules/lunr/lunr.min.js': '_assets/js/lunr.min.js' });
+  eleventyConfig.addPassthroughCopy('./src/assets/img/');
+  eleventyConfig.addPassthroughCopy('./src/assets/fonts/');
+  eleventyConfig.addPassthroughCopy('./src/assets/js/basket-client.js');
+  eleventyConfig.addPassthroughCopy({ './node_modules/lunr/lunr.min.js': 'assets/js/lunr.min.js' });
 
   // Plugins
   eleventyConfig.addPlugin(xmlFiltersPlugin);
@@ -39,10 +39,11 @@ module.exports = function (eleventyConfig) {
   return {
     // templateFormats: ['md', 'liquid', 'html'],
     dir: {
+      data: 'data',
       input: 'src',
-      output: 'src/_site',
-      includes: '_includes',
-      layouts: '_layouts',
+      output: 'src/build',
+      includes: 'includes',
+      layouts: 'layouts',
     },
   };
 };

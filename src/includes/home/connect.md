@@ -18,7 +18,7 @@ When you build on Firefox, you build with a community of add-on developers. And 
 <a href="https://discourse.mozilla.org/c/add-ons" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
-![Community Forums](/_assets/img/icons/community-forums.svg "Community Forums")
+![Community Forums](/assets/img/icons/community-forums.svg "Community Forums")
 
 #### Community Forums
 
@@ -32,7 +32,7 @@ When you build on Firefox, you build with a community of add-on developers. And 
 <a href="https://mail.mozilla.org/listinfo/dev-addons" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link" markdown="1">
 
-![Get Involved](/_assets/img/icons/get-involved.svg "Get Involved")
+![Get Involved](/assets/img/icons/get-involved.svg "Get Involved")
 
 #### Connect with other extension developers
 

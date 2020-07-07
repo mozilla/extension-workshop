@@ -11,16 +11,16 @@ const inputFiles = [
   'node_modules/velocity-animate/velocity.js',
   'node_modules/velocity-ui-pack/velocity.ui.js',
   'node_modules/slick-carousel/slick/slick.js',
-  'src/_assets/js/tinypubsub.js',
-  'src/_assets/js/breakpoints.js',
-  'src/_assets/js/parallax.js',
-  'src/_assets/js/parallaxFG.js',
-  'src/_assets/js/inview.js',
-  'src/_assets/js/youtubeplayer.js',
-  'src/_assets/js/main.js',
+  'src/assets/js/tinypubsub.js',
+  'src/assets/js/breakpoints.js',
+  'src/assets/js/parallax.js',
+  'src/assets/js/parallaxFG.js',
+  'src/assets/js/inview.js',
+  'src/assets/js/youtubeplayer.js',
+  'src/assets/js/main.js',
 ];
 
-const outputFile = './src/_site/_assets/js/bundle.js';
+const outputFile = './src/build/assets/js/bundle.js';
 
 const buildJS = async function () {
   const data = [];

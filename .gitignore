@@ -7,7 +7,7 @@ __MACOSX/
 
 .vscode/*
 
-src/_site
-src/_assets/css/*.css
-src/_assets/css/*.css.map
-src/_assets/js/bundle.js
+src/build
+src/assets/css/*.css
+src/assets/css/*.css.map
+src/assets/js/bundle.js

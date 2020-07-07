@@ -131,7 +131,7 @@ Here are some examples of good onboarding pages:
 <article class="module-content grid-x grid-padding-x align-middle">
 <div class="cell small-12 medium-6 medium-order-2" markdown="1">
 
-![Example onboarding page that details how to use the extension's features and turn them on and off](/_assets/img/documentation/develop/Laser_cat_onboarding.png)
+![Example onboarding page that details how to use the extension's features and turn them on and off](/assets/img/documentation/develop/Laser_cat_onboarding.png)
 
 </div>
 <div class="cell small-12 medium-6" markdown="1">
@@ -152,7 +152,7 @@ This page provides a succinct description of the extension, clear instructions o
 <article class="module-content grid-x grid-padding-x align-middle">
 <div class="cell small-12 medium-6" markdown="1">
 
-![Example onboarding page that gives the user options for a one-click set up or the option to proceed to the settings page](/_assets/img/documentation/develop/Ghostery_onboarding.png)
+![Example onboarding page that gives the user options for a one-click set up or the option to proceed to the settings page](/assets/img/documentation/develop/Ghostery_onboarding.png)
 
 </div>
 <div class="cell small-12 medium-6" markdown="1">
@@ -228,7 +228,7 @@ Here are some examples of good upboarding pages:
 <article class="module-content grid-x grid-padding-x align-middle">
 <div class="cell small-12 medium-6 medium-order-2" markdown="1">
 
-![Example upboarding page that includes a summary of the extension's features, details of the improvements and updates, and a request for donations.](/_assets/img/documentation/develop/snaplinks_upboarding.jpg)
+![Example upboarding page that includes a summary of the extension's features, details of the improvements and updates, and a request for donations.](/assets/img/documentation/develop/snaplinks_upboarding.jpg)
 
 </div>
 <div class="cell small-12 medium-6" markdown="1">
@@ -286,7 +286,7 @@ Here are some examples of good offboarding pages:
 <article class="module-content grid-x grid-padding-x align-middle">
 <div class="cell small-12 medium-6 medium-order-2" markdown="1">
 
-![Example of boarding page with a "help us improve" message and simple survey with a list of reasons the extension is being removed.](/_assets/img/documentation/develop/grammarly_offboarding.png)
+![Example of boarding page with a "help us improve" message and simple survey with a list of reasons the extension is being removed.](/assets/img/documentation/develop/grammarly_offboarding.png)
 
 </div>
 <div class="cell small-12 medium-6" markdown="1">
@@ -307,7 +307,7 @@ This page provides a personal message from one of the Grammarly developers, a sh
 <article class="module-content grid-x grid-padding-x align-middle">
 <div class="cell small-12 medium-6" markdown="1">
 
-![Example offboarding page that includes a reinstall button and request information about the removal with a simple questionnaire.](/_assets/img/documentation/develop/ADB_offboarding.png)
+![Example offboarding page that includes a reinstall button and request information about the removal with a simple questionnaire.](/assets/img/documentation/develop/ADB_offboarding.png)
 
 </div>
 <div class="cell small-12 medium-6" markdown="1">

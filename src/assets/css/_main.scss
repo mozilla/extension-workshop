@@ -606,7 +606,7 @@ html {
       display: block;
       width: rem-calc(25);
       height: rem-calc(25);
-      background: transparent url('/_assets/img/firefox-logo.png') no-repeat
+      background: transparent url('/assets/img/firefox-logo.png') no-repeat
         center/contain;
     }
 
@@ -1036,7 +1036,7 @@ $hamburger-hover-transition-timing-function: linear;
       text-decoration: none;
       text-indent: 120%;
       white-space: nowrap;
-      background: #fff url('/_assets/img/moz-logo.svg') no-repeat 0 0 /#{rem-calc(
+      background: #fff url('/assets/img/moz-logo.svg') no-repeat 0 0 /#{rem-calc(
           100
         )};
       color: $white;
@@ -1698,7 +1698,7 @@ a.tile-block-link {
         top: 0;
         width: 100%;
         height: 100%;
-        background: transparent url('/_assets/img/ajax-loader.svg') no-repeat
+        background: transparent url('/assets/img/ajax-loader.svg') no-repeat
           center/86%;
       }
     }
@@ -1750,7 +1750,7 @@ a.tile-block-link {
             top: 0;
             width: 100%;
             height: 100%;
-            background: transparent url('/_assets/img/ajax-loader.svg')
+            background: transparent url('/assets/img/ajax-loader.svg')
               no-repeat center/86%;
           }
         }
@@ -1838,7 +1838,7 @@ a.tile-block-link {
       top: calc(50% - #{rem-calc(32)});
       width: rem-calc(64);
       height: rem-calc(64);
-      background: transparent url('/_assets/img/ajax-loader.svg') no-repeat
+      background: transparent url('/assets/img/ajax-loader.svg') no-repeat
         center/100%;
     }
   }

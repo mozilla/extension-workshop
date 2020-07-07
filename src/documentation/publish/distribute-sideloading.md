@@ -90,17 +90,17 @@ To use Install Add-on From File in Add-on Manager, send the user the signed add-
 
 3. From the settings cog, open **Install Add-on From File**:
 
-   ![Add-ons Manager setting cog](/_assets/img/documentation/publish/install-addon-from-file.png)
+   ![Add-ons Manager setting cog](/assets/img/documentation/publish/install-addon-from-file.png)
 
 4. Browse to and open the file from the location where it was saved.
 
 5. When prompted click **Add**:
 
-   ![add add-on confirmation](/_assets/img/documentation/publish/add_add_on_confirmation.png)
+   ![add add-on confirmation](/assets/img/documentation/publish/add_add_on_confirmation.png)
 
 6. The add-on will now appear in the add-on manager’s list of installed add-ons and be ready to use:
 
-   ![add-on appears in add-ons manager](/_assets/img/documentation/publish/add_on_added.png)
+   ![add-on appears in add-ons manager](/assets/img/documentation/publish/add_on_added.png)
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -162,7 +162,7 @@ The standard installation of Firefox disables the automatic installation of add-
 
   - The install will happen silently, and the user will need to open add-on manager and enable the add-on:
 
-    ![view of disabled add-on in add-ons manager](/_assets/img/documentation/publish/add_on_disabled.png)
+    ![view of disabled add-on in add-ons manager](/assets/img/documentation/publish/add_on_disabled.png)
 
     ```
 
@@ -171,7 +171,7 @@ The standard installation of Firefox disables the automatic installation of add-
     - An interstitial message will be displayed:
     ```
 
-    ![screenshot of interstitial message](/_assets/img/documentation/publish/interstitial_windows.png)
+    ![screenshot of interstitial message](/assets/img/documentation/publish/interstitial_windows.png)
 
     ```
 

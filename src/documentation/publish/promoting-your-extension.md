@@ -37,11 +37,11 @@ Add a snazzy button to your website or blog telling people to "Get the add-on." 
 
 - **172 x 60 pixels**
 
-<img src="/_assets/img/documentation/publish/get-the-addon-178x60px.png" alt="" />
+<img src="/assets/img/documentation/publish/get-the-addon-178x60px.png" alt="" />
 
 - **129 x 45 pixels**
 
-<img src="/_assets/img/documentation/publish/get-the-addon-129x45px.png" alt="" />
+<img src="/assets/img/documentation/publish/get-the-addon-129x45px.png" alt="" />
 
 Simply save these images, put them on your website, and link them to your add-on’s listing on [addons.mozilla.org](https://addons.mozilla.org).
 

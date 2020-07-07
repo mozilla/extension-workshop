@@ -48,14 +48,14 @@
     "prettier-ci": "prettier -c '**'",
     "prettier-dev": "pretty-quick --branch master",
     "test": "npm run prettier-ci && npm run lint && npm run stylelint",
-    "clean": "rimraf './src/_site/'",
+    "clean": "rimraf './src/build/'",
     "build": "eleventy && sass:build && uglify:build",
     "build:serve": "eleventy --serve --port=8081",
     "build:debug": "DEBUG=Eleventy* eleventy --serve --port=8081",
     "start": "npm-run-all -p build:serve sass:* uglify:*",
     "sass:build": "bin/build-styles",
-    "sass:watch": "chokidar 'src/_assets/css/*.scss' -c 'npm run sass:build'",
+    "sass:watch": "chokidar 'src/assets/css/*.scss' -c 'npm run sass:build'",
     "uglify:build": "bin/build-script",
-    "uglify:watch": "chokidar 'src/_assets/js/*.js' -c 'npm run uglify:build'"
+    "uglify:watch": "chokidar 'src/assets/js/*.js' -c 'npm run uglify:build'"
   }
 }

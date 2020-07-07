@@ -196,11 +196,11 @@ The standard downloads of Firefox are configured so that sideloads using the sta
 
 - the user has displayed an interstitial warning:
 
-<img src="/_assets/img/interstitial_windows.png" alt="" />
+<img src="/assets/img/interstitial_windows.png" alt="" />
 
 - the add-on is installed but disabled, and the user should enable it from Add-on manager:
 
-<img src="/_assets/img/add_on_disabled.png" alt="" />
+<img src="/assets/img/add_on_disabled.png" alt="" />
 
 The use of interstitial and silent disabled installs varies between versions of Firefox, for example, version 54 uses the interstitial message.
 

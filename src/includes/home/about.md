@@ -32,7 +32,7 @@ Get your great idea into the hands of millions of Firefox users. Join an interna
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API" class="cell small-12 large-4 tile illustrated-tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Tinker with Tabs]("/_assets/img/Tinker-with-Tabs-v2.svg" "Tinker with Tabs")
+![Tinker with Tabs]("/assets/img/Tinker-with-Tabs-v2.svg" "Tinker with Tabs")
 
 #### Tinker with Tabs
 
@@ -48,7 +48,7 @@ Your extension can control browser tabs. Use the API to open, close, move, hide,
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts" class="cell small-12 large-4 tile illustrated-tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Transform Web Content]("/_assets/img/Integrate-Web-Search.svg" "Transform Web Content")
+![Transform Web Content]("/assets/img/Integrate-Web-Search.svg" "Transform Web Content")
 
 #### Integrate Web Search
 
@@ -64,7 +64,7 @@ Use Firefox's powerful built-in search capabilities to open up the web for users
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface" class="cell small-12 large-4 tile illustrated-tile tile-block-link">
 <div class="block-link" markdown="1">
 
-![Add Innovative Features]("/_assets/img/Add-Innovative-Features-v2.svg" "Add Innovative Features")
+![Add Innovative Features]("/assets/img/Add-Innovative-Features-v2.svg" "Add Innovative Features")
 
 #### Add Innovative Features
 
@@ -116,20 +116,20 @@ An extension is a simple collection of files that modify the browser’s appeara
 <div class="anatomy-container">
   <div class="anatomy-illustration">
     {%- include home/anatomy-v2.svg | safe -%}
-    <p class="manifest show-for-medium"><img src="/_assets/img/icons/manifest.svg" alt="" />Manifest.json</p>
+    <p class="manifest show-for-medium"><img src="/assets/img/icons/manifest.svg" alt="" />Manifest.json</p>
   </div>
   <div id="anatomy-control" class="anatomy-description">
     {%- include home/anatomy-v2-mobile.svg | safe -%}
-    <button class="popup-action" data-panel="anatomy-ui"><img src="/_assets/img/icons/user-interface-link.svg" alt="" />User Interface</button>
-    <button class="popup-action" data-panel="anatomy-content"><img src="/_assets/img/icons/content-script-link.svg" alt="" />Content Scripts</button>
-    <button class="popup-action" data-panel="anatomy-background"><img src="/_assets/img/icons/background-scripts-link.svg" alt="" />Background Scripts</button>
+    <button class="popup-action" data-panel="anatomy-ui"><img src="/assets/img/icons/user-interface-link.svg" alt="" />User Interface</button>
+    <button class="popup-action" data-panel="anatomy-content"><img src="/assets/img/icons/content-script-link.svg" alt="" />Content Scripts</button>
+    <button class="popup-action" data-panel="anatomy-background"><img src="/assets/img/icons/background-scripts-link.svg" alt="" />Background Scripts</button>
   </div>
-  <p class="manifest show-for-small-only"><img src="/_assets/img/icons/manifest.svg" alt="" />Manifest.json</p>
+  <p class="manifest show-for-small-only"><img src="/assets/img/icons/manifest.svg" alt="" />Manifest.json</p>
 </div>
 
 <aside class="popup-panel" id="anatomy-ui" markdown="1">
 
-![User Interface]("/_assets/img/icons/user-interface.svg" "User Interface")
+![User Interface]("/assets/img/icons/user-interface.svg" "User Interface")
 
 #### User Interface
 
@@ -140,7 +140,7 @@ Add toolbar buttons, menu choices, and—only in Firefox—sidebars to display a
 </aside>
 <aside class="popup-panel" id="anatomy-content" markdown="1">
 
-![Content Scripts]("/_assets/img/icons/content-script.svg" "Content Scripts")
+![Content Scripts]("/assets/img/icons/content-script.svg" "Content Scripts")
 
 #### Content Scripts
 
@@ -151,7 +151,7 @@ Change webpage content. Remove ads, highlight key words, and reformat elements f
 </aside>
 <aside class="popup-panel" id="anatomy-background" markdown="1">
 
-![Background Scripts]("/_assets/img/icons/background-scripts.svg" "Background Scripts")
+![Background Scripts]("/assets/img/icons/background-scripts.svg" "Background Scripts")
 
 #### Background Scripts
 
