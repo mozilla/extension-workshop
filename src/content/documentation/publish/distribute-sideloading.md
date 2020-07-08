@@ -150,7 +150,7 @@ If you are developing an add-on for Firefox you can use an extension proxy file 
 
 ### Add the add-on XPI file to a standard extensions folder
 
-In what follows {ec8030f7-c20a-464f-9b0e-13a3a9e97384} is the application ID of Firefox.
+In what follows `{ec8030f7-c20a-464f-9b0e-13a3a9e97384}` is the application ID of Firefox.
 
 The standard installation of Firefox disables the automatic installation of add-ons from these locations (see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations)). As a result, the process for each of the methods described below is as follows:
 
@@ -162,18 +162,9 @@ The standard installation of Firefox disables the automatic installation of add-
 
     ![view of disabled add-on in add-ons manager](/assets/img/documentation/publish/add_on_disabled.png)
 
-    ```
-
-    e.
-
-    - An interstitial message will be displayed:
-    ```
+  - An interstitial message will be displayed:
 
     ![screenshot of interstitial message](/assets/img/documentation/publish/interstitial_windows.png)
-
-    ```
-
-    ```
 
 - The add-on is now installed.
 
@@ -225,11 +216,16 @@ Note: To install an add-on for all users of a Windows computer, see [Installatio
 
 To install an add-on for use by all Firefox profiles and all users, copy the XPI file to the global extension folder located in Library. If this folder doesn't exist, you will need to create it.
 
-`/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/`
+```shell
+/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/
+```
+
 
 To install an add-on for a specific user, copy the XPI file to the user's local Library:
 
-`~/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/`
+```shell
+~/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/
+```
 
 <section id="linux"></section>
 
