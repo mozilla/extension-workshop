@@ -21,9 +21,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
   // Explicitly copy through the built files needed.
-  eleventyConfig.addPassthroughCopy('./src/assets/img/');
-  eleventyConfig.addPassthroughCopy('./src/assets/fonts/');
-  eleventyConfig.addPassthroughCopy('./src/assets/js/basket-client.js');
+  eleventyConfig.addPassthroughCopy({ './src/assets/img/': 'assets/img/' });
+  eleventyConfig.addPassthroughCopy({ './src/assets/fonts/': 'assets/fonts/' });
+  eleventyConfig.addPassthroughCopy({ './src/assets/js/basket-client.js': 'assets/js/basket-client.js' });
   eleventyConfig.addPassthroughCopy({ './node_modules/lunr/lunr.min.js': 'assets/js/lunr.min.js' });
 
   // Plugins
