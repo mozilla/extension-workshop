@@ -70,7 +70,7 @@ Here is a list of best practices you should follow to keep the users of your ext
   For more information, see [Accessing page script objects from content scripts](https://developer.mozilla.org/Add-ons/WebExtensions/Sharing_objects_with_page_scripts).
 - **Use `window.eval()` in content scripts with caution**  
   You should be very careful when running code in the context of a page. A malicious web page could attempt to run code of its own by exploiting the use of `window.eval()`. It might do this by, for example, redefining objects your code might want to evaluate.  
-  For more information, see [Don't use eval needlessly!](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval#Don't_use_eval_needlessly!)
+  For more information, see [Never use eval!](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval#Never_use_eval!)
 - **Create your UI with extension components**  
   Create the UI for your extension using the [built-in extension UI features](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface), such as bundled pages, pageAction, and popups on pageAction and browserAction. Don’t add UI elements, such as buttons or toolbars, directly to web pages. If you do, scripts on the web page could compromise your extension. See [Keybase Browser Extension Insecure](https://www.grepular.com/Keybase_Browser_Extension_Insecure) for an example of the potential issues.  
   If the standard UI components aren’t sufficient for your needs use iframes with [data URLs](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) to prevent fingerprinting, or add iframes to the extension code so a page can’t interact with your UI content, such as buttons.
