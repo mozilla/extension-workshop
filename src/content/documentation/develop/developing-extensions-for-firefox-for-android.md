@@ -111,15 +111,13 @@ Lint does not report on APIs that are not implemented by Firefox or Firefox for 
 
 When setting `strict_min_version`, unless you’re targeting a specific version of Firefox, choose the most recent version of Firefox you expect your extension to be compatible with. For example, you can reasonably expect that most installations of Firefox for Android will be the current or previous version. So, if the current version is 66, consider setting 65 is the minimum version:
 
-{% highlight json linenos %}
-
+```json
 "browser_specific_settings": {
   "gecko": {
     "strict_min_version": "65.0"
   }
 }
-
-{% endhighlight %}
+```
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -136,15 +134,13 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 
 In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the manifest.json:
 
-{% highlight javascript linenos %}
-
+```json
 "browser_specific_settings": {
   "gecko": {
     "id": "borderify@example.com"
   }
 }
-
-{% endhighlight %}
+```
 
 If you’re using web-ext, follow the [Testing in Firefox for Android](/documentation/develop/getting-started-with-web-ext#testing-in-firefox-for-android) instructions.
 
@@ -258,19 +254,15 @@ For more details on using the web developer tools, see [Firefox Developer Tools]
 
 In addition to the console messages output through WebIDE, there may also be messages relating to the validation of the extension’s manifest.json files. These messages can be viewed using the adb logcat command. To avoid receiving other, unrelated messages, you can pipe the output through grep, filtering by the extension’s ID, for example:
 
-{% highlight json linenos %}
-
+```shell
 /path/to/adb logcat | grep borderify@example.com
-
-{% endhighlight %}
+```
 
 This will give output similar to this:
 
-{% highlight javascript %}
-
+```shell
 I/Gecko (30440): 1496056181889 addons.xpi WARN Addon with ID borderify@example.com already installed, older version will be disabled
-
-{% endhighlight %}
+```
 
 If your add-on fails to run, check these messages as they may provide information explaining why.
 

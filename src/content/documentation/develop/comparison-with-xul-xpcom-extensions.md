@@ -218,11 +218,11 @@ You'll see that many APIs have no WebExtensions equivalent yet. However, we are 
 
 Historically, XUL/XPCOM extensions have been able to get direct access to web content. For example, they can directly access and modify the page DOM using [`gBrowser`](https://developer.mozilla.org/docs/Mozilla/Tech/XUL/tabbrowser):
 
-{% highlight json linenos %}
+```js
 
 gBrowser.contentWindow.document.querySelector("h1").innerHTML = "yadda yadda";
 
-{% endhighlight %}
+```
 
 However, this is only possible in single-process Firefox. In [multiprocess Firefox](https://developer.mozilla.org/docs/Mozilla/Firefox/Multiprocess_Firefox), web content and extension code run in different processes, so this direct access is no longer possible, and extensions which rely on it will break. Multiprocess Firefox is coming soon, and multiprocess compatibility will be a necessity.
 

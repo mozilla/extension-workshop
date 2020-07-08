@@ -355,27 +355,22 @@ One big limitation of WebExtensions compared with the SDK is that SDK add-ons ca
 
 To access privileged APIs in the SDK, you use require():
 
-{% highlight javascript linenos %}
-
+```js
 var tabs = require("sdk/tabs");
 tabs.open("https://developer.mozilla.org/");
-
-{% endhighlight %}
+```
 
 With WebExtensions most APIs are made available already, with no need to import them:
 
-{% highlight javascript linenos %}
-
+```js
 browser.tabs.create({ "url": "https://developer.mozilla.org/" });
-
-{% endhighlight %}
+```
 
 For some WebExtension APIs, you need to ask permission first, using the [`permissions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest.json key. In the example below, the extension will need to ask for the "tabs" permission if they want access to the tab's URL:
 
 **manifest.json:**
 
-{% highlight json linenos %}
-
+```json
 ...
 
 "permissions": [
@@ -383,13 +378,11 @@ For some WebExtension APIs, you need to ask permission first, using the [`permis
 ]
 
 ...
-
-{% endhighlight %}
+```
 
 **background script:**
 
-{% highlight javascript linenos %}
-
+```js
 function logUrl(tabs) {
   console.log(tabs[0].url);
 }
@@ -400,8 +393,7 @@ var querying = browser.tabs.query({
 });
 
 querying.then(logUrl);
-
-{% endhighlight %}
+```
 
 ### Add-on SDK => WebExtensions
 

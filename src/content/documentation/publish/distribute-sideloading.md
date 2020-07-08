@@ -2,7 +2,7 @@
 layout: sidebar
 title: Add-ons for desktop apps
 permalink: /documentation/publish/distribute-sideloading/
-published: true
+published: false
 topic: Publish
 tags: [add-on, distribution, sideloading, guide, installation]
 contributors: [caitmuenster, irenesmith, jwilk, hellosct1, gray_-_wolf, luanmm, rebloor]
@@ -53,18 +53,16 @@ Regardless of the sideloading method used, you must prepare the add-on as follow
 1. Ensure the add-on includes an ID, by adding the following to its manifest.json file, replacing **_your-add-on-name@your-domain.com_** with a suitable ID for your add-on:
 
 <!-- Syntax Highlighting -->
-{% highlight javascript linenos %}
+```json
 "browser_specific_settings": {
   "gecko": {
     "id": "your-add-on-name@your-domain.com"
   }
 }
-{% endhighlight %}
+```
 <!-- END: Syntax Highlighting -->
 
 An email address style ID is recommended.
-
-{:start="2"}
 
 2. Sign the add-on in [addons.mozilla.org](https://addons.mozilla.org) (AMO). Depending on how you want to make your add-on available, you can use either the unlisted (if you are distributing the add-on exclusively) or listed options. For more details, see [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
 
@@ -196,11 +194,14 @@ To uninstall the add-on, close Firefox and remove the add-on from the location w
 <!-- END: Note -->
 
 <section id="windows"></section>
+
 #### Windows
 
 To install the add-on for a user of the computer, copy the XPI file to:
 
-`C:\Users\<user name>\AppData\Roaming\Mozilla\Extensions\{ec8030f7-c20a-464f-9b0e-13a3a9e97384}\`
+```shell
+C:\Users\<user name>\AppData\Roaming\Mozilla\Extensions\{ec8030f7-c20a-464f-9b0e-13a3a9e97384}\
+```
 
 If this folder does not exist, create it. You can also identify the current user’s path with the %appdata% system variable.
 
@@ -219,6 +220,7 @@ Note: To install an add-on for all users of a Windows computer, see [Installatio
 <!-- END: Note -->
 
 <section id="osx"></section>
+
 #### OSX
 
 To install an add-on for use by all Firefox profiles and all users, copy the XPI file to the global extension folder located in Library. If this folder doesn't exist, you will need to create it.
@@ -230,23 +232,32 @@ To install an add-on for a specific user, copy the XPI file to the user's local 
 `~/Library/Application Support/Mozilla/Extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/`
 
 <section id="linux"></section>
+
 #### Linux
 
 To install an add-on for use by all users, copy the XPI file to:
 
-`/usr/lib/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/`
+```shell
+/usr/lib/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/
+```
 
 Or...
 
-`/usr/lib64/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/`
+```shell
+/usr/lib64/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/
+```
 
 Or...
 
-`/usr/share/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/`
+```shell
+/usr/share/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/
+```
 
 To install an add-on for a specific user, copy the XPI file to:
 
-`~/.mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/`
+```shell
+~/.mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/
+```
 
 {% endcapture %}
 {% include modules/one-column.liquid
