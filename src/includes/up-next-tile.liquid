@@ -1,8 +1,14 @@
+{% comment %}
+---
+markdownTemplateEngine: false
+---
+{% endcomment %}
+
+{% if next_page.data.permalink && next_page.data.title %}
 <a href="{{ next_page.data.permalink }}" class="cell auto tile tile-block-link">
     <div class="block-link">
-        {% if next_page.data.topic -%}
-            <p>{{ next_page.data.topic }}</p>
-        {% endif %}
+        {% if next_page.data.topic %}<p>{{ next_page.data.topic }}</p>{% endif %}
         <h5>{{ next_page.data.title }}</h5>
     </div>
 </a>
+{% endif %}

@@ -11,9 +11,9 @@
 {% for item in pages %}
     {% if item.categories %}
         {% if on_current_page == true %}
-            {% assign next_page_ar = collections.all | where: 'url', item.url %}
+            {% assign next_page_ar = collections.all | where: 'data.permalink', item.url %}
             {% for next_page in next_page_ar %}
-                {% if is_next_range < max_steps && next_page.skip_index != false %}
+                {% if is_next_range < max_steps && next_page.data.skip_index %}
                     {%- include up-next-tile.liquid -%}
                 {% endif %}
                 {% assign is_next_range = is_next_range | plus: 1 %}
@@ -26,13 +26,13 @@
         {% endif %}
 
         {% for cat in item.categories %}
-            {% if cat.collections.all %}
-                {% for pg in cat.collections.all %}
+            {% if cat.pages %}
+                {% for pg in cat.pages %}
                     {% if on_current_page == true %}
-                        {% assign next_page_ar = collections.all | where: 'url', pg.url %}
+                        {% assign next_page_ar = collections.all | where: 'data.permalink', pg.url %}
                         {% for next_page in next_page_ar %}
-                            {% if is_next_range < max_steps && next_page.skip_index != false %}
-                                {%- include up-next-tile.liquid -%}
+                            {% if is_next_range < max_steps && next_page.data.skip_index %}
+                                {% include up-next-tile.liquid %}
                             {% endif %}
                             {% assign is_next_range = is_next_range | plus: 1 %}
                         {% endfor %}
@@ -48,9 +48,9 @@
         {% for subitem in item.subfolderitems %}
             {% if subitem.categories %}
                 {% if on_current_page == true %}
-                    {% assign next_page_ar = collections.all | where: 'url', subitem.url %}
+                    {% assign next_page_ar = collections.all | where: 'data.permalink', subitem.url %}
                     {% for next_page in next_page_ar %}
-                        {% if is_next_range < max_steps && next_page.skip_index != false %}
+                        {% if is_next_range < max_steps && next_page.data.skip_index %}
                             {%- include up-next-tile.liquid -%}
                         {% endif %}
                         {% assign is_next_range = is_next_range | plus: 1 %}
@@ -63,12 +63,12 @@
                 {% endif %}
 
                 {% for cat in subitem.categories  %}
-                    {% if cat.collections.all %}
-                        {% for pg in ca t.collections.all %}
-                            {% if on_cur rent_page == true %}
-                                {% assign next_page_ar = collections.all | where: 'url', pg.url %}
+                    {% if cat.pages %}
+                        {% for pg in cat.pages %}
+                            {% if on_current_page == true %}
+                                {% assign next_page_ar = collections.all | where: 'data.permalink', pg.url %}
                                 {% for next_page in next_page_ar %}
-                                    {% if is_next_range < max_steps && next_page.skip_index != false %}
+                                    {% if is_next_range < max_steps && next_page.data.skip_index %}
                                         {%- include up-next-tile.liquid -%}
                                     {% endif  %}
                                     {% assign is_next_range = is_next_range | plus: 1 %}
@@ -84,9 +84,9 @@
                 {% endfor %}
             {% else %}
                 {% if on_current_page == true %}
-                    {% assign next_page_ar = collections.all | where: 'url', subitem.url %}
+                    {% assign next_page_ar = collections.all | where: 'data.permalink', subitem.url %}
                     {% for next_page in next_page_ar %}
-                        {% if is_next_range < max_steps && next_page.skip_index != false %}
+                        {% if is_next_range < max_steps && next_page.data.skip_index %}
                             {%- include up-next-tile.liquid -%}
                         {% endif %}
                         {% assign is_next_range = is_next_range | plus: 1 %}
@@ -101,9 +101,9 @@
         {% endfor %}
     {% else %}
         {% if on_current_page == true %}
-            {% assign next_page_ar = collections.all | where: 'url', item.url %}
+            {% assign next_page_ar = collections.all | where: 'data.permalink', item.url %}
             {% for next_page in next_page_ar %}
-                {% if is_next_range < max_steps && next_page.skip_index != false %}
+                {% if is_next_range < max_steps && next_page.data.skip_index %}
                     {%- include up-next-tile.liquid -%}
                 {% endif %}
                 {% assign is_next_range = is_next_range | plus: 1 %}
