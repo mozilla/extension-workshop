@@ -6,13 +6,13 @@
  */
 module.exports = {
   eleventyComputed: {
-    permalink: data => {
-      if (process.env.ELEVENTY_ENV !== "production") {
+    permalink: (data) => {
+      if (process.env.ELEVENTY_ENV !== 'production') {
         return data.permalink;
       } else {
         // Don't output files with an explicit "published: false".
-        return (data.published === false) ? false : data.permalink;
+        return data.published === false ? false : data.permalink;
       }
-    }
-  }
-}
+    },
+  },
+};

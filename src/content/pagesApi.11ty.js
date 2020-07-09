@@ -7,8 +7,8 @@ module.exports = class {
   data() {
     return {
       permalink: 'api/v1/pages.json',
-      eleventyExcludeFromCollections: true
-    }
+      eleventyExcludeFromCollections: true,
+    };
   }
 
   async render({ collections }) {
@@ -22,15 +22,17 @@ module.exports = class {
         body: item.templateContent
           .replace(/\n/g, ' ')
           .replace(/\t/g, ' ')
-          .replace(/<script.*?<\/script>|<!--.*?-->|<style.*?<\/style>|<.*?>/g, ' ')
+          .replace(
+            /<script.*?<\/script>|<!--.*?-->|<style.*?<\/style>|<.*?>/g,
+            ' '
+          )
           .replace(/\s+/g, ' '),
         tags: item.data.tags,
-      }
+      };
       if (!item.data.skip_index) {
         data.entries.push(page);
       }
     });
     return JSON.stringify(data);
   }
-}
-
+};
