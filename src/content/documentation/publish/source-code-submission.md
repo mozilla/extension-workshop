@@ -2,7 +2,6 @@
 layout: sidebar
 title: Source code submission
 permalink: /documentation/publish/source-code-submission/
-published: true
 topic: Publish
 tags: [Add-ons, distribution, Extensions, Review Policy]
 contributors: [kewisch, mdnwebdocs-bot, One, rebloor, wbamberg, atsay]

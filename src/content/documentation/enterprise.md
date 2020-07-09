@@ -2,7 +2,6 @@
 layout: sidebar
 title: Enterprise
 permalink: /documentation/enterprise/
-published: true
 tags: [enterprise]
 contributors: [caitmuenster]
 last_updated_by: caitmuenster

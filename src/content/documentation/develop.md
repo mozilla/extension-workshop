@@ -2,7 +2,6 @@
 layout: sidebar.liquid
 title: Develop
 permalink: /documentation/develop/
-published: true
 tags: []
 contributors: [caitmuenster]
 last_updated_by: caitmuenster

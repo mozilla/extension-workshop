@@ -2,7 +2,6 @@
 layout: sidebar
 title: Recommended extensions
 permalink: /documentation/publish/recommended-extensions/
-published: true
 topic: Publish
 tags: [promote, recommended]
 contributors: [devaneymoz]

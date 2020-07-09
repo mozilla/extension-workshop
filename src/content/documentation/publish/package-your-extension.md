@@ -2,7 +2,6 @@
 layout: sidebar
 title: Package your extension
 permalink: /documentation/publish/package-your-extension/
-published: true
 topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
 contributors:

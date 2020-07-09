@@ -2,7 +2,6 @@
 layout: sidebar
 title: Make money from browser extensions
 permalink: /documentation/publish/make-money-from-browser-extensions/
-published: true
 topic: Publish
 tags: [add-on, distribution, guide, monetization]
 contributors: [hellosct1, rebloor]

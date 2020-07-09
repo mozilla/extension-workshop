@@ -2,7 +2,6 @@
 layout: sidebar
 title: Distributing an add-on yourself
 permalink: /documentation/publish/self-distribution/
-published: true
 topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
 contributors: [rebloor]

@@ -2,7 +2,6 @@
 layout: sidebar
 title: Firefox workflow overview
 permalink: /documentation/develop/firefox-workflow-overview/
-published: true
 topic: Develop
 tags:
   [

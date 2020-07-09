@@ -2,7 +2,6 @@
 layout: sidebar
 title: Promoting your extension or theme
 permalink: /documentation/publish/promoting-your-extension/
-published: true
 topic: Publish
 tags: [add-on, distribution, guide, promote]
 contributors: [irenesmith, rebloor]

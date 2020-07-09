@@ -2,7 +2,6 @@
 layout: sidebar.liquid
 title: web-ext command reference
 permalink: /documentation/develop/web-ext-command-reference/
-published: true
 topic: Develop
 tags: [commands, Options, Reference, Tools, web-ext, WebExtensions]
 contributors:

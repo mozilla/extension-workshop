@@ -2,7 +2,6 @@
 layout: sidebar
 title: Distribute pre-release versions
 permalink: /documentation/publish/distribute-pre-release-versions/
-published: true
 topic: Publish
 tags: [beta, alpha, testing, pre-release, publish, guide, how-to]
 contributors: [caitmuenster]

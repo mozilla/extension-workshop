@@ -2,7 +2,6 @@
 layout: sidebar
 title: Using the AMO theme generator
 permalink: /documentation/themes/using-the-amo-theme-generator/
-published: true
 topic: Themes
 tags: [add-on, Add-ons, AMO, Firefox, Guide, Tutorial, themes]
 contributors: [irenesmith, andrewtruongmoz, caitmuenster, shiy23]

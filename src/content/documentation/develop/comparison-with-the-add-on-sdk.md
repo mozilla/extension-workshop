@@ -2,7 +2,6 @@
 layout: sidebar
 title: Comparison with the Add-on SDK
 permalink: /documentation/develop/comparison-with-the-add-on-sdk/
-published: true
 topic: Develop
 tags: [Addon SDK, AddonSDK, porting, WebExtensions]
 contributors:

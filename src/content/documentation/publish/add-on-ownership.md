@@ -2,7 +2,6 @@
 layout: sidebar
 title: Add-on ownership
 permalink: /documentation/publish/add-on-ownership/
-published: true
 topic: Publish
 tags: [Development, Ownership, Code, Dispute]
 contributors: [caitmuenster, rebloor]

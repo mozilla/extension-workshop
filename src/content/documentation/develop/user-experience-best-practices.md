@@ -2,7 +2,6 @@
 layout: sidebar
 title: User experience best practices
 permalink: /documentation/develop/user-experience-best-practices/
-published: true
 topic: Develop
 tags: [Add-ons, Extensions, Guide, UI, UX]
 contributors:

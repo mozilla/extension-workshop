@@ -2,7 +2,6 @@
 layout: sidebar.liquid
 title: Browser Extension Development Tools
 permalink: /documentation/develop/browser-extension-development-tools/
-published: true
 topic: Develop
 tags:
   [

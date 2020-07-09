@@ -2,7 +2,6 @@
 layout: sidebar
 title: Submitting an add-on
 permalink: /documentation/publish/submitting-an-add-on/
-published: true
 topic: Publish
 tags: [Add-ons, Beginner, Tutorial, WebExtensions]
 contributors: [Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz]

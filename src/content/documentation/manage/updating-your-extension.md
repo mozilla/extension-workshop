@@ -2,7 +2,6 @@
 layout: sidebar
 title: Updating your extension
 permalink: /documentation/manage/updating-your-extension/
-published: true
 topic: Manage
 tags: [update, manage, distribution]
 contributors:

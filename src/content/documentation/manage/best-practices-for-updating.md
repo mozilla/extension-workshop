@@ -2,7 +2,6 @@
 layout: sidebar
 title: Best practices for updating your extension
 permalink: /documentation/manage/best-practices-for-updating/
-published: true
 topic: Manage
 tags: [update, manage, distribution]
 contributors: [rebloor]

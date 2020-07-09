@@ -2,7 +2,6 @@
 layout: sidebar
 title: Add-on Policies
 permalink: /documentation/publish/add-on-policies/
-published: true
 topic: Publish
 tags: [Add-ons, Review Policy]
 contributors:

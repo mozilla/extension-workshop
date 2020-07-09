@@ -2,7 +2,6 @@
 layout: sidebar.liquid
 title: Build a secure extension
 permalink: /documentation/develop/build-a-secure-extension/
-published: true
 topic: Develop
 tags: [Beginner, Extensions, Intermediate, reviews, Security, WebExtensions]
 contributors: [irenesmith, tomrittervg, mdnwebdocs-bot, rebloor]

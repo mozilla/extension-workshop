@@ -2,7 +2,6 @@
 layout: sidebar
 title: Test permission requests
 permalink: /documentation/develop/test-permission-requests/
-published: true
 topic: Develop
 tags: [Add-ons, Extensions, Guide, Permissions, Testing, WebExtensions]
 contributors: [rebloor, mdnwebdocs-bot]
