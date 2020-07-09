@@ -50,6 +50,8 @@
     "test": "npm run prettier-ci && npm run lint && npm run stylelint",
     "clean": "rimraf './src/build/'",
     "build": "eleventy && npm run sass:build && npm run uglify:build",
+    "build:unpublished": "ELEVENTY_ENV=dev npm run build",
+    "build:production": "ELEVENTY_ENV=production npm run build",
     "build:serve": "eleventy --serve --port=8081",
     "build:debug": "DEBUG=Eleventy* eleventy --serve --port=8081",
     "start": "npm-run-all -p build:serve sass:* uglify:*",

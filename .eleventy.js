@@ -15,10 +15,16 @@ module.exports = function (eleventyConfig) {
     strictFilters: true,
   });
 
-  eleventyConfig.setLibrary('liquid', liquidParser);
-
   // Tell the config to not use gitignore for ignores.
   eleventyConfig.setUseGitIgnore(false);
+
+  eleventyConfig.setLibrary('liquid', liquidParser);
+  // Markdown instance in general plus for filter in templates.
+  eleventyConfig.setLibrary('md', md);
+  eleventyConfig.addFilter('markdownify', function (value) {
+    return md.render(value.toString());
+  });
+
 
   // Explicitly copy through the built files needed.
   eleventyConfig.addPassthroughCopy({ './src/assets/img/': 'assets/img/' });
@@ -30,14 +36,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(xmlFiltersPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  // Markdown instance in general plus for filter in templates.
-  eleventyConfig.setLibrary('md', md);
-  eleventyConfig.addFilter('markdownify', function (value) {
-    return md.render(value.toString());
-  });
 
   return {
-    // templateFormats: ['md', 'liquid', 'html'],
     dir: {
       input: 'src/content',
       output: 'src/build',
