@@ -52,7 +52,7 @@ module.exports = {
       description: (data) => {
         return data.description ? data.description : data.site.description;
       },
-      canonicalURL: data => {
+      canonicalURL: (data) => {
         if (data.canonical_url) {
           return data.canonical_url;
         }
@@ -60,22 +60,22 @@ module.exports = {
       },
       jsonLD: (data) => {
         const defaultJSON = {
-          "@context": "http://schema.org",
+          '@context': 'http://schema.org',
           url: data.seo.canonicalURL,
-        }
+        };
         const webSite = {
           ...defaultJSON,
-          "@type": "WebSite",
-          "name": data.site.title,
-        }
+          '@type': 'WebSite',
+          name: data.site.title,
+        };
         const webPage = {
           ...defaultJSON,
-          "@type": "WebPage",
-          "name": data.site.title,
-        }
+          '@type': 'WebPage',
+          name: data.site.title,
+        };
         const techArticle = {
           ...defaultJSON,
-          '@type': "TechArticle",
+          '@type': 'TechArticle',
           author: data.author,
           datePublished: data.fileDate.published,
           headline: data.title,
@@ -93,7 +93,7 @@ module.exports = {
             break;
         }
         return JSON.stringify(jsonData, null, 4);
-      }
+      },
     },
   },
 };
