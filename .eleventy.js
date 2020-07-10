@@ -1,3 +1,4 @@
+const fs = require('fs-extra');
 const { Liquid } = require('liquidjs');
 const md = require('markdown-it')({
   html: true,
@@ -33,6 +34,22 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy({
     './node_modules/lunr/lunr.min.js': 'assets/js/lunr.min.js',
+  });
+
+  eleventyConfig.setBrowserSyncConfig({
+    callbacks: {
+      ready: function(err, bs) {
+        bs.addMiddleware("*", (req, res) => {
+          const content_404 = fs.readFileSync('src/build/404.html');
+          // Provides the 404 content without redirect.
+          res.write(content_404);
+          // Add 404 http status code in request header.
+          // res.writeHead(404, { "Content-Type": "text/html" });
+          res.writeHead(404);
+          res.end();
+        });
+      }
+    }
   });
 
   // Plugins
