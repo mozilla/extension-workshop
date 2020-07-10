@@ -38,8 +38,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
-      ready: function(err, bs) {
-        bs.addMiddleware("*", (req, res) => {
+      ready: function (err, bs) {
+        bs.addMiddleware('*', (req, res) => {
           const content_404 = fs.readFileSync('src/build/404.html');
           // Provides the 404 content without redirect.
           res.write(content_404);
@@ -48,8 +48,8 @@ module.exports = function (eleventyConfig) {
           res.writeHead(404);
           res.end();
         });
-      }
-    }
+      },
+    },
   });
 
   // Plugins
