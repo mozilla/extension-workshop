@@ -1,4 +1,5 @@
 const fs = require('fs-extra');
+const serialize = require('serialize-javascript');
 
 /*
  * This file controls if files are published or not.
@@ -92,7 +93,7 @@ module.exports = {
             jsonData = techArticle;
             break;
         }
-        return JSON.stringify(jsonData, null, 4);
+        return serialize(jsonData, { space: 2, isJSON: true });
       },
     },
   },
