@@ -6,6 +6,7 @@
  */
 module.exports = {
   eleventyComputed: {
+    siteEnv: process.env.ELEVENTY_ENV,
     permalink: (data) => {
       if (process.env.ELEVENTY_ENV !== 'production') {
         return data.permalink;
@@ -13,6 +14,27 @@ module.exports = {
         // Don't output files with an explicit "published: false".
         return data.published === false ? false : data.permalink;
       }
+    },
+    pageTitle: (data) => {
+      if (data.tag) {
+        // Special case tag titles.
+        return `Results for tag "${data.tag}" | ${data.site.title}`;
+      } else if (data.title) {
+        // Use a title if set in the frontmatter.
+        return `${data.title} | ${data.site.title}`;
+      } else {
+        // Use site title as a last resort.
+        return data.site.title;
+      }
+    },
+    pageDescription: (data) => {
+      return data.description ? data.description : data.site.description;
+    },
+    canonicalUrl: data => {
+      if (data.canonical_url) {
+        return data.canonical_url;
+      }
+      return data.site.url + data.page.url;
     },
   },
 };
