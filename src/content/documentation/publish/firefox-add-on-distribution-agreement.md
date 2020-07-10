@@ -19,6 +19,7 @@ contributors:
     Adora,
     kmaglione,
   ]
+description: This page details the Firefox Add-on distribution agreement.
 last_updated_by: kewisch
 date: 2019-06-10 12:19:52
 ---

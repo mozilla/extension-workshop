@@ -3,15 +3,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ pageTitle }}</title>
-  <link rel="canonical" href="{{ canonicalUrl }}" />
-  <meta name="description" content="{{ pageDescription }}" />
+  <title>{{ seo.title | escape }}</title>
+  <link rel="canonical" href="{{ seo.canonicalURL | escape }}" />
+  <meta name="description" content="{{ seo.description | escape }}" />
 
-  <meta property="og:description" content="{{ pageDescription }}" />
+  <meta property="og:description" content="{{ seo.description }}" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:site_name" content="{{ site.title }}" />
-  <meta property="og:title" content="{{ pageTitle }}" />
-  <meta property="og:url" content="{{ canonicalUrl }}" />
+  <meta property="og:site_name" content="{{ site.title | escape }}" />
+  <meta property="og:title" content="{{ title | escape }}" />
+  <meta property="og:url" content="{{ seo.canonicalURL | escape }}" />
+  <meta property="article:published_time" content="{{ fileDate.published | escape }}" />
+
+  <script type="application/ld+json">{{ seo.jsonLD }}</script>
 
   <link rel="apple-touch-icon" href="/assets/img/favicon.png">
   <link rel="shortcut icon" href="/assets/img/favicon.ico">

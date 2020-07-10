@@ -1,6 +1,7 @@
 ---
 # Edit home sections content in the includes/home/ folder
 layout: home
+schemaType: webSite
 ---
 
 # Extend the Web
