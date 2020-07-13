@@ -49,7 +49,7 @@ Create your developer account on [addons.mozilla.org](https://addons.mozilla.org
 
 Go to the [Add-ons Developer Hub](https://addons.mozilla.org/developers/) and click **Submit Your First Add-on** or **Submit a New Add-on**. You'll reach the following page:
 
-<img src="/assets/img/publish/newstepone.PNG" style="box-shadow:0 0 0.5em gray;" />
+<img src="/assets/img/publish/newstepone.png" style="box-shadow:0 0 0.5em gray;" />
 
 Choose:
 
@@ -75,10 +75,10 @@ Choose:
 
 3. The validator checks the add-on for issues and the page updates. <br/><br/> <img src="/assets/img/publish/Submit_add_on_after_upload.png" style="box-shadow:0 0 0.5em gray;" />
 
-4. If your add-on passes all the checks, you receive the following message: <br/><br/> <img src="/assets/img/publish/uploadsuccess.PNG" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+4. If your add-on passes all the checks, you receive the following message: <br/><br/> <img src="/assets/img/publish/uploadsuccess.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
 
    You may receive a message that you only have warnings. It's advisable to address these warnings, particularly those flagged as security or privacy issues, as they may result in your add-on failing review. However, you can continue with the submission.
-   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.PNG" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
+   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
    The message informs you of what failed. You'll not be able to continue. Address the issues and return to step 1.
 
 5. If you need to provide source code, click **Browse** and locate and upload your source code package.
@@ -141,10 +141,10 @@ If you want Firefox to handle updates to your add-on, remember to include the [`
 
 2. Click **Select a file**, select and upload your add-on.
 3. The validator checks the add-on for issues and the page updates. <br/><br/> <img src="/assets/img/publish/Submit_add_on_after_upload.png" style="box-shadow:0 0 0.5em gray;" />
-4. If your add-on passes all the checks, you receive the following message: <br/><br/> <img src="/assets/img/publish/uploadsuccess.PNG" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+4. If your add-on passes all the checks, you receive the following message: <br/><br/> <img src="/assets/img/publish/uploadsuccess.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
 
    You may receive a message that you only have warnings. It's advisable to address these warnings, particularly those flagged as security or privacy issues, as they may result in your add-on failing review. However, you can continue with the submission.
-   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.PNG" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
+   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
    The message informs you of what failed. You'll not be able to continue. Address the issues and return to step 1.
 
 5. If you need to provide source code, click **Browse** and locate and upload your source code package.
