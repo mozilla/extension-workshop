@@ -11,3 +11,6 @@ src/build
 src/assets/css/*.css
 src/assets/css/*.css.map
 src/assets/js/bundle.js
+
+dist
+tmp

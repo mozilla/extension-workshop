@@ -35,7 +35,7 @@ Mozilla and the Firefox browser extension developer community have created a ran
 
 <!-- END: Page Hero Banner -->
 
-<section id: "boilerplating-tools" class="page-section-container">
+<section id="boilerplating-tools" class="page-section-container">
 
 <!-- Content with Table of Contents Module -->
 
@@ -114,7 +114,7 @@ The webextensions-examples GitHub repository is a collection browser extension e
 
 </section>
 
-<section id: "coding-tools" class="page-section-container">
+<section id="coding-tools" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
@@ -237,7 +237,7 @@ To get started, install using npm and load the library into the contexts where b
 
 </section>
 
-<section id: "testing-and-debugging-tools" class="page-section-container">
+<section id="testing-and-debugging-tools" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
@@ -319,7 +319,7 @@ To get started, enable Browser Toolbox then open about:debugging and click debug
 
 </section>
 
-<section id: "translation-tools" class="page-section-container">
+<section id="translation-tools" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
@@ -407,7 +407,7 @@ To get started, [visit the tool online](https://morikko.github.io/translate-web-
 
 </section>
 
-<section id: "tools-for-firefox-for-android" class="page-section-container">
+<section id="tools-for-firefox-for-android" class="page-section-container">
 
 <!-- Single Column Body Module -->
 
