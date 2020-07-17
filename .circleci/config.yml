@@ -56,7 +56,7 @@ jobs:
       - *save_build_cache
       - *run_build_test
       - run:
-          name: Jekyll build unpublished
+          name: Eleventy build unpublished
           environment:
             ELEVENTY_ENV: production
             SVGO_BIN: node_modules/svgo/bin/svgo
@@ -73,7 +73,7 @@ jobs:
       - *save_build_cache
       - *run_build_test
       - run:
-          name: Jekyll build
+          name: Eleventy build
           environment:
             ELEVENTY_ENV: production
             SVGO_BIN: node_modules/svgo/bin/svgo

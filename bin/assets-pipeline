@@ -135,9 +135,7 @@ async function rewriteBinaryFiles(origPath, key, assetMap) {
   try {
     await fs.ensureFile(outputFile);
     await fs.copy(origPath, outputFile, { replace: false });
-    console.log(
-      `Writing Binary file to ${getPathRelativeToCWD(outputFile)}`
-    );
+    console.log(`Writing Binary file to ${getPathRelativeToCWD(outputFile)}`);
     updateKeys(assetMap, key, fileHash, true);
   } catch (error) {
     console.error(chalk.red(`Error writing binary file: ${error}`));
@@ -189,9 +187,7 @@ async function rewriteJS(origPath, key, assetMap) {
   try {
     await fs.ensureFile(outputFile);
     await fs.writeFile(outputFile, minified.code);
-    console.log(
-      `Writing minified JS to ${getPathRelativeToCWD(outputFile)}`
-    );
+    console.log(`Writing minified JS to ${getPathRelativeToCWD(outputFile)}`);
     updateKeys(assetMap, key, hash, true);
   } catch (error) {
     console.error(chalk.red(`Error writing generated JS: ${error}`));
@@ -330,7 +326,11 @@ async function copyFiles(assetMap) {
         const origFile = path.join(builtAssetDir, pathKey);
 
         try {
-          console.log(`Copying file from ${getPathRelativeToCWD(origFile)} to ${getPathRelativeToCWD(outputFile)}`);
+          console.log(
+            `Copying file from ${getPathRelativeToCWD(
+              origFile
+            )} to ${getPathRelativeToCWD(outputFile)}`
+          );
           await fs.copy(origFile, outputFile, { replace: false });
           asset.written = true;
         } catch (error) {
