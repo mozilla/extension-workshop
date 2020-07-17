@@ -35,7 +35,7 @@ Note: Running locally will show unpublished content that uses the `published: fa
 | ---------------------- | --------------------------------------------------------------------------------------- |
 | yarn start             | Starts eleventy and includes unpublished content.                                       |
 | yarn build:production  | Builds the site for production.                                                         |
-| yarn build:upublished  | Builds the site for production with unpublished content.                                |
+| yarn build:unpublished  | Builds the site for production with unpublished content.                                |
 | yarn clean             | Clears the output directory. (You probably won't need to use this manually              |
 
 ## How the site is build
