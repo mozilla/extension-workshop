@@ -221,7 +221,6 @@ async function rewriteHTML(origPath, key, assetMap) {
     .use(
       posthtmlURL({
         eachURL: (url, attr, element) => {
-          console.log(url);
           if (hasHashedReplacementURL(url, assetMap)) {
             replacementsCount++;
             return getReplacementURL(url, assetMap);
