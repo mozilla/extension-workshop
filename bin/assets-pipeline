@@ -3,14 +3,13 @@
 const crypto = require('crypto');
 const path = require('path');
 const fs = require('fs-extra');
-const postcss = require("postcss")
-const postcssURL = require("postcss-url")
-const posthtml = require("posthtml")
-const posthtmlURL = require("posthtml-urls")
-const posthtmlCSS = require('posthtml-postcss')
-const Terser = require("terser");
+const postcss = require('postcss');
+const postcssURL = require('postcss-url');
+const posthtml = require('posthtml');
+const posthtmlURL = require('posthtml-urls');
+const posthtmlCSS = require('posthtml-postcss');
+const Terser = require('terser');
 const Url = require('url-parse');
-
 
 const assetsDirPrefix = '/assets';
 // The dir that Eleventy builds to.
@@ -19,14 +18,13 @@ const builtAssetDir = path.resolve(__dirname, '../build/');
 const destAssetDir = path.resolve(__dirname, '../dist/');
 
 // Binary assets are handled first
-const binaryAssetsRX = /\.(?:jpe?g|png|tiff|webp|eot|gif|otf|ttf|woff2?)$/
+const binaryAssetsRX = /\.(?:jpe?g|png|tiff|webp|eot|gif|otf|ttf|woff2?)$/;
 
 // Text-based assets consume other assets so they need to be revved after the images.
-const textAssetsRX = /\.(?:js|css|svg)$/
+const textAssetsRX = /\.(?:js|css|svg)$/;
 
 // Assets that match these endings should not be hashed.
-const unHashableAssetsRX = /(?:robots\.txt|\.html|pages\.json)$/
-
+const unHashableAssetsRX = /(?:robots\.txt|\.html|pages\.json)$/;
 
 // The asset map is the main data structure that holds the paths.
 async function getFileHash(path) {
@@ -45,11 +43,14 @@ function getContentHash(content) {
 function getHashedPath(keyPath, hash) {
   const ext = path.extname(keyPath);
   const shortHash = hash.substring(0, 8);
-  return path.join(path.dirname(keyPath), `${path.basename(keyPath, ext)}.${shortHash}${ext}`);
+  return path.join(
+    path.dirname(keyPath),
+    `${path.basename(keyPath, ext)}.${shortHash}${ext}`
+  );
 }
 
 async function recursiveListDir(directoryName, mapObject) {
-  let files = await fs.readdir(directoryName, {withFileTypes: true});
+  let files = await fs.readdir(directoryName, { withFileTypes: true });
   for (let file of files) {
     let fullPath = path.join(directoryName, file.name);
     if (file.isDirectory()) {
@@ -79,17 +80,19 @@ function spliceString(str, begin, end, replacement) {
 }
 
 async function updateHashMap(mapObject, rx, asyncFunc) {
-  await Promise.all(Object.keys(mapObject).map(async (item, idx) => {
-    if (item.match(rx)) {
-      const origPath = path.join(builtAssetDir, item);
-      if (asyncFunc) {
-        await asyncFunc(origPath, item, mapObject);
-      } else {
-        const fileHash = await getFileHash(origPath);
-        updateKeys(mapObject, item, fileHash);
+  await Promise.all(
+    Object.keys(mapObject).map(async (item, idx) => {
+      if (item.match(rx)) {
+        const origPath = path.join(builtAssetDir, item);
+        if (asyncFunc) {
+          await asyncFunc(origPath, item, mapObject);
+        } else {
+          const fileHash = await getFileHash(origPath);
+          updateKeys(mapObject, item, fileHash);
+        }
       }
-    }
-  }));
+    })
+  );
   return mapObject;
 }
 
@@ -99,7 +102,11 @@ function trimLeadingSlash(str) {
 
 function hasHashedReplacementURL(inputPath, assetMap) {
   const url = new Url(trimLeadingSlash(inputPath));
-  if (assetMap.hasOwnProperty(url.pathname) && assetMap[url.pathname].hashedPath && !url.pathname.match(unHashableAssetsRX)) {
+  if (
+    assetMap.hasOwnProperty(url.pathname) &&
+    assetMap[url.pathname].hashedPath &&
+    !url.pathname.match(unHashableAssetsRX)
+  ) {
     return true;
   }
   return false;
@@ -122,7 +129,9 @@ async function rewriteBinaryFiles(origPath, key, assetMap) {
   try {
     await fs.ensureFile(outputFile);
     await fs.copy(origPath, outputFile, { replace: false });
-    console.log(`Writing Binary file to ${path.relative(__dirname, outputFile)}`);
+    console.log(
+      `Writing Binary file to ${path.relative(__dirname, outputFile)}`
+    );
     updateKeys(assetMap, key, fileHash, true);
   } catch (error) {
     console.error(`Error writing binary file: ${error}`);
@@ -131,21 +140,27 @@ async function rewriteBinaryFiles(origPath, key, assetMap) {
 
 async function rewriteJS(origPath, key, assetMap) {
   let code = await fs.readFile(origPath, 'utf8');
-  const ast = Terser.parse(code)
+  const ast = Terser.parse(code);
   const pathNodes = [];
-  ast.walk(new Terser.TreeWalker(function(node){
-    if (node instanceof Terser.AST_String) {
-      if (hasHashedReplacementURL(node.getValue(), assetMap)) {
-        pathNodes.push(node);
+  ast.walk(
+    new Terser.TreeWalker(function (node) {
+      if (node instanceof Terser.AST_String) {
+        if (hasHashedReplacementURL(node.getValue(), assetMap)) {
+          pathNodes.push(node);
+        }
       }
-    }
-  }));
+    })
+  );
   // now go through the nodes backwards and replace code
   const replacementsCount = pathNodes.length;
   if (replacementsCount) {
-    console.log(`Re-writing ${replacementsCount} ${replacementsCount == 1 ? 'path' : 'paths'} in ${path.relative(__dirname, origPath)}`);
+    console.log(
+      `Re-writing ${replacementsCount} ${
+        replacementsCount == 1 ? 'path' : 'paths'
+      } in ${path.relative(__dirname, origPath)}`
+    );
   }
-  for (var i = pathNodes.length; --i >= 0;) {
+  for (var i = pathNodes.length; --i >= 0; ) {
     const node = pathNodes[i];
     const start_pos = node.start.pos;
     const end_pos = node.end.endpos;
@@ -168,7 +183,9 @@ async function rewriteJS(origPath, key, assetMap) {
   try {
     await fs.ensureFile(outputFile);
     await fs.writeFile(outputFile, minified.code);
-    console.log(`Writing minified JS to ${path.relative(__dirname, outputFile)}`);
+    console.log(
+      `Writing minified JS to ${path.relative(__dirname, outputFile)}`
+    );
     updateKeys(assetMap, key, hash, true);
   } catch (error) {
     console.error(`Error writing generated JS: ${error}`);
@@ -179,45 +196,61 @@ async function rewriteHTML(origPath, key, assetMap) {
   let text = await fs.readFile(origPath, 'utf8');
   let replacementsCount = 0;
 
-  const postcssOptions = { from: origPath }
-  const postcssfilterType = /^text\/css$/
+  const postcssOptions = { from: origPath };
+  const postcssfilterType = /^text\/css$/;
 
   const output = await posthtml()
-    .use(posthtmlCSS([postcssURL({
-        url: (asset) => {
-          if (hasHashedReplacementURL(asset.url, assetMap)) {
+    .use(
+      posthtmlCSS(
+        [
+          postcssURL({
+            url: (asset) => {
+              if (hasHashedReplacementURL(asset.url, assetMap)) {
+                replacementsCount++;
+                return getReplacementURL(asset.url, assetMap);
+              } else {
+                return asset.url;
+              }
+            },
+          }),
+        ],
+        postcssOptions,
+        postcssfilterType
+      )
+    )
+    .use(
+      posthtmlURL({
+        eachURL: (url, attr, element) => {
+          console.log(url);
+          if (hasHashedReplacementURL(url, assetMap)) {
             replacementsCount++;
-            return getReplacementURL(asset.url, assetMap);
+            return getReplacementURL(url, assetMap);
           } else {
-            return asset.url;
+            return url;
           }
         },
-      })], postcssOptions, postcssfilterType)
+      })
     )
-    .use(posthtmlURL({
-      eachURL: (url, attr, element) => {
-        console.log(url)
-        if (hasHashedReplacementURL(url, assetMap)) {
-          replacementsCount++;
-          return getReplacementURL(url, assetMap);
-        } else {
-          return url;
-        }
-      },
-    }))
     .process(text);
 
   const hash = getContentHash(output.html);
 
   if (replacementsCount) {
-    console.log(`Re-writing ${replacementsCount} ${replacementsCount == 1 ? 'path' : 'paths'} in ${path.relative(__dirname, origPath)}`);
+    console.log(
+      `Re-writing ${replacementsCount} ${
+        replacementsCount == 1 ? 'path' : 'paths'
+      } in ${path.relative(__dirname, origPath)}`
+    );
   }
 
   let outputFile;
   if (path.extname(origPath) !== '.html') {
     outputFile = path.join(destAssetDir, getHashedPath(key, hash));
   } else {
-    outputFile = path.join(destAssetDir, path.relative(builtAssetDir, origPath));
+    outputFile = path.join(
+      destAssetDir,
+      path.relative(builtAssetDir, origPath)
+    );
   }
 
   try {
@@ -234,22 +267,28 @@ async function rewriteCSS(origPath, key, assetMap) {
   let css = await fs.readFile(origPath, 'utf8');
   let replacementsCount = 0;
   const output = postcss()
-    .use(postcssURL({
-      url: (asset) => {
-        if (hasHashedReplacementURL(asset.url, assetMap)) {
-          replacementsCount++;
-          return getReplacementURL(asset.url, assetMap);
-        } else {
-          return asset.url;
-        }
-      },
-    }))
+    .use(
+      postcssURL({
+        url: (asset) => {
+          if (hasHashedReplacementURL(asset.url, assetMap)) {
+            replacementsCount++;
+            return getReplacementURL(asset.url, assetMap);
+          } else {
+            return asset.url;
+          }
+        },
+      })
+    )
     .process(css, { from: origPath });
 
   const hash = getContentHash(output.css);
 
   if (replacementsCount) {
-    console.log(`Re-writing ${replacementsCount} ${replacementsCount == 1 ? 'path' : 'paths'} in ${path.relative(__dirname, origPath)}`);
+    console.log(
+      `Re-writing ${replacementsCount} ${
+        replacementsCount == 1 ? 'path' : 'paths'
+      } in ${path.relative(__dirname, origPath)}`
+    );
   }
 
   const hashedPath = getHashedPath(key, hash);
@@ -266,25 +305,25 @@ async function rewriteCSS(origPath, key, assetMap) {
 }
 
 async function copyFiles(assetMap) {
-  await Promise.all(Object.keys(assetMap).map(async (pathKey, idx) => {
-    const asset = assetMap[pathKey];
-    if (asset && !asset.written) {
+  await Promise.all(
+    Object.keys(assetMap).map(async (pathKey, idx) => {
+      const asset = assetMap[pathKey];
+      if (asset && !asset.written) {
+        const outputPath = asset.hashedPath ? asset.hashedPath : pathKey;
+        const outputFile = path.join(destAssetDir, outputPath);
+        const origFile = path.join(builtAssetDir, pathKey);
 
-      const outputPath = asset.hashedPath ? asset.hashedPath : pathKey;
-      const outputFile = path.join(destAssetDir, outputPath);
-      const origFile = path.join(builtAssetDir, pathKey);
-
-      try {
-        console.log(`Copying file from ${origFile} to ${outputFile}`);
-        await fs.copy(origFile, outputFile, { replace: false });
-        asset.written = true;
-      } catch (error) {
-        console.error(`Error copying file: ${error}`);
+        try {
+          console.log(`Copying file from ${origFile} to ${outputFile}`);
+          await fs.copy(origFile, outputFile, { replace: false });
+          asset.written = true;
+        } catch (error) {
+          console.error(`Error copying file: ${error}`);
+        }
       }
-    }
-  }));
+    })
+  );
 }
-
 
 async function cacheBustAssets() {
   // Get all file paths in the map from the build dir first.
@@ -309,6 +348,6 @@ async function cacheBustAssets() {
   await copyFiles(assetMap);
 }
 
-cacheBustAssets().then(() => {;
- console.log('Ta-da! 🥁');
+cacheBustAssets().then(() => {
+  console.log('Ta-da! 🥁');
 });

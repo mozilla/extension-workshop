@@ -12,4 +12,6 @@ build/
 !*.js
 !*.scss
 
-assets/js/bundle.js
+
+build
+dist

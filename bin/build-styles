@@ -39,9 +39,7 @@ const buildSass = async function () {
         'http://localhost:8081/__browser_sync__?method=reload&args=styles.css'
       );
     } catch (error) {
-      console.error(
-        `Couldn't communicate with browserSync!`
-      );
+      console.error(`Couldn't communicate with browserSync!`);
     }
   }
 };

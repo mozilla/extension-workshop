@@ -31,7 +31,9 @@ module.exports = function (eleventyConfig) {
   });
 
   // Explicitly copy through the built files needed.
-  eleventyConfig.addPassthroughCopy({ './src/content/robots.txt': 'robots.txt' });
+  eleventyConfig.addPassthroughCopy({
+    './src/content/robots.txt': 'robots.txt',
+  });
   eleventyConfig.addPassthroughCopy({ './src/assets/img/': 'assets/img/' });
   eleventyConfig.addPassthroughCopy({ './src/assets/fonts/': 'assets/fonts/' });
   eleventyConfig.addPassthroughCopy({
