@@ -35,20 +35,20 @@ Note: Running locally will show unpublished content that uses the `published: fa
 | ---------------------- | --------------------------------------------------------------------------------------- |
 | yarn start             | Starts eleventy and includes unpublished content.                                       |
 | yarn build:production  | Builds the site for production.                                                         |
-| yarn build:unpublished  | Builds the site for production with unpublished content.                                |
+| yarn build:unpublished | Builds the site for production with unpublished content.                                | 
 | yarn clean             | Clears the output directory. (You probably won't need to use this manually              |
 
 ## How the site is build
 
 The site is built with [Eleventy](https://www.11ty.dev/) which is a nodejs based static site generator.
 
-This site is built in slightly different ways depending on local -dev or production builds.
+The site works in slightly different ways depending on whether you're running the site for local development or building the site for production.
 
-### Development builts
+### Development builds
 
 When you run `yarn start` the CSS and JS is built in parallel with the eleventy build. Once up and running both eleventy and the JS and CSS build scripts watch for changes. When something changes the site is re-built.
 
-In development Eleventy knows nothing about the CSS and JavaScript builds. For automatic reloading each script uses a fetch to the public API to tell browserSync there is new code and it reloads it for you.
+In development Eleventy knows nothing about the CSS and JavaScript builds. For automatic reloading of the JS and CSS, each script uses a fetch to the public API to tell browserSync there is new code and it reloads it for you.
 
 ## Production builds
 
@@ -69,7 +69,7 @@ At some point it's likely 11ty will have its own mechanism for wrangling assets 
 
 #### Asset paths
 
-For the asset-pipeline script to do it's thing, all you need to do is refer to all assets with a path beginning with `/assets/` if you do that everything else is handled for you ✨
+For the asset-pipeline script to do it's thing, all you need to do is refer to all assets with a path beginning with `/assets/` if you do that, everything else is handled for you ✨
 
 ## Development Guide: Content Updates
 
