@@ -3,7 +3,7 @@ layout: sidebar
 title: Porting a Google Chrome extension
 permalink: /documentation/develop/porting-a-google-chrome-extension/
 topic: Develop
-tags: [WebExtensions]
+tags: [webextensions]
 contributors:
   [
     jennyevans,

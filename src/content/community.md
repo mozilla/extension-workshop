@@ -2,7 +2,7 @@
 layout: sidebar
 title: Community
 permalink: /community/
-tags: [community, contribute, WebExtensions]
+tags: [community, contribute, webextensions]
 contributors: [caitmuenster, grlwholifts]
 author: caitmuenster
 date: 2020-03-06 09:00:00

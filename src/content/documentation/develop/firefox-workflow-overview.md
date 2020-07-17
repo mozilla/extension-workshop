@@ -5,15 +5,15 @@ permalink: /documentation/develop/firefox-workflow-overview/
 topic: Develop
 tags:
   [
-    Add-ons,
-    Code,
+    add-ons,
+    code,
     enhance,
-    Extensions,
-    Firefox,
+    extensions,
+    firefox,
     prepare,
     publish,
     retire,
-    WebExtensions,
+    webextensions,
     workflow,
   ]
 contributors: [irenesmith, hellosct1, rebloor, mdnwebdocs-bot, ani-sha]

@@ -3,7 +3,7 @@ layout: sidebar
 title: Developer accounts
 permalink: /documentation/publish/developer-accounts/
 topic: Publish
-tags: [Development, Extensions, publishing]
+tags: [development, extensions, publishing]
 contributors: [One, rebloor]
 last_updated_by: One
 date: 2019-06-06 07:38:43

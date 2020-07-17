@@ -4,7 +4,7 @@ title: Best practices for collecting user data consents
 permalink: /documentation/develop/best-practices-for-collecting-user-data-consents/
 topic: Develop
 tags:
-  [Add-ons, Extensions, How to, Privacy, UI, User Interface, UX, WebExtensions]
+  [add-ons, extensions, how-to, privacy, ui, user-interface, ux, webextensions]
 contributors: [rebloor]
 last_updated_by: rebloor
 date: 2019-04-24 14:35:04

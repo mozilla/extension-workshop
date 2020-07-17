@@ -6,12 +6,12 @@ topic: Develop
 tags:
   [
     distribution,
-    Guide,
+    guide,
     install,
     remove,
-    Upgrade,
-    User experience,
-    WebExtensions,
+    upgrade,
+    user-experience,
+    webextensions,
   ]
 contributors: [mdnwebdocs-bot, alxwrd, NiklasGollenstede, David263, rebloor]
 last_updated_by: rebloor

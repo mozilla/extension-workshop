@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs-extra');
+
 const { Liquid } = require('liquidjs');
 const md = require('markdown-it')({
   html: true,
@@ -8,6 +9,7 @@ const md = require('markdown-it')({
 }).disable('code');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
+const slugify = require('slugify');
 
 const inputDir = path.relative(__dirname, 'src/content');
 const outputDir = path.relative(__dirname, 'build');
@@ -29,6 +31,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('markdownify', function (value) {
     return md.render(value.toString());
   });
+
+  eleventyConfig.addFilter('slugify', (str) =>
+    slugify(str, {
+      lower: true,
+      replacement: '-',
+      remove: /[*+~.·,()''`´%!?¿:@]/g,
+    })
+  );
 
   // Explicitly copy through the built files needed.
   eleventyConfig.addPassthroughCopy({

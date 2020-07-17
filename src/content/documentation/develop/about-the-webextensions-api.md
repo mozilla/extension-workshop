@@ -3,7 +3,7 @@ layout: sidebar.liquid
 title: About the WebExtensions API
 permalink: /documentation/develop/about-the-webextensions-api/
 topic: Develop
-tags: [WebExtensions, API, Firefox]
+tags: [webextensions, api, firefox]
 contributors: [rebloor, mconca, caitmuenster]
 last_updated_by: caitmuenster
 date: 2019-06-05

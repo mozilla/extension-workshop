@@ -6,14 +6,14 @@ topic: Develop
 tags:
   [
     add-on,
-    Beginner,
-    Development,
-    Extensions,
-    How-to,
-    Intermediate,
-    Testing,
+    beginner,
+    development,
+    extensions,
+    how-to,
+    intermediate,
+    testing,
     web-ext,
-    WebExtensions,
+    webextensions,
   ]
 contributors: [mdnwebdocs-bot, freaktechnik, Rob--W, rebloor, tophf, Dietrich]
 last_updated_by: mdnwebdocs-bot

@@ -3,7 +3,7 @@ layout: sidebar.liquid
 title: Browser compatibility
 permalink: /documentation/develop/browser-compatibility/
 topic: Develop
-tags: [Beginner, Extensions, WebExtensions, compatibility, cross-browser]
+tags: [beginner, extensions, webextensions, compatibility, cross-browser]
 contributors: [rebloor]
 last_updated_by: rebloor
 date: 2019-05-27 6:35:30

@@ -3,7 +3,7 @@ layout: sidebar
 title: Debugging
 permalink: /documentation/develop/debugging/
 topic: Develop
-tags: [Debugging, Firefox, Guide, Mozilla, WebExtensions]
+tags: [debugging, firefox, guide, mozilla, webextensions]
 contributors:
   [
     majordwarf,

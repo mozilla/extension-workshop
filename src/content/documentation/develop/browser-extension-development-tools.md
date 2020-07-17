@@ -5,15 +5,15 @@ permalink: /documentation/develop/browser-extension-development-tools/
 topic: Develop
 tags:
   [
-    'Coding',
-    'Debugging',
-    'Development',
-    'Guide',
-    'Scaffold',
-    'Testing',
-    'Tools',
-    'Translation',
-    'WebExtensions',
+    coding,
+    debugging,
+    development,
+    guide,
+    scaffold,
+    testing,
+    tools,
+    translation,
+    webextensions,
   ]
 contributors: [rebloor, mdnwebdocs-bot, hellosct1, ani-sha]
 last_updated_by: ani-sha

@@ -3,7 +3,7 @@ layout: sidebar
 title: Using the AMO theme generator
 permalink: /documentation/themes/using-the-amo-theme-generator/
 topic: Themes
-tags: [add-on, Add-ons, AMO, Firefox, Guide, Tutorial, themes]
+tags: [add-on, add-ons, amo, firefox, guide, tutorial, themes]
 contributors: [irenesmith, andrewtruongmoz, caitmuenster, shiy23]
 last_updated_by: irenesmith
 date: 2019-02-28 12:39:01

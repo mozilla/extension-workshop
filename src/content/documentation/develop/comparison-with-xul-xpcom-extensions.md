@@ -3,7 +3,7 @@ layout: sidebar
 title: Comparison with XUL/XPCOM extensions
 permalink: /documentation/develop/comparison-with-xul-xpcom-extensions/
 topic: Develop
-tags: [WebExtensions]
+tags: [webextensions]
 contributors:
   [
     rebloor,
