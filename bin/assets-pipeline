@@ -232,14 +232,14 @@ async function rewriteHTML(origPath, key, assetMap) {
         },
       })
     )
-    .use(
-      posthtmlBeautify({
-        rules: {
-          indent: 2,
-          blankLines: false,
-        },
-      })
-    )
+    //    .use(
+    //      posthtmlBeautify({
+    //        rules: {
+    //          indent: 2,
+    //          blankLines: false,
+    //        },
+    //      })
+    //    )
     .process(text);
 
   const hash = getContentHash(output.html);
