@@ -6,20 +6,20 @@ references:
       - image: circleci/node:12
     working_directory: ~/extension-workshop
 
-   restore_build_cache:
-     name: Restore Yarn Package Cache
-     keys:
-       - yarn-packages-{{ checksum "yarn.lock" }}
+  restore_build_cache: &restore_build_cache
+    name: Restore Yarn Package Cache
+    keys:
+      - yarn-packages-{{ checksum "yarn.lock" }}
 
-   run_yarn_install:
-     name: Install Dependencies
-     command: yarn install --immutable
+  run_yarn_install: &run_yarn_install
+    name: Install Dependencies
+    command: yarn install --immutable
 
-   save_build_cache:
-     name: Save Yarn Package Cache
-     key: yarn-packages-{{ checksum "yarn.lock" }}
-     paths:
-       - ~/.cache/yarn
+  save_build_cache: &save_build_cache
+    name: Save Yarn Package Cache
+    key: yarn-packages-{{ checksum "yarn.lock" }}
+    paths:
+      - ~/.cache/yarn
 
   run_build_test: &run_build_test
     run:
