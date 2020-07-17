@@ -38,7 +38,7 @@ Note: Running locally will show unpublished content that uses the `published: fa
 | yarn build:unpublished | Builds the site for production with unpublished content.                                | 
 | yarn clean             | Clears the output directory. (You probably won't need to use this manually              |
 
-## How the site is build
+## How the site is built
 
 The site is built with [Eleventy](https://www.11ty.dev/) which is a nodejs based static site generator.
 
