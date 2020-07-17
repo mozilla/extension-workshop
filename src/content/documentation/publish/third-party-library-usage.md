@@ -3,7 +3,7 @@ layout: sidebar
 title: Third Party Library Usage
 permalink: /documentation/publish/third-party-library-usage/
 topic: Publish
-tags: [Add-ons, Extensions, Review Policy]
+tags: [add-ons, extensions, review-policy]
 contributors: [ChrisRoss5, One]
 last_updated_by: ChrisRoss5
 date: 2019-05-16 09:19:15

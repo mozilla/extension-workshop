@@ -3,7 +3,7 @@ layout: sidebar
 title: Add-on Policies
 permalink: /documentation/publish/add-on-policies/
 topic: Publish
-tags: [Add-ons, Review Policy]
+tags: [add-ons, review-policy]
 contributors:
   [
     kewisch,

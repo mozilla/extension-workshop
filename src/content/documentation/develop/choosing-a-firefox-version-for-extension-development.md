@@ -3,7 +3,7 @@ layout: sidebar
 title: Choosing a Firefox version for extension development
 permalink: /documentation/develop/choosing-a-firefox-version-for-extension-development/
 topic: Develop
-tags: [Add-ons, Development, Extensions, Guide, Tools]
+tags: [add-ons, development, extensions, guide, tools]
 contributors: [mdnwebdocs-bot, rebloor]
 last_updated_by: mdnwebdocs-bot
 date: 2019-03-18 16:36:22

@@ -3,7 +3,7 @@ layout: sidebar
 title: Unique Firefox Capabilities
 permalink: /documentation/develop/unique-firefox-capabilities/
 topic: Develop
-tags: [Getting started, WebExtensions, API, Firefox]
+tags: [getting-started, webextensions, api, firefox]
 contributors: [rebloor, caitmuenster]
 last_updated_by: caitmuenster
 date: 2020-04-24

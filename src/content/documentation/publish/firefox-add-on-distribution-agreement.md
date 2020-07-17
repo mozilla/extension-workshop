@@ -3,7 +3,7 @@ layout: sidebar
 title: Firefox Add-on Distribution Agreement
 permalink: /documentation/publish/firefox-add-on-distribution-agreement/
 topic: Publish
-tags: [add-on, Agreement, Firefox]
+tags: [add-on, agreement, firefox]
 contributors:
   [
     kewisch,

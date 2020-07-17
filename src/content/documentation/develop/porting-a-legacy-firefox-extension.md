@@ -3,7 +3,7 @@ layout: sidebar
 title: Porting a legacy Firefox extension
 permalink: /documentation/develop/porting-a-legacy-firefox-extension/
 topic: Develop
-tags: [WebExtensions]
+tags: [webextensions]
 contributors:
   [
     mdnwebdocs-bot,

@@ -3,7 +3,7 @@ layout: sidebar
 title: Temporary installation in Firefox
 permalink: /documentation/develop/temporary-installation-in-firefox/
 topic: Develop
-tags: [WebExtensions]
+tags: [webextensions]
 contributors:
   [
     caitmuenster,

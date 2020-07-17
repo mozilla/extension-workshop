@@ -3,7 +3,7 @@ layout: sidebar
 title: Differences between desktop and Android extensions
 permalink: /documentation/develop/differences-between-desktop-and-android-extensions/
 topic: Develop
-tags: [Add-ons, Guide, Mobile, NeedsUpdate, WebExtensions]
+tags: [add-ons, guide, mobile, needsupdate, webextensions]
 contributors:
   [
     mdnwebdocs-bot,

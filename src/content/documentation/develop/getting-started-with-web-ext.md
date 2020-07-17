@@ -3,7 +3,7 @@ layout: sidebar
 title: Getting started with web-ext
 permalink: /documentation/develop/getting-started-with-web-ext/
 topic: Develop
-tags: [Guide, Installing, packaging, Testing, Tools, web-ext, WebExtension]
+tags: [guide, installing, packaging, testing, tools, web-ext, webextension]
 contributors:
   [
     caitmuenster,

@@ -3,7 +3,7 @@ layout: sidebar
 title: Comparison with the Add-on SDK
 permalink: /documentation/develop/comparison-with-the-add-on-sdk/
 topic: Develop
-tags: [Addon SDK, AddonSDK, porting, WebExtensions]
+tags: [addon-sdk, addonsdk, porting, webextensions]
 contributors:
   [
     rebloor,
