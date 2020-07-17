@@ -32,11 +32,13 @@ module.exports = function (eleventyConfig) {
     return md.render(value.toString());
   });
 
-  eleventyConfig.addFilter('slugify', str => slugify(str, {
-    lower: true,
-    replacement: '-',
-    remove: /[*+~.·,()''`´%!?¿:@]/g
-  }));
+  eleventyConfig.addFilter('slugify', (str) =>
+    slugify(str, {
+      lower: true,
+      replacement: '-',
+      remove: /[*+~.·,()''`´%!?¿:@]/g,
+    })
+  );
 
   // Explicitly copy through the built files needed.
   eleventyConfig.addPassthroughCopy({
