@@ -5,8 +5,6 @@
  *
 
 */
-const asset = '/assets/img/firefox-logo.png';
-
 window.is_touch_device = 'ontouchstart' in document.documentElement;
 
 jQuery(document).ready(function ($) {
