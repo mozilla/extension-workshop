@@ -2,7 +2,11 @@
  * Glance Digital Custom JavaScript Programing
  * lance@glance.ca
  *
- */
+ *
+
+*/
+const asset = '/assets/img/firefox-logo.png';
+
 window.is_touch_device = 'ontouchstart' in document.documentElement;
 
 jQuery(document).ready(function ($) {

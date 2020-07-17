@@ -7,7 +7,8 @@ const sass = require('node-sass');
 
 const renderSass = util.promisify(sass.render);
 const inputFile = './src/assets/css/styles.scss';
-const outputFile = './src/build/assets/css/styles.css';
+const outputFile = './build/assets/css/styles.css';
+const isProduction = process.env.ELEVENTY_ENV;
 
 const buildSass = async function () {
   const { css } = await renderSass({
@@ -20,6 +21,10 @@ const buildSass = async function () {
     ],
   });
 
+  // This is a hint to know if this is a first run, in which case
+  // we don't need to tell browserSync to update.
+  const fileExisted = await fs.pathExists(outputFile);
+
   try {
     await fs.ensureFile(outputFile);
     await fs.writeFile(outputFile, css);
@@ -27,15 +32,17 @@ const buildSass = async function () {
     console.error(`Error writing generated CSS: ${error}`);
   }
 
-  // Tell browserSync to reload.
-  try {
-    await fetch(
-      'http://localhost:8081/__browser_sync__?method=reload&args=styles.css'
-    );
-  } catch (error) {
-    console.error(
-      `Couldn't communicate with browserSync. Maybe it hasn't started yet.`
-    );
+  if (!isProduction && fileExisted) {
+    // Tell browserSync to reload.
+    try {
+      await fetch(
+        'http://localhost:8081/__browser_sync__?method=reload&args=styles.css'
+      );
+    } catch (error) {
+      console.error(
+        `Couldn't communicate with browserSync!`
+      );
+    }
   }
 };
 

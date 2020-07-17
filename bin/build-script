@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 
+/*
+ * This script concatenates all the JS files listed below.
+ * Minification is run for production builds separately
+ *
+ */
+
 const fetch = require('node-fetch');
 const fs = require('fs-extra');
-const util = require('util');
-const UglifyJS = require('uglify-js');
+const isProduction = process.env.ELEVENTY_ENV;
 
 const inputFiles = [
   'node_modules/jquery/dist/jquery.js',
@@ -20,7 +25,7 @@ const inputFiles = [
   'src/assets/js/main.js',
 ];
 
-const outputFile = './src/build/assets/js/bundle.js';
+const outputFile = './build/assets/js/bundle.js';
 
 const buildJS = async function () {
   const data = [];
@@ -29,28 +34,28 @@ const buildJS = async function () {
     data.push(content);
   }
 
-  const result = UglifyJS.minify(data.join('\n'));
-
-  if (result.error) {
-    throw new Error(result.error);
-  }
+  // This is a hint to know if this is a first run, in which case
+  // we don't need to tell browserSync to update.
+  const fileExisted = await fs.pathExists(outputFile);
 
   try {
     await fs.ensureFile(outputFile);
-    await fs.writeFile(outputFile, result.code);
+    await fs.writeFile(outputFile, data.join('\n'));
   } catch (error) {
     console.error(`Error writing generated JS: ${error}`);
   }
 
-  try {
-    // Tell browserSync to reload.
-    await fetch(
-      'http://localhost:8081/__browser_sync__?method=reload&args=bundle.js'
-    );
-  } catch (error) {
-    console.error(
-      `Couldn't communicate with browserSync. Maybe it hasn't started yet.`
-    );
+  if (!isProduction && fileExisted) {
+    try {
+      // Tell browserSync to reload.
+      await fetch(
+        'http://localhost:8081/__browser_sync__?method=reload&args=bundle.js'
+      );
+    } catch (error) {
+      console.error(
+        `Couldn't communicate with browserSync!`
+      );
+    }
   }
 };
 

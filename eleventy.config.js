@@ -1,3 +1,4 @@
+const path = require('path');
 const fs = require('fs-extra');
 const { Liquid } = require('liquidjs');
 const md = require('markdown-it')({
@@ -7,6 +8,9 @@ const md = require('markdown-it')({
 }).disable('code');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
+
+const inputDir = path.relative(__dirname, 'src/content');
+const outputDir = path.relative(__dirname, 'build');
 
 module.exports = function (eleventyConfig) {
   const liquidParser = new Liquid({
@@ -34,14 +38,14 @@ module.exports = function (eleventyConfig) {
     './src/assets/js/basket-client.js': 'assets/js/basket-client.js',
   });
   eleventyConfig.addPassthroughCopy({
-    './node_modules/lunr/lunr.min.js': 'assets/js/lunr.min.js',
+    './node_modules/lunr/lunr.js': 'assets/js/lunr.js',
   });
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function (err, bs) {
         bs.addMiddleware('*', (req, res) => {
-          const content_404 = fs.readFileSync('src/build/404.html');
+          const content_404 = fs.readFileSync('./build/404.html');
           // Provides the 404 content without redirect.
           res.write(content_404);
           // Add 404 http status code in request header.
@@ -59,12 +63,12 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      input: 'src/content',
-      output: 'src/build',
+      input: inputDir,
+      output: outputDir,
       // The following are relative to the input dir.
-      data: '../data',
-      includes: '../includes',
-      layouts: '../layouts',
+      data: '../data/',
+      includes: '../includes/',
+      layouts: '../layouts/',
     },
   };
 };
