@@ -64,7 +64,7 @@
     "clean": "rimraf './build/' './dist/'",
     "clean-dist": "rimraf './dist/'",
     "build": "eleventy --config=./eleventy.config.js && npm run sass:build && npm run uglify:build",
-    "build:unpublished": "ELEVENTY_ENV=dev npm run build",
+    "build:unpublished": "ELEVENTY_ENV=dev npm run build && bin/assets-pipeline",
     "build:production": "ELEVENTY_ENV=production npm run build && bin/assets-pipeline",
     "build:serve": "eleventy --serve --port=8081 --config=./eleventy.config.js",
     "build:debug": "DEBUG=Eleventy* eleventy --serve --port=8081 --config=./eleventy.config.js",
