@@ -19,6 +19,7 @@ const buildSass = async function () {
       'node_modules/hamburgers/_sass/hamburgers',
       'node_modules/prismjs/themes',
     ],
+    outputStyle: isProduction ? 'compressed' : 'nested',
   });
 
   // This is a hint to know if this is a first run, in which case

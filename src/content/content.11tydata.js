@@ -20,7 +20,7 @@ module.exports = {
       };
     },
     permalink: (data) => {
-      if (process.env.ELEVENTY_ENV !== 'production') {
+      if (process.env.BUILD_UNPUBLISHED) {
         return data.permalink;
       } else {
         // Don't output files with an explicit "published: false".

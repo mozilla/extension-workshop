@@ -14,6 +14,7 @@
     "not dead"
   ],
   "dependencies": {
+    "chalk": "^4.1.0",
     "dompurify": "2.0.12",
     "foundation-sites": "6.6.3",
     "hamburgers": "1.1.3",
@@ -23,6 +24,7 @@
     "postcss": "^7.0.32",
     "postcss-url": "^8.0.0",
     "posthtml": "^0.13.1",
+    "posthtml-beautify": "^0.7.0",
     "posthtml-postcss": "^0.3.0",
     "posthtml-urls": "^1.0.0",
     "slick-carousel": "1.8.1",
@@ -64,7 +66,7 @@
     "clean": "rimraf './build/' './dist/'",
     "clean-dist": "rimraf './dist/'",
     "build": "eleventy --config=./eleventy.config.js && npm run sass:build && npm run uglify:build",
-    "build:unpublished": "ELEVENTY_ENV=dev npm run build && bin/assets-pipeline",
+    "build:unpublished": "ELEVENTY_ENV=production BUILD_UNPUBLISHED=1 npm run build && bin/assets-pipeline",
     "build:production": "ELEVENTY_ENV=production npm run build && bin/assets-pipeline",
     "build:serve": "eleventy --serve --port=8081 --config=./eleventy.config.js",
     "build:debug": "DEBUG=Eleventy* eleventy --serve --port=8081 --config=./eleventy.config.js",

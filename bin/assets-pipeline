@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 
+const chalk = require('chalk');
 const crypto = require('crypto');
 const path = require('path');
 const fs = require('fs-extra');
 const postcss = require('postcss');
 const postcssURL = require('postcss-url');
 const posthtml = require('posthtml');
+const posthtmlBeautify = require('posthtml-beautify');
 const posthtmlURL = require('posthtml-urls');
 const posthtmlCSS = require('posthtml-postcss');
 const Terser = require('terser');
@@ -18,13 +20,17 @@ const builtAssetDir = path.resolve(__dirname, '../build/');
 const destAssetDir = path.resolve(__dirname, '../dist/');
 
 // Binary assets are handled first
-const binaryAssetsRX = /\.(?:jpe?g|png|tiff|webp|eot|gif|otf|ttf|woff2?)$/;
+const binaryAssetsRX = /\.(?:ico|jpe?g|png|tiff|webp|eot|gif|otf|ttf|woff2?)$/;
 
 // Text-based assets consume other assets so they need to be revved after the images.
 const textAssetsRX = /\.(?:js|css|svg)$/;
 
 // Assets that match these endings should not be hashed.
 const unHashableAssetsRX = /(?:robots\.txt|\.html|pages\.json)$/;
+
+function getPathRelativeToCWD(assetPath) {
+  return path.relative(process.cwd(), assetPath);
+}
 
 // The asset map is the main data structure that holds the paths.
 async function getFileHash(path) {
@@ -130,11 +136,11 @@ async function rewriteBinaryFiles(origPath, key, assetMap) {
     await fs.ensureFile(outputFile);
     await fs.copy(origPath, outputFile, { replace: false });
     console.log(
-      `Writing Binary file to ${path.relative(__dirname, outputFile)}`
+      `Writing Binary file to ${getPathRelativeToCWD(outputFile)}`
     );
     updateKeys(assetMap, key, fileHash, true);
   } catch (error) {
-    console.error(`Error writing binary file: ${error}`);
+    console.error(chalk.red(`Error writing binary file: ${error}`));
   }
 }
 
@@ -157,7 +163,7 @@ async function rewriteJS(origPath, key, assetMap) {
     console.log(
       `Re-writing ${replacementsCount} ${
         replacementsCount == 1 ? 'path' : 'paths'
-      } in ${path.relative(__dirname, origPath)}`
+      } in ${getPathRelativeToCWD(origPath)}`
     );
   }
   for (var i = pathNodes.length; --i >= 0; ) {
@@ -184,11 +190,11 @@ async function rewriteJS(origPath, key, assetMap) {
     await fs.ensureFile(outputFile);
     await fs.writeFile(outputFile, minified.code);
     console.log(
-      `Writing minified JS to ${path.relative(__dirname, outputFile)}`
+      `Writing minified JS to ${getPathRelativeToCWD(outputFile)}`
     );
     updateKeys(assetMap, key, hash, true);
   } catch (error) {
-    console.error(`Error writing generated JS: ${error}`);
+    console.error(chalk.red(`Error writing generated JS: ${error}`));
   }
 }
 
@@ -230,6 +236,14 @@ async function rewriteHTML(origPath, key, assetMap) {
         },
       })
     )
+    .use(
+      posthtmlBeautify({
+        rules: {
+          indent: 2,
+          blankLines: false,
+        },
+      })
+    )
     .process(text);
 
   const hash = getContentHash(output.html);
@@ -238,12 +252,13 @@ async function rewriteHTML(origPath, key, assetMap) {
     console.log(
       `Re-writing ${replacementsCount} ${
         replacementsCount == 1 ? 'path' : 'paths'
-      } in ${path.relative(__dirname, origPath)}`
+      } in ${getPathRelativeToCWD(origPath)}`
     );
   }
 
   let outputFile;
-  if (path.extname(origPath) !== '.html') {
+  const ext = path.extname(origPath);
+  if (ext !== '.html') {
     outputFile = path.join(destAssetDir, getHashedPath(key, hash));
   } else {
     outputFile = path.join(
@@ -255,10 +270,12 @@ async function rewriteHTML(origPath, key, assetMap) {
   try {
     await fs.ensureFile(outputFile);
     await fs.writeFile(outputFile, output.html);
-    console.log(`Writing HTML/SVG to ${path.relative(__dirname, outputFile)}`);
+    const fileType = ext.replace(/^\./, '');
+
+    console.log(`Writing ${fileType} to ${getPathRelativeToCWD(outputFile)}`);
     updateKeys(assetMap, key, hash, true);
   } catch (error) {
-    console.error(`Error writing generated HTML/SVG: ${error}`);
+    console.error(chalk.red(`Error writing generated ${fileType}: ${error}`));
   }
 }
 
@@ -286,7 +303,7 @@ async function rewriteCSS(origPath, key, assetMap) {
     console.log(
       `Re-writing ${replacementsCount} ${
         replacementsCount == 1 ? 'path' : 'paths'
-      } in ${path.relative(__dirname, origPath)}`
+      } in ${getPathRelativeToCWD(origPath)}`
     );
   }
 
@@ -296,7 +313,7 @@ async function rewriteCSS(origPath, key, assetMap) {
   try {
     await fs.ensureFile(outputFile);
     await fs.writeFile(outputFile, output.css);
-    console.log(`Writing CSS to ${path.relative(__dirname, outputFile)}`);
+    console.log(`Writing CSS to ${getPathRelativeToCWD(outputFile)}`);
     updateKeys(assetMap, key, hash, true);
   } catch (error) {
     console.error(`Error writing generated CSS: ${error}`);
@@ -313,7 +330,7 @@ async function copyFiles(assetMap) {
         const origFile = path.join(builtAssetDir, pathKey);
 
         try {
-          console.log(`Copying file from ${origFile} to ${outputFile}`);
+          console.log(`Copying file from ${getPathRelativeToCWD(origFile)} to ${getPathRelativeToCWD(outputFile)}`);
           await fs.copy(origFile, outputFile, { replace: false });
           asset.written = true;
         } catch (error) {
@@ -348,5 +365,5 @@ async function cacheBustAssets() {
 }
 
 cacheBustAssets().then(() => {
-  console.log('Ta-da! 🥁');
+  console.log(chalk.green('TA-DA! 🥁'));
 });
