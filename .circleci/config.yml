@@ -3,45 +3,24 @@ version: 2.1
 references:
   build_container: &build_container
     docker:
-      - image: circleci/ruby:2.6
+      - image: circleci/node:12
     working_directory: ~/extension-workshop
 
   restore_build_cache: &restore_build_cache
     restore_cache:
       keys:
-        - rubygems-v1-{{ checksum "Gemfile.lock" }}
-        - rubygems-v1-fallback
-
-  run_bundle_install: &run_bundle_install
-    run:
-      name: Bundle Install
-      command: bundle check || bundle install
-
-  save_build_cache: &save_build_cache
-    save_cache:
-      key: rubygems-v1-{{ checksum "Gemfile.lock" }}
-      paths:
-        - vendor/bundle
+        - yarn-packages-{{ checksum "yarn.lock" }}
 
   run_yarn_install: &run_yarn_install
     run:
-      name: yarn install
-      command: |
-        sudo apt-get update && sudo apt-get install -y apt-transport-https
-        sudo apt-get install -y gcc g++ make
+      name: Install Dependencies
+      command: yarn install --immutable
 
-        # install nodejs v10
-        # https://github.com/nodesource/distributions/blob/master/README.md#installation-instructions
-        curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-        sudo apt-get install -y nodejs
-
-        # install yarn stable
-        # https://yarnpkg.com/lang/en/docs/install/#debian-stable
-        curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-        echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-        sudo apt-get update && sudo apt-get install -y yarn
-
-        yarn install
+  save_build_cache: &save_build_cache
+    save_cache:
+      key: yarn-packages-{{ checksum "yarn.lock" }}
+      paths:
+        - ~/.cache/yarn
 
   run_build_test: &run_build_test
     run:
@@ -56,7 +35,7 @@ references:
 
   deploy_container: &deploy_container
     docker:
-      - image: circleci/python:3.8
+      - image: circleci/python:3.8-node
 
   attach_deploy_workspace: &attach_deploy_workspace
     attach_workspace:
@@ -74,16 +53,15 @@ jobs:
     steps:
       - checkout
       - *restore_build_cache
-      - *run_bundle_install
-      - *save_build_cache
       - *run_yarn_install
+      - *save_build_cache
       - *run_build_test
       - run:
-          name: Jekyll build unpublished
+          name: Eleventy build unpublished
           environment:
-            JEKYLL_ENV: production
+            ELEVENTY_ENV: production
             SVGO_BIN: node_modules/svgo/bin/svgo
-          command: bundle exec jekyll build --unpublished
+          command: yarn build:unpublished
           no_output_timeout: 15m
       - *persist_build_workspace
 
@@ -92,16 +70,15 @@ jobs:
     steps:
       - checkout
       - *restore_build_cache
-      - *run_bundle_install
-      - *save_build_cache
       - *run_yarn_install
+      - *save_build_cache
       - *run_build_test
       - run:
-          name: Jekyll build
+          name: Eleventy build
           environment:
-            JEKYLL_ENV: production
+            ELEVENTY_ENV: production
             SVGO_BIN: node_modules/svgo/bin/svgo
-          command: bundle exec jekyll build
+          command: yarn build:production
           no_output_timeout: 15m
       - *persist_build_workspace
 

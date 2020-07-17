@@ -1,14 +1,11 @@
 module.exports = {
-  globals: {
-    jQuery: 'readable',
-  },
   env: {
-    browser: true,
+    node: true,
   },
   plugins: ['prettier'],
   extends: ['prettier'],
   parserOptions: {
-    ecmaVersion: 5,
+    ecmaVersion: 2018,
   },
   rules: {
     'prettier/prettier': 'error',

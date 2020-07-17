@@ -1,0 +1,120 @@
+{% assign on_current_page = false %}
+{% assign max_steps = 3 %}
+
+<section class="module up-next">
+    <article class="module-content grid-x grid-padding-x">
+        <div class="cell small-12">
+            <h6>Up Next</h6>
+        </div>
+
+
+{% for item in pages %}
+    {% if item.categories %}
+        {% if on_current_page == true %}
+            {% assign next_page_ar = collections.all | where: 'data.permalink', item.url %}
+            {% for next_page in next_page_ar %}
+                {% if is_next_range < max_steps && next_page.data.skip_index %}
+                    {%- include up-next-tile.liquid -%}
+                {% endif %}
+                {% assign is_next_range = is_next_range | plus: 1 %}
+            {% endfor %}
+        {% endif %}
+
+        {% if page.url == item.url %}
+            {% assign on_current_page = true %}
+            {% assign is_next_range = 0 %}
+        {% endif %}
+
+        {% for cat in item.categories %}
+            {% if cat.pages %}
+                {% for pg in cat.pages %}
+                    {% if on_current_page == true %}
+                        {% assign next_page_ar = collections.all | where: 'data.permalink', pg.url %}
+                        {% for next_page in next_page_ar %}
+                            {% if is_next_range < max_steps && next_page.data.skip_index %}
+                                {% include up-next-tile.liquid %}
+                            {% endif %}
+                            {% assign is_next_range = is_next_range | plus: 1 %}
+                        {% endfor %}
+                    {% endif %}
+                    {% if page.url == pg.url %}
+                        {% assign on_current_page = true %}
+                        {% assign is_next_range = 0 %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+    {% elsif item.subfolderitems %}
+        {% for subitem in item.subfolderitems %}
+            {% if subitem.categories %}
+                {% if on_current_page == true %}
+                    {% assign next_page_ar = collections.all | where: 'data.permalink', subitem.url %}
+                    {% for next_page in next_page_ar %}
+                        {% if is_next_range < max_steps && next_page.data.skip_index %}
+                            {%- include up-next-tile.liquid -%}
+                        {% endif %}
+                        {% assign is_next_range = is_next_range | plus: 1 %}
+                    {% endfor %}
+                {% endif %}
+
+                {% if page.url == subitem.url %}
+                    {% assign on_current_page = true %}
+                    {% assign is_next_range = 0 %}
+                {% endif %}
+
+                {% for cat in subitem.categories  %}
+                    {% if cat.pages %}
+                        {% for pg in cat.pages %}
+                            {% if on_current_page == true %}
+                                {% assign next_page_ar = collections.all | where: 'data.permalink', pg.url %}
+                                {% for next_page in next_page_ar %}
+                                    {% if is_next_range < max_steps && next_page.data.skip_index %}
+                                        {%- include up-next-tile.liquid -%}
+                                    {% endif  %}
+                                    {% assign is_next_range = is_next_range | plus: 1 %}
+                                {% endfor %}
+                            {% endif %}
+
+                            {% if page.url == pg.url %}
+                                {% assign on_current_page = true %}
+                                {% assign is_next_range = 0 %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                {% if on_current_page == true %}
+                    {% assign next_page_ar = collections.all | where: 'data.permalink', subitem.url %}
+                    {% for next_page in next_page_ar %}
+                        {% if is_next_range < max_steps && next_page.data.skip_index %}
+                            {%- include up-next-tile.liquid -%}
+                        {% endif %}
+                        {% assign is_next_range = is_next_range | plus: 1 %}
+                    {% endfor %}
+                {% endif %}
+
+                {% if page.url == subitem.url %}
+                    {% assign on_current_page = true %}
+                    {% assign is_next_range = 0 %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        {% if on_current_page == true %}
+            {% assign next_page_ar = collections.all | where: 'data.permalink', item.url %}
+            {% for next_page in next_page_ar %}
+                {% if is_next_range < max_steps && next_page.data.skip_index %}
+                    {%- include up-next-tile.liquid -%}
+                {% endif %}
+                {% assign is_next_range = is_next_range | plus: 1 %}
+            {% endfor %}
+        {% endif %}
+        {% if page.url == item.url %}
+            {% assign on_current_page = true %}
+            {% assign is_next_range = 0 %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+    </article>
+</section>

@@ -1,0 +1,16 @@
+{% for item in site.data.pages %}
+    {% if item.title == "Documentation Topics" && item.subfolderitems %}
+    	<aside class="documentation-topics">
+    		<div class="grid-container grid-x grid-padding-x">
+		        <div class="cell small-12">
+		        	<h6>{{ item.title }}</h6>
+		            <ul>
+		                {% for subitem in item.subfolderitems %}
+		                    <li><a href="{{ subitem.url }}"{% if pg.target %} target="{{ pg.target }}"{% endif %}>{{ subitem.title }}</a></li>
+		                {% endfor %}
+		            </ul>
+		        </div>
+		    </div>
+        </aside>
+    {% endif %}
+{% endfor %}

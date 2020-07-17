@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.liquid -%}
+
+  <body class="site full-width page-404">
+
+    {%- include header.liquid -%}
+
+    <main class="site-content" aria-label="Content">
+    	<div class="grid-container grid-x grid-padding-x align-center align-middle tiles-intro">
+            <div class="cell small-12">
+		        {{ content }}
+		    </div>
+		</div>
+    </main>
+
+    {%- include connect.liquid -%}
+
+    {%- include footer.liquid -%}
+
+    <script src="/assets/js/bundle.js"></script>
+    <script src="/assets/js/basket-client.js"></script>
+  </body>
+</html>

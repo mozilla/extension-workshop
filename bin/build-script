@@ -1,0 +1,60 @@
+#!/usr/bin/env node
+
+/*
+ * This script concatenates all the JS files listed below.
+ * Minification is run for production builds separately
+ *
+ */
+
+const fetch = require('node-fetch');
+const fs = require('fs-extra');
+const isProduction = process.env.ELEVENTY_ENV;
+
+const inputFiles = [
+  'node_modules/jquery/dist/jquery.js',
+  'node_modules/dompurify/dist/purify.js',
+  'node_modules/velocity-animate/velocity.js',
+  'node_modules/velocity-ui-pack/velocity.ui.js',
+  'node_modules/slick-carousel/slick/slick.js',
+  'src/assets/js/tinypubsub.js',
+  'src/assets/js/breakpoints.js',
+  'src/assets/js/parallax.js',
+  'src/assets/js/parallaxFG.js',
+  'src/assets/js/inview.js',
+  'src/assets/js/youtubeplayer.js',
+  'src/assets/js/main.js',
+];
+
+const outputFile = './build/assets/js/bundle.js';
+
+const buildJS = async function () {
+  const data = [];
+  for (const file of inputFiles) {
+    const content = await fs.readFile(file, 'utf8');
+    data.push(content);
+  }
+
+  // This is a hint to know if this is a first run, in which case
+  // we don't need to tell browserSync to update.
+  const fileExisted = await fs.pathExists(outputFile);
+
+  try {
+    await fs.ensureFile(outputFile);
+    await fs.writeFile(outputFile, data.join('\n'));
+  } catch (error) {
+    console.error(`Error writing generated JS: ${error}`);
+  }
+
+  if (!isProduction && fileExisted) {
+    try {
+      // Tell browserSync to reload.
+      await fetch(
+        'http://localhost:8081/__browser_sync__?method=reload&args=bundle.js'
+      );
+    } catch (error) {
+      console.error(`Couldn't communicate with browserSync!`);
+    }
+  }
+};
+
+buildJS();
