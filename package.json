@@ -70,7 +70,7 @@
     "build:production": "ELEVENTY_ENV=production npm run build && bin/assets-pipeline",
     "build:serve": "eleventy --serve --port=8081 --config=./eleventy.config.js",
     "build:debug": "DEBUG=Eleventy* eleventy --serve --port=8081 --config=./eleventy.config.js",
-    "start": "npm run clean && npm-run-all -p build:serve sass:* uglify:*",
+    "start": "BUILD_UNPUBLISHED=1 npm run clean && npm-run-all -p build:serve sass:* uglify:*",
     "sass:build": "bin/build-styles",
     "sass:watch": "chokidar 'src/assets/css/*.scss' -c 'npm run sass:build'",
     "uglify:build": "bin/build-script",

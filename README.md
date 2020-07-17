@@ -31,11 +31,45 @@ Note: Running locally will show unpublished content that uses the `published: fa
 
 ### Available yarn commands
 
-| Command             | Description                                                                             |
-| ------------------- | --------------------------------------------------------------------------------------- |
-| yarn clean          | Clears the output directory                                                             |
-| yarn build          | Builds the site.                                                                        |
-| yarn start          | Starts eleventy and includes unpublished content.                                       |
+| Command                | Description                                                                             |
+| ---------------------- | --------------------------------------------------------------------------------------- |
+| yarn start             | Starts eleventy and includes unpublished content.                                       |
+| yarn build:production  | Builds the site for production.                                                         |
+| yarn build:upublished  | Builds the site for production with unpublished content.                                |
+| yarn clean             | Clears the output directory. (You probably won't need to use this manually              |
+
+## How the site is build
+
+The site is built with [Eleventy](https://www.11ty.dev/) which is a nodejs based static site generator.
+
+This site is built in slightly different ways depending on local -dev or production builds.
+
+### Development builts
+
+When you run `yarn start` the CSS and JS is built in parallel with the eleventy build. Once up and running both eleventy and the JS and CSS build scripts watch for changes. When something changes the site is re-built.
+
+In development Eleventy knows nothing about the CSS and JavaScript builds. For automatic reloading each script uses a fetch to the public API to tell browserSync there is new code and it reloads it for you.
+
+## Production builds
+
+Building for production is slightly different. The Eleventy process and the JS and CSS builds happen in series. Then a 3rd `asset-pipeline` process happens which takes the the built content from `./build` directoty and runs it through various optimizations.
+
+In these steps the following takes place:
+
+* Binary files are versioned with hashes in the file names.
+* References to these file in CSS and JS are updated.
+* CSS and JS are minified
+* The HTML is processed to update the references to the assets new hash-based filenames.
+
+All of this means that we can serve the site with far-future expires headers. If the resource is in the browser's cache it won't even make a request for it. To break the cache the resource's url needs to change. When something ie updated and the script re-run the hash in the filename will change, which won't be ccached and the browser will know to fetch it. This helps the site be fast.
+
+Whilst the `asset-pipline` script is custom, it leverages a lot of existing libs where possible, these include Terser, postHTML, postCSS and various plugins.
+
+At some point it's likely 11ty will have its own mechanism for wrangling assets and at that point this will no longer be required.
+
+#### Asset paths
+
+For the asset-pipeline script to do it's thing, all you need to do is refer to all assets with a path beginning with `/assets/` if you do that everything else is handled for you ✨
 
 ## Development Guide: Content Updates
 
@@ -45,7 +79,6 @@ This site has three templates: a full-width page, a sidebar page for documentati
 
 1. Add the image files to `src/assets/img/`
 2. In your page, link to images using this page structure:
-
 
 You can reference images with the full path from the assets directory e.g: `/assets/img/image.png`
 
