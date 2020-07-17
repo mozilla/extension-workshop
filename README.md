@@ -50,7 +50,7 @@ When you run `yarn start` the CSS and JS is built in parallel with the eleventy 
 
 In development Eleventy knows nothing about the CSS and JavaScript builds. For automatic reloading of the JS and CSS, each script uses a fetch to the public API to tell browserSync there is new code and it reloads it for you.
 
-## Production builds
+### Production builds
 
 Building for production is slightly different. The Eleventy process and the JS and CSS builds happen in series. Then a 3rd `asset-pipeline` process happens which takes the the built content from `./build` directoty and runs it through various optimizations.
 
