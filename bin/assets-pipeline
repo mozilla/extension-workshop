@@ -99,7 +99,7 @@ function trimLeadingSlash(str) {
 
 function hasHashedReplacementURL(inputPath, assetMap) {
   const url = new Url(trimLeadingSlash(inputPath));
-  if (assetMap.hasOwnProperty(url.pathname) && !url.pathname.match(unHashableAssetsRX)) {
+  if (assetMap.hasOwnProperty(url.pathname) && assetMap[url.pathname].hashedPath && !url.pathname.match(unHashableAssetsRX)) {
     return true;
   }
   return false;
@@ -114,9 +114,7 @@ function getReplacementURL(inputPath, assetMap) {
   return `/${inputPath}`;
 }
 
-
 async function rewriteBinaryFiles(origPath, key, assetMap) {
-  //const content = await fs.readFile(origPath, 'utf8');
   const fileHash = await getFileHash(origPath);
   const hashedPath = getHashedPath(key, fileHash);
   const outputFile = path.join(destAssetDir, hashedPath);
@@ -198,6 +196,7 @@ async function rewriteHTML(origPath, key, assetMap) {
     )
     .use(posthtmlURL({
       eachURL: (url, attr, element) => {
+        console.log(url)
         if (hasHashedReplacementURL(url, assetMap)) {
           replacementsCount++;
           return getReplacementURL(url, assetMap);
@@ -269,16 +268,16 @@ async function rewriteCSS(origPath, key, assetMap) {
 async function copyFiles(assetMap) {
   await Promise.all(Object.keys(assetMap).map(async (pathKey, idx) => {
     const asset = assetMap[pathKey];
-    if (!asset.written) {
+    if (asset && !asset.written) {
+
       const outputPath = asset.hashedPath ? asset.hashedPath : pathKey;
       const outputFile = path.join(destAssetDir, outputPath);
       const origFile = path.join(builtAssetDir, pathKey);
 
       try {
-        await fs.ensureFile(outputFile);
+        console.log(`Copying file from ${origFile} to ${outputFile}`);
         await fs.copy(origFile, outputFile, { replace: false });
-        console.log(`Copying file from ${path.relative(pathKey)} to ${path.relative(outputPath)}`);
-        updateKeys(assetMap, key, fileHash, true);
+        asset.written = true;
       } catch (error) {
         console.error(`Error copying file: ${error}`);
       }
