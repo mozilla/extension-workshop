@@ -1,105 +1,104 @@
 <ul class="primary">
-    {% for item in pages %}
-        {% if item.categories %}
-            <li class="has-children {% if page.url == item.url %}is-active{% endif %}">
+    {%- for item in pages -%}
+        {% if item.categories -%}
+            <li class="has-children{% if page.url == item.url %} is-active{% endif %}">
                 <a href="{{ item.url }}" data-overviewtitle="{{ item.title }} Overview">{{ item.title }}</a>
-                {% if item.subpageitems %}
+                {% if item.subpageitems -%}
                     <ul class="section">
-                        {% for section in item.subpageitems %}
+                        {%- for section in item.subpageitems %}
                             <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                        {% endfor %}
+                        {%- endfor %}
                     </ul>
-                {% endif %}
-                {% for cat in item.categories %}
+                {%- endif %}
+                {% for cat in item.categories -%}
                     <div class="category">
                         <h6>{{ cat.category }}</h6>
                         {% if cat.pages %}
                             <ul>
-                                {% for pg in cat.pages %}
-                                    <li class="{% if page.url == pg.url %}is-active{% endif %}">
+                                {%- for pg in cat.pages %}
+                                    <li{% if page.url == pg.url %} class="is-active"{% endif %}>
                                         <a href="{{ pg.url }}">{{ pg.title }}</a>
-                                        {% if pg.subpageitems %}
+                                        {% if pg.subpageitems -%}
                                             <ul class="section">
-                                                {% for section in pg.subpageitems %}
+                                                {%- for section in pg.subpageitems %}
                                                     <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                                                {% endfor %}
+                                                {%- endfor %}
                                             </ul>
-                                        {% endif %}
+                                        {%- endif %}
                                     </li>
-                                {% endfor %}
+                                {%- endfor %}
                             </ul>
-                        {% endif %}
+                        {%- endif %}
                     </div>
-                {% endfor %}
+                {%- endfor %}
             </li>
-        {% elsif item.subfolderitems %}
-            <li class="has-children has-subfolder {% if page.url == item.url %}is-active{% endif %}">
-                {% if item.url %}
+        {%- elsif item.subfolderitems %}
+            <li class="has-children has-subfolder{% if page.url == item.url %} is-active{% endif %}">
+                {% if item.url -%}
                     <a href="{{ item.url }}">{{ item.title }}</a>
-                {% else %}
+                {%- else -%}
                     <span class="label">{{ item.title }}</span>
-                {% endif %}
+                {%- endif %}
                 <ul class="subfolder">
-                    {% for subitem in item.subfolderitems %}
-                        {% if subitem.categories %}
-                            <li class="has-children {% if page.url == subitem.url %}is-active{% endif %}">
+                    {%- for subitem in item.subfolderitems %}
+                        {% if subitem.categories -%}
+                            <li class="has-children{% if page.url == subitem.url %} is-active{% endif %}">
                                 <a href="{{ subitem.url }}" data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a>
-                                {% if subitem.subpageitems %}
+                                {% if subitem.subpageitems -%}
                                     <ul class="section">
-                                        {% for section in subitem.subpageitems %}
+                                        {%- for section in subitem.subpageitems %}
                                             <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                                        {% endfor %}
+                                        {%- endfor %}
                                     </ul>
-                                {% endif %}
-                                {% for cat in subitem.categories %}
+                                {%- endif %}
+                                {%- for cat in subitem.categories %}
                                     <div class="category">
                                         <h6>{{ cat.category }}</h6>
-                                        {% if cat.pages %}
+                                        {% if cat.pages -%}
                                             <ul>
-                                                {% for pg in cat.pages %}
-                                                    <li class="{% if page.url == pg.url %}is-active{% endif %}">
+                                                {%- for pg in cat.pages %}
+                                                    <li{% if page.url == pg.url %} class="is-active"{% endif %}>
                                                         <a href="{{ pg.url }}">{{ pg.title }}</a>
-
-                                                        {% if pg.subpageitems %}
+                                                        {%- if pg.subpageitems -%}
                                                             <ul class="section">
-                                                                {% for section in pg.subpageitems %}
+                                                                {%- for section in pg.subpageitems %}
                                                                     <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                                                                {% endfor %}
+                                                                {%- endfor %}
                                                             </ul>
-                                                        {% endif %}
+                                                        {%- endif %}
                                                     </li>
-                                                {% endfor %}
+                                                {%- endfor %}
                                             </ul>
-                                        {% endif %}
+                                        {%- endif %}
                                     </div>
-                                {% endfor %}
+                                {%- endfor %}
                             </li>
-                        {% else %}
-                            <li class="{% if page.url == subitem.url %}is-active{% endif %}">
+                        {%- else %}
+                            <li{% if page.url == subitem.url %} class="is-active"{% endif %}>
                                 <a href="{{ subitem.url }}" data-overviewtitle="{{ subitem.title }} Overview">{{ subitem.title }}</a>
-                                {% if subitem.subpageitems %}
+                                {% if subitem.subpageitems -%}
                                     <ul class="section">
-                                        {% for section in subitem.subpageitems %}
+                                        {%- for section in subitem.subpageitems %}
                                             <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                                        {% endfor %}
+                                        {%- endfor %}
                                     </ul>
-                                {% endif %}
+                                {%- endif %}
                             </li>
-                        {% endif %}
-                    {% endfor %}
+                        {%- endif %}
+                    {%- endfor %}
                 </ul>
             </li>
-        {% else %}
-            <li class="{% if page.url == item.url %}is-active{% endif %}">
+        {%- else -%}
+            <li{% if page.url == item.url %} class="is-active"{% endif %}>
                 <a href="{{ item.url }}" data-overviewtitle="{{ item.title }} Overview">{{ item.title }}</a>
-                {% if item.subpageitems %}
+                {% if item.subpageitems -%}
                     <ul class="section">
-                        {% for section in item.subpageitems %}
+                        {%- for section in item.subpageitems %}
                             <li><a href="#{{ section.id }}">{{ section.title }}</a></li>
-                        {% endfor %}
+                        {%- endfor %}
                     </ul>
-                {% endif %}
+                {%- endif %}
             </li>
-        {% endif %}
-    {% endfor %}
+        {%- endif %}
+    {%- endfor %}
 </ul>

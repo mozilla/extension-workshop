@@ -7,8 +7,7 @@
             <h6>Up Next</h6>
         </div>
 
-
-{% for item in pages %}
+{%- for item in pages %}
     {% if item.categories %}
         {% if on_current_page == true %}
             {% assign next_page_ar = collections.all | where: 'data.permalink', item.url %}
@@ -114,7 +113,7 @@
             {% assign is_next_range = 0 %}
         {% endif %}
     {% endif %}
-{% endfor %}
+{% endfor -%}
 
     </article>
 </section>
