@@ -19,11 +19,11 @@ To complete the review process at [addons.mozilla.org](https://addons.mozilla.or
 
 If your add-on uses third-party libraries, please see [our requirements](/documentation/publish/third-party-library-usage/) for those.
 
-<p class="note" markdown="1">
+<div class="note" markdown="1">
 
 Minifying your code isn't recommended. It rarely protects your code, as these techniques can be reversed using tools such as [JSNice](http://jsnice.org/) and [JS Beautifier](http://jsbeautifier.org/). Unlike the advantage that minified code offers web pages loaded over the internet, extension code is loaded from a local source, so performance benefits are not significant.
 
-</p>
+</div>
 
 If you do not provide source code with clear instructions and the reviewer cannot evaluate your extension, it may be rejected.
 
@@ -51,11 +51,11 @@ You must upload your extension’s source code when its code was created using:
 - template engines, such as [handlebars](http://handlebarsjs.com/) or [css2js](https://github.com/grnadav/css2js).
 - any other custom tool that takes files, applies pre-processing, and generates file(s) to include in the extension.
 
-<p class="note" markdown="1">
+<div class="note" markdown="1">
 
 Any source code that you submit is only accessible to a small group of admin reviewers.
 
-</p>
+</div>
 
 ### Provide build instructions
 
@@ -80,11 +80,11 @@ Tip: Use a build target relative to the directory containing the source, such as
 
 ### How to upload source code
 
-<p class="note" markdown="1">
+<div class="note" markdown="1">
 
 If you need to provide it, matching source code must be attached to every extension version.
 
-</p>
+</div>
 
 Code submission process happens after the add-on validation step.
 
@@ -115,13 +115,17 @@ We also allow tools that combine multiple files into a single file, or transpile
 
 <section class="do-this" markdown="1"><header><h5>The allowed approach merely reduces file size but retains the meaning of the code:</h5></header>
 
-`var d=document;var o=JSON.parse(responseText);var e=d.createElement("div");e.className=o.className;e.textContent="Your favorite color is now "+o.color;addonElement.appendChild(e);`
+```js
+var d=document;var o=JSON.parse(responseText);var e=d.createElement("div");e.className=o.className;e.textContent="Your favorite color is now "+o.color;addonElement.appendChild(e);
+```
 
 </section>
 
 <section class="not-this" markdown="1"><header><h5>While the prohibited use of obfuscators will completely mask the intent of the code:</h5></header>
 
-`var _0x364e=['\x70\x61\x72\x73\x65','\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74','\x64\x69\x76','\x63\x6c\x61\x73\x73\x4e\x61\x6d\x65','\x59\x6f\x75\x72\x20\x66\x61\x76\x6f\x72\x69\x74\x65\x20\x63\x6f\x6c\x6f\x72\x20\x69\x73\x20\x6e\x6f\x77\x20','\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c\x64'];var _0x1dab=function(_0x440e53,_0x322e43){_0x440e53=_0x440e53-0x0;var _0x4b349d=_0x364e[_0x440e53];return _0x4b349d;};var data=JSON[_0x1dab('0x0')](responseText);var div=document[_0x1dab('0x1')](_0x1dab('0x2'));div[_0x1dab('0x3')]=data[_0x1dab('0x3')];div['\x74\x65\x78\x74\x43\x6f\x6e\x74\x65\x6e\x74']=_0x1dab('0x4')+data['\x63\x6f\x6c\x6f\x72'];addonElement[_0x1dab('0x5')](div);`
+```js
+var _0x364e=['\x70\x61\x72\x73\x65','\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74','\x64\x69\x76','\x63\x6c\x61\x73\x73\x4e\x61\x6d\x65','\x59\x6f\x75\x72\x20\x66\x61\x76\x6f\x72\x69\x74\x65\x20\x63\x6f\x6c\x6f\x72\x20\x69\x73\x20\x6e\x6f\x77\x20','\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c\x64'];var _0x1dab=function(_0x440e53,_0x322e43){_0x440e53=_0x440e53-0x0;var _0x4b349d=_0x364e[_0x440e53];return _0x4b349d;};var data=JSON[_0x1dab('0x0')](responseText);var div=document[_0x1dab('0x1')](_0x1dab('0x2'));div[_0x1dab('0x3')]=data[_0x1dab('0x3')];div['\x74\x65\x78\x74\x43\x6f\x6e\x74\x65\x6e\x74']=_0x1dab('0x4')+data['\x63\x6f\x6c\x6f\x72'];addonElement[_0x1dab('0x5')](div);
+```
 
 </section>
 

@@ -182,7 +182,11 @@ When it comes to [coloring a badge](https://developer.mozilla.org/docs/Mozilla/A
 - Warning: yellow
 - Error: red
 
-<p class="note" markdown="1">Use of Firefox colors is suggested, for more details see [Firefox Colors](http://design.firefox.com/photon/visuals/color.html). However, for purposes of [Chrome](https://developer.chrome.com/extensions/browserAction#icon) and Opera compatibility, we support any color you wish to use.</p>
+<div class="note" markdown="1">
+
+Use of Firefox colors is suggested, for more details see [Firefox Colors](http://design.firefox.com/photon/visuals/color.html). However, for purposes of [Chrome](https://developer.chrome.com/extensions/browserAction#icon) and Opera compatibility, we support any color you wish to use.
+
+</div>
 
 </div>
 </article>
