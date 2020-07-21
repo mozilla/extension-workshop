@@ -30,15 +30,9 @@ Developer accounts for addons.mozilla.org are integrated with [Firefox Accounts]
 
 It’s important to set a display name on your profile on [addons.mozilla.org](https://addons.mozilla.org) to increase transparency with users, add-on reviewers, and the greater community.
 
-{% capture note %}
-
+::: note
 Your Firefox Account display name will not sync to your profile on addons.mozilla.org. You will need to set your developer account display name from your profile on addons.mozilla.org.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid

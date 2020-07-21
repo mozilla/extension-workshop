@@ -20,19 +20,9 @@ You may want to send a user your add-on’s XPI file by some means other than a 
 - Using **Install Add-on From File** in the Add-ons Manager.
 - Adding the file to one of the standard extension folders.
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 No automatic updates will be performed for add-ons installed using these methods. You will have to deliver a new XPI file to your user for each update. However, automatic compatibility checks are still performed.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -113,19 +103,9 @@ To use Install Add-on From File in Add-on Manager, send the user the signed add-
 
 ## Installation using the standard extension folders
 
-<!-- Alert -->
-
-{% capture alert %}
-
+::: note alert
 Starting in Firefox 73, it will no longer be possible to have an extension be automatically installed as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2019/10/31/firefox-to-discontinue-sideloaded-extensions/) for more information.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: alert
-	alert: true
-%}
-
-<!-- END: Alert -->
+:::
 
 This method of add-on installation involves copying the add-on into one of the standard extension folders on the user's computer. Once copied, the next time Firefox launches the add-on will be installed. By default, the user will be asked to approve the installation, and if the user approves, the add-on will be installed and automatically loaded for subsequent launches. If the user has more than one Firefox profile, the approval and installation will occur on the next launch of each profile. For details on controlling whether the user is prompted to approve the installation, see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations).
 
@@ -133,19 +113,9 @@ This method of add-on installation involves copying the add-on into one of the s
 
 To use this method, your XPI file must be named using the add-on or application ID, as set in [Preparing your add-on](#preparing-your-addon). The signed add-on file you downloaded from AMO will be named something like borderify-1.0-an+fx.xpi (see [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/) for more details), change this to, for example, borderify@example.com.xpi.
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 If you are developing an add-on for Firefox you can use an extension proxy file to install an add-on without copying the files over to the standard extensions folders.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 ### Add the add-on XPI file to a standard extensions folder
 
@@ -169,19 +139,9 @@ The standard installation of Firefox disables the automatic installation of add-
 
 For more details on the interstitial and silent installs, see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations).
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 To uninstall the add-on, close Firefox and remove the add-on from the location where it was added.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 <section id="windows"></section>
 
@@ -195,19 +155,9 @@ C:\Users\<user name>\AppData\Roaming\Mozilla\Extensions\{ec8030f7-c20a-464f-9b0e
 
 If this folder does not exist, create it. You can also identify the current user’s path with the %appdata% system variable.
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 Note: To install an add-on for all users of a Windows computer, see [Installation using the Windows registry](/documentation/enterprise/enterprise-distribution/#installation-using-windows-registry).
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 <section id="osx"></section>
 

@@ -81,45 +81,19 @@ You can sideload an add-on using one of the standard extensions folders, as desc
 
 This section explains how to install add-ons into Firefox using the Windows Registry.
 
-{% capture alert %}
-
+::: note alert
 Starting in Firefox 73, it will no longer be possible to have an extension be installed automatically as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2019/10/31/firefox-to-discontinue-sideloaded-extensions/) for more information.
+:::
 
-{% endcapture %}
-{% include modules/note.liquid
-	content: alert
-	alert: true
-%}
-
-<!-- Alert -->
-
-{% capture alert %}
-
+::: note alert
 Before Firefox 62 it was possible to load unpacked extensions by making the Windows registry key point to a directory containing an unpackaged extension.
 
 From Firefox 62 this is no longer possible, and the key must point to a packaged XPI file, as described in this section.
+:::
 
-{% endcapture %}
-{% include modules/note.liquid
-	content: alert
-	alert: true
-%}
-
-<!-- END: Alert -->
-
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 It is safe to modify the Registry keys while Firefox is running.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 1. Ensure the add-on has an add-on ID, by including the following to its manifest.json file, replacing _your-add-on-name@your-domain.com_ with a suitable ID for your add-on:
 
@@ -147,15 +121,9 @@ An email address style ID is recommended.
 
    `HKEY_LOCAL_MACHINE\Software\Wow6432Node\Mozilla\Firefox\Extensions`
 
-{% capture note %}
-
+::: note
    `HKEY_LOCAL_MACHINE\Software\Mozilla\Firefox\Extensions` is not available when running 32-bit Firefox on a 64-bit machine, you can only install for all users using the `Wow6432Node` key.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
+:::
 
    - For the current user, add to the following registry key:
 
@@ -230,19 +198,9 @@ By default, `extensions.autoDisableScopes` is set to 15 so that automatic instal
 
 In some circumstances, you may want Firefox to ignore some or all of the additional install locations listed above. In this case, use the preference extensions.enabledScopes. By default, this preference is not included in the standard downloads of Firefox, so will need to be added. You can add the preference [manually](https://support.mozilla.org/kb/about-config-editor-firefox#w_adding-changing-and-resetting-preferences) or do it programmatically using the instructions in the next section.
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 It is impossible to disable loading add-ons from the profile directory.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 ### Settings scope preferences programmatically
 
@@ -261,19 +219,9 @@ defaultPref("extensions.enabledScopes", 15);
 defaultPref("extensions.enabledScopes", 0b1111);
 ```
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 According to [this page](http://www.favbrowser.com/how-to-create-a-new-default-firefox-experience-in-your-enterprise/) (dated: September 28, 2012), "_“You cannot set this preference remotely using autoconfig files._" Which recommends you only set these preference in a local autoconfig file. If this is wrong info please adjust or remove this note.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 {% endcapture %}
 {% include modules/one-column.liquid

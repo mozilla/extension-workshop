@@ -31,15 +31,9 @@ date: 2019-03-18 18:32:18
 
 If you have developed a Firefox extension using XUL/XPCOM or the Add-on SDK, this page will help you migrate your extension to use [WebExtensions](/documentation/develop/about-the-webextensions-api) APIs. The standard to build extensions for Firefox is to use WebExtensions APIs. It will be the only type of extension supported in Firefox by the end of November 2017 with the release of [Firefox 57](https://wiki.mozilla.org/RapidRelease/Calendar).
 
-{% capture note %}
-
+::: note alert
 Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: true
-%}
+:::
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -64,15 +58,9 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 3. When you're ready to submit the WebExtension version of your extension to AMO... wait a minute... are you truly ready? Because of the extensions permissions model, you cannot revert from WebExtensions back to using a legacy extension format. So test _thoroughly_, because this is a permanent one-way trip. Also, see the hybrid example below. If you're not ready, you can embed your WebExtension in a legacy extension container, which allows you to test your extension migration but still go back if needed in an emergency.
 4. When you're _really_ ready to submit the WebExtension version of your extension to AMO, first port your old add-on ID to the new WebExtension manifest.json file. Your extension must have the same ID as previous versions. Copy the value in the "id" field from your package.json file into the id field in the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) section of the WebExtension manifest.json file. Then you can submit your extension update to AMO as your normally would.
 
-{% capture note %}
-
+::: note
 Note that this is a one-way conversion: You **cannot** update an extension using WebExtensions to use a legacy technology. This means that you must be sure that you are ready to commit to using WebExtension APIs before you submit the updated add-on to AMO.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid

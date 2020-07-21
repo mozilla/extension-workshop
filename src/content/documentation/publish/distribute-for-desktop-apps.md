@@ -26,19 +26,9 @@ date: 2020-03-20 22:38:00
 
 {% capture content %}
 
-<!-- Alert -->
-
-{% capture alert %}
-
+::: note alert
 Starting with Firefox 74, it is no longer be possible to have an extension be automatically installed as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2020/03/10/support-for-extension-sideloading-has-ended/) for more information.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: alert
-	alert: true
-%}
-
-<!-- END: Alert -->
+:::
 
 If you have developed an add-on to complement a desktop application, you will need to provide a way for users to install your extension. You can direct the user to install the add-on from your website or list it on [addons.mozilla.org (AMO)](https://addons.mozilla.org)
 

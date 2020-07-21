@@ -39,17 +39,9 @@ date: 2019-06-20 01:44:23
 
 Firefox supports automated updates to add-ons using JSON update manifests. Add-ons hosted on [addons.mozilla.org](https://addons.mozilla.org/) (AMO) automatically receive updates to new versions posted there. Other add-ons must specify the location of their update manifests.
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 You must host your update manifest file on a secure (HTTPS) server.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
+:::
 
 A typical update manifest looks something like:
 

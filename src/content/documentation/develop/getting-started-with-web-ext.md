@@ -67,17 +67,9 @@ To test whether the installation worked run the following command, which display
 web-ext --version
 ```
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 `web-ext` will notify you when it is time to update to the newest version. To update your global install, use the command `npm install -g web-ext`.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
+:::
 
 </div>
 </article>
@@ -125,7 +117,9 @@ If you experience unexpected behavior with the reloading feature, please [file a
 web-ext run --no-reload
 ```
 
-<p class="note">Extension reloading is only supported in Firefox 49 or higher.</p>
+::: note
+Extension reloading is only supported in Firefox 49 or higher.
+:::
 
 ### Testing in different versions of Firefox
 
@@ -219,11 +213,9 @@ web-ext run --keep-profile-changes --firefox-profile=your-custom-profile
 
 This may be helpful if your extension has many different run states.
 
-<div class="note alert" markdown="1">
-
+::: note alert
 This option makes the profile specified by `--firefox-profile` completely insecure for daily use. It turns off auto-updates and allows silent remote connections, among other things. Specifically, it will make destructive changes to the profile that are required for `web-ext` to operate.
-
-</div>
+:::
 
 <section id="packaging-your-extension"></section>
 
@@ -237,11 +229,9 @@ web-ext build
 
 This outputs a full path to the generated `.zip` file that can be loaded into a browser.
 
-<div class="note alert" markdown="1">
-
-The generated `.zip` file doesn't work on Firefox without signing or adding [`browser_specific_settings.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key into [`manifest.json`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json). For more information, please refer [WebExtensions and the Add-on ID](/documentation/develop/extensions-and-the-add-on-id/) page.
-
-</div>
+::: note alert
+The generated `.zip` file doesn't work on Firefox without signing or adding [`browser_specific_settings.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key into [`manifest.json`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json). For more information, please refer to the [WebExtensions and the Add-on ID](/documentation/develop/extensions-and-the-add-on-id/) page.
+:::
 
 `web-ext build` is designed to ignore files that are commonly not wanted in packages, such as `.git`, `node_modules`, and other artifacts.
 

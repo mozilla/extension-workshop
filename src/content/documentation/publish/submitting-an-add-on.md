@@ -30,15 +30,9 @@ To start, familiarize yourself with the [Add-on Policies](/documentation/publish
 
 Next, prepare your add-on for publication by adding all its files to a ZIP archive with the extension .zip, .xpi, .crx, or .xml. For information on how to create your ZIP, see [Package your extension](/documentation/publish/package-your-extension/), and for details on what to include in the file, see [Anatomy of an extension](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
 
-{% capture note %}
-
+::: note
 The maximum file size accepted is 200 MB. If your add-on is larger than 200 MB, it will fail validation.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 If your add-on includes code that might be difficult to read, such as code created by minification or obfuscation, create a source code package. For more information on this requirement, see [Source Code Submission](/documentation/publish/source-code-submission/).
 
@@ -102,15 +96,9 @@ Choose:
 
 Your add-on is published and available on AMO for users to discover and install. Note, however, that your add-on may still be subject to further review, if it is you'll receive notification of the outcome of the review later.
 
-{% capture note %}
-
+::: note
 When you're ready to release a new version of your add-on, update it by visiting the add-on's page on [addons.mozilla.org](https://addons.mozilla.org) and uploading the new version. You must update it on the add-on's page, so AMO recognizes it as an update to an existing add-on and not a new one.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 Learn how to make your add-on listing appealing with these [tips](/documentation/develop/create-an-appealing-listing/).
 
@@ -127,15 +115,9 @@ Learn how to make your add-on listing appealing with these [tips](/documentation
 
 ## Self-distribution
 
-{% capture note %}
-
+::: note
 If you want Firefox to handle updates to your add-on, remember to include the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in your manifest.json with the `update_url` attribute set to point to an [update manifest file](https://developer.mozilla.org/Add-ons/Updates).
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 1. The Upload Version page displays. <br/><br/> ![Submit an add-on page](/assets/img/publish/Submit_add_on_before_upload.png)
 

@@ -120,7 +120,9 @@ If your extension enables the user to change and save settings that affect the b
 
 ![Typical preferences button, to access an extension's settings, from the Add-on Manager](/assets/img/documentation/develop/add-on-manager-preferences-button.png)
 
-<p class="note">In the Windows operating system, the “Preferences” button is labeled “Options”.</p>
+::: note
+In the Windows operating system, the “Preferences” button is labeled “Options”.
+:::
 
 ### Does my extension need to gather a lot of information or display content in addition to the current tabs?
 
@@ -182,11 +184,9 @@ When it comes to [coloring a badge](https://developer.mozilla.org/docs/Mozilla/A
 - Warning: yellow
 - Error: red
 
-<div class="note" markdown="1">
-
+::: note
 Use of Firefox colors is suggested, for more details see [Firefox Colors](http://design.firefox.com/photon/visuals/color.html). However, for purposes of [Chrome](https://developer.chrome.com/extensions/browserAction#icon) and Opera compatibility, we support any color you wish to use.
-
-</div>
+:::
 
 </div>
 </article>

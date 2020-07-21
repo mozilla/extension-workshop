@@ -31,21 +31,10 @@ date: 2020-04-26
 
 During development, your extension will consist of a directory containing a manifest.json file and the other files the extension needs—scripts, icons, HTML documents, and so on. You need to zip these into a single file for uploading to AMO.
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 Packaged extensions in Firefox are called "XPI files", which are ZIP files with a different extension.
-
 You don't have to use the XPI extension when uploading to AMO.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -60,19 +49,9 @@ You don't have to use the XPI extension when uploading to AMO.
 
 The most convenient way to package your extension is to use [web-ext build](/documentation/develop/web-ext-command-reference/#web-ext-build). This tool automatically excludes files that are commonly unwanted in packages, such as `.git` files. Otherwise, follow the instructions below for your operating system.
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 **Tip:** The ZIP file must be a ZIP of the extension's files themselves, not of the directory containing them.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid
@@ -139,19 +118,9 @@ The most convenient way to package your extension is to use [web-ext build](/doc
 
 3. ZIP the content of the directory—remembering to excludes those files that aren't needed to run the extension, such as `.git`, graphic sources, and similar files—using the command `zip -r -FS ../my-extension.zip * --exclude '*.git*'`.
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 See [the documentation for the `zip` command](https://linux.die.net/man/1/zip) for more information.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 {% endcapture %}
 {% include modules/one-column.liquid

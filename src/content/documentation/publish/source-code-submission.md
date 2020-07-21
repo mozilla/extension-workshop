@@ -19,11 +19,9 @@ To complete the review process at [addons.mozilla.org](https://addons.mozilla.or
 
 If your add-on uses third-party libraries, please see [our requirements](/documentation/publish/third-party-library-usage/) for those.
 
-<div class="note" markdown="1">
-
+::: note
 Minifying your code isn't recommended. It rarely protects your code, as these techniques can be reversed using tools such as [JSNice](http://jsnice.org/) and [JS Beautifier](http://jsbeautifier.org/). Unlike the advantage that minified code offers web pages loaded over the internet, extension code is loaded from a local source, so performance benefits are not significant.
-
-</div>
+:::
 
 If you do not provide source code with clear instructions and the reviewer cannot evaluate your extension, it may be rejected.
 
@@ -51,11 +49,9 @@ You must upload your extension’s source code when its code was created using:
 - template engines, such as [handlebars](http://handlebarsjs.com/) or [css2js](https://github.com/grnadav/css2js).
 - any other custom tool that takes files, applies pre-processing, and generates file(s) to include in the extension.
 
-<div class="note" markdown="1">
-
+::: note
 Any source code that you submit is only accessible to a small group of admin reviewers.
-
-</div>
+:::
 
 ### Provide build instructions
 
@@ -80,11 +76,9 @@ Tip: Use a build target relative to the directory containing the source, such as
 
 ### How to upload source code
 
-<div class="note" markdown="1">
-
+::: note
 If you need to provide it, matching source code must be attached to every extension version.
-
-</div>
+:::
 
 Code submission process happens after the add-on validation step.
 

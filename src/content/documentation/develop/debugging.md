@@ -92,15 +92,9 @@ You can now drag the toolbox tab to a separate window, so you can place it along
 
 ## Debugging background scripts
 
-{% capture note %}
-
+::: note
 We use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension example to illustrate the debugging features relevant to background scripts. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 <!-- Single Column Body Module -->
 
@@ -143,15 +137,9 @@ For more information about using the debugger, see the [Debugger](https://develo
 
 ## Debugging options pages
 
-{% capture note %}
-
+::: note
 We use the [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) extension example to illustrate the debugging features relevant to options pages. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 An [options pages](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) is an HTML page shown when the user accesses your extension's preferences in Add-ons Manager, either by opening Add-ons Manager themselves or using a link provided in your extension. You use an options page to enable the user to set and save options and settings that affect the behavior of your extension. Options pages display in an iframe in Add-ons Manager.
 
@@ -194,15 +182,9 @@ For more information about using **Inspector**, see the [Inspector](https://deve
 
 ## Debugging popups
 
-{% capture note %}
-
+::: note
 We use the [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) extension example to illustrate the debugging features relevant to popups. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 [Popups](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Popups) are dialogs attached to browser or page actions. Popups are specified using an HTML document that can include CSS and JavaScript, which define styling and behavior.
 
@@ -214,19 +196,11 @@ To debug a popup it needs to be visible (so that its HTML document is loaded). H
 
 Now, when you open a popup it stays open and its code remains loaded.
 
-{% capture note %}
-
-**Note:** Disable popup auto-hide also applies to built-in browser popups, such as the options menu. The setting doesn't persist across sessions. When you close the window, the setting reverts to auto-hide popups.
-
-<br/><br/>
+::: note
+Disable popup auto-hide also applies to built-in browser popups, such as the options menu. The setting doesn't persist across sessions. When you close the window, the setting reverts to auto-hide popups.
 
 Internally, this option toggles the `ui.popup.disable_autohide` preference, which you can toggle manually from `about:config`.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 With the popup open, its JavaScript sources are listed in **Debugger**. In the **Debugger** you can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
 
@@ -253,15 +227,9 @@ If your extension has multiple HTML documents open, click the page select icon (
 
 ## Debugging content scripts
 
-{% capture note %}
-
+::: note
 We use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension example to illustrate the debugging features relevant to content scripts. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 A [content script](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) is a part of your extension that runs in the context of a webpage; it enables your extension to react to events on the webpage and make changes to a webpage's content.
 
@@ -276,15 +244,9 @@ If you've already activated the [split console](https://developer.mozilla.org/do
 
 Select your content scripts listed in **Sources**. You can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
 
-{% capture note %}
-
+::: note
 If the developer tools tab was not open when the content script injected, the content script may not be list in **Sources**. If you experience this behavior, reloading the page with the developer tools open should provide a fix.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -300,15 +262,9 @@ If the developer tools tab was not open when the content script injected, the co
 
 ## Debugging sidebars
 
-{% capture note %}
-
+::: note
 We use the [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) extension example to illustrate the debugging features relevant to sidebars. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 A [Sidebar](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) is a pane displayed at the side of the browser window, next to the web page. Sidebars are specified using an HTML document that can include CSS and JavaScript, which define styling and behavior.
 
@@ -340,15 +296,9 @@ If your extension has multiple HTML documents open, click the page select icon (
 
 ## Debugging storage
 
-{% capture note %}
-
+::: note
 We use the [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) extension example to illustrate the debugging features relevant to extension storage. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 An extension can store data using the [Storage API](https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage). To view this data, in the [Toolbox](#developer-tools-toolbox) open the **Storage** tab and locate **Extension Storage**.
 
@@ -368,15 +318,9 @@ An extension can store data using the [Storage API](https://wiki.developer.mozil
 
 ## Debugging developer tools pages and panels
 
-{% capture note %}
-
+::: note
 We use the [devtools-panels](https://github.com/mdn/webextensions-examples/tree/master/devtools-panels) extension example to illustrate the debugging features relevant to developer tools pages and panels. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 [Developer tools](https://developer.mozilla.org/Add-ons/WebExtensions/Extending_the_developer_tools) are extended with a hidden HTML page that is loaded when the tools are opened. From the hidden HTML page, [developer tools panels](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/create) can be added; these are HTML pages displayed as a tool tab in the browser UI.
 

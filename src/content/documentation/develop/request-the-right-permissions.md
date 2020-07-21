@@ -110,11 +110,9 @@ Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExte
 
 <!-- END: Table -->
 
-<div class="note" markdown="1">
-
+::: note
 The permissions that display messages and the messages they display may be different in other browsers. For information about viewing the permission message in Chrome, see [Viewing Warnings.](https://developer.chrome.com/apps/permission_warnings#view_warnings)
-
-</div>
+:::
 
 The following permissions don't get alerted to users:
 

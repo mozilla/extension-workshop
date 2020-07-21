@@ -257,7 +257,9 @@ Your developer profile enables you to provide information about the reasons behi
 
 If your add-on makes use of personal data, you will need a privacy policy, and you may want or need an end user license agreement. Make sure these are written in plain language, not legalese. Plain language makes these documents accessible to your users and makes it more likely they will install your add-on.
 
-<div class="note">Remember to include the text of your privacy policy and license agreement in your add-on’s listing details, even if you host a copy on your website or in the add-on.</div>
+::: note
+Remember to include the text of your privacy policy and license agreement in your add-on’s listing details, even if you host a copy on your website or in the add-on.
+:::
 
 </div>
 </article>
