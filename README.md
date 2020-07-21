@@ -97,7 +97,7 @@ For a note use the markdown syntax extensions as follows (these are supplied via
 This is a note
 :::
 ```
-Looks like this ![Note Screenshot](../master/screenshots/note.jpg)
+Looks like this ![Note Screenshot](../master/screenshots/note.png)
 
 For an alert use the following:
 
@@ -106,7 +106,7 @@ For an alert use the following:
 This is an alert
 :::
 ```
-Looks like this ![Alert Screenshot](../master/screenshots/alert.jpg)
+Looks like this ![Alert Screenshot](../master/screenshots/alert.png)
 
 ### How to add a "sidebar" layout page
 
