@@ -5,7 +5,7 @@ module.exports = (() => {
   const options = {
     html: true,
     breaks: true,
-    linkify: true,
+    linkify: false,
   };
 
   const plugins = [

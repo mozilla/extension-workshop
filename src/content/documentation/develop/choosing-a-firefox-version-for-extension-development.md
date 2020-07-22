@@ -121,7 +121,7 @@ Suggested development use: Nightly provides a preview of future Firefox features
 
 The Extended Support Release (ESR) version of Firefox has features for IT professionals to configure and deploy Firefox in their organization. It also provides enterprises with a feature stable version of Firefox for longer than the normal release cycle provides. So, at the time of writing, the release version of Firefox was 65 (with Beta on 66 and Nightly on 67) the ESR version was 60.
 
-You load extensions under development into this version of Firefox using [about:debugging](https://developer.mozilla.org/docs/Tools/about:debugging) or [web-ext](/documentation/develop/getting-started-with-web-ext/) and have access to the [addon debugging window](https://developer.mozilla.org/docs/Tools/Browser_Toolbox). You can also install unsigned extensions, after adjusting or setting certain about:config properties (this feature is provided so enterprises can install extensions they want to keep private and don’t want to submit to add-ons.mozilla.org for signing).
+You load extensions under development into this version of Firefox using [about:debugging](https://developer.mozilla.org/docs/Tools/about:debugging) or [web-ext](/documentation/develop/getting-started-with-web-ext/) and have access to the [addon debugging window](https://developer.mozilla.org/docs/Tools/Browser_Toolbox). You can also install unsigned extensions, after adjusting or setting certain about:config properties (this feature is provided so enterprises can install extensions they want to keep private and don’t want to submit to addons.mozilla.org for signing).
 
 Development of extensions for Firefox for Android is fully supported.
 
