@@ -55,7 +55,9 @@ To improve accessibility, add keyboard shortcuts for:
 - extension UI elements, such as toolbar and address bar buttons.
 - all of an extension’s features, however, where this is impractical provide shortcuts for commonly used extension features.
 
-<p class="note">Users can modify an extension’s keyboard shortcuts to suit their needs. However, users cannot add shortcuts, which is why it’s best to add as many as practical.</p>
+::: note
+Users can modify an extension’s keyboard shortcuts to suit their needs. However, users cannot add shortcuts, which is why it’s best to add as many as practical.
+:::
 
 </td>
 </tr>

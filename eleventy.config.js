@@ -2,43 +2,29 @@ const path = require('path');
 const fs = require('fs-extra');
 
 const { Liquid } = require('liquidjs');
-const md = require('markdown-it')({
-  html: true,
-  breaks: true,
-  linkify: true,
-}).disable('code');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
-const slugify = require('slugify');
+
+const slugify = require('./libs/slugify');
+const md = require('./libs/markdown');
+const liquidParser = require('./libs/templates');
 
 const inputDir = path.relative(__dirname, 'src/content');
 const outputDir = path.relative(__dirname, 'build');
 
 module.exports = function (eleventyConfig) {
-  const liquidParser = new Liquid({
-    root: ['./src/includes', './src/layouts'],
-    extname: '.liquid',
-    dynamicPartials: false,
-    strictFilters: true,
-  });
-
   // Tell the config to not use gitignore for ignores.
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.setLibrary('liquid', liquidParser);
+
   // Markdown instance in general plus for filter in templates.
   eleventyConfig.setLibrary('md', md);
   eleventyConfig.addFilter('markdownify', function (value) {
     return md.render(value.toString());
   });
 
-  eleventyConfig.addFilter('slugify', (str) =>
-    slugify(str, {
-      lower: true,
-      replacement: '-',
-      remove: /[*+~.·,()''`´%!?¿:@]/g,
-    })
-  );
+  eleventyConfig.addFilter('slugify', slugify);
 
   // Explicitly copy through the built files needed.
   eleventyConfig.addPassthroughCopy({

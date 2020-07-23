@@ -105,19 +105,9 @@ Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.or
 
 [Making money from browser extensions](/documentation/publish/make-money-from-browser-extensions/) is also something you might want to consider as your user base grows.
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 If you’re distributing to an enterprise running the ESR version of Firefox or to users of Developer Edition or Nightly you don’t need to submit your extension to addons.mozilla.org for signing, you can distribute and install unsigned extensions.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 {% endcapture %}
 {% include modules/one-column.liquid

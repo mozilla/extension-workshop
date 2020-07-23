@@ -38,19 +38,9 @@ Short and brief description of the sort of content you will find on this page.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 Note that this is a one-way conversion. You cannot update an extension using WebExtensions to use a legacy technology. This means that you must be sure that you are ready to commit to using WebExtension APIs before you submit the updated add-on to AMO.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
-
-<!-- END: Note -->
+:::
 
 <!-- Table -->
 
@@ -120,19 +110,9 @@ function setCurrentChoice(result) {
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. Consectetur adipiscing elit, sed.
 
-<!-- Alert -->
-
-{% capture alert %}
-
+::: note alert
 Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: alert
-	alert: true
-%}
-
-<!-- END: Alert -->
+:::
 
 {% endcapture %}
 {% include modules/one-column.liquid

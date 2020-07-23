@@ -99,15 +99,9 @@ This:
 
 <!-- END: Video Popup Thumbnail -->
 
-{% capture note %}
-
+::: note
 Note that in Firefox 48 only, "Reload" does not update the extension's name and description that are displayed in about:debugging and about:addons. This is fixed in Firefox 49.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 {% endcapture %}
 {% include modules/one-column.liquid

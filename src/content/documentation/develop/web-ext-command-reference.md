@@ -236,11 +236,9 @@ Environment variable: `$WEB_EXT_FIREFOX_PROFILE`
 
 With this option, any changes made to the profile directory (specified by `--firefox-profile`) are saved. Without this option, profile changes are not saved.
 
-<div class="note alert" markdown="1">
-
+::: note alert
 This option makes the profile specified by `--firefox-profile` completely insecure for daily use. It turns off auto-updates and allows silent remote connections, among other things. Specifically, it will make destructive changes to the profile that are required for `web-ext` to operate.
-
-</div>
+:::
 
 Environment variable: `$WEB_EXT_KEEP_PROFILE_CHANGES=true`
 
@@ -367,17 +365,13 @@ This specifies the `channel` in which the extension is signed. It defaults to `u
 
 One example of using the `--channel` option is to [create a beta version](/documentation/develop/getting-started-with-web-ext/#signing-test-version-listed) for a `listed` extension (that is, one you have already [submitted to addons.mozilla.org](/documentation/publish/submitting-an-add-on/)).
 
-<div class="note alert" markdown="1">
-
+::: note alert
 Setting `--channel=listed` for a new extension is not yet supported. See [https://github.com/mozilla/web-ext/issues/804](https://github.com/mozilla/web-ext/issues/804)
+:::
 
-</div>
-
-<div class="note alert" markdown="1">
-
+::: note alert
 Setting `--channel=listed` for a new version of a listed extension is not well supported. It will upload your new version to [addons.mozilla.org](https://addons.mozilla.org) as if you'd [submitted it manually](/documentation/publish/submitting-an-add-on/). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.
-
-</div>
+:::
 
 See [documentation on the signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html#uploading-a-version) for more information.
 
@@ -415,11 +409,9 @@ web-ext has the following global options that may apply to multiple commands.
 
 Specifies a particular directory to save artifacts in, e.g the `.zip` file, once you've built an extension. This can be specified as a relative or absolute path, and should always be a string.
 
-<div class="note" markdown="1">
-
-**Note**: If this is not specified, the default is the relative path `./web-ext-artifacts`.
-
-</div>
+::: note
+If this is not specified, the default is the relative path `./web-ext-artifacts`.
+:::
 
 Environment variable: `$WEB_EXT_ARTIFACTS_DIR`
 
@@ -461,11 +453,9 @@ By default, without the use of `--ignore-files`, the following rules are applied
 
 When you specify custom patterns using `--ignore-files`, they are applied _in addition to_ the default patterns.
 
-<div class="note" markdown="1">
-
-**Note**: Order is important: you must specify the web-ext command before specifying the --ignore-files option.
-
-</div>
+::: note
+Order is important: you must specify the web-ext command before specifying the --ignore-files option.
+:::
 
 Environment variable: `$WEB_EXT_IGNORE_FILES`
 
@@ -473,11 +463,9 @@ Environment variable: `$WEB_EXT_IGNORE_FILES`
 
 Lists all the available commands and options available for the web-ext tool.
 
-<div class="note" markdown="1">
-
-**Note**: You can list the options available for a specific command by including the command name as you request help, for example `web-ext --help run`.
-
-</div>
+::: note
+You can list the options available for a specific command by including the command name as you request help, for example `web-ext --help run`.
+:::
 
 ### \--no-input
 
@@ -489,11 +477,9 @@ Environment variable: `$WEB_EXT_NO_INPUT=true`
 
 Specifies the directory of the extension's source code, e.g. when building or running an extension. This can be specified as a relative or absolute path, and should always be a string.
 
-<div class="note" markdown="1">
-
-**Note**: If this is not specified, the default is the directory you are currently inside in your terminal.
-
-</div>
+::: note
+If this is not specified, the default is the directory you are currently inside in your terminal.
+:::
 
 Environment variable: `$WEB_EXT_SOURCE_DIR`
 

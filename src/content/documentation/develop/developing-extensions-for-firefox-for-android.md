@@ -98,15 +98,9 @@ similar to this:
 
 ![linter screenshot](/assets/img/documentation/develop/linter_output2.png)
 
-{% capture note %}
-
+::: note alert
 Lint does not report on APIs that are not implemented by Firefox or Firefox for Android.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: true
-%}
+:::
 
 When setting `strict_min_version`, unless you’re targeting a specific version of Firefox, choose the most recent version of Firefox you expect your extension to be compatible with. For example, you can reasonably expect that most installations of Firefox for Android will be the current or previous version. So, if the current version is 66, consider setting 65 is the minimum version:
 
@@ -233,15 +227,9 @@ Load a page in which your extension exercises. Now you can access any of the Jav
 
 ![Device debugging](/assets/img/documentation/develop/on-device-debugging.png)
 
-{% capture note %}
-
+::: note
 Unlike desktop Firefox, where content scripts are debugged in context of the page in which they run, you debug and view the console messages from content scripts in Firefox for Android together with background scripts in the Toolbox.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 In the **Debugger** you can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
 

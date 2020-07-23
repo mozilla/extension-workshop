@@ -31,15 +31,9 @@ date: 2019-03-20 08:08:55
 
 This article is a technical comparison of the Add-on SDK and WebExtensions technology. It's intended to help orient people who have an add-on that uses the SDK, and who are planning to port it to use WebExtension APIs.
 
-{% capture note %}
-
+::: note alert
 Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: true
-%}
+:::
 
 If you're planning to port an [overlay extension](https://developer.mozilla.org/Add-ons/Overlay_Extensions) or a [bootstrapped extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/Bootstrapped_extensions), see [Comparison with XUL/XPCOM extensions](/documentation/develop/comparison-with-xul-xpcom-extensions).
 

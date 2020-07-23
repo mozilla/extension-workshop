@@ -32,17 +32,9 @@ Pre-release channels are not supported on [addons.mozilla.org](https://addons.mo
 
 2. Submit your extension for signing on [addons.mozilla.org](https://addons.mozilla.org) using the [self-distribution workflow](/documentation/publish/submitting-an-add-on/#self-distribution). If you prefer to use the command line, you can [use web-ext to sign the extension](/documentation/develop/getting-started-with-web-ext).
 
-<!-- Note -->
-
-{% capture note %}
-
+::: note
 If your extension’s release version is listed on [addons.mozilla.org](https://addons.mozilla.org), you will need to [define which channel you are signing with web-ext](/documentation/develop/getting-started-with-web-ext/#signing-test-version-listed).
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
+:::
 
 3. After the extension has been signed, host the `.xpi` file on a web property that you own, such as a Github repository or Wordpress site.
 

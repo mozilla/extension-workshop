@@ -35,7 +35,7 @@ Note: Running locally will show unpublished content that uses the `published: fa
 | ---------------------- | --------------------------------------------------------------------------------------- |
 | yarn start             | Starts eleventy and includes unpublished content.                                       |
 | yarn build:production  | Builds the site for production.                                                         |
-| yarn build:unpublished | Builds the site for production with unpublished content.                                | 
+| yarn build:unpublished | Builds the site for production with unpublished content.                                |
 | yarn clean             | Clears the output directory. (You probably won't need to use this manually              |
 
 ## How the site is built
@@ -87,6 +87,26 @@ Here's an example in `markdown`:
 ```markdown
 ![Remembear subtitle screenshot](/assets/img/remembear-subtitle.png "Remembear subtitle text")
 ```
+
+### Adding notes and alerts
+
+For a note use the markdown syntax extensions as follows (these are supplied via a plugin to the markdown renderer):
+
+```markdown
+::: note
+This is a note
+:::
+```
+Looks like this ![Note Screenshot](../master/screenshots/note.png)
+
+For an alert use the following:
+
+```markdown
+::: note alert
+This is an alert
+:::
+```
+Looks like this ![Alert Screenshot](../master/screenshots/alert.png)
 
 ### How to add a "sidebar" layout page
 

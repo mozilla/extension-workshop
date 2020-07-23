@@ -28,29 +28,17 @@ The theme generator on [addons.mozilla.org](https://addons.mozilla.org) (AMO) gu
 
 ## Getting Started
 
-{% capture note %}
-
+::: note
 You will need to be logged in to your Firefox Account to access the Theme Generator.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 If you would like to publish your theme on [addons.mozilla.org](https://addons.mozilla.org) (AMO), begin by going to the [listed Theme Generator page](https://addons.mozilla.org/developers/addon/submit/wizard-listed).
 
 Otherwise, if you prefer to self-distribute your theme, go to the [unlisted Theme Generator Page](https://addons.mozilla.org/developers/addon/submit/wizard-unlisted). For more information on distribution, visit [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
 
-{% capture note %}
-
-**Note:** You can create a more elaborate theme, for example a theme that uses multiple images, by creating a Static Theme. To get started with Static Themes, take a look at: [Theme concepts](https://developer.mozilla.org/docs/Mozilla/Add-ons/Themes/Theme_concepts).
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+::: note
+You can create a more elaborate theme, for example a theme that uses multiple images, by creating a Static Theme. To get started with Static Themes, take a look at: [Theme concepts](https://developer.mozilla.org/docs/Mozilla/Add-ons/Themes/Theme_concepts).
+:::
 
 To use the AMO theme generator, fill out the form with information for your new theme.
 
@@ -75,15 +63,9 @@ The color you select will be displayed in the example below the color settings s
 
 Once the color input field loses focus, the color format will be converted to rgba when the input field loses focus. The RGB (red, green, blue) component of the color can range from 0 to 255, while the "a" in RGBA stands for alpha and controls the opacity of the color. Valid values for alpha range between 0 and 1 and the default value is 1.0 or completely opaque.
 
-{% capture note %}
-
+::: note
 You can use the [Firefox Color extension](https://color.firefox.com/) to preview your creation.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 The colors in the following image shows you the colors you can define for your theme. All but the **Header area background** and **Header area text and icons** are optional:
 
@@ -111,15 +93,9 @@ As you fill in the information, you will see a browser preview of your theme at 
 
 When you have finished filling in the information, click the **Finish Theme** button to continue.
 
-{% capture note %}
-
+::: note
 Themes submitted for self-distribution will be signed immediately and an XPI file will be generated for download.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid

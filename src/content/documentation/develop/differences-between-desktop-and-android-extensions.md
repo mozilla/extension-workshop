@@ -26,27 +26,15 @@ date: 2019-03-18
 
 # Differences between desktop and Android extensions
 
-{% capture note %}
-
+::: note alert
 **Warning: The content of this article may be out of date.** This page has last been updated before Firefox 54.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: true
-%}
+:::
 
 Firefox for Android offers a subset of the WebExtensions APIs available to the desktop version of Firefox. Some of these differences are due to the nature of the Android environment and therefore the features Firefox can implement, others are where Firefox for Android does not yet offer all the desktop features. This article describes and explains these differences and looks at the impact they might have on your add-on development.
 
-{% capture note %}
-
+::: note
 This summary is based on the features planned for Firefox version 54.
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
+:::
 
 A detailed list of the WebExtension APIs supported in Firefox for Android is provided on the [Browser support for JavaScript APIs](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) page and details of the supported manifest.json keys are provided on the [manifest.json section](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) page.
 
@@ -152,15 +140,9 @@ Permissions to use certain WebExtension APIs must be requested in the manifest.j
 
 ## Other notes
 
-{% capture note %}
-
+::: note
 At the time of writing there was an issue with [`storage.sync()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) and data is not synchronized with the user’s Firefox account from Firefox for Android. More details can be found in [bug 1316442](https://bugzilla.mozilla.org/show_bug.cgi?id=1316442).
-
-{% endcapture %}
-{% include modules/note.liquid
-	content: note
-	alert: false
-%}
+:::
 
 {% endcapture %}
 {% include modules/one-column.liquid

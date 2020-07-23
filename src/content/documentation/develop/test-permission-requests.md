@@ -67,15 +67,9 @@ Note that the caution message relates to this being an unsigned extension; this 
 
 ### Permission requests for extension upgrade
 
-{% capture note %}
-
+::: note
 For details on how to deliver web extension updates when self-hosting your extension, see [Updates](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates).
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 To view the install time permission warnings users see when Firefox upgrades your extension and retest runtime permission requests, you install the extension from its .xpi file posted on an HTTP or HTTPS server.
 
@@ -101,15 +95,9 @@ To perform the test you'll need to:
 - if necessary, [create a package](/documentation/publish/package-your-extension) containing your original extension.
 - update your extension and add details of the new permissions required to the manifest.json file, not forgetting to update the version number. Create a package containing your updated extension.
 
-{% capture note %}
-
+::: note alert
 If the packages were generated with .zip extensions change them to .xpi, otherwise your browser may try to download rather than install the extension.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: true
-%}
+:::
 
 - create the [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates) with details of both extension versions, which should be similar to this:
 
@@ -139,15 +127,9 @@ If the packages were generated with .zip extensions change them to .xpi, otherwi
 
 ![permissions prompt](/assets/img/documentation/develop/upgrade_install_2.png)
 
-{% capture note %}
-
+::: note
 If the upgrade doesn't happen, look for `addons.update-checker` logs in the [Browser Console](https://developer.mozilla.org/docs/Tools/Browser_Console). Any errors encountered during the upgrade process will be reported in the log.
-
-{% endcapture %}
-{% include modules/note.liquid
-    content: note
-    alert: false
-%}
+:::
 
 {% endcapture %}
 {% include modules/one-column.liquid
