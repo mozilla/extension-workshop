@@ -11,7 +11,6 @@ build/
 # Allow files we want to process
 !*.js
 !*.scss
-
-
 build
 dist
+coverage
