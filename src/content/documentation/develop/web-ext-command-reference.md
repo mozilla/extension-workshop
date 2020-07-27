@@ -161,6 +161,17 @@ Network port to use when connecting to an Android device with [ADB (Android Devi
 
 Environment variable: `$WEB_EXT_ADB_PORT`
 
+#### \--adb-remove-old-artifacts
+
+`web-ext` automatically removes all the temporary files that were written to the target adb device when it does exit. This may fail, for example when the device is disconnected before 
+`web-ext run` exited.
+
+Starting from v5.0.0, `web-ext run` will automatically detect and warn the user if old artifacts have been found on the adb device, but it does not automatically remove them by default.
+
+This flag forces web-ext to automatically remove these discovered artifacts.
+
+Environment variable: `$WEB_EXT_ADB_REMOVE_OLD_ARTIFACTS`
+
 #### \--browser-console, -bc
 
 This opens a [Browser Console](https://developer.mozilla.org/docs/Tools/Browser_Console) on startup,&nbsp;so you can see log messages for your extension. Example:
