@@ -25,7 +25,7 @@ references:
   run_build_test: &run_build_test
     run:
       name: test
-      command: yarn run test
+      command: yarn run test-ci
 
   persist_build_workspace: &persist_build_workspace
     persist_to_workspace:
