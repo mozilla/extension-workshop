@@ -5,16 +5,11 @@ describe('frontmatter tests', () => {
   for (const mdFile of glob.sync('src/content/**/*.md')) {
     let fm = matter.read(mdFile).data;
 
-    // Ignore the homepage for title and description as it's special.
+    // Ignore the homepage as it's a special case.
     if (!mdFile.match(/index\.md/)) {
       it(`${mdFile} should have description under 70 chars`, () => {
         expect(fm.title).toBeDefined();
         expect(fm.title.length).toBeLessThanOrEqual(70);
-      });
-
-      // Skipping to start with because we don't have this yet.
-      it.skip(`${mdFile} should have a description`, () => {
-        expect(fm.description).toBeDefined();
       });
     }
 
