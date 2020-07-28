@@ -84,7 +84,7 @@ extensionworkshop.com
 │   ├── build-script             # The JS build script
 │   └── build-styles             # The CSS build script
 │
-├── build                        # Where eleventy builds the site too
+├── build                        # Where eleventy builds the site to
 │
 ├── dist                         # Where production builds are built
 │
