@@ -36,7 +36,7 @@ Note: Running locally will show unpublished content that uses the `published: fa
 | yarn start             | Starts eleventy and includes unpublished content.                                       |
 | yarn build:production  | Builds the site for production.                                                         |
 | yarn build:unpublished | Builds the site for production with unpublished content.                                |
-| yarn clean             | Clears the output directory. (You probably won't need to use this manually              |
+| yarn clean             | Clears the output directory. (You probably won't need to use this manually)             |
 
 ## How the site is built
 
@@ -74,6 +74,49 @@ For the asset-pipeline script to do it's thing, all you need to do is refer to a
 ## Development Guide: Content Updates
 
 This site has three templates: a full-width page, a sidebar page for documentation, and a Content Guidelines page
+
+### Repo layout
+
+```bash
+extensionworkshop.com
+├── bin
+│   ├── asset-pipeline           # The asset build script
+│   ├── build-script             # The JS build script
+│   └── build-styles             # The CSS build script
+│
+├── build                        # Where eleventy builds the site too
+│
+├── dist                         # Where production builds are built
+│
+├── libs
+│   ├── markdown.js              # The markdown renderer instance and plugins
+│   ├── slugify.js               # The central slug function
+│   └── templates.js             # The liquidjs template instance
+│
+├── screenshots                  # Screenshots used in README.md
+│
+├── src
+│   ├── assets                   # Assets (CSS, JavaScript, fonts and images)
+│   ├── content                  # Content (Markdown and JS (generated))
+│   ├── data                     # Data files (JSON)
+│   ├── includes                 # Components (Liquid)
+│   └── layouts                  # Layout templates
+│
+├── tests                        # Test files run by jest `yarn test`.
+│
+├── eleventy.config.js           # Eleventy configuration
+├── .eleventyignore              # Files ignored by Eleventy
+├── .gitignore                   # Files not tracked by Git
+├── .stylelintrc                 # Stylelint configuration
+├── .prettierrc                  # Prettier config
+├── .prettierignore              # Files ignored by prettier
+├── .eslintrc                    # eslint config
+├── .eslintignore                # Files ignored by eslint
+├── package.json                 # Node.js package manifest
+├── renovate.json                # Renovate configuration
+├── yarn.lock                    # Package manager lock file
+└── README.md                    # This file
+```
 
 ### Uploading media
 
@@ -265,7 +308,7 @@ Go to `data/content-guidelines-pages.yaml` and add a new entry for your page:
 
 #### Controlling draft labelling
 
-If you don't want the page to be labelled as a draft, as and when it's ready remove `draft-label: true` from the relevant entry in `data/content-guidelines.yaml`
+If you don't want the page to be labelled as a draft, as and when it's ready remove `draft-label: true` from the relevant entry in `data/content-guidelines-pages.json`
 
 ## Deployment
 
