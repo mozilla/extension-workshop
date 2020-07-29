@@ -1096,6 +1096,10 @@
             "id": "stay-informed-when-firefox-changes"
           },
           {
+            "title": "Monitor extension usage statistics",
+            "id": "monitoring-extension-usage-statistics"
+          },
+          {
             "title": "Publish extension updates",
             "id": "publish-extension-updates"
           },
