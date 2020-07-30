@@ -1160,23 +1160,23 @@
                   }
                 ]
               },
-+              {
-+                "title": "Monitoring extension usage statistics",
-+                "url": "/documentation/manage/monitoring-extension-usage-statistics/",
-+                "subpageitems": [
-+                  {
-+                    "title": "Accessing the statistics dashboard",
-+                    "id": "accessing-the-statistics-dashboard"
-+                  },
-+                  {
-+                    "title": "Tracking external sources",
-+                    "id": "tracking-external-sources"
-+                  },
-+                  {
-+                    "title": "Add-on listing example",
-+                    "id": "add-on-listing-example"
-+                  }
-+                ]
+              {
+                "title": "Monitoring extension usage statistics",
+                "url": "/documentation/manage/monitoring-extension-usage-statistics/",
+                "subpageitems": [
+                  {
+                    "title": "Accessing the statistics dashboard",
+                    "id": "accessing-the-statistics-dashboard"
+                  },
+                  {
+                    "title": "Tracking external sources",
+                    "id": "tracking-external-sources"
+                  },
+                  {
+                    "title": "Add-on listing example",
+                    "id": "add-on-listing-example"
+                  }
+                ]
               }
             ]
           }
