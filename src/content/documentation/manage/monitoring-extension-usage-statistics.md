@@ -48,7 +48,7 @@ Each extension’s dashboard is private and can only be accessed by authors and 
 
 The easiest way to access the dashboard is to sign in to AMO and navigate to “Manage My Submissions.” You can find a link to the statistics dashboard under the name of the add-on it is associated with.
 
-![Screenshot of an add-on on the Manage My Submissions page; below the add-on name is a link titled Statistics](assets/img/documentation/manage/manage_my_submissions_statistics.png)
+![Screenshot of an add-on on the Manage My Submissions page; below the add-on name is a link titled Statistics](/assets/img/documentation/manage/manage_my_submissions_statistics.png)
 
 {% endcapture %}
 {% include modules/one-column.liquid

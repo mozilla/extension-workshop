@@ -1096,10 +1096,6 @@
             "id": "stay-informed-when-firefox-changes"
           },
           {
-            "title": "Monitor extension usage statistics",
-            "id": "monitoring-extension-usage-statistics"
-          },
-          {
             "title": "Publish extension updates",
             "id": "publish-extension-updates"
           },
@@ -1163,6 +1159,24 @@
                     "id": "suggested-retirement-timetable"
                   }
                 ]
+              },
++              {
++                "title": "Monitoring extension usage statistics",
++                "url": "/documentation/manage/monitoring-extension-usage-statistics/",
++                "subpageitems": [
++                  {
++                    "title": "Accessing the statistics dashboard",
++                    "id": "accessing-the-statistics-dashboard"
++                  },
++                  {
++                    "title": "Tracking external sources",
++                    "id": "tracking-external-sources"
++                  },
++                  {
++                    "title": "Add-on listing example",
++                    "id": "add-on-listing-example"
++                  }
++                ]
               }
             ]
           }
