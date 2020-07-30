@@ -4,13 +4,10 @@
 Dockerfile
 # exclude these directories
 /node_modules/
-Gemfile
-rvm-installer
-build/
+/build/
+/dist/
+/coverage/
 *.lock
 # Allow files we want to process
 !*.js
 !*.scss
-build
-dist
-coverage
