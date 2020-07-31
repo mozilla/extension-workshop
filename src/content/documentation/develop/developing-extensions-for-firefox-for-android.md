@@ -261,14 +261,4 @@ If your add-on fails to run, check these messages as they may provide informatio
 
 <!-- END: Single Column Body Module -->
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

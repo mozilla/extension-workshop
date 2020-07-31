@@ -152,14 +152,4 @@ At the time of writing there was an issue with [`storage.sync()`](https://develo
 
 <!-- END: Single Column Body Module -->
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

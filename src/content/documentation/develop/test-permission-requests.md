@@ -163,14 +163,4 @@ You can then rerun the extension and any runtime permission requests will be dis
 
 <!-- END: Single Column Body Module -->
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

@@ -43,14 +43,4 @@ Since its introduction, Mozilla has expanded the capabilities of the API as part
 %}
 
 <!-- END: Single Column Body Module -->
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

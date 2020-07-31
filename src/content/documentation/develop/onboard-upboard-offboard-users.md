@@ -323,14 +323,4 @@ This page provides a link to reinstalling the extension, guarding against accide
 
 </section>
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

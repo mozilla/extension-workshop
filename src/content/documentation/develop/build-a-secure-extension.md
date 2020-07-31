@@ -87,14 +87,4 @@ Here is a list of best practices you should follow to keep the users of your ext
 
 <!-- END: Single Column Body Module -->
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

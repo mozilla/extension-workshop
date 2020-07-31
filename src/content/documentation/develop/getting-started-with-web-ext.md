@@ -467,14 +467,4 @@ You can use `web-ext` as a `NodeJS module`. Here is [more information](https://g
 
 <!-- END: Single Column Body Module -->
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

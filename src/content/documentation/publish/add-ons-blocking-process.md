@@ -122,14 +122,4 @@ In addition, we may block certain plugins that are known to cause stability issu
 %}
 
 <!-- END: Single Column Body Module -->
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

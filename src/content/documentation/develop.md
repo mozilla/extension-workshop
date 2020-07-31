@@ -275,15 +275,3 @@ You can use [web-ext](/documentation/develop/getting-started-with-web-ext/) to a
 </section>
 
 <!-- END: Page section container -->
-
-<!-- Meta Data -->
-
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

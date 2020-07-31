@@ -225,14 +225,4 @@ If your extension does not update as expected, open the console: Tools > Web Dev
 
 <!-- END: Content with Table of Contents -->
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->
