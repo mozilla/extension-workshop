@@ -31,6 +31,10 @@
 
                     {{ content }}
 
+                    {%- include page-meta-data.liquid -%}
+
+                    {%- include up-next.liquid -%}
+
                 </main>
 
                 {% assign parts = page.url | split: "/" %}

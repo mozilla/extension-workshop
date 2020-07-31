@@ -106,14 +106,4 @@ If you miss any of the necessary information for used third-party libraries, the
   content: content
 %}
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

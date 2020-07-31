@@ -258,14 +258,4 @@ Add advanced security capabilities using [PKCS #11 security modules to source ke
 
 <!-- END: Two Column Body Module -->
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

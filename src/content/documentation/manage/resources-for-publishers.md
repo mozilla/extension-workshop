@@ -50,14 +50,4 @@ Now that your add-on is published on [addons.mozilla.org](https://addons.mozilla
 
 <!-- END: Content with Table of Contents -->
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

@@ -433,14 +433,4 @@ For more details, see [Developing extensions for Firefox for Android](/documenta
 
 </section>
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->

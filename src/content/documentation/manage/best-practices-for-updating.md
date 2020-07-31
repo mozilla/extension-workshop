@@ -62,14 +62,4 @@ To help you deliver the most productive updates, here are some tips from the Fir
 
 <!-- END: Content with Table of Contents -->
 
-<!-- Meta Data -->
 
-{%- include page-meta-data.liquid -%}
-
-<!-- END: Meta Data -->
-
-<!-- Up Next -->
-
-{%- include up-next.liquid -%}
-
-<!-- END: Up Next -->
