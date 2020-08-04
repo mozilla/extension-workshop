@@ -5,14 +5,22 @@ permalink: /documentation/develop/developing-extensions-for-firefox-for-android/
 topic: Develop
 tags: [add-ons, beginner, guide, mobile, webextensions]
 contributors:
-  [rebloor, juraj, mdnwebdocs-bot, ExE-Boss, Ding-Fan, andrewtruongmoz]
+  [caitmuenster, rebloor, juraj, mdnwebdocs-bot, ExE-Boss, Ding-Fan, andrewtruongmoz]
 last_updated_by: rebloor
-date: 2019-06-11 11:14:47
+date: 2019-08-04
 ---
 
 {% capture page_hero_banner_content %}
 
 # Developing extensions for Firefox for Android
+
+::: note alert
+In August 2020, Mozilla will begin rolling out a new, reimagined Firefox for Android experience. The  browser for Android has been rebuilt from the ground up using GeckoView, Mozilla's mobile browsing engine.
+
+At the time of launch, only a limited number of [Recommended Extensions](https://support.mozilla.org/en-US/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) will be supported. We would like to support more extensions and we are currently evaluating how to best do that. New announcements around mobile extension support will be posted on the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android).
+
+This article describes the development process of extensions on Firefox for Android through version 68. These methods are not supported for versions 69+.
+:::
 
 You'll approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code. However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process.
 
@@ -260,5 +268,3 @@ If your add-on fails to run, check these messages as they may provide informatio
 %}
 
 <!-- END: Single Column Body Module -->
-
-
