@@ -57,7 +57,7 @@
     "stylelint": "13.6.1",
     "stylelint-config-standard": "20.0.0",
     "svgo": "1.3.2",
-    "terser": "5.0.0",
+    "terser": "4.8.0",
     "url-parse": "1.4.7"
   },
   "scripts": {
