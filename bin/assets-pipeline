@@ -364,6 +364,12 @@ async function cacheBustAssets() {
   await copyFiles(assetMap);
 }
 
-cacheBustAssets().then(() => {
-  console.log(chalk.green('TA-DA! 🥁'));
-});
+cacheBustAssets()
+  .then(() => {
+    console.log(chalk.green('TA-DA! 🥁'));
+  })
+  .catch((error) => {
+    console.log(chalk.red(`Something went wrong: ${error.message}`));
+    console.error(error.stack);
+    process.exit(1);
+  });
