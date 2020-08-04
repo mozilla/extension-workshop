@@ -19,6 +19,13 @@ module.exports = {
         modifed: new Date(stat.ctimeMs).toISOString(),
       };
     },
+    eleventyExcludeFromCollections: (data) => {
+      if (data.published === false) {
+        return true;
+      } else {
+        return data.eleventyExcludeFromCollections;
+      }
+    },
     permalink: (data) => {
       if (process.env.BUILD_UNPUBLISHED) {
         return data.permalink;
