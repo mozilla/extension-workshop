@@ -175,7 +175,7 @@ Firefox is at the forefront of cross-browser compatibility. Firefox add-ons are 
 
 ### Your extension might already be compatible!
 
-See if your extension works in Firefox. Simply upload your .crx file.
+See if your extension works in Firefox. Simply upload your `.crx` file.
 
 [Test your extension](https://www.extensiontest.com/)
 

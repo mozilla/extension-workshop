@@ -124,9 +124,9 @@ If you are unfamiliar with how JavaScript can handle asynchronous events or prom
 
 The differences in the extensions API function implementations among the browsers fall into two broad categories:
 
-- Variations in the support for features within a function. For example, at the time of writing, Firefox doesn’t support the [notification](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/notifications) function method [onButtonClicked](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked) while Firefox is the only browser that supports [onShown](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown).
+- Variations in the support for features within a function. For example, at the time of writing, Firefox doesn’t support the [notification](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/notifications) function method [`onButtonClicked`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked) while Firefox is the only browser that supports [`onShown`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown).
 
-- Proprietary functions, supporting browser-specific features. For example, at the time of writing, containers is a Firefox-specific feature supported by the [contextualIdentities](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities) function.
+- Proprietary functions, supporting browser-specific features. For example, at the time of writing, containers is a Firefox-specific feature supported by the [`contextualIdentities`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities) function.
 
 Full details of the differences in API support are provided in [Browser support for JavaScript APIs](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) on MDN. Where there are caveats regarding support for an API feature, there is a drop down below the version number that expands to show details of the caveat. The API features reference page also explains the caveat.
 
@@ -144,12 +144,12 @@ Full details of the differences in API support are provided in [Browser support 
 
 ## Manifest keys
 
-The differences in the supported [manifest.json keys](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) among the browsers fall broadly into two categories:
+The differences in the supported [`manifest.json` keys](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) among the browsers fall broadly into two categories:
 
 - Extension information attributes. For example, at the time of writing, Firefox and Opera include the [developer](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) key enabling the addition of details about the developer of the extension, as well as the author, to be recorded.
 - Extension features. For example, at the time of writing, Edge did not support the [commands](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) key that enables shortcut keys to be defined for an extension.
 
-Full details of the differences in key support are provided in the [Browser compatibility](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json#Browser_compatibility) section of the [manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page on MDN. Where there are caveats regarding support for a manifest key, there is a drop down below the version number that expands to show details of the caveat. The manifest key reference page also explains the caveat.
+Full details of the differences in key support are provided in the [Browser compatibility](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json#Browser_compatibility) section of the [`manifest.json`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page on MDN. Where there are caveats regarding support for a manifest key, there is a drop down below the version number that expands to show details of the caveat. The manifest key reference page also explains the caveat.
 
 ### Variations due to browser behavior
 

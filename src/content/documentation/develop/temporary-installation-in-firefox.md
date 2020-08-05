@@ -45,7 +45,7 @@ Note that this is not how end-users should install add-ons in Firefox. End-users
 To install an extension temporarily:
 
 - open Firefox
-- enter "about:debugging" in the URL bar
+- enter "`about:debugging`" in the URL bar
 - click "This Firefox"
 - click "Load Temporary Add-on"
 - open the extension's directory and select any file inside the extension.
@@ -100,7 +100,7 @@ This:
 <!-- END: Video Popup Thumbnail -->
 
 ::: note
-Note that in Firefox 48 only, "Reload" does not update the extension's name and description that are displayed in about:debugging and about:addons. This is fixed in Firefox 49.
+Note that in Firefox 48 only, "Reload" does not update the extension's name and description that are displayed in `about:debugging` and `about:addons`. This is fixed in Firefox 49.
 :::
 
 {% endcapture %}
@@ -134,7 +134,7 @@ If you use the command line for development, check out [web-ext](/documentation/
 
 ## Detecting temporary installation
 
-An extension can detect whether it was installed from about:debugging, rather than as a signed extension downloaded from [addons.mozilla.org](https://addons.mozilla.org). It does this by listening for the [`runtime.onInstalled`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) event, and checking the value of `details.temporary`.
+An extension can detect whether it was installed from `about:debugging`, rather than as a signed extension downloaded from [addons.mozilla.org](https://addons.mozilla.org). It does this by listening for the [`runtime.onInstalled`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) event, and checking the value of `details.temporary`.
 
 {% endcapture %}
 {% include modules/one-column.liquid

@@ -39,7 +39,7 @@ No automatic updates will be performed for add-ons installed using these methods
 
 Regardless of the sideloading method used, you must prepare the add-on as follows:
 
-1. Ensure the add-on includes an ID, by adding the following to its manifest.json file, replacing **_your-add-on-name@your-domain.com_** with a suitable ID for your add-on:
+1. Ensure the add-on includes an ID, by adding the following to its `manifest.json` file, replacing **_your-add-on-name@your-domain.com_** with a suitable ID for your add-on:
 
 <!-- Syntax Highlighting -->
 ```json
@@ -111,7 +111,7 @@ This method of add-on installation involves copying the add-on into one of the s
 
 ### Rename your XPI file
 
-To use this method, your XPI file must be named using the add-on or application ID, as set in [Preparing your add-on](#preparing-your-addon). The signed add-on file you downloaded from AMO will be named something like borderify-1.0-an+fx.xpi (see [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/) for more details), change this to, for example, borderify@example.com.xpi.
+To use this method, your XPI file must be named using the add-on or application ID, as set in [Preparing your add-on](#preparing-your-addon). The signed add-on file you downloaded from AMO will be named something like `borderify-1.0-an+fx.xpi` (see [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/) for more details), change this to, for example, `borderify@example.com.xpi`.
 
 ::: note
 If you are developing an add-on for Firefox you can use an extension proxy file to install an add-on without copying the files over to the standard extensions folders.
