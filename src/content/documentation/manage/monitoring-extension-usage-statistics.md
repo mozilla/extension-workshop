@@ -86,6 +86,10 @@ If you link to your add-on’s listing page or directly to its file from an exte
 
 All of these parameters are optional. The statistics dashboard includes a view that breaks down downloads by each of these parameters, so you can use any or all of them. You can also use a tool like [Campaign URL Builder](https://ga-dev-tools.appspot.com/campaign-url-builder/) by Google to create your UTM parameters.
 
+::: note
+There is a limit of 40 characters for each UTM parameter value. Longer values will be truncated.
+:::
+
 {% endcapture %}
 {% include modules/one-column.liquid
   id: "tracking-external-sources"
@@ -111,5 +115,3 @@ Below is an example of a link to your add-on's listing page with UTM parameters:
 %}
 
 <!-- END: Single Column Body Module -->
-
-
