@@ -15,7 +15,7 @@ date: 2019-08-04
 # Developing extensions for Firefox for Android
 
 ::: note alert
-In August 2020, Mozilla will begin rolling out a new, reimagined Firefox for Android experience. The  browser for Android has been rebuilt from the ground up using GeckoView, Mozilla's mobile browsing engine.
+In August 2020, Mozilla will begin rolling out a new, reimagined Firefox for Android experience. The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
 
 At the time of launch, only a limited number of [Recommended Extensions](https://support.mozilla.org/en-US/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) will be supported. We would like to support more extensions and we are currently evaluating how to best do that. New announcements around mobile extension support will be posted on the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android).
 
