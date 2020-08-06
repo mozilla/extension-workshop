@@ -11,7 +11,7 @@ schemaType: webPage
 ---
 
 {% assign taglist = collections[ tag ] %}
-<h2 class="no-underline">{{ taglist.length }} Results for tag “{{ tag }}”</h2>
+<h2 class="no-underline">{{ taglist.length }} results for tag “{{ tag }}”</h2>
 <ol>
 {% for post in taglist | reverse %}
     <li class="result">
