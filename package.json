@@ -50,7 +50,7 @@
     "posthtml-urls": "1.0.0",
     "prettier": "2.0.5",
     "pretty-quick": "2.0.1",
-    "prismjs": "1.20.0",
+    "prismjs": "1.21.0",
     "rimraf": "3.0.2",
     "serialize-javascript": "4.0.0",
     "slugify": "1.4.5",
