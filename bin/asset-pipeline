@@ -166,8 +166,6 @@ class AssetPipeline {
     ast.walk(
       new Terser.TreeWalker(function (node) {
         if (node instanceof Terser.AST_String) {
-          console.log(node.getValue());
-          console.log(self.hasHashedReplacementURL(node.getValue()));
           if (self.hasHashedReplacementURL(node.getValue())) {
             pathNodes.push(node);
           }
@@ -268,7 +266,7 @@ class AssetPipeline {
     let outputFile;
     const ext = path.extname(origPath);
     if (ext !== '.html') {
-      outputFile = path.join(this.dest, getHashedPath(key, fileHash));
+      outputFile = path.join(this.dest, this.getHashedPath(key, fileHash));
     } else {
       outputFile = path.join(this.dest, path.relative(this.src, origPath));
     }
