@@ -23,7 +23,6 @@ const binaryAssetsPattern = /\.(?:ico|jpe?g|png|tiff|webp|eot|gif|otf|ttf|woff2?
 // Assets that match these endings should not be hashed.
 const unHashableAssetsPattern = /(?:robots\.txt|\.html|pages\.json)$/;
 
-
 const defaultOptions = {
   assetsDirPrefix,
   binaryAssetsPattern,
@@ -31,7 +30,7 @@ const defaultOptions = {
 };
 
 class AssetPipeline {
-  constructor(src=builtAssetDir, dest=destAssetDir, options) {
+  constructor(src = builtAssetDir, dest = destAssetDir, options) {
     this.src = src;
     this.dest = dest;
     this.opts = { ...defaultOptions, ...options };
@@ -64,7 +63,7 @@ class AssetPipeline {
     );
   }
 
-  async recursiveListDir(directoryPath=this.src) {
+  async recursiveListDir(directoryPath = this.src) {
     let files = await fs.readdir(directoryPath, { withFileTypes: true });
     for (let file of files) {
       let fullPath = path.join(directoryPath, file.name);
@@ -83,7 +82,7 @@ class AssetPipeline {
     return this.assetMap;
   }
 
-  updateKeys({ assetMap=this.assetMap, key, fileHash, written } = {}) {
+  updateKeys({ assetMap = this.assetMap, key, fileHash, written } = {}) {
     if (fileHash) {
       const shortHash = fileHash.substring(0, 8);
       assetMap[key].hash = fileHash;
@@ -99,7 +98,7 @@ class AssetPipeline {
     return str.substr(0, begin) + replacement + str.substr(end);
   }
 
-  async updateHashMap(pattern, asyncFunc, assetMap=this.assetMap) {
+  async updateHashMap(pattern, asyncFunc, assetMap = this.assetMap) {
     await Promise.all(
       Object.keys(assetMap).map(async (key, idx) => {
         if (key.match(pattern)) {
@@ -120,7 +119,7 @@ class AssetPipeline {
     return str.replace(/^\/{1}/, '');
   }
 
-  hasHashedReplacementURL(inputPath, assetMap=this.assetMap) {
+  hasHashedReplacementURL(inputPath, assetMap = this.assetMap) {
     const url = new Url(inputPath);
     const assetPath = this.trimLeadingSlash(url.pathname);
     if (
@@ -133,7 +132,7 @@ class AssetPipeline {
     return false;
   }
 
-  getReplacementURL(inputPath, assetMap=this.assetMap) {
+  getReplacementURL(inputPath, assetMap = this.assetMap) {
     const url = new Url(inputPath);
     const assetPath = this.trimLeadingSlash(url.pathname);
     if (this.hasHashedReplacementURL(assetPath, assetMap)) {
@@ -142,7 +141,7 @@ class AssetPipeline {
     return `/${assetPath}`;
   }
 
-  async rewriteBinaryFiles(origPath, key, assetMap=this.assetMap) {
+  async rewriteBinaryFiles(origPath, key, assetMap = this.assetMap) {
     const fileHash = await this.getFileHash(origPath);
     const hashedPath = this.getHashedPath(key, fileHash);
     const outputFile = path.join(this.dest, hashedPath);
@@ -150,14 +149,16 @@ class AssetPipeline {
     try {
       await fs.ensureFile(outputFile);
       await fs.copy(origPath, outputFile, { replace: false });
-      console.log(`Writing Binary file to ${this.getPathRelativeToCWD(outputFile)}`);
+      console.log(
+        `Writing Binary file to ${this.getPathRelativeToCWD(outputFile)}`
+      );
       this.updateKeys({ assetMap, key, fileHash, written: true });
     } catch (error) {
       console.error(chalk.red(`Error writing binary file: ${error}`));
     }
   }
 
-  async rewriteJS(origPath, key, assetMap=this.assetMap) {
+  async rewriteJS(origPath, key, assetMap = this.assetMap) {
     let code = await fs.readFile(origPath, 'utf8');
     const ast = Terser.parse(code);
     const pathNodes = [];
@@ -205,14 +206,16 @@ class AssetPipeline {
     try {
       await fs.ensureFile(outputFile);
       await fs.writeFile(outputFile, minified.code);
-      console.log(`Writing minified JS to ${this.getPathRelativeToCWD(outputFile)}`);
+      console.log(
+        `Writing minified JS to ${this.getPathRelativeToCWD(outputFile)}`
+      );
       this.updateKeys({ key, fileHash, written: true });
     } catch (error) {
       console.error(chalk.red(`Error writing generated JS: ${error}`));
     }
   }
 
-  async rewriteHTML(origPath, key, assetMap=this.assetMap) {
+  async rewriteHTML(origPath, key, assetMap = this.assetMap) {
     let text = await fs.readFile(origPath, 'utf8');
     let replacementsCount = 0;
 
@@ -267,10 +270,7 @@ class AssetPipeline {
     if (ext !== '.html') {
       outputFile = path.join(this.dest, getHashedPath(key, fileHash));
     } else {
-      outputFile = path.join(
-        this.dest,
-        path.relative(this.src, origPath)
-      );
+      outputFile = path.join(this.dest, path.relative(this.src, origPath));
     }
 
     try {
@@ -278,14 +278,16 @@ class AssetPipeline {
       await fs.writeFile(outputFile, output.html);
       const fileType = ext.replace(/^\./, '');
 
-      console.log(`Writing ${fileType} to ${this.getPathRelativeToCWD(outputFile)}`);
-      this.updateKeys({  key, fileHash, written: true });
+      console.log(
+        `Writing ${fileType} to ${this.getPathRelativeToCWD(outputFile)}`
+      );
+      this.updateKeys({ key, fileHash, written: true });
     } catch (error) {
       console.error(chalk.red(`Error writing generated ${fileType}: ${error}`));
     }
   }
 
-  async rewriteCSS(origPath, key, assetMap=this.assetMap) {
+  async rewriteCSS(origPath, key, assetMap = this.assetMap) {
     let css = await fs.readFile(origPath, 'utf8');
     let replacementsCount = 0;
     const output = postcss()
@@ -326,7 +328,7 @@ class AssetPipeline {
     }
   }
 
-  async copyFiles(assetMap=this.assetMap) {
+  async copyFiles(assetMap = this.assetMap) {
     await Promise.all(
       Object.keys(assetMap).map(async (pathKey, idx) => {
         const asset = assetMap[pathKey];
@@ -355,7 +357,10 @@ class AssetPipeline {
     // Get all file paths in the map from the build dir first.
     await this.recursiveListDir();
     // Update the assetMap with hashes for binary files.
-    await this.updateHashMap(this.opts.binaryAssetsPattern, this.rewriteBinaryFiles);
+    await this.updateHashMap(
+      this.opts.binaryAssetsPattern,
+      this.rewriteBinaryFiles
+    );
     // Process SVG
     await this.updateHashMap(/\.svg$/, this.rewriteHTML);
     // Process JS files
