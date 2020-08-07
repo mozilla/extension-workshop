@@ -44,6 +44,8 @@ Add a snazzy button to your website or blog telling people to "Get the add-on." 
 
 Simply save these images, put them on your website, and link them to your add-on’s listing on [addons.mozilla.org](https://addons.mozilla.org).
 
+The button is also available as an [.svg file](https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg).
+
 {% endcapture %}
 {% include modules/column-w-toc.liquid
   id: "promote-your-addon"
@@ -198,5 +200,3 @@ If you haven’t used online advertising before, [Google Academy for Ads](https:
 %}
 
 <!-- END: Single Column Body Module -->
-
-
