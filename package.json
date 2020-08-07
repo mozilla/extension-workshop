@@ -67,12 +67,13 @@
     "prettier-ci": "prettier -c '**'",
     "prettier-dev": "pretty-quick --branch master",
     "test-ci": "npm run prettier-ci && npm run lint && npm run stylelint && jest",
-    "test": "jest --watch",
+    "test": "npm run clean-tests && jest --watch",
     "clean": "rimraf './build/' './dist/'",
     "clean-dist": "rimraf './dist/'",
+    "clean-tests": "rimraf './tests/fixtures/dist/**/*!(.gitkeep)'",
     "build": "npm run clean && eleventy --config=./eleventy.config.js && npm run sass:build && npm run uglify:build",
     "build:unpublished": "ELEVENTY_ENV=production BUILD_UNPUBLISHED=1 npm run build && bin/assets-pipeline",
-    "build:production": "ELEVENTY_ENV=production npm run build && bin/assets-pipeline",
+    "build:production": "ELEVENTY_ENV=production npm run build && bin/asset-pipeline",
     "build:serve": "eleventy --serve --port=8081 --config=./eleventy.config.js",
     "build:debug": "DEBUG=Eleventy* eleventy --serve --port=8081 --config=./eleventy.config.js",
     "start": "npm run clean && BUILD_UNPUBLISHED=1 npm-run-all -p build:serve sass:* uglify:*",
@@ -81,5 +82,11 @@
     "sass:watch": "chokidar 'src/assets/css/*.scss' -c 'npm run sass:build'",
     "uglify:build": "bin/build-script",
     "uglify:watch": "chokidar 'src/assets/js/*.js' -c 'npm run uglify:build'"
+  },
+  "jest": {
+    "testRegex": ".*?\\.test\\.js$",
+    "watchPathIgnorePatterns": [
+      "<rootDir>/tests/fixtures/.*?"
+    ]
   }
 }

@@ -1,0 +1,388 @@
+#!/usr/bin/env node
+
+const chalk = require('chalk');
+const crypto = require('crypto');
+const path = require('path');
+const fs = require('fs-extra');
+const postcss = require('postcss');
+const postcssURL = require('postcss-url');
+const posthtml = require('posthtml');
+const posthtmlBeautify = require('posthtml-beautify');
+const posthtmlURL = require('posthtml-urls');
+const posthtmlCSS = require('posthtml-postcss');
+const Terser = require('terser');
+const Url = require('url-parse');
+
+const assetsDirPrefix = '/assets';
+// The dir that Eleventy builds to.
+const builtAssetDir = path.resolve(__dirname, '../build/');
+// Where we're writing to.
+const destAssetDir = path.resolve(__dirname, '../dist/');
+// Binary assets are handled first
+const binaryAssetsPattern = /\.(?:ico|jpe?g|png|tiff|webp|eot|gif|otf|ttf|woff2?)$/;
+// Assets that match these endings should not be hashed.
+const unHashableAssetsPattern = /(?:robots\.txt|\.html|pages\.json)$/;
+
+
+const defaultOptions = {
+  assetsDirPrefix,
+  binaryAssetsPattern,
+  unHashableAssetsPattern,
+};
+
+class AssetPipeline {
+  constructor(src=builtAssetDir, dest=destAssetDir, options) {
+    this.src = src;
+    this.dest = dest;
+    this.opts = { ...defaultOptions, ...options };
+    this.assetMap = {};
+  }
+
+  getPathRelativeToCWD(assetPath) {
+    return path.relative(process.cwd(), assetPath);
+  }
+
+  async getFileHash(filePath) {
+    const shasum = crypto.createHash('sha256');
+    const content = await fs.readFile(filePath, 'utf8');
+    shasum.update(content);
+    return shasum.digest('hex');
+  }
+
+  getContentHash(content) {
+    const shasum = crypto.createHash('sha256');
+    shasum.update(content);
+    return shasum.digest('hex');
+  }
+
+  getHashedPath(keyPath, hash) {
+    const ext = path.extname(keyPath);
+    const shortHash = hash.substring(0, 8);
+    return path.join(
+      path.dirname(keyPath),
+      `${path.basename(keyPath, ext)}.${shortHash}${ext}`
+    );
+  }
+
+  async recursiveListDir(directoryPath=this.src) {
+    let files = await fs.readdir(directoryPath, { withFileTypes: true });
+    for (let file of files) {
+      let fullPath = path.join(directoryPath, file.name);
+      if (file.isDirectory()) {
+        await this.recursiveListDir(fullPath);
+      } else {
+        const filePath = path.relative(this.src, fullPath);
+        if (path.basename(filePath).startsWith('.')) {
+          continue;
+        }
+        if (!this.assetMap[filePath]) {
+          this.assetMap[filePath] = { hashedPath: null };
+        }
+      }
+    }
+    return this.assetMap;
+  }
+
+  updateKeys({ assetMap=this.assetMap, key, fileHash, written } = {}) {
+    if (fileHash) {
+      const shortHash = fileHash.substring(0, 8);
+      assetMap[key].hash = fileHash;
+      assetMap[key].shortHash = shortHash;
+      assetMap[key].hashedPath = this.getHashedPath(key, fileHash);
+    }
+    // Store a bool as to whether this file has been already written out to the target dir.
+    assetMap[key].written = !!written;
+    return assetMap[key];
+  }
+
+  spliceString(str, begin, end, replacement) {
+    return str.substr(0, begin) + replacement + str.substr(end);
+  }
+
+  async updateHashMap(pattern, asyncFunc, assetMap=this.assetMap) {
+    await Promise.all(
+      Object.keys(assetMap).map(async (key, idx) => {
+        if (key.match(pattern)) {
+          const origPath = path.join(this.src, key);
+          if (asyncFunc) {
+            await asyncFunc.call(this, origPath, key, assetMap);
+          } else {
+            const fileHash = await this.getFileHash(origPath);
+            this.updateKeys({ key, fileHash });
+          }
+        }
+      })
+    );
+    return assetMap;
+  }
+
+  trimLeadingSlash(str) {
+    return str.replace(/^\/{1}/, '');
+  }
+
+  hasHashedReplacementURL(inputPath, assetMap=this.assetMap) {
+    const url = new Url(inputPath);
+    const assetPath = this.trimLeadingSlash(url.pathname);
+    if (
+      assetMap.hasOwnProperty(assetPath) &&
+      assetMap[assetPath].hashedPath &&
+      !assetPath.match(this.opts.unHashableAssetsPattern)
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  getReplacementURL(inputPath, assetMap=this.assetMap) {
+    const url = new Url(inputPath);
+    const assetPath = this.trimLeadingSlash(url.pathname);
+    if (this.hasHashedReplacementURL(assetPath, assetMap)) {
+      return `/${assetMap[assetPath].hashedPath}${url.query}${url.hash}`;
+    }
+    return `/${assetPath}`;
+  }
+
+  async rewriteBinaryFiles(origPath, key, assetMap=this.assetMap) {
+    const fileHash = await this.getFileHash(origPath);
+    const hashedPath = this.getHashedPath(key, fileHash);
+    const outputFile = path.join(this.dest, hashedPath);
+
+    try {
+      await fs.ensureFile(outputFile);
+      await fs.copy(origPath, outputFile, { replace: false });
+      console.log(`Writing Binary file to ${this.getPathRelativeToCWD(outputFile)}`);
+      this.updateKeys({ assetMap, key, fileHash, written: true });
+    } catch (error) {
+      console.error(chalk.red(`Error writing binary file: ${error}`));
+    }
+  }
+
+  async rewriteJS(origPath, key, assetMap=this.assetMap) {
+    let code = await fs.readFile(origPath, 'utf8');
+    const ast = Terser.parse(code);
+    const pathNodes = [];
+    const self = this;
+    ast.walk(
+      new Terser.TreeWalker(function (node) {
+        if (node instanceof Terser.AST_String) {
+          console.log(node.getValue());
+          console.log(self.hasHashedReplacementURL(node.getValue()));
+          if (self.hasHashedReplacementURL(node.getValue())) {
+            pathNodes.push(node);
+          }
+        }
+      })
+    );
+    // now go through the nodes backwards and replace code
+    const replacementsCount = pathNodes.length;
+    if (replacementsCount) {
+      console.log(
+        `Re-writing ${replacementsCount} ${
+          replacementsCount == 1 ? 'path' : 'paths'
+        } in ${this.getPathRelativeToCWD(origPath)}`
+      );
+    }
+    for (var i = pathNodes.length; --i >= 0; ) {
+      const node = pathNodes[i];
+      const start_pos = node.start.pos;
+      const end_pos = node.end.endpos;
+      const replacement = new Terser.AST_String({
+        value: self.getReplacementURL(node.getValue(), assetMap),
+      }).print_to_string({ beautify: true });
+      code = self.spliceString(code, start_pos, end_pos, replacement);
+    }
+
+    const minified = Terser.minify(code);
+
+    if (minified.error) {
+      throw new Error(minified.error);
+    }
+
+    const fileHash = this.getContentHash(minified.code);
+    const hashedPath = this.getHashedPath(key, fileHash);
+    const outputFile = path.join(this.dest, hashedPath);
+
+    try {
+      await fs.ensureFile(outputFile);
+      await fs.writeFile(outputFile, minified.code);
+      console.log(`Writing minified JS to ${this.getPathRelativeToCWD(outputFile)}`);
+      this.updateKeys({ key, fileHash, written: true });
+    } catch (error) {
+      console.error(chalk.red(`Error writing generated JS: ${error}`));
+    }
+  }
+
+  async rewriteHTML(origPath, key, assetMap=this.assetMap) {
+    let text = await fs.readFile(origPath, 'utf8');
+    let replacementsCount = 0;
+
+    const postcssOptions = { from: origPath };
+    const postcssfilterType = /^text\/css$/;
+
+    const output = await posthtml()
+      .use(
+        posthtmlCSS(
+          [
+            postcssURL({
+              url: (asset) => {
+                if (this.hasHashedReplacementURL(asset.url, assetMap)) {
+                  replacementsCount++;
+                  return this.getReplacementURL(asset.url, assetMap);
+                } else {
+                  return asset.url;
+                }
+              },
+            }),
+          ],
+          postcssOptions,
+          postcssfilterType
+        )
+      )
+      .use(
+        posthtmlURL({
+          eachURL: (url, attr, element) => {
+            if (this.hasHashedReplacementURL(url, assetMap)) {
+              replacementsCount++;
+              return this.getReplacementURL(url, assetMap);
+            } else {
+              return url;
+            }
+          },
+        })
+      )
+      .process(text);
+
+    const fileHash = this.getContentHash(output.html);
+
+    if (replacementsCount) {
+      console.log(
+        `Re-writing ${replacementsCount} ${
+          replacementsCount == 1 ? 'path' : 'paths'
+        } in ${this.getPathRelativeToCWD(origPath)}`
+      );
+    }
+
+    let outputFile;
+    const ext = path.extname(origPath);
+    if (ext !== '.html') {
+      outputFile = path.join(this.dest, getHashedPath(key, fileHash));
+    } else {
+      outputFile = path.join(
+        this.dest,
+        path.relative(this.src, origPath)
+      );
+    }
+
+    try {
+      await fs.ensureFile(outputFile);
+      await fs.writeFile(outputFile, output.html);
+      const fileType = ext.replace(/^\./, '');
+
+      console.log(`Writing ${fileType} to ${this.getPathRelativeToCWD(outputFile)}`);
+      this.updateKeys({  key, fileHash, written: true });
+    } catch (error) {
+      console.error(chalk.red(`Error writing generated ${fileType}: ${error}`));
+    }
+  }
+
+  async rewriteCSS(origPath, key, assetMap=this.assetMap) {
+    let css = await fs.readFile(origPath, 'utf8');
+    let replacementsCount = 0;
+    const output = postcss()
+      .use(
+        postcssURL({
+          url: (asset) => {
+            if (this.hasHashedReplacementURL(asset.url, assetMap)) {
+              replacementsCount++;
+              return this.getReplacementURL(asset.url, assetMap);
+            } else {
+              return asset.url;
+            }
+          },
+        })
+      )
+      .process(css, { from: origPath });
+
+    const fileHash = this.getContentHash(output.css);
+
+    if (replacementsCount) {
+      console.log(
+        `Re-writing ${replacementsCount} ${
+          replacementsCount == 1 ? 'path' : 'paths'
+        } in ${this.getPathRelativeToCWD(origPath)}`
+      );
+    }
+
+    const hashedPath = this.getHashedPath(key, fileHash);
+    const outputFile = path.join(this.dest, hashedPath);
+
+    try {
+      await fs.ensureFile(outputFile);
+      await fs.writeFile(outputFile, output.css);
+      console.log(`Writing CSS to ${this.getPathRelativeToCWD(outputFile)}`);
+      this.updateKeys({ key, fileHash, written: true });
+    } catch (error) {
+      console.error(`Error writing generated CSS: ${error}`);
+    }
+  }
+
+  async copyFiles(assetMap=this.assetMap) {
+    await Promise.all(
+      Object.keys(assetMap).map(async (pathKey, idx) => {
+        const asset = assetMap[pathKey];
+        if (asset && !asset.written) {
+          const outputPath = asset.hashedPath ? asset.hashedPath : pathKey;
+          const outputFile = path.join(this.dest, outputPath);
+          const origFile = path.join(this.src, pathKey);
+
+          try {
+            console.log(
+              `Copying file from ${this.getPathRelativeToCWD(
+                origFile
+              )} to ${this.getPathRelativeToCWD(outputFile)}`
+            );
+            await fs.copy(origFile, outputFile, { replace: false });
+            asset.written = true;
+          } catch (error) {
+            console.error(`Error copying file: ${error}`);
+          }
+        }
+      })
+    );
+  }
+
+  async cacheBustAssets() {
+    // Get all file paths in the map from the build dir first.
+    await this.recursiveListDir();
+    // Update the assetMap with hashes for binary files.
+    await this.updateHashMap(this.opts.binaryAssetsPattern, this.rewriteBinaryFiles);
+    // Process SVG
+    await this.updateHashMap(/\.svg$/, this.rewriteHTML);
+    // Process JS files
+    await this.updateHashMap(/\.js$/, this.rewriteJS);
+    // Process CSS
+    await this.updateHashMap(/\.css$/, this.rewriteCSS);
+    // Process HTML
+    await this.updateHashMap(/\.html$/, this.rewriteHTML);
+    // Finally copy everything to a new directory, if the
+    // original path has a hashed entry write it to that path.
+    await this.copyFiles();
+  }
+}
+
+if (require.main === module) {
+  const ap = new AssetPipeline();
+  ap.cacheBustAssets()
+    .then(() => {
+      console.log(chalk.green('TA-DA! 🥁'));
+    })
+    .catch((error) => {
+      console.log(chalk.red(`Something went wrong: ${error.message}`));
+      console.error(error.stack);
+      process.exit(1);
+    });
+}
+
+module.exports = {
+  AssetPipeline,
+};
