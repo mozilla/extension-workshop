@@ -1,4 +1,4 @@
-const { AssetPipeline } = require('../bin/assets-pipeline');
+const { AssetPipeline } = require('../bin/asset-pipeline');
 const fs = require('fs-extra');
 const path = require('path');
 
