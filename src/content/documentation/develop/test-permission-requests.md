@@ -15,7 +15,7 @@ date: 2019-03-21 12:27:40
 
 # Test permission requests
 
-Your extension may contain two types of permission request: <dfn>install time</dfn> and <dfn>runtime</dfn> permission requests. This page explains how you can test the way your users will see requests for these permissions.
+Your extension may contain two types of permission request: **install time** and **runtime** permission requests. This page explains how you can test the way your users will see requests for these permissions.
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -30,8 +30,8 @@ Your extension may contain two types of permission request: <dfn>install time</d
 
 When you’re testing with an unpackaged extension, using either `about:debugging` or [web-ext](/documentation/develop/web-ext-command-reference), install time and runtime permissions are handled as follows:
 
-- install time permission requests are granted silently. You don't see the permission warnings users would.
-- runtime permission requests display the door hanger request as normal. These permissions remain in place until they are revoked programmatically by the extension, the extension is removed using `about:debugging`, or Firefox restart.
+- <dfn>install time permission</dfn> requests are granted silently. You don't see the permission warnings users would.
+- <dfn>runtime permission</dfn> requests display the door hanger request as normal. These permissions remain in place until they are revoked programmatically by the extension, the extension is removed using `about:debugging`, or Firefox restart.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid
