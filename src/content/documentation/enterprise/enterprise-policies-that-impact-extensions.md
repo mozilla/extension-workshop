@@ -60,15 +60,15 @@ These policies control whether users can install, disable, or remove web extensi
 
 These policies may affect the behavior of third-party extensions because of the Firefox features these policies disable or restrict.
 
-- **`DisableDeveloperTools`** — This policy removes access to all developer tools. With this policy in place, it limits users’ ability to create extensions effectively.
+- `DisableDeveloperTools` — This policy removes access to all developer tools. With this policy in place, it limits users’ ability to create extensions effectively.
 
-- **`DisableFirefoxAccounts`** — This policy disables Sync. With this policy in place, third-party extensions that make use of the sync functionality may not work correctly.
+- `DisableFirefoxAccounts` — This policy disables Sync. With this policy in place, third-party extensions that make use of the sync functionality may not work correctly.
 
-- **`DisablePrivateBrowsing`** — This policy removes access to private browsing. With this policy in place, third-party extensions that make use of the private browsing functionality may not work correctly.
+- `DisablePrivateBrowsing` — This policy removes access to private browsing. With this policy in place, third-party extensions that make use of the private browsing functionality may not work correctly.
 
-- **`EnableTrackingProtection`** – This policy affects tracking protection. With this policy in place, third-party extensions that enhanced privacy or tracking prevention functionality may not work correctly.
+- `EnableTrackingProtection` – This policy affects tracking protection. With this policy in place, third-party extensions that enhanced privacy or tracking prevention functionality may not work correctly.
 
-- **`SanitizeOnShutdown`** — If this policy is set to `true`, Firefox clears all browsing data when it closes. This data includes browsing and download history, bookies, active logins, cache, form and search history, site preferences, and offline website data. With this policy in place, third-party extensions that rely on storing data locally may not work correctly.
+- `SanitizeOnShutdown` — If this policy is set to `true`, Firefox clears all browsing data when it closes. This data includes browsing and download history, bookies, active logins, cache, form and search history, site preferences, and offline website data. With this policy in place, third-party extensions that rely on storing data locally may not work correctly.
 
 Other useful information:
 
