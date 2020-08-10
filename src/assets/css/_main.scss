@@ -75,7 +75,7 @@ main {
   a[target='_blank'] {
     &::after {
       color: inherit;
-      padding: 0 0.25em;
+      padding: 0 0 0 0.25em;
       display: inline-block;
       @include icon_font($char: $icon-newtab);
     }
