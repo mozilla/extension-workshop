@@ -1019,6 +1019,10 @@ $hamburger-hover-transition-timing-function: linear;
   .mzp-c-footer-legal ul {
     @include horizontal_list($margin: 1em);
 
+    > li {
+      margin: 0 2em 0 0;
+    }
+
     margin-bottom: 1em;
 
     a {
