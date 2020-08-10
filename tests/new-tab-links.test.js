@@ -20,7 +20,7 @@ describe('new-tab-links.js', () => {
     expect(testLink.getAttribute('target')).toBe(null);
   });
 
-  it('should have not add rel or target attrs to a relative link', () => {
+  it('should have not added rel or target attrs to a relative link', () => {
     const testLink = document.getElementById('test2');
     expect(testLink.getAttribute('rel')).toBe(null);
     expect(testLink.getAttribute('target')).toBe(null);
@@ -38,7 +38,7 @@ describe('new-tab-links.js', () => {
     expect(testLink.getAttribute('target')).toBe('_blank');
   });
 
-  it('should have not add rel or target attrs to a relative link', () => {
+  it('should not change an existing rel attr on a relative link', () => {
     const testLink = document.getElementById('test5');
     expect(testLink.getAttribute('rel')).toBe('nofollow');
     expect(testLink.getAttribute('target')).toBe(null);
