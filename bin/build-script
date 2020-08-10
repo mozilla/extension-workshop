@@ -24,6 +24,7 @@ const inputFiles = [
   'src/assets/js/inview.js',
   'src/assets/js/youtubeplayer.js',
   'src/assets/js/main.js',
+  'src/assets/js/new-tab-links.js',
 ];
 
 const outputFile = './build/assets/js/bundle.js';
