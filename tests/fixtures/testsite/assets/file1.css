@@ -1,0 +1,8 @@
+#test {
+  color: #fff;
+}
+
+html {
+  background: transparent url(/assets/octoamo-sm.png) no-repeat 0 0;
+  color: red;
+}
