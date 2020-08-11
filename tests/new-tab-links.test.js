@@ -15,7 +15,6 @@ describe('new-tab-links.js', () => {
 
   it('should have not added rel or target attrs to a link on this host', () => {
     const testLink = document.getElementById('test1');
-    console.log(testLink.href);
     expect(testLink.getAttribute('rel')).toBe(null);
     expect(testLink.getAttribute('target')).toBe(null);
   });
