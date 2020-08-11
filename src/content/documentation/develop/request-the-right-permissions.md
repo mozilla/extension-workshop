@@ -34,7 +34,7 @@ Or how to avoid permissions discouraging users from installing your extensions.
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Introduction
 
@@ -68,7 +68,7 @@ Tip: Permission warnings aren't issued [when you load an unpacked extension](/do
 
 <section id="advised-permissions" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Advised permissions
 
@@ -76,7 +76,7 @@ Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExte
 
 <!-- Table -->
 
-<div class="table-wrapper table-scroll" markdown="1">
+<div class="table-wrapper table-scroll">
 
 | Permission                                                                                                                       | Permissions messages                                                                                                                                                                                             |
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -142,7 +142,7 @@ The following permissions don't get alerted to users:
 
 <section id="avoid-unnecessary-permissions" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Avoid unnecessary permissions
 
@@ -199,7 +199,7 @@ Note: Firefox doesn't currently restrict local storage size, although it does as
 
 <section id="request-permissions-at-runtime" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Request permissions at runtime
 
@@ -246,7 +246,7 @@ For more information about optional permissions, see [optional_permissions](http
 
 <section id="add-information-about-permissions-to-your-extensions-amo-page" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Add information about permissions to your extensions AMO page
 

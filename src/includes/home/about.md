@@ -3,12 +3,12 @@
 <div class="bg alt"></div>
 
 <div class="grid-container grid-x grid-padding-x align-center panel-nested">
-<div class="cell small-12 medium-6 xlarge-5" markdown="1">
+<div class="cell small-12 medium-6 xlarge-5">
 
 ## Why Create Extensions on&nbsp;Firefox?
 
 </div>
-<div class="cell small-12 medium-6 xlarge-5" markdown="1">
+<div class="cell small-12 medium-6 xlarge-5">
 
 Get your great idea into the hands of millions of Firefox users. Join an international community of developers. Be supported every step of the way. And, when you build for Firefox first, it’s easy to port your extension to other browsers, saving you valuable development time.
 
@@ -18,7 +18,7 @@ Get your great idea into the hands of millions of Firefox users. Join an interna
 </div>
 
 <div class="grid-container grid-x grid-padding-x align-center tiles-intro">
-<div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
+<div class="cell small-12 medium-8 xlarge-6 text-center">
 
 ### Cool Things Add-ons Can Do
 
@@ -30,7 +30,7 @@ Get your great idea into the hands of millions of Firefox users. Join an interna
 
 <!-- Tile 1 -->
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API" class="cell small-12 large-4 tile illustrated-tile tile-block-link">
-<div class="block-link" markdown="1">
+<div class="block-link">
 
 ![Tinker with Tabs](/assets/img/Tinker-with-Tabs-v2.svg "Tinker with Tabs")
 
@@ -46,7 +46,7 @@ Your extension can control browser tabs. Use the API to open, close, move, hide,
 
 <!-- Tile 2 -->
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts" class="cell small-12 large-4 tile illustrated-tile tile-block-link">
-<div class="block-link" markdown="1">
+<div class="block-link">
 
 ![Transform Web Content](/assets/img/Integrate-Web-Search.svg "Transform Web Content")
 
@@ -62,7 +62,7 @@ Use Firefox's powerful built-in search capabilities to open up the web for users
 
 <!-- Tile 3 -->
 <a href="https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface" class="cell small-12 large-4 tile illustrated-tile tile-block-link">
-<div class="block-link" markdown="1">
+<div class="block-link">
 
 ![Add Innovative Features](/assets/img/Add-Innovative-Features-v2.svg "Add Innovative Features")
 
@@ -84,7 +84,7 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 
 <!-- More Details -->
 <div class="grid-container grid-x grid-padding-x align-center tiles-footer">
-<div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
+<div class="cell small-12 medium-8 xlarge-6 text-center">
 
 [View more extension code examples](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Examples)
 
@@ -97,12 +97,12 @@ Think the browser is missing a feature, such as a built-in calculator, music str
 <!-- Anatomy of an Extension -->
 <div class="section-anatomy panel">
 <div class="grid-container grid-x grid-padding-x align-center">
-<div class="cell small-12 medium-6 xlarge-5" markdown="1">
+<div class="cell small-12 medium-6 xlarge-5">
 
 ## Anatomy of an Extension
 
 </div>
-<div class="cell small-12 medium-6 xlarge-5" markdown="1">
+<div class="cell small-12 medium-6 xlarge-5">
 
 An extension is a simple collection of files that modify the browser’s appearance and behavior. It can add user interface elements, alter content, or perform background tasks that enhance browsing.
 
@@ -127,7 +127,7 @@ An extension is a simple collection of files that modify the browser’s appeara
   <p class="manifest show-for-small-only"><img src="/assets/img/icons/manifest.svg" alt="" />Manifest.json</p>
 </div>
 
-<aside class="popup-panel" id="anatomy-ui" markdown="1">
+<aside class="popup-panel" id="anatomy-ui">
 
 ![User Interface](/assets/img/icons/user-interface.svg "User Interface")
 
@@ -138,7 +138,7 @@ Add toolbar buttons, menu choices, and—only in Firefox—sidebars to display a
 <button class="close"></button>
 
 </aside>
-<aside class="popup-panel" id="anatomy-content" markdown="1">
+<aside class="popup-panel" id="anatomy-content">
 
 ![Content Scripts](/assets/img/icons/content-script.svg "Content Scripts")
 
@@ -149,7 +149,7 @@ Change webpage content. Remove ads, highlight key words, and reformat elements f
 <button class="close"></button>
 
 </aside>
-<aside class="popup-panel" id="anatomy-background" markdown="1">
+<aside class="popup-panel" id="anatomy-background">
 
 ![Background Scripts](/assets/img/icons/background-scripts.svg "Background Scripts")
 

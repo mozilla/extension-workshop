@@ -33,7 +33,7 @@ Firefox provides several versions that offer different capabilities for developi
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Firefox editions
 
@@ -41,7 +41,7 @@ This table summarizes the edition information, features for extension developmen
 
 <!-- Table -->
 
-<div class="table-wrapper table-scroll" markdown="1">
+<div class="table-wrapper table-scroll">
 
 | Edition                                                                         | Version      | Stable | Tools for extension development | Installs unsigned extensions | Recommended extension development use           |
 | ------------------------------------------------------------------------------- | ------------ | ------ | ------------------------------- | ---------------------------- | ----------------------------------------------- |
@@ -65,7 +65,7 @@ This table summarizes the edition information, features for extension developmen
 
 <section id="firefox-version-and-their-web-extension-development-capabilities" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Firefox version and their web extension development capabilities
 

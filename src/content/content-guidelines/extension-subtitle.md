@@ -13,7 +13,7 @@ The subtitle is one of your extension’s most important pieces of content. It�
 **A subtitle is a short phrase that clearly, concisely explains what your extension does.** It’s short for a reason: extension name + subtitle become your headline on search. While the name may appear by itself in some contexts, the subtitle will never appear without the name.
 
 <!-- Full Width Image -->
-<section class="image-with-caption" markdown="1">
+<section class="image-with-caption">
 
 ![Remembear subtitle screenshot](/assets/img/content-guidelines/remembear-subtitle.png "Remembear subtitle text")
 
@@ -26,7 +26,7 @@ The subtitle is one of your extension’s most important pieces of content. It�
 
 ## Extension Subtitle Do’s and Don’ts
 
-<section class="do-this" markdown="1"><header><h5>Do This:</h5></header>
+<section class="do-this"><header><h5>Do This:</h5></header>
 
 - Keep it short: You have 70 characters to use between extension name and extension subtitle. It may be best to keep your extension name shorter, so you have more room in your subtitle. Don’t worry, you also have an unlimited description field to provide a longer, detailed explanation of your product.
 - Capture the key features of your extension.
@@ -40,7 +40,7 @@ The subtitle is one of your extension’s most important pieces of content. It�
 To determine your keywords, think about what words a person would use when searching for an extension like yours. Consider the problem that user is trying to solve. For example, what words would someone use when searching for a proofreader or ad-blocking extension?
 
 <!-- Example (Block) -->
-<div class="example" markdown="1">
+<div class="example">
 <header><h5>Examples:</h5></header>
 
 **Name:** Facebook Container
@@ -64,7 +64,7 @@ To determine your keywords, think about what words a person would use when searc
 <!-- END: Do this -->
 
 <!-- Not this -->
-<section class="not-this" markdown="1"><header><h5>Not This:</h5></header>
+<section class="not-this"><header><h5>Not This:</h5></header>
 
 ##### 1. Don’t overpromise.
 

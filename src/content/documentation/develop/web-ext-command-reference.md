@@ -51,7 +51,7 @@ This page lists all the commands and options available under the [web-ext](https
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Commands
 
@@ -210,7 +210,7 @@ You can also use aliases, like this:
 
 Here are all available aliases and the executables they map to:
 
-<div class="table-wrapper table-scroll" markdown="1">
+<div class="table-wrapper table-scroll">
 
 | Alias                     | Firefox executable                                                                           |
 | ------------------------- | -------------------------------------------------------------------------------------------- |
@@ -283,7 +283,7 @@ This specifies which application to run your extension in. Specify this option m
 
 Here are the supported targets:
 
-<div class="table-wrapper table-scroll" markdown="1">
+<div class="table-wrapper table-scroll">
 
 | Target            | Application                                                                                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -365,7 +365,7 @@ Environment variable: `$WEB_EXT_API_PROXY`
 
 This specifies the `channel` in which the extension is signed. It defaults to `unlisted` or the `channel` of your extension's latest version. The values for `channel` are:
 
-<div class="table-wrapper table-scroll" markdown="1">
+<div class="table-wrapper table-scroll">
 
 | Channel    | Result                                                                                                                                                                                                              |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -410,7 +410,7 @@ Environment variable: `$WEB_EXT_ID`
 
 <section id="global-options" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Global options
 
@@ -515,7 +515,7 @@ Shows the version number of the installed web-ext tool.
 
 <section id="setting-option-environment-variables" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Setting option environment variables
 
@@ -567,7 +567,7 @@ WEB_EXT_VERBOSE=true
 
 <section id="see-also" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## See also
 

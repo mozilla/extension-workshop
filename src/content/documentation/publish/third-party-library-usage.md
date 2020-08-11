@@ -58,7 +58,7 @@ Example: If you’re using the minified version of mousetrap release 1.4.2 (beca
 
 <!-- Not this -->
 
-<section class="not-this" markdown="1">
+<section class="not-this">
 
 - `https://craig.is/killing/mice`—using the main website, which only shows the latest version.
 - `https://github.com/ccampbell/mousetrap/blob/master/mousetrap.min.js`—using the master branch, which may change anytime.
@@ -72,7 +72,7 @@ The **correct** link is
 
 <!-- Do this -->
 
-<section class="do-this" markdown="1">
+<section class="do-this">
 
 `https://github.com/ccampbell/mousetrap/blob/1.4.2/mousetrap.min.js`
 

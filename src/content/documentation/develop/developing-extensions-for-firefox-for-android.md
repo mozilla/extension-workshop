@@ -61,7 +61,7 @@ On your device or Android emulator:
 - (If you're using [web-ext](/documentation/develop/getting-started-with-web-ext/), you can skip this step.) Open Firefox for Android and turn off signing by browsing to `about:config` then locating and setting `xpinstall.signatures.required` to false.
 
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![about:config screenshot](/assets/img/documentation/develop/set_xpinstall.png)
 
@@ -156,7 +156,7 @@ On your computer, execute `/path/to/adb push /path/to/<extension file name>.xpi 
 On your Android device or in the emulator, open Firefox for Android and browse to `file:///mnt/sdcard`:
 
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![xpi file on memory card](/assets/img/documentation/develop/xpi-file-on-memory-card.png)
 
@@ -166,7 +166,7 @@ On your Android device or in the emulator, open Firefox for Android and browse t
 Tap on `<extension file name>.xpi` to install it. You will get a warning about the extension being blocked, tap ALLOW:
 
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![Blocked add-on message](/assets/img/documentation/develop/blocked-add-on-message.png)
 
@@ -176,7 +176,7 @@ Tap on `<extension file name>.xpi` to install it. You will get a warning about t
 An additional warning will tell you the extension is unverified, tap INSTALL:
 
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![Unverified add-on message](/assets/img/documentation/develop/unverified-add-on-messages.png)
 
@@ -186,7 +186,7 @@ An additional warning will tell you the extension is unverified, tap INSTALL:
 Your extension will start running (in this case a copy of the [borderify](https://developer.mozilla.org/Add-ons/WebExtensions/Examples#borderify) example extension):
 
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![Borderify sample extension in action](/assets/img/documentation/develop/borderify-in-action.png)
 
