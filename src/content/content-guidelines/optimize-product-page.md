@@ -12,7 +12,7 @@ When you build an extension, you make the web better. To get your great idea out
 
 <div class="grid-x grid-padding-x align-right tiles-container">
 
-<div class="cell small-12 large-6 tile-borderless" markdown="1">
+<div class="cell small-12 large-6 tile-borderless">
 
 [![What’s Great Content and Design?](/assets/img/content_video_thumbnail.jpg)](a0_OsLGI0k4 'Open Popup Video')
 

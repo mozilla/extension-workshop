@@ -49,7 +49,7 @@ date: 2019-11-06 10:25:55
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Installation
 
@@ -81,7 +81,7 @@ web-ext --version
 
 <section id="using-web-ext-section" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Using web-ext
 
@@ -250,7 +250,7 @@ The API options are required to specify your [addons.mozilla.org credentials](ht
 - `--api-key`: the API key (JWT issuer) from `addons.mozilla.org` needed to sign the extension. This is a string that will look something like `user:12345:67`.
 - `--api-secret`: the API secret (JWT secret) from `addons.mozilla.org` needed to sign the extension. This is a string that will look something like `634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009`.
 
-<div class="note alert" markdown="1">
+<div class="note alert">
 
 If you've [listed](/documentation/publish/submitting-an-add-on/) the extension on [addons.mozilla.org](https://addons.mozilla.org/), see [Signing a test version of a listed extension](/documentation/develop/getting-started-with-web-ext/#signing-test-version-listed).
 
@@ -302,7 +302,7 @@ web-ext sign --channel=listed --api-key=... --api-secret=...
 
 This publishes and submits your extension for review as if you had uploaded it to [addons.mozilla.org](https://addons.mozilla.org/).
 
-<div class="note alert" markdown="1">
+<div class="note alert">
 
 Setting `--channel=listed` for a new version of a listed extension is not well supported. It uploads your new version to [addons.mozilla.org](https://addons.mozilla.org/) as if you'd [submitted it manually](/documentation/publish/submitting-an-add-on/). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.
 
@@ -454,7 +454,7 @@ You can use `web-ext` as a `NodeJS module`. Here is [more information](https://g
 
 <section id="see-also-section" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## See also
 

@@ -51,7 +51,7 @@ In addition to the steps described here, your extension should follow [Add-on Po
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 1\. Keep it focused
 
@@ -72,7 +72,7 @@ An extension is best when it is centered around one main use case, and addresses
 
 <section id="give-users-what-they-need-where-they-need-it" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 2\. Give users what they need, where they need&nbsp;it
 
@@ -150,7 +150,7 @@ If you are providing tools for developers, add them to the Firefox developer too
 
 <section id="keep-the-user-informed" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 3\. Keep the user informed
 
@@ -198,7 +198,7 @@ Use of Firefox colors is suggested, for more details see [Firefox Colors](http:/
 
 <section id="be-firefoxy-in-look-and-feel" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 4\. Be Firefoxy in look and feel
 
@@ -216,7 +216,7 @@ Following Photon will ensure that your extension integrates with the Firefox exp
 
 <section id="great-onboarding-experience" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 5\. Great onboarding experience
 
@@ -236,7 +236,7 @@ In case the user skips the onboarding page, ensure that your extension is ready 
 
 <section id="test-test-and-then-test-again" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 6\. Test, test, and then test again
 

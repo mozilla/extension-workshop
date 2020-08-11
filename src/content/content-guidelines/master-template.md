@@ -11,7 +11,7 @@ skip_index: true
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
 
 <!-- Full Width Image -->
-<section class="image-with-caption" markdown="1">
+<section class="image-with-caption">
 
 ![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Full width image (above)
 
@@ -20,12 +20,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- Half Width Images -->
 <section class="image-with-caption grid-container grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![Screenshot Remembear](/assets/content-guidelines/example-remembear.png "Screenshot Remembear") Half width image (above)
 
 </div>
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Half width image (above)
 
@@ -38,7 +38,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
 
 <!-- Video Popup Thumbnail -->
-<section class="video-popup" markdown="1">
+<section class="video-popup">
 
 [![What’s Great Content and Design?](/assets/img/content-guidelines/example-thumbnail.jpg)](a0_OsLGI0k4 'What’s Great Content and Design?')
 
@@ -47,7 +47,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <!-- Half Width Video Popup Thumbnails -->
 <section class="video-popup grid-container grid-x grid-padding-x">
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6">
 
 ![What’s Great Content and Design?](/assets/img/content-guidelines/example-thumbnail.jpg "What’s Great Content and Design?")
 
@@ -56,7 +56,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
 
 </div>
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6">
 
 [![What’s Great Content and Design?](/assets/img/content-guidelines/example-thumbnail.jpg)](a0_OsLGI0k4 'What’s Great Content and Design?')
 
@@ -100,7 +100,7 @@ Between your extension name and subtitle, you have up to 70 characters to use—
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
 <!-- Do this -->
-<section class="do-this" markdown="1"><header><h5>Do This</h5></header>
+<section class="do-this"><header><h5>Do This</h5></header>
 
 1. **Make it memorable**
 2. **Make it unique**
@@ -109,7 +109,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 5. **Give an idea or hint about what your extension does with an illustrative word or metaphor**
 
 <!-- Example (Block) -->
-<div class="example" markdown="1">
+<div class="example">
 
 Examples: An extension that saves passwords is called **Remembear**
 
@@ -123,7 +123,7 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 <!-- END: Do this -->
 
 <!-- Not this -->
-<section class="not-this" markdown="1"><header><h5>Not This</h5></header>
+<section class="not-this"><header><h5>Not This</h5></header>
 
 ##### 1. Don't include a description.
 
@@ -174,7 +174,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 ##### Remembear Example:
 
 <!-- Full Width Image -->
-<section class="image-with-caption" markdown="1">
+<section class="image-with-caption">
 ![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear")
 </section>
 <!-- END: Full Width Image -->
@@ -193,14 +193,14 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 <!-- Do this, not this, side-by-side -->
 <section class="do-this-not-this grid-container grid-x grid-padding-x">
 <div class="cell small-12 medium-6">
-<div class="do-this" markdown="1"><header><h5>Do This</h5></header>
+<div class="do-this"><header><h5>Do This</h5></header>
 
 1. **Make it memorable**
 2. **Make it unique**
 3. **Keep it short for better display on smaller screens**
 
 <!-- Example (Block) -->
-<div class="example" markdown="1">
+<div class="example">
 
 Examples: An extension that saves passwords is called **Remembear**
 
@@ -214,14 +214,14 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 </div>
 </div>
 <div class="cell small-12 medium-6">
-<div class="not-this" markdown="1"><header><h5>Not This</h5></header>
+<div class="not-this"><header><h5>Not This</h5></header>
 
 1. **Make it memorable**
 2. **Make it unique**
 3. **Keep it short for better display on smaller screens**
 
 <!-- Example (Block) -->
-<div class="example" markdown="1">
+<div class="example">
 
 Examples: An extension that saves passwords is called **Remembear**
 
@@ -238,7 +238,7 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 <!-- END: Do this, not this, side-by-side -->
 
 <!-- Tile -->
-<section class="tile" markdown="1">
+<section class="tile">
 
 #### Requirements
 

@@ -9,7 +9,7 @@ skip_index: true
 # Extension Name
 
 <!-- Full Width Image -->
-<section class="image-with-caption" markdown="1">
+<section class="image-with-caption">
 
 ![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Example extension name from RememBear
 
@@ -23,7 +23,7 @@ Research shows that people really do take an extension’s name into account whe
 Between your extension name and subtitle, you have up to 70 characters to use—that’s because 70 is the max character limit for your headline in external search results. It’s best to keep your extension name shorter so you have more characters left over for your subtitle.
 
 <!-- Tile -->
-<section class="tile" markdown="1">
+<section class="tile">
 
 #### Requirements
 
@@ -34,7 +34,7 @@ Between your extension name and subtitle, you have up to 70 characters to use—
 <!-- END: Tile -->
 
 <!-- Do this -->
-<section class="do-this" markdown="1"><header><h5>Do This</h5></header>
+<section class="do-this"><header><h5>Do This</h5></header>
 
 1. **Make it memorable**
 2. **Make it unique**
@@ -43,7 +43,7 @@ Between your extension name and subtitle, you have up to 70 characters to use—
 5. **Give an idea or hint about what your extension does with an illustrative word or metaphor**
 
 <!-- Example (Block) -->
-<div class="example" markdown="1">
+<div class="example">
 
 Examples: An extension that saves passwords is called **Remembear**
 
@@ -57,7 +57,7 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 <!-- END: Do this -->
 
 <!-- Not this -->
-<section class="not-this" markdown="1"><header><h5>Not This</h5></header>
+<section class="not-this"><header><h5>Not This</h5></header>
 
 ##### 1. Don't include a description.
 

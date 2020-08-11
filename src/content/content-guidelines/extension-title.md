@@ -17,7 +17,7 @@ Between your name and subtitle, you have up to 70 characters to use—that’s b
 ## Extension Name Do’s and Don’ts
 
 <!-- Do this -->
-<section class="do-this" markdown="1"><header><h5>Do This:</h5></header>
+<section class="do-this"><header><h5>Do This:</h5></header>
 
 - Make it memorable
 - Make it unique
@@ -29,7 +29,7 @@ Between your name and subtitle, you have up to 70 characters to use—that’s b
 
 **Examples:**
 
-<div class="example" markdown="1">
+<div class="example">
 
 An extension that saves passwords is called **Remembear**
 
@@ -43,7 +43,7 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 <!-- END: Do this -->
 
 <!-- Not this -->
-<section class="not-this" markdown="1"><header><h5>Not This:</h5></header>
+<section class="not-this"><header><h5>Not This:</h5></header>
 
 ##### 1. Don't include a description.
 
@@ -91,7 +91,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 <!-- END: Example (Inline) -->
 
-<section class="tile" markdown="1">
+<section class="tile">
 
 #### Requirements
 

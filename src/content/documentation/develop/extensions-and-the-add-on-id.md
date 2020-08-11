@@ -60,7 +60,7 @@ Note that the ability to develop and debug WebExtensions that don't include an I
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Basic workflow with no add-on ID
 
@@ -100,7 +100,7 @@ You can do the same thing if you are updating from an older add-on type, such as
 
 <section id="when-do-you-need-an-add-on-id" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## When do you need an add-on ID?
 

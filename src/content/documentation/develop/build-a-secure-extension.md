@@ -28,7 +28,7 @@ Here is a list of best practices you should follow to keep the users of your ext
 
 <section class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 - **Don’t inject or incorporate remote scripts**
   If you identify a service that you wish to use in your extension, don’t inject the service’s script from a remote source. Such an approach is risky, as the code could be changed without your knowing—and, importantly, without the knowledge and consent of the extensions user—compromising the security of your extension. You should therefore add a copy of the script into your extension’s code.

@@ -107,7 +107,7 @@ Not all code that is difficult to read is obfuscated, and we specifically allow 
 
 We also allow tools that combine multiple files into a single file, or transpile code from other languages.
 
-<section class="do-this" markdown="1"><header><h5>The allowed approach merely reduces file size but retains the meaning of the code:</h5></header>
+<section class="do-this"><header><h5>The allowed approach merely reduces file size but retains the meaning of the code:</h5></header>
 
 ```js
 var d=document;var o=JSON.parse(responseText);var e=d.createElement("div");e.className=o.className;e.textContent="Your favorite color is now "+o.color;addonElement.appendChild(e);
@@ -115,7 +115,7 @@ var d=document;var o=JSON.parse(responseText);var e=d.createElement("div");e.cla
 
 </section>
 
-<section class="not-this" markdown="1"><header><h5>While the prohibited use of obfuscators will completely mask the intent of the code:</h5></header>
+<section class="not-this"><header><h5>While the prohibited use of obfuscators will completely mask the intent of the code:</h5></header>
 
 ```js
 var _0x364e=['\x70\x61\x72\x73\x65','\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74','\x64\x69\x76','\x63\x6c\x61\x73\x73\x4e\x61\x6d\x65','\x59\x6f\x75\x72\x20\x66\x61\x76\x6f\x72\x69\x74\x65\x20\x63\x6f\x6c\x6f\x72\x20\x69\x73\x20\x6e\x6f\x77\x20','\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c\x64'];var _0x1dab=function(_0x440e53,_0x322e43){_0x440e53=_0x440e53-0x0;var _0x4b349d=_0x364e[_0x440e53];return _0x4b349d;};var data=JSON[_0x1dab('0x0')](responseText);var div=document[_0x1dab('0x1')](_0x1dab('0x2'));div[_0x1dab('0x3')]=data[_0x1dab('0x3')];div['\x74\x65\x78\x74\x43\x6f\x6e\x74\x65\x6e\x74']=_0x1dab('0x4')+data['\x63\x6f\x6c\x6f\x72'];addonElement[_0x1dab('0x5')](div);
