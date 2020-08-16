@@ -32,17 +32,17 @@ Policies enable you to control the capabilities of Firefox. This article summari
 
 These policies control whether users can install, disable, or remove web extensions, and the domains from which they can install extensions.
 
-- **BlockAboutAddons** – This policy removes access to `about:addons`. Removing this access means that the user is unable to disable or remove extensions, or access extension preferences unless the extension provided alternative access.
+- `BlockAboutAddons` – This policy removes access to `about:addons`. Removing this access means that the user is unable to disable or remove extensions, or access extension preferences unless the extension provided alternative access.
 
-- **Extensions** This policy controls the installation, uninstallation (removal), and locking of extensions. It enables the specification of a list of extensions that are:
+- `Extensions` This policy controls the installation, uninstallation (removal), and locking of extensions. It enables the specification of a list of extensions that are:
 
   - installed when the policy is deployed. Extensions are specified by path or URL.
   - removed when the policy is deployed, specified by extension ID.
   - locked when the policy is deployed, so the user cannot disable or remove the extension, which are specified by extension ID.
 
-- **ExtensionUpdate** – This policy provides for the setting of the configuration (`about:config`) option `extensions.update.enabled`. This enables you to determine whether extensions are updated when Firefox detects updates. If you choose to disable automatic updates, you can use the **Extensions** policy to push web extension updates.
+- `ExtensionUpdate` – This policy provides for the setting of the configuration (`about:config`) option `extensions.update.enabled`. This enables you to determine whether extensions are updated when Firefox detects updates. If you choose to disable automatic updates, you can use the `Extensions` policy to push web extension updates.
 
-- **InstallAddonsPermission** – This policy sets whether the user can install extensions and which domains web extensions can be installed from.
+- `InstallAddonsPermission` – This policy sets whether the user can install extensions and which domains web extensions can be installed from.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid
