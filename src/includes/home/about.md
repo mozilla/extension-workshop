@@ -116,7 +116,7 @@ An extension is a simple collection of files that modify the browser’s appeara
 <div class="anatomy-container">
   <div class="anatomy-illustration">
     {%- include home/anatomy-v2.svg | safe -%}
-    <p class="manifest show-for-medium"><img src="/assets/img/icons/manifest.svg" alt="" /><code>Manifest.json</code></p>
+    <p class="manifest show-for-medium"><img src="/assets/img/icons/manifest.svg" alt="" /><code class="nobackground">Manifest.json</code></p>
   </div>
   <div id="anatomy-control" class="anatomy-description">
     {%- include home/anatomy-v2-mobile.svg | safe -%}
@@ -124,7 +124,7 @@ An extension is a simple collection of files that modify the browser’s appeara
     <button class="popup-action" data-panel="anatomy-content"><img src="/assets/img/icons/content-script-link.svg" alt="" />Content Scripts</button>
     <button class="popup-action" data-panel="anatomy-background"><img src="/assets/img/icons/background-scripts-link.svg" alt="" />Background Scripts</button>
   </div>
-  <p class="manifest show-for-small-only"><img src="/assets/img/icons/manifest.svg" alt="" /><code>Manifest.json</code></p>
+  <p class="manifest show-for-small-only"><img src="/assets/img/icons/manifest.svg" alt="" /><code class="nobackground">Manifest.json</code></p>
 </div>
 
 <aside class="popup-panel" id="anatomy-ui">
