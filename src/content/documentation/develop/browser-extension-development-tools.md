@@ -177,7 +177,7 @@ To get started with web-ext, install it with the [nodejs/npm](https://nodejs.org
 
 ### web-ext-webpack-plugin
 
-Use this plug-in to simplify the development of extensions built using webpack. The plug-in does this by integrating the web-ext run and lint commands into the webpack process, so that the extension is linted and reloaded once webpack build completes.
+Use this plug-in to simplify the development of extensions built using webpack. The plug-in does this by integrating the `web-ext run` and `lint` commands into the webpack process, so that the extension is linted and reloaded once webpack build completes.
 
 To get started, add the plug-in to your `webpack.config.js`.
 
