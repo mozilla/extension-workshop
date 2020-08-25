@@ -426,6 +426,10 @@
                 "url": "/documentation/develop/developing-extensions-for-firefox-for-android/",
                 "subpageitems": [
                   {
+                    "title": "Testing instructions for Firefox for Android 79+",
+                    "id": "testing-instructions-fenix"
+                  },
+                  {
                     "title": "Set up your computer and Android emulator or device",
                     "id": "set-up-your-computer-and-android-emulator-or-device"
                   },
