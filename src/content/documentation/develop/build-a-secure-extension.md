@@ -69,7 +69,7 @@ Here is a list of best practices you should follow to keep the users of your ext
   For more information, see [Never use eval!](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval#Never_use_eval!)
 - **Create your UI with extension components**
   Create the UI for your extension using the [built-in extension UI features](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface), such as bundled pages, `pageAction`, and popups on `pageAction` and `browserAction`. Don’t add UI elements, such as buttons or toolbars, directly to web pages. If you do, scripts on the web page could compromise your extension. See [Keybase Browser Extension Insecure](https://www.grepular.com/Keybase_Browser_Extension_Insecure) for an example of the potential issues.
-  If the standard UI components aren’t sufficient for your needs use iframes with [data URLs](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) to prevent fingerprinting, or add `iframe`\s to the extension code so a page can’t interact with your UI content, such as buttons.
+  If the standard UI components aren’t sufficient for your needs use iframes with [data URLs](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) to prevent fingerprinting, or add `iframe`s to the extension code so a page can’t interact with your UI content, such as buttons.
 - **Add eslint-plugin-no-unsanitized to ESLint**
   If you make use of ESLint to check your extension code, consider adding `eslint-plugin-no-unsanitized`. This ESLint rules plug-in will flag instances where unsanitized code from APIs or user input could cause issues.
 - **Don't inject moz-extension paths directly**
