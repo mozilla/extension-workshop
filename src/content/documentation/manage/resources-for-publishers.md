@@ -32,7 +32,7 @@ Now that your add-on is published on [addons.mozilla.org](https://addons.mozilla
 
 - The add-ons team brings you regular news and updates about the latest and greatest add-on features, tools, and technology. [Follow the Mozilla Add-ons Blog](https://blog.mozilla.org/addons/).
 
-- Get information about add-on news and events, as well as the about:addons newsletter, delivered straight to your inbox. [Sign up for notifications and the newsletter](https://addons.mozilla.org/firefox/users/edit#acct-notify/).
+- Get information about add-on news and events, as well as the `about:addons` newsletter, delivered straight to your inbox. [Sign up for notifications and the newsletter](https://addons.mozilla.org/firefox/users/edit#acct-notify/).
 
 - A high-quality product page (also known as a listing page) on AMO makes it more likely that users will discover and install your extension. [Learn how to create an appealing listing](/documentation/develop/create-an-appealing-listing/).
 

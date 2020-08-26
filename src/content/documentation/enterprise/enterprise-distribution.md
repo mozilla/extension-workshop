@@ -95,7 +95,7 @@ From Firefox 62 this is no longer possible, and the key must point to a packaged
 It is safe to modify the Registry keys while Firefox is running.
 :::
 
-1. Ensure the add-on has an add-on ID, by including the following to its manifest.json file, replacing _your-add-on-name@your-domain.com_ with a suitable ID for your add-on:
+1. Ensure the add-on has an add-on ID, by including the following to its `manifest.json` file, replacing _your-add-on-name@your-domain.com_ with a suitable ID for your add-on:
 
    ```json
    "browser_specific_settings": {
@@ -109,7 +109,7 @@ An email address style ID is recommended.
 
 2. Sign your add-on on addons.mozilla.org (AMO) using the unlisted option. For more details, see Signing and distributing your add-on.
 
-3. Download the signed XPI file and ensure the file name is the add-on ID plus the extension .xpi. For example, `c:/webext/borderify@example.com.xpi`
+3. Download the signed XPI file and ensure the file name is the add-on ID plus the extension `.xpi`. For example, `c:/webext/borderify@example.com.xpi`
 
 4. Open Regedit and add keys as follows:
 
@@ -192,11 +192,11 @@ The availability of automatic installation is controlled by the `extensions.auto
 
 <!-- END: Table -->
 
-By default, `extensions.autoDisableScopes` is set to 15 so that automatic installs are disabled from all locations. To disable only a subset of locations, set the preference to the sum of the values for the locations you want to disable. For example, 3 will disable “The current user’s profile.” and “All profiles of the logged-in user.” Setting the value to 0 disables this feature and means all add-ons will be installed without user confirmation.
+By default, `extensions.autoDisableScopes` is set to `15` so that automatic installs are disabled from all locations. To disable only a subset of locations, set the preference to the sum of the values for the locations you want to disable. For example, `3` will disable “The current user’s profile.” and “All profiles of the logged-in user.” Setting the value to `0` disables this feature and means all add-ons will be installed without user confirmation.
 
 ### Disabling install locations
 
-In some circumstances, you may want Firefox to ignore some or all of the additional install locations listed above. In this case, use the preference extensions.enabledScopes. By default, this preference is not included in the standard downloads of Firefox, so will need to be added. You can add the preference [manually](https://support.mozilla.org/kb/about-config-editor-firefox#w_adding-changing-and-resetting-preferences) or do it programmatically using the instructions in the next section.
+In some circumstances, you may want Firefox to ignore some or all of the additional install locations listed above. In this case, use the preference `extensions.enabledScopes`. By default, this preference is not included in the standard downloads of Firefox, so will need to be added. You can add the preference [manually](https://support.mozilla.org/kb/about-config-editor-firefox#w_adding-changing-and-resetting-preferences) or do it programmatically using the instructions in the next section.
 
 ::: note
 It is impossible to disable loading add-ons from the profile directory.

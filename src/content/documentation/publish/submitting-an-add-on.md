@@ -28,7 +28,7 @@ This article walks through the process of publishing an add-on. If you just want
 
 To start, familiarize yourself with the [Add-on Policies](/documentation/publish/add-on-policies/) and [Developer Agreement](/documentation/publish/firefox-add-on-distribution-agreement/).
 
-Next, prepare your add-on for publication by adding all its files to a ZIP archive with the extension .zip, .xpi, .crx, or .xml. For information on how to create your ZIP, see [Package your extension](/documentation/publish/package-your-extension/), and for details on what to include in the file, see [Anatomy of an extension](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
+Next, prepare your add-on for publication by adding all its files to a ZIP archive with the extension `.zip`, `.xpi`, `.crx`, or `.xml`. For information on how to create your ZIP, see [Package your extension](/documentation/publish/package-your-extension/), and for details on what to include in the file, see [Anatomy of an extension](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
 
 ::: note
 The maximum file size accepted is 200 MB. If your add-on is larger than 200 MB, it will fail validation.
@@ -116,7 +116,7 @@ Learn how to make your add-on listing appealing with these [tips](/documentation
 ## Self-distribution
 
 ::: note
-If you want Firefox to handle updates to your add-on, remember to include the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in your manifest.json with the `update_url` attribute set to point to an [update manifest file](https://developer.mozilla.org/Add-ons/Updates).
+If you want Firefox to handle updates to your add-on, remember to include the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in your `manifest.json` with the `update_url` attribute set to point to an [update manifest file](https://developer.mozilla.org/Add-ons/Updates).
 :::
 
 1. The Upload Version page displays. <br/><br/> ![Submit an add-on page](/assets/img/publish/Submit_add_on_before_upload.png)

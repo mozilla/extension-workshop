@@ -29,7 +29,7 @@ date: 2020-04-26
 
 # Package your extension
 
-During development, your extension will consist of a directory containing a manifest.json file and the other files the extension needs—scripts, icons, HTML documents, and so on. You need to zip these into a single file for uploading to AMO.
+During development, your extension will consist of a directory containing a `manifest.json` file and the other files the extension needs—scripts, icons, HTML documents, and so on. You need to zip these into a single file for uploading to AMO.
 
 ::: note
 Packaged extensions in Firefox are called "XPI files", which are ZIP files with a different extension.
@@ -47,7 +47,7 @@ You don't have to use the XPI extension when uploading to AMO.
 
 {% capture content_with_toc %}
 
-The most convenient way to package your extension is to use [web-ext build](/documentation/develop/web-ext-command-reference/#web-ext-build). This tool automatically excludes files that are commonly unwanted in packages, such as `.git` files. Otherwise, follow the instructions below for your operating system.
+The most convenient way to package your extension is to use [`web-ext build`](/documentation/develop/web-ext-command-reference/#web-ext-build). This tool automatically excludes files that are commonly unwanted in packages, such as `.git` files. Otherwise, follow the instructions below for your operating system.
 
 ::: note
 **Tip:** The ZIP file must be a ZIP of the extension's files themselves, not of the directory containing them.

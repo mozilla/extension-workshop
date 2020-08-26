@@ -254,14 +254,20 @@ table {
 code {
   border-radius: $global-radius;
   overflow-wrap: break-word;
+  background-color: $light-gray;
+  color: $black;
+
+  &.nobackground {
+    background: none;
+  }
+
+  a & {
+    color: $anchor-color;
+  }
 }
 
 code[class*='language-'] {
   padding: 0;
-}
-
-a code {
-  color: #00b3f4;
 }
 
 figure.highlight {
