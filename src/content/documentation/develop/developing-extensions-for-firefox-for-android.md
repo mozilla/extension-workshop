@@ -14,21 +14,7 @@ date: 2020-08-25
 
 # Developing extensions for Firefox for Android
 
-::: note alert
-In August 2020, Mozilla will begin rolling out a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
-
-At the time of launch, only a limited number of [Recommended Extensions](https://support.mozilla.org/en-US/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) will be supported. We would like to support more extensions and we are currently evaluating how to best do that.
-
-Currently, arbitrary extensions can only be loaded temporarily in Fenix. We are working on supporting a pref on [Firefox for Android Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) to enable persistent loading for arbitrary extensions. You can follow progress by subscribing to [this issue](https://github.com/mozilla-mobile/fenix/issues/14034).
-
-New announcements around mobile extension support will be posted on the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android).
-:::
-
-You'll approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code. However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process.
-
-Using [web-ext](/documentation/develop/getting-started-with-web-ext/) in your extension development is recommended. Follow the set up and debugging processes described here, but use [`web-ext run`](/documentation/develop/web-ext-command-reference#web-ext-run) to execute your extension on Firefox for Android. Among other advantages, using [web-ext](/documentation/develop/getting-started-with-web-ext/) automatically restarts your extension on Firefox for Android when you make edits. Also, you can take advantage of [`web-ext lint`](/documentation/develop/web-ext-command-reference/#web-ext-lint), which performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android.
-
-However, instructions are provided for the steps you need to take should you choose not to use [web-ext](/documentation/develop/getting-started-with-web-ext/).
+Learn more about developing extensions for Firefox for Android
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -41,28 +27,21 @@ However, instructions are provided for the steps you need to take should you cho
 
 {% capture content_with_toc %}
 
-## Testing instructions for Firefox for Android 79+ (Fenix)
-:::note alert
-Persistent loading is currently not supported. These instructions are for temporary loading.
+::: note alert
+In August 2020, Mozilla will begin rolling out a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
+
+At the time of launch, only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) will be supported. We would like to support more extensions and we are currently evaluating how to best do that.
+
+Currently, arbitrary extensions can only be loaded temporarily in Fenix. We are working on supporting a setting on [Firefox for Android Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) to enable persistent loading for arbitrary extensions. You can follow progress by subscribing to [this issue](https://github.com/mozilla-mobile/fenix/issues/14034).
+
+New announcements around mobile extension support will be posted on the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android).
 :::
 
-- Install or update [web-ext](https://github.com/mozilla/web-ext) to version 4.1.0 or later.
-
-- Install or update to the latest version of [Firefox Nightly for Android](https://play.google.com/store/apps/details?id=org.mozilla.fenix).
-
-- Make sure you have adb installed ([Linux](https://dl.google.com/android/repository/platform-tools-latest-linux.zip), [Mac](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip), [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)) and in your PATH.
-
-- Connect your Android device via USB.
-
-- Make sure you have [Android's USB debugging](https://developer.android.com/studio/debug/dev-options) enabled. You can run `adb devices` to verify.
-
-- In the settings for Firefox Nightly, enable "Remote debugging via USB."
-
-- In the unzipped directory of your extension, run `web-ext run -t firefox-android` and follow the instructions on screen to make sure you select the right device. Select `org.mozilla.fenix` as a target.
+You'll approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code. However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process. 
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid
-  id: "testing-instructions-fenix"
+  id: "introduction"
   content: content_with_toc
 %}
 
@@ -74,43 +53,23 @@ Persistent loading is currently not supported. These instructions are for tempor
 
 ## Set up your computer and Android emulator or device
 
-::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
-:::
-
 Complete some one-off setup tasks on your computer and Android device.
 
 On your development computer:
 
-- To test on your computer by running Firefox for Android in the Android emulator and in Firefox for Android running on a device:
+- Install or update [web-ext](https://github.com/mozilla/web-ext) to version 4.1.0 or later.
 
-  - Install [Android Studio](https://developer.android.com/studio/index.html).
-  - Use the Android Studio [SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager) or the [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html) command-line tool to install the [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools.html).
-
-- To test in Firefox for Android running on a device only:
-  - Download and extract the [standalone Android SDK Platform-Tools package](https://developer.android.com/studio/releases/platform-tools.html) to a suitable location on your computer.
-  - On Windows, Mac, or Linux: Add the location into which you extracted the tools package to your operating system’s `PATH` environment variable.
-  - Alternatively, on Mac or Linux: Link the binary to `/usr/local/bin` using `sudo ln -s /<extract folder>/platform-tools/adb /usr/local/bin`.
+-  Make sure you have adb installed ([Linux](https://dl.google.com/android/repository/platform-tools-latest-linux.zip), [Mac](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip), [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)) and in your `PATH`.
 
 On your device or Android emulator:
 
-- Install [Firefox for Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox&referrer=utm_source%3Dmozilla%26utm_medium%3DReferral%26utm_campaign%3Dmozilla-org) and, if you wish to test the latest features, [Firefox for Android Beta](https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta) or [Firefox Nightly for Developers](https://play.google.com/store/apps/details?id=org.mozilla.fennec_aurora).
-- (If you're using [web-ext](/documentation/develop/getting-started-with-web-ext/), you can skip this step.) Open Firefox for Android and turn off signing by browsing to `about:config` then locating and setting `xpinstall.signatures.required` to `false`.
+- Install [Firefox for Android Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix)
 
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![about:config screenshot](/assets/img/documentation/develop/set_xpinstall.png)
-
-</div>
-</article>
-
-If you are using a device:
-
-- [Enable Android USB debugging on the device](https://developer.android.com/studio/run/device.html). You need to follow step 2 only, but note that you may have to [enable the developer options](https://developer.android.com/studio/debug/dev-options.html) if you do not see them on your device.
+- [Enable Android USB debugging on the device](https://developer.android.com/studio/debug/dev-options). 
 - Attach your device to the development computer using a USB cable and on the device, when prompted, allow USB debugging for the connection.
+- In the settings view for Firefox for Android Nightly, enable "Remote debugging via USB."
 
-(If you're using [web-ext](/documentation/develop/getting-started-with-web-ext/), you can skip this step.) On your development computer:
+Then, on your development computer:
 
 - Open a command shell.
 - Run `adb devices` <br/>
@@ -169,139 +128,14 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 %}
 
 <!-- END: Single Column Body Module -->
+
 <!-- Single Column Body Module -->
 
 {% capture content %}
 
 ## Install and run your extension in Firefox for Android
 ::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
-:::
-
-In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the manifest.json:
-
-```json
-"browser_specific_settings": {
-  "gecko": {
-    "id": "borderify@example.com"
-  }
-}
-```
-
-If you’re using web-ext, follow the [Testing in Firefox for Android](/documentation/develop/getting-started-with-web-ext#testing-in-firefox-for-android) instructions.
-
-Otherwise, [zip the content of your extension into an xpi file](/documentation/publish/package-your-extension) named to match the application ID, for example, `borderify@example.com.xpi`.
-
-You now have two options for transferring and running your extension: using adb or a website.
-
-### Transfer your extension using adb
-
-On your computer, execute `/path/to/adb push /path/to/<extension file name>.xpi /mnt/sdcard/`, which will transfer the extensions xpi file to your attached emulator or device.
-
-On your Android device or in the emulator, open Firefox for Android and browse to `file:///mnt/sdcard`:
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![xpi file on memory card](/assets/img/documentation/develop/xpi-file-on-memory-card.png)
-
-</div>
-</article>
-
-Tap on `<extension file name>.xpi` to install it. You will get a warning about the extension being blocked, tap ALLOW:
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![Blocked add-on message](/assets/img/documentation/develop/blocked-add-on-message.png)
-
-</div>
-</article>
-
-An additional warning will tell you the extension is unverified, tap INSTALL:
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![Unverified add-on message](/assets/img/documentation/develop/unverified-add-on-messages.png)
-
-</div>
-</article>
-
-Your extension will start running (in this case a copy of the [borderify](https://developer.mozilla.org/Add-ons/WebExtensions/Examples#borderify) example extension):
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![Borderify sample extension in action](/assets/img/documentation/develop/borderify-in-action.png)
-
-</div>
-</article>
-
-### Transfer your extension via a website
-::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
-:::
-
-Upload your xpi file to your website and make it accessible over HTTP. Browse to the file and download it. Follow the installation instructions, which will be similar to those for an extension transferred using adb.
-
-{% endcapture %}
-{% include modules/one-column.liquid
-  id: "install-and-run-your-extension-in-firefox-for-android"
-  content: content
-%}
-
-<!-- END: Single Column Body Module -->
-
-<!-- Single Column Body Module -->
-
-{% capture content %}
-
-## Check for Firefox for Android compatibility
-::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
-:::
-
-Before running your extension on Firefox for Android, consider using [`web-ext lint`](/documentation/develop/web-ext-command-reference#web-ext-lint). Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android. Lint relies on your extension’s `manifest.json` file including `strict_min_version`, it then reports on the features that are not supported by the minimum version you have set.
-
-In the lint report:
-
-- incompatible permissions are identified by `PERMISSION_FIREFOX_ANDROID_UNSUPPORTED_BY_MIN_VERSION`,
-- incompatible manifest keys are identified by `KEY_FIREFOX_ANDROID_UNSUPPORTED_BY_MIN_VERSION`, and
-- incompatible APIs are identified by `ANDROID_INCOMPATIBLE_API`
-
-similar to this:
-
-![linter screenshot](/assets/img/documentation/develop/linter_output2.png)
-
-::: note alert
-Lint does not report on APIs that are not implemented by Firefox or Firefox for Android.
-:::
-
-When setting `strict_min_version`, unless you’re targeting a specific version of Firefox, choose the most recent version of Firefox you expect your extension to be compatible with. For example, you can reasonably expect that most installations of Firefox for Android will be the current or previous version. So, if the current version is 66, consider setting 65 is the minimum version:
-
-```json
-"browser_specific_settings": {
-  "gecko": {
-    "strict_min_version": "65.0"
-  }
-}
-```
-
-{% endcapture %}
-{% include modules/one-column.liquid
-  id: "check-for-firefox-for-android-compatibility"
-  content: content
-%}
-
-<!-- END: Single Column Body Module -->
-<!-- Single Column Body Module -->
-
-{% capture content %}
-
-## Install and run your extension in Firefox for Android
-::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
+Persistent loading is not yet supported on Firefox for Android 79+. These instructions are for temporary installation. 
 :::
 
 In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the `manifest.json`:
@@ -314,59 +148,7 @@ In your extension, ensure that you've included an application ID using the [brow
 }
 ```
 
-If you’re using web-ext, follow the [Testing in Firefox for Android](/documentation/develop/getting-started-with-web-ext#testing-in-firefox-for-android) instructions.
-
-Otherwise, [zip the content of your extension into an xpi file](/documentation/publish/package-your-extension) named to match the application ID, for example, `borderify@example.com.xpi`.
-
-You now have two options for transferring and running your extension: using adb or a website.
-
-### Transfer your extension using adb
-
-On your computer, execute `/path/to/adb push /path/to/<extension file name>.xpi /mnt/sdcard/`, which will transfer the extensions xpi file to your attached emulator or device.
-
-On your Android device or in the emulator, open Firefox for Android and browse to `file:///mnt/sdcard`:
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![xpi file on memory card](/assets/img/documentation/develop/xpi-file-on-memory-card.png)
-
-</div>
-</article>
-
-Tap on `<extension file name>.xpi` to install it. You will get a warning about the extension being blocked, tap ALLOW:
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![Blocked add-on message](/assets/img/documentation/develop/blocked-add-on-message.png)
-
-</div>
-</article>
-
-An additional warning will tell you the extension is unverified, tap INSTALL:
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![Unverified add-on message](/assets/img/documentation/develop/unverified-add-on-messages.png)
-
-</div>
-</article>
-
-Your extension will start running (in this case a copy of the [borderify](https://developer.mozilla.org/Add-ons/WebExtensions/Examples#borderify) example extension):
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![Borderify sample extension in action](/assets/img/documentation/develop/borderify-in-action.png)
-
-</div>
-</article>
-
-### Transfer your extension via a website
-
-Upload your xpi file to your website and make it accessible over HTTP. Browse to the file and download it. Follow the installation instructions, which will be similar to those for an extension transferred using adb.
+In the unzipped directory of your extension, run `web-ext run -t firefox-android` and follow the instructions on screen to make sure you select the right device. Select `org.mozilla.fenix` as a target.
 
 {% endcapture %}
 {% include modules/one-column.liquid
