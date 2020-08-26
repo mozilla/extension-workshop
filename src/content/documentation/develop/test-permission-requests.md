@@ -15,7 +15,7 @@ date: 2019-03-21 12:27:40
 
 # Test permission requests
 
-Your extension may contain two types of permission request: install time and runtime permission requests. This page explains how you can test the way your users will see requests for these permissions.
+Your extension may contain two types of permission request: **install time** and **runtime** permission requests. This page explains how you can test the way your users will see requests for these permissions.
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -30,8 +30,8 @@ Your extension may contain two types of permission request: install time and run
 
 When you’re testing with an unpackaged extension, using either `about:debugging` or [web-ext](/documentation/develop/web-ext-command-reference), install time and runtime permissions are handled as follows:
 
-- install time permission requests are granted silently. You don't see the permission warnings users would.
-- runtime permission requests display the door hanger request as normal. These permissions remain in place until they are revoked programmatically by the extension, the extension is removed using `about:debugging`, or Firefox restart.
+- <dfn>install time permission</dfn> requests are granted silently. You don't see the permission warnings users would.
+- <dfn>runtime permission</dfn> requests display the door hanger request as normal. These permissions remain in place until they are revoked programmatically by the extension, the extension is removed using `about:debugging`, or Firefox restart.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid
@@ -51,11 +51,11 @@ You follow different processes depending on whether you want to observe the perm
 
 ### Permission requests for extension installation
 
-To view the install time permission warnings users see when installing your extension and retest runtime permission requests, install the extension from its \*.xpi or \*.zip file.
+To view the install time permission warnings users see when installing your extension and retest runtime permission requests, install the extension from its `*.xpi` or `*.zip` file.
 
-To do this with an unsigned \*.xpi or \*.zip file you need to:
+To do this with an unsigned `*.xpi` or `*.zip` file you need to:
 
-- give your extension an ID using the manifest.json [`browser_specific_settings`](https://developer.mozilla.org/docs/browser_specific_settings) key.
+- give your extension an ID using the `manifest.json` [`browser_specific_settings`](https://developer.mozilla.org/docs/browser_specific_settings) key.
 - run the [Nightly](https://nightly.mozilla.org/) or [Developer Edition](https://www.mozilla.org/firefox/developer/) versions of Firefox.
 - set the `about:config` preference `xpinstall.signatures.required` to `false`.
 
@@ -71,14 +71,14 @@ Note that the caution message relates to this being an unsigned extension; this 
 For details on how to deliver web extension updates when self-hosting your extension, see [Updates](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates).
 :::
 
-To view the install time permission warnings users see when Firefox upgrades your extension and retest runtime permission requests, you install the extension from its .xpi file posted on an HTTP or HTTPS server.
+To view the install time permission warnings users see when Firefox upgrades your extension and retest runtime permission requests, you install the extension from its `.xpi` file posted on an HTTP or HTTPS server.
 
 You can use an HTTP server (such as a simple [Python localhost server](https://developer.mozilla.org/docs/Learn/Common_questions/set_up_a_local_testing_server)) or an HTTPS server. However, your HTTPS server must have a verifiable certificate, one that Firefox can auto-accept; you cannot use a self-signed certificate. If you want to test from an HTTPS server but don’t have one, GitHub pages are an option you can use.
 
 To perform the test you'll need to:
 
 - determine the address of the HTTP or HTTPS server where you can host files.
-- use the manifest.json [`browser_specific_settings`](https://developer.mozilla.org/docs/browser_specific_settings) key to:
+- use the `manifest.json` [`browser_specific_settings`](https://developer.mozilla.org/docs/browser_specific_settings) key to:
   - give your extension an ID, if you’ve not done so already.
   - define the update URL where you’ll host your [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates). For example:
 
@@ -93,10 +93,10 @@ To perform the test you'll need to:
 ```
 
 - if necessary, [create a package](/documentation/publish/package-your-extension) containing your original extension.
-- update your extension and add details of the new permissions required to the manifest.json file, not forgetting to update the version number. Create a package containing your updated extension.
+- update your extension and add details of the new permissions required to the `manifest.json` file, not forgetting to update the version number. Create a package containing your updated extension.
 
 ::: note alert
-If the packages were generated with .zip extensions change them to .xpi, otherwise your browser may try to download rather than install the extension.
+If the packages were generated with `.zip` extensions change them to `.xpi`, otherwise your browser may try to download rather than install the extension.
 :::
 
 - create the [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates) with details of both extension versions, which should be similar to this:
@@ -119,7 +119,7 @@ If the packages were generated with .zip extensions change them to .xpi, otherwi
   - If you’re using [Nightly](https://nightly.mozilla.org/) and hosting your update on an HTTP server create and set `extensions.checkUpdateSecurity` and `extensions.install.requireSecureOrigin` preferences to `false`. To do this:
     - enter the preference name in the search box.
     - click **Add**. <br/> ![add preference](/assets/img/documentation/develop/preference_create_2.png)
-    - toggle the preference to set it to false. <br/> ![toggle preferences](/assets/img/documentation/develop/preference_toggle_2.png)
+    - toggle the preference to set it to `false`. <br/> ![toggle preferences](/assets/img/documentation/develop/preference_toggle_2.png)
 
 - open the link to the first XPI file to install it.
 - open `about:addons`, click the gear icon, and click **Check for Updates**.

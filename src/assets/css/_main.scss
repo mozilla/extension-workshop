@@ -254,6 +254,11 @@ table {
 code {
   border-radius: $global-radius;
   overflow-wrap: break-word;
+
+  &.nobackground {
+    background: none;
+    color: $dark-gray;
+  }
 }
 
 code[class*='language-'] {

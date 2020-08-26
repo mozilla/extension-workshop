@@ -134,7 +134,7 @@ Where your extension needs to gather or display significant amounts of informati
 
 If your extension includes functionality to locate web pages or content, such as offering a site-specific search, use [address bar suggestions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox) to deliver those recommendations.
 
-![Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions.](/assets/img/documentation/develop/omnibox_example_full.png)
+![Example showing the result of the `firefox_code_search` WebExtension's customization of the address bar suggestions.](/assets/img/documentation/develop/omnibox_example_full.png)
 
 ### Does my extension offer tools for developers?
 
@@ -175,7 +175,7 @@ However, use notifications sparingly. If it is sufficient for the user to discov
 
 ### Use browserAction badges sparingly
 
-To inform users of important events, you can [add a badge](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText) over the toolbar icon of a [browserAction](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction). Do so sparingly—do not use badges to provide regular or persistent status updates.
+To inform users of important events, you can [add a badge](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText) over the toolbar icon of a [`browserAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction). Do so sparingly—do not use badges to provide regular or persistent status updates.
 
 When it comes to [coloring a badge](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor), using one of four colors for notifications of different severity is recommended:
 

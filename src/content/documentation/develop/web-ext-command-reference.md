@@ -87,7 +87,7 @@ Opens the [web-ext documentation](/documentation/develop/getting-started-with-we
 
 ### web-ext lint
 
-Reports errors in the extension [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) or other source code files. When [strict_min_version](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is set in your extension’s manifest file, lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. See the [addons-linter](https://github.com/mozilla/addons-linter) project for more information about what kind of rules are used to validate extension source.
+Reports errors in the extension [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) or other source code files. When [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is set in your extension’s manifest file, lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. See the [addons-linter](https://github.com/mozilla/addons-linter) project for more information about what kind of rules are used to validate extension source.
 
 #### \--output, -o
 
@@ -133,7 +133,7 @@ Builds and then temporarily installs an extension on the target application, so 
 
 #### \--adb-bin
 
-Path to the [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html) executable on the machine you are running `web-ext` from. By default, the `adb` executable will be located on your PATH.
+Path to the [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html) executable on the machine you are running `web-ext` from. By default, the `adb` executable will be located on your `PATH`.
 
 Environment variable: `$WEB_EXT_ADB_BIN`
 
@@ -418,7 +418,7 @@ web-ext has the following global options that may apply to multiple commands.
 
 ### \--artifacts-dir, -a
 
-Specifies a particular directory to save artifacts in, e.g the `.zip` file, once you've built an extension. This can be specified as a relative or absolute path, and should always be a string.
+Specifies a particular directory to save artifacts in, e.g. the `.zip` file, once you've built an extension. This can be specified as a relative or absolute path, and should always be a string.
 
 ::: note
 If this is not specified, the default is the relative path `./web-ext-artifacts`.
@@ -465,7 +465,7 @@ By default, without the use of `--ignore-files`, the following rules are applied
 When you specify custom patterns using `--ignore-files`, they are applied _in addition to_ the default patterns.
 
 ::: note
-Order is important: you must specify the web-ext command before specifying the --ignore-files option.
+Order is important! You must specify the web-ext command before specifying the `--ignore-files` option.
 :::
 
 Environment variable: `$WEB_EXT_IGNORE_FILES`

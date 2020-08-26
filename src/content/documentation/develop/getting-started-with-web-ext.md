@@ -97,7 +97,7 @@ Test an extension in Firefox by `cd`'ing into your extensions’s root directory
 web-ext run
 ```
 
-This starts Firefox and loads the extension temporarily in the browser, just as you can on the [about:debugging page](https://developer.mozilla.org/docs/Tools/about:debugging#Add-ons). Note that this `web-ext` method has the same [limitations regarding prompts for permissions and restart features](/documentation/develop/testing-persistent-and-restart-features/) as about:debugging.
+This starts Firefox and loads the extension temporarily in the browser, just as you can on the [`about:debugging` page](https://developer.mozilla.org/docs/Tools/about:debugging#Add-ons). Note that this `web-ext` method has the same [limitations regarding prompts for permissions and restart features](/documentation/develop/testing-persistent-and-restart-features/) as `about:debugging`.
 
 See the [run reference guide](/documentation/develop/web-ext-command-reference/#web-ext-run) to learn more.
 
@@ -287,14 +287,14 @@ The following domains are used for signing and downloading files:
 
 If you've [listed](/documentation/publish/submitting-an-add-on/) an extension on [addons.mozilla.org](https://addons.mozilla.org/), use `web-ext` to create a signed but [unlisted](/documentation/publish/self-distribution/) version for testing purposes. For example, you may wish to distribute an alpha or beta version to users for early feedback and testing.
 
-First, change the version number in your [manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) so that it is different from the latest listed version. Then, create the unlisted version by using the [`--channel`](/documentation/develop/web-ext-command-reference/#web-ext-sign) option like this:
+First, change the version number in your [`manifest.json`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) so that it is different from the latest listed version. Then, create the unlisted version by using the [`--channel`](/documentation/develop/web-ext-command-reference/#web-ext-sign) option like this:
 ```shell
 web-ext sign --channel=unlisted --api-key=... --api-secret=...
 ```
 
 This signs and downloads an XPI file that can be installed into Firefox.
 
-Once you've finished testing, **to publish the extension you must define** `--channel` **as listed**, as the channel option defaults to the one used previously. So, after incrementing the version in your [manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json), run:
+Once you've finished testing, **to publish the extension you must define** `--channel` **as listed**, as the channel option defaults to the one used previously. So, after incrementing the version in your [`manifest.json`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json), run:
 
 ```shell
 web-ext sign --channel=listed --api-key=... --api-secret=...

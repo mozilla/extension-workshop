@@ -70,14 +70,14 @@ Beyond that, though, the systems are very different. In particular:
 
 XUL/XPCOM extensions have two manifest files:
 
-- the [install.rdf](https://developer.mozilla.org/Add-ons/Install_Manifests) contains metadata about the extension such as its name, icons, and so on
-- the [chrome.manifest](https://developer.mozilla.org/docs/Chrome_Registration), that tells Firefox where it can find the components of the extension, including XUL overlays for the extension's interface, scripts for its behavior, and files containing localized strings.
+- the [`install.rdf`](https://developer.mozilla.org/Add-ons/Install_Manifests) contains metadata about the extension such as its name, icons, and so on
+- the [`chrome.manifest`](https://developer.mozilla.org/docs/Chrome_Registration), that tells Firefox where it can find the components of the extension, including XUL overlays for the extension's interface, scripts for its behavior, and files containing localized strings.
 
-WebExtensions have a single manifest file called [manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json), that has a similar purpose. You use it to specify the extension's name, description, icons, and so on, as well as to specify any buttons it adds to Firefox and to list scripts it needs to run. To get an overview of the components of an extension developed using WebExtension APIs, and how they are specified in manifest.json, see ["Anatomy of an extension"](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
+WebExtensions have a single manifest file called [`manifest.json`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json), that has a similar purpose. You use it to specify the extension's name, description, icons, and so on, as well as to specify any buttons it adds to Firefox and to list scripts it needs to run. To get an overview of the components of an extension developed using WebExtension APIs, and how they are specified in manifest.json, see ["Anatomy of an extension"](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
 
 ### Learn more
 
-- [manifest.json documentation](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
+- [`manifest.json` documentation](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 - [Anatomy of a extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 
 {% endcapture %}
@@ -94,9 +94,9 @@ WebExtensions have a single manifest file called [manifest.json](https://develop
 
 ## UI
 
-XUL/XPCOM extensions can build their UI by directly manipulating the XUL used to specify the browser's own UI. They do this either using overlays or, in the case of bootstrapped/restartless extensions, using JavaScript to modify the XUL document. They can not only add any elements to the browser's UI, they can also modify or remove existing elements. They can also use APIs like [CustomizableUI.jsm](https://developer.mozilla.org/docs/Mozilla/JavaScript_code_modules/CustomizableUI.jsm) to build their UI.
+XUL/XPCOM extensions can build their UI by directly manipulating the XUL used to specify the browser's own UI. They do this either using overlays or, in the case of bootstrapped/restartless extensions, using JavaScript to modify the XUL document. They can not only add any elements to the browser's UI, they can also modify or remove existing elements. They can also use APIs like [`CustomizableUI.jsm`](https://developer.mozilla.org/docs/Mozilla/JavaScript_code_modules/CustomizableUI.jsm) to build their UI.
 
-Extensions built with WebExtension APIs don't get this kind of direct access. Instead, a combination of manifest.json keys and JavaScript APIs enable them to add a limited set of UI components to the browser. The available components are:
+Extensions built with WebExtension APIs don't get this kind of direct access. Instead, a combination of `manifest.json` keys and JavaScript APIs enable them to add a limited set of UI components to the browser. The available components are:
 
 {% capture table %}
 
@@ -132,7 +132,7 @@ The scripts packaged with XUL/XPCOM extensions get access to the full set of [XP
 
 The equivalent WebExtension scripts are called [background script](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts), and they get access to a much smaller set of high-level JavaScript APIs. To see all the privileged APIs available to background scripts, see the [summary API page](https://developer.mozilla.org/Add-ons/WebExtensions/API). Background scripts also get a [`window`](https://developer.mozilla.org/docs/Web/API/Window) global, with all the DOM objects that are available in a normal web page.
 
-There are vastly more APIs available to XUL/XPCOM extensions than are available to WebExtensions, and for many XUL/XPCOM APIs, there isn't a WebExtensions substitute. The table below lists every API in the popular [Services.jsm](https://developer.mozilla.org/docs/Mozilla/JavaScript_code_modules/Services.jsm) module, describe what the equivalent WebExtensions API would be, if there is one.
+There are vastly more APIs available to XUL/XPCOM extensions than are available to WebExtensions, and for many XUL/XPCOM APIs, there isn't a WebExtensions substitute. The table below lists every API in the popular [`Services.jsm`](https://developer.mozilla.org/docs/Mozilla/JavaScript_code_modules/Services.jsm) module, describe what the equivalent WebExtensions API would be, if there is one.
 
 You'll see that many APIs have no WebExtensions equivalent yet. However, we are intending to extend the WebExtension APIs to support the needs of add-on developers, so if you have ideas, we'd love to hear them. You can reach us on the [dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) or [Add-ons](https://mzl.la/2u8ZGbg) channel on [Matrix](https://wiki.mozilla.org/Matrix).
 
@@ -239,7 +239,7 @@ WebExtensions are multiprocess-compatible by default: code that interacts with w
 
 ## Localization
 
-In a XUL/XPCOM extension you handle localization by supplying DTD or properties for each supported language, and referring to them using locale statements inside the chrome.manifest. You can then include localized strings in UI elements or in code.
+In a XUL/XPCOM extension you handle localization by supplying DTD or properties for each supported language, and referring to them using locale statements inside the `chrome.manifest`. You can then include localized strings in UI elements or in code.
 
 The general approach with WebExtensions is similar, but the details are all different. With WebExtensions you supply localized strings as a collection of JSON files, one for each locale.
 
@@ -270,7 +270,7 @@ XUL/XPCOM extensions typically store settings using the [XPCOM preferences servi
 
 With WebExtensions you write an HTML file that presents the settings UI, which can include a script for persisting the settings for your extension. The script gets access to all the WebExtensions APIs, and it's generally expected that you should use the [`storage`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage) API to persist settings.
 
-You then assign the HTML file's URL to the [`options_ui`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key in manifest.json. Your settings page then appears in the extension's entry in the Add-ons Manager. The options page can also be programmatically opened with an API call to [`browser.runtime.openOptionsPage`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage).
+You then assign the HTML file's URL to the [`options_ui`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key in `manifest.json`. Your settings page then appears in the extension's entry in the Add-ons Manager. The options page can also be programmatically opened with an API call to [`browser.runtime.openOptionsPage`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage).
 
 Note that WebExtensions does not give you access to the [Preferences API](https://developer.mozilla.org/docs/Mozilla/Tech/Preferences_API), so you can't directly get or set the browser's own preferences.
 Some browser-specific preferences can however still be controlled through the [`browser.browserSettings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings) or [`browser.privacy`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/privacy) API.

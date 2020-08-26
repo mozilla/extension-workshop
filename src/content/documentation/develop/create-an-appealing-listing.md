@@ -191,7 +191,7 @@ If your add-on is an experiment, flag this when you submit it to AMO. While doin
 
 ## Select the right platforms and versions
 
-If your add-on does not work on Android be sure to select only Linux, Mac OS, and Windows as the supported platforms. This will avoid issues with users giving poor reviews because your add-on does not work on their platform or Firefox version. For more information on defining version support, if you need to, see the manifest.json [`browser_specific_settings` key](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
+If your add-on does not work on Android be sure to select only Linux, Mac OS, and Windows as the supported platforms. This will avoid issues with users giving poor reviews because your add-on does not work on their platform or Firefox version. For more information on defining version support, if you need to, see the `manifest.json` [`browser_specific_settings` key](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
 
 </div>
 </article>

@@ -54,7 +54,7 @@ The add-on ID is used to uniquely identify each extension and in turn that ID is
 - [`runtime.onConnectExternal`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal)—an extension requests a connection with an extension by the other extension's add-on ID.
 - [`browserAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)—the saved position of the button is identified as belonging to the extension based on its add-on ID.
 
-An extension can be assigned an add-on ID using the manifest.json file [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key.
+An extension can be assigned an add-on ID using the `manifest.json` file [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key.
 
 
 {% highlight javascript linenos %}
@@ -68,7 +68,7 @@ An extension can be assigned an add-on ID using the manifest.json file [`browser
 If the extension doesn't have an add-on ID defined with the `browser_specific_settings` key, it gets an add-on ID through one of the following:
 
 - If the extension is submitted AMO and signed, it's given an ID when it's signed.
-- If the extension is loaded using Load Temporary Add-on in about:debugging it's assigned a temporary add-on ID.
+- If the extension is loaded using Load Temporary Add-on in `about:debugging` it's assigned a temporary add-on ID.
 
 ![temporary extensions](/assets/img/documentation/develop/Temporary_extensions.png)
 
@@ -106,10 +106,10 @@ Data that defines how the user has configured Firefox, along with information ge
 
 When you develop an extension, assuming you've not defined an add-on ID using the `browser_specific_settings` key, the default behavior in Firefox is as follows:
 
-- when using the Load Temporary Add-on feature in about:debugging your extension is assigned a new add-on ID each time you load it.
+- when using the Load Temporary Add-on feature in `about:debugging` your extension is assigned a new add-on ID each time you load it.
 - when using web-ext, in addition to getting a new add-on ID each time you launch an extension it's also launched into a new profile.
 - when a temporarily loaded extension is unloaded, local storage, such as that used by `storage.local`, `window.localStorage`, and `indexedDB`, is removed.
-- when you stop Firefox, any temporarily loaded extensions are unloaded so aren't available when Firefox restarts. This includes extensions loaded with Load Temporary Add-on in about:debugging and web-ext.
+- when you stop Firefox, any temporarily loaded extensions are unloaded so aren't available when Firefox restarts. This includes extensions loaded with Load Temporary Add-on in `about:debugging` and web-ext.
 
 The consequences of this behavior, when reloading an extension, is that:
 
@@ -137,21 +137,21 @@ The consequences of this behavior, when reloading an extension, is that:
 To get your extension to behave like a signed extension during development testing, use the following techniques:
 
 - to make sure an extension can use add-on ID dependent features between reloads, such as local storage or native application communication:
-  - set an add-on ID using the `browser_specific_settings` key in the extension's manifest.json.
+  - set an add-on ID using the `browser_specific_settings` key in the extension's `manifest.json`.
   - when using web-ext, make sure you use the same profile.
 - to ensure you use the same profile for multiple tests of an extension when using web-ext:
   - optionally, use [Profile Manager](https://support.mozilla.org/kb/profile-manager-create-and-remove-firefox-profiles) to create a new Firefox profile.
   - find the path to your new profile or the default Firefox profile by following the instructions in [How do I find my profile?](https://support.mozilla.org//kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile)
   - add the Firefox profile path to the `web-ext run` command as follows: <br/> `web-ext run --firefox-profile [A PATH TO A FIREFOX PROFILE] --keep-profile-changes`
 - to preserve `storage.local` data, access to `window.localStorage` or `indexedDB` data when removing a temporary add-on (such as between browser restarts):
-  - go to about:config and set both <br/> `extensions.webextensions.keepStorageOnUninstall` and <br/> `extensions.webextensions.keepUuidOnUninstall` to `true`.
+  - go to `about:config` and set both <br/> `extensions.webextensions.keepStorageOnUninstall` and <br/> `extensions.webextensions.keepUuidOnUninstall` to `true`.
 - to test restart behavior:
 
-  - set an add-on ID using the `browser_specific_settings` key in the extension's manifest.json.
+  - set an add-on ID using the `browser_specific_settings` key in the extension's `manifest.json`.
   - install the [Nightly](https://www.mozilla.org/firefox/nightly/all/) or [Developer](https://www.mozilla.org/firefox/developer/) editions of Firefox. Note: You can also use [unbranded Beta and Release builds](https://wiki.mozilla.org/Add-ons/Extension_Signing#Unbranded_Builds).
-  - go to about:config and set `xpinstall.signatures.required` to `false`.
+  - go to `about:config` and set `xpinstall.signatures.required` to `false`.
   - package your extension into a ZIP file [using web-ext](/documentation/develop/web-ext-command-reference#web-ext-build) or by [zipping it manually](/documentation/publish/package-your-extension).
-  - install your extension using Install Add-on From File in the Add-on manager (about:addons). <br/> Note: Remember you'll need to reload your extension each time you change it. <br/> Note: If you don't set the add-on ID, when you load the extension you get an error like this: <br/> ![ID failure](/assets/img/documentation/develop/ID_failure.png) <br/> with a matching error in the browser console.
+  - install your extension using Install Add-on From File in the Add-on manager (`about:addons`). <br/> Note: Remember you'll need to reload your extension each time you change it. <br/> Note: If you don't set the add-on ID, when you load the extension you get an error like this: <br/> ![ID failure](/assets/img/documentation/develop/ID_failure.png) <br/> with a matching error in the browser console.
 
   ![ID failure in console](/assets/img/documentation/develop/ID_failure_console.png)
 

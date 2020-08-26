@@ -34,7 +34,7 @@ If you have developed an add-on to complement a desktop application, you will ne
 
 Of these options, directing the user to install from AMO is recommended. It avoids any issues with the installation process; the user will not get an interstitial messages during the installation of the add-on, find the add-on installed but disabled, or find that the add-on was not installed.
 
-If you would like to direct users to install the add-on from your website, please read this article on [self-distribution](/documentation/publish/submitting-an-add-on/#self-distribution) to learn how to prepare the .xpi file for web installs.
+If you would like to direct users to install the add-on from your website, please read this article on [self-distribution](/documentation/publish/submitting-an-add-on/#self-distribution) to learn how to prepare the `.xpi` file for web installs.
 
 Enterprise administrators and people who distribute their own builds of Firefox (such as some Linux and Selenium distributions) will be able to continue to deploy extensions to users. Enterprise administrators can do this via [policies](https://github.com/mozilla/policy-templates#extensionsettings). Additionally, Firefox Extended Support Release (ESR) will continue to support sideloading as an extension installation method.
 
