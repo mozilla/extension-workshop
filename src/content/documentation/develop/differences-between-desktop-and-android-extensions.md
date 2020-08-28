@@ -18,7 +18,7 @@ contributors:
     wbamberg,
   ]
 last_updated_by: mdnwebdocs-bot
-date: 2020-08-04
+date: 2020-08-28
 ---
 
 <!-- Page Hero Banner -->
@@ -28,13 +28,15 @@ date: 2020-08-04
 # Differences between desktop and Android extensions
 
 ::: note alert
-In August 2020, Mozilla will begin rolling out a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
+In August 2020, Mozilla began rolling out a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
 
-At the time of launch, only a limited number of [Recommended Extensions](https://support.mozilla.org/en-US/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) will be supported. We would like to support more extensions and we are currently evaluating how to best do that.
+At the time of launch, only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) will be supported. We would like to support more extensions and we are currently evaluating how to best do that.
 
 Currently, arbitrary extensions can only be loaded temporarily in Fenix. We are working on supporting a pref on [Firefox for Android Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) to enable persistent loading for arbitrary extensions. You can follow progress by subscribing to [this issue](https://github.com/mozilla-mobile/fenix/issues/14034).
 
 New announcements around mobile extension support will be posted on the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android).
+
+For information about extension development in Firefox for Android 79+, please see [this article](/documentation/develop/developing-extensions-for-firefox-for-android/).
 
 This article was last updated prior to Firefox 54 and is out of date.
 :::
