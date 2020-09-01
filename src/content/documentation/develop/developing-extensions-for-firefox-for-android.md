@@ -36,7 +36,7 @@ Currently, arbitrary extensions can only be loaded temporarily in Fenix. We are 
 
 New announcements around mobile extension support will be posted on the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android).
 
-If you are interested in Firefox for Android < 68 (Fennec), please visit [this article](/documentation/develop/developing-extensions-for-firefox-for-android-fennec/).
+If you are interested in Firefox for Android 68 and earlier (Fennec), please visit [this article](/documentation/develop/developing-extensions-for-firefox-for-android-fennec/).
 :::
 
 You'll approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code. However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process.
@@ -177,6 +177,10 @@ web-ext run -t firefox-android --adb-device XXX --firefox-apk org.mozilla.fenix
 
 ## Debug your extension
 
+::: note alert
+Currently, you cannot inspect the markup of Fenix's browserAction popups using the Firefox Developer Tools Inspector (see [bug 1637616](https://bugzilla.mozilla.org/show_bug.cgi?id=1637616)). As a workaround, we recommend that you temporarily change the extension to open the popup extension page into a tab to be able to inspect it.
+:::
+
 You can debug your extension in the web developer tools and view any `manifest.json` validation messages using `adb logcat`. To make use of these features, first set up Firefox remote debugging [over USB](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE#Enable_remote_debugging_in_Firefox_for_Android) or [Wi-Fi](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi).
 
 ### Using web development tools to debug your extension
@@ -189,7 +193,7 @@ Your device is listed in the left-hand column, click **Connect**.
 
 ![Connect to device](/assets/img/documentation/develop/connect-to-device.png)
 
-If prompted, allow the incoming connection on your Android device. Now start your extension on the Android device. Note, the following instructions assume you are using `web-ext run`. Click your device in the left-hand column and scroll down to find **Processes** in the list of active features in the browser.
+If prompted, allow the incoming connection on your Android device. Now start your extension on the Android device using `web-ext run`. You will need to have at least one tab opened in order for your extension to load. Click your device in the left-hand column and scroll down to find **Processes** in the list of active features in the browser.
 
 ![Locate processes](/assets/img/documentation/develop/locate-processes.png)
 
@@ -202,7 +206,7 @@ Load a page in which your extension exercises. Now you can access any of the Jav
 ![Device debugging](/assets/img/documentation/develop/on-device-debugging.png)
 
 ::: note
-Unlike desktop Firefox, where content scripts are debugged in context of the page in which they run, you debug and view the console messages from content scripts in Firefox for Android together with background scripts in the Toolbox.
+Content scripts can be reached and debugged when connected to the main process or to a tab target where a content script is running.
 :::
 
 In the **Debugger** you can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.

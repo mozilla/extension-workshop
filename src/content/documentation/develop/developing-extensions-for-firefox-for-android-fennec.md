@@ -12,10 +12,10 @@ date: 2020-08-26
 
 {% capture page_hero_banner_content %}
 
-# Developing extensions for Firefox for Android < version 68
+# Developing extensions for Firefox for Android version 68 and earlier
 
 ::: note alert
-This article discusses developing extensions for Firefox for Android prior to version 68 (codenamed "Fennec"). Fennec is in maintenance mode as Mozilla rolls out a new, reimagined mobile browsing experience (codenamed "Fenix"). For more information about developing extensions for Fenix, please see [this article](/documentation/develop/developing-extensions-for-firefox-for-android/).
+This article discusses developing extensions for Firefox for Android for version 68 or earlier (codenamed "Fennec"). Fennec is in maintenance mode as Mozilla rolls out a new, reimagined mobile browsing experience (codenamed "Fenix"). For more information about developing extensions for Fenix, please see [this article](/documentation/develop/developing-extensions-for-firefox-for-android/).
 :::
 
 You'll approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code. However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process.
@@ -36,10 +36,6 @@ However, instructions are provided for the steps you need to take should you cho
 {% capture content_with_toc %}
 
 ## Set up your computer and Android emulator or device
-
-::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
-:::
 
 Complete some one-off setup tasks on your computer and Android device.
 
@@ -82,149 +78,17 @@ If you are using a device:
   `51800F220F01564 device` <br/>
   Where the hex string is your device’s (or emulator’s) code. This means adb has found your device (or emulator).
 
-
 {% endcapture %}
 {% include modules/column-w-toc.liquid
-  id: "set-up-your-computer-and-android-emulator-or-device""
+  id: "set-up-your-computer-and-android-emulator-or-device"
   content: content_with_toc
 %}
 
-<!-- END: Content with Table of Contents Module -->
-
 <!-- Single Column Body Module -->
 
 {% capture content %}
 
 ## Check for Firefox for Android compatibility
-::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
-:::
-
-Before running your extension on Firefox for Android, consider using [`web-ext lint`](/documentation/develop/web-ext-command-reference#web-ext-lint). Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android. Lint relies on your extension’s manifest.json file including `strict_min_version`, it then reports on the features that are not supported by the minimum version you have set.
-
-In the lint report:
-
-- incompatible permissions are identified by `PERMISSION_FIREFOX_ANDROID_UNSUPPORTED_BY_MIN_VERSION`,
-- incompatible manifest keys are identified by `KEY_FIREFOX_ANDROID_UNSUPPORTED_BY_MIN_VERSION`, and
-- incompatible APIs are identified by `ANDROID_INCOMPATIBLE_API`
-
-similar to this:
-
-![linter screenshot](/assets/img/documentation/develop/linter_output2.png)
-
-::: note alert
-Lint does not report on APIs that are not implemented by Firefox or Firefox for Android.
-:::
-
-When setting `strict_min_version`, unless you’re targeting a specific version of Firefox, choose the most recent version of Firefox you expect your extension to be compatible with. For example, you can reasonably expect that most installations of Firefox for Android will be the current or previous version. So, if the current version is 66, consider setting 65 is the minimum version:
-
-```json
-"browser_specific_settings": {
-  "gecko": {
-    "strict_min_version": "65.0"
-  }
-}
-```
-
-{% endcapture %}
-{% include modules/one-column.liquid
-  id: "check-for-firefox-for-android-compatibility"
-  content: content
-%}
-
-<!-- END: Single Column Body Module -->
-<!-- Single Column Body Module -->
-
-{% capture content %}
-
-## Install and run your extension in Firefox for Android
-::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
-:::
-
-In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the manifest.json:
-
-```json
-"browser_specific_settings": {
-  "gecko": {
-    "id": "borderify@example.com"
-  }
-}
-```
-
-If you’re using web-ext, follow the [Testing in Firefox for Android](/documentation/develop/getting-started-with-web-ext#testing-in-firefox-for-android) instructions.
-
-Otherwise, [zip the content of your extension into an xpi file](/documentation/publish/package-your-extension) named to match the application ID, for example, `borderify@example.com.xpi`.
-
-You now have two options for transferring and running your extension: using adb or a website.
-
-### Transfer your extension using adb
-
-On your computer, execute `/path/to/adb push /path/to/<extension file name>.xpi /mnt/sdcard/`, which will transfer the extensions xpi file to your attached emulator or device.
-
-On your Android device or in the emulator, open Firefox for Android and browse to `file:///mnt/sdcard`:
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![xpi file on memory card](/assets/img/documentation/develop/xpi-file-on-memory-card.png)
-
-</div>
-</article>
-
-Tap on `<extension file name>.xpi` to install it. You will get a warning about the extension being blocked, tap ALLOW:
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![Blocked add-on message](/assets/img/documentation/develop/blocked-add-on-message.png)
-
-</div>
-</article>
-
-An additional warning will tell you the extension is unverified, tap INSTALL:
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![Unverified add-on message](/assets/img/documentation/develop/unverified-add-on-messages.png)
-
-</div>
-</article>
-
-Your extension will start running (in this case a copy of the [borderify](https://developer.mozilla.org/Add-ons/WebExtensions/Examples#borderify) example extension):
-
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-6">
-
-![Borderify sample extension in action](/assets/img/documentation/develop/borderify-in-action.png)
-
-</div>
-</article>
-
-### Transfer your extension via a website
-::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
-:::
-
-Upload your xpi file to your website and make it accessible over HTTP. Browse to the file and download it. Follow the installation instructions, which will be similar to those for an extension transferred using adb.
-
-{% endcapture %}
-{% include modules/one-column.liquid
-  id: "install-and-run-your-extension-in-firefox-for-android"
-  content: content
-%}
-
-<!-- END: Single Column Body Module -->
-
-<!-- Single Column Body Module -->
-
-{% capture content %}
-
-## Check for Firefox for Android compatibility
-::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
-:::
 
 Before running your extension on Firefox for Android, consider using [`web-ext lint`](/documentation/develop/web-ext-command-reference#web-ext-lint). Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android. Lint relies on your extension’s `manifest.json` file including `strict_min_version`, it then reports on the features that are not supported by the minimum version you have set.
 
@@ -264,9 +128,6 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 {% capture content %}
 
 ## Install and run your extension in Firefox for Android
-::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
-:::
 
 In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the `manifest.json`:
 
@@ -345,9 +206,6 @@ Upload your xpi file to your website and make it accessible over HTTP. Browse to
 {% capture content %}
 
 ## Debug your extension
-::: note alert
-This section only applies to Firefox for Android < 68 (Fennec)
-:::
 
 You can debug your extension in the web developer tools and view any `manifest.json` validation messages using `adb logcat`. To make use of these features, first set up Firefox remote debugging [over USB](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE#Enable_remote_debugging_in_Firefox_for_Android) or [Wi-Fi](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi).
 
