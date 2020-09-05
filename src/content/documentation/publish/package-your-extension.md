@@ -87,7 +87,7 @@ The most convenient way to package your extension is to use [`web-ext build`](/d
 
 {% capture content %}
 
-## Mac OSX
+## macOS
 
 1. Open the directory containing your extension's files.
 
@@ -109,7 +109,7 @@ The most convenient way to package your extension is to use [`web-ext build`](/d
 
 {% capture content %}
 
-## Linux / Mac OSX Terminal
+## Linux / macOS Terminal
 
 1. Open Terminal.
 
