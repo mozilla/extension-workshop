@@ -303,7 +303,7 @@ published: false
 ---
 ```
 
-**NOTE:** `published: false` will withhold this content from stage and production. To publish content, remove this line.
+**ℹ️ NOTE:** `published: false` will withhold this content from stage and production. To publish content, remove this line.
 
 
 #### Add the page to the menu
