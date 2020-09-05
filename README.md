@@ -10,7 +10,9 @@ If you would like to update content or other resources on Firefox Extension Work
 
 ## Development Guide: Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [Deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+
+For notes on how to deploy the project on a live system, see [Deployment](#deployment).
 
 ### Prerequisites
 
@@ -27,7 +29,7 @@ To start local development, run:
 yarn start
 ```
 
-**ℹ️ NOTE:** Running locally will show unpublished content that uses the `published: false` convention in frontmatter. Content with `published: false` will not be available on stage or production.
+**ℹ️ NOTE:** Running locally will show unpublished content that uses the `published: false` convention in frontmatter. Content with `published: false` will not be available on staging or production.
 
 
 ### Available yarn commands
@@ -55,7 +57,7 @@ In development Eleventy knows nothing about the CSS and JavaScript builds. For a
 
 Building for production is slightly different. The Eleventy process and the JS and CSS builds happen in series. Then a 3rd `asset-pipeline` process initiates and takes the the built content from `./build` directory and runs it through various optimizations.
 
-In these steps the following takes place:
+During these optimizations, the following takes place:
 
 * Binary files are versioned with hashes in the file names.
 * References to these file in CSS and JS are updated.
@@ -161,16 +163,16 @@ Looks like this ![Alert Screenshot](../master/screenshots/alert.png)
 ### How to add a "sidebar" layout page
 
 1. Open `data/pages.json`.
-2. Add a node with appropriate attributes, in the appropriate location, for the new page. See below for [details on how to understand the `pages.json` structure](#understanding-the-pagejson-structure).
+2. Add a node with appropriate attributes, in the appropriate location, for the new page. See below: [Understanding the `pages.json` structure](#understanding-the-pagejson-structure).
 3. Create a new page, nested inside a folder struture that matches the URL path. For example, for permalink `/documentation/develop/best-practices-for-collecting-user-data-consents/`, you would create a file called `best-practices-for-collecting-user-data-consents.md` and place it in `documentation ▶︎ develop`.
 4. For reference on how to create a page, review the `sidebar-master-template.md` file, which lists all available modules. Some notes:
-   - `published: false` will withhold this content from stage and production. To publish content, remove this line.
+   - `published: false` will withhold this content from staging and production. To publish content, remove this line.
    - `skip_index: true` is used for pages that shouldn't be indexed for search results.
-   - When creating page sections that should be listed in the table of contents, add an `id` attribute to the section container that matches the subpageitem added to `pages.json`. If your layout requires several sections for one table of contents entry, nest your sections inside a containing element which has the `id` attribute.
+   - When creating page sections that should be listed in the table of contents, add an `id` attribute to the section container that matches the `subpageitems` entry added to `pages.json`. If your layout requires several sections for one table of contents entry, nest your sections inside a containing element which has the `id` attribute.
    - Rule for creating section `id`s: use the `h2` title of the section, converted to lowercase, spaces replaced with dashes, all non-alphanumeric characters removed. For example, the section `h2` title "Know your privacy settings" would be converted to `know-your-privacy-settings` for the section `id`.
    - The first section following the "Page Hero" module should be the "Table of Contents" module: `modules/column-w-toc.html`.
 
-<h4 id="understanding-the-pagesjson-structure">Understanding the Pages.json structure</h4>
+<h4 id="understanding-the-pagesjson-structure">Understanding the <code>pages.json</code> structure</h4>
 
 - Each page has a `title` and `url` attribute.<br>
     **ℹ️ NOTE:** The `url` attribute must exactly match the `permalink` attribute of the page's front matter _(including leading and trailing slashes)_.
@@ -303,7 +305,7 @@ published: false
 ---
 ```
 
-**ℹ️ NOTE:** `published: false` will withhold this content from stage and production. To publish content, remove this line.
+**ℹ️ NOTE:** `published: false` will withhold this content from staging and production. To publish content, remove this line.
 
 
 #### Add the page to the menu
@@ -324,21 +326,21 @@ If you don't want the page to be labelled as a draft (such as and when it's read
 
 ## Deployment
 
-All deploys for stage and prod are handled via the [releases](https://github.com/mozilla/extension-workshop/releases) page.
+All deployments for staging and production are handled via the [Releases](https://github.com/mozilla/extension-workshop/releases) page.
 
 ### Dev Deploys
 
-The site is auto-deployed on commits to `master` to https://extensionworkshop-dev.allizom.org/. You can check the version on -dev with [the dev version link](https://extensionworkshop-dev.allizom.org/__version__)
+The site is auto-deployed on commits to `master` to https://extensionworkshop-dev.allizom.org/. You can check the version on -dev with [the dev version link](https://extensionworkshop-dev.allizom.org/__version__).
 
 ### Stage Deploys
 
-Tags with a version ending in `-stage` will be deployed to https://extensionworkshop.allizom.org/. You can check the version on stage with [the stage version link](https://extensionworkshop.allizom.org/__version__)
+Tags with a version ending in `-stage` will be deployed to https://extensionworkshop.allizom.org/. You can check the version on stage with [the stage version link](https://extensionworkshop.allizom.org/__version__).
 
 A good example tag for a stage deploy would be `v2.0.1-stage`.
 
 ### Production Deploys
 
-Tags of the format `vN.N.N` will be deployed to https://extensionworkshop.com/. You can check the version on prod with [the prod version link](https://extensionworkshop.com/__version__)
+Tags of the format `vN.N.N` will be deployed to https://extensionworkshop.com/. You can check the version on production with [the production version link](https://extensionworkshop.com/__version__).
 
 A good example tag for a production deploy would be `v2.0.1`.
 
