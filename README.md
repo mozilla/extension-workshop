@@ -290,7 +290,7 @@ General overview of the `pages.json` layout:
 #### Create a new page
 
 1. Create new file
-2. Add header (see example below)
+2. Add frontmatter (see example below)
 3. Copy 'modules' needed from `content-guidelines/master-template.md` and paste in new file
 4. Save as markdown: `content-guidelines/page-name.md`
 
@@ -308,17 +308,19 @@ published: false
 
 #### Add the page to the menu
 
-Go to `data/content-guidelines-pages.yaml` and add a new entry for your page:
+Go to `data/content-guidelines-pages.json` and add a new entry for your page:
 
-```yaml
-- title: "Page Name"
-  url: "/content-guidelines/page-name/"
-  draft-label: true
+```json
+{
+  "title": "Page Name",
+  "url": "/content-guidelines/page-name/",
+  "draft-label": true
+}
 ```
 
 #### Controlling draft labelling
 
-If you don't want the page to be labelled as a draft (such as and when it's ready), remove `draft-label: true` from the relevant entry in `data/content-guidelines-pages.json`.
+If you don't want the page to be labelled as a draft (such as and when it's ready), remove `"draft-label": true` from the relevant entry in `data/content-guidelines-pages.json`.
 
 ## Deployment
 
