@@ -10,7 +10,7 @@ If you would like to update content or other resources on Firefox Extension Work
 
 ## Development Guide: Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [Deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
