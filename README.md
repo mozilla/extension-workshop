@@ -172,10 +172,10 @@ Looks like this ![Alert Screenshot](../master/screenshots/alert.png)
 
 <h4 id="understanding-the-pagesjson-structure">Understanding the Pages.json structure</h4>
 
-- Each page has a `title` and `url` attribute.
+- Each page has a `title` and `url` attribute.<br>
     **ℹ️ NOTE:** The `url` attribute must exactly match the `permalink` attribute of the page's front matter _(including leading and trailing slashes)_.
 - Pages may also have a `subpageitems` node for sections within the page to be referenced in the table of contents for that page:
-  - Each `subpageitem` node has a `title` and `id` attribute. The value of `id` matches the `id` attribute of the section container.
+  - Each `subpageitem` node has a `title` and `id` attribute. The value of `id` matches the `id` attribute of the section container.<br>
     (**ℹ️ NOTE:** `id`s must be added to the containing element, rather than the heading element, of the section. This ensures that highlighting for the section remains active, even when the section title is out of view.)
 - Overview pages have `category` nodes for each of their contained (sub) `categories`.
 - Categories have a `category` attibute (which denotes the category title), and a `pages` attribute (which lists sub-pages of the overview page).
