@@ -49,7 +49,7 @@ date: 2019-11-06 10:25:55
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Installation
 
@@ -81,7 +81,7 @@ web-ext --version
 
 <section id="using-web-ext-section" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Using web-ext
 
@@ -97,7 +97,7 @@ Test an extension in Firefox by `cd`'ing into your extensions’s root directory
 web-ext run
 ```
 
-This starts Firefox and loads the extension temporarily in the browser, just as you can on the [about:debugging page](https://developer.mozilla.org/docs/Tools/about:debugging#Add-ons). Note that this `web-ext` method has the same [limitations regarding prompts for permissions and restart features](/documentation/develop/testing-persistent-and-restart-features/) as about:debugging.
+This starts Firefox and loads the extension temporarily in the browser, just as you can on the [`about:debugging` page](https://developer.mozilla.org/docs/Tools/about:debugging#Add-ons). Note that this `web-ext` method has the same [limitations regarding prompts for permissions and restart features](/documentation/develop/testing-persistent-and-restart-features/) as `about:debugging`.
 
 See the [run reference guide](/documentation/develop/web-ext-command-reference/#web-ext-run) to learn more.
 
@@ -250,7 +250,7 @@ The API options are required to specify your [addons.mozilla.org credentials](ht
 - `--api-key`: the API key (JWT issuer) from `addons.mozilla.org` needed to sign the extension. This is a string that will look something like `user:12345:67`.
 - `--api-secret`: the API secret (JWT secret) from `addons.mozilla.org` needed to sign the extension. This is a string that will look something like `634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009`.
 
-<div class="note alert" markdown="1">
+<div class="note alert">
 
 If you've [listed](/documentation/publish/submitting-an-add-on/) the extension on [addons.mozilla.org](https://addons.mozilla.org/), see [Signing a test version of a listed extension](/documentation/develop/getting-started-with-web-ext/#signing-test-version-listed).
 
@@ -287,14 +287,14 @@ The following domains are used for signing and downloading files:
 
 If you've [listed](/documentation/publish/submitting-an-add-on/) an extension on [addons.mozilla.org](https://addons.mozilla.org/), use `web-ext` to create a signed but [unlisted](/documentation/publish/self-distribution/) version for testing purposes. For example, you may wish to distribute an alpha or beta version to users for early feedback and testing.
 
-First, change the version number in your [manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) so that it is different from the latest listed version. Then, create the unlisted version by using the [`--channel`](/documentation/develop/web-ext-command-reference/#web-ext-sign) option like this:
+First, change the version number in your [`manifest.json`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) so that it is different from the latest listed version. Then, create the unlisted version by using the [`--channel`](/documentation/develop/web-ext-command-reference/#web-ext-sign) option like this:
 ```shell
 web-ext sign --channel=unlisted --api-key=... --api-secret=...
 ```
 
 This signs and downloads an XPI file that can be installed into Firefox.
 
-Once you've finished testing, **to publish the extension you must define** `--channel` **as listed**, as the channel option defaults to the one used previously. So, after incrementing the version in your [manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json), run:
+Once you've finished testing, **to publish the extension you must define** `--channel` **as listed**, as the channel option defaults to the one used previously. So, after incrementing the version in your [`manifest.json`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json), run:
 
 ```shell
 web-ext sign --channel=listed --api-key=... --api-secret=...
@@ -302,7 +302,7 @@ web-ext sign --channel=listed --api-key=... --api-secret=...
 
 This publishes and submits your extension for review as if you had uploaded it to [addons.mozilla.org](https://addons.mozilla.org/).
 
-<div class="note alert" markdown="1">
+<div class="note alert">
 
 Setting `--channel=listed` for a new version of a listed extension is not well supported. It uploads your new version to [addons.mozilla.org](https://addons.mozilla.org/) as if you'd [submitted it manually](/documentation/publish/submitting-an-add-on/). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.
 
@@ -454,7 +454,7 @@ You can use `web-ext` as a `NodeJS module`. Here is [more information](https://g
 
 <section id="see-also-section" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## See also
 

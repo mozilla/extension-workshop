@@ -6,6 +6,7 @@ topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
 contributors:
   [
+    Kaligule,
     chrisdavidmills,
     mdnwebdocs-bot,
     musakarakas,
@@ -34,8 +35,8 @@ contributors:
     tedmcox,
     iwanrezpect,
   ]
-last_updated_by: chrisdavidmills
-date: 2019-06-10 11:19:17
+last_updated_by: Kaligule
+date: 2020-08-18 20:10:00
 ---
 
 <!-- Page Hero Banner -->
@@ -116,7 +117,9 @@ For more information on how to submit an add-on for distribution on AMO or self-
 ## More information about AMO
 
 <section id="ownership"></section>
+
 ### Ownership
+
 Add-ons on AMO can have multiple users with permission to update and manage the listing. The authors of an add-on can transfer ownership and add developers to an add-on's listing through the Developer Hub. No interaction with Mozilla representatives is necessary for a transfer of ownership.
 
 #### To transfer ownership
@@ -128,6 +131,7 @@ Add-ons on AMO can have multiple users with permission to update and manage the 
 - When you're done, click "Save Changes". The new owner will be able to manage updates, listing information, etc., when logged in.
 
 <section id="code-disputes"></section>
+
 ### Code disputes
 
 Many add-ons allow their source code to be viewed. This does not mean that the source code is open source or available for use in another add-on. The original author of an add-on retains copyright of their work unless otherwise noted in the add-on's license.

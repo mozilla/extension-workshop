@@ -51,7 +51,7 @@ This page lists all the commands and options available under the [web-ext](https
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Commands
 
@@ -87,7 +87,7 @@ Opens the [web-ext documentation](/documentation/develop/getting-started-with-we
 
 ### `web-ext lint`
 
-Reports errors in the extension [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) or other source code files. When [strict_min_version](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is set in your extension’s manifest file, lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. See the [addons-linter](https://github.com/mozilla/addons-linter) project for more information about what kind of rules are used to validate extension source.
+Reports errors in the extension [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) or other source code files. When [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is set in your extension’s manifest file, lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. See the [addons-linter](https://github.com/mozilla/addons-linter) project for more information about what kind of rules are used to validate extension source.
 
 #### `--output`, `-o`
 
@@ -133,7 +133,7 @@ Builds and then temporarily installs an extension on the target application, so 
 
 #### `--adb-bin`
 
-Path to the [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html) executable on the machine you are running `web-ext` from. By default, the `adb` executable will be located on your PATH.
+Path to the [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html) executable on the machine you are running `web-ext` from. By default, the `adb` executable will be located on your `PATH`.
 
 Environment variable: `$WEB_EXT_ADB_BIN`
 
@@ -210,7 +210,7 @@ You can also use aliases, like this:
 
 Here are all available aliases and the executables they map to:
 
-<div class="table-wrapper table-scroll" markdown="1">
+<div class="table-wrapper table-scroll">
 
 | Alias                     | Firefox executable                                                                           |
 | ------------------------- | -------------------------------------------------------------------------------------------- |
@@ -283,7 +283,7 @@ This specifies which application to run your extension in. Specify this option m
 
 Here are the supported targets:
 
-<div class="table-wrapper table-scroll" markdown="1">
+<div class="table-wrapper table-scroll">
 
 | Target            | Application                                                                                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -365,7 +365,7 @@ Environment variable: `$WEB_EXT_API_PROXY`
 
 This specifies the `channel` in which the extension is signed. It defaults to `unlisted` or the `channel` of your extension's latest version. The values for `channel` are:
 
-<div class="table-wrapper table-scroll" markdown="1">
+<div class="table-wrapper table-scroll">
 
 | Channel    | Result                                                                                                                                                                                                              |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -410,7 +410,7 @@ Environment variable: `$WEB_EXT_ID`
 
 <section id="global-options" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Global options
 
@@ -418,7 +418,7 @@ web-ext has the following global options that may apply to multiple commands.
 
 ### `--artifacts-dir`, `-a`
 
-Specifies a particular directory to save artifacts in, e.g the `.zip` file, once you've built an extension. This can be specified as a relative or absolute path, and should always be a string.
+Specifies a particular directory to save artifacts in, e.g. the `.zip` file, once you've built an extension. This can be specified as a relative or absolute path, and should always be a string.
 
 ::: note
 If this is not specified, the default is the relative path `./web-ext-artifacts`.
@@ -465,7 +465,7 @@ By default, without the use of `--ignore-files`, the following rules are applied
 When you specify custom patterns using `--ignore-files`, they are applied _in addition to_ the default patterns.
 
 ::: note
-Order is important: you must specify the web-ext command before specifying the --ignore-files option.
+Order is important! You must specify the web-ext command before specifying the `--ignore-files` option.
 :::
 
 Environment variable: `$WEB_EXT_IGNORE_FILES`
@@ -515,7 +515,7 @@ Shows the version number of the installed web-ext tool.
 
 <section id="setting-option-environment-variables" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Setting option environment variables
 
@@ -567,7 +567,7 @@ WEB_EXT_VERBOSE=true
 
 <section id="see-also" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## See also
 

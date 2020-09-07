@@ -15,7 +15,8 @@ const inputFiles = [
   'node_modules/dompurify/dist/purify.js',
   'node_modules/velocity-animate/velocity.js',
   'node_modules/velocity-ui-pack/velocity.ui.js',
-  'node_modules/slick-carousel/slick/slick.js',
+  // This is the minified file because the non-minified file is not the same version!
+  'node_modules/slick-carousel/slick/slick.min.js',
   'src/assets/js/tinypubsub.js',
   'src/assets/js/breakpoints.js',
   'src/assets/js/parallax.js',
@@ -23,6 +24,7 @@ const inputFiles = [
   'src/assets/js/inview.js',
   'src/assets/js/youtubeplayer.js',
   'src/assets/js/main.js',
+  'src/assets/js/new-tab-links.js',
 ];
 
 const outputFile = './build/assets/js/bundle.js';

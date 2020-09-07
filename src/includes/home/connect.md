@@ -2,7 +2,7 @@
 <div class="panel">
 
 <div class="grid-container grid-x grid-padding-x align-center tiles-intro">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Need some extra help along the way?
 
@@ -16,7 +16,7 @@ When you build on Firefox, you build with a community of add-on developers. And 
 
 <!-- Tile 1 -->
 <a href="https://discourse.mozilla.org/c/add-ons" class="cell small-12 medium-6 tile-compact tile-block-link">
-<div class="block-link" markdown="1">
+<div class="block-link">
 
 ![Community Forums](/assets/img/icons/community-forums.svg "Community Forums")
 
@@ -30,7 +30,7 @@ When you build on Firefox, you build with a community of add-on developers. And 
 
 <!-- Tile 2 -->
 <a href="https://mail.mozilla.org/listinfo/dev-addons" class="cell small-12 medium-6 tile-compact tile-block-link">
-<div class="block-link" markdown="1">
+<div class="block-link">
 
 ![Get Involved](/assets/img/icons/get-involved.svg "Get Involved")
 
@@ -46,7 +46,7 @@ When you build on Firefox, you build with a community of add-on developers. And 
 </div>
 
 <div class="grid-container grid-x grid-padding-x align-center tiles-footer">
-<div class="cell small-12 medium-8 xlarge-6 text-center" markdown="1">
+<div class="cell small-12 medium-8 xlarge-6 text-center">
 
 [Learn more about the community](/community/)
 

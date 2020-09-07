@@ -43,7 +43,7 @@ So, let us look at some of the ways you can encourage users to get to your listi
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Your add-on’s name
 
@@ -61,7 +61,7 @@ Another advantage of using a unique name is that you also get a unique slug on a
 
 <section id="create-a-captivating-icon" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Create a captivating icon
 
@@ -77,7 +77,7 @@ Your add-on’s icon could be as important, if not more so, as your add-on’s n
 
 <section id="create-a-meaningful-set-of-keywords" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Create a meaningful set of keywords
 
@@ -93,7 +93,7 @@ Before writing your add-on’s summary and description, or adding version detail
 
 <section id="make-sure-your-summary-is-just-long-enough" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Make sure your summary is just long enough
 
@@ -109,7 +109,7 @@ The summary description for your add-on is limited to 250 characters, but do not
 
 <section id="focus-on-key-features-in-your-screenshots" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Focus on key features in your screenshots
 
@@ -129,7 +129,7 @@ You also have the option to reorder your screenshots, so make sure they tell a s
 
 <section id="the-add-on-description-can-be-longer-but-not-too-long" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## The add-on description can be longer, but not too long
 
@@ -151,7 +151,7 @@ Similarly, when you are adding version details, be crisp and to-the-point. Make 
 
 <section id="make-it-local" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Make it local
 
@@ -171,7 +171,7 @@ Also, remember to set the most appropriate default locale, so that users browsin
 
 <section id="make-it-experimental" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Make it experimental
 
@@ -187,11 +187,11 @@ If your add-on is an experiment, flag this when you submit it to AMO. While doin
 
 <section id="select-the-right-platforms-and-versions" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Select the right platforms and versions
 
-If your add-on does not work on Android be sure to select only Linux, Mac OS, and Windows as the supported platforms. This will avoid issues with users giving poor reviews because your add-on does not work on their platform or Firefox version. For more information on defining version support, if you need to, see the manifest.json [`browser_specific_settings` key](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
+If your add-on does not work on Android be sure to select only Linux, Mac OS, and Windows as the supported platforms. This will avoid issues with users giving poor reviews because your add-on does not work on their platform or Firefox version. For more information on defining version support, if you need to, see the `manifest.json` [`browser_specific_settings` key](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
 
 </div>
 </article>
@@ -203,7 +203,7 @@ If your add-on does not work on Android be sure to select only Linux, Mac OS, an
 
 <section id="categorize-well" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Categorize well
 
@@ -219,7 +219,7 @@ You can select up to two categories to describe your add-on. Choose carefully to
 
 <section id="be-prepared-to-provide-support" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Be prepared to provide support
 
@@ -235,7 +235,7 @@ Providing support for your add-on gives potential users the assurance that they 
 
 <section id="set-up-a-developer-profile" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Set up a developer profile
 
@@ -251,7 +251,7 @@ Your developer profile enables you to provide information about the reasons behi
 
 <section id="use-plain-language-in-any-privacy-policy-or-license-agreement" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Use plain language in any privacy policy or license agreement
 
@@ -271,7 +271,7 @@ Remember to include the text of your privacy policy and license agreement in you
 
 <section id="gently-ask-for-a-review" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Gently ask for a review
 
@@ -296,7 +296,7 @@ And, when users suggest improvements or highlight issues in the reviews, use the
 
 <section id="some-other-points" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Some other points
 

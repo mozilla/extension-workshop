@@ -51,7 +51,7 @@ In addition to the steps described here, your extension should follow [Add-on Po
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 1\. Keep it focused
 
@@ -72,7 +72,7 @@ An extension is best when it is centered around one main use case, and addresses
 
 <section id="give-users-what-they-need-where-they-need-it" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 2\. Give users what they need, where they need&nbsp;it
 
@@ -134,7 +134,7 @@ Where your extension needs to gather or display significant amounts of informati
 
 If your extension includes functionality to locate web pages or content, such as offering a site-specific search, use [address bar suggestions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox) to deliver those recommendations.
 
-![Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions.](/assets/img/documentation/develop/omnibox_example_full.png)
+![Example showing the result of the `firefox_code_search` WebExtension's customization of the address bar suggestions.](/assets/img/documentation/develop/omnibox_example_full.png)
 
 ### Does my extension offer tools for developers?
 
@@ -150,7 +150,7 @@ If you are providing tools for developers, add them to the Firefox developer too
 
 <section id="keep-the-user-informed" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 3\. Keep the user informed
 
@@ -175,7 +175,7 @@ However, use notifications sparingly. If it is sufficient for the user to discov
 
 ### Use browserAction badges sparingly
 
-To inform users of important events, you can [add a badge](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText) over the toolbar icon of a [browserAction](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction). Do so sparingly—do not use badges to provide regular or persistent status updates.
+To inform users of important events, you can [add a badge](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText) over the toolbar icon of a [`browserAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction). Do so sparingly—do not use badges to provide regular or persistent status updates.
 
 When it comes to [coloring a badge](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor), using one of four colors for notifications of different severity is recommended:
 
@@ -198,7 +198,7 @@ Use of Firefox colors is suggested, for more details see [Firefox Colors](http:/
 
 <section id="be-firefoxy-in-look-and-feel" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 4\. Be Firefoxy in look and feel
 
@@ -216,7 +216,7 @@ Following Photon will ensure that your extension integrates with the Firefox exp
 
 <section id="great-onboarding-experience" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 5\. Great onboarding experience
 
@@ -236,7 +236,7 @@ In case the user skips the onboarding page, ensure that your extension is ready 
 
 <section id="test-test-and-then-test-again" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## 6\. Test, test, and then test again
 

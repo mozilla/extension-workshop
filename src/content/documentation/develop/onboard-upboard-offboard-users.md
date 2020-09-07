@@ -42,7 +42,7 @@ The first few minutes after someone installs your extension can be critical to i
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 A Think Aloud User Research Study, conducted by Mozilla in August 2018, found that poor post-install tabs can erode any trust people had gained in an extension from its [addons.mozilla.org](http://addons.mozilla.org/) listing. So much so, that in some cases study participants wanted to immediately remove the extension. The research also found that too much information or protracted setup requirements can have a similar negative impact on people’s perception of an extension.
 
@@ -62,7 +62,7 @@ However, engaging with people and keeping them informed isn’t just about the f
 
 <section class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Onboarding
 
@@ -128,12 +128,12 @@ Here are some examples of good onboarding pages:
 
 <section class="module">
 <article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6 medium-order-2" markdown="1">
+<div class="cell small-12 medium-6 medium-order-2">
 
 ![Example onboarding page that details how to use the extension's features and turn them on and off](/assets/img/documentation/develop/Laser_cat_onboarding.png)
 
 </div>
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6">
 
 #### [Laser Cat](https://addons.mozilla.org/firefox/addon/the-laser-cat/)
 
@@ -149,12 +149,12 @@ This page provides a succinct description of the extension, clear instructions o
 
 <section class="module">
 <article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6">
 
 ![Example onboarding page that gives the user options for a one-click set up or the option to proceed to the settings page](/assets/img/documentation/develop/Ghostery_onboarding.png)
 
 </div>
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6">
 
 #### [Ghostery – Privacy Ad Blocker](https://addons.mozilla.org/firefox/addon/ghostery/)
 
@@ -174,7 +174,7 @@ As the features of Ghostery are mostly silent, this onboarding screen gives user
 
 <section class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Upboarding
 
@@ -225,12 +225,12 @@ Here are some examples of good upboarding pages:
 
 <section class="module">
 <article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6 medium-order-2" markdown="1">
+<div class="cell small-12 medium-6 medium-order-2">
 
 ![Example upboarding page that includes a summary of the extension's features, details of the improvements and updates, and a request for donations.](/assets/img/documentation/develop/snaplinks_upboarding.jpg)
 
 </div>
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6">
 
 #### [Snap Links Plus](https://addons.mozilla.org/firefox/addon/snaplinksplus/)
 
@@ -250,7 +250,7 @@ This page provides a brief description of Snap Links Plus before listing the imp
 
 <section class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Offboarding
 
@@ -283,12 +283,12 @@ Here are some examples of good offboarding pages:
 
 <section class="module">
 <article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6 medium-order-2" markdown="1">
+<div class="cell small-12 medium-6 medium-order-2">
 
 ![Example of boarding page with a "help us improve" message and simple survey with a list of reasons the extension is being removed.](/assets/img/documentation/develop/grammarly_offboarding.png)
 
 </div>
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6">
 
 #### [Grammarly for Firefox](https://addons.mozilla.org/firefox/addon/grammarly-1/)
 
@@ -304,12 +304,12 @@ This page provides a personal message from one of the Grammarly developers, a sh
 
 <section class="module">
 <article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6">
 
 ![Example offboarding page that includes a reinstall button and request information about the removal with a simple questionnaire.](/assets/img/documentation/develop/ADB_offboarding.png)
 
 </div>
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6">
 
 #### [Adblock Plus](https://addons.mozilla.org/firefox/addon/adblock-plus/)
 

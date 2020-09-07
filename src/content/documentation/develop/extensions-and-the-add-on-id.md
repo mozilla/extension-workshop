@@ -60,7 +60,7 @@ Note that the ability to develop and debug WebExtensions that don't include an I
 
 </aside>
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## Basic workflow with no add-on ID
 
@@ -70,9 +70,9 @@ Note, though, that some WebExtension APIs use the add-on ID and expect it to be 
 
 ### Developing and debugging
 
-Starting in Firefox 48, if your manifest.json does not contain an ID then the extension will be assigned a randomly-generated temporary ID when you [install it in Firefox](/documentation/develop/temporary-installation-in-firefox/) through about:debugging. If you then reload the extension using the "Reload" button, the same ID will be used. If you then restart Firefox and load the add-on again, it will get a new ID.
+Starting in Firefox 48, if your manifest.json does not contain an ID then the extension will be assigned a randomly-generated temporary ID when you [install it in Firefox](/documentation/develop/temporary-installation-in-firefox/) through `about:debugging`. If you then reload the extension using the "Reload" button, the same ID will be used. If you then restart Firefox and load the add-on again, it will get a new ID.
 
-If you turn the extension into an .xpi or .zip and install it through about:addons, it will not work. To have it work in this scenario, you will need to add in the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json
+If you turn the extension into an `.xpi` or `.zip` and install it through `about:addons`, it will not work. To have it work in this scenario, you will need to add in the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`.
 
 ### Publishing
 
@@ -100,11 +100,11 @@ You can do the same thing if you are updating from an older add-on type, such as
 
 <section id="when-do-you-need-an-add-on-id" class="module">
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-12" markdown="1">
+<div class="cell small-12">
 
 ## When do you need an add-on ID?
 
-- If you are loading the add-on from its XPI file, are not loading it temporarily using about:debugging and it is not signed.
+- If you are loading the add-on from its XPI file, are not loading it temporarily using `about:debugging` and it is not signed.
 - If you use [AMO's API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) for uploading your add-on, rather than uploading it manually on its page, then you need to include the add-on's ID in the request.
 - Some WebExtension APIs use the add-on ID and expect it to be the same from one browser session to the next. If you use these APIs, then you must set the ID explicitly using the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. This applies to the following APIs:
   - [`storage.managed`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed "A storage.StorageArea object that represents the managed storage area. Items in managed storage are set by the domain administrator or other native applications installed on user's computer, and are read-only for the extension. Trying to modify this storage area results in an error.")

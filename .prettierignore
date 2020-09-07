@@ -8,6 +8,7 @@ Dockerfile
 /dist/
 /coverage/
 *.lock
+tests/fixtures/
 # Allow files we want to process
 !*.js
 !*.scss

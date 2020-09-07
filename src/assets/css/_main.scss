@@ -75,7 +75,7 @@ main {
   a[target='_blank'] {
     &::after {
       color: inherit;
-      padding: 0 0.25em;
+      padding: 0 0 0 0.25em;
       display: inline-block;
       @include icon_font($char: $icon-newtab);
     }
@@ -254,14 +254,20 @@ table {
 code {
   border-radius: $global-radius;
   overflow-wrap: break-word;
+  background-color: $light-gray;
+  color: $black;
+
+  &.nobackground {
+    background: none;
+  }
+
+  a & {
+    color: $anchor-color;
+  }
 }
 
 code[class*='language-'] {
   padding: 0;
-}
-
-a code {
-  color: #00b3f4;
 }
 
 figure.highlight {
@@ -1018,6 +1024,10 @@ $hamburger-hover-transition-timing-function: linear;
 
   .mzp-c-footer-legal ul {
     @include horizontal_list($margin: 1em);
+
+    > li {
+      margin: 0 2em 0 0;
+    }
 
     margin-bottom: 1em;
 

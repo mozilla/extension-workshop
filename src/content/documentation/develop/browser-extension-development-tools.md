@@ -177,9 +177,9 @@ To get started with web-ext, install it with the [nodejs/npm](https://nodejs.org
 
 ### web-ext-webpack-plugin
 
-Use this plug-in to simplify the development of extensions built using webpack. The plug-in does this by integrating the web-ext run and lint commands into the webpack process, so that the extension is linted and reloaded once webpack build completes.
+Use this plug-in to simplify the development of extensions built using webpack. The plug-in does this by integrating the `web-ext run` and `lint` commands into the webpack process, so that the extension is linted and reloaded once webpack build completes.
 
-To get started, add the plug-in to your webpack.config.js.
+To get started, add the plug-in to your `webpack.config.js`.
 
 [Get started](https://github.com/hiikezoe/web-ext-webpack-plugin/blob/master/README.md)
 
@@ -262,7 +262,7 @@ This Firefox page enables you to manually install add-ons into Firefox for testi
 
 ![About Debugging](/assets/img/documentation/develop/about-debugging.png)
 
-To get started, type about:debugging in the Firefox address bar.
+To get started, type `about:debugging` in the Firefox address bar.
 
 {% endcapture %}
 {% capture aside %}
@@ -294,7 +294,7 @@ Debug your browser extensions with this version of the standard Firefox develope
 
 ![Addon Debugging Window](/assets/img/documentation/develop/Addon_Debugging_Window.png)
 
-To get started, enable Browser Toolbox then open about:debugging and click debug next to the extension you want to debug.
+To get started, enable Browser Toolbox then open `about:debugging` and click debug next to the extension you want to debug.
 
 [Get started](https://developer.mozilla.org/docs/Tools/Browser_Toolbox#Enabling_the_Browser_Toolbox)
 

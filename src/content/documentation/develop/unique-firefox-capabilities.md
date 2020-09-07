@@ -41,7 +41,7 @@ Firefox also offers some unique features that you can use to build more secure, 
 
 {% capture col_1_content %}
 
-Help users separate their browser activities with [Contextual Identities](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities) a.k.a. Containers. Give groups of tabs their own local browser storage: cookie store and local data in localStorage and indexedDB. This keeps details such as site preferences, signed in sessions, and ad tracking data private to the tabs.
+Help users separate their browser activities with [Contextual Identities](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities) a.k.a. Containers. Give groups of tabs their own local browser storage: cookie store and local data in `localStorage` and `indexedDB`. This keeps details such as site preferences, signed in sessions, and ad tracking data private to the tabs.
 
 {% endcapture %}
 

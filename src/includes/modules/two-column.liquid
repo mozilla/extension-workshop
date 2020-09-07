@@ -1,22 +1,22 @@
 <section id="{{ id }}" class="module">
 <article class="module-content grid-x grid-padding-x align-middle">
 {% if reverse == true %}
-<div class="cell small-12 medium-6 medium-order-2" markdown="1">
+<div class="cell small-12 medium-6 medium-order-2">
 {% else %}
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6">
 {% endif %}
 
 {{ col_1 }}
 
 </div>
-<div class="cell small-12 medium-6" markdown="1">
+<div class="cell small-12 medium-6">
 
 {{ col_2 }}
 
 </div>
 </article>
 {% if aside != nil and aside != empty %}
-<aside class="module-aside tile" markdown="1">
+<aside class="module-aside tile">
 
 {{ aside }}
 

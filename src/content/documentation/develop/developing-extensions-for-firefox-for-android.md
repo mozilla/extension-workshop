@@ -52,16 +52,16 @@ On your development computer:
 
 - To test in Firefox for Android running on a device only:
   - Download and extract the [standalone Android SDK Platform-Tools package](https://developer.android.com/studio/releases/platform-tools.html) to a suitable location on your computer.
-  - On Windows, Mac, or Linux: Add the location into which you extracted the tools package to your operating system’s PATH environment variable.
-  - Alternatively, on Mac or Linux: Link the binary to /usr/local/bin using `sudo ln -s /<extract folder>/platform-tools/adb /usr/local/bin`.
+  - On Windows, Mac, or Linux: Add the location into which you extracted the tools package to your operating system’s `PATH` environment variable.
+  - Alternatively, on Mac or Linux: Link the binary to `/usr/local/bin` using `sudo ln -s /<extract folder>/platform-tools/adb /usr/local/bin`.
 
 On your device or Android emulator:
 
 - Install [Firefox for Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox&referrer=utm_source%3Dmozilla%26utm_medium%3DReferral%26utm_campaign%3Dmozilla-org) and, if you wish to test the latest features, [Firefox for Android Beta](https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta) or [Firefox Nightly for Developers](https://play.google.com/store/apps/details?id=org.mozilla.fennec_aurora).
-- (If you're using [web-ext](/documentation/develop/getting-started-with-web-ext/), you can skip this step.) Open Firefox for Android and turn off signing by browsing to `about:config` then locating and setting `xpinstall.signatures.required` to false.
+- (If you're using [web-ext](/documentation/develop/getting-started-with-web-ext/), you can skip this step.) Open Firefox for Android and turn off signing by browsing to `about:config` then locating and setting `xpinstall.signatures.required` to `false`.
 
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![about:config screenshot](/assets/img/documentation/develop/set_xpinstall.png)
 
@@ -94,7 +94,7 @@ If you are using a device:
 
 ## Check for Firefox for Android compatibility
 
-Before running your extension on Firefox for Android, consider using [`web-ext lint`](/documentation/develop/web-ext-command-reference#web-ext-lint). Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android. Lint relies on your extension’s manifest.json file including `strict_min_version`, it then reports on the features that are not supported by the minimum version you have set.
+Before running your extension on Firefox for Android, consider using [`web-ext lint`](/documentation/develop/web-ext-command-reference#web-ext-lint). Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android. Lint relies on your extension’s `manifest.json` file including `strict_min_version`, it then reports on the features that are not supported by the minimum version you have set.
 
 In the lint report:
 
@@ -133,7 +133,7 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 
 ## Install and run your extension in Firefox for Android
 
-In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the manifest.json:
+In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the `manifest.json`:
 
 ```json
 "browser_specific_settings": {
@@ -156,7 +156,7 @@ On your computer, execute `/path/to/adb push /path/to/<extension file name>.xpi 
 On your Android device or in the emulator, open Firefox for Android and browse to `file:///mnt/sdcard`:
 
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![xpi file on memory card](/assets/img/documentation/develop/xpi-file-on-memory-card.png)
 
@@ -166,7 +166,7 @@ On your Android device or in the emulator, open Firefox for Android and browse t
 Tap on `<extension file name>.xpi` to install it. You will get a warning about the extension being blocked, tap ALLOW:
 
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![Blocked add-on message](/assets/img/documentation/develop/blocked-add-on-message.png)
 
@@ -176,7 +176,7 @@ Tap on `<extension file name>.xpi` to install it. You will get a warning about t
 An additional warning will tell you the extension is unverified, tap INSTALL:
 
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![Unverified add-on message](/assets/img/documentation/develop/unverified-add-on-messages.png)
 
@@ -186,7 +186,7 @@ An additional warning will tell you the extension is unverified, tap INSTALL:
 Your extension will start running (in this case a copy of the [borderify](https://developer.mozilla.org/Add-ons/WebExtensions/Examples#borderify) example extension):
 
 <article class="module-content grid-x grid-padding-x">
-<div class="cell small-6" markdown="1">
+<div class="cell small-6">
 
 ![Borderify sample extension in action](/assets/img/documentation/develop/borderify-in-action.png)
 
@@ -247,7 +247,7 @@ For more details on using the web developer tools, see [Firefox Developer Tools]
 
 ### Viewing manifest validation messages using the console
 
-In addition to the console messages output through WebIDE, there may also be messages relating to the validation of the extension’s manifest.json files. These messages can be viewed using the adb logcat command. To avoid receiving other, unrelated messages, you can pipe the output through grep, filtering by the extension’s ID, for example:
+In addition to the console messages output through WebIDE, there may also be messages relating to the validation of the extension’s `manifest.json` files. These messages can be viewed using the adb logcat command. To avoid receiving other, unrelated messages, you can pipe the output through grep, filtering by the extension’s ID, for example:
 
 ```shell
 /path/to/adb logcat | grep borderify@example.com
