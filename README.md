@@ -184,7 +184,7 @@ Looks like this ![Alert Screenshot](../master/screenshots/alert.png)
 - The Documentation Topics section pages are nested inside a `subfolderitems` node, which creates the dropdown panel.
 
 <details>
-<summary>General overview of the `pages.json` layout:</summary>
+   <summary>General overview of the <code>pages.json</code> layout:</summary>
 
 ```json
 [
