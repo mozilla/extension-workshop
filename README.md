@@ -183,7 +183,8 @@ Looks like this ![Alert Screenshot](../master/screenshots/alert.png)
 - Categories have a `category` attibute (which denotes the category title), and a `pages` attribute (which lists sub-pages of the overview page).
 - The Documentation Topics section pages are nested inside a `subfolderitems` node, which creates the dropdown panel.
 
-General overview of the `pages.json` layout:
+<details>
+<summary>General overview of the `pages.json` layout:</summary>
 
 ```json
 [
@@ -286,6 +287,8 @@ General overview of the `pages.json` layout:
   }
 ]
 ```
+
+</details>
 
 ### How to add a "Content Guidelines" page
 
