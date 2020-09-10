@@ -33,7 +33,7 @@ Participation in the Promoted Add-ons program is currently limited due to our ca
 
 {% endcapture %}
 {% include modules/one-column.liquid
-  id: "friends-family-colleagues"
+  id: "introduction"
   content: content
 %}
 
