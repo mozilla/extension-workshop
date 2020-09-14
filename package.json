@@ -49,7 +49,7 @@
     "posthtml-postcss": "0.3.0",
     "posthtml-urls": "1.0.0",
     "prettier": "2.1.1",
-    "pretty-quick": "3.0.0",
+    "pretty-quick": "3.0.2",
     "prismjs": "1.21.0",
     "rimraf": "3.0.2",
     "serialize-javascript": "4.0.0",
