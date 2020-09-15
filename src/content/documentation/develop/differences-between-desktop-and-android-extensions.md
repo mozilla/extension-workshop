@@ -18,7 +18,7 @@ contributors:
     wbamberg,
   ]
 last_updated_by: mdnwebdocs-bot
-date: 2020-08-28
+date: 2020-09-15
 ---
 
 <!-- Page Hero Banner -->
@@ -27,12 +27,25 @@ date: 2020-08-28
 
 # Differences between desktop and Android extensions
 
+There are some important distinctions to know when developing an extension for Android
+
+{% endcapture %}
+{% include modules/page-hero.liquid
+    content: page_hero_banner_content
+%}
+
+<!-- END: Page Hero Banner -->
+
+<!-- Content with Table of Contents Module -->
+
+{% capture content_with_toc %}
+
 ::: note alert
-In August 2020, Mozilla began rolling out a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
+In August 2020, Mozilla launched a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
 
-At the time of launch, only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) will be supported. We would like to support more extensions and we are currently evaluating how to best do that.
+Currently, only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) are supported. We would like to support more extensions and we are continuously working on how to expand support.
 
-Currently, arbitrary extensions can only be loaded temporarily in Fenix. We are working on supporting a pref on [Firefox for Android Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) to enable persistent loading for arbitrary extensions. You can follow progress by subscribing to [this issue](https://github.com/mozilla-mobile/fenix/issues/14034).
+At present, arbitrary extensions in Fenix can only be loaded temporarily. We are working on supporting a setting on [Firefox for Android Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) to enable persistent loading for arbitrary extensions. You can follow progress by subscribing to [this issue](https://github.com/mozilla-mobile/fenix/issues/14034).
 
 New announcements around mobile extension support will be posted on the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android).
 
@@ -50,15 +63,16 @@ This summary is based on the features planned for Firefox version 54.
 A detailed list of the WebExtension APIs supported in Firefox for Android is provided on the [Browser support for JavaScript APIs](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) page and details of the supported `manifest.json` keys are provided on the [manifest.json section](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) page.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
-    content: page_hero_banner_content
+{% include modules/column-w-toc.liquid
+    id: "introduction"
+    content: content_with_toc
 %}
 
-<!-- END: Page Hero Banner -->
+<!-- END: Content with Table of Contents -->
 
-<!-- Content with Table of Contents Module -->
+<!-- Single Column Body Module -->
 
-{% capture content_with_toc %}
+{% capture content %}
 
 ## User interface
 
@@ -106,12 +120,12 @@ Developer tools for Firefox for Android are provided through remote debugging me
 - [`devtools.panels`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels) and the related [`devtools_page`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/devtools_page) `manifest.json` key.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/one-column.liquid
     id: "user-interface"
-    content: content_with_toc
+    content: content
 %}
 
-<!-- END: Content with Table of Contents -->
+<!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 

@@ -7,7 +7,7 @@ tags: [add-ons, beginner, guide, mobile, webextensions]
 contributors:
   [caitmuenster, rebloor, juraj, mdnwebdocs-bot, ExE-Boss, Ding-Fan, andrewtruongmoz]
 last_updated_by: caitmuenster
-date: 2020-08-28
+date: 2020-09-15
 ---
 
 {% capture page_hero_banner_content %}
@@ -28,11 +28,11 @@ Learn more about developing extensions for Firefox for Android
 {% capture content_with_toc %}
 
 ::: note alert
-In August 2020, Mozilla began rolling out a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
+In August 2020, Mozilla launched a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
 
-At the time of launch, only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) will be supported. We would like to support more extensions and we are currently evaluating how to best do that.
+Currently only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) are supported. We would like to support more extensions and we are continuously working on how to expand support.
 
-Currently, arbitrary extensions can only be loaded temporarily in Fenix. We are working on supporting a setting on [Firefox for Android Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) to enable persistent loading for arbitrary extensions. You can follow progress by subscribing to [this issue](https://github.com/mozilla-mobile/fenix/issues/14034).
+At present, arbitrary extensions in Fenix can only be loaded temporarily. We are working on supporting a setting on [Firefox for Android Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) to enable persistent loading for arbitrary extensions. You can follow progress by subscribing to [this issue](https://github.com/mozilla-mobile/fenix/issues/14034).
 
 New announcements around mobile extension support will be posted on the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android).
 
@@ -162,6 +162,10 @@ web-ext run -t firefox-android --adb-device XXX --firefox-apk org.mozilla.fenix
 ```
 
 <!-- END: Syntax Highlighting -->
+
+::: note
+ The add-on will be loaded in the main browser profile instead of a new temporary profile directory.
+:::
 
 {% endcapture %}
 {% include modules/one-column.liquid

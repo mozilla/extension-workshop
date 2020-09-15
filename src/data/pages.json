@@ -399,6 +399,9 @@
                 "title": "Differences between desktop and Android extensions",
                 "url": "/documentation/develop/differences-between-desktop-and-android-extensions/",
                 "subpageitems": [
+                  {"title": "Introduction",
+                    "id": "introduction"
+                  },
                   {
                     "title": "User interface",
                     "id": "user-interface"
@@ -1061,7 +1064,7 @@
                   }
                 ]
               },
-              { 
+              {
                 "title": "Promoted Add-ons program",
                 "url": "/documentation/publish/promoted-addons-program/"
               },

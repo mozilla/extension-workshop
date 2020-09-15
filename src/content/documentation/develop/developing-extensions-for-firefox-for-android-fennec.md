@@ -7,22 +7,14 @@ tags: [add-ons, beginner, guide, mobile, webextensions]
 contributors:
   [caitmuenster, rebloor, juraj, mdnwebdocs-bot, ExE-Boss, Ding-Fan, andrewtruongmoz]
 last_updated_by: caitmuenster
-date: 2020-08-26
+date: 2020-09-15
 ---
 
 {% capture page_hero_banner_content %}
 
 # Developing extensions for Firefox for Android version 68 and earlier
 
-::: note alert
-This article discusses developing extensions for Firefox for Android for version 68 or earlier (codenamed "Fennec"). Fennec is in maintenance mode as Mozilla rolls out a new, reimagined mobile browsing experience (codenamed "Fenix"). For more information about developing extensions for Fenix, please see [this article](/documentation/develop/developing-extensions-for-firefox-for-android/).
-:::
-
-You'll approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code. However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process.
-
-Using [web-ext](/documentation/develop/getting-started-with-web-ext/) in your extension development is recommended. Follow the set up and debugging processes described here, but use [`web-ext run`](/documentation/develop/web-ext-command-reference#web-ext-run) to execute your extension on Firefox for Android. Among other advantages, using [web-ext](/documentation/develop/getting-started-with-web-ext/) automatically restarts your extension on Firefox for Android when you make edits. Also, you can take advantage of [`web-ext lint`](/documentation/develop/web-ext-command-reference/#web-ext-lint), which performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android.
-
-However, instructions are provided for the steps you need to take should you choose not to use [web-ext](/documentation/develop/getting-started-with-web-ext/).
+Legacy guide to developing extensions for Firefox for Android version 68 and earlier ("Fennec")
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -34,6 +26,16 @@ However, instructions are provided for the steps you need to take should you cho
 <!-- Content with Table of Contents Module -->
 
 {% capture content_with_toc %}
+
+::: note alert
+This article discusses developing extensions for Firefox for Android for version 68 or earlier (codenamed "Fennec"). Fennec is no longer supported and has been replaced by a new, reimagined mobile browsing experience (codenamed "Fenix"). For more information about developing extensions for Fenix, please see [this article](/documentation/develop/developing-extensions-for-firefox-for-android/).
+:::
+
+You'll approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code. However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process.
+
+Using [web-ext](/documentation/develop/getting-started-with-web-ext/) in your extension development is recommended. Follow the set up and debugging processes described here, but use [`web-ext run`](/documentation/develop/web-ext-command-reference#web-ext-run) to execute your extension on Firefox for Android. Among other advantages, using [web-ext](/documentation/develop/getting-started-with-web-ext/) automatically restarts your extension on Firefox for Android when you make edits. Also, you can take advantage of [`web-ext lint`](/documentation/develop/web-ext-command-reference/#web-ext-lint), which performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android.
+
+However, instructions are provided for the steps you need to take should you choose not to use [web-ext](/documentation/develop/getting-started-with-web-ext/).
 
 ## Set up your computer and Android emulator or device
 
