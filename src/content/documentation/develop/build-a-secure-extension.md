@@ -4,9 +4,9 @@ title: Build a secure extension
 permalink: /documentation/develop/build-a-secure-extension/
 topic: Develop
 tags: [beginner, extensions, intermediate, reviews, security, webextensions]
-contributors: [irenesmith, tomrittervg, mdnwebdocs-bot, rebloor]
-last_updated_by: irenesmith
-date: 2019-05-13 6:35:30
+contributors: [ caitmuenster, irenesmith, tomrittervg, mdnwebdocs-bot, rebloor]
+last_updated_by: caitmuenster
+date: 2020-09-15
 ---
 
 <!-- Page Hero Banner -->
@@ -15,7 +15,7 @@ date: 2019-05-13 6:35:30
 
 # Security best practices
 
-Here is a list of best practices you should follow to keep the users of your extension safe. If you don't follow these best practices your extension may fail the reviews on [addons.mozilla.org](https://addons.mozilla.org), preventing you from distributing your add-on or resulting in it being blocked from installation in Firefox.
+Here is a list of best practices you should follow to keep the users of your extension safe. If you don't follow these best practices your extension may fail the reviews on [addons.mozilla.org](https://addons.mozilla.org) (AMO), preventing you from distributing your add-on or resulting in it being blocked from installation in Firefox.
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -38,6 +38,9 @@ Here is a list of best practices you should follow to keep the users of your ext
   - insert strings using safe native DOM manipulation methods: [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement), [`Element.setAtttribute()`](https://developer.mozilla.org/docs/Web/API/Element/setAttribute), and [`Node.textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent).
   - use jQuery functions `attr()` and `text()` to insert strings.
   - sanitize HTML content with  [DOMPurify](https://github.com/cure53/DOMPurify).
+  ::: note
+  DOMPurify versions 2.0.6 and older contain a cross-site-scripting security vulnerability. Please ensure you are using the latest version. AMO will allow the latest 2.x version at the time of submission; previous versions will not be accepted due to their security vulnerabilities. 
+  :::
   - use templating engine commands that escape any HTML before inserting it.
 
   For more information, see [Safely inserting external content into a page](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page).
@@ -86,5 +89,3 @@ Here is a list of best practices you should follow to keep the users of your ext
 </section>
 
 <!-- END: Single Column Body Module -->
-
-
