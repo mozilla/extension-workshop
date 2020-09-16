@@ -15,7 +15,7 @@ date: 2020-09-15
 
 # Security best practices
 
-Here is a list of best practices you should follow to keep the users of your extension safe. If you don't follow these best practices your extension may fail the reviews on [addons.mozilla.org](https://addons.mozilla.org), preventing you from distributing your add-on or resulting in it being blocked from installation in Firefox.
+Here is a list of best practices you should follow to keep the users of your extension safe. If you don't follow these best practices your extension may fail the reviews on [addons.mozilla.org](https://addons.mozilla.org) (AMO), preventing you from distributing your add-on or resulting in it being blocked from installation in Firefox.
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -39,7 +39,7 @@ Here is a list of best practices you should follow to keep the users of your ext
   - use jQuery functions `attr()` and `text()` to insert strings.
   - sanitize HTML content with  [DOMPurify](https://github.com/cure53/DOMPurify).
   ::: note
-  DOMPurify versions 2.0.6 and older contain a cross-site-scripting security vulnerability. Please ensure you are using the latest version.
+  DOMPurify versions 2.0.6 and older contain a cross-site-scripting security vulnerability. Please ensure you are using the latest version. AMO will allow the latest 2.x version at the time of submission; previous versions will not be accepted due to their security vulnerabilities. 
   :::
   - use templating engine commands that escape any HTML before inserting it.
 
