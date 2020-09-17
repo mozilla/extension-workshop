@@ -2187,7 +2187,7 @@ span.example {
 
 .note {
   position: relative;
-  padding: rem-calc(10 15 10 38);
+  padding: rem-calc(10 15 10 38) !important;
   font-size: $small-font-size;
   border-left: #{rem-calc(2)} solid $warning-color;
   background-color: $warning-color-light;
