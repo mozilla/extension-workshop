@@ -43,11 +43,7 @@ There are some important distinctions to know when developing an extension for A
 ::: note alert
 In August 2020, Mozilla launched a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
 
-Currently, only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) are supported. We would like to support more extensions and we are continuously working on how to expand support.
-
-At present, arbitrary extensions in Fenix can only be loaded temporarily. We are working on supporting a setting on [Firefox for Android Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) to enable persistent loading for arbitrary extensions. You can follow progress by subscribing to [this issue](https://github.com/mozilla-mobile/fenix/issues/14034).
-
-New announcements around mobile extension support will be posted on the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android).
+Currently, only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) are supported. However, we are continuously working on increasing support, taking into account usage and feedback to ensure we are making the most of our available resources. We will post updates to [The Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=differences-between-desktop-and-android-extensions) as plans solidify each quarter.
 
 For information about extension development in Firefox for Android 79+, please see [this article](/documentation/develop/developing-extensions-for-firefox-for-android/).
 

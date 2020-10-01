@@ -30,11 +30,7 @@ Learn more about developing extensions for Firefox for Android
 ::: note alert
 In August 2020, Mozilla launched a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
 
-Currently only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) are supported. We would like to support more extensions and we are continuously working on how to expand support.
-
-At present, arbitrary extensions in Fenix can only be loaded temporarily. We are working on supporting a setting on [Firefox for Android Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) to enable persistent loading for arbitrary extensions. You can follow progress by subscribing to [this issue](https://github.com/mozilla-mobile/fenix/issues/14034).
-
-New announcements around mobile extension support will be posted on the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android).
+Currently only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) are supported on the release channel. However, we are continuously working on increasing support, taking into account usage and feedback to ensure we are making the most of our available resources. We will post updates to [The Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android)) as plans solidify each quarter.
 
 If you are interested in Firefox for Android 68 and earlier (Fennec), please visit [this article](/documentation/develop/developing-extensions-for-firefox-for-android-fennec/).
 :::
@@ -137,8 +133,9 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 {% capture content %}
 
 ## Install and run your extension in Firefox for Android
-::: note alert
-Persistent loading is not yet supported on Firefox for Android 79+. These instructions are for temporary installation.
+
+::: note
+These instructions are for temporarily loading an extension. Instructions for persistent loading extensions in Firefox for Android Nightly can be found on [this blog post](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly/).
 :::
 
 In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the `manifest.json`:
