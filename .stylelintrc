@@ -28,7 +28,7 @@
     }],
     "declaration-colon-newline-after": null,
     "function-url-quotes": ["always"],
-    "function-blacklist": ["random"],
+    "function-disallowed-list": ["random"],
     "indentation": null,
     "max-nesting-depth": [5, {
       "ignore": ["blockless-at-rules"],
