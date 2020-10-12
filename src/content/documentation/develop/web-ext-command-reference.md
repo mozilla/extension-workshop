@@ -354,11 +354,15 @@ The signing API URL prefix. This should always be a string. If not specified, th
 
 Environment variable: `$WEB_EXT_API_URL_PREFIX`
 
+<section id="api-proxy"></section>
+
 #### `--api-proxy`
 
 A proxy host to use for all API connections. Example: `https://yourproxy:6000.`Read more about [how proxy requests work](https://github.com/request/request#proxies). There is a separate section about [signing in a restricted environment](/documentation/develop/getting-started-with-web-ext/#restricted-environment) if the proxy approach doesn't work for you.
 
 Environment variable: `$WEB_EXT_API_PROXY`
+
+<section id="channel"></section>
 
 #### `--channel`
 
@@ -492,6 +496,8 @@ If this is not specified, the default is the directory you are currently inside 
 :::
 
 Environment variable: `$WEB_EXT_SOURCE_DIR`
+
+<section id="verbose"></section>
 
 ### `--verbose`, `-v`
 
