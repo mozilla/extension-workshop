@@ -182,7 +182,7 @@ web-ext run -t firefox-android --adb-device XXX --firefox-apk org.mozilla.fenix
 Currently, you cannot inspect the markup of Fenix's browserAction popups using the Firefox Developer Tools Inspector (see [bug 1637616](https://bugzilla.mozilla.org/show_bug.cgi?id=1637616)). As a workaround, we recommend that you temporarily change the extension to open the popup extension page into a tab to be able to inspect it.
 :::
 
-You can debug your extension in the web developer tools and view any `manifest.json` validation messages using `adb logcat`. To make use of these features, first set up Firefox remote debugging [over USB](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE#Enable_remote_debugging_in_Firefox_for_Android) or [Wi-Fi](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi).
+You can debug your extension in the web developer tools and view any `manifest.json` validation messages using `adb logcat`. To make use of these features, first set up Firefox remote debugging [over USB](https://developer.android.com/studio/debug/dev-options) or [Wi-Fi](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi).
 
 ### Using web development tools to debug your extension
 

@@ -109,7 +109,7 @@ There are some other UI features not supported, these are:
 - [`sessions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/sessions), which means you cannot list and restore tabs that have been closed while the browser has been running.
 - The [`options_ui`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/options_ui) `manifest.json` key can be used only from Firefox for Android version 57 and above.
 
-Developer tools for Firefox for Android are provided through remote debugging mechanisms [over USB](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE) or [Wi-Fi](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi) that connect to the WebIDE on a desktop. Therefore, Firefox for Android does not provide any built-in developer tools and its extensions do not support the APIs to extend the developer tools:
+Developer tools for Firefox for Android are provided through remote debugging mechanisms [over USB](https://developer.android.com/studio/debug/dev-options) or [Wi-Fi](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi) that connect to the WebIDE on a desktop. Therefore, Firefox for Android does not provide any built-in developer tools and its extensions do not support the APIs to extend the developer tools:
 
 - [`devtools.inspectedWindow`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow)
 - [`devtools.network`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network)
