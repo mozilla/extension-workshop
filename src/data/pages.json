@@ -421,6 +421,10 @@
                 ]
               },
               {
+                "title": "User experience guidelines for mobile extensions",
+                "url": "/documentation/develop/ux-guidelines-for-mobile-extensions/"
+              },
+              {
                 "title": "Developing extensions for Firefox for Android",
                 "url": "/documentation/develop/developing-extensions-for-firefox-for-android/",
                 "subpageitems": [
