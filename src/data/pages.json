@@ -421,6 +421,28 @@
                 ]
               },
               {
+                "title": "User experience guidelines for mobile extensions",
+                "url": "/documentation/develop/user-experience-guidelines-for-mobile-extensions/",
+                "subpageitems": [
+                  {
+                    "title": "Introduction",
+                    "id": "introduction"
+                  },
+                  {
+                    "title": "The basics",
+                    "id": "the-basics"
+                  },
+                  {
+                    "title": "The extra mile",
+                    "id": "the-extra-mile"
+                  },
+                  {
+                    "title": "The last mile",
+                    "id": "the-last-mile"
+                  }
+                ]
+              },
+              {
                 "title": "Developing extensions for Firefox for Android",
                 "url": "/documentation/develop/developing-extensions-for-firefox-for-android/",
                 "subpageitems": [
