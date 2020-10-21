@@ -17,8 +17,7 @@ date: 2020-10-19
 {% capture page_hero_banner_content %}
 
 # User Experience Guidelines for Mobile Extensions
-
-TEST TEST TEST
+Make your extension seamlessly integrate with Firefox for Android
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -34,9 +33,9 @@ TEST TEST TEST
 # Introduction
 
 ::: note alert
-In August 2020, Mozilla launched a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
+In August 2020, Mozilla [launched](https://blog.mozilla.org/blog/2020/08/25/introducing-a-new-firefox-for-android-experience/) a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
 
-Currently, only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) are supported. However, we are continuously working on increasing support, taking into account usage and feedback to ensure we are making the most of our available resources. We will post updates to [The Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=differences-between-desktop-and-android-extensions) as plans solidify each quarter.
+Currently, only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) are supported. However, we are continuously working on increasing support, taking into account usage and feedback to ensure we are making the most of our available resources. We will post updates to the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=differences-between-desktop-and-android-extensions) as plans solidify each quarter.
 :::
 
 To make sure your users have a great experience with your extension on Firefox for Android, you’ll want to make sure your extension’s user interface integrates well with the browser.
@@ -64,7 +63,7 @@ Pass your colors through WebAIM’s [Color Contrast Checker](https://webaim.org/
 
 ## Layout
 
-- Optimise for a 360 × 640 dp layout
+- Optimise for a 360 × 640 dp layout.
 
 - Follow Material Design's [touch targets guidelines](https://material.io/design/usability/accessibility.html#layout-and-typography).
 
