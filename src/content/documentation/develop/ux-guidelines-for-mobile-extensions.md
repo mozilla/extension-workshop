@@ -21,7 +21,7 @@ Make your extension seamlessly integrate with Firefox for Android
 
 {% endcapture %}
 {% include modules/page-hero.liquid
-    content: page_hero_banner_content
+  content: page_hero_banner_content
 %}
 
 <!-- END: Page Hero Banner -->
@@ -30,7 +30,7 @@ Make your extension seamlessly integrate with Firefox for Android
 
 {% capture content_with_toc %}
 
-# Introduction
+## Introduction
 
 ::: note alert
 In August 2020, Mozilla [launched](https://blog.mozilla.org/blog/2020/08/25/introducing-a-new-firefox-for-android-experience/) a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
@@ -54,20 +54,20 @@ This article provides guidelines for optimizing your extension’s user experien
 
 {% capture content %}
 
-# The basics
+## The basics
 Make your extension’s stylesheet responsive and follow these key guidelines to ensure that your extension works well for as many people as possible on a variety of devices.
 
-## Color contrast
+### Color contrast
 
 Pass your colors through WebAIM’s [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). They should pass WCAG AA level.
 
-## Layout
+### Layout
 
 - Optimise for a 360 × 640 dp layout.
 
 - Follow Material Design's [touch targets guidelines](https://material.io/design/usability/accessibility.html#layout-and-typography).
 
-## Typography
+### Typography
 
 - Use [Roboto](https://fonts.google.com/specimen/Roboto), the standard Android font family.
 
@@ -85,38 +85,38 @@ Pass your colors through WebAIM’s [Color Contrast Checker](https://webaim.org/
 
 {% capture content %}
 
-# The extra mile
+## The extra mile
 
 To provide a seamless experience between your extension and the browser, use the guidelines in this section to make your extension match Firefox for Android’s look and feel.
 
-## Themes
+### Themes
 
 - Use the Protocol Design System's [color palette](https://protocol.mozilla.org/fundamentals/color.html).
 
 - Match Firefox for Android's [color usage](https://www.figma.com/proto/TebIgESfWmQkMcEmwNaYZl/Android?node-id=0%3A498&viewport=-4823%2C213%2C0.5&scaling=min-zoom&hide-ui=1) for light and dark themes.
 
-## Color contrast
+### Color contrast
 
 Pass your colors through WebAIM’s [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). They should pass WCAG AAA level.
 
-## Typography
+### Typography
 
-### Font family
+#### Font family
 
 Match the font families used in Firefox for Android:
 
 - [Inter](https://fonts.google.com/specimen/Inter) for body and capition context
 - [Metropolis](https://www.1001fonts.com/metropolis-font.html) for headlines, subtitles, and buttons
 
-### Type scale
+#### Type scale
 
 Follow the [Firefox for Android typographic scale](https://www.figma.com/proto/TebIgESfWmQkMcEmwNaYZl/Android?node-id=0%3A806&viewport=115%2C161%2C0.5&scaling=min-zoom).
 
-## Iconography
+### Iconography
 
 Use either [Photon Android icons](https://design.firefox.com/icons/viewer/) or [Material icons](https://material.io/resources/icons/).
 
-## Components
+### Components
 
 Frequently used elements in your extension should use mobile-optimised [Material Web Components](https://material-components.github.io/material-components-web-catalog/). They may include:
 
@@ -138,15 +138,15 @@ Frequently used elements in your extension should use mobile-optimised [Material
 
 {% capture content %}
 
-# The last mile
+## The last mile
 
 If you’d like your extension to behave as though it is integrated in the browser, use these guidelines to design your extension to be mobile-native.
 
-## Layout and typography
+### Layout and typography
 
 Rebuild your extension's layout using the [Material Web Components Layout Grid](https://material-components.github.io/material-components-web-catalog/#/component/layout-grid).
 
-## Components
+### Components
 
 Most if not all elements in your extension should use mobile-optimised [Material Web Components](https://material-components.github.io/material-components-web-catalog/):
 - [Tab bar](https://material-components.github.io/material-components-web-catalog/#/component/tabs)
