@@ -1,7 +1,7 @@
 ---
 layout: sidebar
 title: Differences between desktop and Android extensions
-permalink: /documentation/develop/ux-guidelines-for-mobile-extensions/
+permalink: /documentation/develop/user-experience-guidelines-for-mobile-extensions/
 topic: Develop
 tags: [add-ons, guide, mobile, webextensions, ux, user-experience]
 contributors:
