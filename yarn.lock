@@ -7,12 +7,13 @@
   resolved "https://registry.yarnpkg.com/@11ty/dependency-tree/-/dependency-tree-1.0.0.tgz#b1fa53da49aafe0ab3fe38bc6b6058b704aa59a1"
   integrity sha512-2FWYlkphQ/83MG7b9qqBJfJJ0K9zupNz/6n4EdDuNLw6hQHGp4Sp4UMDRyBvA/xCTYDBaPSuSjHuu45tSujegg==
 
-"@11ty/eleventy-plugin-syntaxhighlight@3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-syntaxhighlight/-/eleventy-plugin-syntaxhighlight-3.0.2.tgz#c154693af0f659f80241f074d70698920047c490"
-  integrity sha512-vUmra5vGyM8pauPErIqxl7QX+CgOmH2dVPRr0Sax0jv0YSYwKbquWP+VJvtwnFLTxEeUD0gtN/NI2GKcFuvB8w==
+"@11ty/eleventy-plugin-syntaxhighlight@3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-syntaxhighlight/-/eleventy-plugin-syntaxhighlight-3.0.4.tgz#60b134e5054953008d01ff0250705b821ac9f5b0"
+  integrity sha512-wMFIo74AZil2vk+BeaDyXd0eQcmrTIEDNrpPPEIChgRnS+pJIkFpDz0LJM73x1dUltpaVU4UlYHRD52ueMAyHQ==
   dependencies:
-    prismjs "^1.17.1"
+    jsdom "^16.4.0"
+    prismjs "^1.21.0"
 
 "@11ty/eleventy@0.11.0":
   version "0.11.0"
@@ -5755,7 +5756,7 @@ pretty@^2.0.0:
     extend-shallow "^2.0.1"
     js-beautify "^1.6.12"
 
-prismjs@1.22.0, prismjs@^1.17.1:
+prismjs@1.22.0, prismjs@^1.21.0:
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.22.0.tgz#73c3400afc58a823dd7eed023f8e1ce9fd8977fa"
   integrity sha512-lLJ/Wt9yy0AiSYBf212kK3mM5L8ycwlyTlSxHBAneXLR0nzFMlZ5y7riFPF3E33zXOF2IH95xdY5jIyZbM9z/w==

@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "0.11.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "3.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "3.0.4",
     "chalk": "4.1.0",
     "chokidar-cli": "2.1.0",
     "clean-css": "4.2.3",
