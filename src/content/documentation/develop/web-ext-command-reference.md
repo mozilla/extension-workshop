@@ -23,9 +23,10 @@ contributors:
     sharang,
     chrisdavidmills,
     noraj,
+    akhilpanchal
   ]
-last_updated_by: noraj
-date: 2020-10-11 18:11:47
+last_updated_by: akhilpanchal
+date: 2020-11-15 12:46:15
 ---
 
 <!-- Page Hero Banner -->
@@ -243,6 +244,12 @@ Specify a base Firefox profile to run the extension in. This is specified as a s
 If a profile is not specified, it runs the extension using a new temporary profile.
 
 Environment variable: `$WEB_EXT_FIREFOX_PROFILE`
+
+#### `--profile-create-if-missing`
+
+This option is to be used with `--firefox-profile` or `--chromium-profile`. With this option, the profile option provided will be treated as a directory path and if the directory does not exist, it will be created.
+
+Environment variable: `$WEB_EXT_PROFILE_CREATE_IF_MISSING`
 
 #### `--keep-profile-changes`
 
