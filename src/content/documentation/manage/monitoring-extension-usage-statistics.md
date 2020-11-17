@@ -64,7 +64,7 @@ The easiest way to access the dashboard is to sign in to AMO and navigate to “
 
 # Tracking external sources
 
-If you link to your add-on’s listing page or directly to its file from an external site, such as your blog or website, you can append the following [standard UTM parameters](https://en.wikipedia.org/wiki/UTM_parameters) to be tracked as additional sources on your download statistics dashboard:
+If you link to your add-on’s listing page you can append the following [standard UTM parameters](https://en.wikipedia.org/wiki/UTM_parameters) to be tracked as additional sources on your download statistics dashboard:
 
 <!-- Table -->
 
@@ -81,6 +81,10 @@ If you link to your add-on’s listing page or directly to its file from an exte
 {% include modules/table.liquid
 	content: table
 %}
+
+::: note
+The statistics dashboard will only counted installs from the AMO listing page. Installs from other sources, such as .xpi downloads from a website or blog, are not counted on the dashboard. 
+:::
 
 <!-- END: Table -->
 
