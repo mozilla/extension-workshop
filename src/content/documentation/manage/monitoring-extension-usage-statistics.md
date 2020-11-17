@@ -83,7 +83,7 @@ If you link to your add-on’s listing page you can append the following [standa
 %}
 
 ::: note
-The statistics dashboard will only counted installs from the AMO listing page. Installs from other sources, such as .xpi downloads from a website or blog, are not counted on the dashboard. 
+The statistics dashboard will only count installs from the AMO listing page. Installs from other sources, such as .xpi downloads from a website or blog, are not counted on the dashboard. 
 :::
 
 <!-- END: Table -->
