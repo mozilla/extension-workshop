@@ -250,7 +250,7 @@ Environment variable: `$WEB_EXT_FIREFOX_PROFILE`
 With this option, the profile directory (specified by the `--firefox-profile` or `--chromium-profile` options) will be created if it does not exist yet. 
 
 ::: note alert
-When this option is specified the `--firefox-profile` option is always treated as a directory path.
+When this option is specified, the `--firefox-profile` option is always treated as a directory path.
 :::
 
 Environment variable: `$WEB_EXT_PROFILE_CREATE_IF_MISSING`
