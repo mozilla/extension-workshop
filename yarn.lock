@@ -5819,10 +5819,10 @@ posthtml-urls@1.0.0:
     parse-srcset "^1.0.2"
     promise-each "^2.2.0"
 
-posthtml@0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.14.0.tgz#718603bd484e94a57c64ffcccfa8dac4c560081d"
-  integrity sha512-OvMSnQWKJXQKm+q33LP6LVNU3EPwQ1ZA1xCUgde/jpAX7dTWHgQrtFPvkLMLbUlqUS1ouRHicHR5JHVB7MuQtQ==
+posthtml@0.15.1:
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/posthtml/-/posthtml-0.15.1.tgz#1848064f48a1cca0e0323752b1d26fed32e180b8"
+  integrity sha512-QSnUnvnnRv+wt7T9igqNG7GPcc+ZsbX93X+9aPldzgiuQfqIXTbnD47FY8pAtq4gjB9QZrDadDuG8jusmOPpYA==
   dependencies:
     posthtml-parser "^0.6.0"
     posthtml-render "^1.2.3"
