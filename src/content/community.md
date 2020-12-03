@@ -5,7 +5,7 @@ permalink: /community/
 tags: [community, contribute, webextensions]
 contributors: [caitmuenster, grlwholifts]
 author: caitmuenster
-date: 2020-03-06 09:00:00
+date: 2020-12-03 
 ---
 
 <!-- Overview Page Hero Banner -->
@@ -51,10 +51,6 @@ There are several ways to stay up-to-date with Firefox add-on technology and con
 ### Add-ons blog
 
 Stay up to date with the latest information about add-on technology on the [Add-ons blog](https://blog.mozilla.org/addons).
-
-### Email list
-
-Subscribe to our [mailing list](https://mail.mozilla.org/listinfo/dev-addons) dedicated to the development of the add-on ecosystem, including the site addons.mozilla.org (AMO), WebExtensions APIs, and public meetings.
 
 ### Questions about add-on development
 
