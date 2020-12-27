@@ -559,7 +559,6 @@ So, for example, instead of specifying the following source option every time yo
 
 ```shell
 web-ext run --source-dir=/path/to/my/extension
-
 ```
 
 You could set the source directory as an environment variable like this:
