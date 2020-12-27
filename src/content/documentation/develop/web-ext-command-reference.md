@@ -347,7 +347,7 @@ A list of paths and globs patterns that should not be watched for changes. This 
 web-ext run --watch-ignored path/to/file.js path/to/directory/to-be/ignored
 ```
 
-::: alert
+::: note alert
 This option is most useful to linux users to avoid invoking `Error: ENOSPC: System limit for number of file watchers reached`. Visit [Issue #2022](https://github.com/mozilla/web-ext/issues/2022) for more context.
 :::
 
