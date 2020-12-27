@@ -23,10 +23,11 @@ contributors:
     sharang,
     chrisdavidmills,
     noraj,
-    akhilpanchal
+    akhilpanchal,
+    ankushduacodes,
   ]
-last_updated_by: akhilpanchal
-date: 2020-12-03 
+last_updated_by: ankushduacodes
+date: 2020-12-27
 ---
 
 <!-- Page Hero Banner -->
@@ -339,6 +340,18 @@ web-ext run --start-url www.mozilla.com --start-url developer.mozilla.org
 
 Environment variable: `$WEB_EXT_START_URL`
 
+#### `--watch-ignored`
+A list of paths and globs patterns that should not be watched for changes. This is useful if you want to explicitly prevent web-ext from watching part of the extension directory tree, e.g. the node_modules folder.
+
+```shell
+web-ext run --watch-ignored path/to/file.js path/to/directory/to-be/ignored
+```
+
+::: alert
+This option is most useful to linux users to avoid invoking `Error: ENOSPC: System limit for number of file watchers reached`. Visit [Issue #2022](https://github.com/mozilla/web-ext/issues/2022) for more context.
+:::
+
+
 <section id="web-ext-sign"></section>
 
 ### `web-ext sign`
@@ -546,6 +559,7 @@ So, for example, instead of specifying the following source option every time yo
 
 ```shell
 web-ext run --source-dir=/path/to/my/extension
+
 ```
 
 You could set the source directory as an environment variable like this:
