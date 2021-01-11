@@ -341,6 +341,7 @@ web-ext run --start-url www.mozilla.com --start-url developer.mozilla.org
 Environment variable: `$WEB_EXT_START_URL`
 
 #### `--watch-ignored`
+
 A list of paths and globs patterns that should not be watched for changes. This is useful if you want to explicitly prevent web-ext from watching part of the extension directory tree, e.g. the node_modules folder.
 
 ```shell
