@@ -345,7 +345,7 @@ Environment variable: `$WEB_EXT_START_URL`
 A list of paths and globs patterns that should not be watched for changes. This is useful if you want to explicitly prevent web-ext from watching part of the extension directory tree, e.g. the node_modules folder.
 
 ```shell
-web-ext run --watch-ignored path/to/file.js path/to/*.js path/**
+web-ext run --watch-ignored dir1/to/file.js dir2/*.js dir3/**
 ```
 
 ::: note alert
