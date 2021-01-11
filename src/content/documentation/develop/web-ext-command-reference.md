@@ -27,7 +27,7 @@ contributors:
     ankushduacodes,
   ]
 last_updated_by: ankushduacodes
-date: 2020-12-27
+date: 2021-01-11
 ---
 
 <!-- Page Hero Banner -->
@@ -344,13 +344,12 @@ Environment variable: `$WEB_EXT_START_URL`
 A list of paths and globs patterns that should not be watched for changes. This is useful if you want to explicitly prevent web-ext from watching part of the extension directory tree, e.g. the node_modules folder.
 
 ```shell
-web-ext run --watch-ignored path/to/file.js path/to/directory/to-be/ignored
+web-ext run --watch-ignored path/to/file.js path/to/*.js path/**
 ```
 
 ::: note alert
 This option is most useful to linux users to avoid invoking `Error: ENOSPC: System limit for number of file watchers reached`. Visit [Issue #2022](https://github.com/mozilla/web-ext/issues/2022) for more context.
 :::
-
 
 <section id="web-ext-sign"></section>
 
