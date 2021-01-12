@@ -349,8 +349,7 @@ web-ext run --watch-ignored dir1/to/file.js dir2/*.js dir3/**
 ```
 
 ::: note alert
-This option is useful to prevent issues when the number of watched files is higher than what the underlying OS feature allows.
-As an example, on Linux a `Error: ENOSPC: System limit for number of file watchers reached` exception is raised if too many files are being watched (See [web-ext#2022](https://github.com/mozilla/web-ext/issues/2022)).
+This option is useful to prevent issues when the number of watched files is higher than what the underlying OS feature allows. As an example, on Linux a `Error: ENOSPC: System limit for number of file watchers reached` exception is raised if too many files are being watched (See [web-ext#2022](https://github.com/mozilla/web-ext/issues/2022)).
 :::
 
 <section id="web-ext-sign"></section>
