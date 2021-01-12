@@ -23,10 +23,11 @@ contributors:
     sharang,
     chrisdavidmills,
     noraj,
-    akhilpanchal
+    akhilpanchal,
+    ankushduacodes,
   ]
-last_updated_by: akhilpanchal
-date: 2020-12-03 
+last_updated_by: ankushduacodes
+date: 2021-01-11
 ---
 
 <!-- Page Hero Banner -->
@@ -338,6 +339,18 @@ web-ext run --start-url www.mozilla.com --start-url developer.mozilla.org
 ```
 
 Environment variable: `$WEB_EXT_START_URL`
+
+#### `--watch-ignored`
+
+A list of paths and globs patterns that should not be watched for changes. This is useful if you want to explicitly prevent web-ext from watching part of the extension directory tree, e.g. the node_modules folder.
+
+```shell
+web-ext run --watch-ignored dir1/to/file.js dir2/*.js dir3/**
+```
+
+::: note alert
+This option is useful to prevent issues when the number of watched files is higher than what the underlying OS feature allows. As an example, on Linux a `Error: ENOSPC: System limit for number of file watchers reached` exception is raised if too many files are being watched (See [web-ext#2022](https://github.com/mozilla/web-ext/issues/2022)).
+:::
 
 <section id="web-ext-sign"></section>
 
