@@ -264,7 +264,7 @@ Entire Agreement. This Agreement constitutes the whole legal agreement between Y
 
 **(e) Modification.** Mozilla may periodically update this Agreement. The updated Agreement will be available online. If the changes are substantive, we will announce the update through Mozilla’s usual channels for such announcements such as blog posts, forums, or email. Your continued distribution of Your Add-on after the effective date of such changes constitutes Your acceptance of such changes. To make Your review more convenient, we will post an effective date on the Agreement.
 
-**(f) Contact Us.** If You have questions about this Agreement, send an email to [legal-notices@mozilla.com](mailto:legal-notices@mozilla.com) or mail us at: Attn: Mozilla – Legal Notices, 331 E. Evelyn Ave., Mountain View, CA 94041.
+**(f) Contact Us.** If You have questions about this Agreement, send an email to [legal-notices@mozilla.com](mailto:legal-notices@mozilla.com) or mail us at: Attn: Mozilla – Legal Notices, 2 Harrison St. #175, San Francisco, CA 94105.
 
 {% endcapture %}
 {% include modules/one-column.liquid
