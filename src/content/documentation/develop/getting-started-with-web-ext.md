@@ -23,7 +23,7 @@ contributors:
     ankushduacodes
   ]
 last_updated_by: ankushduacodes
-date: 2021-01-23 23:47:23 UTC
+date: 2021-01-23 23:47:23
 ---
 
 <!-- Page Hero Banner -->

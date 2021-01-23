@@ -15,9 +15,9 @@ tags:
     translation,
     webextensions,
   ]
-contributors: [rebloor, mdnwebdocs-bot, hellosct1, ani-sha]
-last_updated_by: ani-sha
-date: 2020-03-24 12:47:00
+contributors: [rebloor, mdnwebdocs-bot, hellosct1, ani-sha, ankushduacodes]
+last_updated_by: ankushduacodes
+date: 2021-01-23 00:04:00
 ---
 
 <!-- Page Hero Banner -->
@@ -90,7 +90,7 @@ To get started, [visit the tool online](https://webextensions.in/) or [install i
 
 ### WebExtensions Example
 
-The webextensions-examples GitHub repository is a collection browser extension examples. Each example is a complete working extension that you can install and run in Firefox. You are free to use these examples as the starting point for your browser extensions, as they are made available under the [Mozilla Public License 2.0.](https://www.mozilla.org/MPL/2.0/)
+The [webextensions-examples GitHub repository](https://github.com/mdn/webextensions-examples) is a collection browser extension examples. Each example is a complete working extension that you can install and run in Firefox. You are free to use these examples as the starting point for your browser extensions, as they are made available under the [Mozilla Public License 2.0.](https://www.mozilla.org/MPL/2.0/)
 
 {% endcapture %}
 {% capture aside %}
