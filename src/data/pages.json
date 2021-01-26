@@ -1268,6 +1268,20 @@
             "category": "Enterprise resources",
             "pages": [
               {
+                "title": "Adding policy support to your extension",
+                "url": "/documentation/enterprise/adding-policy-support-to-your-extension/",
+                "subpageitems": [
+                  {
+                    "title": "How to add policy support",
+                    "id": "how-to-add"
+                  },
+                  {
+                    "title": "Distributing your policy",
+                    "id": "distributing-your-policy"
+                  }
+                ]
+              },
+              {
                 "title": "Enterprise policies that impact extensions",
                 "url": "/documentation/enterprise/enterprise-policies-that-impact-extensions/",
                 "subpageitems": [
