@@ -23,7 +23,7 @@ contributors:
     ankushduacodes
   ]
 last_updated_by: ankushduacodes
-date: 2021-01-23 23:47:23
+date: 2021-01-27 23:47:23
 ---
 
 <!-- Page Hero Banner -->
@@ -86,7 +86,7 @@ web-ext --version
 
 ## Using web-ext
 
-Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the [webextensions-examples](https://github.com/mdn/webextensions-examples) repo. If you would like to start from scratch, use our [boilerplating tool](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/#boilerplating-tools) to get started with a fresh extension.
+Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the [webextensions-examples](https://github.com/mdn/webextensions-examples) repo. If you would like to start from scratch, use our community developed [boilerplating tool](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/#boilerplating-tools) to get started with a fresh extension.
 
 <section id="testing-out-an-extension"></section>
 
@@ -268,7 +268,6 @@ web-ext sign --api-key=... --api-secret=... --id="{c23c69a7-f889-447c-9d6b-7694b
 ```
 
 <section id="restricted-environment"></section>
-
 ### Signing in a restricted environment
 
 If you're working in an environment that restricts access to certain domains, you can try using a proxy when signing:
@@ -285,7 +284,6 @@ The following domains are used for signing and downloading files:
 - `addons.cdn.mozilla.net`
 
 <section id="signing-test-version-listed"></section>
-
 ### Signing a test version of a listed extension
 
 If you've [listed](/documentation/publish/submitting-an-add-on/) an extension on [addons.mozilla.org](https://addons.mozilla.org/), use `web-ext` to create a signed but [unlisted](/documentation/publish/self-distribution/) version for testing purposes. For example, you may wish to distribute an alpha or beta version to users for early feedback and testing.
@@ -326,7 +324,6 @@ This uses the [addons-linter](https://github.com/mozilla/addons-linter) library 
 See the [lint reference guide](/documentation/develop/web-ext-command-reference/#web-ext-lint) to learn more.
 
 <section id="setting-option-defaults-in-a-configuration-file"></section>
-
 ### Setting option defaults in a configuration file
 
 You can specify `--config=my-config.js` to set default values for any option. Here is an example with the `build` command:
