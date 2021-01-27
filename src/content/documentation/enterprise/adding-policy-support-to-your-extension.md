@@ -6,7 +6,7 @@ topic: Enterprise
 tags: [enterprise, policies]
 contributors: [mkaply]
 last_updated_by: mkaply
-date: 2021-01-26
+date: 2021-01-27
 ---
 
 <!-- Page Hero Banner -->
@@ -109,7 +109,6 @@ Below are two basic examples:
 
 <!-- START: Syntax Highlighting -->
 ```xml
-
 <policyDefinitions revision="1.0" schemaVersion="1.0">
   <policyNamespaces>
     <target prefix="NameOfYourExtension" namespace="Mozilla.Policies.NameOfYourExtension"/>
@@ -169,7 +168,6 @@ Below are two basic examples:
 #### ADML file 
 <!-- START: Syntax Highlighting -->
 ```xml
-
 <?xml version="1.0" encoding="utf-8"?>
 <policyDefinitionResources revision="1.0" schemaVersion="1.0">
   <displayName/>
@@ -212,7 +210,6 @@ macOS uses configuration profiles for policy configuration. macOS administrators
 
 <!-- START: Syntax Highlighting -->
 ```xml
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -242,7 +239,7 @@ macOS uses configuration profiles for policy configuration. macOS administrators
 <!-- END: Syntax Highlighting -->
 
 ### Linux 
-For Linux, you can provide a sample policies.json similar to what was provided earlier in this document. Policies.json is the only mechanism supported on Linux.
+For Linux, you can provide a sample `policies.json` similar to what was provided earlier in this document. Policies.json is the only mechanism supported on Linux.
 
 {% endcapture %}
 {% include modules/one-column.liquid
