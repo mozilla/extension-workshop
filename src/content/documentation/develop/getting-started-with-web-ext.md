@@ -20,9 +20,10 @@ contributors:
     arai,
     tofumatt,
     chrisdavidmills,
+    ankushduacodes
   ]
-last_updated_by: caitmuenster
-date: 2019-11-06 10:25:55
+last_updated_by: ankushduacodes
+date: 2021-01-27 23:47:23
 ---
 
 <!-- Page Hero Banner -->
@@ -85,7 +86,7 @@ web-ext --version
 
 ## Using web-ext
 
-Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the [webextensions-examples](https://github.com/mdn/webextensions-examples) repo.
+Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the [webextensions-examples](https://github.com/mdn/webextensions-examples) repo. If you would like to start from scratch, use our community developed [boilerplating tool](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/#boilerplating-tools) to get started with a fresh extension.
 
 <section id="testing-out-an-extension"></section>
 

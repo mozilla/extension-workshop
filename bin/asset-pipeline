@@ -288,7 +288,7 @@ class AssetPipeline {
   async rewriteCSS(origPath, key, assetMap = this.assetMap) {
     let css = await fs.readFile(origPath, 'utf8');
     let replacementsCount = 0;
-    const output = postcss()
+    const output = await postcss()
       .use(
         postcssURL({
           url: (asset) => {
