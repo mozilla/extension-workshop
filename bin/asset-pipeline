@@ -10,7 +10,7 @@ const posthtml = require('posthtml');
 const posthtmlBeautify = require('posthtml-beautify');
 const posthtmlURL = require('posthtml-urls');
 const posthtmlCSS = require('posthtml-postcss');
-const Terser = require('terser');
+const { minify } = require('terser');
 const acorn = require('acorn');
 const walk = require('acorn-walk');
 const Url = require('url-parse');
@@ -194,7 +194,7 @@ class AssetPipeline {
       code = self.spliceString(code, startPos, endPos, replacement);
     }
 
-    const minified = Terser.minify(code);
+    const minified = await minify(code);
 
     if (minified.error) {
       throw new Error(minified.error);
