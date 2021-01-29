@@ -11,6 +11,8 @@ const posthtmlBeautify = require('posthtml-beautify');
 const posthtmlURL = require('posthtml-urls');
 const posthtmlCSS = require('posthtml-postcss');
 const Terser = require('terser');
+const acorn = require('acorn');
+const walk = require('acorn-walk');
 const Url = require('url-parse');
 
 const assetsDirPrefix = '/assets';
@@ -160,18 +162,18 @@ class AssetPipeline {
 
   async rewriteJS(origPath, key, assetMap = this.assetMap) {
     let code = await fs.readFile(origPath, 'utf8');
-    const ast = Terser.parse(code);
+    const ast = acorn.parse(code, { ecmaVersion: 6 });
     const pathNodes = [];
     const self = this;
-    ast.walk(
-      new Terser.TreeWalker(function (node) {
-        if (node instanceof Terser.AST_String) {
-          if (self.hasHashedReplacementURL(node.getValue())) {
+    walk.simple(ast, {
+      Literal(node) {
+        if (typeof node.value === 'string') {
+          if (self.hasHashedReplacementURL(node.value)) {
             pathNodes.push(node);
           }
         }
-      })
-    );
+      },
+    });
     // now go through the nodes backwards and replace code
     const replacementsCount = pathNodes.length;
     if (replacementsCount) {
@@ -183,12 +185,13 @@ class AssetPipeline {
     }
     for (var i = pathNodes.length; --i >= 0; ) {
       const node = pathNodes[i];
-      const start_pos = node.start.pos;
-      const end_pos = node.end.endpos;
-      const replacement = new Terser.AST_String({
-        value: self.getReplacementURL(node.getValue(), assetMap),
-      }).print_to_string({ beautify: true });
-      code = self.spliceString(code, start_pos, end_pos, replacement);
+      const startPos = node.start;
+      const endPos = node.end;
+      const replacement = node.raw.replace(
+        node.value,
+        self.getReplacementURL(node.value, assetMap)
+      );
+      code = self.spliceString(code, startPos, endPos, replacement);
     }
 
     const minified = Terser.minify(code);
