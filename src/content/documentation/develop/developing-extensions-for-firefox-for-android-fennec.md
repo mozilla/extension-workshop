@@ -27,15 +27,18 @@ Legacy guide to developing extensions for Firefox for Android version 68 and ear
 
 {% capture content_with_toc %}
 
+[ext-link]:/documentation/develop/getting-started-with-web-ext/
+[tools-link]:https://developer.android.com/studio/releases/platform-tools.html
+
 ::: note alert
 This article discusses developing extensions for Firefox for Android for version 68 or earlier (codenamed "Fennec"). Fennec is no longer supported and has been replaced by a new, reimagined mobile browsing experience (codenamed "Fenix"). For more information about developing extensions for Fenix, please see [this article](/documentation/develop/developing-extensions-for-firefox-for-android/).
 :::
 
 You'll approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code. However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process.
 
-Using [web-ext](/documentation/develop/getting-started-with-web-ext/) in your extension development is recommended. Follow the set up and debugging processes described here, but use [`web-ext run`](/documentation/develop/web-ext-command-reference#web-ext-run) to execute your extension on Firefox for Android. Among other advantages, using [web-ext](/documentation/develop/getting-started-with-web-ext/) automatically restarts your extension on Firefox for Android when you make edits. Also, you can take advantage of [`web-ext lint`](/documentation/develop/web-ext-command-reference/#web-ext-lint), which performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android.
+Using [web-ext][ext-link] in your extension development is recommended. Follow the set up and debugging processes described here, but use [`web-ext run`](/documentation/develop/web-ext-command-reference#web-ext-run) to execute your extension on Firefox for Android. Among other advantages, using [web-ext][ext-link] automatically restarts your extension on Firefox for Android when you make edits. Also, you can take advantage of [`web-ext lint`](/documentation/develop/web-ext-command-reference/#web-ext-lint), which performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android.
 
-However, instructions are provided for the steps you need to take should you choose not to use [web-ext](/documentation/develop/getting-started-with-web-ext/).
+However, instructions are provided for the steps you need to take should you choose not to use [web-ext][ext-link].
 
 ## Set up your computer and Android emulator or device
 
@@ -46,17 +49,17 @@ On your development computer:
 - To test on your computer by running Firefox for Android in the Android emulator and in Firefox for Android running on a device:
 
   - Install [Android Studio](https://developer.android.com/studio/index.html).
-  - Use the Android Studio [SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager) or the [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html) command-line tool to install the [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools.html).
+  - Use the Android Studio [SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager) or the [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html) command-line tool to install the [Android Platform Tools][tools-link].
 
 - To test in Firefox for Android running on a device only:
-  - Download and extract the [standalone Android SDK Platform-Tools package](https://developer.android.com/studio/releases/platform-tools.html) to a suitable location on your computer.
+  - Download and extract the [standalone Android SDK Platform-Tools package][tools-link] to a suitable location on your computer.
   - On Windows, Mac, or Linux: Add the location into which you extracted the tools package to your operating system’s `PATH` environment variable.
   - Alternatively, on Mac or Linux: Link the binary to `/usr/local/bin` using `sudo ln -s /<extract folder>/platform-tools/adb /usr/local/bin`.
 
 On your device or Android emulator:
 
 - Install [Firefox for Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox&referrer=utm_source%3Dmozilla%26utm_medium%3DReferral%26utm_campaign%3Dmozilla-org) and, if you wish to test the latest features, [Firefox for Android Beta](https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta) or [Firefox Nightly for Developers](https://play.google.com/store/apps/details?id=org.mozilla.fennec_aurora).
-- (If you're using [web-ext](/documentation/develop/getting-started-with-web-ext/), you can skip this step.) Open Firefox for Android and turn off signing by browsing to `about:config` then locating and setting `xpinstall.signatures.required` to `false`.
+- (If you're using [web-ext][ext-link], you can skip this step.) Open Firefox for Android and turn off signing by browsing to `about:config` then locating and setting `xpinstall.signatures.required` to `false`.
 
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-6">
@@ -71,7 +74,7 @@ If you are using a device:
 - [Enable Android USB debugging on the device](https://developer.android.com/studio/run/device.html). You need to follow step 2 only, but note that you may have to [enable the developer options](https://developer.android.com/studio/debug/dev-options.html) if you do not see them on your device.
 - Attach your device to the development computer using a USB cable and on the device, when prompted, allow USB debugging for the connection.
 
-(If you're using [web-ext](/documentation/develop/getting-started-with-web-ext/), you can skip this step.) On your development computer:
+(If you're using [web-ext][ext-link], you can skip this step.) On your development computer:
 
 - Open a command shell.
 - Run `adb devices` <br/>

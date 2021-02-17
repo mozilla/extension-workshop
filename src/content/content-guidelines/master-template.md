@@ -10,10 +10,12 @@ skip_index: true
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
 
+[img-content-guideline-link]: /assets/img/content-guidelines/example-remembear.png "Screenshot Remembear" 
+
 <!-- Full Width Image -->
 <section class="image-with-caption">
 
-![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Full width image (above)
+![Screenshot Remembear][img-content-guideline-link]Full width image (above)
 
 </section>
 <!-- END: Full Width Image -->
@@ -22,12 +24,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <section class="image-with-caption grid-container grid-x grid-padding-x">
 <div class="cell small-6">
 
-![Screenshot Remembear](/assets/content-guidelines/example-remembear.png "Screenshot Remembear") Half width image (above)
+![Screenshot Remembear][img-content-guideline-link] Half width image (above)
 
 </div>
 <div class="cell small-6">
 
-![Screenshot Remembear](/assets/img/content-guidelines/example-remembear.png "Screenshot Remembear") Half width image (above)
+![Screenshot Remembear][img-content-guideline-link] Half width image (above)
 
 </div>
 </section>
@@ -86,9 +88,11 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 </section>
 <!-- END: Image Grid -->
 
-Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
+[addons-link]:https://addons.mozilla.org 'addons.mozilla.org'
 
-Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org').
+Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org][addons-link], and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
+
+Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org][addons-link].
 
 Between your extension name and subtitle, you have up to 70 characters to use—that’s because 70 is the max character limit for your headline in external search results. It’s best to keep your extension name shorter so you have more characters left over for your subtitle.
 
@@ -287,6 +291,8 @@ Pull out the key words (nouns, adjectives, verbs) and phrases from your descript
 
 Remembear: dolore eu fugiat nulla pariatur lemera dosada peel.
 
-- [Extension Link ](https://firefox.com 'Extension Link ')
-- [Extension Link ](https://firefox.com 'Extension Link ')
-- [Extension Link ](https://firefox.com 'Extension Link ')
+[extension-link]:https://firefox.com 'Extension Link '
+
+- [Extension Link ][extension-link]
+- [Extension Link ][extension-link]
+- [Extension Link ][extension-link]

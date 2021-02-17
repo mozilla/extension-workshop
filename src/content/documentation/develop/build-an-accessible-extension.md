@@ -15,6 +15,8 @@ date: 2019-05-01 9:08:50
 
 # Accessibility guidelines
 
+[moz-dev-link]:https://developer.mozilla.org/docs/Web/Accessibility
+
 When it comes to accessibility, extensions should follow the same guidelines as websites. However, extensions have unique features that deserve consideration when designing for accessibility. Here is a breakdown of extension features and how they should be used to make an extension accessible.
 
 There is more information on design and accessibility in the [Photon Design System](https://design.firefox.com/photon/) and [Accessibility and Mozilla](https://developer.mozilla.org/docs/Mozilla/Accessibility) section on MDN.
@@ -90,7 +92,7 @@ Add a shortcut to the button’s action, using the special shortcut `option _exe
 </td>
 <td>
 
-The markup in the popup should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the popup should follow [standard web accessibility guidelines].
 
 </td>
 </tr>
@@ -116,7 +118,7 @@ Add a shortcut to the button’s action, using the special shortcut `option _exe
 </td>
 <td>
 
-The markup in the popup should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the popup should follow [standard web accessibility guidelines][moz-dev-link].
 
 </td>
 </tr>
@@ -140,7 +142,7 @@ Context menu items provide an accessible way for users to discover extension fea
 </td>
 <td>
 
-The markup in the sidebar should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the sidebar should follow [standard web accessibility guidelines][moz-dev-link].
 
 Add a keyboard shortcut to open a sidebar, using the special shortcut `option _execute_sidebar_action`.
 
@@ -154,7 +156,7 @@ Add a keyboard shortcut to open a sidebar, using the special shortcut `option _e
 </td>
 <td>
 
-The markup in the options page should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the options page should follow [standard web accessibility guidelines][moz-dev-link].
 
 </td>
 </tr>
@@ -166,7 +168,7 @@ The markup in the options page should follow [standard web accessibility guideli
 </td>
 <td>
 
-The markup in the extension page should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the extension page should follow [standard web accessibility guidelines][moz-dev-link].
 
 </td>
 </tr>
@@ -203,7 +205,7 @@ Add suggestions as per the guide, there are no additional accessibility consider
 </td>
 <td>
 
-The markup in the sidebar should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the sidebar should follow [standard web accessibility guidelines][moz-dev-link].
 
 Offering a keyboard shortcut to open a devtools panel is recommended.
 
