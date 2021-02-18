@@ -37,7 +37,8 @@ Or how to avoid permissions discouraging users from installing your extensions.
 <div class="cell small-12">
 
 ## Introduction
-
+[manifest-json]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
+[optional-permission]:https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions
 With the introduction of Firefox Quantum (57) the handling of permissions when installing an extension changed. Previously, extensions were granted permissions silently. However, users are now informed of the permissions an extension is requesting when it's installed, with a message something like this:
 
 ![Example of the permissions messages from the Gesturefy extension](/assets/img/documentation/develop/General_permissions_message_example.png)
@@ -72,7 +73,7 @@ Tip: Permission warnings aren't issued [when you load an unpacked extension](/do
 
 ## Advised permissions
 
-Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) result in advice being given to the user. The permissions that trigger the display of a message and the messages they trigger are:
+Not all [permissions][manifest-json] result in advice being given to the user. The permissions that trigger the display of a message and the messages they trigger are:
 
 <!-- Table -->
 
@@ -150,7 +151,7 @@ This section looks at situations where you might be asking for more permissions 
 
 ### Ask for only the permissions your extension uses
 
-This may seem obvious, but if you create an extension by using an earlier example as a template or you remove a feature during development or testing, you may be asking for permissions your extension doesn't need. Addressing this is a case of doing a manual check of your code against the permissions ([`permissions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and [`optional_permissions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)) that you're requesting in the extension's `manifest.json`.
+This may seem obvious, but if you create an extension by using an earlier example as a template or you remove a feature during development or testing, you may be asking for permissions your extension doesn't need. Addressing this is a case of doing a manual check of your code against the permissions ([`permissions`][manifest-json] and [`optional_permissions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)) that you're requesting in the extension's `manifest.json`.
 
 ### Use "activeTab" rather than "tabs" and host permissions
 
@@ -209,7 +210,7 @@ A typical scenario for using this approach is the `"geoLocation"` permission. Sa
 
 ![Example of an additional or runtime permission request message](/assets/img/documentation/develop/Permissions_optional_request.png)
 
-Making a runtime permission request is straightforward. Include any permissions you want to request under the `manifest.json` `"[optional_permissions](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions)"` key. Then pass the permissions you want granted to [`WebExtAPIRef("permissions.request")`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. `true` is returned if the user grants the request, `false` if they don't.
+Making a runtime permission request is straightforward. Include any permissions you want to request under the `manifest.json` `"[optional_permissions][optional-permission]"` key. Then pass the permissions you want granted to [`WebExtAPIRef("permissions.request")`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. `true` is returned if the user grants the request, `false` if they don't.
 
 You can't request all the permissions available to `"permissions"` using optional permissions. You can't request the following API permissions:
 
@@ -234,7 +235,7 @@ There are a couple of things to note:
 - You can only request permissions inside the handler for a user action, such as from a toolbar button (browser action), shortcut menu item, or similar.
 - If you request several permissions at once they are either all granted or all declined, the user cannot choose to grant some and not others.
 
-For more information about optional permissions, see [`optional_permissions`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions) and the [permissions](https://github.com/mdn/webextensions-examples/tree/master/permissions) example.
+For more information about optional permissions, see [`optional_permissions`][optional-permission] and the [permissions](https://github.com/mdn/webextensions-examples/tree/master/permissions) example.
 
 </div>
 </article>

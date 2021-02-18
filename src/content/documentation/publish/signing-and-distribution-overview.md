@@ -44,8 +44,8 @@ date: 2020-08-18 20:10:00
 {% capture page_hero_banner_content %}
 
 # Signing and distributing your add-on
-
-Add-ons need to be signed before they can be installed into release and beta versions of Firefox. This signing process takes place through [addons.mozilla.org](https://addons.mozilla.org) (AMO), whether you choose to distribute your add-on through AMO or to do it yourself.
+[addons-link]:https://addons.mozilla.org
+Add-ons need to be signed before they can be installed into release and beta versions of Firefox. This signing process takes place through [addons.mozilla.org][addons-link] (AMO), whether you choose to distribute your add-on through AMO or to do it yourself.
 
 Here we look at the signing requirements and the related reviews, before discussing how to choose between distributing on AMO or distributing an add-on yourself. We also look at the channels available on AMO and answer questions about code ownership and disputes.
 
@@ -66,7 +66,7 @@ Starting with Firefox 43, add-on extensions and multi-item add-ons that include 
 
 Unsigned extensions can be installed in [Developer Edition](https://www.mozilla.org/firefox/developer/), [Nightly](https://www.mozilla.org/firefox/nightly/all/), and [ESR](https://www.mozilla.org/firefox/organizations/) versions of Firefox, after toggling the `xpinstall.signatures.required` preference in `about:config`.
 
-Mozilla signs add-ons through the [AMO](https://addons.mozilla.org) website and provides three methods for submitting your add-on for signing:
+Mozilla signs add-ons through the [AMO][addons-link] website and provides three methods for submitting your add-on for signing:
 
 - upload your add-on through the [Developer Hub on AMO](/documentation/publish/submitting-an-add-on/#listing-on-amo).
 - use the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html).
@@ -124,7 +124,7 @@ Add-ons on AMO can have multiple users with permission to update and manage the 
 
 #### To transfer ownership
 
-- Make sure the new owner has an account on [addons.mozilla.org](https://addons.mozilla.org). New accounts can be created using the "Register or Log in" button, after which the owner must confirm their email address.
+- Make sure the new owner has an account on [addons.mozilla.org][addons-link]. New accounts can be created using the "Register or Log in" button, after which the owner must confirm their email address.
 - Sign into your account on the [Add-on Developer Hub](https://addons.mozilla.org/developers/), and click "Edit Listing" for the extension you want to transfer.
 - On the left-hand side of the screen, you will see a blue box labeled "Edit Information". Click "Manage Authors & License" — from the resulting page you can add and remove authors.
 - Once you have added the new author's email address, set that person as the extension owner and make sure the "Listed" box has a checkmark. Now you can remove yourself by clicking the "x" next to your email address.

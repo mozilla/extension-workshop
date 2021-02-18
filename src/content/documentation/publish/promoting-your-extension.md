@@ -14,10 +14,11 @@ date: 2019-03-18 05:01:28
 {% capture page_hero_banner_content %}
 
 # Promoting your extension or theme
+[addons-link]:https://addons.mozilla.org
+[develop-user]:/documentation/develop/onboard-upboard-offboard-users/
+So you’ve written a great extension, but only a few people have found and installed it from [addons.mozilla.org][addons-link] (AMO)—despite your efforts to [create an appealing listing](/documentation/develop/create-an-appealing-listing/). So, how do you encourage more people to install your extension? This page looks at how.
 
-So you’ve written a great extension, but only a few people have found and installed it from [addons.mozilla.org](https://addons.mozilla.org) (AMO)—despite your efforts to [create an appealing listing](/documentation/develop/create-an-appealing-listing/). So, how do you encourage more people to install your extension? This page looks at how.
-
-However, before you start investing in encouraging more people to install your extension, spend some time to make sure that your extension is well-polished and professional. There is little point chasing new installs if they result in disappointing ratings and reviews. Remember to follow the [content and UX guidelines](/documentation/develop/user-experience-best-practices/), [include proper onboarding](/documentation/develop/onboard-upboard-offboard-users/), and make sure your extension’s performance is good. Even if you think you’ve done this already, it’s always worth checking again.
+However, before you start investing in encouraging more people to install your extension, spend some time to make sure that your extension is well-polished and professional. There is little point chasing new installs if they result in disappointing ratings and reviews. Remember to follow the [content and UX guidelines](/documentation/develop/user-experience-best-practices/), [include proper onboarding][develop-user], and make sure your extension’s performance is good. Even if you think you’ve done this already, it’s always worth checking again.
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -42,7 +43,7 @@ Add a snazzy button to your website or blog telling people to "Get the add-on." 
 
 <img src="/assets/img/documentation/publish/get-the-addon-129x45px.png" alt="" />
 
-Simply save these images, put them on your website, and link them to your add-on’s listing on [addons.mozilla.org](https://addons.mozilla.org).
+Simply save these images, put them on your website, and link them to your add-on’s listing on [addons.mozilla.org][addons-link].
 
 The button is also available as an [.svg file](https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg).
 
@@ -92,7 +93,7 @@ If you’ve created a great extension, get on and talk about it. Look for events
 
 ## Current users
 
-If this isn’t your first extension or you are creating an extension to complement a web service, make your users aware of the new offering. If you contact your users directly, using email for example, make sure you do so within the parameters of your privacy policy. Remember, you have many other channels you can use, such as social media, forums, or your newsletter. Don’t forget that you can promote your new extension when you upgrade your existing extensions (see [Best practices for onboarding, upboarding, and offboarding users](/documentation/develop/onboard-upboard-offboard-users/)).
+If this isn’t your first extension or you are creating an extension to complement a web service, make your users aware of the new offering. If you contact your users directly, using email for example, make sure you do so within the parameters of your privacy policy. Remember, you have many other channels you can use, such as social media, forums, or your newsletter. Don’t forget that you can promote your new extension when you upgrade your existing extensions (see [Best practices for onboarding, upboarding, and offboarding users][develop-user]).
 
 {% endcapture %}
 {% include modules/one-column.liquid

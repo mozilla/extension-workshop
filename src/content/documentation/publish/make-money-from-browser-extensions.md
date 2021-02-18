@@ -166,13 +166,18 @@ However, be aware that most developers report that donations only generate signi
 Donations may also be a good option, compared to switching to a paid model where you might encounter user resistance, where your browser extension has already been available fully featured and free of charge.
 
 There are number of platforms you can use to provide payment services for donations, including:
-
-- [liberapay.com](https://liberapay.com/)—an open source, donation funded platform designed to handle recurring contributions to the creators of Commons.
-- [micropayment.de](https://www.micropayment.de/)—a commercial payment provider offering features for one-off and recurring donations.
-- [opencollective.com](https://opencollective.com/)—an open source, sponsor funded platform designed to manage the reimbursement of expenses within collectives.
-- [patreon.com](https://www.patreon.com/)—a commercial platform focusing on generating creators income from regular subscriptions.
-- [paypal.com](https://www.paypal.com/)—a commercial platform supporting both one-off and recurring donations.
-- [paypal.me](https://www.paypal.me/)—an add-on to PayPal that provides a simple link to a payment page where users can make one-off donations.
+  [libepay]:https://liberapay.com/
+  [micropayment]:https://www.micropayment.de/
+  [opencollective]:https://www.micropayment.de/
+  [patreon]:https://www.patreon.com/
+  [paypal]:https://www.paypal.com/
+  [paypal-me]:https://www.paypal.me/
+- [liberapay.com][libepay]—an open source, donation funded platform designed to handle recurring contributions to the creators of Commons.
+- [micropayment.de][micropayment]—a commercial payment provider offering features for one-off and recurring donations.
+- [opencollective.com][opencollective]—an open source, sponsor funded platform designed to manage the reimbursement of expenses within collectives.
+- [patreon.com][patreon]—a commercial platform focusing on generating creators income from regular subscriptions.
+- [paypal.com][paypal]—a commercial platform supporting both one-off and recurring donations.
+- [paypal.me][paypal-me]—an add-on to PayPal that provides a simple link to a payment page where users can make one-off donations.
 
 When choosing a donations platform provider consider the following:
 
@@ -187,7 +192,7 @@ With browser extensions for Firefox you have two ways in which you can request d
 
 You can add a “contributions” button to your extension’s AMO page that links through to your payment page from one of the supported providers. To add the button:
 
-- Set up an account with one of the supported providers: [liberapay.com](https://liberapay.com/), [micropayment.de](https://www.micropayment.de/), [opencollective.com](https://opencollective.com/), [patreon.com](https://www.patreon.com/), [paypal.com](https://www.paypal.com/), or [paypal.me](https://www.paypal.me/).
+- Set up an account with one of the supported providers: [liberapay.com][libepay], [micropayment.de][micropayment], [opencollective.com][opencollective], [patreon.com][patreon], [paypal.com][paypal], or [paypal.me][paypal-me].
 - Obtain the link to your donations page.
 - In the AMO developer hub, for the extension or theme you want to add a contributions button to, click Edit details.
 - In the Basic information section add your donations page link to Contributions URL.

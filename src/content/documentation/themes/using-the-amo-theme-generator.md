@@ -14,8 +14,8 @@ date: 2019-02-28 12:39:01
 {% capture page_hero_banner_content %}
 
 # Using the AMO theme generator
-
-The theme generator on [addons.mozilla.org](https://addons.mozilla.org) (AMO) guides you through the process of creating a theme for Firefox. Once you have defined the colors and image for your theme, the generator will submit your new theme to AMO. You may submit themes for publishing on AMO or for self-distribution.
+[addons-link]:https://addons.mozilla.org
+The theme generator on [addons.mozilla.org][addons-link] (AMO) guides you through the process of creating a theme for Firefox. Once you have defined the colors and image for your theme, the generator will submit your new theme to AMO. You may submit themes for publishing on AMO or for self-distribution.
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -32,7 +32,7 @@ The theme generator on [addons.mozilla.org](https://addons.mozilla.org) (AMO) gu
 You will need to be logged in to your Firefox Account to access the Theme Generator.
 :::
 
-If you would like to publish your theme on [addons.mozilla.org](https://addons.mozilla.org) (AMO), begin by going to the [listed Theme Generator page](https://addons.mozilla.org/developers/addon/submit/wizard-listed).
+If you would like to publish your theme on [addons.mozilla.org][addons-link] (AMO), begin by going to the [listed Theme Generator page](https://addons.mozilla.org/developers/addon/submit/wizard-listed).
 
 Otherwise, if you prefer to self-distribute your theme, go to the [unlisted Theme Generator Page](https://addons.mozilla.org/developers/addon/submit/wizard-unlisted). For more information on distribution, visit [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
 
@@ -110,7 +110,7 @@ Themes submitted for self-distribution will be signed immediately and an XPI fil
 
 ## Submitting your theme
 
-If you are publishing your theme to [addons.mozilla.org](https://addons.mozilla.org) (AMO), the second page of the theme creator asks you to describe your theme. You will have to enter the following information:
+If you are publishing your theme to [addons.mozilla.org][addons-link] (AMO), the second page of the theme creator asks you to describe your theme. You will have to enter the following information:
 
 **Name** <br/>
 This is the name of your theme as it will be displayed on AMO, and can be different from the name that is displayed when the theme has been installed in Firefox.

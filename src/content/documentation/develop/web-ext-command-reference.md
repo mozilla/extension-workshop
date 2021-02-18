@@ -35,8 +35,15 @@ date: 2021-01-11
 {% capture page_hero_banner_content %}
 
 # web-ext command reference
-
-This page lists all the commands and options available under the [web-ext](https://github.com/mozilla/web-ext) command line tool.
+[web-ext]:https://github.com/mozilla/web-ext
+[web-ext-docs]:/documentation/develop/getting-started-with-web-ext/
+[adb-link]:https://developer.android.com/studio/command-line/adb.html
+[firefox-desk]:https://www.mozilla.org/firefox/
+[firefox-mobile]:https://www.mozilla.org/firefox/mobile/
+[addons-api]:http://addons-server.readthedocs.org/en/latest/topics/api/index.html
+[addons-link]:https://addons.mozilla.org
+[submit-addon]:/documentation/publish/submitting-an-add-on/
+This page lists all the commands and options available under the [web-ext][web-ext] command line tool.
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -84,7 +91,7 @@ Environment variable: `$WEB_EXT_OVERWRITE_DEST=true`
 
 ### `web-ext docs`
 
-Opens the [web-ext documentation](/documentation/develop/getting-started-with-web-ext/) in the user's default browser.
+Opens the [web-ext documentation][web-ext-docs] in the user's default browser.
 
 <section id="web-ext-lint"></section>
 
@@ -136,7 +143,7 @@ Builds and then temporarily installs an extension on the target application, so 
 
 #### `--adb-bin`
 
-Path to the [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html) executable on the machine you are running `web-ext` from. By default, the `adb` executable will be located on your `PATH`.
+Path to the [ADB (Android Device Bridge)][adb-link] executable on the machine you are running `web-ext` from. By default, the `adb` executable will be located on your `PATH`.
 
 Environment variable: `$WEB_EXT_ADB_BIN`
 
@@ -154,13 +161,13 @@ Environment variable: `$WEB_EXT_ADB_DEVICE`
 
 #### `--adb-host`
 
-Host name to use when connecting to an Android device with [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html). This will be discovered automatically by default.
+Host name to use when connecting to an Android device with [ADB (Android Device Bridge)][adb-link]. This will be discovered automatically by default.
 
 Environment variable: `$WEB_EXT_ADB_HOST`
 
 #### `--adb-port`
 
-Network port to use when connecting to an Android device with [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html). This will be discovered automatically by default.
+Network port to use when connecting to an Android device with [ADB (Android Device Bridge)][adb-link]. This will be discovered automatically by default.
 
 Environment variable: `$WEB_EXT_ADB_PORT`
 
@@ -191,7 +198,7 @@ Note: The browser console may not show all debugging output from content-scripts
 
 #### `--firefox`, `-f`
 
-Specify a particular version of [Firefox Desktop](https://www.mozilla.org/firefox/) to run the extension in. The value is an absolute path to the Firefox executable or&nbsp;an alias string. If this is not specified, it will attempt to run the extension inside the system's default installation of Firefox.
+Specify a particular version of [Firefox Desktop][firefox-desk] to run the extension in. The value is an absolute path to the Firefox executable or&nbsp;an alias string. If this is not specified, it will attempt to run the extension inside the system's default installation of Firefox.
 
 Here is an example specifying a full path to a Firefox executable on Windows:
 
@@ -228,7 +235,7 @@ Environment variable: `$WEB_EXT_FIREFOX`
 
 #### `--firefox-apk`
 
-The exact [APK](https://en.wikipedia.org/wiki/Android_application_package) name for [Firefox](https://www.mozilla.org/firefox/mobile/) on your Android device. Without specifying this option, `web-ext` will automatically select it for you. If more than one Firefox APK is installed, `web-ext` will show a list of values to choose from.
+The exact [APK](https://en.wikipedia.org/wiki/Android_application_package) name for [Firefox][firefox-mobile] on your Android device. Without specifying this option, `web-ext` will automatically select it for you. If more than one Firefox APK is installed, `web-ext` will show a list of values to choose from.
 
 Example:
 
@@ -300,8 +307,8 @@ Here are the supported targets:
 
 | Target            | Application                                                                                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `firefox-desktop` | The extension will run in [Firefox Desktop](https://www.mozilla.org/firefox/).                                                      |
-| `firefox-android` | The extension will run in [Firefox for Android](https://www.mozilla.org/firefox/mobile/). You must also specify `--android-device`. |
+| `firefox-desktop` | The extension will run in [Firefox Desktop][firefox-desk].                                                      |
+| `firefox-android` | The extension will run in [Firefox for Android][firefox-mobile]. You must also specify `--android-device`. |
 | `chromium`        | The extension will run in a Chromium-based browser.                                                                                   |
 
 </div>
@@ -362,13 +369,13 @@ You need to create [API access credentials](http://addons-server.readthedocs.org
 
 #### `--api-key`
 
-Your API key ([JWT issuer](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#create-a-jwt-for-each-request/)) for accessing the [addons.mozilla.org API](http://addons-server.readthedocs.org/en/latest/topics/api/index.html). This should always be a string.
+Your API key ([JWT issuer](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#create-a-jwt-for-each-request/)) for accessing the [addons.mozilla.org API][addons-api]. This should always be a string.
 
 Environment variable: `$WEB_EXT_API_KEY`
 
 #### `--api-secret`
 
-Your API secret ([JWT secret](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#create-a-jwt-for-each-request)) from [addons.mozilla.org API](http://addons-server.readthedocs.org/en/latest/topics/api/index.html). This should always be a string.
+Your API secret ([JWT secret](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#create-a-jwt-for-each-request)) from [addons.mozilla.org API][addons-api]. This should always be a string.
 
 Environment variable: `$WEB_EXT_API_SECRET`
 
@@ -396,19 +403,19 @@ This specifies the `channel` in which the extension is signed. It defaults to `u
 
 | Channel    | Result                                                                                                                                                                                                              |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `listed`   | The extension gets submitted for review so it can be listed on [addons.mozilla.org](https://addons.mozilla.org). This type of channel is not well supported and cannot be used for some cases, as documented below. |
+| `listed`   | The extension gets submitted for review so it can be listed on [addons.mozilla.org][addons-link]. This type of channel is not well supported and cannot be used for some cases, as documented below. |
 | `unlisted` | The extension gets signed for publication on your own website.                                                                                                                                                      |
 
 </div>
 
-One example of using the `--channel` option is to [create a beta version](/documentation/develop/getting-started-with-web-ext/#signing-test-version-listed) for a `listed` extension (that is, one you have already [submitted to addons.mozilla.org](/documentation/publish/submitting-an-add-on/)).
+One example of using the `--channel` option is to [create a beta version](/documentation/develop/getting-started-with-web-ext/#signing-test-version-listed) for a `listed` extension (that is, one you have already [submitted to addons.mozilla.org][submit-addon]).
 
 ::: note alert
 Setting `--channel=listed` for a new extension is not yet supported. See [https://github.com/mozilla/web-ext/issues/804](https://github.com/mozilla/web-ext/issues/804)
 :::
 
 ::: note alert
-Setting `--channel=listed` for a new version of a listed extension is not well supported. It will upload your new version to [addons.mozilla.org](https://addons.mozilla.org) as if you'd [submitted it manually](/documentation/publish/submitting-an-add-on/). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.
+Setting `--channel=listed` for a new version of a listed extension is not well supported. It will upload your new version to [addons.mozilla.org][addons-link] as if you'd [submitted it manually][submit-addon]. However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.
 :::
 
 See [documentation on the signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html#uploading-a-version) for more information.
@@ -599,8 +606,8 @@ WEB_EXT_VERBOSE=true
 
 ## See also
 
-- [web-ext repo](https://github.com/mozilla/web-ext)
-- [Getting started with web-ext](/documentation/develop/getting-started-with-web-ext/)
+- [web-ext repo][web-ext]
+- [Getting started with web-ext][web-ext-docs]
 
 </div>
 </article>

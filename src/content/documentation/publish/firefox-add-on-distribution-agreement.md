@@ -120,8 +120,8 @@ With some exceptions, all Add-ons must be signed using a Mozilla Certificate, wh
 Signed Listed Add-ons are automatically distributed by Mozilla on AMO. Links to Signed Unlisted Add-ons will be provided to You for distribution.
 
 #### (c) Review Process
-
-Listed and Unlisted Add-ons must meet certain review criteria, which are described in our [Review Policies](/documentation/publish/add-on-policies/). Mozilla may at any time monitor, test or review Listed and Unlisted Add-ons for compliance with this Agreement and the [Review Policies](/documentation/publish/add-on-policies/). The inclusion of an Add-on on AMO or issuance of a Mozilla Certificate is at Mozilla’s sole discretion.
+[addon-policy]:/documentation/publish/add-on-policies/
+Listed and Unlisted Add-ons must meet certain review criteria, which are described in our [Review Policies][addon-policy]. Mozilla may at any time monitor, test or review Listed and Unlisted Add-ons for compliance with this Agreement and the [Review Policies][addon-policy]. The inclusion of an Add-on on AMO or issuance of a Mozilla Certificate is at Mozilla’s sole discretion.
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -184,7 +184,7 @@ You may cease distribution of Your Add-ons at any time by removing your Add-on f
 **(b) Removal from Distribution by Mozilla.**
 Mozilla reserves the right (though not the obligation) to, in our sole discretion, remove or revoke access to any Listed or Unlisted Add-ons. This applies, but is not limited to, Add-ons that, in our reasonable opinion, violate this Agreement or the law, any applicable Mozilla policy, or is in any way harmful or objectionable. In addition, we may at any time remove Your Add-on from AMO; revoke Your Mozilla Certificate; blocklist an Add-on; delete your AMO account; flag, filter, modify related materials (including but not limited to descriptions, screenshots, or metadata); reclassify the Add-on; or take other corrective action.
 
-For example, a Listed Add-on may be removed in response to abuse reports from End-Users, in response to a Take-Down Request, or if it comes to Mozilla’s attention that the Add-on violates our Conditions of Use. An Unlisted Add-on may be blocklisted or the Mozilla Certificate revoked if it comes to Mozilla’s attention that it violates the Security Criteria described in our [Review Policies](/documentation/publish/add-on-policies/).
+For example, a Listed Add-on may be removed in response to abuse reports from End-Users, in response to a Take-Down Request, or if it comes to Mozilla’s attention that the Add-on violates our Conditions of Use. An Unlisted Add-on may be blocklisted or the Mozilla Certificate revoked if it comes to Mozilla’s attention that it violates the Security Criteria described in our [Review Policies][addon-policy].
 
 In addition, we may at any time suspend or terminate this Agreement with You if we are no longer going to support the products and services related to Firefox Add-ons or issue Mozilla Certificates.
 
@@ -256,7 +256,7 @@ If any third party brings a claim against Mozilla related to Your use of AMO or 
 
 **(b) Severability; No Waiver.** If any court of law, having the jurisdiction to decide on this matter, rules that any provision of this Agreement are invalid, then that provision will be removed from this Agreement without affecting the rest of the Agreement. The remaining provisions of this Agreement will continue to be valid and enforceable. You agree that if Mozilla does not exercise or enforce any legal right or remedy which is contained in this Agreement (or which Mozilla has the benefit of under any applicable law), this will not be taken to be a formal waiver of Mozilla's rights and that those rights or remedies will still be available to Mozilla.
 
-Entire Agreement. This Agreement constitutes the whole legal agreement between You and Mozilla for distribution of Add-ons, and completely supersedes any other related agreements between You and Mozilla unless You have a separately negotiated and signed agreement in connection with a specific Add-on ("Custom Agreement"), in which case the Custom Agreement controls. Hyperlinked documents in this Agreement, including for example, [Review Policies](/documentation/publish/add-on-policies/), are incorporated herein by reference.
+Entire Agreement. This Agreement constitutes the whole legal agreement between You and Mozilla for distribution of Add-ons, and completely supersedes any other related agreements between You and Mozilla unless You have a separately negotiated and signed agreement in connection with a specific Add-on ("Custom Agreement"), in which case the Custom Agreement controls. Hyperlinked documents in this Agreement, including for example, [Review Policies][addon-policy], are incorporated herein by reference.
 
 **(c) Termination.** To terminate this Agreement You must provide Mozilla with 30 days prior written notice of such termination. Sections 8-11 of this Agreement shall survive termination.
 

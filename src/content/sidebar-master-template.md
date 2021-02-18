@@ -72,10 +72,12 @@ Note that this is a one-way conversion. You cannot update an extension using Web
 {% capture content %}
 
 ## Label Title 2
-
+[code-link]:https://www.firefox.com 'Code link example'
+[firefox-link]:https://www.firefox.com
+[addons-link]:https://addons.mozilla.org 'addons.mozilla.org'
 You reference all extensions API functions using a namespace, for example, `browser.alarms.create([delayInMinutes]);` would create an alram in Firefox that goes off after the time specified in `code goes here`
 
-[`code link goes here`](https://www.firefox.com 'Code link example') and [`runtime.sendNativeMessage()`](https://www.firefox.com 'Code link example')
+[`code link goes here`][code-link] and [`runtime.sendNativeMessage()`][code-link]
 
 <!-- Syntax Highlighting -->
 
@@ -132,7 +134,7 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 {% endcapture %}
 {% capture col_2_content %}
 
-#### [Laser Cat](https://www.firefox.com)
+#### [Laser Cat][firefox-link]
 
 This page provides a succinct description of the extension, clear instructions on how to fire your cat’s lasers, and how to turn your laser cat on and off.
 
@@ -154,7 +156,7 @@ This page provides a succinct description of the extension, clear instructions o
 {% endcapture %}
 {% capture col_2_content %}
 
-#### [Ghostery - Privacy Ad Blocker](https://www.firefox.com)
+#### [Ghostery - Privacy Ad Blocker][firefox-link]
 
 As the features of Ghostery are mostly silent, this onboarding screen gives users two options for the initial setup: A simple one-click option and a link to the full settings so they can customize how Ghostery works.
 
@@ -165,7 +167,7 @@ As the features of Ghostery are mostly silent, this onboarding screen gives user
 
 Cards contain content and links about a single subject.
 
-[Related Article](https://www.firefox.com)
+[Related Article][firefox-link]
 
 {% endcapture %}
 {% include modules/two-column.liquid
@@ -442,9 +444,9 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 
 {% capture content %}
 
-Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org'), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
+Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org][addons-link], and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
 
-Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org](https://addons.mozilla.org 'addons.mozilla.org').
+Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org][addons-link].
 
 Between your extension name and subtitle, you have up to 70 characters to use—that’s because 70 is the max character limit for your headline in external search results. It’s best to keep your extension name shorter so you have more characters left over for your subtitle.
 

@@ -49,7 +49,7 @@ There are two main reasons why you might want to end-of-life your extension:
 {% capture content %}
 
 ## Steps to retiring an extension
-
+[uninstall-api]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 When you want to withdraw an extension, considered taking the following steps:
 
 1. Devise a timetable for your extension’s end-of-life. Consider including the following steps in a timetable for withdrawing your extension:
@@ -61,10 +61,10 @@ When you want to withdraw an extension, considered taking the following steps:
 2. Publish advice that you're planning to end-of-life your extension. Consider the following options to advise people of your intention to take down your extension:
 
    1. update your extension’s page on addons.mozilla.org (AMO) with its end-of-life timetable.
-   2. if your extension is being superseded by another, provide a link to the new extension. You could use [`management.onInstalled`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/onInstalled) to listen for installation of the new extension to trigger the removal of the original extension using [`management.uninstallSelf`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
+   2. if your extension is being superseded by another, provide a link to the new extension. You could use [`management.onInstalled`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/onInstalled) to listen for installation of the new extension to trigger the removal of the original extension using [`management.uninstallSelf`][uninstall-api].
    3. communicate the timetable through social media, forums, or where possible by email.
 
-3. Publish a final, self-removing version of your extension. Use [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf) to cause your extension to uninstall itself. Before it does, provide a notice reminding the user about the removal of the extension. If your extension is being superseded by another, remember to provide a reminder about the link to the new extension. You might offer the user the option to remove the extension now or in a few days time.
+3. Publish a final, self-removing version of your extension. Use [`management.uninstallSelf()`][uninstall-api] to cause your extension to uninstall itself. Before it does, provide a notice reminding the user about the removal of the extension. If your extension is being superseded by another, remember to provide a reminder about the link to the new extension. You might offer the user the option to remove the extension now or in a few days time.
 
 4. Make your AMO listing invisible to prevent new installs. To hide your extension’s AMO listing:
    1. open your extension’s listing in AMO.
