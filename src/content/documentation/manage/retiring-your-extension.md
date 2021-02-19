@@ -49,7 +49,7 @@ There are two main reasons why you might want to end-of-life your extension:
 {% capture content %}
 
 ## Steps to retiring an extension
-[uninstall-api]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
+
 When you want to withdraw an extension, considered taking the following steps:
 
 1. Devise a timetable for your extension’s end-of-life. Consider including the following steps in a timetable for withdrawing your extension:
@@ -103,4 +103,4 @@ When you’ve started retiring the extension, use the active user statistics on 
 
 <!-- END: Single Column Body Module -->
 
-
+[uninstall-api]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf

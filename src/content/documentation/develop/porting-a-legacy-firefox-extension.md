@@ -47,8 +47,7 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 {% capture content_with_toc %}
 
 ## Quick start
-[comparison-sdk-link]:/documentation/develop/comparison-with-the-add-on-sdk
-[comparison-with-xul]:/documentation/develop/comparison-with-xul-xpcom-extensions
+
 1. Get an idea of the main things you'll have to change in your extension:
 
 - Familiarize yourself with the [WebExtension format and structure](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension), and [build a basic example](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#Writing_the_extension).
@@ -171,4 +170,5 @@ You can use the links [here](https://developer.mozilla.org/docs/Mozilla/Add-ons#
 
 <!-- END: Single Column Body Module -->
 
-
+[comparison-sdk-link]:/documentation/develop/comparison-with-the-add-on-sdk
+[comparison-with-xul]:/documentation/develop/comparison-with-xul-xpcom-extensions

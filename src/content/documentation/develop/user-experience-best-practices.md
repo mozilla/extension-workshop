@@ -79,8 +79,7 @@ An extension is best when it is centered around one main use case, and addresses
 Choosing the right way, or combination of ways, to make your extension's functionality available to the user can have a significant effect on usability. Asking a few simple questions about your extension’s functionality can quickly guide you to the right choices:
 
 ### Does my extension work on most websites and web pages?
-[browser-action-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction
-[popups-link]:https://developer.mozilla.org/Add-ons/WebExtensions/Popups
+
 If your extension provides the user with features they can use on almost every website or page, give the user access to it from a **[toolbar button](https://developer.mozilla.org/Add-ons/WebExtensions/user_interface/Browser_action) using the [browser action][browser-action-link]**.
 
 - This might include providing access to your image editor or opening a page from your website.
@@ -264,4 +263,5 @@ Testing tips:
 
 <!-- END: Single Column Body Module -->
 
-
+[browser-action-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction
+[popups-link]:https://developer.mozilla.org/Add-ons/WebExtensions/Popups

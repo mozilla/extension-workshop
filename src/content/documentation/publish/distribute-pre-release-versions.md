@@ -25,7 +25,7 @@ Learn how to distribute an alpha or beta pre-release version of your extension f
 <!-- Single Column Body Module -->
 
 {% capture content %}
-[addons-link]:https://addons.mozilla.org
+
 Pre-release channels are not supported on [addons.mozilla.org][addons-link] (AMO), so if you would like to have a limited group of users test a beta version of your extension, you will need to take the following steps to set up your own channel using an self-hosted version of your extension:
 
 1. In the `manifest.json` of the beta version, [specify the location of your update manifest](/documentation/manage/updating-your-extension/#enable-update). This will ensure that your beta users will receive future updates. If your release channel is also self-hosted, you will need to use a different update URL for the beta channel.
@@ -53,4 +53,4 @@ If you decide to discontinue your beta channel and your add-on is listed on AMO,
 
 <!-- END: Single Column Body Module -->
 
-
+[addons-link]:https://addons.mozilla.org

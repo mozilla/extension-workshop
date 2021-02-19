@@ -27,9 +27,6 @@ Legacy guide to developing extensions for Firefox for Android version 68 and ear
 
 {% capture content_with_toc %}
 
-[ext-link]:/documentation/develop/getting-started-with-web-ext/
-[tools-link]:https://developer.android.com/studio/releases/platform-tools.html
-
 ::: note alert
 This article discusses developing extensions for Firefox for Android for version 68 or earlier (codenamed "Fennec"). Fennec is no longer supported and has been replaced by a new, reimagined mobile browsing experience (codenamed "Fenix"). For more information about developing extensions for Fenix, please see [this article](/documentation/develop/developing-extensions-for-firefox-for-android/).
 :::
@@ -269,3 +266,6 @@ If your add-on fails to run, check these messages as they may provide informatio
 %}
 
 <!-- END: Single Column Body Module -->
+
+[ext-link]:/documentation/develop/getting-started-with-web-ext/
+[tools-link]:https://developer.android.com/studio/releases/platform-tools.html

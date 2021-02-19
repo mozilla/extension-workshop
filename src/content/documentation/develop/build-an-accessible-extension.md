@@ -15,8 +15,6 @@ date: 2019-05-01 9:08:50
 
 # Accessibility guidelines
 
-[moz-dev-link]:https://developer.mozilla.org/docs/Web/Accessibility
-
 When it comes to accessibility, extensions should follow the same guidelines as websites. However, extensions have unique features that deserve consideration when designing for accessibility. Here is a breakdown of extension features and how they should be used to make an extension accessible.
 
 There is more information on design and accessibility in the [Photon Design System](https://design.firefox.com/photon/) and [Accessibility and Mozilla](https://developer.mozilla.org/docs/Mozilla/Accessibility) section on MDN.
@@ -220,4 +218,4 @@ Offering a keyboard shortcut to open a devtools panel is recommended.
 
 <!-- END: Single Column Body Module -->
 
-
+[moz-dev-link]:https://developer.mozilla.org/docs/Web/Accessibility

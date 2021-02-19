@@ -120,7 +120,7 @@ With some exceptions, all Add-ons must be signed using a Mozilla Certificate, wh
 Signed Listed Add-ons are automatically distributed by Mozilla on AMO. Links to Signed Unlisted Add-ons will be provided to You for distribution.
 
 #### (c) Review Process
-[addon-policy]:/documentation/publish/add-on-policies/
+
 Listed and Unlisted Add-ons must meet certain review criteria, which are described in our [Review Policies][addon-policy]. Mozilla may at any time monitor, test or review Listed and Unlisted Add-ons for compliance with this Agreement and the [Review Policies][addon-policy]. The inclusion of an Add-on on AMO or issuance of a Mozilla Certificate is at Mozilla’s sole discretion.
 
 {% endcapture %}
@@ -274,4 +274,4 @@ Entire Agreement. This Agreement constitutes the whole legal agreement between Y
 
 <!-- END: Single Column Body Module -->
 
-
+[addon-policy]:/documentation/publish/add-on-policies/

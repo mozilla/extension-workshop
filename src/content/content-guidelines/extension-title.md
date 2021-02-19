@@ -12,8 +12,6 @@ Your extension’s name is critical. It shows up everywhere—in search results,
 
 Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into extension name field becomes your URL on [addons.mozilla.org][addons-link].
 
-[addons-link]:https://addons.mozilla.org 'addons.mozilla.org'
-
 Between your name and subtitle, you have up to 70 characters to use—that’s because 70 is the max character limit for your headline in external search results. It’s best to keep your name shorter so you have more characters left over for your subtitle.
 
 ## Extension Name Do’s and Don’ts
@@ -149,3 +147,4 @@ Remembear example:
 
 - Remember password with a bear  
   _Remembear_
+[addons-link]:https://addons.mozilla.org 'addons.mozilla.org'

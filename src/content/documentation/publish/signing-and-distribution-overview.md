@@ -44,7 +44,7 @@ date: 2020-08-18 20:10:00
 {% capture page_hero_banner_content %}
 
 # Signing and distributing your add-on
-[addons-link]:https://addons.mozilla.org
+
 Add-ons need to be signed before they can be installed into release and beta versions of Firefox. This signing process takes place through [addons.mozilla.org][addons-link] (AMO), whether you choose to distribute your add-on through AMO or to do it yourself.
 
 Here we look at the signing requirements and the related reviews, before discussing how to choose between distributing on AMO or distributing an add-on yourself. We also look at the channels available on AMO and answer questions about code ownership and disputes.
@@ -148,4 +148,4 @@ If you are unsure of the current copyright status of an add-on's source code, yo
 
 <!-- END: Single Column Body Module -->
 
-
+[addons-link]:https://addons.mozilla.org

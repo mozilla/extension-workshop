@@ -71,11 +71,6 @@ This table summarizes the edition information, features for extension developmen
 
 ### Release
 
-[firefox-link]:https://www.mozilla.org/firefox/
-[addons-debug-window]:https://developer.mozilla.org/docs/Tools/Browser_Toolbox
-[about-debug-link]:https://developer.mozilla.org/docs/Tools/about:debugging
-[web-ext-link]: /documentation/develop/getting-started-with-web-ext/
-
 This is the version of Firefox that most people use, it’s the version offered when someone visits the [main Firefox download page][firefox-link].
 
 You load extensions under development into this version of Firefox using [`about:debugging`][about-debug-link] or [`web-ext`][web-ext-link] and have access to the [addon debugging window][addons-debug-window]. However, you cannot install unsigned extensions, which limits your ability to test features such as restart behavior, permission prompts, and upgrades.
@@ -140,4 +135,7 @@ Suggested development use: Use ESR as your primary web extension development and
 
 <!-- END: Single Column Body Module -->
 
-
+[firefox-link]:https://www.mozilla.org/firefox/
+[addons-debug-window]:https://developer.mozilla.org/docs/Tools/Browser_Toolbox
+[about-debug-link]:https://developer.mozilla.org/docs/Tools/about:debugging
+[web-ext-link]: /documentation/develop/getting-started-with-web-ext/

@@ -65,14 +65,6 @@ A new tab opens showing **Inspector** in the Toolbox.
 
 To debug your extension, you'll use:
 
-[page-inspector-link]:https://developer.mozilla.org/docs/Tools/Page_Inspector
-[debugger-link]:https://developer.mozilla.org/docs/Tools/Debugger
-[split-console]:https://developer.mozilla.org/docs/Tools/Web_Console/Split_console
-[i18n-link]:https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n
-[web-ext-link]:https://github.com/mdn/webextensions-examples
-[page-selector]:/assets/img/documentation/develop/page-selector.png
-[annotate-page]:https://github.com/mdn/webextensions-examples/tree/master/annotate-page
-
 - [**Inspector**][page-inspector-link] to examine and modify the HTML and CSS used to build your extension's pages.
 - [**Console**](https://developer.mozilla.org/docs/Tools/Web_Console) to view messages logged by the extension and error messages logged by the browser as it runs the extension. It also provides a command line, where you can execute JavaScript in the extension's context.
 - [**Debugger**][debugger-link] to set breakpoints and watchpoints in your extension's JavaScript, and examine and modify the extension's state.
@@ -391,4 +383,10 @@ For more details, see [Testing persistent and restart features](/documentation/d
 
 <!-- END: Single Column Body Module -->
 
-
+[page-inspector-link]:https://developer.mozilla.org/docs/Tools/Page_Inspector
+[debugger-link]:https://developer.mozilla.org/docs/Tools/Debugger
+[split-console]:https://developer.mozilla.org/docs/Tools/Web_Console/Split_console
+[i18n-link]:https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n
+[web-ext-link]:https://github.com/mdn/webextensions-examples
+[page-selector]:/assets/img/documentation/develop/page-selector.png
+[annotate-page]:https://github.com/mdn/webextensions-examples/tree/master/annotate-page

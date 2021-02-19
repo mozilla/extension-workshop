@@ -29,8 +29,7 @@ Learn how to get your extension signed and distributed worldwide or to your ente
 {% capture content_with_toc %}
 
 ## Get your extension signed
-[addons-link]:https://addons.mozilla.org
-[self-dist]:/documentation/publish/self-distribution/
+
 Once your extension is coded and tested, it needs to meet the policies in the [developer agreement](/documentation/publish/firefox-add-on-distribution-agreement/) and [add-on policies](/documentation/publish/add-on-policies/) before it is signed. If your extension doesn’t meet these policies, it may not get a signature or it could be [blocked](/documentation/publish/add-ons-blocking-process/) after signing.
 
 When you’re confident your extension complies with those policies, it needs to be signed before it’s distributed\* for use in the [release](https://www.mozilla.org/firefox/) and [Beta](https://www.mozilla.org/firefox/channel/desktop/) versions of Firefox. Signing provides Firefox users with the assurance that an extension hasn’t been tampered with and gives Mozilla the ability to block malicious extensions.
@@ -118,4 +117,5 @@ If you’re distributing to an enterprise running the ESR version of Firefox or 
 
 <!-- END: Single Column Body Module -->
 
-
+[addons-link]:https://addons.mozilla.org
+[self-dist]:/documentation/publish/self-distribution/

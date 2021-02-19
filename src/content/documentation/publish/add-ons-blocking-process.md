@@ -13,8 +13,7 @@ date: 2019-06-10 04:06:35
 {% capture page_hero_banner_content %}
 
 # Add-ons Blocking Process
-[addons-policy]:/documentation/publish/add-on-policies/
-[addons-publish]:/documentation/publish/firefox-add-on-distribution-agreement/
+
 Add-ons enable users to add features to Firefox for a personalized browsing experience. Most add-ons are created with the best intent, providing users with useful and delightful features. However, add-ons can also be used to compromise personal data and security.
 
 When Mozilla becomes aware of add-ons that go against user expectations or otherwise risk user privacy and security, it takes steps to block them from running in Firefox. This may happen proactively, or in response to an abuse report.
@@ -124,3 +123,5 @@ In addition, we may block certain plugins that are known to cause stability issu
 
 <!-- END: Single Column Body Module -->
 
+[addons-policy]:/documentation/publish/add-on-policies/
+[addons-publish]:/documentation/publish/firefox-add-on-distribution-agreement/

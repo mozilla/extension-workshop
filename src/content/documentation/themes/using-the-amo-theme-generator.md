@@ -14,7 +14,7 @@ date: 2019-02-28 12:39:01
 {% capture page_hero_banner_content %}
 
 # Using the AMO theme generator
-[addons-link]:https://addons.mozilla.org
+
 The theme generator on [addons.mozilla.org][addons-link] (AMO) guides you through the process of creating a theme for Firefox. Once you have defined the colors and image for your theme, the generator will submit your new theme to AMO. You may submit themes for publishing on AMO or for self-distribution.
 
 {% endcapture %}
@@ -165,4 +165,4 @@ Once you have filled in all of the required information, you can complete the su
 
 <!-- END: Single Column Body Module -->
 
-
+[addons-link]:https://addons.mozilla.org

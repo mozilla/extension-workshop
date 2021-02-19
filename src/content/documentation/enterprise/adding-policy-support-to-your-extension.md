@@ -29,7 +29,7 @@ This article explains how to add enterprise policy support to your extension to 
 {% capture content_with_toc %}
 
 ## How to add policy support 
-[chrome-store-manage]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed
+
 With recent changes to [`chrome.storage.managed`][chrome-store-manage], Firefox now supports using enterprise policy in extensions. Having enterprise policy support in your extensions allows enterprises to preconfigure settings in your extension.
 
 Policies can be set in a few different ways, but the easiest way to test is using a file called policies.json.
@@ -249,4 +249,4 @@ For Linux, you can provide a sample `policies.json` similar to what was provided
 
 <!-- END: Single Column Body Module -->
 
-
+[chrome-store-manage]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed

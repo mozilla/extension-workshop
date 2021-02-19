@@ -64,8 +64,6 @@ Note that the ability to develop and debug WebExtensions that don't include an I
 
 ## Basic workflow with no add-on ID
 
-[browser-setting]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
-
 Extensions can explicitly set the add-on ID using the [`browser_specific_settings`][browser-setting] key in manifest.json. However, this key is usually optional. If you don't set it, then you can usually develop, debug, publish, and update your extension without ever having to deal with an ID. One advantage of this is that Google Chrome does not recognize the `browser_specific_settings` key and will show a warning if you include it.
 
 Note, though, that some WebExtension APIs use the add-on ID and expect it to be the same from one browser session to the next. If you use these APIs in Firefox, then you must set the ID explicitly using the [`browser_specific_settings`][browser-setting] key. See [When do you need an Add-on ID?](#when-do-you-need-an-add-on-id).
@@ -125,4 +123,4 @@ You can do the same thing if you are updating from an older add-on type, such as
 
 <!-- END: Single Column Body Module -->
 
-
+[browser-setting]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings

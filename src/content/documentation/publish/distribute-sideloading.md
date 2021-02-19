@@ -52,8 +52,7 @@ Regardless of the sideloading method used, you must prepare the add-on as follow
 <!-- END: Syntax Highlighting -->
 
 An email address style ID is recommended.
-[sign-dist-link]:/documentation/publish/signing-and-distribution-overview/
-[control-auto-install]:/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations
+
 2. Sign the add-on in [addons.mozilla.org](https://addons.mozilla.org) (AMO). Depending on how you want to make your add-on available, you can use either the unlisted (if you are distributing the add-on exclusively) or listed options. For more details, see [Signing and distributing your add-on][sign-dist-link].
 
 {% endcapture %}
@@ -213,4 +212,5 @@ To install an add-on for a specific user, copy the XPI file to:
 
 <!-- END: Single Column Body Module -->
 
-
+[sign-dist-link]:/documentation/publish/signing-and-distribution-overview/
+[control-auto-install]:/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations

@@ -14,8 +14,7 @@ date: 2019-03-18 05:01:28
 {% capture page_hero_banner_content %}
 
 # Promoting your extension or theme
-[addons-link]:https://addons.mozilla.org
-[develop-user]:/documentation/develop/onboard-upboard-offboard-users/
+
 So you’ve written a great extension, but only a few people have found and installed it from [addons.mozilla.org][addons-link] (AMO)—despite your efforts to [create an appealing listing](/documentation/develop/create-an-appealing-listing/). So, how do you encourage more people to install your extension? This page looks at how.
 
 However, before you start investing in encouraging more people to install your extension, spend some time to make sure that your extension is well-polished and professional. There is little point chasing new installs if they result in disappointing ratings and reviews. Remember to follow the [content and UX guidelines](/documentation/develop/user-experience-best-practices/), [include proper onboarding][develop-user], and make sure your extension’s performance is good. Even if you think you’ve done this already, it’s always worth checking again.
@@ -201,3 +200,6 @@ If you haven’t used online advertising before, [Google Academy for Ads](https:
 %}
 
 <!-- END: Single Column Body Module -->
+
+[addons-link]:https://addons.mozilla.org
+[develop-user]:/documentation/develop/onboard-upboard-offboard-users/

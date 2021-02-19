@@ -27,8 +27,6 @@ Learn more about developing extensions for Firefox for Android
 
 {% capture content_with_toc %}
 
-[debug-option]:https://developer.android.com/studio/debug/dev-options
-
 ::: note alert
 In August 2020, Mozilla launched a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
 
@@ -241,3 +239,5 @@ If your add-on fails to run, check these messages as they may provide informatio
 %}
 
 <!-- END: Single Column Body Module -->
+
+[debug-option]:https://developer.android.com/studio/debug/dev-options

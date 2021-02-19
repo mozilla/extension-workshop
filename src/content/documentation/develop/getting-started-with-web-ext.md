@@ -54,17 +54,6 @@ date: 2021-01-27 23:47:23
 
 ## Installation
 
-[node-link]:https://nodejs.org/
-[develop-ext]:/documentation/develop/web-ext-command-reference/#web-ext-run
-[ext-build]:/documentation/develop/web-ext-command-reference/#web-ext-build
-[ext-run]:/documentation/develop/web-ext-command-reference/#web-ext-run
-[ext-sign]:/documentation/develop/web-ext-command-reference/#web-ext-sign
-[browser-specific-setting]:https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings
-[addons-link]:https://addons.mozilla.org/
-[web-ext]:https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json
-[submit-addon]:/documentation/publish/submitting-an-add-on/
-[addons-manifest]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json
-
 `web-ext` is a node-based application that you install with the [nodejs/npm][node-link] tool. Install web-ext using the following command:
 
 ```shell
@@ -482,4 +471,13 @@ You can use `web-ext` as a `NodeJS module`. Here is [more information](https://g
 
 <!-- END: Single Column Body Module -->
 
-
+[node-link]:https://nodejs.org/
+[develop-ext]:/documentation/develop/web-ext-command-reference/#web-ext-run
+[ext-build]:/documentation/develop/web-ext-command-reference/#web-ext-build
+[ext-run]:/documentation/develop/web-ext-command-reference/#web-ext-run
+[ext-sign]:/documentation/develop/web-ext-command-reference/#web-ext-sign
+[browser-specific-setting]:https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings
+[addons-link]:https://addons.mozilla.org/
+[web-ext]:https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json
+[submit-addon]:/documentation/publish/submitting-an-add-on/
+[addons-manifest]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json

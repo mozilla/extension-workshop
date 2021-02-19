@@ -71,34 +71,6 @@ Beyond these broad similarities, there are a lot of differences in the details, 
 
 ## Manifest files
 
-[manifest-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json
-[page-mod-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod
-[content-script-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
-[ui-button-action]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_action
-[browser-action]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action 
-[permission-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
-[page-action-link]:https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/page_action
-[content-link]:https://developer.mozilla.org/Add-ons/WebExtensions/Content_scripts
-[ui-button-toggle]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_toggle
-[ui-toolbar]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_toolbar
-[ui-sidebar]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar
-[panel-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel
-[popup-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Popups
-[context-menu-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus
-[simple-prefs-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/simple-prefs
-[storage-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage
-[options-ui-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
-[preference-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/preferences_service
-[privacy-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/privacy
-[browser-setting-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings
-[i18n-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/i18n
-[web-ext-link]:/documentation/develop/getting-started-with-web-ext
-[temp-firefox-link]:/documentation/develop/temporary-installation-in-firefox
-[indexed-db-link]:https://developer.mozilla.org/docs/Web/API/IndexedDB_API
-[window-fetch-link]:https://developer.mozilla.org/docs/Web/API/Fetch_API
-[page-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action
-
-
 In both technologies you have a JSON manifest file in the extension's root directory. In the SDK this is called [`package.json`](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Tools/package_json), while in WebExtensions it's called [`manifest.json`][manifest-link]. Both files contain basic metadata such as the extension's name, description, and icons.
 
 However, `manifest.json` includes many keys that define parts of the extension's capabilities and behavior, which in the SDK are more often defined in code. For example:
@@ -539,4 +511,29 @@ The first table covers high-level SDK APIs, the second covers low-level APIs.
 
 <!-- END: Single Column Body Module -->
 
-
+[manifest-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json
+[page-mod-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/page-mod
+[content-script-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
+[ui-button-action]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_action
+[browser-action]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action 
+[permission-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
+[page-action-link]:https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/page_action
+[content-link]:https://developer.mozilla.org/Add-ons/WebExtensions/Content_scripts
+[ui-button-toggle]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_button_toggle
+[ui-toolbar]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_toolbar
+[ui-sidebar]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/ui_sidebar
+[panel-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/panel
+[popup-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Popups
+[context-menu-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus
+[simple-prefs-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/High-Level_APIs/simple-prefs
+[storage-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage
+[options-ui-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
+[preference-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/preferences_service
+[privacy-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/privacy
+[browser-setting-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings
+[i18n-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/i18n
+[web-ext-link]:/documentation/develop/getting-started-with-web-ext
+[temp-firefox-link]:/documentation/develop/temporary-installation-in-firefox
+[indexed-db-link]:https://developer.mozilla.org/docs/Web/API/IndexedDB_API
+[window-fetch-link]:https://developer.mozilla.org/docs/Web/API/Fetch_API
+[page-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action

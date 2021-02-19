@@ -68,17 +68,6 @@ Beyond that, though, the systems are very different. In particular:
 
 ## Manifest
 
-[manifest-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json
-[extension-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-[i18n-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/i18n
-[content-script-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts
-[message-broadcaster-link]:https://developer.mozilla.org/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster
-[process-script-link]:https://developer.mozilla.org/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProcessScriptLoader
-[storage-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage
-[javascript-api-link]:https://developer.mozilla.org/Add-ons/WebExtensions/API
-[background-script-link]:https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts
-[tab-link]:https://developer.mozilla.org/docs/Mozilla/Tech/XUL/tabbrowser
-
 XUL/XPCOM extensions have two manifest files:
 
 - the [`install.rdf`](https://developer.mozilla.org/Add-ons/Install_Manifests) contains metadata about the extension such as its name, icons, and so on
@@ -299,4 +288,13 @@ Some browser-specific preferences can however still be controlled through the [`
 
 <!-- END: Single Column Body Module -->
 
-
+[manifest-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json
+[extension-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
+[i18n-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/i18n
+[content-script-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts
+[message-broadcaster-link]:https://developer.mozilla.org/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster
+[process-script-link]:https://developer.mozilla.org/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProcessScriptLoader
+[storage-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage
+[javascript-api-link]:https://developer.mozilla.org/Add-ons/WebExtensions/API
+[background-script-link]:https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts
+[tab-link]:https://developer.mozilla.org/docs/Mozilla/Tech/XUL/tabbrowser

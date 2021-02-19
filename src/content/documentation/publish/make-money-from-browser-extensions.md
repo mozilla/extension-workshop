@@ -166,12 +166,6 @@ However, be aware that most developers report that donations only generate signi
 Donations may also be a good option, compared to switching to a paid model where you might encounter user resistance, where your browser extension has already been available fully featured and free of charge.
 
 There are number of platforms you can use to provide payment services for donations, including:
-  [libepay]:https://liberapay.com/
-  [micropayment]:https://www.micropayment.de/
-  [opencollective]:https://www.micropayment.de/
-  [patreon]:https://www.patreon.com/
-  [paypal]:https://www.paypal.com/
-  [paypal-me]:https://www.paypal.me/
 - [liberapay.com][libepay]—an open source, donation funded platform designed to handle recurring contributions to the creators of Commons.
 - [micropayment.de][micropayment]—a commercial payment provider offering features for one-off and recurring donations.
 - [opencollective.com][opencollective]—an open source, sponsor funded platform designed to manage the reimbursement of expenses within collectives.
@@ -264,4 +258,9 @@ Building a large, loyal user base is key to maximizing the revenue you generate,
 
 <!-- END: Single Column Body Module -->
 
-
+[libepay]:https://liberapay.com/
+[micropayment]:https://www.micropayment.de/
+[opencollective]:https://www.micropayment.de/
+[patreon]:https://www.patreon.com/
+[paypal]:https://www.paypal.com/
+[paypal-me]:https://www.paypal.me/

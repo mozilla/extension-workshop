@@ -10,8 +10,6 @@ skip_index: true
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
 
-[img-content-guideline-link]: /assets/img/content-guidelines/example-remembear.png "Screenshot Remembear" 
-
 <!-- Full Width Image -->
 <section class="image-with-caption">
 
@@ -87,8 +85,6 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 </div>
 </section>
 <!-- END: Image Grid -->
-
-[addons-link]:https://addons.mozilla.org 'addons.mozilla.org'
 
 Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org][addons-link], and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
 
@@ -296,3 +292,6 @@ Remembear: dolore eu fugiat nulla pariatur lemera dosada peel.
 - [Extension Link ][extension-link]
 - [Extension Link ][extension-link]
 - [Extension Link ][extension-link]
+
+[img-content-guideline-link]: /assets/img/content-guidelines/example-remembear.png "Screenshot Remembear"
+[addons-link]:https://addons.mozilla.org 'addons.mozilla.org' 

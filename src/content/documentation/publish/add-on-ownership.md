@@ -14,7 +14,7 @@ date: 2019-06-05 14:56:00
 {% capture page_hero_banner_content %}
 
 # Add-on ownership
-[addons-dev-link]:https://addons.mozilla.org/developers/
+
 Add-ons are often the result of the work of a team of developers, which is why add-ons on AMO can have multiple authors. Authors may be designated as owners or developers. Both types of author can update and manage the add-on and its listing, but only owners can add authors to the add-on. The owners of an add-on can transfer ownership and add authors to an add-on through the [Developer Hub][addons-dev-link].
 
 {% endcapture %}
@@ -67,4 +67,4 @@ If you are unsure of the current copyright status of an add-on’s source code, 
 
 <!-- END: Single Column Body Module -->
 
-
+[addons-dev-link]:https://addons.mozilla.org/developers/

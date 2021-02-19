@@ -16,10 +16,6 @@ date: 2019-04-24 14:35:04
 
 # Prompt users for data and privacy consents
 
-[data-disc-link]:/documentation/publish/add-on-policies/#data-disclosure-collection-and-management
-
-[addons-policy-link]:/documentation/publish/add-on-policies/
-
 If your extension uses cookies or collects user data, it needs to comply with the requirement of the [Data Disclosure, Collection and Management][data-disc-link] section of the [Add-on Policies][addons-policy-link].
 
 A common developer question about these policies is how to translate them into web extension features that can pass the addons.mozilla.org reviews. This how-to is the result of those requests and offers advice on implementing prompts to meet the data collection and add-on policies. This article suggests how you can implement suitable prompts but it doesn’t replace or supersede the policies; you still need to confirm that your extension complies with the policies.
@@ -171,4 +167,6 @@ Once you understand your privacy consent flow, you can add suitable consent dial
 
 <!-- END: Single Column Body Module -->
 
+[data-disc-link]:/documentation/publish/add-on-policies/#data-disclosure-collection-and-management
+[addons-policy-link]:/documentation/publish/add-on-policies/
 

@@ -37,8 +37,7 @@ Or how to avoid permissions discouraging users from installing your extensions.
 <div class="cell small-12">
 
 ## Introduction
-[manifest-json]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
-[optional-permission]:https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions
+
 With the introduction of Firefox Quantum (57) the handling of permissions when installing an extension changed. Previously, extensions were granted permissions silently. However, users are now informed of the permissions an extension is requesting when it's installed, with a message something like this:
 
 ![Example of the permissions messages from the Gesturefy extension](/assets/img/documentation/develop/General_permissions_message_example.png)
@@ -265,4 +264,5 @@ A good example of this approach is [Gesturefy](https://addons.mozilla.org/firefo
 
 <!-- END: Single Column Body Module -->
 
-
+[manifest-json]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
+[optional-permission]:https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions

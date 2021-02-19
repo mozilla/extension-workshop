@@ -58,9 +58,7 @@ This article provides guidelines for optimizing your extension’s user experien
 Make your extension’s stylesheet responsive and follow these key guidelines to ensure that your extension works well for as many people as possible on a variety of devices.
 
 ### Color contrast
-[color-contrast-link]:https://webaim.org/resources/contrastchecker/
-[figma-link]:https://www.figma.com/proto/TebIgESfWmQkMcEmwNaYZl/Android?node-id=0%3A498&viewport=-4823%2C213%2C0.5&scaling=min-zoom&hide-ui=1
-[material-ui-component-link]:https://material-components.github.io/material-components-web-catalog/
+
 Pass your colors through WebAIM’s [Color Contrast Checker][color-contrast-link]. They should pass WCAG AA level.
 
 ### Layout
@@ -165,3 +163,7 @@ Components should match [Firefox for Android color usage][figma-link] for light 
 %}
 
 <!-- END: Single Column Body Module -->
+
+[color-contrast-link]:https://webaim.org/resources/contrastchecker/
+[figma-link]:https://www.figma.com/proto/TebIgESfWmQkMcEmwNaYZl/Android?node-id=0%3A498&viewport=-4823%2C213%2C0.5&scaling=min-zoom&hide-ui=1
+[material-ui-component-link]:https://material-components.github.io/material-components-web-catalog/

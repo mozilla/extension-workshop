@@ -42,7 +42,7 @@ As an enterprise IT administrator you may wish to install add-ons for your users
 {% capture content_with_toc %}
 
 ## Signed vs. unsigned extensions
-[mozilla-enterprise]:https://www.mozilla.org/firefox/enterprise/
+
 From Firefox 43 all add-ons have to be signed before they can be installed into the standard or beta versions of Firefox. Unsigned add-ons can be installed in the [Developer Edition](https://www.mozilla.org/firefox/developer/), [Nightly](https://www.mozilla.org/firefox/nightly/all/), and [ESR][mozilla-enterprise] versions of Firefox, after toggling the `xpinstall.signatures.required` preference in `about:config`.
 
 If you want to install unsigned add-ons, deploying an [ESR][mozilla-enterprise] version of Firefox is the recommended approach. Once that is done, unsigned add-ons can be installed using any method, including opening the add-on file from a web page.
@@ -245,4 +245,4 @@ You can bundle add-ons within a customized Firefox, and they will be installed a
 
 <!-- END: Single Column Body Module -->
 
-
+[mozilla-enterprise]:https://www.mozilla.org/firefox/enterprise/

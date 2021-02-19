@@ -40,12 +40,6 @@ There are some important distinctions to know when developing an extension for A
 
 {% capture content_with_toc %}
 
-[browser-action]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction
-[browser-action-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
-[page-action-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action
-[page-action-hide]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide
-[page-action]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide
-
 ::: note alert
 In August 2020, Mozilla launched a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
 
@@ -178,3 +172,9 @@ At the time of writing there was an issue with [`storage.sync()`](https://develo
 %}
 
 <!-- END: Single Column Body Module -->
+
+[browser-action]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction
+[browser-action-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
+[page-action-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action
+[page-action-hide]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide
+[page-action]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide

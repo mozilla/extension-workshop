@@ -72,9 +72,7 @@ Note that this is a one-way conversion. You cannot update an extension using Web
 {% capture content %}
 
 ## Label Title 2
-[code-link]:https://www.firefox.com 'Code link example'
-[firefox-link]:https://www.firefox.com
-[addons-link]:https://addons.mozilla.org 'addons.mozilla.org'
+
 You reference all extensions API functions using a namespace, for example, `browser.alarms.create([delayInMinutes]);` would create an alram in Firefox that goes off after the time specified in `code goes here`
 
 [`code link goes here`][code-link] and [`runtime.sendNativeMessage()`][code-link]
@@ -678,4 +676,6 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 
 <!-- END: Single Column Body Module -->
 
-
+[code-link]:https://www.firefox.com 'Code link example'
+[firefox-link]:https://www.firefox.com
+[addons-link]:https://addons.mozilla.org 'addons.mozilla.org'

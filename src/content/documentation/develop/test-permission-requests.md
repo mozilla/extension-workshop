@@ -50,10 +50,7 @@ When you’re testing with an unpackaged extension, using either `about:debuggin
 You follow different processes depending on whether you want to observe the permissions requests associated with an installation or an upgrade.
 
 ### Permission requests for extension installation
-[browser-specific-settings]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
-[nightly]:https://nightly.mozilla.org/
-[developer-link]:https://www.mozilla.org/firefox/developer/
-[upadte-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates
+
 To view the install time permission warnings users see when installing your extension and retest runtime permission requests, install the extension from its `*.xpi` or `*.zip` file.
 
 To do this with an unsigned `*.xpi` or `*.zip` file you need to:
@@ -166,4 +163,7 @@ You can then rerun the extension and any runtime permission requests will be dis
 
 <!-- END: Single Column Body Module -->
 
-
+[browser-specific-settings]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
+[nightly]:https://nightly.mozilla.org/
+[developer-link]:https://www.mozilla.org/firefox/developer/
+[upadte-link]:https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates

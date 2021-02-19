@@ -35,14 +35,7 @@ date: 2021-01-11
 {% capture page_hero_banner_content %}
 
 # web-ext command reference
-[web-ext]:https://github.com/mozilla/web-ext
-[web-ext-docs]:/documentation/develop/getting-started-with-web-ext/
-[adb-link]:https://developer.android.com/studio/command-line/adb.html
-[firefox-desk]:https://www.mozilla.org/firefox/
-[firefox-mobile]:https://www.mozilla.org/firefox/mobile/
-[addons-api]:http://addons-server.readthedocs.org/en/latest/topics/api/index.html
-[addons-link]:https://addons.mozilla.org
-[submit-addon]:/documentation/publish/submitting-an-add-on/
+
 This page lists all the commands and options available under the [web-ext][web-ext] command line tool.
 
 {% endcapture %}
@@ -615,5 +608,12 @@ WEB_EXT_VERBOSE=true
 
 <!-- END: Single Column Body Module -->
 
-
+[web-ext]:https://github.com/mozilla/web-ext
+[web-ext-docs]:/documentation/develop/getting-started-with-web-ext/
+[adb-link]:https://developer.android.com/studio/command-line/adb.html
+[firefox-desk]:https://www.mozilla.org/firefox/
+[firefox-mobile]:https://www.mozilla.org/firefox/mobile/
+[addons-api]:http://addons-server.readthedocs.org/en/latest/topics/api/index.html
+[addons-link]:https://addons.mozilla.org
+[submit-addon]:/documentation/publish/submitting-an-add-on/
 
