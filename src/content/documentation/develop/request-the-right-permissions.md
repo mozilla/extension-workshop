@@ -91,7 +91,6 @@ Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExte
 | `geolocation`                                                                                                                  | Access your location                                                                                                                                                                                             |
 | `history`                                                                                                                      | Access browsing history                                                                                                                                                                                          |
 | `management`                                                                                                                   | Monitor extension usage and manage themes                                                                                                                                                                        |
-| `nativeMessaging`                                                                                                              | Exchange messages with programs other than Firefox                                                                                                                                                               |
 | `notifications`                                                                                                                | Display notifications to you                                                                                                                                                                                     |
 | `pkcs11`                                                                                                                       | Provide cryptographic authentication services                                                                                                                                                                    |
 | `privacy`                                                                                                                      | Read and modify privacy settings                                                                                                                                                                                 |
@@ -124,6 +123,7 @@ The following permissions don't get alerted to users:
   - `identity`
   - `idle`
   - `menus`
+  - `nativeMessaging`
   - `storage`
   - `theme`
   - `webRequest`
@@ -223,7 +223,6 @@ You can't request all the permissions available to `"permissions"` using optiona
 - `find`
 - `identity`
 - `menus`
-- `nativeMessaging`
 - `pageCapture`
 - `privacy`
 - `storage`
