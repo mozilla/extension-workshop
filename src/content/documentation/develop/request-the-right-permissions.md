@@ -5,9 +5,9 @@ permalink: /documentation/develop/request-the-right-permissions/
 topic: Develop
 tags: [add-ons, beginner, extensions, how-to, intermediate, permissions]
 contributors:
-  [Zearin_Galaurum, mdnwebdocs-bot, rebloor, evilpie, hellosct1, freaktechnik]
+  [caitmuenster, Zearin_Galaurum, mdnwebdocs-bot, rebloor, evilpie, hellosct1, freaktechnik]
 last_updated_by: Zearin_Galaurum
-date: 2019-05-31 8:48:40
+date: 2021-02-25 
 ---
 
 <!-- Page Hero Banner -->
