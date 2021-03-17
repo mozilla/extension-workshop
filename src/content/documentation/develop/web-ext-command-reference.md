@@ -340,7 +340,7 @@ web-ext run --start-url www.mozilla.com --start-url developer.mozilla.org
 
 Environment variable: `$WEB_EXT_START_URL`
 
-#### `--watch-file`
+#### `--watch-file`, `--watch-files`
 
 A list of files that should be watched for changes. This is useful if you want web-ext to explicitly watch for changes to specific files, without watching the extension directory tree, e.g. the output of the build from a module bundler.
 
