@@ -5,9 +5,9 @@ permalink: /documentation/develop/request-the-right-permissions/
 topic: Develop
 tags: [add-ons, beginner, extensions, how-to, intermediate, permissions]
 contributors:
-  [Zearin_Galaurum, mdnwebdocs-bot, rebloor, evilpie, hellosct1, freaktechnik]
+  [caitmuenster, Zearin_Galaurum, mdnwebdocs-bot, rebloor, evilpie, hellosct1, freaktechnik]
 last_updated_by: Zearin_Galaurum
-date: 2019-05-31 8:48:40
+date: 2021-03-19 
 ---
 
 <!-- Page Hero Banner -->
@@ -38,7 +38,7 @@ Or how to avoid permissions discouraging users from installing your extensions.
 
 ## Introduction
 
-With the introduction of Firefox Quantum (57) the handling of permissions when installing an extension changed. Previously, extensions were granted permissions silently. However, users are now informed of the permissions an extension is requesting when it's installed, with a message something like this:
+To help make users aware of the potential impact of installing an extension, Firefox will display a message showing what [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) an extension is requesting when it's installed. The prompt looks  something like this:
 
 ![Example of the permissions messages from the Gesturefy extension](/assets/img/documentation/develop/General_permissions_message_example.png)
 
@@ -48,9 +48,7 @@ Also, if an extension update requires additional permissions the user is prompte
 
 If the user chooses not to approve the permissions and cancels the update, the previous version remains installed and available for use.
 
-Displaying the permission messages improves the extension security model by making users aware of the potential impact of installing an extension. It also brings Firefox in line with other major browsers, where users have been informed about extensions' permission requests for some time.
-
-Because Firefox users haven't seen permission requests during installation before, this change could discourage some of them from installing your extension, as the messages might suggest it's doing something “scary”. We provide users with an [explanation of these permissions messages](https://support.mozilla.org/kb/permission-request-messages-explained) and guidance on [how to judge if they're appropriate](https://support.mozilla.org/kb/tips-assessing-safety-extension). However, there are several things you can do to reduce the likelihood of users abandoning the install of your extension because of these messages, these include:
+These messages have the potential to discourage some users from installing your extension, as the messages might suggest it's doing something “scary”. We provide users with an [explanation of these permissions messages](https://support.mozilla.org/kb/permission-request-messages-explained) and guidance on [how to judge if they're appropriate](https://support.mozilla.org/kb/tips-assessing-safety-extension). However, there are several things you can do to reduce the likelihood of users abandoning the install of your extension because of these messages, these include:
 
 - Make sure you aren't requesting unnecessary permissions.
 - Request permissions at runtime, which enables you to ask for the permissions in context and offer a fall back if the user doesn't grant them.
@@ -91,7 +89,7 @@ Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExte
 | `geolocation`                                                                                                                  | Access your location                                                                                                                                                                                             |
 | `history`                                                                                                                      | Access browsing history                                                                                                                                                                                          |
 | `management`                                                                                                                   | Monitor extension usage and manage themes                                                                                                                                                                        |
-| `nativeMessaging`                                                                                                              | Exchange messages with programs other than Firefox                                                                                                                                                               |
+| `nativeMessaging`   | Exchange messages with programs other than Firefox  |
 | `notifications`                                                                                                                | Display notifications to you                                                                                                                                                                                     |
 | `pkcs11`                                                                                                                       | Provide cryptographic authentication services                                                                                                                                                                    |
 | `privacy`                                                                                                                      | Read and modify privacy settings                                                                                                                                                                                 |
@@ -223,7 +221,6 @@ You can't request all the permissions available to `"permissions"` using optiona
 - `find`
 - `identity`
 - `menus`
-- `nativeMessaging`
 - `pageCapture`
 - `privacy`
 - `storage`
