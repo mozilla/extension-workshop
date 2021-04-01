@@ -28,9 +28,25 @@ You can use themes to customize how your browser looks by adding images and adju
 
 {% capture content %}
 
-## How to create themes
+With themes, you can customize the look of your Firefox by adding images to the header part of the section and changing the colors of the tab strip, address bar, toolbars, and [other supported areas](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors).
 
-![Themes](/assets/img/documentation/develop/Themes_fullwidth.jpg)
+These themes use the [WebExtensions API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions), the technology used to modify or enhance the capability of Firefox. You can choose to create a [static theme](TKTK) or a [dynamic theme](TKTK) if you would like to bundle your theme in an extension or programmatically control changes to theme. 
+
+Not a coder? No worries! It's easy to create a static theme using the [AMO theme generator](/documentation/themes/using-the-amo-theme-generator) or [Firefox Color](https://color.firefox.com). 
+
+{% endcapture %}
+{% include modules/one-column.liquid
+	id: "creating-themes"
+	content: content
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
+## How to create themes
 
 There are four ways you can create themes:
 
@@ -41,6 +57,8 @@ There are four ways you can create themes:
 - **[Code a theme yourself](https://developer.mozilla.org/docs/Mozilla/Add-ons/Themes/Theme_concepts):** Take advantage of all the theme features available. For instance, add color to more UI components, or utilize the ability to use multiple images. You can then choose to host these themes on AMO or distribute them yourself.
 
 - **Include themes in your extension:** Use the [theme API](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/theme) to take advantage of the full range of features in standalone themes. You can activate these themes based on user requests or dynamic information, like the time of day or the webpage the user is viewing.
+
+![Themes](/assets/img/documentation/develop/Themes_fullwidth.jpg)
 
 {% endcapture %}
 {% include modules/one-column.liquid

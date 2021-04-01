@@ -1329,10 +1329,6 @@
             "category": "Creating themes",
             "pages": [
               {
-                "title": "Theme concepts",
-                "url": "https://developer.mozilla.org/docs/Mozilla/Add-ons/Themes/Theme_concepts"
-              },
-              {
                 "title": "Using the AMO theme generator",
                 "url": "/documentation/themes/using-the-amo-theme-generator/",
                 "subpageitems": [
@@ -1345,6 +1341,32 @@
                     "id": "submitting-your-theme"
                   }
                 ]
+              },
+              {
+                "title": "Static themes",
+                "url": "/documentation/themes/static-themes/",
+                "subpageitems": [
+                  {
+                    "title": "Introduction",
+                    "id": "introduction"
+                   },
+                   {
+                     "title": "Single image themes",
+                     "url": "single-image-themes"
+                   },
+                   {
+                     "title": "Multiple image themes",
+                     "url": "multiple-image-themes"
+                   },
+                   {
+                     "title": "Static animated themes",
+                     "url": "static-animated-themes"
+                   }
+                ]
+              },
+              { 
+                "title": "Dynamic themes",
+                "url": "/documentation/themes/dynamic-themes/"
               }
             ]
           }
