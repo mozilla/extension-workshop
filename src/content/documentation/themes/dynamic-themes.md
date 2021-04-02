@@ -3,7 +3,7 @@ layout: sidebar
 title: Dynamic themes
 permalink: /documentation/themes/dynamic-themes/
 topic: Themes
-tags: [themes, dynamic themes, firefox, publish]
+tags: [themes, dynamic themes, firefox]
 contributors: [caitmuenster]
 last_updated_by: [caitmuenster]
 date: 2021-04-02 
