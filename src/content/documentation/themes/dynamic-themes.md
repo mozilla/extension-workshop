@@ -3,7 +3,7 @@ layout: sidebar
 title: Dynamic themes
 permalink: /documentation/themes/dynamic-themes/
 topic: Themes
-tags: [ themes, amo, firefox, guide]
+tags: [ themes ]
 contributors: [ caitmuenster ]
 last_updated_by: [ caitmuenster ]
 date: 2021-04-01 
@@ -87,7 +87,7 @@ Learn more about dynamic themes and see an additional example in the following v
 {% include modules/video-popup.liquid
 	title: "Dynamic Themes in Firefox"
 	youtube_id: "ycckyrUN0AY"
-	image: "content-guidelines/example-thumbnail.jpg"
+	image: "src/assets/img/documentation/themes/dynamic-themes-video-screenshot.png"
 	alt: "Dynamic Themes in Firefox"
 %}
 

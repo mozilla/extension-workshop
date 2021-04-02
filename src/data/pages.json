@@ -1361,6 +1361,14 @@
                    {
                      "title": "Static animated themes",
                      "url": "static-animated-themes"
+                   },
+                   {
+                     "title": "Create a simple static theme",
+                     "url": "create-a-simple-static-theme"
+                   },
+                   {
+                     "title": "Updating static themes",
+                     "url": "updating-static-themes"
                    }
                 ]
               },

@@ -28,7 +28,7 @@ In this article, you will learn how to code a static theme for Firefox.
 {% capture content_with_toc %}
 
 ## Introduction
-Static themes are specified using the same resources as a browser extension: a manifest.json file to define the theme components with those components stored in the same folder as the manifest.json file or a sub folder. These resources are then packed in a zip for publication on [addons.mozilla.org](https://addons.mozillal.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes) (AMO) or for self-distribution. For more information on self-distribution, visit Signing and distributing your add-on.
+Static themes are specified using the same resources as a browser extension: a manifest.json file to define the theme components with those components stored in the same folder as the manifest.json file or a sub folder. These resources are then packed in a zip for publication on [addons.mozilla.org](https://addons.mozillal.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes) (AMO) or for self-distribution. For more information on self-distribution, visit [Signing and distributing your add-on](documentation/publish/signing-and-distribution-overview/).
 
 There are a few approaches you can take to theming the header area of Firefox: you can use use a single static image, a single animated image, or multiple images. 
 
@@ -57,8 +57,11 @@ The area your header image needs to fill is a maximum of 200 pixels high. The ma
 
 However, rather than creating a very wide image, a better approach is to use a narrower image with a transparent left edge so that it fades to the background color. For example, we could use this image: 
 
+![Single image](/assets/img/documentation/themes/static-theme-single-image.png)
 
 combined with a complementary background color, to create this effect in the header: 
+
+![Simple static theme preview](/assets/img/documentation/themes/simple-static-theme-preview.png)
 
 See details about this theme in the [themes](https://github.com/mdn/webextensions-examples/tree/master/themes) example [weta_fade](https://github.com/mdn/webextensions-examples/tree/master/themes/weta_fade).
 
@@ -77,13 +80,16 @@ Obviously, you can still provide a single wide image if you prefer.
 
 {% capture content %}
 
-## Multiple Image Themes
+## Multiple image themes
 As an alternative to creating a single image theme, you have the option to use multiple images. These images can be individually anchored to locations within the header, with the option to apply tiling to each image.
 
 Depending on the effect you want to create you may need to suppress the mandatory "theme_frame": image with an empty or transparent image. You would use an empty or transparent image if, for example, you wanted to tile a centrally justified image, such as
 
+![Single image](/assets/img/documentation/themes/static-theme-single-image.png)
 
-to create this effect
+to create this effect:
+
+![Multiple images](/assets/img/documentation/themes/static-theme-multiple-images.png)
 
 Here you specify the weta image like this:
 
@@ -123,10 +129,10 @@ Full details of how to setup this theme can be found in the [themes](https://git
 
 {% capture content %}
 
-## Static Animated Themes
+## Static animated themes
 It is possible to create an animated theme using an APNG format image, as in the [themes](https://github.com/mdn/webextensions-examples/tree/master/themes) example [animated](https://github.com/mdn/webextensions-examples/tree/master/themes/animated). However, remember that rapid animations, such as the one in the example might be too distracting for a practical theme.
 
-You can also animate themes programmatically, which we discuss in Dynamic themes.
+You can also animate themes programmatically with [dynamic themes](/documentation/themes/dynamic-themes/).
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -180,7 +186,35 @@ Where:
   * `"frame":` is the heading area background color for your theme.
   * `"tab_background_text":` is the color of the text in the heading area.
 
-4. Package your theme and submit it to addons.mozilla.org (AMO), following [these instructions](/documentation/publish/package-your-extension/). You can choose to publically distribute your theme on AMO or distribute it yourself. 
+4. Package your theme and submit it to [addons.mozilla.org]((https://addons.mozillal.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes) (AMO), following [these instructions](/documentation/publish/package-your-extension/). You can choose to publically distribute your theme on AMO or distribute it yourself. 
+
+{% endcapture %}
+{% include modules/one-column.liquid
+  id: "create-a-simple-static-theme"
+  content: content
+  aside: ""
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
+## Updating static themes
+
+If your static theme is hosted on [addons.mozilla.org](https://addons.mozillal.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes), you can upload a new version using the [Developer Hub](https://addons.mozilla.org/developers?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes). 
+
+::: note
+If you plan to upload a packaged file, you will need to increase the version number to be higher than the current version in the package's manifest.json. 
+::: 
+
+1. Visit the product page for your theme through the [Developer Hub](https://addons.mozilla.org/developers?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes). 
+2. Select "Upload New Version" on the left.
+3. Upload your packaged file for validation.
+
+You can also modify your theme using the AMO theme generator by selecting "Create a Theme" for Step 2. If you choose this option, you do not need to increase the version number in your theme's manifest.json. 
+
 
 {% endcapture %}
 {% include modules/one-column.liquid
