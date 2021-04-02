@@ -33,7 +33,7 @@ Like browser extensions, static themes are built using a simple collection of fi
 In this article, we will walk through the steps of creating and updating a static theme, and then discuss different approaches you can take for single image, multi-image, or animated themes. 
 
 ::: note
-A theme and browser extension functionality cannot be defined in one package, such as including a theme to complement an extension. You can, however, programmatically include a theme in an extension using the Theme API. See [Dynamic themes](/documentation/themes/dynamic-themes/).
+A theme and browser extension functionality cannot be defined in one package, such as including a theme to complement an extension. You can, however, programmatically include a theme in an extension using the `theme` API. See [Dynamic themes](/documentation/themes/dynamic-themes/) for more information.
 :::
 
 {% endcapture %}
@@ -87,7 +87,7 @@ Where:
   * `"frame":` is the heading area background color for your theme.
   * `"tab_background_text":` is the color of the text in the heading area.
 
-4. Package your theme and submit it to [addons.mozilla.org](https://addons.mozillal.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes) (AMO), following [these instructions](/documentation/publish/package-your-extension/). You can choose to publically distribute your theme on AMO or [distribute it yourself](/documentation/publish/self-distribution/). 
+4. Package your theme and submit it to [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes) (AMO). Information about how to package, sign, and distribute process can be found in the [Signing and distribution overview](/documentation/publish/signing-and-distribution-overview/). You can choose to publically distribute your theme on AMO or [distribute it yourself](/documentation/publish/self-distribution/). 
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -104,7 +104,7 @@ Where:
 
 ## Updating static themes
 
-If your static theme is hosted on [addons.mozilla.org](https://addons.mozillal.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes), you can upload a new version using the [Developer Hub](https://addons.mozilla.org/developers?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes). 
+If your static theme is hosted on [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes), you can upload a new version using the [Developer Hub](https://addons.mozilla.org/developers?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes). 
 
 ::: note
 If you plan to upload a packaged file, you will need to increase the version number to be higher than the current version in the package's manifest.json. 
@@ -166,7 +166,7 @@ Obviously, you can still provide a single wide image if you prefer.
 ### Multiple image themes
 As an alternative to creating a single image theme, you have the option to use multiple images. These images can be individually anchored to locations within the header, with the option to apply tiling to each image.
 
-Depending on the effect you want to create you may need to suppress the mandatory "theme_frame": image with an empty or transparent image. You would use an empty or transparent image if, for example, you wanted to tile a centrally justified image, such as
+Depending on the effect you want to create you may need to suppress the mandatory `theme_frame` image with an empty or transparent image. You would use an empty or transparent image if, for example, you wanted to tile a centrally justified image, such as
 
 ![Single image](/assets/img/documentation/themes/static-theme-single-image.png)
 
@@ -197,7 +197,7 @@ and the images tiling with:
 ```
 <!-- END: Syntax Highlighting -->
 
-Full details of how to setup this theme can be found in the [themes](https://github.com/mdn/webextensions-examples/tree/master/themes) example [weta_mirror](https://github.com/mdn/webextensions-examples/tree/master/themes/weta_mirror). Full details of the alignment options can be found in the ["theme" key description](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme).
+Full details of how to setup this theme can be found in the [themes](https://github.com/mdn/webextensions-examples/tree/master/themes) example [weta_mirror](https://github.com/mdn/webextensions-examples/tree/master/themes/weta_mirror). Full details of the alignment options can be found in the [`theme` key description](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme).
 
 {% endcapture %}
 {% include modules/one-column.liquid

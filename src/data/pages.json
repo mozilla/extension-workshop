@@ -1333,12 +1333,16 @@
                 "url": "/documentation/themes/using-the-amo-theme-generator/",
                 "subpageitems": [
                   {
-                    "title": "Getting Started",
+                    "title": "Getting started",
                     "id": "getting-started"
                   },
                   {
                     "title": "Submitting your theme",
                     "id": "submitting-your-theme"
+                  },
+                  {
+                    "title": "Updating your theme",
+                    "url": "updating-your-theme"
                   }
                 ]
               },

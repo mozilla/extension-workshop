@@ -5,8 +5,8 @@ permalink: /documentation/themes/using-the-amo-theme-generator/
 topic: Themes
 tags: [add-on, add-ons, amo, firefox, guide, tutorial, themes]
 contributors: [irenesmith, andrewtruongmoz, caitmuenster, shiy23]
-last_updated_by: irenesmith
-date: 2019-02-28 12:39:01
+last_updated_by: caitmuenster
+date: 2021-04-02 
 ---
 
 <!-- Page Hero Banner -->
@@ -15,7 +15,7 @@ date: 2019-02-28 12:39:01
 
 # Using the AMO theme generator
 
-The theme generator on [addons.mozilla.org](https://addons.mozilla.org) (AMO) guides you through the process of creating a theme for Firefox. Once you have defined the colors and image for your theme, the generator will submit your new theme to AMO. You may submit themes for publishing on AMO or for self-distribution.
+The theme generator on [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) (AMO) guides you through the process of creating a theme for Firefox. Once you have defined the colors and image for your theme, the generator will submit your new theme to AMO. You may submit themes for publishing on AMO or for self-distribution.
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -32,12 +32,12 @@ The theme generator on [addons.mozilla.org](https://addons.mozilla.org) (AMO) gu
 You will need to be logged in to your Firefox Account to access the Theme Generator.
 :::
 
-If you would like to publish your theme on [addons.mozilla.org](https://addons.mozilla.org) (AMO), begin by going to the [listed Theme Generator page](https://addons.mozilla.org/developers/addon/submit/wizard-listed).
+If you would like to publish your theme on [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) (AMO), begin by going to the [listed Theme Generator page](https://addons.mozilla.org/developers/addon/submit/wizard-listed?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator).
 
-Otherwise, if you prefer to self-distribute your theme, go to the [unlisted Theme Generator Page](https://addons.mozilla.org/developers/addon/submit/wizard-unlisted). For more information on distribution, visit [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
+Otherwise, if you prefer to self-distribute your theme, go to the [unlisted Theme Generator Page](https://addons.mozilla.org/developers/addon/submit/wizard-unlisted?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator). For more information on distribution, visit [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
 
 ::: note
-You can create a more elaborate theme, for example a theme that uses multiple images, by creating a Static Theme. To get started with Static Themes, take a look at: [Theme concepts](https://developer.mozilla.org/docs/Mozilla/Add-ons/Themes/Theme_concepts).
+You can create a more elaborate theme, for example a theme that uses multiple images, by coding a static theme. Take a look at the [Static themes](/documentation/themes/static-themes/) article to get started.
 :::
 
 To use the AMO theme generator, fill out the form with information for your new theme.
@@ -104,19 +104,20 @@ Themes submitted for self-distribution will be signed immediately and an XPI fil
 %}
 
 <!-- END: Content with Table of Contents -->
+
 <!-- Single Column Body Module -->
 
 {% capture content %}
 
 ## Submitting your theme
 
-If you are publishing your theme to [addons.mozilla.org](https://addons.mozilla.org) (AMO), the second page of the theme creator asks you to describe your theme. You will have to enter the following information:
+If you are publishing your theme to [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) (AMO), the second page of the theme creator asks you to describe your theme. You will have to enter the following information:
 
 **Name** <br/>
 This is the name of your theme as it will be displayed on AMO, and can be different from the name that is displayed when the theme has been installed in Firefox.
 
 **Add-on URL** <br/>
-This is the address from which your theme can be downloaded. You can edit the final portion of the value (after https://addons.mozilla.org/) but please use only letters, numbers, underscores, and dashes in your URL.
+This is the address from which your theme can be downloaded. You can edit the final portion of the value (after https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) but please use only letters, numbers, underscores, and dashes in your URL.
 
 **Summary (required)** <br/>
 Describe your theme. You have 250 characters in which to describe your theme.
@@ -165,4 +166,33 @@ Once you have filled in all of the required information, you can complete the su
 
 <!-- END: Single Column Body Module -->
 
+<!-- Single Column Body Module -->
 
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
+## Updating your theme
+
+You may want to make changes to your theme after it has been published. 
+
+1. Log into the [Developer Hub](https://addons.mozilla.org/developers?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) on [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator). 
+
+2. Select "Edit Product Page" for the theme you would like to edit. 
+
+3. Click on the link "Upload New Version" on the upper left hand corner. 
+
+4. On the next page, click the button for "Create a Theme" to be taken to the AMO theme generator. This will load the current version of your theme. You can then make changes to your theme. 
+
+5. When you are done, click the button for "Finish Theme." 
+
+After the new version of theme has been approved, it will be available for installation and existing users will receive the update. 
+
+{% endcapture %}
+{% include modules/one-column.liquid
+  id: "updating-your-theme"
+  content: content
+  aside: ""
+%}
+
+<!-- END: Single Column Body Module -->

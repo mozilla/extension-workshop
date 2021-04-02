@@ -14,7 +14,7 @@ date: 2021-04-02
 {% capture page_hero_banner_content %}
 
 # Cross-browser compatibility
-TKTK
+Themes for Firefox are not always compatible with other major browsers. 
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -29,7 +29,7 @@ TKTK
 
 There is currently limited compatibility between themes in the major browsers. Opera takes an entirely different approach, and Microsoft Edge themes are not yet open to developers.
 
-There is good compatibility between Firefox [static themes](/documentation/themes/static-themes/) and Chrome themes, providing the ability to port a single header image theme from Firefox to Chrome. However, noting that `"frame":` and `"tab_background_text":` only support RGB color array definition on Chrome.
+There is good compatibility between Firefox [static themes](/documentation/themes/static-themes/) and Chrome themes, providing the ability to port a single header image theme from Firefox to Chrome. However, noting that `frame` and `tab_background_text` only support RGB color array definition on Chrome.
 
 So, in the single image theme example [(weta_fade)](https://github.com/mdn/webextensions-examples/tree/master/themes/weta_fade) could be supported in Chrome using the following manifest.json file:
 
@@ -53,9 +53,9 @@ So, in the single image theme example [(weta_fade)](https://github.com/mdn/webex
 ```
 <!-- END: Syntax Highlighting -->
 
-Also, note that Chrome tiles the `“theme_frame”:` image from the left of the header area.
+Also, note that Chrome tiles the `“theme_frame”:` image from the left of the header area: 
 
-![Chrome theme example](/assets/img/documentation/themes/chrome-theme-example.png)
+![Themes](/assets/img/documentation/themes/chrome_theme_example.png)
 
 For more information, see the notes on [Chrome compatibility](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#chrome_compatibility) on MDN.
 
