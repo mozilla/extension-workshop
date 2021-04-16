@@ -1342,7 +1342,7 @@
                   },
                   {
                     "title": "Updating your theme",
-                    "url": "updating-your-theme"
+                    "id": "updating-your-theme"
                   }
                 ]
               },
@@ -1356,23 +1356,23 @@
                    },
                    {
                     "title": "Create a simple static theme",
-                    "url": "create-a-simple-static-theme"
+                    "id": "create-a-simple-static-theme"
                   },
                   {
                     "title": "Updating static themes",
-                    "url": "updating-static-themes"
+                    "id": "updating-static-themes"
                   },
                    {
                      "title": "Single image themes",
-                     "url": "single-image-themes"
+                     "id": "single-image-themes"
                    },
                    {
                      "title": "Multiple image themes",
-                     "url": "multiple-image-themes"
+                     "id": "multiple-image-themes"
                    },
                    {
                      "title": "Static animated themes",
-                     "url": "static-animated-themes"
+                     "id": "static-animated-themes"
                    }
                 ]
               },
@@ -1386,11 +1386,11 @@
                   },
                   {
                     "title": "Creating dynamic themes",
-                    "url": "creating-dynamic-themes"
+                    "id": "creating-dynamic-themes"
                   },
                   {
                     "title": "Publishing dynamic themes",
-                    "url": "publishing-dynamic-themes"
+                    "id": "publishing-dynamic-themes"
                   }
                 ]
               },
