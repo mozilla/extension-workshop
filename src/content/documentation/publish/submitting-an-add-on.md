@@ -36,7 +36,7 @@ The maximum file size accepted is 200 MB. If your add-on is larger than 200 MB, 
 
 If your add-on includes code that might be difficult to read, such as code created by minification or obfuscation, create a source code package. For more information on this requirement, see [Source Code Submission](/documentation/publish/source-code-submission/).
 
-Create your developer account on [addons.mozilla.org](https://addons.mozilla.org) (AMO):
+Create your developer account on [addons.mozilla.org][https://addons.mozilla.org] (AMO):
 
 - If you have a Firefox Account, connect it with AMO: visit AMO, in the page header click **Log in**, then log in with your Firefox Account.
 - If you don't have a Firefox Account: visit AMO and, in the page header, click **Register**.
@@ -63,7 +63,7 @@ Choose:
 
 ## Listing on AMO
 
-1. The Upload Version page displays. <br/><br/> ![Submit an add-on page](/assets/img/publish/Submit_add_on_before_upload.png)
+1. The Upload Version page displays. <br/><br/> ![Submit an add-on page][/assets/img/publish/Submit_add_on_before_upload.png]
 
 2. Click **Select a file**, select and upload your add-on.
 
@@ -97,7 +97,7 @@ Choose:
 Your add-on is published and available on AMO for users to discover and install. Note, however, that your add-on may still be subject to further review, if it is you'll receive notification of the outcome of the review later.
 
 ::: note
-When you're ready to release a new version of your add-on, update it by visiting the add-on's page on [addons.mozilla.org](https://addons.mozilla.org) and uploading the new version. You must update it on the add-on's page, so AMO recognizes it as an update to an existing add-on and not a new one.
+When you're ready to release a new version of your add-on, update it by visiting the add-on's page on [addons.mozilla.org][https://addons.mozilla.org] and uploading the new version. You must update it on the add-on's page, so AMO recognizes it as an update to an existing add-on and not a new one.
 :::
 
 Learn how to make your add-on listing appealing with these [tips](/documentation/develop/create-an-appealing-listing/).
@@ -119,7 +119,7 @@ Learn how to make your add-on listing appealing with these [tips](/documentation
 If you want Firefox to handle updates to your add-on, remember to include the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in your `manifest.json` with the `update_url` attribute set to point to an [update manifest file](https://developer.mozilla.org/Add-ons/Updates).
 :::
 
-1. The Upload Version page displays. <br/><br/> ![Submit an add-on page](/assets/img/publish/Submit_add_on_before_upload.png)
+1. The Upload Version page displays. <br/><br/> ![Submit an add-on page][/assets/img/publish/Submit_add_on_before_upload.png]
 
 2. Click **Select a file**, select and upload your add-on.
 3. The validator checks the add-on for issues and the page updates. <br/><br/> <img src="/assets/img/publish/Submit_add_on_after_upload.png" style="box-shadow:0 0 0.5em gray;" />
@@ -160,4 +160,5 @@ For resources that can help now you've published an add-on and details of how to
 
 <!-- END: Single Column Body Module -->
 
-
+[https://addons.mozilla.org]:https://addons.mozilla.org
+[/assets/img/publish/Submit_add_on_before_upload.png]:/assets/img/publish/Submit_add_on_before_upload.png

@@ -53,7 +53,7 @@ Regardless of the sideloading method used, you must prepare the add-on as follow
 
 An email address style ID is recommended.
 
-2. Sign the add-on in [addons.mozilla.org](https://addons.mozilla.org) (AMO). Depending on how you want to make your add-on available, you can use either the unlisted (if you are distributing the add-on exclusively) or listed options. For more details, see [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
+2. Sign the add-on in [addons.mozilla.org](https://addons.mozilla.org) (AMO). Depending on how you want to make your add-on available, you can use either the unlisted (if you are distributing the add-on exclusively) or listed options. For more details, see [Signing and distributing your add-on][/documentation/publish/signing-and-distribution-overview/].
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid
@@ -107,11 +107,11 @@ To use Install Add-on From File in Add-on Manager, send the user the signed add-
 Starting in Firefox 73, it will no longer be possible to have an extension be automatically installed as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2019/10/31/firefox-to-discontinue-sideloaded-extensions/) for more information.
 :::
 
-This method of add-on installation involves copying the add-on into one of the standard extension folders on the user's computer. Once copied, the next time Firefox launches the add-on will be installed. By default, the user will be asked to approve the installation, and if the user approves, the add-on will be installed and automatically loaded for subsequent launches. If the user has more than one Firefox profile, the approval and installation will occur on the next launch of each profile. For details on controlling whether the user is prompted to approve the installation, see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations).
+This method of add-on installation involves copying the add-on into one of the standard extension folders on the user's computer. Once copied, the next time Firefox launches the add-on will be installed. By default, the user will be asked to approve the installation, and if the user approves, the add-on will be installed and automatically loaded for subsequent launches. If the user has more than one Firefox profile, the approval and installation will occur on the next launch of each profile. For details on controlling whether the user is prompted to approve the installation, see [Controlling automatic installation][/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations].
 
 ### Rename your XPI file
 
-To use this method, your XPI file must be named using the add-on or application ID, as set in [Preparing your add-on](#preparing-your-addon). The signed add-on file you downloaded from AMO will be named something like `borderify-1.0-an+fx.xpi` (see [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/) for more details), change this to, for example, `borderify@example.com.xpi`.
+To use this method, your XPI file must be named using the add-on or application ID, as set in [Preparing your add-on](#preparing-your-addon). The signed add-on file you downloaded from AMO will be named something like `borderify-1.0-an+fx.xpi` (see [Signing and distributing your add-on][/documentation/publish/signing-and-distribution-overview/] for more details), change this to, for example, `borderify@example.com.xpi`.
 
 ::: note
 If you are developing an add-on for Firefox you can use an extension proxy file to install an add-on without copying the files over to the standard extensions folders.
@@ -121,7 +121,7 @@ If you are developing an add-on for Firefox you can use an extension proxy file 
 
 In what follows `{ec8030f7-c20a-464f-9b0e-13a3a9e97384}` is the application ID of Firefox.
 
-The standard installation of Firefox disables the automatic installation of add-ons from these locations (see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations)). As a result, the process for each of the methods described below is as follows:
+The standard installation of Firefox disables the automatic installation of add-ons from these locations (see [Controlling automatic installation][/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations]). As a result, the process for each of the methods described below is as follows:
 
 - Copy the renamed XPI file to the extensions folder for [Windows](#windows), [macOS](#macOS), or [Linux](#linux) as appropriate. Note that, depending on the desktop OS and its settings, the user may need administrator permission to complete this action.
 - Close and restart Firefox.
@@ -137,7 +137,7 @@ The standard installation of Firefox disables the automatic installation of add-
 
 - The add-on is now installed.
 
-For more details on the interstitial and silent installs, see [Controlling automatic installation](/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations).
+For more details on the interstitial and silent installs, see [Controlling automatic installation][/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations].
 
 ::: note
 To uninstall the add-on, close Firefox and remove the add-on from the location where it was added.
@@ -212,4 +212,5 @@ To install an add-on for a specific user, copy the XPI file to:
 
 <!-- END: Single Column Body Module -->
 
-
+[/documentation/publish/signing-and-distribution-overview/]:/documentation/publish/signing-and-distribution-overview/
+[/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations]:/documentation/enterprise/enterprise-distribution/#controlling-automatic-installations

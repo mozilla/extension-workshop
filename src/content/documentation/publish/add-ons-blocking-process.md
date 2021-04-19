@@ -18,7 +18,7 @@ Add-ons enable users to add features to Firefox for a personalized browsing expe
 
 When Mozilla becomes aware of add-ons that go against user expectations or otherwise risk user privacy and security, it takes steps to block them from running in Firefox. This may happen proactively, or in response to an abuse report.
 
-The following describes Mozilla’s common practices for dealing with add-ons that appear to violate the [Add-on Policies](/documentation/publish/add-on-policies/). Authoritative information on the conditions for removing or revoking add-ons can be found in the [Firefox Add-on Distribution Agreement](/documentation/publish/firefox-add-on-distribution-agreement/) and the [Add-on Policies](/documentation/publish/add-on-policies/).
+The following describes Mozilla’s common practices for dealing with add-ons that appear to violate the [Add-on Policies][/documentation/publish/add-on-policies/]. Authoritative information on the conditions for removing or revoking add-ons can be found in the [Firefox Add-on Distribution Agreement][/documentation/publish/firefox-add-on-distribution-agreement/] and the [Add-on Policies][/documentation/publish/add-on-policies/].
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -94,7 +94,7 @@ More commonly, we will not reach out to developers prior to blocking if it appea
 
 If you have encountered an add-on that you believe meets the criteria for being blocked, you may [request a block](http://bugzilla.mozilla.org/form.blocklist). Note that developers cannot request a block of their own add-ons.
 
-Mozilla only blocks add-ons based on the [Firefox distribution agreement](/documentation/publish/firefox-add-on-distribution-agreement/) and [add-on policies](/documentation/publish/add-on-policies/). When requesting a block, please read these carefully as the policies do allow certain forms of monetization and data collection.
+Mozilla only blocks add-ons based on the [Firefox distribution agreement][/documentation/publish/firefox-add-on-distribution-agreement/] and [add-on policies][/documentation/publish/add-on-policies/]. When requesting a block, please read these carefully as the policies do allow certain forms of monetization and data collection.
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -123,3 +123,5 @@ In addition, we may block certain plugins that are known to cause stability issu
 
 <!-- END: Single Column Body Module -->
 
+[/documentation/publish/add-on-policies/]:/documentation/publish/add-on-policies/
+[/documentation/publish/firefox-add-on-distribution-agreement/]:/documentation/publish/firefox-add-on-distribution-agreement/

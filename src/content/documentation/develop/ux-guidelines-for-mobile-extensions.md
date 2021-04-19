@@ -59,7 +59,7 @@ Make your extension’s stylesheet responsive and follow these key guidelines to
 
 ### Color contrast
 
-Pass your colors through WebAIM’s [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). They should pass WCAG AA level.
+Pass your colors through WebAIM’s [Color Contrast Checker][https://webaim.org/resources/contrastchecker/]. They should pass WCAG AA level.
 
 ### Layout
 
@@ -93,11 +93,11 @@ To provide a seamless experience between your extension and the browser, use the
 
 - Use the Protocol Design System's [color palette](https://protocol.mozilla.org/fundamentals/color.html).
 
-- Match Firefox for Android's [color usage](https://www.figma.com/proto/TebIgESfWmQkMcEmwNaYZl/Android?node-id=0%3A498&viewport=-4823%2C213%2C0.5&scaling=min-zoom&hide-ui=1) for light and dark themes.
+- Match Firefox for Android's [color usage][figmaLink] for light and dark themes.
 
 ### Color contrast
 
-Pass your colors through WebAIM’s [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). They should pass WCAG AAA level.
+Pass your colors through WebAIM’s [Color Contrast Checker][https://webaim.org/resources/contrastchecker/]. They should pass WCAG AAA level.
 
 ### Typography
 
@@ -118,7 +118,7 @@ Use either [Photon Android icons](https://design.firefox.com/icons/viewer/) or [
 
 ### Components
 
-Frequently used elements in your extension should use mobile-optimised [Material Web Components](https://material-components.github.io/material-components-web-catalog/). They may include:
+Frequently used elements in your extension should use mobile-optimised [Material Web Components][https://material-components.github.io/material-components-web-catalog/]. They may include:
 
 - [Button](https://material-components.github.io/material-components-web-catalog/#/component/button), [Floating Action Button](https://material-components.github.io/material-components-web-catalog/#/component/fab) and [Icon button](https://material-components.github.io/material-components-web-catalog/#/component/icon-button)
 - Form elements like [checkbox](https://material-components.github.io/material-components-web-catalog/#/component/checkbox), [radio button](https://material-components.github.io/material-components-web-catalog/#/component/radio), [switch](https://material-components.github.io/material-components-web-catalog/#/component/switch) and [text field](https://material-components.github.io/material-components-web-catalog/#/component/text-field)
@@ -148,13 +148,13 @@ Rebuild your extension's layout using the [Material Web Components Layout Grid](
 
 ### Components
 
-Most if not all elements in your extension should use mobile-optimised [Material Web Components](https://material-components.github.io/material-components-web-catalog/):
+Most if not all elements in your extension should use mobile-optimised [Material Web Components][https://material-components.github.io/material-components-web-catalog/]:
 - [Tab bar](https://material-components.github.io/material-components-web-catalog/#/component/tabs)
 - [Top app bar](https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar)
 
 Seldom used elements that could be mobile-optimised include [Card](https://material-components.github.io/material-components-web-catalog/#/component/card), [Chips](https://material-components.github.io/material-components-web-catalog/#/component/chips), [Data table](https://material-components.github.io/material-components-web-catalog/#/component/data-table), [Dialog](https://material-components.github.io/material-components-web-catalog/#/component/dialog), [Drawer](https://material-components.github.io/material-components-web-catalog/#/component/drawer), [Image list](https://material-components.github.io/material-components-web-catalog/#/component/image-list), and [Snackbar](https://material-components.github.io/material-components-web-catalog/#/component/snackbar).
 
-Components should match [Firefox for Android color usage](https://www.figma.com/proto/TebIgESfWmQkMcEmwNaYZl/Android?node-id=0%3A498&viewport=-4823%2C213%2C0.5&scaling=min-zoom&hide-ui=1) for light and dark themes.
+Components should match [Firefox for Android color usage][figmaLink] for light and dark themes.
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -163,3 +163,7 @@ Components should match [Firefox for Android color usage](https://www.figma.com/
 %}
 
 <!-- END: Single Column Body Module -->
+
+[https://webaim.org/resources/contrastchecker/]:https://webaim.org/resources/contrastchecker/
+[figmaLink]:https://www.figma.com/proto/TebIgESfWmQkMcEmwNaYZl/Android?node-id=0%3A498&viewport=-4823%2C213%2C0.5&scaling=min-zoom&hide-ui=1
+[https://material-components.github.io/material-components-web-catalog/]:https://material-components.github.io/material-components-web-catalog/

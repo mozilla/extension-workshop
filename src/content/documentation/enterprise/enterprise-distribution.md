@@ -43,9 +43,9 @@ As an enterprise IT administrator you may wish to install add-ons for your users
 
 ## Signed vs. unsigned extensions
 
-From Firefox 43 all add-ons have to be signed before they can be installed into the standard or beta versions of Firefox. Unsigned add-ons can be installed in the [Developer Edition](https://www.mozilla.org/firefox/developer/), [Nightly](https://www.mozilla.org/firefox/nightly/all/), and [ESR](https://www.mozilla.org/firefox/enterprise/) versions of Firefox, after toggling the `xpinstall.signatures.required` preference in `about:config`.
+From Firefox 43 all add-ons have to be signed before they can be installed into the standard or beta versions of Firefox. Unsigned add-ons can be installed in the [Developer Edition](https://www.mozilla.org/firefox/developer/), [Nightly](https://www.mozilla.org/firefox/nightly/all/), and [ESR][https://www.mozilla.org/firefox/enterprise/] versions of Firefox, after toggling the `xpinstall.signatures.required` preference in `about:config`.
 
-If you want to install unsigned add-ons, deploying an [ESR](https://www.mozilla.org/firefox/enterprise/) version of Firefox is the recommended approach. Once that is done, unsigned add-ons can be installed using any method, including opening the add-on file from a web page.
+If you want to install unsigned add-ons, deploying an [ESR][https://www.mozilla.org/firefox/enterprise/] version of Firefox is the recommended approach. Once that is done, unsigned add-ons can be installed using any method, including opening the add-on file from a web page.
 
 The alternative, and recommended, approach is to use the option for unlisted add-ons on [addons.mozilla.org](https://addons.mozilla.org) (AMO). This option means that you can get a signed add-on without it being listed in the public add-ons directory. This feature provides a signed add-on immediately. This signed add-on can then be installed from a web page behind the firewall, or installed using one of the options described here.
 
@@ -245,4 +245,4 @@ You can bundle add-ons within a customized Firefox, and they will be installed a
 
 <!-- END: Single Column Body Module -->
 
-
+[https://www.mozilla.org/firefox/enterprise/]:https://www.mozilla.org/firefox/enterprise/

@@ -14,21 +14,21 @@ When you build an extension, you make the web better. To get your great idea out
 
 <div class="cell small-12 large-6 tile-borderless">
 
-[![What’s Great Content and Design?](/assets/img/content_video_thumbnail.jpg)](a0_OsLGI0k4 'Open Popup Video')
+[![What’s Great Content and Design?](/assets/img/content_video_thumbnail.jpg)][popupVideo]
 
 #### What’s Great Content and Design?
 
 Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietrich Ayala, extension developer.
 
-[Watch the video](a0_OsLGI0k4 'Open Popup Video')
+[Watch the video][popupVideo]
 
 </div>
 </div>
 
 ## To edit your product page:
 
-- If you are creating a new extension or theme, you’ll need to create an account on [addons.mozilla.org/developers](https://addons.mozilla.org/developers/ 'addons.mozilla.org/developers/'), select **New Submission**, and submit your extension or theme file. Once you do this, you will create your Product Page within the submission flow.
-- If you are updating an existing product page, you will log in to [addons.mozilla.org/developers](https://addons.mozilla.org/developers/ 'addons.mozilla.org/developers/') and select **Edit Information** to revise content.
+- If you are creating a new extension or theme, you’ll need to create an account on [addons.mozilla.org/developers][https://addons.mozilla.org/developers/], select **New Submission**, and submit your extension or theme file. Once you do this, you will create your Product Page within the submission flow.
+- If you are updating an existing product page, you will log in to [addons.mozilla.org/developers][https://addons.mozilla.org/developers/] and select **Edit Information** to revise content.
 - All fields can be updated at any time. You will need to update the following content types in both your manifest and on addons.mozilla.org:
   - Author Name,
   - Extension/Theme Name,
@@ -43,3 +43,6 @@ Featuring Madhava Enros, Senior Director of Firefox User Experience, and Dietric
 - Creating your very first extension? Get started on the [Firefox Extension Workshop](https://extensionworkshop.com/ 'extensionworkshop.com/').
 
 _Note, you may be required to include additional information in your product page, beyond the content guidelines here. This includes things like privacy policy or disclosures when payment is required to enable features. See the [Add-on policies](https://developer.mozilla.org/docs/Mozilla/Add-ons/AMO/Policy/Reviews 'developer.mozilla.org/docs/Mozilla/Add-ons/AMO/Policy/Reviews') for more information._
+
+[popupVideo]: a0_OsLGI0k4 'Open Popup Video'
+[https://addons.mozilla.org/developers/]: https://addons.mozilla.org/developers/ 'addons.mozilla.org/developers/'

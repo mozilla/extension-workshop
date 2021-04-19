@@ -15,7 +15,7 @@ date: 2019-06-05 14:56:00
 
 # Add-on ownership
 
-Add-ons are often the result of the work of a team of developers, which is why add-ons on AMO can have multiple authors. Authors may be designated as owners or developers. Both types of author can update and manage the add-on and its listing, but only owners can add authors to the add-on. The owners of an add-on can transfer ownership and add authors to an add-on through the [Developer Hub](https://addons.mozilla.org/developers/).
+Add-ons are often the result of the work of a team of developers, which is why add-ons on AMO can have multiple authors. Authors may be designated as owners or developers. Both types of author can update and manage the add-on and its listing, but only owners can add authors to the add-on. The owners of an add-on can transfer ownership and add authors to an add-on through the [Developer Hub][https://addons.mozilla.org/developers/].
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -31,7 +31,7 @@ Add-ons are often the result of the work of a team of developers, which is why a
 No interaction with Mozilla representatives is necessary for a transfer of ownership, follow these steps:
 
 - Make sure the new owner has an account on [addons.mozilla.org](https://addons.mozilla.org). New accounts can be created using **Register** or **Log in**, found in the top right of the homepage. The new owner must confirm their email address before continuing.
-- Sign into your account on the [Add-on Developer Hub](https://addons.mozilla.org/developers/), and click **Edit Listing** for the add-on you want to transfer.
+- Sign into your account on the [Add-on Developer Hub][https://addons.mozilla.org/developers/], and click **Edit Listing** for the add-on you want to transfer.
 - In the left-hand menu, click **Manage Authors & License**.
 - Add the new owner’s email address in the box with the hint **Enter a new author‘s email address**. By default, this new address is set as an owner, with the **Listed** box checked. Don’t change these defaults.
 - Click the X icon next to your email address to remove yourself from the list of authors.
@@ -67,4 +67,4 @@ If you are unsure of the current copyright status of an add-on’s source code, 
 
 <!-- END: Single Column Body Module -->
 
-
+[https://addons.mozilla.org/developers/]:https://addons.mozilla.org/developers/

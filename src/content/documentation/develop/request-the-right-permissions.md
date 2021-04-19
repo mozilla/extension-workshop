@@ -5,9 +5,9 @@ permalink: /documentation/develop/request-the-right-permissions/
 topic: Develop
 tags: [add-ons, beginner, extensions, how-to, intermediate, permissions]
 contributors:
-  [caitmuenster, Zearin_Galaurum, mdnwebdocs-bot, rebloor, evilpie, hellosct1, freaktechnik]
+  [Zearin_Galaurum, mdnwebdocs-bot, rebloor, evilpie, hellosct1, freaktechnik]
 last_updated_by: Zearin_Galaurum
-date: 2021-03-19 
+date: 2019-05-31 8:48:40
 ---
 
 <!-- Page Hero Banner -->
@@ -38,7 +38,7 @@ Or how to avoid permissions discouraging users from installing your extensions.
 
 ## Introduction
 
-To help make users aware of the potential impact of installing an extension, Firefox will display a message showing what [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) an extension is requesting when it's installed. The prompt looks  something like this:
+With the introduction of Firefox Quantum (57) the handling of permissions when installing an extension changed. Previously, extensions were granted permissions silently. However, users are now informed of the permissions an extension is requesting when it's installed, with a message something like this:
 
 ![Example of the permissions messages from the Gesturefy extension](/assets/img/documentation/develop/General_permissions_message_example.png)
 
@@ -48,7 +48,9 @@ Also, if an extension update requires additional permissions the user is prompte
 
 If the user chooses not to approve the permissions and cancels the update, the previous version remains installed and available for use.
 
-These messages have the potential to discourage some users from installing your extension, as the messages might suggest it's doing something “scary”. We provide users with an [explanation of these permissions messages](https://support.mozilla.org/kb/permission-request-messages-explained) and guidance on [how to judge if they're appropriate](https://support.mozilla.org/kb/tips-assessing-safety-extension). However, there are several things you can do to reduce the likelihood of users abandoning the install of your extension because of these messages, these include:
+Displaying the permission messages improves the extension security model by making users aware of the potential impact of installing an extension. It also brings Firefox in line with other major browsers, where users have been informed about extensions' permission requests for some time.
+
+Because Firefox users haven't seen permission requests during installation before, this change could discourage some of them from installing your extension, as the messages might suggest it's doing something “scary”. We provide users with an [explanation of these permissions messages](https://support.mozilla.org/kb/permission-request-messages-explained) and guidance on [how to judge if they're appropriate](https://support.mozilla.org/kb/tips-assessing-safety-extension). However, there are several things you can do to reduce the likelihood of users abandoning the install of your extension because of these messages, these include:
 
 - Make sure you aren't requesting unnecessary permissions.
 - Request permissions at runtime, which enables you to ask for the permissions in context and offer a fall back if the user doesn't grant them.
@@ -70,7 +72,7 @@ Tip: Permission warnings aren't issued [when you load an unpacked extension](/do
 
 ## Advised permissions
 
-Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) result in advice being given to the user. The permissions that trigger the display of a message and the messages they trigger are:
+Not all [permissions][https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions] result in advice being given to the user. The permissions that trigger the display of a message and the messages they trigger are:
 
 <!-- Table -->
 
@@ -78,7 +80,7 @@ Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExte
 
 | Permission                                                                                                                       | Permissions messages                                                                                                                                                                                             |
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Host permissions                                                                                                                 | Access your data for all websites<br>Access your data for sites in the *[named]*  domain<br>Access your data in _#_ other domains<br>Access your data for _[named site]_<br>Access your data on _#_ other sites” |
+| Host permissions                                                                                                                 | Access your data for all websites<br>Access your data for sites in the *[named]*  domain<br>Access your data in _#_ other domains<br>Access your data for _[named site]_<br>Access your data on _#_ other sites” |
 | API permissions:                                                                                                                 |
 | `bookmarks`                                                                                                                    | Read and modify bookmarks                                                                                                                                                                                        |
 | `browserSettings`                                                                                                              | Read and modify browser settings                                                                                                                                                                                 |
@@ -89,7 +91,7 @@ Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExte
 | `geolocation`                                                                                                                  | Access your location                                                                                                                                                                                             |
 | `history`                                                                                                                      | Access browsing history                                                                                                                                                                                          |
 | `management`                                                                                                                   | Monitor extension usage and manage themes                                                                                                                                                                        |
-| `nativeMessaging`   | Exchange messages with programs other than Firefox  |
+| `nativeMessaging`                                                                                                              | Exchange messages with programs other than Firefox                                                                                                                                                               |
 | `notifications`                                                                                                                | Display notifications to you                                                                                                                                                                                     |
 | `pkcs11`                                                                                                                       | Provide cryptographic authentication services                                                                                                                                                                    |
 | `privacy`                                                                                                                      | Read and modify privacy settings                                                                                                                                                                                 |
@@ -148,7 +150,7 @@ This section looks at situations where you might be asking for more permissions 
 
 ### Ask for only the permissions your extension uses
 
-This may seem obvious, but if you create an extension by using an earlier example as a template or you remove a feature during development or testing, you may be asking for permissions your extension doesn't need. Addressing this is a case of doing a manual check of your code against the permissions ([`permissions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and [`optional_permissions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)) that you're requesting in the extension's `manifest.json`.
+This may seem obvious, but if you create an extension by using an earlier example as a template or you remove a feature during development or testing, you may be asking for permissions your extension doesn't need. Addressing this is a case of doing a manual check of your code against the permissions ([`permissions`][https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions] and [`optional_permissions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)) that you're requesting in the extension's `manifest.json`.
 
 ### Use "activeTab" rather than "tabs" and host permissions
 
@@ -156,8 +158,8 @@ Take an extension you're developing to help-color blind users. At the user's req
 
 ```json
 "permissions": [
-  "<all_urls>",
-  "tabs"
+  "<all_urls>",
+  "tabs"
 ]
 ```
 
@@ -207,7 +209,7 @@ A typical scenario for using this approach is the `"geoLocation"` permission. Sa
 
 ![Example of an additional or runtime permission request message](/assets/img/documentation/develop/Permissions_optional_request.png)
 
-Making a runtime permission request is straightforward. Include any permissions you want to request under the `manifest.json` [`optional_permissions`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions) key. Then pass the permissions you want granted to [`WebExtAPIRef("permissions.request")`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. `true` is returned if the user grants the request, `false` if they don't.
+Making a runtime permission request is straightforward. Include any permissions you want to request under the `manifest.json` `"[optional_permissions][https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions]"` key. Then pass the permissions you want granted to [`WebExtAPIRef("permissions.request")`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. `true` is returned if the user grants the request, `false` if they don't.
 
 You can't request all the permissions available to `"permissions"` using optional permissions. You can't request the following API permissions:
 
@@ -221,6 +223,7 @@ You can't request all the permissions available to `"permissions"` using optiona
 - `find`
 - `identity`
 - `menus`
+- `nativeMessaging`
 - `pageCapture`
 - `privacy`
 - `storage`
@@ -231,7 +234,7 @@ There are a couple of things to note:
 - You can only request permissions inside the handler for a user action, such as from a toolbar button (browser action), shortcut menu item, or similar.
 - If you request several permissions at once they are either all granted or all declined, the user cannot choose to grant some and not others.
 
-For more information about optional permissions, see [`optional_permissions`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions) and the [permissions](https://github.com/mdn/webextensions-examples/tree/master/permissions) example.
+For more information about optional permissions, see [`optional_permissions`][https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions] and the [permissions](https://github.com/mdn/webextensions-examples/tree/master/permissions) example.
 
 </div>
 </article>
@@ -261,4 +264,5 @@ A good example of this approach is [Gesturefy](https://addons.mozilla.org/firefo
 
 <!-- END: Single Column Body Module -->
 
-
+[https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
+[https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions]:https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions
