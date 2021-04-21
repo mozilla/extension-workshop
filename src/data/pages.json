@@ -1329,22 +1329,74 @@
             "category": "Creating themes",
             "pages": [
               {
-                "title": "Theme concepts",
-                "url": "https://developer.mozilla.org/docs/Mozilla/Add-ons/Themes/Theme_concepts"
-              },
-              {
                 "title": "Using the AMO theme generator",
                 "url": "/documentation/themes/using-the-amo-theme-generator/",
                 "subpageitems": [
                   {
-                    "title": "Getting Started",
+                    "title": "Getting started",
                     "id": "getting-started"
                   },
                   {
                     "title": "Submitting your theme",
                     "id": "submitting-your-theme"
+                  },
+                  {
+                    "title": "Updating your theme",
+                    "id": "updating-your-theme"
                   }
                 ]
+              },
+              {
+                "title": "Static themes",
+                "url": "/documentation/themes/static-themes/",
+                "subpageitems": [
+                  {
+                    "title": "Introduction",
+                    "id": "introduction"
+                   },
+                   {
+                    "title": "Create a simple static theme",
+                    "id": "create-a-simple-static-theme"
+                  },
+                  {
+                    "title": "Updating static themes",
+                    "id": "updating-static-themes"
+                  },
+                   {
+                     "title": "Single image themes",
+                     "id": "single-image-themes"
+                   },
+                   {
+                     "title": "Multiple image themes",
+                     "id": "multiple-image-themes"
+                   },
+                   {
+                     "title": "Static animated themes",
+                     "id": "static-animated-themes"
+                   }
+                ]
+              },
+              { 
+                "title": "Dynamic themes",
+                "url": "/documentation/themes/dynamic-themes/",
+                "subpageitems": [
+                  {
+                    "title": "Introduction",
+                    "id": "introduction"
+                  },
+                  {
+                    "title": "Creating dynamic themes",
+                    "id": "creating-dynamic-themes"
+                  },
+                  {
+                    "title": "Publishing dynamic themes",
+                    "id": "publishing-dynamic-themes"
+                  }
+                ]
+              },
+              {
+                "title": "Cross-browser compatibility",
+                "url": "/documentation/themes/cross-browser-compatibility/"
               }
             ]
           }
