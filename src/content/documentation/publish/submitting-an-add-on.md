@@ -4,9 +4,9 @@ title: Submitting an add-on
 permalink: /documentation/publish/submitting-an-add-on/
 topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]
-contributors: [Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz]
-last_updated_by: Roubo
-date: 2019-05-17 13:58:25
+contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz]
+last_updated_by: Rob--W
+date: 2021-04-27
 ---
 
 <!-- Page Hero Banner -->
@@ -28,7 +28,7 @@ This article walks through the process of publishing an add-on. If you just want
 
 To start, familiarize yourself with the [Add-on Policies](/documentation/publish/add-on-policies/) and [Developer Agreement](/documentation/publish/firefox-add-on-distribution-agreement/).
 
-Next, prepare your add-on for publication by adding all its files to a ZIP archive with the extension `.zip`, `.xpi`, `.crx`, or `.xml`. For information on how to create your ZIP, see [Package your extension](/documentation/publish/package-your-extension/), and for details on what to include in the file, see [Anatomy of an extension](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
+Next, prepare your add-on for publication by adding all its files to a ZIP archive with the extension `.zip`, `.xpi` or `.crx`. For information on how to create your ZIP, see [Package your extension](/documentation/publish/package-your-extension/), and for details on what to include in the file, see [Anatomy of an extension](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension).
 
 ::: note
 The maximum file size accepted is 200 MB. If your add-on is larger than 200 MB, it will fail validation.
