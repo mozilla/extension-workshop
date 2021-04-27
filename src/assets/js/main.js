@@ -670,17 +670,16 @@ jQuery(document).ready(function ($) {
 
     var $container = this;
 
-    $.get('https://blog.mozilla.org/addons/feed/', function (data) {
-      var $xml = $(data); // DOMPurify.sanitize(data) doesn't work here because data is not html
+    function handleFeedXml(doc) {
+      var $xml = $(doc);
       var i = settings.num;
       $xml.find('item').each(function () {
         if (i--) {
           var $this = $(this),
             item = {
-              title: DOMPurify.sanitize($this.find('title').text()),
-              link: DOMPurify.sanitize($this.find('link').text()),
-              description: DOMPurify.sanitize($this.find('description').text()),
-              pubDate: DOMPurify.sanitize($this.find('pubDate').text()),
+              title: $this.find('title').text(),
+              description: $this.find('description').text(),
+              pubDate: $this.find('pubDate').text(),
             };
 
           var newDate = new Date(item.pubDate);
@@ -690,23 +689,13 @@ jQuery(document).ready(function ($) {
           var y = newDate.getFullYear();
           var formattedDate = y + '/' + pad(m, 2) + '/' + pad(d, 2);
 
-          var $description_elements = $(item.description);
-
           var $cell = $(settings.container);
           var $cell_content = $cell.find('.block-link');
 
           $cell_content
-            .append(
-              $(
-                '<h4>' +
-                  item.title +
-                  '</h4><p class="meta-date">' +
-                  formattedDate +
-                  '</p>'
-              )
-            )
-            .append($description_elements);
-          $description_elements.last().remove();
+            .append($('<h4>').text(item.title))
+            .append($('<p class="meta-date">').text(formattedDate))
+            .append(DOMPurify.sanitize(item.description));
 
           var $link = $cell.find('p a:last-child');
           var link_label = $link.html();
@@ -740,7 +729,13 @@ jQuery(document).ready(function ($) {
           },
         ],
       });
-    });
+    }
+    // The third parameter (dataType) is set to 'xml' to make sure that the
+    // response is always a parsed document regardless of the server's MIME
+    // type. Without this, handleFeedXml could receive a string instead of a
+    // document (when the server replies with a non-XML MIME type). That would
+    // result in a XSS vulnerability.
+    $.get('https://blog.mozilla.org/addons/feed/', handleFeedXml, 'xml');
 
     return this;
   };
