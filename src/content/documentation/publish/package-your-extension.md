@@ -18,9 +18,10 @@ contributors:
     wbamberg,
     mrj,
     mickro,
+    Rob--W,
   ]
-last_updated_by: mickro
-date: 2020-04-26
+last_updated_by: Rob--W
+date: 2021-04-27
 ---
 
 <!-- Page Hero Banner -->
@@ -51,6 +52,10 @@ The most convenient way to package your extension is to use [`web-ext build`](/d
 
 ::: note
 **Tip:** The ZIP file must be a ZIP of the extension's files themselves, not of the directory containing them.
+:::
+
+::: note
+**Tip:** Verify that the ZIP file is formatted correctly, for example by [loading the file at `about:debugging` in Firefox](/documentation/develop/temporary-installation-in-firefox/).
 :::
 
 {% endcapture %}
