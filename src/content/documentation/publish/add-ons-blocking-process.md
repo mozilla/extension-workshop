@@ -3,9 +3,9 @@ layout: sidebar
 title: Add-ons Blocking Process
 permalink: /documentation/publish/add-ons-blocking-process/
 topic: Publish
-contributors: [kewisch]
-last_updated_by: kewisch
-date: 2019-06-10 04:06:35
+contributors: [caitmuenster, kewisch]
+last_updated_by: caitmuenster
+date: 2021-05-04 
 ---
 
 <!-- Page Hero Banner -->
@@ -16,7 +16,7 @@ date: 2019-06-10 04:06:35
 
 Add-ons enable users to add features to Firefox for a personalized browsing experience. Most add-ons are created with the best intent, providing users with useful and delightful features. However, add-ons can also be used to compromise personal data and security.
 
-When Mozilla becomes aware of add-ons that go against user expectations or otherwise risk user privacy and security, it takes steps to block them from running in Firefox. This may happen proactively, or in response to an abuse report.
+When Mozilla becomes aware of add-ons that go against user expectations or otherwise risk user privacy and security, it takes steps to block them from running in Firefox. This may happen proactively, or in response to an abuse report. When an extension is blocked, it is disabled in Firefox and users are not able to override the block. 
 
 The following describes Mozilla’s common practices for dealing with add-ons that appear to violate the [Add-on Policies](/documentation/publish/add-on-policies/). Authoritative information on the conditions for removing or revoking add-ons can be found in the [Firefox Add-on Distribution Agreement](/documentation/publish/firefox-add-on-distribution-agreement/) and the [Add-on Policies](/documentation/publish/add-on-policies/).
 
@@ -48,17 +48,12 @@ When deciding whether to block an add-on from running in Firefox, we ask whether
 
 ## Blocking Criteria
 
-Depending on the nature of the policy violation, Mozilla will employ different types of blocks. With a **hard block**, the add-on is disabled in Firefox, and users are not able to override the block. This action is reserved for add-ons with the following characteristics:
+Blocking is reserved for add-ons with the following characteristics:
 
 - They appear to intentionally violate policy
 - They contain critical security vulnerabilities
 - They compromise user privacy
 - They severely circumvent user consent or control
-
-A **soft block** will disable an add-on by default, but allow the user to override and continue using it. Such a block is used for add-ons with the following characteristics:
-
-- They cause severe stability and performance issues in Firefox
-- They contain non-critical policy violations
 
 Add-ons that appear to be clones, repeats or close copies of already blocked add-ons will also be removed. If an issue is known to affect only a subset of versions, the block may be applied to the affected versions specifically. Add-ons that contain obfuscated or comparably unreadable code will also be blocked.
 
@@ -112,9 +107,6 @@ Mozilla only blocks add-ons based on the [Firefox distribution agreement](/docum
 In addition to add-ons, Mozilla may also block other types of software that pose a risk to the user.
 
 Mozilla may limit hardware acceleration features of graphics cards for certain graphics driver versions in accordance with the [graphics driver blocks](https://wiki.mozilla.org/Blocklisting/Graphics) policy. This is done for stability reasons, to avoid driver crashes that would interrupt the user.
-
-In addition, we may block certain plugins that are known to cause stability issues or contain security vulnerabilities. Depending on the severity, a plugin may be forced to require a click from the user to activate, is disabled with an option for the user to enable, or blocked from running in Firefox. This category includes injected third party libraries that interfere with the functionality of Firefox.
-
 {% endcapture %}
 {% include modules/one-column.liquid
   id: "blocking-other-types-of-third-party-software"
