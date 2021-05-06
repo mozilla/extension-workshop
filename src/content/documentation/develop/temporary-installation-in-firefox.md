@@ -16,9 +16,10 @@ contributors:
     andrewtruongmoz,
     hellosct1,
     kumar303,
+    Rob--W,
   ]
-last_updated_by: mdnwebdocs-bot
-date: 2019-12-19 08:45:00
+last_updated_by: Rob--W
+date: 2021-04-27
 ---
 
 <!-- Page Hero Banner -->
@@ -48,7 +49,8 @@ To install an extension temporarily:
 - enter "`about:debugging`" in the URL bar
 - click "This Firefox"
 - click "Load Temporary Add-on"
-- open the extension's directory and select any file inside the extension.
+- open the extension's directory and select any file inside the extension,
+  or select the [packaged extension (.zip file)](/documentation/publish/package-your-extension/).
 
 The extension installs and remains installed until you remove it or restart Firefox.
 
