@@ -31,7 +31,7 @@
     "acorn-walk": "8.1.0",
     "chalk": "4.1.1",
     "chokidar-cli": "2.1.0",
-    "clean-css": "4.2.3",
+    "clean-css": "5.1.2",
     "eleventy-xml-plugin": "0.1.0",
     "eslint": "7.25.0",
     "eslint-config-prettier": "8.3.0",
