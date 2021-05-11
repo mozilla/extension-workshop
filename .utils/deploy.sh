@@ -47,7 +47,7 @@ CSP="\"content-security-policy\": \"default-src 'none'; "\
 "style-src 'self' 'unsafe-inline'\""
 HSTS="\"strict-transport-security\": \"max-age=${ONE_YEAR}; includeSubDomains; preload\""
 TYPE="\"x-content-type-options\": \"nosniff\""
-XSS="\"x-xss-protection\": \"1; mode=block\""
+XSS="\"x-xss-protection\": \"0\""
 XFRAME="\"x-frame-options\": \"SAMEORIGIN\""
 REFERRER="\"referrer-policy\": \"no-referrer-when-downgrade\""
 ACAO="\"Access-Control-Allow-Origin\": \"*\""
