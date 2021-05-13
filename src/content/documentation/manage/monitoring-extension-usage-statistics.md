@@ -110,7 +110,7 @@ There is a limit of 40 characters for each UTM parameter value. Longer values wi
 
 Below is an example of a link to your add-on's listing page with UTM parameters:
 
-`https://addons.mozilla.org/addon/firefox-color?utm_source=mysite.wordpress.com&utm_medium=blog&utm_content=top-banner&campaign=get-my-addons`
+`https://addons.mozilla.org/addon/firefox-color?utm_source=mysite.wordpress.com&utm_medium=blog&utm_content=top-banner&utm_campaign=get-my-addons`
 
 {% endcapture %}
 {% include modules/one-column.liquid
