@@ -2171,9 +2171,9 @@ ejs@^2.7.4:
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
 electron-to-chromium@^1.3.723:
-  version "1.3.729"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.729.tgz#3dc87b55c4aa3c75370471d9c72accf70d9af263"
-  integrity sha512-Ho8K+hCEFOt6FsRZRgh1zUpIJ4Nn9MUSgLBEF+I2Xbzo3E8zvvxZFV/tEmAl2e9dsJDWzTFnGsZTuEVfYEv8eg==
+  version "1.3.730"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.730.tgz#6e1fad8f250827f5524672e572f823b34a6417e1"
+  integrity sha512-1Tr3h09wXhmqXnvDyrRe6MFgTeU0ZXy3+rMJWTrOHh/HNesWwBBrKnMxRJWZ86dzs8qQdw2c7ZE1/qeGHygImA==
 
 eleventy-xml-plugin@0.1.0:
   version "0.1.0"
