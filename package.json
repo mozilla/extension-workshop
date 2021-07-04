@@ -57,7 +57,7 @@
     "slugify": "1.5.3",
     "stylelint": "13.13.1",
     "stylelint-config-standard": "20.0.0",
-    "terser": "5.7.0",
+    "terser": "5.7.1",
     "url-parse": "1.5.1"
   },
   "scripts": {
