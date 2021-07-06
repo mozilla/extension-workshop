@@ -70,6 +70,9 @@ To debug your extension, you'll use:
 - [**Debugger**](https://developer.mozilla.org/docs/Tools/Debugger) to set breakpoints and watchpoints in your extension's JavaScript, and examine and modify the extension's state.
 - [**Storage**](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector) to view details of data stored by the extension.
 
+This console shows messages from your background script and extension pages; other logs may appear elsewhere.
+There is an overview of all relevant places to look for messages at [Viewing log output](#viewing_log_output).
+
 For much of the debugging work, it's useful to be able to view **Console** with **Inspector** or **Debugger**. You do this using the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console), press `esc` to activate this mode.
 
 ![developers tool split screenshot](/assets/img/documentation/develop/developing_tools_inspector_split.png)
@@ -85,6 +88,41 @@ You can now drag the toolbox tab to a separate window, so you can place it along
 %}
 
 <!-- END: Content with Table of Contents -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
+## Viewing log output
+
+Your extension can generate log messages, e.g. with the [Console API](https://developer.mozilla.org/docs/Web/API/Console_API) or by triggering (uncaught) errors.
+
+Log messages can usually be viewed via the [Console](https://developer.mozilla.org/docs/Tools/Web_Console) of the context where the script runs.
+The [Developer tools toolbox](#developer-tools-toolbox) at `about:debugging` shows log messages from extension scripts. For specific cases, see:
+
+  - [Debugging background scripts](#debugging-background-scripts)
+  - [Debugging options pages](#debugging-options-pages)
+  - [Debugging popups](#debugging-popups)
+  - [Debugging sidebars](#debugging-sidebars)
+  - [Debugging devtools panels](#debugging-developer-tools-pages-and-panels).
+
+Log messages from content scripts can be viewed in the developer tools of the tab where the content script runs instead of `about:debugging`, see:
+
+- [Debugging content scripts](#debugging-content-scripts)
+
+Log messages not associated with an extension script, such as the `stderr` output of the [nativeMessaging API](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
+can only be viewed via the Browser Console. This console contains messages from the whole browser, including your and other extensions.
+It occasionally contains more detailed information about errors reported to your extension. For more information, see:
+
+- [Browser Console](https://developer.mozilla.org/docs/Tools/Browser_Console)
+
+{% endcapture %}
+{% include modules/one-column.liquid
+  id: "viewing_log_output"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
