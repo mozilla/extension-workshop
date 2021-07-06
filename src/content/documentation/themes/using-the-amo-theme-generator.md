@@ -15,7 +15,7 @@ date: 2021-04-02
 
 # Using the AMO theme generator
 
-The theme generator on [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) (AMO) guides you through the process of creating a theme for Firefox. Once you have defined the colors and image for your theme, the generator will submit your new theme to AMO. You may submit themes for publishing on AMO or for self-distribution.
+The theme generator on [addons.mozilla.org][addonsGenerator] (AMO) guides you through the process of creating a theme for Firefox. Once you have defined the colors and image for your theme, the generator will submit your new theme to AMO. You may submit themes for publishing on AMO or for self-distribution.
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -32,7 +32,7 @@ The theme generator on [addons.mozilla.org](https://addons.mozilla.org?utm_sourc
 You will need to be logged in to your Firefox Account to access the Theme Generator.
 :::
 
-If you would like to publish your theme on [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) (AMO), begin by going to the [listed Theme Generator page](https://addons.mozilla.org/developers/addon/submit/wizard-listed?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator).
+If you would like to publish your theme on [addons.mozilla.org][addonsGenerator] (AMO), begin by going to the [listed Theme Generator page](https://addons.mozilla.org/developers/addon/submit/wizard-listed?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator).
 
 Otherwise, if you prefer to self-distribute your theme, go to the [unlisted Theme Generator Page](https://addons.mozilla.org/developers/addon/submit/wizard-unlisted?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator). For more information on distribution, visit [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
 
@@ -104,14 +104,13 @@ Themes submitted for self-distribution will be signed immediately and an XPI fil
 %}
 
 <!-- END: Content with Table of Contents -->
-
 <!-- Single Column Body Module -->
 
 {% capture content %}
 
 ## Submitting your theme
 
-If you are publishing your theme to [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) (AMO), the second page of the theme creator asks you to describe your theme. You will have to enter the following information:
+If you are publishing your theme to [addons.mozilla.org][addonsGenerator] (AMO), the second page of the theme creator asks you to describe your theme. You will have to enter the following information:
 
 **Name** <br/>
 This is the name of your theme as it will be displayed on AMO, and can be different from the name that is displayed when the theme has been installed in Firefox.
@@ -176,7 +175,7 @@ Once you have filled in all of the required information, you can complete the su
 
 You may want to make changes to your theme after it has been published. 
 
-1. Log into the [Developer Hub](https://addons.mozilla.org/developers?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) on [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator). 
+1. Log into the [Developer Hub](https://addons.mozilla.org/developers?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) on [addons.mozilla.org][addonsGenerator]. 
 
 2. Select "Edit Product Page" for the theme you would like to edit. 
 
@@ -196,3 +195,4 @@ After the new version of theme has been approved, it will be available for insta
 %}
 
 <!-- END: Single Column Body Module -->
+[addonsGenerator]: https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator

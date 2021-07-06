@@ -34,7 +34,7 @@ Once your extension is coded and tested, it needs to meet the policies in the [d
 
 When you’re confident your extension complies with those policies, it needs to be signed before it’s distributed\* for use in the [release](https://www.mozilla.org/firefox/) and [Beta](https://www.mozilla.org/firefox/channel/desktop/) versions of Firefox. Signing provides Firefox users with the assurance that an extension hasn’t been tampered with and gives Mozilla the ability to block malicious extensions.
 
-All extensions can be submitted for signing through [addons.mozilla.org](https://addons.mozilla.org).
+All extensions can be submitted for signing through [addons.mozilla.org][https://addons.mozilla.org].
 
 Before submitting your extension for signing, create an extension package either [manually](/documentation/publish/package-your-extension/) or using [web-ext](/documentation/develop/getting-started-with-web-ext/). Once you’ve packaged your extension, there are [three ways to get it signed](/documentation/publish/signing-and-distribution-overview/).
 
@@ -59,12 +59,12 @@ Once your extension is signed, it is subject to review by Mozilla at any time. T
 There are three ways you can distribute your extension. They are:
 
 - Use [addons.mozilla.org](https://developer.mozilla.org/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on) (most popular, broadest audience)
-- Provide a [download location for the signed extension](/documentation/publish/self-distribution/) file for users to self-install into Firefox.
+- Provide a [download location for the signed extension][/documentation/publish/self-distribution/] file for users to self-install into Firefox.
 - Use one of the [mechanisms designed to enable enterprise browser administrators to install add-ons](/documentation/enterprise/enterprise-distribution/)
 
-Regardless of what you choose, you’ll need to set up a developer account on [addons.mozilla.org](https://addons.mozilla.org) and host your extension to get it signed, even if you do not distribute it there. Just satisfy a few simple requirements and get your account up and running.
+Regardless of what you choose, you’ll need to set up a developer account on [addons.mozilla.org][https://addons.mozilla.org] and host your extension to get it signed, even if you do not distribute it there. Just satisfy a few simple requirements and get your account up and running.
 
-If you choose to not distribute on addons.mozilla.org, there are [some things you should consider](/documentation/publish/self-distribution/) before you distribute it yourself.
+If you choose to not distribute on addons.mozilla.org, there are [some things you should consider][/documentation/publish/self-distribution/] before you distribute it yourself.
 
 Check out our [publisher’s resources](/documentation/manage/resources-for-publishers/). You can:
 
@@ -117,4 +117,5 @@ If you’re distributing to an enterprise running the ESR version of Firefox or 
 
 <!-- END: Single Column Body Module -->
 
-
+[https://addons.mozilla.org]:https://addons.mozilla.org
+[/documentation/publish/self-distribution/]:/documentation/publish/self-distribution/

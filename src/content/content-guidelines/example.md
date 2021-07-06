@@ -16,9 +16,9 @@ skip_index: true
 </section>
 <!-- END: Full Width Image -->
 
-Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org](https://www.google.com/url?q=https%3A%2F%2Faddons-dev.allizom.org%2Fen-US%2Ffirefox%2F&sa=D&sntz=1&usg=AFQjCNFhrA_2GJjahH4pV8BWPso2RKTftg 'addons.mozilla.org'), and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
+Your extension’s name is critical. It shows up everywhere—in search results, on [addons.mozilla.org][googleAddons] and in the browser itself. It’s sometimes one of the few pieces of information that a user has to determine whether or not they are interested in what you built.
 
-Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org](https://www.google.com/url?q=https%3A%2F%2Faddons-dev.allizom.org%2Fen-US%2Ffirefox%2F&sa=D&sntz=1&usg=AFQjCNFhrA_2GJjahH4pV8BWPso2RKTftg 'addons.mozilla.org').
+Research shows that people really do take an extension’s name into account when making installation decisions. And, what you put into the extension name field becomes your URL on [addons.mozilla.org][googleAddons].
 
 Between your extension name and subtitle, you have up to 70 characters to use—that’s because 70 is the max character limit for your headline in external search results. It’s best to keep your extension name shorter so you have more characters left over for your subtitle.
 
@@ -146,3 +146,5 @@ Remembear:
 - Protect passwords with a bear
 - Remember passwords with a bear
 - Remembear
+
+[googleAddons]: https://www.google.com/url?q=https%3A%2F%2Faddons-dev.allizom.org%2Fen-US%2Ffirefox%2F&sa=D&sntz=1&usg=AFQjCNFhrA_2GJjahH4pV8BWPso2RKTftg 'addons.mozilla.org'

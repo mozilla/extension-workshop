@@ -16,7 +16,7 @@ date: 2019-04-24 14:35:04
 
 # Prompt users for data and privacy consents
 
-If your extension uses cookies or collects user data, it needs to comply with the requirement of the [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management) section of the [Add-on Policies](/documentation/publish/add-on-policies/).
+If your extension uses cookies or collects user data, it needs to comply with the requirement of the [Data Disclosure, Collection and Management][dataDisclosureCollectionAndManagement] section of the [Add-on Policies][/documentation/publish/add-on-policies/].
 
 A common developer question about these policies is how to translate them into web extension features that can pass the addons.mozilla.org reviews. This how-to is the result of those requests and offers advice on implementing prompts to meet the data collection and add-on policies. This article suggests how you can implement suitable prompts but it doesn’t replace or supersede the policies; you still need to confirm that your extension complies with the policies.
 
@@ -35,8 +35,8 @@ A common developer question about these policies is how to translate them into w
 
 To create the consent flow and consent dialogues your extension needs, you should first answer these questions:
 
-1. Does my extension use cookies?  If so, you’ll need to get user consent to store cookies.
-2. Does my extension collect technical or interaction data? (If you’re unsure what technical and interaction data is, check out the definition in [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management).) If so, offer the user the opportunity to opt-out of this data collection, although you can always offer opt-in consent if you prefer.
+1. Does my extension use cookies?  If so, you’ll need to get user consent to store cookies.
+2. Does my extension collect technical or interaction data? (If you’re unsure what technical and interaction data is, check out the definition in [Data Disclosure, Collection and Management][dataDisclosureCollectionAndManagement].) If so, offer the user the opportunity to opt-out of this data collection, although you can always offer opt-in consent if you prefer.
 3. Does my extension collect personally identifying information? If so, get the user’s opt-in consent before collecting any of this data. Remember that personally identifying information includes technical or interaction data tagged with the user’s identity or information that can be used to identify the user, such as an IP address.
 
 {% endcapture %}
@@ -73,7 +73,7 @@ Before designing the data collection and use of cookies consents for your extens
 
 ## Create a privacy policy
 
-When your users arrive at your data and privacy consent dialogue, they need to know what they're consenting to and this is where your privacy policy comes in. The [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management) section of the [Add-on Policies](/documentation/publish/add-on-policies/) provides clear guidelines on what the policy should include. If you’re collecting significant quantities of data and making significant use of it, taking legal advice may be prudent. However, your first strategy should be to reduce or eliminate the collection of user data where possible. If your data collection and use is fairly low-level, it’s possible that privacy policy generator—such as [Cooley LLP](https://www.cooleygo.com/documents/privacy-policy/) or [iubenda](http://www.iubenda.com)—may be helpful. You may also want to take a look at [Mozilla's privacy policy](https://www.mozilla.org/privacy/) as a model to follow.
+When your users arrive at your data and privacy consent dialogue, they need to know what they're consenting to and this is where your privacy policy comes in. The [Data Disclosure, Collection and Management][dataDisclosureCollectionAndManagement] section of the [Add-on Policies][/documentation/publish/add-on-policies/] provides clear guidelines on what the policy should include. If you’re collecting significant quantities of data and making significant use of it, taking legal advice may be prudent. However, your first strategy should be to reduce or eliminate the collection of user data where possible. If your data collection and use is fairly low-level, it’s possible that privacy policy generator—such as [Cooley LLP](https://www.cooleygo.com/documents/privacy-policy/) or [iubenda](http://www.iubenda.com)—may be helpful. You may also want to take a look at [Mozilla's privacy policy](https://www.mozilla.org/privacy/) as a model to follow.
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -167,4 +167,5 @@ Once you understand your privacy consent flow, you can add suitable consent dial
 
 <!-- END: Single Column Body Module -->
 
-
+[dataDisclosureCollectionAndManagement]:/documentation/publish/add-on-policies/#data-disclosure-collection-and-management
+[/documentation/publish/add-on-policies/]:/documentation/publish/add-on-policies/

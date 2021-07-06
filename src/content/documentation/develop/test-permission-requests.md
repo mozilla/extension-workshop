@@ -55,8 +55,8 @@ To view the install time permission warnings users see when installing your exte
 
 To do this with an unsigned `*.xpi` or `*.zip` file you need to:
 
-- give your extension an ID using the `manifest.json` [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key.
-- run the [Nightly](https://nightly.mozilla.org/) or [Developer Edition](https://www.mozilla.org/firefox/developer/) versions of Firefox.
+- give your extension an ID using the `manifest.json` [`browser_specific_settings`][https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings] key.
+- run the [Nightly][https://nightly.mozilla.org/] or [Developer Edition][https://www.mozilla.org/firefox/developer/] versions of Firefox.
 - set the `about:config` preference `xpinstall.signatures.required` to `false`.
 
 Then install the extension using **Install Add-on From File** in the Add-on manager (`about:addons`). As the extension installs, the request to grant the install-time permissions displays, similar to this:
@@ -68,7 +68,7 @@ Note that the caution message relates to this being an unsigned extension; this 
 ### Permission requests for extension upgrade
 
 ::: note
-For details on how to deliver web extension updates when self-hosting your extension, see [Updates](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates).
+For details on how to deliver web extension updates when self-hosting your extension, see [Updates][https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates].
 :::
 
 To view the install time permission warnings users see when Firefox upgrades your extension and retest runtime permission requests, you install the extension from its `.xpi` file posted on an HTTP or HTTPS server.
@@ -78,9 +78,9 @@ You can use an HTTP server (such as a simple [Python localhost server](https://d
 To perform the test you'll need to:
 
 - determine the address of the HTTP or HTTPS server where you can host files.
-- use the `manifest.json` [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key to:
+- use the `manifest.json` [`browser_specific_settings`][https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings] key to:
   - give your extension an ID, if you’ve not done so already.
-  - define the update URL where you’ll host your [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates). For example:
+  - define the update URL where you’ll host your [updates manifest][https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates]. For example:
 
 ```json
 "browser_specific_settings": {
@@ -99,7 +99,7 @@ To perform the test you'll need to:
 If the packages were generated with `.zip` extensions change them to `.xpi`, otherwise your browser may try to download rather than install the extension.
 :::
 
-- create the [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates) with details of both extension versions, which should be similar to this:
+- create the [updates manifest][https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates] with details of both extension versions, which should be similar to this:
 
 ```json
 "browser_specific_settings": {
@@ -112,11 +112,11 @@ If the packages were generated with `.zip` extensions change them to `.xpi`, oth
 ```
 
 - upload the two extension packages and the updates manifest to your HTTP or HTTPS server.
-- run the [Nightly](https://nightly.mozilla.org/) or [Developer Edition](https://www.mozilla.org/firefox/developer/) versions of Firefox.
+- run the [Nightly][https://nightly.mozilla.org/] or [Developer Edition][https://www.mozilla.org/firefox/developer/] versions of Firefox.
 - in `about:config`:
 
   - set the preference `xpinstall.signatures.required` to `false`.
-  - If you’re using [Nightly](https://nightly.mozilla.org/) and hosting your update on an HTTP server create and set `extensions.checkUpdateSecurity` and `extensions.install.requireSecureOrigin` preferences to `false`. To do this:
+  - If you’re using [Nightly][https://nightly.mozilla.org/] and hosting your update on an HTTP server create and set `extensions.checkUpdateSecurity` and `extensions.install.requireSecureOrigin` preferences to `false`. To do this:
     - enter the preference name in the search box.
     - click **Add**. <br/> ![add preference](/assets/img/documentation/develop/preference_create_2.png)
     - toggle the preference to set it to `false`. <br/> ![toggle preferences](/assets/img/documentation/develop/preference_toggle_2.png)
@@ -151,7 +151,7 @@ To retest your extension’s runtime permission grants and its post-install beha
 
 ![remove extension from debugging](/assets/img/documentation/develop/reload_to_retest.png)
 
-- if you’re using [Nightly](https://nightly.mozilla.org/) or [Developer Edition](https://www.mozilla.org/firefox/developer/), use the [Extensions Permission Manager](https://github.com/rpl/dev-webext-permissions-manager) web extension to clear permissions.
+- if you’re using [Nightly][https://nightly.mozilla.org/] or [Developer Edition][https://www.mozilla.org/firefox/developer/], use the [Extensions Permission Manager](https://github.com/rpl/dev-webext-permissions-manager) web extension to clear permissions.
 
 You can then rerun the extension and any runtime permission requests will be displayed as if the extension was being run for the first time.
 
@@ -163,4 +163,7 @@ You can then rerun the extension and any runtime permission requests will be dis
 
 <!-- END: Single Column Body Module -->
 
-
+[https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
+[https://nightly.mozilla.org/]:https://nightly.mozilla.org/
+[https://www.mozilla.org/firefox/developer/]:https://www.mozilla.org/firefox/developer/
+[https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates]:https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates

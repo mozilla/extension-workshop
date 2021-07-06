@@ -15,7 +15,7 @@ date: 2019-06-10 06:33:38
 
 # Source code submission
 
-To complete the review process at [addons.mozilla.org](https://addons.mozilla.org) (AMO), reviewers must be able to read the code in your extension. Some build processes render extension code difficult to read. These processes include minifying your code, as well as the use of module bundlers or similar tools, such as [webpack](https://webpack.js.org/). In this case, when you upload your extension to AMO, you will need to provide your source code and instructions for building that source code, where build processes render your extension’s code hard to read.
+To complete the review process at [addons.mozilla.org](https://addons.mozilla.org) (AMO), reviewers must be able to read the code in your extension. Some build processes render extension code difficult to read. These processes include minifying your code, as well as the use of module bundlers or similar tools, such as [webpack][https://webpack.js.org/]. In this case, when you upload your extension to AMO, you will need to provide your source code and instructions for building that source code, where build processes render your extension’s code hard to read.
 
 If your add-on uses third-party libraries, please see [our requirements](/documentation/publish/third-party-library-usage/) for those.
 
@@ -45,7 +45,7 @@ Here you can find details of when you must provide your extension’s source cod
 You must upload your extension’s source code when its code was created using:
 
 - code minifiers, such as [uglifyJS](https://github.com/mishoo/UglifyJS2) or [Google Closure Compiler](https://developers.google.com/closure/compiler/).
-- tools that generate a single file from other files, such as [browserify](http://browserify.org/) or [webpack](https://webpack.js.org/).
+- tools that generate a single file from other files, such as [browserify](http://browserify.org/) or [webpack][https://webpack.js.org/].
 - template engines, such as [handlebars](http://handlebarsjs.com/) or [css2js](https://github.com/grnadav/css2js).
 - any other custom tool that takes files, applies pre-processing, and generates file(s) to include in the extension.
 
@@ -163,4 +163,4 @@ Remember, if you miss any of the necessary content from your uploaded source cod
 
 <!-- END: Single Column Body Module -->
 
-
+[https://webpack.js.org/]:https://webpack.js.org/

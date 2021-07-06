@@ -51,8 +51,8 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 1. Get an idea of the main things you'll have to change in your extension:
 
 - Familiarize yourself with the [WebExtension format and structure](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension), and [build a basic example](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#Writing_the_extension).
-- If your extension is based on XUL and XPCOM, whether it's an [overlay extension](https://developer.mozilla.org/Add-ons/Overlay_Extensions) or a [bootstrapped extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/Bootstrapped_extensions), see [Comparison with XUL/XPCOM extensions](/documentation/develop/comparison-with-xul-xpcom-extensions) to find out how WebExtensions can correspond with the legacy APIs you're using.
-- If your extension is based on the Add-on SDK, see [Comparison with the Add-on SDK](/documentation/develop/comparison-with-the-add-on-sdk) to find out how WebExtensions can correspond with the legacy SDK APIs you're using.
+- If your extension is based on XUL and XPCOM, whether it's an [overlay extension](https://developer.mozilla.org/Add-ons/Overlay_Extensions) or a [bootstrapped extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/Bootstrapped_extensions), see [Comparison with XUL/XPCOM extensions][/documentation/develop/comparison-with-xul-xpcom-extensions] to find out how WebExtensions can correspond with the legacy APIs you're using.
+- If your extension is based on the Add-on SDK, see [Comparison with the Add-on SDK][/documentation/develop/comparison-with-the-add-on-sdk] to find out how WebExtensions can correspond with the legacy SDK APIs you're using.
 
 2. Rewrite your extension code. See below for migration paths for different types of extensions. From Firefox 51 onwards, you can embed an extension built using WebExtension APIs in a bootstrapped extension or an SDK add-on, and can thus port a legacy extension a piece at a time, and have a working extension at each step. See [Embedded WebExtensions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions) for more information.
 3. When you're ready to submit the WebExtension version of your extension to AMO... wait a minute... are you truly ready? Because of the extensions permissions model, you cannot revert from WebExtensions back to using a legacy extension format. So test _thoroughly_, because this is a permanent one-way trip. Also, see the hybrid example below. If you're not ready, you can embed your WebExtension in a legacy extension container, which allows you to test your extension migration but still go back if needed in an emergency.
@@ -78,11 +78,11 @@ Note that this is a one-way conversion: You **cannot** update an extension using
 
 ### SDK Extensions
 
-Here is the comparison chart showing [SDK APIs and their WebExtensions format counterparts](/documentation/develop/comparison-with-the-add-on-sdk). If you don't see the APIs you need to port to use WebExtensions APIs, look below to learn how to request APIs and also how to implement them.
+Here is the comparison chart showing [SDK APIs and their WebExtensions format counterparts][/documentation/develop/comparison-with-the-add-on-sdk]. If you don't see the APIs you need to port to use WebExtensions APIs, look below to learn how to request APIs and also how to implement them.
 
 ### XUL/XPCOM Extensions
 
-Here is the comparison chart showing [XUL/XPCOM APIs and their WebExtensions format counterparts](/documentation/develop/comparison-with-xul-xpcom-extensions). If you don't see the APIs you need to port to use WebExtension APIs, look below to learn how to request APIs and also how to implement them.
+Here is the comparison chart showing [XUL/XPCOM APIs and their WebExtensions format counterparts][/documentation/develop/comparison-with-xul-xpcom-extensions]. If you don't see the APIs you need to port to use WebExtension APIs, look below to learn how to request APIs and also how to implement them.
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -141,8 +141,8 @@ Here is the comparison chart showing [XUL/XPCOM APIs and their WebExtensions for
 
 - [WebExtensions Project Page](https://wiki.mozilla.org/Add-ons/developer/communication) on the Mozilla Wiki
 - [How-to guides](/documentation/develop) covering common extension developer cases, like [intercepting web requests](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests) and [adding a button to the toolbar](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [Comparison with the Add-on SDK](/documentation/develop/comparison-with-the-add-on-sdk)
-- [Comparison with XUL/XPCOM extensions](/documentation/develop/comparison-with-xul-xpcom-extensions)
+- [Comparison with the Add-on SDK][/documentation/develop/comparison-with-the-add-on-sdk]
+- [Comparison with XUL/XPCOM extensions][/documentation/develop/comparison-with-xul-xpcom-extensions]
 - [Browser compatibility table](https://developer.mozilla.org/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) for all WebExtensions APIs
 - [Examples of extensions](https://developer.mozilla.org/Add-ons/WebExtensions/Examples)
 
@@ -170,4 +170,5 @@ You can use the links [here](https://developer.mozilla.org/docs/Mozilla/Add-ons#
 
 <!-- END: Single Column Body Module -->
 
-
+[/documentation/develop/comparison-with-the-add-on-sdk]:/documentation/develop/comparison-with-the-add-on-sdk
+[/documentation/develop/comparison-with-xul-xpcom-extensions]:/documentation/develop//documentation/develop/comparison-with-xul-xpcom-extensions-xpcom-extensions

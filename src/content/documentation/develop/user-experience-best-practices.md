@@ -80,13 +80,13 @@ Choosing the right way, or combination of ways, to make your extension's functio
 
 ### Does my extension work on most websites and web pages?
 
-If your extension provides the user with features they can use on almost every website or page, give the user access to it from a **[toolbar button](https://developer.mozilla.org/Add-ons/WebExtensions/user_interface/Browser_action) using the [browser action](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)**.
+If your extension provides the user with features they can use on almost every website or page, give the user access to it from a **[toolbar button](https://developer.mozilla.org/Add-ons/WebExtensions/user_interface/Browser_action) using the [browser action][https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction]**.
 
 - This might include providing access to your image editor or opening a page from your website.
 
 ![](/assets/img/documentation/develop/browser-action.png)
 
-Where you have several features you want to give the user access, you can add a [popup](https://developer.mozilla.org/Add-ons/WebExtensions/Popups) to the button (a popup appears like a door hanger that opens when the user selects the browser action button).
+Where you have several features you want to give the user access, you can add a [popup][https://developer.mozilla.org/Add-ons/WebExtensions/Popups] to the button (a popup appears like a door hanger that opens when the user selects the browser action button).
 
 ### Does my extension work for only some web sites and pages?
 
@@ -96,7 +96,7 @@ If your extension offers a feature for a type of web page or specific domains, g
 
 ![](/assets/img/documentation/develop/page-action.png)
 
-Where you have several features you want to give the user access, you can add a [popup](https://developer.mozilla.org/Add-ons/WebExtensions/Popups) to the button.
+Where you have several features you want to give the user access, you can add a [popup][https://developer.mozilla.org/Add-ons/WebExtensions/Popups] to the button.
 
 ### Does my extension need to show information or offer actions in parallel with web pages?
 
@@ -175,7 +175,7 @@ However, use notifications sparingly. If it is sufficient for the user to discov
 
 ### Use browserAction badges sparingly
 
-To inform users of important events, you can [add a badge](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText) over the toolbar icon of a [`browserAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction). Do so sparingly—do not use badges to provide regular or persistent status updates.
+To inform users of important events, you can [add a badge](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText) over the toolbar icon of a [`browserAction`][https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction]. Do so sparingly—do not use badges to provide regular or persistent status updates.
 
 When it comes to [coloring a badge](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor), using one of four colors for notifications of different severity is recommended:
 
@@ -263,4 +263,5 @@ Testing tips:
 
 <!-- END: Single Column Body Module -->
 
-
+[https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction]:https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/browserAction
+[https://developer.mozilla.org/Add-ons/WebExtensions/Popups]:https://developer.mozilla.org/Add-ons/WebExtensions/Popups

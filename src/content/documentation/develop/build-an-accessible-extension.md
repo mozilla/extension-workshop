@@ -90,7 +90,7 @@ Add a shortcut to the button’s action, using the special shortcut `option _exe
 </td>
 <td>
 
-The markup in the popup should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the popup should follow [standard web accessibility guidelines][https://developer.mozilla.org/docs/Web/Accessibility].
 
 </td>
 </tr>
@@ -116,7 +116,7 @@ Add a shortcut to the button’s action, using the special shortcut `option _exe
 </td>
 <td>
 
-The markup in the popup should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the popup should follow [standard web accessibility guidelines][https://developer.mozilla.org/docs/Web/Accessibility].
 
 </td>
 </tr>
@@ -140,7 +140,7 @@ Context menu items provide an accessible way for users to discover extension fea
 </td>
 <td>
 
-The markup in the sidebar should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the sidebar should follow [standard web accessibility guidelines][https://developer.mozilla.org/docs/Web/Accessibility].
 
 Add a keyboard shortcut to open a sidebar, using the special shortcut `option _execute_sidebar_action`.
 
@@ -154,7 +154,7 @@ Add a keyboard shortcut to open a sidebar, using the special shortcut `option _e
 </td>
 <td>
 
-The markup in the options page should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the options page should follow [standard web accessibility guidelines][https://developer.mozilla.org/docs/Web/Accessibility].
 
 </td>
 </tr>
@@ -166,7 +166,7 @@ The markup in the options page should follow [standard web accessibility guideli
 </td>
 <td>
 
-The markup in the extension page should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the extension page should follow [standard web accessibility guidelines][https://developer.mozilla.org/docs/Web/Accessibility].
 
 </td>
 </tr>
@@ -203,7 +203,7 @@ Add suggestions as per the guide, there are no additional accessibility consider
 </td>
 <td>
 
-The markup in the sidebar should follow [standard web accessibility guidelines](https://developer.mozilla.org/docs/Web/Accessibility).
+The markup in the sidebar should follow [standard web accessibility guidelines][https://developer.mozilla.org/docs/Web/Accessibility].
 
 Offering a keyboard shortcut to open a devtools panel is recommended.
 
@@ -218,4 +218,4 @@ Offering a keyboard shortcut to open a devtools panel is recommended.
 
 <!-- END: Single Column Body Module -->
 
-
+[https://developer.mozilla.org/docs/Web/Accessibility]:https://developer.mozilla.org/docs/Web/Accessibility
