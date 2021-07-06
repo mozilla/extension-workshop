@@ -28,7 +28,7 @@
     "@11ty/eleventy": "0.12.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "3.1.1",
     "acorn": "8.4.1",
-    "acorn-walk": "8.1.0",
+    "acorn-walk": "8.1.1",
     "chalk": "4.1.1",
     "chokidar-cli": "2.1.0",
     "eleventy-xml-plugin": "0.1.0",
