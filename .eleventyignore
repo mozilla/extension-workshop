@@ -5,3 +5,4 @@ renovate.json
 yarn-error.log
 yarn.lock
 .eslintrc.js
+yarn.json
