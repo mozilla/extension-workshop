@@ -58,7 +58,7 @@
     "stylelint": "13.13.1",
     "stylelint-config-standard": "20.0.0",
     "terser": "5.7.1",
-    "url-parse": "1.5.1"
+    "url-parse": "1.5.3"
   },
   "scripts": {
     "lint": "eslint .",
