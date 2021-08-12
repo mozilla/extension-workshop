@@ -6,6 +6,7 @@ topic: Develop
 tags: [commands, options, reference, tools, web-ext, webextensions]
 contributors:
   [
+    ankushduacodes,
     lfilho,
     rebloor,
     mdnwebdocs-bot,
@@ -26,8 +27,8 @@ contributors:
     akhilpanchal,
     ankushduacodes,
   ]
-last_updated_by: ankushduacodes
-date: 2021-01-11
+last_updated_by: caitmuenster
+date: 2021-08-11
 ---
 
 <!-- Page Hero Banner -->
@@ -382,7 +383,7 @@ Environment variable: `$WEB_EXT_API_SECRET`
 
 #### `--api-url-prefix`
 
-The signing API URL prefix. This should always be a string. If not specified, this will default to&nbsp;`https://addons.mozilla.org/api/v3` which is the production API.
+The signing API URL prefix. This should always be a string. If not specified, this will default to&nbsp;`https://addons.mozilla.org/api/v4` which is the production API.
 
 Environment variable: `$WEB_EXT_API_URL_PREFIX`
 
@@ -404,8 +405,8 @@ This specifies the `channel` in which the extension is signed. It defaults to `u
 
 | Channel    | Result                                                                                                                                                                                                              |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `listed`   | The extension gets submitted for review so it can be listed on [addons.mozilla.org](https://addons.mozilla.org). This type of channel is not well supported and cannot be used for some cases, as documented below. |
-| `unlisted` | The extension gets signed for publication on your own website.                                                                                                                                                      |
+| `listed`   | The extension gets submitted for public listing on [addons.mozilla.org](https://addons.mozilla.org). This type of channel is not well supported and cannot be used for some cases, as documented below. |
+| `unlisted` | The extension gets submitted for signing for the purpose of [self-distribution](/documentation/publish/self-distribution/) on your own website.                                                                                                                                                      |
 
 </div>
 
