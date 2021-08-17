@@ -6,6 +6,7 @@ topic: Develop
 tags: [webextensions]
 contributors:
   [
+    Rob--W,
     jsantell,
     mdnwebdocs-bot,
     charmander,
@@ -20,8 +21,8 @@ contributors:
     timdream,
     Timendum,
   ]
-last_updated_by: jsantell
-date: 2019-06-27 10:50:35
+last_updated_by: Rob--W
+date: 2021-08-17
 ---
 
 <!-- Page Hero Banner -->
@@ -105,6 +106,7 @@ You can do the same thing if you are updating from an older add-on type, such as
 ## When do you need an add-on ID?
 
 - If you are loading the add-on from its XPI file, are not loading it temporarily using `about:debugging` and it is not signed.
+- If you want to have a value other than a randomly generated ID upon [getting your extension signed](/documentation/publish/#get-your-extension-signed) for the first time.
 - If you use [AMO's API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) for uploading your add-on, rather than uploading it manually on its page, then you need to include the add-on's ID in the request.
 - Some WebExtension APIs use the add-on ID and expect it to be the same from one browser session to the next. If you use these APIs, then you must set the ID explicitly using the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. This applies to the following APIs:
   - [`storage.managed`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed "A storage.StorageArea object that represents the managed storage area. Items in managed storage are set by the domain administrator or other native applications installed on user's computer, and are read-only for the extension. Trying to modify this storage area results in an error.")
@@ -114,8 +116,9 @@ You can do the same thing if you are updating from an older add-on type, such as
   - [`pkcs11`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11 'The pkcs11 API enables an extension to enumerate PKCS #11 security modules and to make them accessible to the browser as sources of keys and certificates.')
   - [`runtime.onMessageExternal`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal "This API can't be used in a content script.")
   - [`runtime.onConnectExternal`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal 'Fired when an extension receives a connection request from a different extension.')
-- Using Firefox for Android. See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
 - Using the [`dictionaries` key in manifest.json](https://developer.mozilla.org/Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries).
+
+See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings) for the syntax of setting the extension ID.
 
 </div>
 </article>

@@ -131,7 +131,9 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 
 ## Install and run your extension in Firefox for Android
 
-In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the `manifest.json`:
+If you’re using web-ext, follow the [Testing in Firefox for Android](/documentation/develop/getting-started-with-web-ext#testing-in-firefox-for-android) instructions.
+
+If the extension is not signed, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the `manifest.json`:
 
 ```json
 "browser_specific_settings": {
@@ -140,8 +142,6 @@ In your extension, ensure that you've included an application ID using the [brow
   }
 }
 ```
-
-If you’re using web-ext, follow the [Testing in Firefox for Android](/documentation/develop/getting-started-with-web-ext#testing-in-firefox-for-android) instructions.
 
 Otherwise, [zip the content of your extension into an xpi file](/documentation/publish/package-your-extension) named to match the application ID, for example, `borderify@example.com.xpi`.
 
