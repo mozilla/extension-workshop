@@ -319,10 +319,6 @@
                     "id": "test-test-and-then-test-again"
                   }
                 ]
-              },
-              {
-                "title": "What’s great content and design?",
-                "url": "https://www.youtube.com/watch?v=a0_OsLGI0k4"
               }
             ]
           },
@@ -1043,6 +1039,10 @@
                     "id": "some-other-points"
                   }
                 ]
+              },
+              {
+                "title": "What’s great content and design?",
+                "url": "https://www.youtube.com/watch?v=a0_OsLGI0k4"
               },
               {
                 "title": "Promoting your extension",
