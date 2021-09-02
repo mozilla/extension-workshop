@@ -5,9 +5,9 @@ permalink: /documentation/develop/developing-extensions-for-firefox-for-android/
 topic: Develop
 tags: [add-ons, beginner, guide, mobile, webextensions]
 contributors:
-  [caitmuenster, rebloor, juraj, mdnwebdocs-bot, ExE-Boss, Ding-Fan, andrewtruongmoz]
-last_updated_by: caitmuenster
-date: 2020-09-15
+  [Rob--W, caitmuenster, rebloor, juraj, mdnwebdocs-bot, ExE-Boss, Ding-Fan, andrewtruongmoz]
+last_updated_by: Rob--W
+date: 2021-08-17
 ---
 
 {% capture page_hero_banner_content %}
@@ -137,16 +137,6 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 ::: note
 These instructions are for temporarily loading an extension. Instructions for persistent loading extensions in Firefox for Android Nightly can be found on [this blog post](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly/).
 :::
-
-In your extension, ensure that you've included an application ID using the [browser_specific_settings](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in the `manifest.json`:
-
-```json
-"browser_specific_settings": {
-  "gecko": {
-    "id": "borderify@example.com"
-  }
-}
-```
 
 In the unzipped directory of your extension, run `web-ext run -t firefox-android` and follow the instructions on screen to make sure you select the right device. Select `org.mozilla.fenix` as the apkname.
 
