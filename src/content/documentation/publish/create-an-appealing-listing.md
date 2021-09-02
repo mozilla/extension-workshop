@@ -2,7 +2,7 @@
 layout: sidebar
 title: Create an appealing listing
 permalink: /documentation/develop/create-an-appealing-listing/
-topic: Develop
+topic: Publish
 tags: [add-ons, beginner, guide, publishing, webextension]
 contributors:
   [
