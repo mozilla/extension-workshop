@@ -841,6 +841,10 @@
                     "id": "distributing-your-addon"
                   },
                   {
+                    "title": "Post-submission review",
+                    "id": "post-submission-review"
+                  },
+                  {
                     "title": "More information about AMO",
                     "id": "about-amo"
                   }
