@@ -5,7 +5,7 @@ permalink: /documentation/publish/
 tags: []
 contributors: [caitmuenster]
 last_updated_by: caitmuenster
-date: 2019-07-09 09:00:00
+date: 2021-09-13 
 ---
 
 <!-- Overview Page Hero Banner -->
@@ -30,15 +30,13 @@ Learn how to get your extension signed and distributed worldwide or to your ente
 
 ## Get your extension signed
 
-Once your extension is coded and tested, it needs to meet the policies in the [developer agreement](/documentation/publish/firefox-add-on-distribution-agreement/) and [add-on policies](/documentation/publish/add-on-policies/) before it is signed. If your extension doesn’t meet these policies, it may not get a signature or it could be [blocked](/documentation/publish/add-ons-blocking-process/) after signing.
+Extensions and themes need to be [submitted for signing](/documentation/publish/signing-and-distribution-overview/) by Mozilla before they can be installed in release and beta versions of Firefox for use in the [release](https://www.mozilla.org/firefox/) and [Beta](https://www.mozilla.org/firefox/channel/desktop/) versions of Firefox. Signing provides Firefox users with the assurance that an extension hasn’t been tampered with and gives Mozilla the ability to block malicious extensions. 
 
-When you’re confident your extension complies with those policies, it needs to be signed before it’s distributed\* for use in the [release](https://www.mozilla.org/firefox/) and [Beta](https://www.mozilla.org/firefox/channel/desktop/) versions of Firefox. Signing provides Firefox users with the assurance that an extension hasn’t been tampered with and gives Mozilla the ability to block malicious extensions.
+After you have coded and tested your add-on, take a few minutes to see that it needs to meet the policies in the [Firefox Add-on Distribution Agreement](/documentation/publish/firefox-add-on-distribution-agreement/) and [Add-on Policies](/documentation/publish/add-on-policies/). If your extension does not comply with these policies, it may not get a signature or it could be [blocked](/documentation/publish/add-ons-blocking-process/) after signing.
 
-All extensions can be submitted for signing through [addons.mozilla.org](https://addons.mozilla.org).
+When you are ready to submit your add-on, create an extension package either [manually](/documentation/publish/package-your-extension/) or using [web-ext](/documentation/develop/getting-started-with-web-ext/).
 
-Before submitting your extension for signing, create an extension package either [manually](/documentation/publish/package-your-extension/) or using [web-ext](/documentation/develop/getting-started-with-web-ext/). Once you’ve packaged your extension, there are [three ways to get it signed](/documentation/publish/signing-and-distribution-overview/).
-
-Once your extension is signed, it is subject to review by Mozilla at any time. To enable this review, you may have to [submit the source code](/documentation/publish/source-code-submission/) for your extension.
+Once your extension is submitted, it is subject to review by Mozilla at any time. In order to review your extension, Mozilla add-on reviewers must be able to reproduce your build. If your extension makes use of code minifiers, tools that generate a single file from other files, template engines, or any other custom tool that pre-processes and generates file(s) to include in your extension, you are required to [submit the source code](/documentation/publish/source-code-submission/) for your extension.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid
@@ -86,7 +84,7 @@ Check out our [publisher’s resources](/documentation/manage/resources-for-publ
 
 ## Promote your extension
 
-Grow your user base by [creating an appealing listing](/documentation/develop/create-an-appealing-listing/) for your extension.
+Improve your add-on's SEO and attract more users by [creating an appealing listing](/documentation/develop/create-an-appealing-listing/) for your extension.
 
 <!-- Video Popup Thumbnail -->
 
@@ -99,14 +97,16 @@ Grow your user base by [creating an appealing listing](/documentation/develop/cr
 
 <!-- END: Video Popup Thumbnail -->
 
-However you choose to distribute your extension, you’ll want to [promote your extension](/documentation/publish/promoting-your-extension/).
+Regardless of how you plan to distribute your add-on, you will want to [promote your extension](/documentation/publish/promoting-your-extension/).
 
-Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.org/addons/2019/04/08/recommended-extensions-program-coming-soon/) that meet a high standard of security, utility, and user experience. If you’d like your extension to be included in the program, submit a nomination.
+Mozilla promotes a selection of [Recommended Extensions](/documentation/publish/recommended-extensions/) that meet a high standard of security, utility, and user experience. If you’d like your extension to be included in the program, submit a nomination.
 
 [Making money from browser extensions](/documentation/publish/make-money-from-browser-extensions/) is also something you might want to consider as your user base grows.
 
 ::: note
-If you’re distributing to an enterprise running the ESR version of Firefox or to users of Developer Edition or Nightly you don’t need to submit your extension to addons.mozilla.org for signing, you can distribute and install unsigned extensions.
+If you’re distributing to an enterprise running the ESR version of Firefox, and the administrator of the enterprise has disabled signing enforcement, then those users can install unsigned extensions. This means you do not need to submit your extension to addons.mozilla.org for signing.
+
+Users of Developer Edition or Nightly can also disable Firefox's signing enforcement.
 :::
 
 {% endcapture %}
