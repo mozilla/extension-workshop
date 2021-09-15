@@ -4,9 +4,9 @@ title: Distributing an add-on yourself
 permalink: /documentation/publish/self-distribution/
 topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
-contributors: [rebloor]
-last_updated_by: rebloor
-date: 2019-08-18 11:19:17
+contributors: [caitmuenster, rebloor]
+last_updated_by: caitmuenster
+date: 2021-09-14 
 ---
 
 <!-- Page Hero Banner -->
@@ -29,9 +29,8 @@ date: 2019-08-18 11:19:17
 You aren't required to list or distribute your add-on through [addons.mozilla.org](https://addons.mozilla.org) (AMO); you can distribute it yourself. However, before distributing your add-on yourself, here are some things you should consider:
 
 - AMO is a very popular distribution platform, with millions of monthly visitors and installations. It's integrated into the Firefox Add-ons Manager, allowing for easy installation of add-ons published on AMO.
-- When an add-on is listed on AMO, Firefox automatically updates installed copies when a new version is listed on AMO. To enable Firefox to automatically update self-distributed add-ons, the URL where Firefox can find updates needs to be included in the add-on manifest's [`update_url`](/documentation/manage/updating-your-extension/#enable-update) key.
 
-For self-distributed add-ons that don't have an update URL, Firefox checks AMO for updates and the add-on is updated to a listed version, if one is available.
+- When an add-on is listed on AMO, Firefox automatically updates installed copies when a new version is listed on AMO. To enable Firefox to automatically update self-distributed add-ons, you need to include the URL where Firefox can find updates in the add-on manifest's [update_url](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates) key. If the add-on does not have an update URL to check, Firefox will check AMO for a listed update. If a listed update with a higher version number is available, Firefox will distribute that version to users who have installed the self-distributed file.
 
 For more information on how to submit an add-on for distribution on AMO or self-distribution, see [Submitting an add-on](/documentation/publish/submitting-an-add-on/).
 
