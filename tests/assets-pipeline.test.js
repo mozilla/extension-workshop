@@ -164,8 +164,7 @@ describe('Asset Pipeline functions', () => {
       await ap.updateHashMap(/\.css$/);
       expect(ap.assetMap).toEqual({
         'assets/file1.css': {
-          hash:
-            '072a023e300cf4a837e64807f5cbacf432b885f34738a466b7ee6f1e9a9476b3',
+          hash: '072a023e300cf4a837e64807f5cbacf432b885f34738a466b7ee6f1e9a9476b3',
           hashedPath: 'assets/file1.072a023e.css',
           shortHash: '072a023e',
           written: false,
