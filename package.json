@@ -53,7 +53,7 @@
     "pretty-quick": "3.1.1",
     "prismjs": "1.25.0",
     "rimraf": "3.0.2",
-    "serialize-javascript": "5.0.1",
+    "serialize-javascript": "6.0.0",
     "slugify": "1.6.0",
     "stylelint": "13.13.1",
     "stylelint-config-standard": "20.0.0",
