@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 describe('new-tab-links.js', () => {
   beforeAll(() => {
     // Set up our document body
