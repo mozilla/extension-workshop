@@ -21,7 +21,8 @@ const builtAssetDir = path.resolve(__dirname, '../build/');
 // Where we're writing to.
 const destAssetDir = path.resolve(__dirname, '../dist/');
 // Binary assets are handled first
-const binaryAssetsPattern = /\.(?:ico|jpe?g|png|tiff|webp|eot|gif|otf|ttf|woff2?)$/;
+const binaryAssetsPattern =
+  /\.(?:ico|jpe?g|png|tiff|webp|eot|gif|otf|ttf|woff2?)$/;
 // Assets that match these endings should not be hashed.
 const unHashableAssetsPattern = /(?:robots\.txt|\.html|pages\.json)$/;
 
