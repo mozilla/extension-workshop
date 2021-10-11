@@ -35,7 +35,7 @@ references:
 
   deploy_container: &deploy_container
     docker:
-      - image: circleci/python:3.9-node
+      - image: circleci/python:3.10-node
 
   attach_deploy_workspace: &attach_deploy_workspace
     attach_workspace:
