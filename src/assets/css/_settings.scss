@@ -27,6 +27,7 @@
   font-weight: 400;
   src: url('/assets/fonts/inter/Inter-Regular.woff2') format('woff2'),
     url('/assets/fonts/inter/Inter-Regular.woff') format('woff');
+  font-display: swap;
 }
 
 @font-face {
@@ -35,6 +36,7 @@
   font-weight: 400;
   src: url('/assets/fonts/inter/Inter-Italic.woff2') format('woff2'),
     url('/assets/fonts/inter/Inter-Italic.woff') format('woff');
+  font-display: swap;
 }
 
 @font-face {
@@ -43,6 +45,7 @@
   font-weight: 600;
   src: url('/assets/fonts/inter/Inter-SemiBold.woff2') format('woff2'),
     url('/assets/fonts/inter/Inter-SemiBold.woff') format('woff');
+  font-display: swap;
 }
 
 @font-face {
@@ -51,6 +54,7 @@
   font-weight: 600;
   src: url('/assets/fonts/inter/Inter-SemiBoldItalic.woff2') format('woff2'),
     url('/assets/fonts/inter/Inter-SemiBoldItalic.woff') format('woff');
+  font-display: swap;
 }
 
 // Element Shadows
@@ -122,6 +126,7 @@ $print-transparent-backgrounds: true;
     url('/assets/fonts/icomoon/fonts/icomoon.ttf') format('truetype'),
     url('/assets/fonts/icomoon/fonts/icomoon.woff') format('woff'),
     url('/assets/fonts/icomoon/fonts/icomoon.svg#icomoon') format('svg');
+  font-display: swap;
   font-weight: normal;
   font-style: normal;
 }
