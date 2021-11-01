@@ -712,6 +712,10 @@
                 ]
               },
               {
+                "title": "Add-on Policies (December 2021)",
+                "url": "/documentation/publish/add-on-policies-dec-2021/"
+              },
+              {
                 "title": "Firefox Add-on Distribution Agreement",
                 "url": "/documentation/publish/firefox-add-on-distribution-agreement/",
                 "subpageitems": [
