@@ -14,13 +14,19 @@ contributors:
     wbamberg,
     kmaglione,
   ]
-last_updated_by: wagnerand
-date: 2019-12-02
+last_updated_by: kewisch
+date: 2019-11-03
 ---
 
 <!-- Page Hero Banner -->
 
 {% capture page_hero_banner_content %}
+
+
+::: note
+We are updating our policies effective December 1st, 2021. Please [preview our new policies](../add-on-policies-dec-2021/) and ensure your add-on remains compliant.
+:::
+
 
 # Add-on Policies
 
