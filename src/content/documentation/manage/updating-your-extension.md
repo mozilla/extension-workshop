@@ -63,7 +63,7 @@ A typical update manifest looks something like:
         {
           "version": "0.3",
           "update_link": "https://example.com/addon-0.3.xpi",
-          "browser_specific_settings": {
+          "applications": {
             "gecko": { "strict_min_version": "44" }
           }
         }
@@ -169,7 +169,7 @@ Update description objects must be object literals. They may have the following 
 | `update_hash`               | `string` (Optional)               | A cryptographic hash of the file pointed to by `update_link`. This must be provided if `update_link` is not a secure URL. If present, this must be a string beginning with either `sha256:` or `sha512:`, followed by the hexadecimal-encoded hash of the matching type.                                                                                                                                                                                                                     |
 | `update_info_url`           | `string` (Optional)               | A link to an HTML file containing information about the update.                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `multiprocess_compatible`   | `bool` (Optional) (default: `true`) | If false, this add-on requires compatibility shims to run in a [multi-process Firefox](https://developer.mozilla.org/docs/Mozilla/Firefox/Multiprocess_Firefox) environment.                                                                                                                                                                                                                                                                                                                 |
-| `browser_specific_settings` | `object` (Optional)               | An object containing browser-specific compatibility information. Each property must contain a <a href="#browser-specific-settings-objects">browser specific settings object</a>, as described below. The only browser currently supported is `gecko`, which includes Firefox, and all other browsers built on the same runtime. If this property is omitted, support for Gecko is assumed. Otherwise, if this property is defined, it must contain a `gecko` property, or the update entry will be ignored. |
+| `applications`              | `object` (Optional)               | An object containing browser-specific compatibility information. Each property must contain a <a href="#applications-object">applications object</a>. The only browser supported is `gecko`, which includes Firefox and all other browsers built on the same runtime. If this property is omitted, support for Gecko is assumed. Otherwise, if this property is defined, it must contain a `gecko` property, or the update entry is ignored. |
 
 {% endcapture %}
 {% include modules/table.liquid
@@ -178,13 +178,13 @@ Update description objects must be object literals. They may have the following 
 
 <!-- END: Table -->
 
-<section id="browser-specific-settings-objects"></section>
+<section id="applications-object"></section>
 
-### Browser specific settings objects
+### Applications objects
 
-`addons[*].updates[*].browser_specific_settings.gecko`
+`addons[*].updates[*].applications.gecko`
 
-Browser specific settings objects specify compatibility information for a specific browser. They must be object literals, and may have the following properties:
+Applications objects specify compatibility information for a specific browser. They must be object literals, and can have these properties:
 
 <!-- Table -->
 
