@@ -94,14 +94,8 @@ If your extension is not hosted on AMO, you must specify the location of your up
 }
 ```
 
-For XUL add-ons, add the following to the `<Description about="urn:mozilla:install-manifest">` element of your [`install.rdf`](https://developer.mozilla.org/Add-ons/Install_Manifests) file:
-
-```xml
-<em:updateURL>https://example.com/updates.json</em:updateURL>
-```
-
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/one-column.liquid
     id: "enable-update"
     content: content
 %}
@@ -203,7 +197,7 @@ Update description objects must be object literals. They may have the following 
 <!-- END: Table -->
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/one-column.liquid
     id: "manifest-structure"
     content: content
 %}
@@ -217,7 +211,7 @@ By default, Firefox checks for updates every 86400 seconds (24 hours). If you wa
 If your extension does not update as expected, open the console: **Tools > Web Developer > Browser Console**, filter for the name of your extension or update URL, and see if there are any errors logged. If you see an error indicating that the downloaded file hash … did not match provided hash …, look up for the previous `GET` of your extension. If it indicates that the download time was around zero milliseconds, for example `[HTTP/1.1 200 OK 0ms]`, Firefox may have used a cached download, which might be your prior version if you just recently uploaded a new version, and this may explain the hash mismatch.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/one-column.liquid
   id: "testing-automatic-updating"
   content: content
 %}
