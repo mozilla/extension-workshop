@@ -184,7 +184,7 @@ Update description objects must be object literals. They may have the following 
 
 `addons[*].updates[*].applications.gecko`
 
-Applications objects specify compatibility information for a specific browser. They must be object literals, and can have these properties:
+`applications` objects specify compatibility information for a specific browser. They must be object literals, and can have these properties:
 
 <!-- Table -->
 
