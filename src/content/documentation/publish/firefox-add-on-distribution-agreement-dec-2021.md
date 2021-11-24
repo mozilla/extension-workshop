@@ -29,7 +29,7 @@ date: 2020-11-23 12:08:47
 {% capture page_hero_banner_content %}
 
 ::: note
- This is a preview of the distribution agreement effective effective December 1st, 2021. You may wish to view our [current agreement](../firefox-add-on-distribution-agreement/) as well.
+ This is a preview of the distribution agreement effective December 1st, 2021. You may wish to view our [current agreement](../firefox-add-on-distribution-agreement/) as well.
 :::
 
 # Firefox Add-on Distribution Agreement
