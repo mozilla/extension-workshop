@@ -767,8 +767,7 @@
               },
               {
                 "title": "Firefox Add-on Distribution Agreement (December 2021)",
-                "url": "/documentation/publish/firefox-add-on-distribution-agreement-dec-2021/",
-                "subpageitems": []
+                "url": "/documentation/publish/firefox-add-on-distribution-agreement-dec-2021/"
               },
               {
                 "title": "Add-ons Blocking Process",
@@ -1389,7 +1388,7 @@
                    }
                 ]
               },
-              { 
+              {
                 "title": "Dynamic themes",
                 "url": "/documentation/themes/dynamic-themes/",
                 "subpageitems": [
