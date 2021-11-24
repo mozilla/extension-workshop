@@ -1,7 +1,7 @@
 ---
 layout: sidebar
-title: Firefox Add-on Distribution Agreement
-permalink: /documentation/publish/firefox-add-on-distribution-agreement/
+title: Firefox Add-on Distribution Agreement (December 2021)
+permalink: /documentation/publish/firefox-add-on-distribution-agreement-dec-2021/
 topic: Publish
 tags: [add-on, agreement, firefox]
 contributors:
@@ -21,7 +21,7 @@ contributors:
   ]
 description: This page details the Firefox Add-on distribution agreement.
 last_updated_by: kewisch
-date: 2019-06-10 12:19:52
+date: 2020-11-23 12:08:47
 ---
 
 <!-- Page Hero Banner -->
@@ -29,7 +29,7 @@ date: 2019-06-10 12:19:52
 {% capture page_hero_banner_content %}
 
 ::: note
-We are updating our distribution agreement effective December 1st, 2021. Please preview our [new distribution agreement](../firefox-add-on-distribution-agreement-dec-2021/).
+ This is a preview of the distribution agreement effective December 1st, 2021. You may wish to view our [current agreement](../firefox-add-on-distribution-agreement/) as well.
 :::
 
 # Firefox Add-on Distribution Agreement
@@ -53,18 +53,18 @@ Mozilla is committed to promoting choice and innovation on the web. From the lau
 
 This Firefox Add-on Distribution Agreement ("Agreement") governs Your distribution of Firefox Add-ons. Frequently used terms in this Agreement are defined below.
 
-- “Add-on” means software that extends the functionality of Firefox, for example, extensions, Background Themes (defined below), search providers, dictionaries, and language packs. Add-ons are also commonly referred to as extensions or plugins.
+- “Add-on” means software that extends the functionality of Firefox, for example, extensions, themes (defined below), search providers, dictionaries, and language packs. Add-ons are also commonly referred to as extensions or plugins.
 - “Add-on Manager” is the Firefox tool to manage Add-ons. It can be accessed from the Firefox menu button in the toolbar.
 - “AMO” means addons.mozilla.org, which is our online platform for developers to list and distribute Add-ons to End-Users.
-- “Background Theme” means software that personalizes the look of Firefox by adding a background design to the main toolbar. Themes are a type of Add-on.
+- “Theme” means software that personalizes the look of Firefox by adding a design. Themes are a type of Add-on.
 - “Brand Features” mean the trade names, trademarks, service marks, logos, domain names, and other distinctive brand features of You or Mozilla.
-- “End-Users” mean individuals who install Add-Ons, or to whom Add-ons are promoted.
+- “End-Users” mean individuals who install Add-ons, or to whom Add-ons are promoted.
 - “Firefox” means the awesome web browser developed by Mozilla.
 - “Listed Add-on” means Add-ons that are listed and distributed on AMO.
 - “Mozilla” means Mozilla Corporation, its affiliated entities, and designated community members who are part of the Add-on review process.
 - “Mozilla Certificate” means a Mozilla issued certificate to digitally sign an Add-on for use with Firefox.
 - “Signed Add-on” means an Add-on that has been issued a Mozilla Certificate.
-- “Unlisted Add-on” means Add-ons that are distributed to End-Users via means other than AMO.
+- “Self-distributed Add-on” means Add-ons that are distributed to End-Users via means other than AMO.
 - “You” means the person or entity entering this Agreement for the purpose of distributing a Firefox Add-on.
 
 {% endcapture %}
@@ -81,7 +81,9 @@ This Firefox Add-on Distribution Agreement ("Agreement") governs Your distributi
 
 ### 2. Accounts
 
-In order to distribute an Add-on, You'll need to create an account. During registration, You will be asked to set a password. You are responsible for keeping Your password confidential and for the activity that happens through Your account. Mozilla is not responsible for any losses arising out of unauthorized use of Your account.
+In order to distribute an Add-on, You'll need to create a Firefox account. During registration, You will be asked to set a password. You are responsible for keeping Your password confidential and for the activity that happens through Your account. Mozilla is not responsible for any losses arising out of unauthorized use of Your account.
+
+We may require you to disclose all Accounts and Add-ons that You own or control. You agree that you will disclose all Accounts and Add-ons that You own or control if we request this information.
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -114,18 +116,18 @@ Our [Websites, Communications and Cookies Privacy Notice](https://www.mozilla.or
 
 #### (a) Distribution Options
 
-- _Listed Add-ons:_ You can request Your Add-on to be listed and distributed on AMO. AMO is a popular site with over four billion Add-on downloads. End-Users can search titles, navigate categories, or view promoted, featured, popular, or top rated Add-ons. End-Users can also rate Add-ons and leave comments.
-- _Unlisted Add-ons:_ Add-ons that are distributed by a method outside of AMO are common when an Add-on isn’t intended for the public or is bundled with another Add-on. For example, some Add-ons are created by a company for employees; created for research purposes by a limited group; or are in development or testing phase and not yet suitable for a general audience.
+- _Listed Add-ons_: You can request Your Add-on to be listed and distributed on AMO. AMO is a popular site with billions of Add-on downloads. End-Users can search titles, navigate categories, or view promoted, featured, popular, or top rated Add-ons. End-Users can also rate Add-ons and leave comments.
+- _Self-distributed Add-ons_: Add-ons that are distributed by a website or method outside of AMO. Common examples are Add-ons that are distributed from the developer website, when an Add-on isn’t intended for the public or is bundled with another Add-on. For example, some Add-ons are created by a company for employees; created for research purposes by a limited group; or are in development or testing phase and not yet suitable for a general audience.
 
 #### (b) Mozilla Certificates
 
-With some exceptions, all Add-ons must be signed using a Mozilla Certificate, which is a digital signature that enables the Add-on to be used with Firefox. Mozilla Certificates are incorporated by Mozilla into Your Add-on (this process is also referred to as “signing an Add-on”). Exceptions include, for example, Background Themes, dictionaries, and language packs.
+All Add-ons must be signed using a Mozilla Certificate, which is a digital signature that enables the Add-on to be used with Firefox. Mozilla Certificates are incorporated by Mozilla into Your Add-on (this process is also referred to as “signing an Add-on”).
 
-Signed Listed Add-ons are automatically distributed by Mozilla on AMO. Links to Signed Unlisted Add-ons will be provided to You for distribution.
+Signed Listed Add-ons are automatically distributed by Mozilla on AMO. Links to Signed Self-distributed Add-ons will be provided to You for distribution.
 
 #### (c) Review Process
 
-Listed and Unlisted Add-ons must meet certain review criteria, which are described in our [Review Policies](/documentation/publish/add-on-policies/). Mozilla may at any time monitor, test or review Listed and Unlisted Add-ons for compliance with this Agreement and the [Review Policies](/documentation/publish/add-on-policies/). The inclusion of an Add-on on AMO or issuance of a Mozilla Certificate is at Mozilla’s sole discretion.
+All Add-ons, regardless of type or distribution channel, must meet certain review criteria, which are described in our [Review Policies](/documentation/publish/add-on-policies/). Mozilla may at any time monitor, test or review Listed and Self-distributed Add-ons for compliance with this Agreement and the [Review Policies](/documentation/publish/add-on-policies/). The inclusion of an Add-on on AMO or issuance of a Mozilla Certificate is at Mozilla’s sole discretion.
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -183,12 +185,14 @@ Between Mozilla and You, each party shall own all right, title and interest, inc
 ### 7. Content removal
 
 **(a) Removal from Distribution by You.**
-You may cease distribution of Your Add-ons at any time by removing your Add-on from AMO. You agree that ceasing maintenance or distribution of Add-ons does not necessarily remove Your Add-on from End-User machines, hardware, or other devices, or from any part of AMO where previously downloaded applications are stored on behalf of End-Users (if any).
+You may cease distribution of Your Add-ons at any time by removing your Add-on from AMO. You agree that ceasing maintenance or distribution of Add-ons does not necessarily remove Your Add-on from End-User machines, hardware, or other devices, or from any part of AMO where Add-ons are stored on behalf of End-Users (if any).
 
 **(b) Removal from Distribution by Mozilla.**
-Mozilla reserves the right (though not the obligation) to, in our sole discretion, remove or revoke access to any Listed or Unlisted Add-ons. This applies, but is not limited to, Add-ons that, in our reasonable opinion, violate this Agreement or the law, any applicable Mozilla policy, or is in any way harmful or objectionable. In addition, we may at any time remove Your Add-on from AMO; revoke Your Mozilla Certificate; blocklist an Add-on; delete your AMO account; flag, filter, modify related materials (including but not limited to descriptions, screenshots, or metadata); reclassify the Add-on; or take other corrective action.
+Mozilla reserves the right (though not the obligation) to, in our sole discretion, remove or revoke access to any Listed or Self-distributed Add-ons as well as AMO accounts. This applies, but is not limited to, Add-ons and AMO accounts that, in our reasonable opinion, violate this Agreement or the law, any applicable Mozilla policy, or is in any way harmful or objectionable. In addition, we may at any time remove Your Add-on from AMO; blocklist an Add-on; delete your AMO account; flag, filter, modify related materials (including but not limited to descriptions, screenshots, or metadata); reclassify the Add-on; or take other corrective action.
 
-For example, a Listed Add-on may be removed in response to abuse reports from End-Users, in response to a Take-Down Request, or if it comes to Mozilla’s attention that the Add-on violates our Conditions of Use. An Unlisted Add-on may be blocklisted or the Mozilla Certificate revoked if it comes to Mozilla’s attention that it violates the Security Criteria described in our [Review Policies](/documentation/publish/add-on-policies/).
+For example, a Listed Add-on or AMO account may be removed in response to abuse reports from End-Users, in response to a Take-Down Request, or if it comes to Mozilla’s attention that the Add-on or AMO account violates our Conditions of Use. An Self-distributed Add-on may be blocklisted or the Mozilla Certificate revoked if it comes to Mozilla’s attention that it violates the Security Criteria described in our [Review Policies](/documentation/publish/add-on-policies/).
+
+This includes a policy to terminate and ban developers we consider to be repeat infringers. If we determine that You have repeatedly violated this Agreement or the [Review Policies](/documentation/publish/add-on-policies/), we may terminate Your AMO account and its Add-ons as well as any other AMO accounts and Add-ons you own or control. This includes the removal, revocation, and/or corrective action described above. We may also prohibit You from creating any new AMO accounts or Add-ons.
 
 In addition, we may at any time suspend or terminate this Agreement with You if we are no longer going to support the products and services related to Firefox Add-ons or issue Mozilla Certificates.
 
@@ -277,5 +281,3 @@ Entire Agreement. This Agreement constitutes the whole legal agreement between Y
 %}
 
 <!-- END: Single Column Body Module -->
-
-
