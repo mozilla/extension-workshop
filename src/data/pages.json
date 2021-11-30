@@ -255,8 +255,8 @@
                     "id": "create-a-privacy-policy"
                   },
                   {
-                    "title": "Prompt after install or on first use",
-                    "id": "prompt-after-install-or-on-first-use"
+                    "title": "Prompt after install",
+                    "id": "prompt-after-install"
                   },
                   {
                     "title": "Determine your consent flow",
