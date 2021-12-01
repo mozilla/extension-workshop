@@ -15,24 +15,20 @@ contributors:
     kmaglione,
   ]
 last_updated_by: kewisch
-date: 2019-11-03
+date: 2021-12-01
 ---
 
 <!-- Page Hero Banner -->
 
 {% capture page_hero_banner_content %}
 
-
-::: note
-We are updating our policies effective December 1st, 2021. Please [preview our new policies](../add-on-policies-dec-2021/) and ensure your add-on remains compliant.
-:::
-
-
 # Add-on Policies
 
 Add-ons extend the core capabilities of Firefox, enabling users to modify and personalize their web experience. A healthy ecosystem, built on trust, is vital for developers to be successful and users to feel safe making Firefox their own. For these reasons, Mozilla requires all add-ons to comply with the following policies on acceptable practices. These policies are not intended to serve as legal advice, nor as a comprehensive list of terms to include in your add-on’s privacy policy.
 
-All add-ons are subject to these policies, regardless of how they are distributed. When an add-on is given human review or otherwise assessed by Mozilla, these policies act as guiding principles for those reviews. Add-ons that do not comply with these policies may be rejected or disabled by Mozilla. Therefore, follow these policies when making add-on design and development decisions.
+**All add-ons are subject to these policies, regardless of how they are distributed.**
+
+When an add-on is given human review or otherwise assessed by Mozilla, these policies act as guiding principles for those reviews. Add-ons that do not comply with these policies may be rejected or disabled by Mozilla. Therefore, follow these policies when making add-on design and development decisions.
 
 {% endcapture %}
 {% include modules/page-hero.liquid
@@ -47,23 +43,15 @@ All add-ons are subject to these policies, regardless of how they are distribute
 
 ## No Surprises
 
-Surprises can be appropriate in many situations, but they are not welcome when user security, privacy and control are at stake. It is extremely important to be as transparent as possible when submitting an add-on. The user should be able to easily discern what the functionality of your add-on is and not be presented with unexpected user experiences after installing it.
+Users should be able to easily discern what the functionality of your add-on is and should not be presented with unexpected user experiences after installing it.  The add-on should have an easy-to-read description about everything it does, and any information it collects. Please consult our best practices guide for [creating an appealing listing](/documentation/develop/create-an-appealing-listing/).
 
 ### Unexpected features
 
-“Unexpected” features are those that are unrelated to the add-on’s primary function, and are not likely from the add-on name or description to be expected by a user installing that add-on.
+“Unexpected” features are those that are unrelated to the add-on’s primary function, and are not intuitive from the add-on name or description. This includes features that impact user privacy or security, make unexpected changes to web content, change default settings like the new tab page, homepage, or search engine, or are not related to the add-on’s core function(s).
 
-Should an add-on include any unexpected feature that falls into one of the following categories:
-
-- Potentially compromises user privacy or security (like sending data to third parties)
-- Changes default settings like the new tab page, homepage or search engine
-- Makes unexpected changes to the browser or web content
-- Includes features or functionality not related to the add-on’s core function(s)
-
-Then the “unexpected” feature(s) must adhere to all of the following requirements:
-
-- The add-on description must clearly state what changes the add-on makes.
-- All changes must be “opt-in”, meaning the user has to take non-default action to enact the change. Changes that prompt the user via the permissions system don’t require an additional opt-in.
+Any “unexpected” feature(s) must adhere to all of the following requirements:
+- The add-on description must clearly state any changes made by these features.
+- The features must be “opt-in”, meaning the user has to take non-default action to enact the change. Changes prompted by Firefox after the add-on is installed do not require an additional opt-in. The permissions prompt shown when installing an add-on does not alleviate the need for an opt-in.
 - The opt-in interface must clearly state the name of the add-on requesting the change.
 
 {% endcapture %}
@@ -82,14 +70,14 @@ Then the “unexpected” feature(s) must adhere to all of the following require
 
 Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Policy](https://www.mozilla.org/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “&lt;Add-on name&gt; for Firefox”.
 
-In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the following policies:
+In addition, add-ons listed on addons.mozilla.org must adhere to the following policies:
 
-- All add-ons submitted for listing on AMO are subject to Mozilla’s [Conditions of Use](https://www.mozilla.org/about/legal/acceptable-use/).
+- All add-ons submitted for listing on addons.mozilla.org are subject to Mozilla’s [Conditions of Use](https://www.mozilla.org/about/legal/acceptable-use/).
 - Add-ons must disclose when payment is required to enable any functionality.
 - Any add-ons, or add-on content, hosted on Mozilla site(s) must conform to the laws of the United States.
-- The add-on listing should have an easy-to-read description about everything it does, and any information it collects. Please consult our best practices guide for [creating an appealing listing](/documentation/develop/create-an-appealing-listing/).
-- Add-ons that are intended for internal or private use, are only accessible to a closed user group, or for distribution testing may not be listed on AMO. Such add-ons may be [uploaded for self-distribution](/documentation/publish/submitting-an-add-on/#self-distribution) instead.
+- Add-ons that are intended for internal or private use, are only accessible to a closed user group, or for distribution testing may not be listed on addons.mozilla.org. Such add-ons may be [uploaded for self-distribution](../submitting-an-add-on/#self-distribution) instead.
 - If the add-on is a fork of another add-on, the name must clearly distinguish it from the original and provide a significant difference in functionality and/or code.
+- Add-ons with the sole purpose of promoting, installing, loading or launching another website, application or add-on are not permitted.
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -105,19 +93,17 @@ In addition, add-ons listed on addons.mozilla.org (AMO) must adhere to the follo
 
 ## Submission Guidelines
 
-Add-ons must function only as described, and should provide an appealing user experience. Based on the description of the add-on, a user must be able to understand and use the add-on’s features without requiring expert knowledge. Tips on how to create a good user experience for your add-on can be found [here](/documentation/develop/user-experience-best-practices/).
+Add-ons must function only as described. During review, the add-on undergoes basic functional testing in addition to code review. To facilitate the functional testing, the add-on author must provide testing information and, if applicable, testing credentials required to use the add-on if an account is needed for any part of the add-on’s functionality.
 
-During review, the add-on undergoes basic testing in addition to code review. To facilitate the functional testing, the add-on author must provide testing information and, if applicable, testing credentials required to use the add-on if an account is needed for any part of the add-on’s functionality.
-
-Issues brought up during review must be addressed using best efforts. If corrections have been requested, the new version should not contain unrelated changes, as this complicates the review process and can lead to further rejections.
+If corrections have been requested, the new version should not contain unrelated changes, as this complicates the review process and can lead to further rejections.
 
 ### Source Code Submission
 
-Add-ons may contain transpiled, minified or otherwise machine-generated code, but Mozilla needs to review a copy of the human-readable source code. The author must provide this information to Mozilla during submission along with instructions on how to reproduce the build.
+Code must be provided in a way that is reviewable. Add-ons may contain transpiled, minified or otherwise machine-generated code, but Mozilla needs to review a copy of the source code before any of these steps have been applied. The author must provide this information to Mozilla during submission along with instructions on how to reproduce the build. Reviewers may ask you to refactor parts of the code if it is not reviewable.
 
-The provided source code will be reviewed by an administrator and will not be redistributed in any way. The code will only be used for the purpose of reviewing the add-on. Failure to provide this information will result in rejection.
+The provided source code will be reviewed by an administrator and will not be redistributed in any way. The code will only be used for the purpose of reviewing the add-on. Failure to provide this information will result in rejection or blocking.
 
-Add-ons are not allowed to contain obfuscated code, nor code that hides the purpose of the functionality involved. If external resources are used in combination with add-on code, the functionality of the code must not be obscured. To the contrary, minification of code with the intent to reduce file size is permitted.
+Add-ons are not allowed to contain obfuscated code, nor code that hides the purpose of the functionality involved. If external resources are used in combination with add-on code, the functionality of the code must not be obscured. Minification of code with the intent to reduce file size is permitted.
 
 Please read our [Source Code Submission guidelines](/documentation/publish/source-code-submission/) to avoid unexpected rejections or blocks.
 
@@ -139,15 +125,14 @@ In general, developers are free to maintain their add-ons in the manner they cho
 
 While any code, method or practice in a submitted add-on is subject to review and rejection, the following requirements are of particular importance:
 
-- Add-ons must only request those permissions that are necessary for function
-- Add-ons must be self-contained and not load remote code for execution
+- Add-ons must only request those permissions that are necessary for function.
+- Add-ons must be self-contained and not load remote code for execution.
 - Add-ons must not load or redirect to a remote new tab page. The new tab page must be contained within the add-on.
-- Add-ons must use encrypted channels for sending sensitive user data
-- Add-ons should avoid including duplicate or unnecessary files
-- Add-on code must be written in a way that is reviewable and understandable. Reviewers may ask you to refactor parts of the code if it is not reviewable.
+- Add-ons must not relax web page security headers, such as the Content Security Policy.
+- Add-ons must use encryption when transporting data remotely.
+- Add-ons should avoid including redundant code or files.
 - Add-ons must not negatively impact the performance or stability of Firefox.
-- Only release versions of third-party libraries and/or frameworks may be included with an add-on. Modifications to these libraries/frameworks are not permitted.
-- Please read our [third party library guidelines](/documentation/publish/third-party-library-usage/) to avoid unexpected rejections.
+- Only release versions of third-party libraries and/or frameworks may be included with an add-on. Modifications to these libraries/frameworks are not permitted. Please read our [third party library guidelines](/documentation/publish/third-party-library-usage/) to avoid unexpected rejections.
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -163,49 +148,56 @@ While any code, method or practice in a submitted add-on is subject to review an
 
 ## Data Disclosure, Collection and Management
 
-You must disclose how the add-on collects, uses, stores and shares user data in the privacy policy field on AMO. Mozilla expects that the add-on limits data collection whenever possible, in keeping with Mozilla’s [Lean Data Practices](https://www.mozilla.org/about/policy/lean-data/) and Mozilla’s [Data Privacy Principles](https://www.mozilla.org/privacy/principles/), and uses the data only for the purpose for which it was originally collected.
+Add-ons must limit data collection to what is necessary for functionality and use the data only for the purpose for which it was originally collected. Data includes all information the add-on collects, regardless of the manner.
 
-User data includes all information the add-on collects, regardless of the manner. It can be personal data actively provided by the user (such as a name or email address), technical data (such as operating system, build ID, version numbers, crash reports, activation, updates), and interaction or activity data (add-on activity data, visited URLs, console logs), including interactions with Firefox.
+### Privacy Policy
 
-The add-on’s privacy policy must be the full policy text; it cannot be a link to an externally hosted privacy policy. In addition, the privacy policy must:
+You must maintain a privacy policy in the privacy policy field on addons.mozilla.org. The privacy policy must:
 
 - be specific and exclusive to the add-on,
+- set forth the data to be collected,
+  - If the collection of visited URLs or user search terms is required for the add-on to work, that collection must be disclosed in the privacy policy,
+  - If your add-on installs cookies, the placing and purpose of those cookies must be disclosed,
 - clearly describe the purpose of the data collection,
-- set forth the exact data to be collected,
-- address the add-on’s particular privacy properties.
+- be the full policy text; it cannot be a link to an externally hosted privacy policy.
 
-A summary of this information must be included in the add-on’s listing description. Finally, you and your add-on must also comply with all applicable data privacy laws as well as any other laws that may apply to your specific add-on.
+A summary of this information must be included in the add-on’s description. Finally, you and your add-on must also comply with all applicable data privacy laws as well as any other laws that may apply to your specific add-on.
+
+### Prohibited Data Collection
+
+- Search functionality provided or loaded by the add-on must not collect search terms or intercept searches that are going to a third-party search provider.
+- Collecting, or facilitating the collection of ancillary information (e.g. any data not required for the add-on’s functionality as stated in the description) is prohibited.
+- The collection of browsing activity is only permitted as part of the add-on’s primary function.
+
+### User Consent
+
+The user must be provided with a clear way to control the add-on’s data collection at the first run of the add-on. The data collection consent and control must be contained within the add-on. The consent experience must:
+
+- Clearly state what type of data is being collected
+- Link to the add-on’s privacy policy
+- Inform about the impact of accepting or declining the data collection
+
+If both personal and technical data is being collected, the user must be provided separate choices. If the user declines consent, the impact must be related to the data not being available.
 
 Please refer to our [best practices](/documentation/develop/best-practices-for-collecting-user-data-consents/) for advice and examples on how to design and implement a data collection consent prompt.
 
-### User Interactions & Technical Data
+#### Personal Data (opt-in)
+Personal information, or potentially personally identifying information, can be actively provided by the user, or obtained through extension APIs. It includes, but is not limited to names, email addresses, search terms, browsing activity data, as well as access and placement of cookies.
 
-- The user must be provided a clear way to control this data collection. The control mechanism must be shown at first-run of the add-on.
-- Add-ons must only collect information about add-on performance and/or use.
-- Search functionality provided or loaded by the add-on must not collect search terms or intercept searches that are going to a third-party search provider.
-- If the collection of visited URLs or user search terms is required for the add-on to work, the user must provide affirmative consent (i.e., explicit opt-in from the user) at first-run, since that information can contain personal information.
-- Collecting ancillary information (e.g. any data not explicitly required for the add-on’s basic functionality) is prohibited.
+When collecting personal information, the user must provide affirmative consent (i.e., explicit opt-in from the user) with a clear description what type of personal data is being collected.
 
-### Cookies
+If the main functionality of the add-on does not work without collecting personal data, the add-on must instead provide a choice for the user to accept the collection or uninstall the add-on.
 
-- If your add-on installs cookies, this must also be disclosed in the add-on’s privacy policy.
-- The add-on privacy policy must clearly express the placing and purposes of the cookie(s). It is highly recommended that you disclose the types of cookies being used.
-- The user must be provided an opportunity to refuse the storage of or access to cookies, and must be informed of the consequences of doing so (e.g., without a functional cookie, the add-on may not work).
-- Installing cookies that are not explicitly required for the add-on’s functionality is prohibited.
+#### Technical & User Interaction Data (opt-out)
 
-### Personal Data
+Technical data describes information about the environment the user is running, such as browser settings, platform information and hardware properties. User interaction data includes how the user interacts with Firefox and the installed add-ons, metrics for product improvement, and error information.
 
-- If you are collecting any personal information, the user must provide affirmative consent (i.e., explicit opt-in from the user). It must be clear to the user that they give consent to the collection of personal data.
-- Collecting ancillary personal information (e.g., any data not explicitly required for the add-on’s basic functionality) is prohibited.
-- Any transmission of this type of data must use secure, encrypted connections.
+When collecting this type of information, the user must be able to disable the data collection during the initial consent experience (opt-out).
 
 ### Additional Privacy Protocols
-
-- Leaking local or user-sensitive information to websites or other processes (e.g., using native messaging) is prohibited.
-- If the add-on uses native messaging, the privacy policy must clearly disclose which information is being exchanged with the native application. Data exchanged with the native application must be in accordance with our No Surprises policy.
-- HTTPS must be used for security and privacy-sensitive operations such as transmitting passwords or tokens.
-- Browsing data from private browsing sessions must not be stored.
-- Identity information must not be leaked to web content in private browsing sessions.
+- Leaking local or user-sensitive information to websites or other applications (e.g. using native messaging) is prohibited.
+- If the add-on uses native messaging, the privacy policy must clearly disclose which information is being exchanged with the application. Data exchanged must also be in accordance with our No Surprises policy.
+- Browsing data from private browsing sessions must not be stored. Information that identifies a user across browsing sessions or containers must not be made available to web content.
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -219,27 +211,8 @@ Please refer to our [best practices](/documentation/develop/best-practices-for-c
 
 {% capture content %}
 
-## Security Vulnerabilities
-
-Because add-ons run in an environment with elevated privileges relative to ordinary web pages, they present a very serious set of security considerations. They have the potential to open security holes not only in the add-ons themselves, but also in the browser, in web pages, and, in particularly distressing cases, the entire system the browser is running on.
-
-As a result, we take our security policies very seriously and apply them to all add-ons, whether hosted on AMO or not. We expect all add-ons to be secure and well-maintained in handling both their own data and their user’s data. They must also securely manage all of their interactions with the web, the browser and the operating system.
-
-{% endcapture %}
-{% include modules/one-column.liquid
-  id: "security-vulnerabilities"
-  content: content
-%}
-
-<!-- END: Single Column Body Module -->
-
-<!-- Single Column Body Module -->
-
-{% capture content %}
-
 ## Monetization
 
-- Monetization mechanisms must comply with the policies in the _Data Disclosure, Collection and Management_ section. In particular, an add-on must be accompanied with a clear user control mechanism (and opt-in for personal data) presented at first-run of the add-on. Collecting ancillary information for monetization is prohibited.
 - An add-on injecting advertising into web page content must clearly identify the injected content as originating from the add-on.
 - The inclusion of any cryptocurrency miners or similar functionality in an add-on is prohibited.
 - Modifying web content or facilitating redirects to include affiliate promotion tags is not permitted. Conversely, the use of affiliate promotion in user interface elements clearly identified as belonging to the add-on are acceptable.
@@ -256,7 +229,9 @@ As a result, we take our security policies very seriously and apply them to all 
 
 {% capture content %}
 
-## Compliance & Blocking
+## Security, Compliance and Blocking
+
+We expect all add-ons, whether hosted on addons.mozilla.org or not, to be secure and well-maintained in handling both their own data and their user’s data. They must also securely manage all of their interactions with the web, the browser and the operating system.
 
 Mozilla may reject or block affected versions or entire add-ons that don’t meet these policies, depending on the extent of their non-compliance.
 
@@ -268,10 +243,8 @@ For information about how rejection and blocking affects users, see [What does r
 
 {% endcapture %}
 {% include modules/one-column.liquid
-  id: "compliance-and-blocking"
+  id: "security-compliance-and-blocking"
   content: content
 %}
 
 <!-- END: Single Column Body Module -->
-
-

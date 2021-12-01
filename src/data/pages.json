@@ -255,8 +255,8 @@
                     "id": "create-a-privacy-policy"
                   },
                   {
-                    "title": "Prompt after install or on first use",
-                    "id": "prompt-after-install-or-on-first-use"
+                    "title": "Prompt after install",
+                    "id": "prompt-after-install"
                   },
                   {
                     "title": "Determine your consent flow",
@@ -698,22 +698,14 @@
                     "id": "data-disclosure-collection-and-management"
                   },
                   {
-                    "title": "Security Vulnerabilities",
-                    "id": "security-vulnerabilities"
-                  },
-                  {
                     "title": "Monetization",
                     "id": "monetization"
                   },
                   {
-                    "title": "Compliance & Blocking",
-                    "id": "compliance-and-blocking"
+                    "title": "Security, Compliance and Blocking",
+                    "id": "security-compliance-and-blocking"
                   }
                 ]
-              },
-              {
-                "title": "Add-on Policies (December 2021)",
-                "url": "/documentation/publish/add-on-policies-dec-2021/"
               },
               {
                 "title": "Firefox Add-on Distribution Agreement",
@@ -764,10 +756,6 @@
                     "id": "general-legal-terms"
                   }
                 ]
-              },
-              {
-                "title": "Firefox Add-on Distribution Agreement (December 2021)",
-                "url": "/documentation/publish/firefox-add-on-distribution-agreement-dec-2021/"
               },
               {
                 "title": "Add-ons Blocking Process",
