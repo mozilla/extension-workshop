@@ -38,7 +38,7 @@
     "fs-extra": "10.0.0",
     "gray-matter": "4.0.3",
     "jest": "27.4.3",
-    "markdown-it": "12.2.0",
+    "markdown-it": "12.3.0",
     "markdown-it-container": "3.0.0",
     "node-fetch": "2.6.6",
     "node-sass": "6.0.1",
