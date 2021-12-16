@@ -6,7 +6,6 @@ topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
 contributors:
   [
-    SolidAxel,
     caitmuenster,
     Kaligule,
     chrisdavidmills,
@@ -36,6 +35,7 @@ contributors:
     SphinxKnight,
     tedmcox,
     iwanrezpect,
+    SolidAxel
   ]
 last_updated_by: SolidAxel
 date: 2021-12-15 19:35:00
