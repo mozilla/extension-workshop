@@ -102,7 +102,7 @@ All submissions, regardless of how they are signed, are subject to Mozilla's [Ad
 {% capture content %}
 
 ## Distributing your add-on
-You can choose to distribute your add-on publicly on addons.mozilla.org (AMO) or distribute an it yourself. Here are some things to consider when you are deciding which method is most appropriate for your needs. 
+You can choose to distribute your add-on publicly on addons.mozilla.org (AMO) or distribute it yourself. Here are some things to consider when you are deciding which method is most appropriate for your needs. 
 
 ### Public listing on addons.mozilla.org (AMO) 
 AMO is a very popular distribution platform, with millions of monthly visitors and installations. It's integrated into the Firefox Add-ons Manager, allowing for easy installation of add-ons published on AMO. You can boost your extension’s SEO and attract more users by [creating an appealing listing](/documentation/develop/create-an-appealing-listing/). 
