@@ -4,9 +4,9 @@ title: Make money from browser extensions
 permalink: /documentation/publish/make-money-from-browser-extensions/
 topic: Publish
 tags: [add-on, distribution, guide, monetization]
-contributors: [hellosct1, rebloor, unbeatable-101]
-last_updated_by: unbeatable101
-date: 2019-03-18 05:01:28
+contributors: [hellosct1, rebloor, unbeatable-101, Glench]
+last_updated_by: Glench
+date: 2022-01-18 13:47:00
 ---
 
 <!-- Page Hero Banner -->
