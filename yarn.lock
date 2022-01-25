@@ -7,13 +7,13 @@
   resolved "https://registry.yarnpkg.com/@11ty/dependency-tree/-/dependency-tree-2.0.0.tgz#16143ce261c5dd00b3822374125745aaddd4d593"
   integrity sha512-tYrGX3Tvccufy2jaYDkYpjBmVP1LeQq6b/d0r4GYThTXL4f3ZR7yMAl/0r8h9xvnsP+gkO53wfnV7s8cXcCtEg==
 
-"@11ty/eleventy-plugin-syntaxhighlight@3.1.3":
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-syntaxhighlight/-/eleventy-plugin-syntaxhighlight-3.1.3.tgz#afbd846eaba16d0380c8684556eb796e2fe4b429"
-  integrity sha512-xUNbUl1rC6nRGwoWhTcivjWc6h45Y7QzKpjjjLAII4XxR9JsR1kOWYNOyI6ErK4I218tsBwgSgGVHsSAVFuAcQ==
+"@11ty/eleventy-plugin-syntaxhighlight@3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-syntaxhighlight/-/eleventy-plugin-syntaxhighlight-3.2.2.tgz#c159401cf7eae6eebac1374d3b62948a1bb7242f"
+  integrity sha512-RVVNKD74+dn+3cUsZozvknRnlbGe05zlgIW22+uuhxkDYIi97xhclXLGpJqo4+IVyIpY+bSnPQ+I0wuE4GaztQ==
   dependencies:
-    linkedom "^0.12.1"
-    prismjs "^1.25.0"
+    linkedom "^0.13.0"
+    prismjs "^1.26.0"
 
 "@11ty/eleventy@1.0.0":
   version "1.0.0"
@@ -772,11 +772,6 @@
   integrity sha512-T8Yc9wt/5LbJyCaLiHPReJa0kApcIgJ7Bn735GjItUfh08Z1pJvu8QZqb9s+mMvKV6WUQRV7K2R46YbjMXTTJw==
   dependencies:
     "@types/yargs-parser" "*"
-
-"@ungap/event-target@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@ungap/event-target/-/event-target-0.2.3.tgz#be682c681126dca2371c4e1a1721f8e8bb400905"
-  integrity sha512-7Bz0qdvxNGV9n0f+xcMKU7wsEfK6PNzo8IdAcOiBgMNyCuU0Mk9dv0Hbd/Kgr+MFFfn4xLHFbuOt820egT5qEA==
 
 a-sync-waterfall@^1.0.0:
   version "1.0.1"
@@ -1748,7 +1743,7 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-css-select@^4.1.3:
+css-select@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/css-select/-/css-select-4.2.1.tgz#9e665d6ae4c7f9d65dbe69d0316e3221fb274cdd"
   integrity sha512-/aUslKhzkTNCQUB2qTX84lVmfia9NyjP3WpDGtj/WxhwBzWBYUV3DgUpurHTme8UTPcPlAD1DJ+b0nN/t50zDQ==
@@ -3048,7 +3043,7 @@ htmlparser2@^3.10.0, htmlparser2@^3.9.2:
     inherits "^2.0.1"
     readable-stream "^3.1.1"
 
-htmlparser2@^7.1.1, htmlparser2@^7.1.2:
+htmlparser2@^7.1.1, htmlparser2@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-7.2.0.tgz#8817cdea38bbc324392a90b1990908e81a65f5a5"
   integrity sha512-H7MImA4MS6cw7nbyURtLPO1Tms7C5H602LRETv95z1MxO/7CP7rDVROehUYeYBUYEON94NXXDEPmZuq+hX4sog==
@@ -4234,16 +4229,15 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
-linkedom@^0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/linkedom/-/linkedom-0.12.1.tgz#cdab2a513aafddec346dc35667ebe748fee9c081"
-  integrity sha512-kqqcUNG7RRuRFVSz5pauNBEgO/y9Cc8GIrALHfb7CwDOpx9kJh217QvJc//vAOkKaMDLoZChzGJN7QksH3dTSw==
+linkedom@^0.13.0:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/linkedom/-/linkedom-0.13.1.tgz#cba2d8506bd48ed568515d1a1ef82c8285d39fae"
+  integrity sha512-UnruQeA+elgKVOzperf/M5IHtM0OtvCyvsec+oguTCINYB2JROzwnIddNaJNsOsJIz+AIdAnSvrKoQpUhkziNg==
   dependencies:
-    "@ungap/event-target" "^0.2.3"
-    css-select "^4.1.3"
+    css-select "^4.2.1"
     cssom "^0.5.0"
     html-escaper "^3.0.3"
-    htmlparser2 "^7.1.2"
+    htmlparser2 "^7.2.0"
     uhyphen "^0.1.0"
 
 linkify-it@^3.0.1:
@@ -5432,7 +5426,7 @@ pretty@^2.0.0:
     extend-shallow "^2.0.1"
     js-beautify "^1.6.12"
 
-prismjs@1.26.0, prismjs@^1.25.0:
+prismjs@1.26.0, prismjs@^1.26.0:
   version "1.26.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.26.0.tgz#16881b594828bb6b45296083a8cbab46b0accd47"
   integrity sha512-HUoH9C5Z3jKkl3UunCyiD5jwk0+Hz0fIgQ2nbwU2Oo/ceuTAQAg+pPVnfdt2TJWRVLcxKh9iuoYDUSc8clb5UQ==
