@@ -55,7 +55,7 @@
     "rimraf": "3.0.2",
     "serialize-javascript": "6.0.0",
     "slugify": "1.6.5",
-    "stylelint": "13.13.1",
+    "stylelint": "14.3.0",
     "stylelint-config-standard": "20.0.0",
     "terser": "5.10.0",
     "url-parse": "1.5.4"
