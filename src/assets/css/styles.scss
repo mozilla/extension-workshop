@@ -14,6 +14,13 @@ CSS file.
 // Import foundation.scss from vendor files
 @import 'foundation';
 
+// Import your custom styles
+@import 'prism-okaidia';
+@import 'main';
+@import 'contentguidelines';
+@import 'fullwidth';
+@import 'sidebar';
+
 // Select the components you want to use
 @include foundation-global-styles;
 @include foundation-xy-grid-classes;
@@ -24,10 +31,3 @@ CSS file.
 @include foundation-button-group;
 @include foundation-table;
 @include foundation-visibility-classes;
-
-// Import your custom styles
-@import 'prism-okaidia';
-@import 'main';
-@import 'contentguidelines';
-@import 'fullwidth';
-@import 'sidebar';
