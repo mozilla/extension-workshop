@@ -636,7 +636,7 @@ Stylesheet: Full Width Page Stylesheet
   > p a {
     @include button();
 
-    font-size: 0.733333333333333rem;
+    font-size: 0.7333rem;
     padding: rem-calc(8);
 
     &:hover {
@@ -1013,7 +1013,7 @@ Stylesheet: Full Width Page Stylesheet
     margin-top: -12vw;
 
     .anatomy-description {
-      height: calc(157.037037037037vw - 24px);
+      height: calc(157.037vw - 24px);
       padding: 36.5% 0;
       margin: rem-calc(16 0 8);
       align-items: center;
@@ -1053,9 +1053,9 @@ Stylesheet: Full Width Page Stylesheet
 
 #news {
   position: relative;
-  padding-bottom: 22.34375vw;
+  padding-bottom: 22.3438vw;
   @include breakpoint(medium) {
-    padding-bottom: 14.89583333333335vw;
+    padding-bottom: 14.8958vw;
   }
 }
 

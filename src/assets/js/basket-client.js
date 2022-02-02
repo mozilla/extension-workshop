@@ -11,7 +11,7 @@
 
   // handle errors
   var errorArray = [];
-  var newsletterErrors = document.getElementById('newsletter_errors');
+  var newsletterErrors = document.getElementById('newsletter-errors');
   function newsletterError() {
     var errorList = document.createElement('ul');
 
@@ -33,7 +33,7 @@
 
   // show sucess message
   function newsletterThanks() {
-    var thanks = document.getElementById('newsletter_thanks');
+    var thanks = document.getElementById('newsletter-thanks');
 
     // show thanks message
     thanks.style.display = 'block';

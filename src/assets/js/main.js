@@ -272,7 +272,7 @@ jQuery(document).ready(function ($) {
   $.fn.mobileMenu = function () {
     var $body = $('body');
     var $container = this;
-    var $nav = $container.find('.topNav');
+    var $nav = $container.find('.top-nav');
     var $primaryDropdown = this.find('.hamburger');
 
     $nav.velocity('transition.slideUpOut', { duration: 0, display: 'none' });

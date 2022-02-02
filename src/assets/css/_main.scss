@@ -4,6 +4,8 @@ Stylesheet: Main Stylesheet
 
 *************************************************/
 
+@import 'hamburgers';
+
 // SLICK SLIDESHOW
 // ------
 
@@ -135,7 +137,7 @@ a:focus {
 
 .mzp-c-footer-links-social a:focus,
 .mzp-c-footer-primary-logo a:focus,
-.topNav a:focus,
+.top-nav a:focus,
 .logo a:focus {
   text-decoration: none;
   outline: 1px dotted currentColor;
@@ -367,14 +369,15 @@ figure.highlight {
 // FORM STYLES
 // -------------------------------------------------------------------------------------------------------------------
 
-.newsletter_errors {
+.newsletter-errors {
   display: none;
 }
 
-.newsletter_thanks {
+.newsletter-thanks {
   display: none;
 }
 
+/* stylelint-disable selector-class-pattern, selector-id-pattern */
 .form_group-agree {
   display: flex;
   flex-flow: row nowrap;
@@ -422,6 +425,7 @@ figure.highlight {
     }
   }
 }
+/* stylelint-enable selector-class-pattern, selector-id-pattern  */
 
 // FRAMEWORK
 // -------------------------------------------------------------------------------------------------------------------
@@ -655,8 +659,6 @@ $hamburger-hover-opacity: 1;
 $hamburger-hover-transition-duration: 0.15s;
 $hamburger-hover-transition-timing-function: linear;
 
-@import 'hamburgers';
-
 .site-header .hamburger {
   position: absolute;
   top: rem-calc(9);
@@ -672,7 +674,7 @@ $hamburger-hover-transition-timing-function: linear;
 // Top Nav
 // ------
 
-.topNav {
+.top-nav {
   font-size: $small-font-size;
 
   ul {
@@ -1567,7 +1569,7 @@ a.tile-block-link {
 
 // Video Box
 // ------
-
+/* stylelint-disable  selector-id-pattern */
 #stdVideo {
   opacity: 0;
   pointer-events: none;
@@ -1578,7 +1580,7 @@ a.tile-block-link {
   top: calc(100% + 1px);
   width: 100%;
   height: 1px;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 85%);
   transition: left 0.3s ease-in-out, top 0.3s ease-in-out,
     width 0.3s ease-in-out, height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
@@ -1661,7 +1663,7 @@ a.tile-block-link {
     transform: rotate(360deg);
   }
 }
-
+/* stylelint-enable  selector-id-pattern */
 .video-box {
   position: relative;
 
@@ -1697,7 +1699,7 @@ a.tile-block-link {
 
     &:hover {
       color: $primary-color-hover;
-      box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 0.33);
+      box-shadow: #{rem-calc(0 2 8)} rgba(12, 12, 13, 33%);
     }
 
     &.loading {
@@ -1804,7 +1806,7 @@ a.tile-block-link {
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 80%);
 
   .bg {
     position: absolute;
@@ -1826,6 +1828,7 @@ a.tile-block-link {
     }
   }
 
+  /* stylelint-disable  selector-id-pattern */
   #stdVideo {
     position: relative;
     height: 0;
@@ -1841,6 +1844,7 @@ a.tile-block-link {
       padding-bottom: 56.25%;
     }
   }
+  /* stylelint-enable  selector-id-pattern */
 
   &.loading {
     &::before {
