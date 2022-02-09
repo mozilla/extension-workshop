@@ -490,10 +490,7 @@ $sidebar-nav-width: rem-calc(240);
 .module {
   padding-left: rem-calc(8);
   padding-right: rem-calc(8);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: rem-calc(12);
-  margin-bottom: rem-calc(12);
+  margin: rem-calc(12) auto;
 
   @include breakpoint(medium) {
     padding-left: rem-calc(12);

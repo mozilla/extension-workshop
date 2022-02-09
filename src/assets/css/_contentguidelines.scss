@@ -197,11 +197,11 @@ $sidebar-w: rem-calc(230);
     .button {
       display: block;
       @include breakpoint(medium only) {
-        font-size: 0.733333333333333rem;
+        font-size: 0.7333rem;
         padding: rem-calc(6 8);
       }
       @include breakpoint(large only) {
-        font-size: 0.733333333333333rem;
+        font-size: 0.7333rem;
         padding: rem-calc(6 8);
       }
     }
@@ -330,10 +330,10 @@ $sidebar-w: rem-calc(230);
         padding: rem-calc(45 0);
       }
       @include breakpoint(large) {
-        padding: #{rem-calc(45)} 4.166666666666667%;
+        padding: #{rem-calc(45)} 4.1667%;
       }
       @include breakpoint(xlarge) {
-        padding: #{rem-calc(60)} 8.333333333333333%;
+        padding: #{rem-calc(60)} 8.3333%;
       }
 
       .grid-container {
@@ -359,10 +359,10 @@ $sidebar-w: rem-calc(230);
         padding: rem-calc(0 0 45);
       }
       @include breakpoint(large) {
-        padding: 0 4.166666666666667% #{rem-calc(45)};
+        padding: 0 4.1667% #{rem-calc(45)};
       }
       @include breakpoint(xlarge) {
-        padding: 0 8.333333333333333% #{rem-calc(60)};
+        padding: 0 8.3333% #{rem-calc(60)};
       }
 
       > .grid-container {
@@ -424,14 +424,14 @@ $sidebar-w: rem-calc(230);
 
   @include breakpoint(large) {
     .mzp-l-content {
-      padding: 0 4.166666666666667%;
+      padding: 0 4.1667%;
     }
   }
   @include breakpoint(xlarge) {
     padding-left: $sidebar-w;
 
     .mzp-l-content {
-      padding: 0 8.333333333333333%;
+      padding: 0 8.3333%;
     }
   }
 }

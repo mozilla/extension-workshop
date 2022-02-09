@@ -22,7 +22,7 @@
 // ----------
 
 @font-face {
-  font-family: 'Inter';
+  font-family: Inter;
   font-style: normal;
   font-weight: 400;
   src: url('/assets/fonts/inter/Inter-Regular.woff2') format('woff2'),
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: Inter;
   font-style: italic;
   font-weight: 400;
   src: url('/assets/fonts/inter/Inter-Italic.woff2') format('woff2'),
@@ -40,7 +40,7 @@
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: Inter;
   font-style: normal;
   font-weight: 600;
   src: url('/assets/fonts/inter/Inter-SemiBold.woff2') format('woff2'),
@@ -49,7 +49,7 @@
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: Inter;
   font-style: italic;
   font-weight: 600;
   src: url('/assets/fonts/inter/Inter-SemiBoldItalic.woff2') format('woff2'),
@@ -60,13 +60,13 @@
 // Element Shadows
 // ------
 
-$element-shadow: 0 1px 6px 0 rgba(14, 13, 26, 0.12),
-  0 2px 1px 0 rgba(7, 48, 114, 0.12), 0 1px 2px 0 rgba(34, 0, 51, 0.04),
-  0 0 0 1px rgba(32, 18, 58, 0.04); // #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.1);
-$element-shadow-highlight: 0 6px 10px -4px rgba(14, 13, 26, 0.12),
-  0 6px 22px 4px rgba(7, 48, 114, 0.12), 0 12px 18px 2px rgba(34, 0, 51, 0.04);
+$element-shadow: 0 1px 6px 0 rgba(14, 13, 26, 12%),
+  0 2px 1px 0 rgba(7, 48, 114, 12%), 0 1px 2px 0 rgba(34, 0, 51, 4%),
+  0 0 0 1px rgba(32, 18, 58, 4%); // #{rem-calc(0 4 16 0)} rgba(12, 12, 13, 0.1);
+$element-shadow-highlight: 0 6px 10px -4px rgba(14, 13, 26, 12%),
+  0 6px 22px 4px rgba(7, 48, 114, 12%), 0 12px 18px 2px rgba(34, 0, 51, 4%);
 $focus-shadow: inset 0 0 0 1px #0a84ff, 0 0 0 1px #0a84ff,
-  0 0 0 4px rgba(10, 132, 255, 0.3);
+  0 0 0 4px rgba(10, 132, 255, 30%);
 
 // 1. Global
 // ---------
@@ -118,7 +118,7 @@ $print-transparent-backgrounds: true;
 // ------
 
 @font-face {
-  font-family: 'icomoon';
+  font-family: icomoon;
   src: url('/assets/fonts/icomoon/fonts/icomoon.eot');
   src: url('/assets/fonts/icomoon/fonts/icomoon.eot#iefix')
       format('embedded-opentype'),
@@ -133,7 +133,7 @@ $print-transparent-backgrounds: true;
 
 @mixin icon_font($char: '') {
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
-  font-family: 'icomoon';
+  font-family: icomoon;
   content: $char;
   speak: none;
   font-style: normal;
@@ -451,7 +451,7 @@ $input-border-focus: 1px solid $dark-gray;
 $input-padding: $form-spacing / 2;
 $input-shadow: 0;
 $input-shadow-focus: inset 0 0 0 1px #0a84ff, 0 0 0 1px #0a84ff,
-  0 0 0 4px rgba(10, 132, 255, 0.3);
+  0 0 0 4px rgba(10, 132, 255, 30%);
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
