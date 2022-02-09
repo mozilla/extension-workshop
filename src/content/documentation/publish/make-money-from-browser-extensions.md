@@ -4,9 +4,9 @@ title: Make money from browser extensions
 permalink: /documentation/publish/make-money-from-browser-extensions/
 topic: Publish
 tags: [add-on, distribution, guide, monetization]
-contributors: [hellosct1, rebloor, unbeatable-101]
-last_updated_by: unbeatable101
-date: 2019-03-18 05:01:28
+contributors: [hellosct1, rebloor, unbeatable-101, Glench]
+last_updated_by: Glench
+date: 2022-01-18 13:47:00
 ---
 
 <!-- Page Hero Banner -->
@@ -106,9 +106,9 @@ Many payment providers will enable you to offer either one time or subscription 
 
 #### Implementing a payment and licensing system
 
-If you make your browser extension available on Chrome, you can take advantage of the Google in-app payment API to handle transactions.
+One service to add payments to extensions is [ExtensionPay](https://extensionpay.com). It's open-source, works across all browsers, and doesn't have any up-front costs or monthly fees. It has pre-built options for free trials, one-time payments and monthly/yearly subscriptions, and a login system for your extension's users.
 
-For Firefox, and most other major browsers, you will need to setup a payment system. A simple and reasonably robust approach is to do the following:
+To create a payment system yourself, a simple and reasonably robust approach is to do the following:
 
 - Sell users a lifetime license with a private license key.
 - On a suitable server, store details of the license key and a related email address.
