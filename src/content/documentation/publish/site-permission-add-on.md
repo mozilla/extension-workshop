@@ -31,7 +31,7 @@ This is an experimental feature.
 :::
 
 
-If your site depends on an add-on-gated feature, your users need to install an add-on before they can use your service. This means that to set up your service you need to:
+If your site depends on an add-on-gated feature, your users need to install an add-on before using your service. This means that to set up your service, you need to:
 
 - Request a site permission add-on from addons.mozilla.org (AMO).
 - Make the site permission add-on available to download from your website.
@@ -41,9 +41,9 @@ Once the add-on is installed, your service gains access to the restricted API. T
 
 ## Obtain your site permission add-on
 
-To obtain the file containing your site permission add-on do this:
+To obtain the file containing your site permission add-on, do this:
 
-- If you don't have a Firefox account [create one](https://support.mozilla.org/en-US/kb/how-do-i-set-sync-my-computer#w_create-a-firefox-account) in the Firefox browser using the **Sync and save data** option on the Firefox menu.
+- If you don't have a Firefox account, [create one](https://support.mozilla.org/en-US/kb/how-do-i-set-sync-my-computer#w_create-a-firefox-account) in the Firefox browser using the **Sync and save data** option on the Firefox menu.
 - Visit the [AMO site permission generator](https://addons.mozilla.org/en-US/developers/site_permission_generator/).
 - If you aren't registered on addons.mozilla.org, you are prompted to:
   - complete your profile.
@@ -55,14 +55,14 @@ To obtain the file containing your site permission add-on do this:
 AMO processes the request and creates a signed add-on file. This process typically takes around 5 minutes. AMO then sends you an email containing a link to the add-on file. Alternatively, you can visit the [Developer hub](https://addons.mozilla.orgdevelopers/), and in **My Add-ons** locate your site permission add-on and download it. Remember, the download is only available after AMO has processed and signed the add-on.
 
 ::: note
-If you would like to test your site permission add-on you must do this on the same origin as you used in the request. For example, create a hidden page on your website for testing.
+If you would like to test your site permission add-on, you must do this on the same origin you used in the request. For example, create a hidden page on your website for testing.
 :::
 
 ## Hosting your site permission add-on
 
 You use a mechanism known as [self-distribution](https://extensionworkshop.com/documentation/publish/self-distribution/) to make your site permission add-on available to the users of your service. This involves making the add-on file available for download from your website, which must be the same as the site you entered when creating the add-on.
 
-When your user attempts to install the add-on in Firefox they are prompted to confirm they trust your website:
+When your user attempts to install the add-on in Firefox, they are prompted to confirm they trust your website:
 
 ![Grant website permission to install add-on screen](/assets/img/publish/site-permission-add-on-install.png "Grant website permission to install add-on screen")
 
@@ -70,11 +70,11 @@ The user is then prompted to grant the website permissions to use the API:
 
 ![Grant website permission to use the APIs screen](/assets/img/publish/site-permission-add-on-add.png "Grant website permission to use the APIs screen")
 
-If the user chooses to learn more they are taken to the [Permission request messages for Firefox extensions](https://support.mozilla.org/en-US/kb/permission-request-messages-firefox-extensions) page.
+If the user chooses to learn more, they are taken to the [Permission request messages for Firefox extensions](https://support.mozilla.org/en-US/kb/permission-request-messages-firefox-extensions) page.
 
 Your service can now access the APIs.
 
-However, there is no alert provided to your website that the extension has been installed. You may give the user an opportunity to retry granting permission after you have offered the add-on for installation.
+However, there is no alert provided to your website that the extension has been installed. So, after offering the add-on for installation you should ask the user to try granting permission again.
 
 ## Example: WebMIDI
 
@@ -95,9 +95,9 @@ if (navigator.requestMIDIAccess) {
 
 ```
 
-If the promise is rejected, the user has either not installed the site permission add-on, or has denied access to the site permission. You may encourage the user to install the site permission add-on to grant permission and then attempt to request MIDI access again.
+If the promise is rejected, the user has either not installed the site permission add-on or has denied access to the site permission. You may encourage the user to install the site permission add-on to grant permission and then request MIDI access again.
 
-If the `navigator.requestMIDIAccess()` promise resolves the user has granted permission by installing the site permission add-on. The website can use the feature that the Web API provides.
+If the `navigator.requestMIDIAccess()` promise resolves the user has granted permission by installing the site permission add-on. The website can now use the feature that the Web API provides.
 
 
 {% endcapture %}
