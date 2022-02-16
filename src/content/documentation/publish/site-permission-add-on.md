@@ -78,11 +78,11 @@ However, there is no alert provided to your website that the extension has been 
 
 ## Example: WebMIDI
 
-Using the [Web MIDI API](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API) as an example, you should provide the user with the opportunity to install the site permission add-on as a separate option to requesting permission.
+Using the [Web MIDI API](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API) as an example: when someone first visits your service, provide them with the opportunity to install the site permission add-on and request the permission. You could use a prompt similar to this:
 
 ![Prompt for installing the site permission add-on](/assets/img/publish/site-permission-add-on-prompt.png "Prompt for installing the site permission add-on")
 
-In your code, you may detect feature support by checking whether the `navigator.requestMIDIAccess` method is defined. You may then asynchronously request access and determine if the `navigator.requestMIDIAccess()` promise resolves. This can be done using this code:
+In your code, you can detect feature support by checking whether the `navigator.requestMIDIAccess` method is defined. You can then asynchronously request access and determine if the `navigator.requestMIDIAccess()` promise resolves. This can be done using this code:
 
 ``` javascript
 if (navigator.requestMIDIAccess) {
@@ -98,9 +98,9 @@ if (navigator.requestMIDIAccess) {
 
 ```
 
-If the promise is rejected, the user has either not installed the site permission add-on or has denied access to the site permission. Following above user flow, the user may then choose to install the site permission add-on and request permission again.
+If the promise is rejected, the user has either not installed the site permission add-on or has denied access to the site permission. Following the suggested user flow, the user can then install the site permission add-on and request permission again.
 
-If the promise resolves, the user has granted permission and the website can now use the feature that the Web API provides.
+If the promise resolves, the user has granted permission, and the website can use the feature that the Web API provides.
 
 {% endcapture %}
 {% include modules/one-column.liquid
