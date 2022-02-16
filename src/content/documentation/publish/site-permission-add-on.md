@@ -48,7 +48,7 @@ To obtain the file containing your site permission add-on, do this:
 - If you aren't registered on addons.mozilla.org, you are prompted to:
   - complete your profile.
   - accept the Firefox Add-on Distribution Agreement.
-- In the **Generate Site Permission Add-on** screen, enter the URL of the site that requires API access and select the APIs it wants access to. If you have more than one site that needs access to these APIs, you need to create one add-on for each site.
+- In the **Generate Site Permission Add-on** screen, enter the URL of the site that requires API access and select the APIs it wants access to. If you have more than one site that needs access to these APIs, you need to create one add-on for each site. The separation is by origin, therefore subdomains will require a separate add-on.
   ![The generate site permission add-on screen](/assets/img/publish/gen-site-permission-add-on.png "The generate site permission add-on screen")
 - Submit your request.
 
