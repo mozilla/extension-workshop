@@ -67,7 +67,7 @@ Here we look at the signing requirements and the related reviews, before discuss
 
 Extensions and themes need to be signed by Mozilla before they can be installed in release and beta versions of Firefox. Dictionaries don't need to be signed.
 
-Unsigned extensions can be installed in [Developer Edition](https://www.mozilla.org/firefox/developer/), [Nightly](https://www.mozilla.org/firefox/nightly/all/), and [ESR](https://www.mozilla.org/firefox/organizations/) versions of Firefox, after toggling the `xpinstall.signatures.required` preference in `about:config`.
+Unsigned extensions can be installed in the [Developer Edition](https://www.mozilla.org/firefox/developer/), [Nightly](https://www.mozilla.org/firefox/nightly/all/), and [ESR](https://www.mozilla.org/firefox/organizations/) versions of Firefox, after toggling the `xpinstall.signatures.required` preference in `about:config`. To use this feature your extension must have an [add-on ID](/documentation/develop/extensions-and-the-add-on-id/).
 
 Mozilla signs add-ons through [addons.mozilla.org](https://addons.mozilla.org). You can use one of the following methods to sign your extension, but please be aware that not all signing methods support all distribution options. 
 
