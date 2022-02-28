@@ -105,7 +105,7 @@ You can do the same thing if you are updating from an older add-on type, such as
 
 ## When do you need an add-on ID?
 
-- If you are loading the add-on from its XPI file, are not loading it temporarily using `about:debugging` and it is not signed.
+- If you want to install an unsigned add-on from its XPI file, rather than loading it temporarily using `about:debugging`.
 - If you want to have a value other than a randomly generated ID upon [getting your extension signed](/documentation/publish/#get-your-extension-signed) for the first time.
 - If you use [AMO's API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) for uploading your add-on, rather than uploading it manually on its page, then you need to include the add-on's ID in the request.
 - Some WebExtension APIs use the add-on ID and expect it to be the same from one browser session to the next. If you use these APIs, then you must set the ID explicitly using the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. This applies to the following APIs:
