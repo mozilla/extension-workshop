@@ -59,7 +59,7 @@
     "stylelint": "14.3.0",
     "stylelint-config-standard": "24.0.0",
     "terser": "5.11.0",
-    "url-parse": "1.5.8"
+    "url-parse": "1.5.10"
   },
   "scripts": {
     "lint": "eslint .",
