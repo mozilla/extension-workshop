@@ -39,6 +39,18 @@ If your site depends on an add-on-gated feature, your users need to install an a
 
 Once the add-on is installed, your service gains access to the restricted API. This page provides a step-by-step guide to the process.
 
+{% endcapture %}
+{% include modules/one-column.liquid
+  id: "introduction"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 ## Obtain your site permission add-on
 
 To obtain the file containing your site permission add-on, do this:
@@ -58,6 +70,19 @@ AMO processes the request and creates a signed add-on file. This process typical
 If you would like to test your site permission add-on, you must do this on the same origin you used in the request. For example, create a hidden page on your website for testing.
 :::
 
+{% endcapture %}
+{% include modules/one-column.liquid
+  id: "obtain-your-site-permission-add-on"
+  content: content
+  aside: ""
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 ## Hosting your site permission add-on
 
 You use a mechanism known as [self-distribution](https://extensionworkshop.com/documentation/publish/self-distribution/) to make your site permission add-on available to the users of your service. This involves making the add-on file available for download from your website, which must be the same as the site you entered when creating the add-on.
@@ -75,6 +100,19 @@ If the user chooses to learn more, they are taken to the [Permission request mes
 Your service can now access the APIs.
 
 However, there is no alert provided to your website that the extension has been installed. So, after offering the add-on for installation you should ask the user to try granting permission again.
+
+{% endcapture %}
+{% include modules/one-column.liquid
+  id: "hosting-your-site-permission-add-on"
+  content: content
+  aside: ""
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
 
 ## Example: WebMIDI
 
@@ -104,8 +142,9 @@ If the promise resolves, the user has granted permission, and the website can us
 
 {% endcapture %}
 {% include modules/one-column.liquid
-  id: "options"
+  id: "example-webmidi"
   content: content
+  aside: ""
 %}
 
 <!-- END: Single Column Body Module -->
