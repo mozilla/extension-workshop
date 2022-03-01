@@ -52,7 +52,7 @@ To obtain the file containing your site permission add-on, do this:
   ![The generate site permission add-on screen](/assets/img/publish/gen-site-permission-add-on.png "The generate site permission add-on screen")
 - Submit your request.
 
-AMO processes the request and creates a signed add-on file. This process typically takes around 5 minutes. AMO then sends you an email containing a link to the add-on file. Alternatively, you can visit the [Developer hub](https://addons.mozilla.orgdevelopers/), and in **My Add-ons** locate your site permission add-on and download it. Remember, the download is only available after AMO has processed and signed the add-on.
+AMO processes the request and creates a signed add-on file. This process typically takes around 5 minutes. AMO then sends you an email containing a link to the add-on file. Alternatively, you can visit the [Developer hub](https://addons.mozilla.org/developers/), and in **My Add-ons** locate your site permission add-on and download it. Remember, the download is only available after AMO has processed and signed the add-on.
 
 ::: note
 If you would like to test your site permission add-on, you must do this on the same origin you used in the request. For example, create a hidden page on your website for testing.
