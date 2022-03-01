@@ -339,13 +339,13 @@ The site is auto-deployed on commits to `master` to https://extensionworkshop-de
 
 Tags with a version ending in `-stage` will be deployed to https://extensionworkshop.allizom.org/. You can check the version on stage with [the stage version link](https://extensionworkshop.allizom.org/__version__).
 
-A good example tag for a stage deploy would be `v2.0.1-stage`.
+A good example tag for a stage deploy would be `2022.03.03-stage`.
 
 ### Production Deploys
 
-Tags of the format `vN.N.N` will be deployed to https://extensionworkshop.com/. You can check the version on production with [the production version link](https://extensionworkshop.com/__version__).
+Tags matching `^v?[0-9]+(\.[0-9]+)*$` regular expression will be deployed to https://extensionworkshop.com/. You can check the version on production with [the production version link](https://extensionworkshop.com/__version__).
 
-A good example tag for a production deploy would be `v2.0.1`.
+A good example tag for a production deploy would be `2022.03.03`.
 
 ### Version numbers
 
