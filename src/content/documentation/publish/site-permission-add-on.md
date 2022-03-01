@@ -39,6 +39,18 @@ If your site depends on an add-on-gated feature, your users need to install an a
 
 Once the add-on is installed, your service gains access to the restricted API. This page provides a step-by-step guide to the process.
 
+{% endcapture %}
+{% include modules/one-column.liquid
+  id: "introduction"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 ## Obtain your site permission add-on
 
 To obtain the file containing your site permission add-on, do this:
@@ -52,11 +64,24 @@ To obtain the file containing your site permission add-on, do this:
   ![The generate site permission add-on screen](/assets/img/publish/gen-site-permission-add-on.png "The generate site permission add-on screen")
 - Submit your request.
 
-AMO processes the request and creates a signed add-on file. This process typically takes around 5 minutes. AMO then sends you an email containing a link to the add-on file. Alternatively, you can visit the [Developer hub](https://addons.mozilla.orgdevelopers/), and in **My Add-ons** locate your site permission add-on and download it. Remember, the download is only available after AMO has processed and signed the add-on.
+AMO processes the request and creates a signed add-on file. This process typically takes around 5 minutes. AMO then sends you an email containing a link to the add-on file. Alternatively, you can visit the [Developer hub](https://addons.mozilla.org/developers/), and in **My Add-ons** locate your site permission add-on and download it. Remember, the download is only available after AMO has processed and signed the add-on.
 
 ::: note
 If you would like to test your site permission add-on, you must do this on the same origin you used in the request. For example, create a hidden page on your website for testing.
 :::
+
+{% endcapture %}
+{% include modules/one-column.liquid
+  id: "obtain-your-site-permission-add-on"
+  content: content
+  aside: ""
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
 
 ## Hosting your site permission add-on
 
@@ -75,6 +100,19 @@ If the user chooses to learn more, they are taken to the [Permission request mes
 Your service can now access the APIs.
 
 However, there is no alert provided to your website that the extension has been installed. So, after offering the add-on for installation you should ask the user to try granting permission again.
+
+{% endcapture %}
+{% include modules/one-column.liquid
+  id: "hosting-your-site-permission-add-on"
+  content: content
+  aside: ""
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
 
 ## Example: WebMIDI
 
@@ -104,8 +142,9 @@ If the promise resolves, the user has granted permission, and the website can us
 
 {% endcapture %}
 {% include modules/one-column.liquid
-  id: "options"
+  id: "example-webmidi"
   content: content
+  aside: ""
 %}
 
 <!-- END: Single Column Body Module -->
