@@ -99,6 +99,10 @@ If the user chooses to learn more, they are taken to the [Permission request mes
 
 Your service can now access the APIs.
 
+::: note
+To use your APIs in private browsing windows, the user needs to following the instructions to [enable extensions in private windows](https://support.mozilla.org/en-US/kb/extensions-private-browsing#w_enabling-or-disabling-extensions-in-private-windows).
+:::
+
 However, there is no alert provided to your website that the extension has been installed. So, after offering the add-on for installation you should ask the user to try granting permission again.
 
 {% endcapture %}
