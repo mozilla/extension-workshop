@@ -327,6 +327,12 @@ Go to `data/content-guidelines-pages.json` and add a new entry for your page:
 
 If you don't want the page to be labelled as a draft (such as and when it's ready), remove `"draft-label": true` from the relevant entry in `data/content-guidelines-pages.json`.
 
+### Tagging
+
+Tags should aim to follow the AMO calendar format: `YYYY.MM.DD` with an optional
+`-x` suffix for cherry-picking, and an optional additional `-stage` suffix for stage
+deploys as mentioned below.
+
 ## Deployment
 
 All deployments for staging and production are handled via the [Releases](https://github.com/mozilla/extension-workshop/releases) page.
@@ -337,16 +343,12 @@ The site is auto-deployed on commits to `master` to https://extensionworkshop-de
 
 ### Stage Deploys
 
-Tags with a version ending in `-stage` will be deployed to https://extensionworkshop.allizom.org/. You can check the version on stage with [the stage version link](https://extensionworkshop.allizom.org/__version__).
+Tags matching `^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?-stage$` will be deployed to https://extensionworkshop.allizom.org/. You can check the version on stage with [the stage version link](https://extensionworkshop.allizom.org/__version__).
 
-A good example tag for a stage deploy would be `v2.0.1-stage`.
+A good example tag for a stage deploy would be `2022.03.03-stage`.
 
 ### Production Deploys
 
-Tags of the format `vN.N.N` will be deployed to https://extensionworkshop.com/. You can check the version on production with [the production version link](https://extensionworkshop.com/__version__).
+Tags matching `^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?$` regular expression will be deployed to https://extensionworkshop.com/. You can check the version on production with [the production version link](https://extensionworkshop.com/__version__).
 
-A good example tag for a production deploy would be `v2.0.1`.
-
-### Version numbers
-
-Tag versions should aim to follow the [semver](https://semver.org/) format.
+A good example tag for a production deploy would be `2022.03.03`.
