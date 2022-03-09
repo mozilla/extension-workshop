@@ -110,7 +110,7 @@ jobs:
       - run:
           name: firefox extension workshop deployment
           command: |
-            if [[ "$CIRCLE_TAG" =~ ^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?-stage$ ]] ; then
+            if [[ "$CIRCLE_TAG" =~ ^20[0-9]{2}\.[0-9]{2}\.[0-9]{2}(?:-[0-9]+)?-stage$ ]] ; then
               AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
               AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"         \
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
@@ -122,7 +122,7 @@ jobs:
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
               EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}" \
               ./.utils/circleci/invalidate-cloudfront-cache.sh
-            elif [[ "$CIRCLE_TAG" =~ ^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?$ ]] ; then
+            elif [[ "$CIRCLE_TAG" =~ ^20[0-9]{2}\.[0-9]{2}\.[0-9]{2}(?:-[0-9]+)?$ ]] ; then
               ./.utils/deploy.sh
               ./.utils/circleci/invalidate-cloudfront-cache.sh
             else
