@@ -3,7 +3,7 @@ version: 2.1
 references:
   build_container: &build_container
     docker:
-      - image: circleci/node:16
+      - image: cimg/node:16.14
     working_directory: ~/extension-workshop
 
   restore_build_cache: &restore_build_cache
@@ -35,7 +35,7 @@ references:
 
   deploy_container: &deploy_container
     docker:
-      - image: circleci/python:3.10-node
+      - image: cimg/python:3.10-node
 
   attach_deploy_workspace: &attach_deploy_workspace
     attach_workspace:
