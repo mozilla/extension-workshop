@@ -103,7 +103,7 @@ jobs:
 
   # tags matching specific format are deployed to either stage or prod.
   # note that batch regexp support is limited: it doesn't support non-capturing
-  # groups or [0-9] character class.
+  # groups or \d character class.
   deploy:
     <<: *deploy_container
     steps:
