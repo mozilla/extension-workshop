@@ -80,7 +80,7 @@ jobs:
           no_output_timeout: 15m
       - *persist_build_workspace
 
-  # unpublished contents only deployed to -dev
+  # unpublished contents (commits to the master branch) only deployed to -dev.
   deploy-unpublished:
     <<: *deploy_container
     steps:
@@ -101,6 +101,7 @@ jobs:
             EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
             ./.utils/circleci/invalidate-cloudfront-cache.sh
 
+  # tags matching specific format are deployed to either stage or prod.
   deploy:
     <<: *deploy_container
     steps:
@@ -109,7 +110,7 @@ jobs:
       - run:
           name: firefox extension workshop deployment
           command: |
-            if [[ "$CIRCLE_TAG" =~ -stage$ ]] ; then
+            if [[ "$CIRCLE_TAG" =~ ^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?-stage$ ]] ; then
               AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
               AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"         \
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
@@ -121,16 +122,17 @@ jobs:
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
               EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}" \
               ./.utils/circleci/invalidate-cloudfront-cache.sh
-            elif [[ "$CIRCLE_TAG" =~ ^v?[0-9]+(\.[0-9]+)*$ ]] ; then
+            elif [[ "$CIRCLE_TAG" =~ ^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?$ ]] ; then
               ./.utils/deploy.sh
               ./.utils/circleci/invalidate-cloudfront-cache.sh
             else
-              echo "Unrecognized tag: \`${CIRCLE_TAG}'. A good tag example is v1.1.1, or v1.1.1-stage" 1>&2
+              echo "Unrecognized tag: \`${CIRCLE_TAG}'. A good tag example is 2022.08.03, or 2022.08.03-stage" 1>&2
               exit 1
             fi
 
-# Per https://github.com/mozilla/extension-workshop/issues/191 and
-# https://github.com/mozilla/extension-workshop/issues/192
+# Per https://github.com/mozilla/extension-workshop/issues/191,
+# https://github.com/mozilla/extension-workshop/issues/192 and
+# https://github.com/mozilla/extension-workshop/issues/1236
 # Our current CircleCI workflow is the following:
 # * Push master to dev environment with --unpublished switch.
 # * Push tags that end with "-stage" to stage environment.
@@ -158,7 +160,9 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: /^v?[0-9]+(\.[0-9]+)*(?:-stage)?$/
+              # match tags such as "2022.03.08" or "2022.03.08-1", with or
+              # without a -stage suffix.
+              only: /^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?(?:-stage)?$/
       - deploy:
           requires:
             - build
@@ -166,5 +170,6 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              # match tags such as "v1.1.1" or "v1.1.1-stage"
-              only: /^v?[0-9]+(\.[0-9]+)*(?:-stage)?$/
+              # match tags such as "2022.03.08" or "2022.03.08-1", with or
+              # without a -stage suffix.
+              only: /^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?(?:-stage)?$/
