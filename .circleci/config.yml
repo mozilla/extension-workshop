@@ -102,6 +102,8 @@ jobs:
             ./.utils/circleci/invalidate-cloudfront-cache.sh
 
   # tags matching specific format are deployed to either stage or prod.
+  # note that batch regexp support is limited: it doesn't support non-capturing
+  # groups or \d character class.
   deploy:
     <<: *deploy_container
     steps:
@@ -110,7 +112,7 @@ jobs:
       - run:
           name: firefox extension workshop deployment
           command: |
-            if [[ "$CIRCLE_TAG" =~ ^20[0-9]{2}\.[0-9]{2}\.[0-9]{2}(?:-[0-9]+)?-stage$ ]] ; then
+            if [[ "$CIRCLE_TAG" =~ ^20[0-9]{2}\.[0-9]{2}\.[0-9]{2}(-[0-9]+)?-stage$ ]] ; then
               AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
               AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"         \
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
@@ -122,7 +124,7 @@ jobs:
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
               EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}" \
               ./.utils/circleci/invalidate-cloudfront-cache.sh
-            elif [[ "$CIRCLE_TAG" =~ ^20[0-9]{2}\.[0-9]{2}\.[0-9]{2}(?:-[0-9]+)?$ ]] ; then
+            elif [[ "$CIRCLE_TAG" =~ ^20[0-9]{2}\.[0-9]{2}\.[0-9]{2}(-[0-9]+)?$ ]] ; then
               ./.utils/deploy.sh
               ./.utils/circleci/invalidate-cloudfront-cache.sh
             else
@@ -162,7 +164,7 @@ workflows:
             tags:
               # match tags such as "2022.03.08" or "2022.03.08-1", with or
               # without a -stage suffix.
-              only: /^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?(?:-stage)?$/
+              only: /^20\d{2}\.\d{2}\.\d{2}(-\d+)?(-stage)?$/
       - deploy:
           requires:
             - build
@@ -172,4 +174,4 @@ workflows:
             tags:
               # match tags such as "2022.03.08" or "2022.03.08-1", with or
               # without a -stage suffix.
-              only: /^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?(?:-stage)?$/
+              only: /^20\d{2}\.\d{2}\.\d{2}(-\d+)?(-stage)?$/
