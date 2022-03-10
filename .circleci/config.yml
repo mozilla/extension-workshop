@@ -3,7 +3,7 @@ version: 2.1
 references:
   build_container: &build_container
     docker:
-      - image: cimg/node:16.14
+      - image: cimg/node:17.6
     working_directory: ~/extension-workshop
 
   restore_build_cache: &restore_build_cache
