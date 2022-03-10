@@ -45,6 +45,7 @@ references:
     run:
       name: Install AWS CLI
       command: |
+        sudo apt-get install python-pip
         sudo pip install --upgrade pip
         sudo pip install --upgrade awscli
 jobs:
