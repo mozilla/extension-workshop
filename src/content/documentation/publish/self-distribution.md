@@ -94,7 +94,7 @@ When distributing an add–on from your website, you have two options for making
   - If the installation is not triggered from the top-level frame of the website, none of the frames between the top-level page and the frame triggering the installation are a third party to the top-level page.
 
 ::: note
-You may find references to using the `InstallTrigger` API to trigger a download from JavaScript. This API was never officially supported and is likely to be removed from Firefox soon. Use is therefore not recommended.
+You may find references to using the `InstallTrigger` API to trigger a download from JavaScript. This API was never officially supported and will be removed from Firefox 102. Use is therefore not recommended.
 :::
 
 Using either method, when the user downloads the signed add-on file Firefox installs it.
