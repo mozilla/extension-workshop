@@ -70,7 +70,7 @@ When distributing an add–on from your website, you have two options for making
 - From a link on a webpage, like this:
   ```html
   <div id="example-option-1" class="install-ok">
-    <a href="https://addons.mozilla.org/firefox/downloads/file/3923300/facebook_container-2.3.2-fx.xpi">
+    <a href="https://example.com/path/to/extension.xpi">
       Install my add-on
     </a>
   </div>
@@ -84,7 +84,7 @@ When distributing an add–on from your website, you have two options for making
     </button>
     <script>
       document.querySelector("#example-option-2 > button").onclick = () => {
-        window.location = "https://addons.mozilla.org/firefox/downloads/file/3923300/facebook_container-2.3.2-fx.xpi";
+        window.location = "https://example.com/path/to/extension.xpi";
       };
     </script>
   </div>
