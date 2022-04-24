@@ -76,6 +76,9 @@ When distributing an add–on from your website, you have two options for making
   </div>
   ```
   This is the recommended approach.
+  
+  If the download is not on the top-level frame of the website, none of the frames between the top-level page and the frame containing the download can be cross origin frames.
+
 - Using JavaScript, like this:
   ```html
   <div id="example-option-2" class="install-ok">
@@ -91,7 +94,7 @@ When distributing an add–on from your website, you have two options for making
   ```
   If you take this approach, make sure that:
   - The browser detects your JavaScript code as handling user input, for example, it is called from inside a DOM click event.
-  - If the installation is not triggered from the top-level frame of the website, none of the frames between the top-level page and the frame triggering the installation are a third party to the top-level page.
+  - If the installation is not triggered from the top-level frame of the website, none of the frames between the top-level page and the frame triggering the installation can be a third party to the top-level page.
 
 ::: note
 You may find references to using the `InstallTrigger` API to trigger a download from JavaScript. This API was never officially supported and will be removed from Firefox 102. Use is therefore not recommended.
