@@ -92,7 +92,7 @@ When distributing an add–on from your website, you have two options for making
   ```
   If you take this approach, make sure that the browser detects your JavaScript code as handling user input, for example, it is called from inside a DOM click event.
   
-When using either method, if the download link or triggering JavaScript is not on the top-level frame of the website, none of the frames between the top-level page and the frame containing the download or JavaScript can be third-party or cross-origin frames.
+If the download link or triggering JavaScript is not on the top-level frame of the website, none of the frames between the top-level page and the frame containing the download or JavaScript can be third-party or cross-origin frames.
 
 ::: note
 You may find references to using the `InstallTrigger` API to trigger a download from JavaScript. This API was never officially supported and will be removed from Firefox 102. Use is therefore not recommended.
