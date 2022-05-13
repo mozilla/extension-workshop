@@ -35,7 +35,7 @@ The Manifest v3 changes apply to extensions for Chromium-based browsers – such
 This article discusses the overall changes introduced with the developer preview of Manifest v3 for Firefox and also highlights where it diverges from the Chrome and Safari implementation. 
 
 {% endcapture %}
-{% include modules/column-w-toc.html
+{% include modules/column-w-toc.liquid
     id: "what-is-manifest-v3"
     content: content
 %}
