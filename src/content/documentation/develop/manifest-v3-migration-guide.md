@@ -75,7 +75,7 @@ This section details the Manifest V3 changes made to Firefox and available in th
 
 ### Manifest version
 
-The manifest.json key `manifest_version` accepts `3`. To use Nanifest V3, update your manifest.json file like this:
+The manifest.json key [`manifest_version`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) accepts `3`. To use Nanifest V3, update your manifest.json file like this:
 
 ```json
 "manifest_version": 3
@@ -93,7 +93,7 @@ The manifest.json key `manifest_version` accepts `3`. To use Nanifest V3, update
 
 Search extensions must use local icons. This change prevents the unnecessary network pings that result from accessing remote icons.
 
-To accommodate this change, provide a local icon and defined in your manifest.json chrome_settings_overrides manifest key like this:
+To accommodate this change, provide a local icon and defined in your manifest.json [chrome_settings_overrides](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) manifest key like this:
 
 ```json
 "chrome_settings_overrides": {
@@ -116,7 +116,7 @@ To accommodate this change, provide a local icon and defined in your manifest.js
 
 ### Host permissions
 
-Host permissions are on longer defined in the manifest.json keys `permissions` or `optional_permissions`, rather, they are defined in the `host_permissions` key. 
+Host permissions are on longer defined in the manifest.json keys `permissions` or `optional_permissions`, rather, they are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) key. 
 
 Move all host permission specifications to the manifest.json key `host_permissions` like this:
 
@@ -144,7 +144,7 @@ Move all host permission specifications to the manifest.json key `host_permissio
 
 ### Browser action
 
-The features available under the manifest.json key `browser_action` and the `browserAction` API have moved to a new `action` key and API. As the old and new key and API are otherwise identical, the only change you need to make is to rename the manifest.json key 'browser_action' to 'action', like this:
+The features available under the manifest.json key `browser_action` and the `browserAction` API have moved to a new `action` [key](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) and [API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms). As the old and new key and API are otherwise identical, the only change you need to make is to rename the manifest.json key 'browser_action' to 'action', like this:
 
 ```json
 "action": {
@@ -185,9 +185,9 @@ Also, in Chromium and Safari the Browser Action and Page Action APIs are unified
 
 ### Scripting API
 
-The new Scripting API takes over the features of `tabs.insertCSS()`, `tabs.removeCSS()`,  and `tabs.executeScript()` and adds capabilities to register, update, and unregister content scripts at runtime. 
+The new [Scripting API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting) takes over the features of `tabs.insertCSS()`, `tabs.removeCSS()`,  and `tabs.executeScript()` and adds capabilities to register, update, and unregister content scripts at runtime. 
 
-Also, the `code` parameter is removed so that arbitrary strings can no longer be executed. This API requires the `scripting` permission. So, you need to move any arbitrary strings executed as scripts to files and rewrite your code to use the Scripting API. 
+Also, the `code` parameter is removed so that arbitrary strings can no longer be executed. This API requires the [`scripting` permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So, you need to move any arbitrary strings executed as scripts to files and rewrite your code to use the Scripting API. 
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -199,7 +199,7 @@ Also, the `code` parameter is removed so that arbitrary strings can no longer be
 
 ### Event-driven background scripts
 
-Firefox has extended its support for background scripts by enabling non-persistent background pages for Manifest V2 and V3. Using non-persistent background scripts greatly reduces your extension use of browser resources. However, MV3 removes support for persistent background pages.
+Firefox has extended its support for [background scripts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) by enabling non-persistent background pages for Manifest V2 and V3. Using non-persistent background scripts greatly reduces your extension use of browser resources. However, MV3 removes support for persistent background pages.
 
 ::: note
 If you want to migrate your MV2 extension to using non-persistent background pages, you can test them in the MV3 developer preview by enabling the preference `extensions.eventPages.enabled`.
@@ -211,10 +211,10 @@ To migrate your extension to using non-persistent background pages you need to:
 - Ensure listeners are at the top-level and use the synchronous pattern.
 - Record state changes in local storage.
 - Change timers to alarms.
-- Switch from using `extension.getBackgroundPage` to call a function from the background page, to `runtime.getBackgroundPage`.
+- Switch from using [`extension.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage) to call a function from the background page, to [`runtime.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage).
 — Place menu creation using `menus.create` in a `runtime.onInstalled` listener.
 
-More information on the migration process can be found on the [background script](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) page on MDN. 
+More information on the migration process can be found on the [background script](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) page on MDN. 
 
 ::: note
 Safari also supports event-driven background scripts, however, Chromium has adopted service workers instead.
@@ -230,7 +230,7 @@ Safari also supports event-driven background scripts, however, Chromium has adop
 
 ### Content security policies
 
-Content security policy (CSP) in the manifest.json key is changing to use the `extension_pages` property. Manifest V3 has a more restrictive content security policy than Manifest V2, this may require further changes in your pages.
+[Content security policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) in the manifest.json key is changing to use the `extension_pages` property. Manifest V3 has a more restrictive content security policy than Manifest V2, this may require further changes in your pages.
 
 Move the extension’s CSP to the the manifest.json key to `extension_pages`, like this:
 
@@ -252,7 +252,7 @@ Move the extension’s CSP to the the manifest.json key to `extension_pages`, li
 
 Web accessible resources are available only to the sites and extensions specified in the manifest. The developer preview supports `resources` and `matches`, but does not support the `extension_ids` and `use_dynamic_url` properties.
 
-To migrate your extension, rewrite the manifest.json key ‘web_accessible_resources’  to specify the sites and extensions that can access the resources.
+To migrate your extension, rewrite the manifest.json key [‘web_accessible_resources’](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)  to specify the sites and extensions that can access the resources.
  
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -264,7 +264,7 @@ To migrate your extension, rewrite the manifest.json key ‘web_accessible_resou
 
 ### Features already supported by Firefox
 
-Chromium introduces promise support to many methods with the goal of eventually supporting promises on all appropriate methods. This will provide for greater compatibility between Firefox and Chrome extensions, given that Firefox already supports promises when using the `browser.*` namespace.
+Chromium introduces [promise](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview#promises) support to many methods with the goal of eventually supporting promises on all appropriate methods. This will provide for greater compatibility between Firefox and Chrome extensions, given that Firefox already supports promises when using the `browser.*` namespace.
 
 In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace with APIs that provide asynchronous event handling using callbacks. In full release of Manifest v3, Firefox will support promises for asynchronous events in the `chrome.*` namespace.
 
