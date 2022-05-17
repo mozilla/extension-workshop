@@ -60,6 +60,15 @@
             ]
           },
           {
+            "category": "Manifest V3",
+            "pages": [
+              {
+                "title": "Manifest V3 migration guide",
+                "url": "/documentation/develop/manifest-v3-migration-guide/"
+              }
+            ]
+          },
+          {
             "category": "Cross-Browser Development",
             "pages": [
               {
