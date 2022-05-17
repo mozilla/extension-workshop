@@ -5,8 +5,8 @@ permalink: /documentation/publish/self-distribution/
 topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
 contributors: [caitmuenster, rebloor]
-last_updated_by: caitmuenster
-date: 2021-09-14 
+last_updated_by: rebloor
+date: 2022-05-17
 ---
 
 <!-- Page Hero Banner -->
@@ -67,7 +67,7 @@ When you choose to distribute an add-on yourself, they can be installed using th
 
 When distributing an add–on from your website, you have two options for making the signed add–on file available for download:
 
-- From a link on a webpage, like this:
+- **Recommended approach:** from a link on a webpage, like this:
   ```html
   <div id="example-option-1" class="install-ok">
     <a href="https://example.com/path/to/extension.xpi">
@@ -75,7 +75,6 @@ When distributing an add–on from your website, you have two options for making
     </a>
   </div>
   ```
-  This is the recommended approach.
 
 - Using JavaScript, like this:
   ```html
@@ -91,7 +90,7 @@ When distributing an add–on from your website, you have two options for making
   </div>
   ```
   If you take this approach, make sure that the browser detects your JavaScript code as handling user input, for example, it is called from inside a DOM click event.
-  
+
 If the download link or triggering JavaScript is not on the top-level frame of the website, none of the frames between the top-level page and the frame containing the download or JavaScript can be third-party or cross-origin frames.
 
 ::: note
