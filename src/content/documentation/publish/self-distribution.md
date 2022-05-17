@@ -5,8 +5,8 @@ permalink: /documentation/publish/self-distribution/
 topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
 contributors: [caitmuenster, rebloor]
-last_updated_by: caitmuenster
-date: 2021-09-14 
+last_updated_by: rebloor
+date: 2022-05-17
 ---
 
 <!-- Page Hero Banner -->
@@ -50,7 +50,7 @@ For more information on how to submit an add-on for distribution on AMO or self-
 
 When you choose to distribute an add-on yourself, they can be installed using the following methods:
 
-- [Web download](/documentation/publish/submitting-an-add-on/#self-distribution)—make your extension available on a suitable web accessible server and when the user downloads the signed add-on file Firefox will install it.
+- [Web download](#web-download)—make your extension available on a suitable web accessible server and when the user downloads the signed add-on file Firefox installs it.
 - [Installing add-on from file](/documentation/publish/distribute-sideloading)—enables a user to install an add-on using an `.xpi` file saved on their computer.
 - Add-ons for use with a desktop app—starting with Firefox 74, it is no longer be possible to have an extension be automatically installed as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2020/03/10/support-for-extension-sideloading-has-ended/) for more information.
 - [Add-ons in an enterprise environment](/documentation/enterprise/enterprise-distribution/)—this page discusses the use of signed compared to unsigned extensions, installation options, the Firefox settings affecting installation, and including add-ons with a custom Firefox install package.
@@ -58,6 +58,52 @@ When you choose to distribute an add-on yourself, they can be installed using th
 {% endcapture %}
 {% include modules/one-column.liquid
   id: "options"
+  content: content
+%}
+
+{% capture content %}
+
+### Web download
+
+When distributing an add–on from your website, you have two options for making the signed add–on file available for download:
+
+- **Recommended approach:** from a link on a webpage, like this:
+  ```html
+  <div id="example-option-1" class="install-ok">
+    <a href="https://example.com/path/to/extension.xpi">
+      Install my add-on
+    </a>
+  </div>
+  ```
+
+- Using JavaScript, like this:
+  ```html
+  <div id="example-option-2" class="install-ok">
+    <button>
+      Install my add-on
+    </button>
+    <script>
+      document.querySelector("#example-option-2 > button").onclick = () => {
+        window.location = "https://example.com/path/to/extension.xpi";
+      };
+    </script>
+  </div>
+  ```
+  If you take this approach, make sure that the browser detects your JavaScript code as handling user input, for example, it is called from inside a DOM click event.
+
+If the download link or triggering JavaScript is not on the top-level frame of the website, none of the frames between the top-level page and the frame containing the download or JavaScript can be third-party or cross-origin frames.
+
+::: note
+You may find references to using the `InstallTrigger` API to trigger a download from JavaScript. This API was never officially supported and will be removed from Firefox 102. Use is therefore not recommended.
+:::
+
+Using either method, when the user downloads the signed add-on file Firefox installs it.
+
+See [submitting an add-on](/documentation/publish/submitting-an-add-on/#self-distribution) for details on how to download your signed add-on file.
+
+{% endcapture %}
+{% include modules/one-column.liquid
+  id: "web-download"
   content: content
 %}
 
