@@ -254,10 +254,11 @@ table {
 // ------
 
 code {
-  border-radius: $global-radius;
-  overflow-wrap: break-word;
   background-color: $light-gray;
+  border-radius: $global-radius;
   color: $black;
+  overflow-wrap: break-word;
+  padding: rem-calc(1 5);
 
   &.nobackground {
     background: none;

@@ -135,7 +135,9 @@ We use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-exampl
 :::
 
 <!-- Single Column Body Module -->
-[Background scripts](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) enable an extension to maintain a long-term state or perform long-term operations, independently of any web page or browser window. These scripts remain loaded for the lifetime of the extension. Background scripts are loaded inside an invisible background page: by default, this is an empty HTML document, but you can specify a custom page and define it as the background page using the `manifest.json` [`background`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key.
+[Background scripts](https://developer.mozilla.org/Add-ons/WebExtensions/Background_scripts) enable an extension to monitor and react to events in the browser, such as navigating to a new page, removing a bookmark, or closing a tab. These scripts can be persistent or non-persistent. Persistent background scripts remain loaded for the lifetime of the extension. In contrast, non-persistent background scripts load when needed to respond to an event and unloaded when they become idle. Non-persistent background scripts are recommended because they consume less of the browser's resources. 
+
+Background scripts are loaded inside an invisible background page: by default, this is an empty HTML document, but you can specify a custom page and define it as the background page using the `manifest.json` [`background`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) key.
 
 To debug background scripts, use the [Toolbox](#developer-tools-toolbox) **Debugger** in the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console) view so you can view the **Console** below **Debugger**.
 
@@ -144,6 +146,8 @@ To get started, open your background script in **Sources**.
 ![background script screenshot](/assets/img/documentation/develop/locate_background_script.png)
 
 As you run your extension, the **Console** displays logged output, including calls to [`console.log()`](https://developer.mozilla.org/docs/Web/API/Console/log) made by the extension's background scripts and any errors the browser raises as it executes these scripts. Note that the console shows all errors raised by the browser, not just errors related to your extension's code.
+
+When you debug a non-persistent background script, the background script won't go idle while the toolbox is open. However, if you need to terminate the background page, you can do so in `about:debugging`.
 
 For example, the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example extension logs a message from its background script when it receives a message from one of its content scripts.
 
