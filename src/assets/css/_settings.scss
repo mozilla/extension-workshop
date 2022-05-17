@@ -293,6 +293,9 @@ $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.5;
 $paragraph-margin-bottom: 1.5rem;
 $paragraph-text-rendering: optimizeLegibility;
+// Disable .code-inline in Foundation because we are not using it and it breaks
+// our own style for inline code blocks, see: https://github.com/mozilla/extension-workshop/issues/1315
+$enable-code-inline: false;
 $code-color: $white;
 $code-font-family: $font-family-monospace;
 $code-font-weight: $global-weight-normal;
