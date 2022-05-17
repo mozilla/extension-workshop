@@ -4,8 +4,8 @@ title: Manifest V3 migration guide
 permalink: /documentation/develop/manifest-v3-migration-guide/
 topic: Develop
 tags: [webextensions, api, firefox]
-contributors: [rebloor]
-last_updated_by: rebloor
+contributors: [rebloor, willdurand]
+last_updated_by: willdurand
 date: 2022-05-16
 ---
 
@@ -28,11 +28,11 @@ We have introduced a developer preview of Manifest V3 to Firefox. This page prov
 
 ## What is Manifest V3?
 
-Manifest v3 (MV3) is the umbrella term for a number of foundational changes to the WebExtensions API in Firefox. The name refers to the declared `manifest_version` key in each extension’s [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file. 
+Manifest v3 (MV3) is the umbrella term for a number of foundational changes to the WebExtensions API in Firefox. The name refers to the declared `manifest_version` key in each extension’s [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
 The Manifest v3 changes apply to extensions for Chromium-based browsers – such as Chrome, Edge, and Opera – Safari, and Firefox. While it is the goal to maintain a high degree of compatibility between the Firefox, Safari, and Chromium extension platforms, our implementation diverges where we think it matters and where our values point to a different direction.
 
-This article discusses the overall changes introduced with the developer preview of Manifest v3 for Firefox and also highlights where it diverges from the Chrome and Safari implementation. 
+This article discusses the overall changes introduced with the developer preview of Manifest v3 for Firefox and also highlights where it diverges from the Chrome and Safari implementation.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid
@@ -49,7 +49,7 @@ The developer preview of Manifest V3 is available in Firefox 101. However, to te
 - Set `extensions.manifestV3.enabled` to `true`.
 - Set `xpinstall.signatures.required` to `false`.
 
-You can now install MV3 extensions from `about:debugging`. 
+You can now install MV3 extensions from `about:debugging`.
 
 If you want to permanently install an MV3 extension, you need to use the Nightly or Developer edition channels with `xpinstall.signatures.required` set to `false`.
 
@@ -75,7 +75,7 @@ This section details the Manifest V3 changes made to Firefox and available in th
 
 ### Manifest version
 
-The manifest.json key [`manifest_version`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) accepts `3`. To use Nanifest V3, update your manifest.json file like this:
+The manifest.json key [`manifest_version`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) accepts `3`. To use Manifest V3, update your manifest.json file like this:
 
 ```json
 "manifest_version": 3
@@ -116,7 +116,7 @@ To accommodate this change, provide a local icon and defined in your manifest.js
 
 ### Host permissions
 
-Host permissions are on longer defined in the manifest.json keys `permissions` or `optional_permissions`, rather, they are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) key. 
+Host permissions are on longer defined in the manifest.json keys `permissions` or `optional_permissions`, rather, they are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) key.
 
 Move all host permission specifications to the manifest.json key `host_permissions` like this:
 
@@ -185,9 +185,9 @@ Also, in Chromium and Safari the Browser Action and Page Action APIs are unified
 
 ### Scripting API
 
-The new [Scripting API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting) takes over the features of `tabs.insertCSS()`, `tabs.removeCSS()`,  and `tabs.executeScript()` and adds capabilities to register, update, and unregister content scripts at runtime. 
+The new [Scripting API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting) takes over the features of `tabs.insertCSS()`, `tabs.removeCSS()`,  and `tabs.executeScript()` and adds capabilities to register, update, and unregister content scripts at runtime.
 
-Also, the `code` parameter is removed so that arbitrary strings can no longer be executed. This API requires the [`scripting` permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So, you need to move any arbitrary strings executed as scripts to files and rewrite your code to use the Scripting API. 
+Also, the `code` parameter is removed so that arbitrary strings can no longer be executed. This API requires the [`scripting` permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So, you need to move any arbitrary strings executed as scripts to files and rewrite your code to use the Scripting API.
 
 {% endcapture %}
 {% include modules/one-column.liquid
@@ -207,14 +207,14 @@ If you want to migrate your MV2 extension to using non-persistent background pag
 
 To migrate your extension to using non-persistent background pages you need to:
 
-- Update your manifest.json `background` key to remove the `"persistent"` property or set it to `false`. 
+- Update your manifest.json `background` key to remove the `"persistent"` property or set it to `false`.
 - Ensure listeners are at the top-level and use the synchronous pattern.
 - Record state changes in local storage.
 - Change timers to alarms.
 - Switch from using [`extension.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage) to call a function from the background page, to [`runtime.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage).
 — Place menu creation using `menus.create` in a `runtime.onInstalled` listener.
 
-More information on the migration process can be found on the [background script](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) page on MDN. 
+More information on the migration process can be found on the [background script](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) page on MDN.
 
 ::: note
 Safari also supports event-driven background scripts, however, Chromium has adopted service workers instead.
@@ -253,7 +253,7 @@ Move the extension’s CSP to the the manifest.json key to `extension_pages`, li
 Web accessible resources are available only to the sites and extensions specified in the manifest. The developer preview supports `resources` and `matches`, but does not support the `extension_ids` and `use_dynamic_url` properties.
 
 To migrate your extension, rewrite the manifest.json key [‘web_accessible_resources’](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)  to specify the sites and extensions that can access the resources.
- 
+
 {% endcapture %}
 {% include modules/one-column.liquid
     id: "web-accessible-resources"
