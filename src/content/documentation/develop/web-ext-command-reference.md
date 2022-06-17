@@ -26,9 +26,10 @@ contributors:
     noraj,
     akhilpanchal,
     ankushduacodes,
+    willdurand,
   ]
-last_updated_by: caitmuenster
-date: 2021-08-11
+last_updated_by: willdurand
+date: 2022-06-17
 ---
 
 <!-- Page Hero Banner -->
@@ -239,6 +240,10 @@ web-ext run --target=firefox-android --firefox-apk=org.mozilla.firefox
 
 Environment variable: `$WEB_EXT_FIREFOX_APK`
 
+#### `--firefox-preview`
+  
+Turn on developer preview features in Firefox. This option accepts multiple values, although it currently only supports the `mv3` value, which is also the default value.
+  
 #### `--firefox-profile`, `-p`
 
 Specify a base Firefox profile to run the extension in. This is specified as a string containing your profile name or an absolute path to its directory. The profile you specify is copied into a new temporary profile and some settings are added that are required for `web-ext` to function.
