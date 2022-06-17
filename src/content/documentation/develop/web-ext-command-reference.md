@@ -243,6 +243,10 @@ Environment variable: `$WEB_EXT_FIREFOX_APK`
 #### `--firefox-preview`
   
 Turn on developer preview features in Firefox. This option accepts multiple values, although it currently only supports the `mv3` value, which is also the default value.
+
+::: note
+This option was added in web-ext 7.1.0.
+:::
   
 #### `--firefox-profile`, `-p`
 
