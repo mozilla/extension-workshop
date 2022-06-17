@@ -243,6 +243,8 @@ Environment variable: `$WEB_EXT_FIREFOX_APK`
 #### `--firefox-preview`
   
 Turn on developer preview features in Firefox. This option accepts multiple values, although it currently only supports the `mv3` value, which is also the default value.
+  
+The `mv3` value allows developers to test their extensions with Firefox Manifest Version 3 support (without having to [manually flipping the related preferences](/documentation/develop/manifest-v3-migration-guide/)).
 
 ::: note
 This option was added in web-ext 7.1.0.
