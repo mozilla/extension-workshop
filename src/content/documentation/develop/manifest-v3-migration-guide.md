@@ -6,7 +6,7 @@ topic: Develop
 tags: [webextensions, api, firefox]
 contributors: [rebloor, willdurand]
 last_updated_by: willdurand
-date: 2022-05-17
+date: 2022-06-17
 ---
 
 <!-- Page Hero Banner -->
@@ -60,6 +60,10 @@ If you want to permanently install an MV3 extension, you need to use the Nightly
 %}
 
 {% capture content %}
+
+::: note
+Use [`web-ext run`](/documentation/develop/getting-started-with-web-ext/) with the `--firefox-preview` option to quickly try your MV3 extension.
+:::
 
 ## Developer preview changes
 
