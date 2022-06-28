@@ -2106,9 +2106,9 @@ ejs@^3.1.6:
     jake "^10.8.5"
 
 electron-to-chromium@^1.4.164:
-  version "1.4.171"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.171.tgz#2beb4e03744ef24a90580074edb87c06fbc86ed7"
-  integrity sha512-DmVNWJlGfCYtdgyxp24Aznd7Ou6a+XBSawxODh4lc39OHdh1a49Sitw8oxwMqzzm8n9m2P93OelvIF09SOTNwA==
+  version "1.4.172"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.172.tgz#87335795a3dc19e7b6dd5af291038477d81dc6b1"
+  integrity sha512-yDoFfTJnqBAB6hSiPvzmsBJSrjOXJtHSJoqJdI/zSIh7DYupYnIOHt/bbPw/WE31BJjNTybDdNAs21gCMnTh0Q==
 
 eleventy-xml-plugin@0.1.0:
   version "0.1.0"
