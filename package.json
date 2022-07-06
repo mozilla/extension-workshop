@@ -34,7 +34,7 @@
     "eleventy-xml-plugin": "0.1.0",
     "eslint": "8.18.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-prettier": "4.2.1",
     "fs-extra": "10.1.0",
     "gray-matter": "4.0.3",
     "jest": "28.1.2",
