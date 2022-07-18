@@ -54,8 +54,9 @@ If you know the basics of extension development, you’re ready to create an ext
 
 </div>
 
+
 <!-- Tile -->
-<a href="/extension-basics/" class="cell auto tile tile-block-link">
+<a href="/extension-basics/" class="cell small-6 medium-auto tile tile-block-link">
 <div class="block-link">
 
 ![Community Forums](/assets/img/icons/quick-link-learn.svg "Community Forums")
@@ -67,7 +68,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <!-- END: Tile -->
 
 <!-- Tile -->
-<a href="/documentation/develop/" class="cell auto tile tile-block-link">
+<a href="/documentation/develop/" class="cell small-6 medium-auto small-6 tile tile-block-link">
 <div class="block-link">
 
 ![Community Forums](/assets/img/icons/quick-link-develop.svg "Community Forums")
@@ -79,7 +80,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <!-- END: Tile -->
 
 <!-- Tile -->
-<a href="/documentation/develop/debugging/" class="cell auto tile tile-block-link">
+<a href="/documentation/develop/debugging/" class="cell small-6 medium-auto tile tile-block-link">
 <div class="block-link">
 
 ![Community Forums](/assets/img/icons/quick-link-test.svg "Community Forums")
@@ -91,7 +92,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <!-- END: Tile -->
 
 <!-- Tile -->
-<a href="/documentation/publish/" class="cell auto tile tile-block-link">
+<a href="/documentation/publish/" class="cell small-6 medium-auto tile tile-block-link">
 <div class="block-link">
 
 ![Community Forums](/assets/img/icons/quick-link-publish.svg "Community Forums")
@@ -103,7 +104,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <!-- END: Tile -->
 
 <!-- Tile -->
-<a href="/documentation/manage/" class="cell auto tile tile-block-link">
+<a href="/documentation/manage/" class="cell small-6 medium-auto tile tile-block-link">
 <div class="block-link">
 
 ![Community Forums](/assets/img/icons/quick-link-manage.svg "Community Forums")
