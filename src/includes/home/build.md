@@ -68,7 +68,7 @@ If you know the basics of extension development, you’re ready to create an ext
 <!-- END: Tile -->
 
 <!-- Tile -->
-<a href="/documentation/develop/" class="cell small-6 medium-auto small-6 tile tile-block-link">
+<a href="/documentation/develop/" class="cell small-6 medium-auto tile tile-block-link">
 <div class="block-link">
 
 ![Community Forums](/assets/img/icons/quick-link-develop.svg "Community Forums")
