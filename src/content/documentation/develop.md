@@ -228,21 +228,6 @@ The Firefox extension environment is highly compatible with chromium-based exten
 
 <!-- END: Two Column Body Module -->
 
-<!-- Single Column Body Module -->
-
-{% capture content %}
-
-### Update a legacy Firefox extension
-
-If you have a [legacy Firefox extension](/documentation/develop/porting-a-legacy-firefox-extension/), you can still find out how to get it up and running on the latest version of Firefox. Check out the porting information for the [Add-on SDK](/documentation/develop/comparison-with-the-add-on-sdk/) and [XUL/XPCOM](/documentation/develop/comparison-with-xul-xpcom-extensions/) based extensions.
-
-{% endcapture %}
-{% include modules/one-column.liquid
-	content: content
-%}
-
-<!-- END: Single Column Body Module -->
-
 </section>
 
 <!-- END: Page section container -->
