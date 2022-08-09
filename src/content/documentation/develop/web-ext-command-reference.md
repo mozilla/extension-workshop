@@ -29,7 +29,7 @@ contributors:
     willdurand,
   ]
 last_updated_by: willdurand
-date: 2022-06-17
+date: 2022-08-09
 ---
 
 <!-- Page Hero Banner -->
@@ -225,6 +225,12 @@ Here are all available aliases and the executables they map to:
 | `firefoxdeveloperedition` | The [developer](https://www.mozilla.org/firefox/channel/desktop/#developer) build of Firefox |
 
 </div>
+
+As of web-ext 7.2.0, [Flatpak](https://flatpak.org/) users can use this option with the value `flatpak:org.mozilla.firefox` (where `org.mozilla.firefox` is [the Flatpak application ID for Firefox on Flathub](https://flathub.org/apps/details/org.mozilla.firefox)):
+  
+```shell
+web-ext run --firefox=flatpak:org.mozilla.firefox
+```
 
 Environment variable: `$WEB_EXT_FIREFOX`
 
