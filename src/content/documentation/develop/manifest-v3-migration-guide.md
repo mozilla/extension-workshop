@@ -5,8 +5,8 @@ permalink: /documentation/develop/manifest-v3-migration-guide/
 topic: Develop
 tags: [webextensions, api, firefox]
 contributors: [rebloor, willdurand]
-last_updated_by: willdurand
-date: 2022-06-17
+last_updated_by: erosman
+date: 2022-08-11
 ---
 
 <!-- Page Hero Banner -->
