@@ -126,15 +126,15 @@ Move all host permission specifications to the manifest.json key `host_permissio
 
 ```json
 "permissions": [
- "tabs",
- "notifications"
+  "tabs",
+  "notifications"
 ],
 "optional_permissions": [
- "geolocation"
+  "geolocation"
 ],
 "host_permissions": [
- "http://www.mysite.com/",
- "*://*/*"
+  "http://www.mysite.com/",
+  "*://*.example.org/*"
 ]
 ```
 
