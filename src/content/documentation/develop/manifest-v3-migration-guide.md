@@ -5,8 +5,8 @@ permalink: /documentation/develop/manifest-v3-migration-guide/
 topic: Develop
 tags: [webextensions, api, firefox]
 contributors: [rebloor, willdurand]
-last_updated_by: willdurand
-date: 2022-06-17
+last_updated_by: erosman
+date: 2022-08-11
 ---
 
 <!-- Page Hero Banner -->
@@ -126,15 +126,15 @@ Move all host permission specifications to the manifest.json key `host_permissio
 
 ```json
 "permissions": [
- "tabs",
- "notifications"
+  "tabs",
+  "notifications"
 ],
 "optional_permissions": [
- "geolocation"
+  "geolocation"
 ],
 "host_permissions": [
- "http://www.mysite.com/",
- "*://*/*"
+  "http://www.mysite.com/",
+  "*://*.example.org/*"
 ]
 ```
 
