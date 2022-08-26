@@ -30,7 +30,7 @@ We have introduced a developer preview of Manifest V3 to Firefox. This page prov
 
 Manifest v3 (MV3) is the umbrella term for a number of foundational changes to the WebExtensions API in Firefox. The name refers to the declared `manifest_version` key in each extension’s [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-The Manifest v3 changes apply to extensions for Chromium-based browsers – such as Chrome, Edge, and Opera – Safari, and Firefox. While it is the goal to maintain a high degree of compatibility between the Firefox, Safari, and Chromium extension platforms, our implementation diverges where we think it matters and where our values point to a different direction.
+The Manifest v3 changes apply to extensions for Chromium-based browsers – such as Chrome, Edge, and Opera. While it is the goal to maintain a high degree of compatibility between the Firefox, Safari, and Chromium extension platforms, our implementation diverges where we think it matters and where our values point to a different direction.
 
 This article discusses the overall changes introduced with the developer preview of Manifest v3 for Firefox and also highlights where it diverges from the Chrome and Safari implementation.
 
