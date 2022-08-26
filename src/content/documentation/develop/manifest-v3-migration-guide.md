@@ -4,9 +4,9 @@ title: Manifest V3 migration guide
 permalink: /documentation/develop/manifest-v3-migration-guide/
 topic: Develop
 tags: [webextensions, api, firefox]
-contributors: [rebloor, willdurand]
-last_updated_by: erosman
-date: 2022-08-11
+contributors: [rebloor, willdurand, yoasif]
+last_updated_by: yoasif
+date: 2022-08-26
 ---
 
 <!-- Page Hero Banner -->
