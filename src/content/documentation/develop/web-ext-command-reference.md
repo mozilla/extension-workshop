@@ -199,7 +199,10 @@ web-ext run --devtools
 ```
 
 Note: The opened Developer Tools may not show all debugging output from content-scripts. Use the web console when debugging content-scripts.
-Note #2: This option only works with Firefox 106 and newer.
+
+::: note
+This option was added in web-ext 7.3.0 and it requires Firefox 106 and newer.
+:::
   
 <section id="--firefox"></section>
 
