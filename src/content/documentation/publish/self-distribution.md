@@ -4,9 +4,9 @@ title: Distributing an add-on yourself
 permalink: /documentation/publish/self-distribution/
 topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
-contributors: [caitmuenster, rebloor]
-last_updated_by: rebloor
-date: 2022-05-17
+contributors: [caitmuenster, rebloor, mryanmurphy]
+last_updated_by: mryanmurphy
+date: 2022-09-12
 ---
 
 <!-- Page Hero Banner -->
