@@ -13,9 +13,9 @@ tags:
     user-experience,
     webextensions,
   ]
-contributors: [mdnwebdocs-bot, alxwrd, NiklasGollenstede, David263, rebloor]
-last_updated_by: rebloor
-date: 2020-04-24
+contributors: [mdnwebdocs-bot, alxwrd, NiklasGollenstede, David263, rebloor, hamatti]
+last_updated_by: hamatti
+date: 2022-09-23
 ---
 
 <!-- Page Hero Banner -->
@@ -116,34 +116,13 @@ Don’t include advertising on your post-install page. Ads can degrade people’
 
 ### Onboarding page examples
 
-Here are some examples of good onboarding pages:
+Here's an example of a good onboarding page:
 
 </div>
 </article>
 </section>
 
 <!-- END: Single Column Body Module -->
-
-<!-- Two Column Body Module -->
-
-<section class="module">
-<article class="module-content grid-x grid-padding-x align-middle">
-<div class="cell small-12 medium-6 medium-order-2">
-
-![Example onboarding page that details how to use the extension's features and turn them on and off](/assets/img/documentation/develop/Laser_cat_onboarding.png)
-
-</div>
-<div class="cell small-12 medium-6">
-
-#### [Laser Cat](https://addons.mozilla.org/firefox/addon/the-laser-cat/)
-
-This page provides a succinct description of the extension, clear instructions on how to fire your cat’s lasers, and how to turn your laser cat on and off.
-
-</div>
-</article>
-</section>
-
-<!-- END: Two Column Body Module -->
 
 <!-- Two Column Body Module -->
 
