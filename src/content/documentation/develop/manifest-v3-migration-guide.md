@@ -120,7 +120,7 @@ To accommodate this change, provide a local icon and defined in your manifest.js
 
 ### Host permissions
 
-Host permissions are on longer defined in the manifest.json keys `permissions` or `optional_permissions`, rather, they are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) key.
+Host permissions are no longer defined in the manifest.json keys `permissions` or `optional_permissions`, rather, they are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) key.
 
 Move all host permission specifications to the manifest.json key `host_permissions` like this:
 

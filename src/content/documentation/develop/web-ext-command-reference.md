@@ -199,6 +199,21 @@ Environment variable: `$WEB_EXT_BROWSER_CONSOLE=true`
 
 Note: The browser console may not show all debugging output from content-scripts. Use the web console when debugging content-scripts.
 
+
+#### `--devtools`
+
+This opens the Developer Tools for the installed extension on startup. See [this documentation](https://extensionworkshop.com/documentation/develop/debugging/) for more information. Example:
+
+```shell
+web-ext run --devtools
+```
+
+Note: The opened Developer Tools may not show all debugging output from content-scripts. Use the web console when debugging content-scripts.
+
+::: note
+This option was added in web-ext 7.3.0 and it requires Firefox 106 and newer.
+:::
+  
 <section id="--firefox"></section>
 
 #### `--firefox`, `-f`
