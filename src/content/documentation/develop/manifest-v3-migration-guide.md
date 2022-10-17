@@ -290,7 +290,7 @@ In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace w
 - Move the extension’s CSP to the the manifest.json key ‘content_security_policy.extension_pages’ and update the CSP to conform to Manifest V3 requirements.
 - Move any arbitrary strings executed as scripts to files and update your code to use the Scripting API.
 - The add-on ID is required to publish your extension. Make sure to add one in the `browser_specific_settings.gecko.id` manifest.json key.
-- The format of the `version` manifest.json key has evolved and became simpler: the `version` must be a string with 1 to 4 numbers separated with dots (e.g. `1.2.3.4`). Each number can have up to 9 digits and leading zeros are not allowed (e.g. `2.01` is forbidden but `2.1` is allowed).
+- The format of the `version` manifest.json key has evolved and became simpler: letters and other previously allowed symbols are no longer accepted. The value must be a string with 1 to 4 numbers separated with dots (e.g. `1.2.3.4`). Each number can have up to 9 digits and leading zeros are not allowed (e.g. `2.01` is forbidden but `2.1` is allowed).
 
 {% endcapture %}
 {% include modules/one-column.liquid
