@@ -130,6 +130,16 @@ Treat warnings as errors by exiting non-zero for warnings.
 
 Environment variable: `$WEB_EXT_WARNINGS_AS_ERRORS=true`
 
+#### `--firefox-preview`
+
+Turn on developer preview features in Firefox. This option accepts multiple values, although it currently only supports the `mv3` value, which is also the default value.
+
+The `mv3` value allows developers to lint Manifest Version 2 **and** Manifest Version 3 extensions.
+
+::: note
+This option was added in web-ext 7.3.0.
+:::
+
 <section id="web-ext-run"></section>
 
 ### `web-ext run`
@@ -168,7 +178,7 @@ Environment variable: `$WEB_EXT_ADB_PORT`
 
 #### `--adb-remove-old-artifacts`
 
-`web-ext` automatically removes all the temporary files that were written to the target adb device when it does exit. This may fail, for example when the device is disconnected before 
+`web-ext` automatically removes all the temporary files that were written to the target adb device when it does exit. This may fail, for example when the device is disconnected before
 `web-ext run` exited.
 
 Starting from v5.0.0, `web-ext run` will automatically detect and warn the user if old artifacts have been found on the adb device, but it does not automatically remove them by default.
@@ -242,7 +252,7 @@ Here are all available aliases and the executables they map to:
 </div>
 
 As of web-ext 7.2.0, [Flatpak](https://flatpak.org/) users can use this option with the value `flatpak:org.mozilla.firefox` (where `org.mozilla.firefox` is [the Flatpak application ID for Firefox on Flathub](https://flathub.org/apps/details/org.mozilla.firefox)):
-  
+
 ```shell
 web-ext run --firefox=flatpak:org.mozilla.firefox
 ```
@@ -262,15 +272,15 @@ web-ext run --target=firefox-android --firefox-apk=org.mozilla.firefox
 Environment variable: `$WEB_EXT_FIREFOX_APK`
 
 #### `--firefox-preview`
-  
+
 Turn on developer preview features in Firefox. This option accepts multiple values, although it currently only supports the `mv3` value, which is also the default value.
-  
+
 The `mv3` value allows developers to test their extensions with Firefox Manifest Version 3 support (without having to [manually flipping the related preferences](/documentation/develop/manifest-v3-migration-guide/)).
 
 ::: note
 This option was added in web-ext 7.1.0.
 :::
-  
+
 #### `--firefox-profile`, `-p`
 
 Specify a base Firefox profile to run the extension in. This is specified as a string containing your profile name or an absolute path to its directory. The profile you specify is copied into a new temporary profile and some settings are added that are required for `web-ext` to function.
@@ -281,7 +291,7 @@ Environment variable: `$WEB_EXT_FIREFOX_PROFILE`
 
 #### `--profile-create-if-missing`
 
-With this option, the profile directory (specified by the `--firefox-profile` or `--chromium-profile` options) will be created if it does not exist yet. 
+With this option, the profile directory (specified by the `--firefox-profile` or `--chromium-profile` options) will be created if it does not exist yet.
 
 ::: note alert
 When this option is specified, the `--firefox-profile` option is always treated as a directory path.
