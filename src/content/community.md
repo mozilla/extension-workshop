@@ -17,7 +17,7 @@ date: 2020-12-03
 Tap into the worldwide network of Firefox developers help improve the Firefox add-ons ecosystem.
 
 {% endcapture %}
-{% include modules/overview-page-hero.liquid
+{% include modules/overview-page-hero.liquid,
 	content: page_hero_banner_content
 	background: "community-overview-hero-bg.jpg"
 %}
@@ -33,7 +33,7 @@ Tap into the worldwide network of Firefox developers help improve the Firefox ad
 Firefox extension developers are part of a vibrant, global community of creators who help millions of Firefox users around the world to customize their browsing experience. They’re ready to share their skills and expertise to help you develop your Firefox extension.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
 	id: "who-is-part-of-the-community"
 	content: content_with_toc
 %}
@@ -66,7 +66,7 @@ Find out whether there is a browser extensions or Mozilla related group or meet 
   You can also attend Mozilla’s public meetings and events for extension developers, such as add-on demo sessions Details of these events are found in the [Developer Communication Calendar](https://wiki.mozilla.org/Add-ons/developer/communication#Add-on_Developer_Communication_Calendar).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	id: "connect-with-the-community"
 	content: content
 %}
@@ -88,7 +88,7 @@ If you are ready to start contributing to the API, you can [onboard to the WebEx
 Please file new bugs for the WebExtensions API on [Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?product=WebExtensions). You can also use Bugzilla to search for [existing bugs](https://mzl.la/2zzJwXu) filed to the WebExtensions product.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	id: "get-involved-in-the-community"
 	content: content
 %}

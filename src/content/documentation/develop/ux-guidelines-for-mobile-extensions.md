@@ -20,7 +20,7 @@ date: 2020-10-19
 Make your extension seamlessly integrate with Firefox for Android
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
   content: page_hero_banner_content
 %}
 
@@ -43,7 +43,7 @@ To make sure your users have a great experience with your extension on Firefox f
 This article provides guidelines for optimizing your extension’s user experience on mobile. We’ve broken these guidelines up into three segments: the basics, which lists the minimum requirements needed for your extension to work well on a variety of devices; the extra mile, which details how you can make your extension look and feel like Firefox for Android; and the last mile, which describes how you can make your extension feel mobile-native or mobile-first.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "introduction"
   content: content_with_toc
 %}
@@ -74,7 +74,7 @@ Pass your colors through WebAIM’s [Color Contrast Checker](https://webaim.org/
 - Follow Material Design's recommendations for [type scale](https://material.io/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "the-basics"
     content: content
 %}
@@ -127,7 +127,7 @@ Frequently used elements in your extension should use mobile-optimised [Material
 
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "the-extra-mile"
     content: content
 %}
@@ -157,7 +157,7 @@ Seldom used elements that could be mobile-optimised include [Card](https://mater
 Components should match [Firefox for Android color usage](https://www.figma.com/proto/TebIgESfWmQkMcEmwNaYZl/Android?node-id=0%3A498&viewport=-4823%2C213%2C0.5&scaling=min-zoom&hide-ui=1) for light and dark themes.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "the-last-mile"
     content: content
 %}

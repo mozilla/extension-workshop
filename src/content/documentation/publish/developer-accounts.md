@@ -18,7 +18,7 @@ date: 2019-06-06 07:38:43
 Developer accounts for addons.mozilla.org are integrated with [Firefox Accounts](https://accounts.firefox.com/signup), which lets you access and manage multiple Mozilla services from one account. You can manage your Firefox Account from [accounts.firefox.com/settings](https://accounts.firefox.com/settings).
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -35,7 +35,7 @@ Your Firefox Account display name will not sync to your profile on addons.mozill
 :::
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "setting-a-display-name"
   content: content_with_toc
 %}
@@ -53,7 +53,7 @@ To mitigate malicious actors from submitting spam to addons.mozilla.org, we will
 If you believe your account has been incorrectly blocked, please email amo-admins [at] mozilla [dot] com and include a link to your developer profile.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "blocked-accounts"
   content: content
 %}

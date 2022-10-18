@@ -19,7 +19,7 @@ date: 2021-03-19
 Or how to avoid permissions discouraging users from installing your extensions.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 

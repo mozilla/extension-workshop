@@ -17,7 +17,7 @@ date: 2021-04-02
 Themes for Firefox are not always compatible with other major browsers. 
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -60,7 +60,7 @@ Also, note that Chrome tiles the `“theme_frame”:` image from the left of the
 For more information, see the notes on [Chrome compatibility](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#chrome_compatibility) on MDN.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "single-image-themes"
   content: content
   aside: ""

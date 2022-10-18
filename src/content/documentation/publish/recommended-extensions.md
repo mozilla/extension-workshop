@@ -16,7 +16,7 @@ date: 2019-09-19 12:01:01
 # Recommended Extensions Program
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -33,7 +33,7 @@ Recommended extensions are easy to identify because of their distinctive “Reco
 ![Add-ons Manager setting cog](/assets/img/documentation/publish/RecEx_badge.png)
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "overview"
   content: content_with_toc
 %}
@@ -59,7 +59,7 @@ When evaluating nominations, curators are primarily concerned with:
 The add-ons team may remove extensions from the Recommended list at any time. Reasons may include a degraded experience, security flaws, developer abandonment, or perhaps stronger alternatives emerge.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "criteria"
   content: content
 %}
@@ -81,7 +81,7 @@ Due to the heightened exposure Recommended extensions receive and because Firefo
 Because of the program’s priority on security, every new version of a Recommended extension submitted must undergo a full technical review before it will appear on AMO. Depending on the state of the review queue, wait times may take up to two weeks.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "partnership"
   content: content
 %}
@@ -99,7 +99,7 @@ While the Recommended program will always be on the lookout for great new extens
 If you’d like to nominate an extension you feel deserves consideration for the Recommended program—even if it’s one of your own—please email us a link to its AMO listing page at **amo-featured [at] mozilla [dot] org** and briefly explain why you think your extension should be considered for the Recommended list.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "selection"
   content: content
 %}

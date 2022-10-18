@@ -17,7 +17,7 @@ date: 2019-07-09 09:00:00
 Manage your extension to keep it growing, accurate, and integrated with Firefox
 
 {% endcapture %}
-{% include modules/overview-page-hero.liquid
+{% include modules/overview-page-hero.liquid,
 	content: page_hero_banner_content
 	background: "develop-overview-hero-bg.jpg"
 %}
@@ -33,7 +33,7 @@ Manage your extension to keep it growing, accurate, and integrated with Firefox
 We’re constantly improving Firefox and the add-on experience. Use [this list of resources for publishers](/documentation/manage/resources-for-publishers/) to stay up-to-date with Firefox news and developments.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
 	id: "stay-informed-when-firefox-changes"
 	content: content_with_toc
 %}
@@ -53,7 +53,7 @@ When you’re ready to improve your extension or receive suggestions for new fea
 ![Power Up Extensions](/assets/img/documentation/develop/PowerUpExtensions_fullwidth.png)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	id: "publish-extension-updates"
 	content: content
 %}
@@ -71,7 +71,7 @@ Add-ons are often the result of the work of a team of developers, which is why [
 If someone is using your code without your permission, please follow [these instructions](https://www.mozilla.org/about/legal/report-infringement/) to file a DMCA Notice with Mozilla’s legal team to resolve the situation.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	id: "manage-authors-of-your-extension"
 	content: content
 %}
@@ -88,7 +88,7 @@ Keep your user base growing regularly reviewing your listing to [make sure it’
 
 <!-- Video Popup Thumbnail -->
 
-{% include modules/video-popup.liquid
+{% include modules/video-popup.liquid,
 	title: "Tips for great content and design for your extension"
 	youtube_id: "a0_OsLGI0k4"
 	image: "documentation/develop/extension-workshop-content-and-design.png"
@@ -104,7 +104,7 @@ Mozilla promotes a selection of [Recommended Extensions](https://blog.mozilla.or
 [Making money from browser extensions](/documentation/publish/make-money-from-browser-extensions/) is also something you might want to consider as your user base grows.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	id: "promote-your-extension"
 	content: content
 %}
@@ -122,7 +122,7 @@ Sometimes, add-ons outlive their usefulness: features they provide may be added 
 Here’s how to [Retire your extension](/documentation/manage/retiring-your-extension/) gracefully.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	id: "removing-your-extension-from-distribution"
 	content: content
 %}

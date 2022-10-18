@@ -18,7 +18,7 @@ date: 2019-06-06 07:39:19
 Now that your add-on is published on [addons.mozilla.org](https://addons.mozilla.org/) (AMO), check out the following resources.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -43,7 +43,7 @@ Now that your add-on is published on [addons.mozilla.org](https://addons.mozilla
 - Join the conversation on the [community forum](https://discourse.mozilla.org/c/add-ons) and on [Twitter](https://twitter.com/mozamo).
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "security-over-choice"
   content: content_with_toc
 %}

@@ -17,7 +17,7 @@ date: 2021-04-01
 You can code a static theme to customize Firefox's look and feel. 
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -37,7 +37,7 @@ A theme and browser extension functionality cannot be defined in one package, su
 :::
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "introduction"
   content: content_with_toc
 %}
@@ -90,7 +90,7 @@ Where:
 4. Package your theme and submit it to [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes) (AMO). Information about how to package, sign, and distribute process can be found in the [Signing and distribution overview](/documentation/publish/signing-and-distribution-overview/). You can choose to publically distribute your theme on AMO or [distribute it yourself](/documentation/publish/self-distribution/). 
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "create-a-simple-static-theme"
   content: content
   aside: ""
@@ -117,7 +117,7 @@ If you plan to upload a packaged file, you will need to increase the version num
 You can also modify your theme using the AMO theme generator by selecting "Create a Theme" for Step 2. If you choose this option, you do not need to increase the version number in your theme's manifest.json. 
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "updating-static-themes"
   content: content
   aside: ""
@@ -151,7 +151,7 @@ See details about this theme in the [themes](https://github.com/mdn/webextension
 Obviously, you can still provide a single wide image if you prefer.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "single-image-themes"
   content: content
   aside: ""
@@ -200,7 +200,7 @@ and the images tiling with:
 Full details of how to setup this theme can be found in the [themes](https://github.com/mdn/webextensions-examples/tree/master/themes) example [weta_mirror](https://github.com/mdn/webextensions-examples/tree/master/themes/weta_mirror). Full details of the alignment options can be found in the [`theme` key description](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "multiple-image-themes"
   content: content
   aside: ""
@@ -218,7 +218,7 @@ It is possible to create an animated theme using an APNG format image, as in the
 You can also animate themes programmatically with [dynamic themes](/documentation/themes/dynamic-themes/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "static-animated-themes"
   content: content
   aside: ""
