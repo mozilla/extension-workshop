@@ -6,7 +6,7 @@ topic: Develop
 tags: [webextensions, api, firefox]
 contributors: [rebloor, willdurand, erosman, Klestofer]
 last_updated_by: willdurand
-date: 2022-10-17
+date: 2022-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -282,7 +282,7 @@ In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace w
 
 ### Extension version in the manifest
 
-The format of the top-level manifest.json `version` key in Firefox has evolved and became simpler: letters and other previously allowed symbols are no longer accepted. The value must be a string with 1 to 4 numbers separated with dots (e.g. `1.2.3.4`). Each number can have up to 9 digits and leading zeros are not allowed (e.g. `2.01` is forbidden but `2.1` is allowed).
+The format of the top-level manifest.json `version` key in Firefox has evolved and became simpler: letters and other previously allowed symbols are no longer accepted. The value must be a string with 1 to 4 numbers separated with dots (e.g. `1.2.3.4`). Each number can have up to 9 digits and leading zeros before another digit are not allowed (e.g. `2.01` is forbidden but `0.2`, `2.0.1` and `2.1` are allowed).
 
 ## Migration checklist
 
