@@ -27,7 +27,7 @@ date: 2022-10-18
 The first few minutes after someone installs your extension can be critical to its success. Your new user needs to know where to start and how to use the features of your browser extension.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
   content: page_hero_banner_content
 %}
 

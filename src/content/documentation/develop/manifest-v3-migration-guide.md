@@ -18,7 +18,7 @@ date: 2022-10-18
 We have introduced a developer preview of Manifest V3 to Firefox. This page provides you with details of what's changed and how you adapt your extensions to take advantage of this preview.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -35,7 +35,7 @@ The Manifest v3 changes apply to extensions for Chromium-based browsers – such
 This article discusses the overall changes introduced with the developer preview of Manifest v3 for Firefox and also highlights where it diverges from the Chrome and Safari implementation.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
     id: "what-is-manifest-v3"
     content: content
 %}
@@ -54,7 +54,7 @@ You can now install MV3 extensions from `about:debugging`.
 If you want to permanently install an MV3 extension, you need to use the Nightly or Developer edition channels with `xpinstall.signatures.required` set to `false`.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "turn-on-the-developer-preview"
     content: content
 %}
@@ -70,7 +70,7 @@ Use [`web-ext run`](/documentation/develop/getting-started-with-web-ext/) with t
 This section details the Manifest V3 changes made to Firefox and available in the developer preview.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "developer-preview-changes"
     content: content
 %}
@@ -86,7 +86,7 @@ The manifest.json key [`manifest_version`](https://developer.mozilla.org/en-US/d
 ```
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "manifest-version"
     content: content
 %}
@@ -111,7 +111,7 @@ To accommodate this change, provide a local icon and defined in your manifest.js
 ```
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "search-extensions-icons"
     content: content
 %}
@@ -139,7 +139,7 @@ Move all host permission specifications to the manifest.json key `host_permissio
 ```
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "host-permissions"
     content: content
 %}
@@ -180,7 +180,7 @@ Also, in Chromium and Safari the Browser Action and Page Action APIs are unified
 :::
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "browser-action"
     content: content
 %}
@@ -194,7 +194,7 @@ The new [Scripting API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons
 Also, the `code` parameter is removed so that arbitrary strings can no longer be executed. This API requires the [`scripting` permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So, you need to move any arbitrary strings executed as scripts to files and rewrite your code to use the Scripting API.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "scripting-api"
     content: content
 %}
@@ -225,7 +225,7 @@ Safari also supports event-driven background scripts, however, Chromium has adop
 :::
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "event-driven-background-dscripts"
     content: content
 %}
@@ -245,7 +245,7 @@ Move the extension’s CSP to the the manifest.json key to `extension_pages`, li
 ```
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "content-security-policies"
     content: content
 %}
@@ -259,7 +259,7 @@ Web accessible resources are available only to the sites and extensions specifie
 To migrate your extension, rewrite the manifest.json key [‘web_accessible_resources’](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)  to specify the sites and extensions that can access the resources.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "web-accessible-resources"
     content: content
 %}
@@ -273,7 +273,7 @@ Chromium introduces [promise](https://developer.chrome.com/docs/extensions/mv3/i
 In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace with APIs that provide asynchronous event handling using callbacks. In full release of Manifest v3, Firefox will support promises for asynchronous events in the `chrome.*` namespace.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "features-already-supported-by-firefox"
     content: content
 %}
@@ -297,7 +297,7 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 - Ensure that the top-level manifest.json `version` key is a string consisting of numbers separated with up to 3 dots. For details, see [version format](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "developer-preview-changes"
     content: content
 %}
@@ -309,7 +309,7 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 We are working towards a general availability release of manifest V3 for a future release.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "developer-preview-changes"
     content: content
 %}

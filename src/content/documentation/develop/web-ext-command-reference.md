@@ -41,7 +41,7 @@ date: 2022-08-09
 This page lists all the commands and options available under the [web-ext](https://github.com/mozilla/web-ext) command line tool.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 

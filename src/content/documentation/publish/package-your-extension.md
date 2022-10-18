@@ -38,7 +38,7 @@ You don't have to use the XPI extension when uploading to AMO.
 :::
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -59,7 +59,7 @@ The most convenient way to package your extension is to use [`web-ext build`](/d
 :::
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
 	id: "package-intro"
 	content: content_with_toc
 %}
@@ -81,7 +81,7 @@ The most convenient way to package your extension is to use [`web-ext build`](/d
 ![Creating package windows image](/assets/img/documentation/publish/creating_package_windows.png)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "package-windows"
   content: content
 %}
@@ -103,7 +103,7 @@ The most convenient way to package your extension is to use [`web-ext build`](/d
 ![Creating package Mac image](/assets/img/documentation/publish/creating_package_mac.png)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "package-mac"
   content: content
 %}
@@ -128,7 +128,7 @@ See [the documentation for the `zip` command](https://linux.die.net/man/1/zip) f
 :::
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "package-linux"
   content: content
   aside: ""

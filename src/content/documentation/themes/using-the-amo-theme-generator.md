@@ -18,7 +18,7 @@ date: 2021-04-02
 The theme generator on [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) (AMO) guides you through the process of creating a theme for Firefox. Once you have defined the colors and image for your theme, the generator will submit your new theme to AMO. You may submit themes for publishing on AMO or for self-distribution.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -98,7 +98,7 @@ Themes submitted for self-distribution will be signed immediately and an XPI fil
 :::
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "getting-started"
   content: content_with_toc
 %}
@@ -158,7 +158,7 @@ Once you have filled in all of the required information, you can complete the su
 <img src="/assets/img/documentation/themes/theme_after_submit.png" style="border:1px solid black" />
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "submitting-your-theme"
   content: content
   aside: ""
@@ -189,7 +189,7 @@ You may want to make changes to your theme after it has been published.
 After the new version of theme has been approved, it will be available for installation and existing users will receive the update. 
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "updating-your-theme"
   content: content
   aside: ""

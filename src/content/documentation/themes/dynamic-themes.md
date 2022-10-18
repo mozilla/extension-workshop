@@ -17,7 +17,7 @@ date: 2021-04-02
 Dynamic themes can customize the look and feel of Firefox, and can be activated to change based on user requests or dynamic information. 
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -31,7 +31,7 @@ Dynamic themes can customize the look and feel of Firefox, and can be activated 
 Dynamic themes have access to the full power of the [`theme`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/theme) API and can be integrated into a [browser extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) to change the appearance of Firefox. Dynamic themes can also change based on user requests or dynamic information, such as the time of day or what website the user is accessing.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "introduction"
   content: content
   aside: ""
@@ -94,7 +94,7 @@ Learn more about dynamic themes and see an additional example in the following v
 
 <!-- Video Popup Thumbnail -->
 
-{% include modules/video-popup.liquid
+{% include modules/video-popup.liquid,
 	title: "Dynamic Themes in Firefox"
 	youtube_id: "ycckyrUN0AY"
 	image: "documentation/themes/dynamic-themes-video-screenshot.png"
@@ -108,7 +108,7 @@ If you have not built a browser extension before, check out [Your first extensio
 :::
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "creating-dynamic-themes"
   content: content
   aside: ""
@@ -127,7 +127,7 @@ The workflow for publishing dynamic themes follows the same path as publishing b
 First, you will need to [package](/documentation/publish/package-your-extension/) your dynamic theme. Then, you will need to submit it to [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=dynamic-themes) (AMO) for signing. If you would like to to distribute your dynamic theme on AMO, follow the instructions for [Listing on AMO](/documentation/publish/submitting-an-add-on/#listing-on-amo) in the [Submitting an add-on](/documentation/publish/submitting-an-add-on/) article. If you do not want to list your dynamic theme on AMO, follow the instructions for [Self-distribution](documentation/publish/submitting-an-add-on/#self-distribution). 
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "publishing-dynamic-themes"
   content: content
   aside: ""

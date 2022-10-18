@@ -31,7 +31,7 @@ date: 2021-12-01
 # Firefox Add-on Distribution Agreement
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -64,7 +64,7 @@ This Firefox Add-on Distribution Agreement ("Agreement") governs Your distributi
 - “You” means the person or entity entering this Agreement for the purpose of distributing a Firefox Add-on.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "introduction"
   content: content_with_toc
 %}
@@ -82,7 +82,7 @@ In order to distribute an Add-on, You'll need to create a Firefox account. Durin
 We may require you to disclose all Accounts and Add-ons that You own or control. You agree that you will disclose all Accounts and Add-ons that You own or control if we request this information.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "accounts"
   content: content
   aside: ""
@@ -98,7 +98,7 @@ We may require you to disclose all Accounts and Add-ons that You own or control.
 Our [Websites, Communications and Cookies Privacy Notice](https://www.mozilla.org/privacy/websites/) describes what information we receive from Developers and how we use that information. We use the information we receive as described in our [Mozilla Privacy Policy](https://www.mozilla.org/privacy/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "privacy-policy"
   content: content
 %}
@@ -126,7 +126,7 @@ Signed Listed Add-ons are automatically distributed by Mozilla on AMO. Links to 
 All Add-ons, regardless of type or distribution channel, must meet certain review criteria, which are described in our [Review Policies](/documentation/publish/add-on-policies/). Mozilla may at any time monitor, test or review Listed and Self-distributed Add-ons for compliance with this Agreement and the [Review Policies](/documentation/publish/add-on-policies/). The inclusion of an Add-on on AMO or issuance of a Mozilla Certificate is at Mozilla’s sole discretion.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "distribution-certificates-and-review-process"
   content: content
 %}
@@ -149,7 +149,7 @@ You represent and warrant that:
 **(d) Export Restrictions.** Your distribution of Add-ons may be subject to United States export laws and regulations. You will comply with all domestic and international export laws and regulations that apply to Your distribution of Add-ons. These laws include restrictions on destinations, users and end use.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "your-obligations"
   content: content
 %}
@@ -168,7 +168,7 @@ You hereby grant to Mozilla a non-exclusive, worldwide, royalty-free, sublicensa
 Between Mozilla and You, each party shall own all right, title and interest, including without limitation all intellectual property rights, relating to its Brand Features. Mozilla does not grant You any intellectual property rights not specifically stated in this Agreement. For example, this Agreement does not provide You the right to use any of Mozilla’s Brand Features. Firefox and AMO are distributed under and subject to the current version of the Mozilla Public License, or other similarly permissive licenses.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "licenses-proprietary-rights"
   content: content
 %}
@@ -197,7 +197,7 @@ In addition, we may at any time suspend or terminate this Agreement with You if 
 For information on how to notify Mozilla in connection with claimed copyright or trademark infringement (“Take-Down Request”) see [here](https://www.mozilla.org/about/legal/report-abuse/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "content-removal"
   content: content
 %}
@@ -212,7 +212,7 @@ For information on how to notify Mozilla in connection with claimed copyright or
 AMO, MOZILLA CERTIFICATES, AND MOZILLA PRODUCTS AND SERVICES ARE PROVIDED “AS IS”. MOZILLA, ITS CONTRIBUTORS & LICENSORS, DISCLAIM ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF IMPLIED WARRANTIES, SO THIS DISCLAIMER MAY NOT APPLY TO YOU.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "disclaimer-of-warranties"
   content: content
 %}
@@ -227,7 +227,7 @@ AMO, MOZILLA CERTIFICATES, AND MOZILLA PRODUCTS AND SERVICES ARE PROVIDED “AS 
 YOU EXPRESSLY UNDERSTAND AND AGREE THAT, EXCEPT AS REQUIRED BY LAW, MOZILLA, ITS CONTRIBUTORS & LICENSORS, WILL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT MOZILLA OR ITS AGENTS HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING. IN NO EVENT SHALL MOZILLA’S AGGREGATE LIABILITY TO YOU FOR ANY DAMAGES ARISING FROM OR RELATED TO THESE TERMS BE IN EXCESS OF THE GREATER OF (i) \$100 OR (ii) THE TOTAL AMOUNTS PAID TO YOU BY MOZILLA IN THE TWELVE MONTHS IMMEDIATELY PRECEDING THE INITIAL NOTICE OF ANY CLAIM. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN TYPES OF LIABILITY, SO THIS DISCLAIMER MAY NOT APPLY TO YOU.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "limitation-of-liability"
   content: content
 %}
@@ -244,7 +244,7 @@ You release Mozilla, its officers, employees, agents and successors from claims,
 If any third party brings a claim against Mozilla related to Your use of AMO or Your Add-ons, You will defend and hold Mozilla harmless from and against all damages, losses, and expenses of any kind (including reasonable legal fees and costs) related to such claim.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "release-idemnification"
   content: content
 %}
@@ -271,7 +271,7 @@ Entire Agreement. This Agreement constitutes the whole legal agreement between Y
 **(f) Contact Us.** If You have questions about this Agreement, send an email to [legal-notices@mozilla.com](mailto:legal-notices@mozilla.com) or mail us at: Attn: Mozilla – Legal Notices, 2 Harrison St. #175, San Francisco, CA 94105.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "general-legal-terms"
   content: content
 %}
