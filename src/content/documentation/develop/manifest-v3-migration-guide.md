@@ -5,8 +5,8 @@ permalink: /documentation/develop/manifest-v3-migration-guide/
 topic: Develop
 tags: [webextensions, api, firefox]
 contributors: [rebloor, willdurand, erosman, Klestofer]
-last_updated_by: Klestofer
-date: 2022-09-12
+last_updated_by: willdurand
+date: 2022-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -280,16 +280,21 @@ In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace w
 
 {% capture content %}
 
+### Extension version in the manifest
+
+The format of the top-level manifest.json `version` key in Firefox has evolved and became simpler: letters and other previously allowed symbols are no longer accepted. The value must be a string with 1 to 4 numbers separated with dots (e.g. `1.2.3.4`). Each number can have up to 9 digits and leading zeros before another digit are not allowed (e.g. `2.01` is forbidden but `0.2`, `2.0.1` and `2.1` are allowed).
+
 ## Migration checklist
 
 - Update the manifest.json key `manifest_version` to `3`.
-- If your extension adds a search engine, add a local icon and reference it in the  manifest.json key `chrome_settings_overrides.search_provider.favicon_url`.
+- If your extension adds a search engine, add a local icon and reference it in the manifest.json key `chrome_settings_overrides.search_provider.favicon_url`.
 - Remove any host permissions from the manifest.json keys permissions and `optional_permissions` and add them to the `host_permissions` key.
 - Rename the manifest.json key `browser_action` to `action` and update any API references from `browser.browserAction` to `browser.action`.
 - Convert background pages to be non-persistent.
 - Move the extension’s CSP to the the manifest.json key ‘content_security_policy.extension_pages’ and update the CSP to conform to Manifest V3 requirements.
 - Move any arbitrary strings executed as scripts to files and update your code to use the Scripting API.
 - The add-on ID is required to publish your extension. Make sure to add one in the `browser_specific_settings.gecko.id` manifest.json key.
+- Ensure that the top-level manifest.json `version` key is a string consisting of numbers separated with up to 3 dots. For details, see [version format](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format).
 
 {% endcapture %}
 {% include modules/one-column.liquid
