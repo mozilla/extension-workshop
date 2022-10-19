@@ -414,7 +414,7 @@ You need to create [API access credentials](http://addons-server.readthedocs.org
 
 #### `--use-submission-api`
 
-Use the experimental [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) to sign your extension. This allows listed versions to be freely created by enabling all nessecary additional metadata to be submitted at the same time as the extension file.
+Use the experimental [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) to sign your extension. This allows listed versions to be freely created by enabling all necessary additional metadata to be submitted at the same time as the extension file.
 
 Environment variable: `$WEB_EXT_USE_SUBMISSION_API`
 
@@ -432,20 +432,20 @@ Environment variable: `$WEB_EXT_API_SECRET`
 
 #### `--api-url-prefix`
 
-The signing API URL prefix. This should always be a string. If not specified, this will default to&nbsp;`https://addons.mozilla.org/api/v4` which is the production API.  
+The signing API URL prefix. This should always be a string. If not specified, this will default to&nbsp;`https://addons.mozilla.org/api/v4` which is the production API.
 
 ::: note alert
-This variable is not used with the add-on submission API. See --amo-base-url instead.
+This option is ignored when `--use-submission-api` is used. See `--amo-base-url` instead.
 :::
 
 Environment variable: `$WEB_EXT_API_URL_PREFIX`
 
 #### `--amo-base-url`
 
-The add-on submission API base URL. This should always be a string. If not specified, this will default to&nbsp;`https://addons.mozilla.org/api/v5` which is the production API.  
+The add-on submission API base URL. This should always be a string. If not specified, this will default to&nbsp;`https://addons.mozilla.org/api/v5` which is the production API.
 
 ::: note alert
-This variable is not used with the signing API. See --api-url-prefix instead.
+This option is ignored when `--use-submission-api` is used. See `--api-url-prefix` instead.
 :::
 
 Environment variable: `$WEB_EXT_AMO_BASE_URL`
@@ -454,11 +454,7 @@ Environment variable: `$WEB_EXT_AMO_BASE_URL`
 
 #### `--api-proxy`
 
-A proxy host to use for all API connections. Example: `https://yourproxy:6000.`Read more about [how proxy requests work](https://github.com/request/request#proxies). There is a separate section about [signing in a restricted environment](/documentation/develop/getting-started-with-web-ext/#restricted-environment) if the proxy approach doesn't work for you. 
-
-::: note alert
-Proxies are not currently supported with the add-on submission API. See https://github.com/mozilla/web-ext/issues/2472.
-:::
+A proxy host to use for all API connections. Example: `https://yourproxy:6000.`Read more about [how proxy requests work](https://github.com/request/request#proxies). There is a separate section about [signing in a restricted environment](/documentation/develop/getting-started-with-web-ext/#restricted-environment) if the proxy approach doesn't work for you.
 
 Environment variable: `$WEB_EXT_API_PROXY`
 
@@ -466,13 +462,15 @@ Environment variable: `$WEB_EXT_API_PROXY`
 
 #### `--channel`
 
-This specifies the `channel` in which the extension is signed. For the signing API it defaults to `unlisted` or the `channel` of your extension's latest version. For the add-on signing API the variable is required and has no default. The values for `channel` are:
+This specifies the `channel` in which the extension is signed. For the signing API, it defaults to `unlisted` or the `channel` of your extension's latest version. For the add-on submission API, this option is required and has no default.
+
+The allowed values for `channel` are:
 
 <div class="table-wrapper table-scroll">
 
 | Channel    | Result                                                                                                                                                                                                              |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `listed`   | The extension gets submitted for public listing on [addons.mozilla.org](https://addons.mozilla.org). With the signing API this type of channel is not well supported and cannot be used for some cases, as documented below. (The add-on submission API has full support.) |
+| `listed`   | The extension gets submitted for public listing on [addons.mozilla.org](https://addons.mozilla.org). With the signing API this type of channel is not well supported and cannot be used for some cases, as documented below. The add-on submission API has full support (see `--use-submission-api`). |
 | `unlisted` | The extension gets submitted for signing for the purpose of [self-distribution](/documentation/publish/self-distribution/) on your own website.                                                                                                                                                      |
 
 </div>
