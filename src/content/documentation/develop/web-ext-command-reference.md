@@ -510,7 +510,7 @@ Environment variable: `$WEB_EXT_ID`
 Path to a JSON file containing an object with metadata to be passed to the add-on submission API. Typically this is used to submit the required metadata for the first listed version of an extension (e.g. `categories`; `license`), but any [supported JSON metadata](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html) can be supplied. 
 
 ::: note alert
-This variable is not used with the signing API.
+This option is only used when combined with `--use-submission-api`.
 :::
 
 Environment variable: `$WEB_AMO_METADATA`
