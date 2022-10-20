@@ -416,6 +416,7 @@ You need to create [API access credentials](http://addons-server.readthedocs.org
 
 Use the experimental [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) to sign your extension. This allows listed versions to be freely created by enabling all necessary additional metadata to be submitted at the same time as the extension file.
 
+With this option enabled, `--channel` changes to be a required field with no default.  The choices remain `listed` and `unlisted`.
 Environment variable: `$WEB_EXT_USE_SUBMISSION_API`
 
 #### `--api-key`
@@ -462,7 +463,7 @@ Environment variable: `$WEB_EXT_API_PROXY`
 
 #### `--channel`
 
-This specifies the `channel` in which the extension is signed. For the signing API, it defaults to `unlisted` or the `channel` of your extension's latest version. For the add-on submission API, this option is required and has no default.
+This specifies the `channel` in which the extension is signed. It defaults to `unlisted` or the `channel` of your extension's latest version. When the `--use-submission-api` option is specified the behaviour of `--channel` - and the limitations - are quite different than explained here: see the documentation for `--use-submission-api` above for more information.
 
 The allowed values for `channel` are:
 
@@ -470,7 +471,7 @@ The allowed values for `channel` are:
 
 | Channel    | Result                                                                                                                                                                                                              |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `listed`   | The extension gets submitted for public listing on [addons.mozilla.org](https://addons.mozilla.org). With the signing API this type of channel is not well supported and cannot be used for some cases, as documented below. The add-on submission API has full support (see `--use-submission-api`). |
+| `listed`   | The extension gets submitted for public listing on [addons.mozilla.org](https://addons.mozilla.org). This type of channel is not well supported and cannot be used for some cases, as documented below. |
 | `unlisted` | The extension gets submitted for signing for the purpose of [self-distribution](/documentation/publish/self-distribution/) on your own website.                                                                                                                                                      |
 
 </div>
