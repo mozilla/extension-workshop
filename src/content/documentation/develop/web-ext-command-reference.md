@@ -416,9 +416,13 @@ You need to create [API access credentials](http://addons-server.readthedocs.org
 
 Use the experimental [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) to sign your extension. This allows listed versions to be freely created by enabling all necessary additional metadata to be submitted at the same time as the extension file.
 
-With this option enabled, `--channel` changes to be a required field with no default.  The choices remain `listed` and `unlisted`.
+With this option enabled, `--channel` changes to be a required option with no default.  The choices remain `listed` and `unlisted`.
 
 Environment variable: `$WEB_EXT_USE_SUBMISSION_API`
+
+::: note
+This option was added in web-ext 7.3.1.
+:::
 
 #### `--api-key`
 
