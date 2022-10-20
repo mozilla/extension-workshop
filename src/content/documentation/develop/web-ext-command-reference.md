@@ -500,7 +500,7 @@ Environment variable: `$WEB_EXT_TIMEOUT`
 A custom identifier string for the extension. This has no effect if the extension already declares an identifier in its manifest. This option may be useful for signing versions of an existing extension that you own. 
 
 ::: note alert
-This variable cannot be used with the add-on submission API - custom identifers must be specified in the manifest.
+This option cannot be used when `--use-submission-api` is also used: the add-on ID must be specified in the `manifest.json` file.
 :::
 
 Environment variable: `$WEB_EXT_ID`
