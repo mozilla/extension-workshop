@@ -27,9 +27,10 @@ contributors:
     akhilpanchal,
     ankushduacodes,
     willdurand,
+    eviljeff
   ]
-last_updated_by: willdurand
-date: 2022-08-09
+last_updated_by: eviljeff
+date: 2022-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -411,6 +412,18 @@ This command uses the [addons.mozilla.org API](https://addons-server.readthedocs
 
 You need to create [API access credentials](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#access-credentials) to run this command. [Obtain your personal access credentials here](https://addons.mozilla.org/developers/addon/api/key/).
 
+#### `--use-submission-api`
+
+Use the experimental [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) to sign your extension. This allows listed versions to be freely created by enabling all necessary additional metadata to be submitted at the same time as the extension file.
+
+With this option enabled, `--channel` changes to be a required option with no default.  The choices remain `listed` and `unlisted`.
+
+Environment variable: `$WEB_EXT_USE_SUBMISSION_API`
+
+::: note
+This option was added in web-ext 7.3.1.
+:::
+
 #### `--api-key`
 
 Your API key ([JWT issuer](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#create-a-jwt-for-each-request/)) for accessing the [addons.mozilla.org API](http://addons-server.readthedocs.org/en/latest/topics/api/index.html). This should always be a string.
@@ -427,7 +440,21 @@ Environment variable: `$WEB_EXT_API_SECRET`
 
 The signing API URL prefix. This should always be a string. If not specified, this will default to&nbsp;`https://addons.mozilla.org/api/v4` which is the production API.
 
+::: note alert
+This option is ignored when `--use-submission-api` is used. See `--amo-base-url` instead.
+:::
+
 Environment variable: `$WEB_EXT_API_URL_PREFIX`
+
+#### `--amo-base-url`
+
+The add-on submission API base URL. This should always be a string. If not specified, this will default to&nbsp;`https://addons.mozilla.org/api/v5` which is the production API.
+
+::: note alert
+This option is ignored when `--use-submission-api` is used. See `--api-url-prefix` instead.
+:::
+
+Environment variable: `$WEB_EXT_AMO_BASE_URL`
 
 <section id="api-proxy"></section>
 
@@ -441,7 +468,9 @@ Environment variable: `$WEB_EXT_API_PROXY`
 
 #### `--channel`
 
-This specifies the `channel` in which the extension is signed. It defaults to `unlisted` or the `channel` of your extension's latest version. The values for `channel` are:
+This specifies the `channel` in which the extension is signed. It defaults to `unlisted` or the `channel` of your extension's latest version. When the `--use-submission-api` option is specified the behaviour of `--channel` - and the limitations - are quite different than explained here: see the documentation for `--use-submission-api` above for more information.
+
+The allowed values for `channel` are:
 
 <div class="table-wrapper table-scroll">
 
@@ -474,9 +503,23 @@ Environment variable: `$WEB_EXT_TIMEOUT`
 
 #### `--id`
 
-A custom identifier string for the extension. This has no effect if the extension already declares an identifier in its manifest. This option may be useful for signing versions of an exisiting extension that you own.
+A custom identifier string for the extension. This has no effect if the extension already declares an identifier in its manifest. This option may be useful for signing versions of an existing extension that you own. 
+
+::: note alert
+This option cannot be used when `--use-submission-api` is also used: the add-on ID must be specified in the `manifest.json` file.
+:::
 
 Environment variable: `$WEB_EXT_ID`
+
+#### `--amo-metadata`
+
+Path to a JSON file containing an object with metadata to be passed to the add-on submission API. Typically this is used to submit the required metadata for the first listed version of an extension (e.g. `categories`; `license`), but any [supported JSON metadata](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html) can be supplied. 
+
+::: note alert
+This option is only used when combined with `--use-submission-api`.
+:::
+
+Environment variable: `$WEB_AMO_METADATA`
 
 </div>
 </article>
