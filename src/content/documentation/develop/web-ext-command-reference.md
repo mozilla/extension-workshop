@@ -478,14 +478,14 @@ The allowed values for `channel` are:
 One example of using the `--channel` option is to [create a beta version](/documentation/develop/getting-started-with-web-ext/#signing-test-version-listed) for a `listed` extension (that is, one you have already [submitted to addons.mozilla.org](/documentation/publish/submitting-an-add-on/)).
 
 ::: note alert
-With the signing API, setting `--channel=listed` for a new extension is not yet supported. See [https://github.com/mozilla/web-ext/issues/804](https://github.com/mozilla/web-ext/issues/804). (The add-on submission API has full support.)
+Setting `--channel=listed` for a new extension is not yet supported. See [https://github.com/mozilla/web-ext/issues/804](https://github.com/mozilla/web-ext/issues/804)
 :::
 
 ::: note alert
-With the signing API, setting `--channel=listed` for a new version of a listed extension is not well supported. It will upload your new version to [addons.mozilla.org](https://addons.mozilla.org) as if you'd [submitted it manually](/documentation/publish/submitting-an-add-on/). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status. (The add-on submission API has full support.)
+Setting `--channel=listed` for a new version of a listed extension is not well supported. It will upload your new version to [addons.mozilla.org](https://addons.mozilla.org) as if you'd [submitted it manually](/documentation/publish/submitting-an-add-on/). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.
 :::
 
-See [documentation on the signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html#uploading-a-version) or [documentation on the add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html) for more information.
+See [documentation on the signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html#uploading-a-version) for more information.
 
 Environment variable: `$WEB_EXT_CHANNEL`
 
