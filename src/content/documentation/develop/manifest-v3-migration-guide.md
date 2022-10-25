@@ -6,7 +6,7 @@ topic: Develop
 tags: [webextensions, api, firefox]
 contributors: [rebloor, willdurand, erosman, Klestofer]
 last_updated_by: willdurand
-date: 2022-10-18
+date: 2022-10-25
 ---
 
 <!-- Page Hero Banner -->
@@ -295,6 +295,7 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 - Move any arbitrary strings executed as scripts to files and update your code to use the Scripting API.
 - The add-on ID is required to publish your extension. Make sure to add one in the `browser_specific_settings.gecko.id` manifest.json key.
 - Ensure that the top-level manifest.json `version` key is a string consisting of numbers separated with up to 3 dots. For details, see [version format](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format).
+- Rename the deprecated manifest.json key `applications` to `browser_specific_settings`.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
