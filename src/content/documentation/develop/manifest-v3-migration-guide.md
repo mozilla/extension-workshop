@@ -288,14 +288,14 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 
 - Update the manifest.json key `manifest_version` to `3`.
 - If your extension adds a search engine, add a local icon and reference it in the manifest.json key `chrome_settings_overrides.search_provider.favicon_url`.
-- Remove any host permissions from the manifest.json keys permissions and `optional_permissions` and add them to the `host_permissions` key.
+- Remove any host permissions from the manifest.json keys `permissions` and `optional_permissions` and add them to the `host_permissions` key.
 - Rename the manifest.json key `browser_action` to `action` and update any API references from `browser.browserAction` to `browser.action`.
 - Convert background pages to be non-persistent.
-- Move the extension’s CSP to the the manifest.json key ‘content_security_policy.extension_pages’ and update the CSP to conform to Manifest V3 requirements.
+- Move the extension’s CSP to the the manifest.json key `content_security_policy.extension_pages` and update the CSP to conform to Manifest V3 requirements.
 - Move any arbitrary strings executed as scripts to files and update your code to use the Scripting API.
-- The add-on ID is required to publish your extension. Make sure to add one in the `browser_specific_settings.gecko.id` manifest.json key.
-- Ensure that the top-level manifest.json `version` key is a string consisting of numbers separated with up to 3 dots. For details, see [version format](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format).
 - Rename the deprecated manifest.json key `applications` to `browser_specific_settings`.
+- The add-on ID is required to publish your extension. Make sure to add one in the manifest.json key `browser_specific_settings.gecko.id`.
+- Ensure that the top-level manifest.json key `version` is a string consisting of numbers separated with up to 3 dots. For details, see [version format](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
