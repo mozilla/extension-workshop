@@ -35,7 +35,7 @@ references:
 
   deploy_container: &deploy_container
     docker:
-      - image: cimg/python:3.10-node
+      - image: cimg/python:3.11-node
 
   attach_deploy_workspace: &attach_deploy_workspace
     attach_workspace:
