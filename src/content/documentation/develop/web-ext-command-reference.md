@@ -27,10 +27,11 @@ contributors:
     akhilpanchal,
     ankushduacodes,
     willdurand,
-    eviljeff
+    eviljeff,
+    hamatti
   ]
-last_updated_by: eviljeff
-date: 2022-10-18
+last_updated_by: hamatti
+date: 2022-10-24
 ---
 
 <!-- Page Hero Banner -->
@@ -63,73 +64,100 @@ This page lists all the commands and options available under the [web-ext](https
 
 web-ext has the following commands; options specific to these commands are included as subsections.
 
-<section id="web-ext-build"></section>
+<section id="web-ext-build">
 
 ### `web-ext build`
 
 Packages an extension into a `.zip` file, ignoring files that are commonly unwanted in packages, such as `.git` and other artifacts. The name of the `.zip` file is taken from the [name](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) field in the extension [manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+
+<section id="as-needed">
 
 #### `--as-needed`
 
 Re-build the extension anytime you edit and save a source file. This allows you to continuously create a package with the most up to date source code.
 
 Environment variable: `$WEB_EXT_AS_NEEDED=true`
+</section>
 
-<section id="overwrite-dest"></section>
+<section id="overwrite-dest">
 
 #### `--overwrite-dest`, `-o`
 
 Overwrite destination package file if it exists. Without this option, web-ext will exit in error if the destination file already exists.
 
 Environment variable: `$WEB_EXT_OVERWRITE_DEST=true`
+</section>
+</section><!-- web-ext-build -->
 
-<section id="web-ext-docs"></section>
+<section id="web-ext-docs">
 
 ### `web-ext docs`
 
 Opens the [web-ext documentation](/documentation/develop/getting-started-with-web-ext/) in the user's default browser.
 
-<section id="web-ext-lint"></section>
+</section><!-- web-ext-docs -->
+
+<section id="web-ext-lint">
 
 ### `web-ext lint`
 
 Reports errors in the extension [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) or other source code files. When [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is set in your extension’s manifest file, lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. See the [addons-linter](https://github.com/mozilla/addons-linter) project for more information about what kind of rules are used to validate extension source.
+
+<section id="output">
 
 #### `--output`, `-o`
 
 The type of output to generate when reporting on errors. Choices: `json` or `text`.
 
 Environment variable: `$WEB_EXT_OUTPUT`
+</section>
+
+<section id="metadata">
 
 #### `--metadata`
 
 Output only metadata about the extension in JSON.
 
 Environment variable: `$WEB_EXT_METADATA=true`
+</section>
+
+<section id="pretty">
 
 #### `--pretty`
 
 Format the JSON output so that it's easier to read. This only applies when `--output` is set to `json`.
 
 Environment variable: `$WEB_EXT_PRETTY=true`
+</section>
+
+<section id="self-hosted">
 
 #### `--self-hosted`
 
 Declares that your extension will be self-hosted.&nbsp;This disables messages related to hosting on [addons.mozilla.org](https://addons.mozilla.org/).
 
 Environment variable: `$WEB_EXT_SELF_HOSTED=true`
+</section>
+
+<section id="boring">
 
 #### `--boring`
 
 Disables colorful shell characters so that the output only contains plain text.
 
 Environment variable: `$WEB_EXT_BORING=true`
+</section>
+
+<section id="warnings-as-errors">
 
 #### `--warnings-as-errors`, `-w`
 
 Treat warnings as errors by exiting non-zero for warnings.
 
 Environment variable: `$WEB_EXT_WARNINGS_AS_ERRORS=true`
+</section>
+
+<section id="lint-firefox-preview">
 
 #### `--firefox-preview`
 
@@ -140,18 +168,25 @@ The `mv3` value allows developers to lint Manifest Version 2 **and** Manifest Ve
 ::: note
 This option was added in web-ext 7.3.0.
 :::
+</section>
+</section> <!-- web-ext-lint -->
 
-<section id="web-ext-run"></section>
+<section id="web-ext-run">
 
 ### `web-ext run`
 
 Builds and then temporarily installs an extension on the target application, so it can be tested. By default, watches extension source files and reload the extension in each target as files change.
+
+<section id="adb-bin">
 
 #### `--adb-bin`
 
 Path to the [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html) executable on the machine you are running `web-ext` from. By default, the `adb` executable will be located on your `PATH`.
 
 Environment variable: `$WEB_EXT_ADB_BIN`
+</section>
+
+<section id="adb-device">
 
 #### `--adb-device`, `--android-device`
 
@@ -164,18 +199,27 @@ web-ext run --target=firefox-android --android-device FA4AX0201736
 ```
 
 Environment variable: `$WEB_EXT_ADB_DEVICE`
+</section>
+
+<section id="adb-host">
 
 #### `--adb-host`
 
 Host name to use when connecting to an Android device with [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html). This will be discovered automatically by default.
 
 Environment variable: `$WEB_EXT_ADB_HOST`
+</section>
+
+<section id="adb-port">
 
 #### `--adb-port`
 
 Network port to use when connecting to an Android device with [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html). This will be discovered automatically by default.
 
 Environment variable: `$WEB_EXT_ADB_PORT`
+</section>
+
+<section id="adb-remove-old-artifacts">
 
 #### `--adb-remove-old-artifacts`
 
@@ -187,6 +231,9 @@ Starting from v5.0.0, `web-ext run` will automatically detect and warn the user 
 This flag forces web-ext to automatically remove these discovered artifacts.
 
 Environment variable: `$WEB_EXT_ADB_REMOVE_OLD_ARTIFACTS`
+</section>
+
+<section id="browser-console">
 
 #### `--browser-console`, `-bc`
 
@@ -199,7 +246,9 @@ web-ext run --browser-console
 Environment variable: `$WEB_EXT_BROWSER_CONSOLE=true`
 
 Note: The browser console may not show all debugging output from content-scripts. Use the web console when debugging content-scripts.
+</section>
 
+<section id="devtools">
 
 #### `--devtools`
 
@@ -214,8 +263,9 @@ Note: The opened Developer Tools may not show all debugging output from content-
 ::: note
 This option was added in web-ext 7.3.0 and it requires Firefox 106 and newer.
 :::
-  
-<section id="--firefox"></section>
+</section>
+
+<section id="firefox">
 
 #### `--firefox`, `-f`
 
@@ -259,6 +309,9 @@ web-ext run --firefox=flatpak:org.mozilla.firefox
 ```
 
 Environment variable: `$WEB_EXT_FIREFOX`
+</section>
+
+<section id="firefox-apk">
 
 #### `--firefox-apk`
 
@@ -271,6 +324,9 @@ web-ext run --target=firefox-android --firefox-apk=org.mozilla.firefox
 ```
 
 Environment variable: `$WEB_EXT_FIREFOX_APK`
+</section>
+
+<section id="run-firefox-preview">
 
 #### `--firefox-preview`
 
@@ -281,6 +337,9 @@ The `mv3` value allows developers to test their extensions with Firefox Manifest
 ::: note
 This option was added in web-ext 7.1.0.
 :::
+</section>
+
+<section id="firefox-profile">
 
 #### `--firefox-profile`, `-p`
 
@@ -289,7 +348,9 @@ Specify a base Firefox profile to run the extension in. This is specified as a s
 If a profile is not specified, it runs the extension using a new temporary profile.
 
 Environment variable: `$WEB_EXT_FIREFOX_PROFILE`
+</section>
 
+<section id="profile-create-if-missing">
 #### `--profile-create-if-missing`
 
 With this option, the profile directory (specified by the `--firefox-profile` or `--chromium-profile` options) will be created if it does not exist yet.
@@ -299,6 +360,9 @@ When this option is specified, the `--firefox-profile` option is always treated 
 :::
 
 Environment variable: `$WEB_EXT_PROFILE_CREATE_IF_MISSING`
+</section>
+
+<section id="keep-profile-changes">
 
 #### `--keep-profile-changes`
 
@@ -309,18 +373,27 @@ This option makes the profile specified by `--firefox-profile` completely insecu
 :::
 
 Environment variable: `$WEB_EXT_KEEP_PROFILE_CHANGES=true`
+</section>
+
+<section id="no-reload">
 
 #### `--no-reload`
 
 Do not automatically reload the extension in the browser as you edit and save source files.
 
 Environment variable: `$WEB_EXT_NO_RELOAD=true`
+</section>
+
+<section id="pre-install">
 
 #### `--pre-install`
 
 Pre-install the extension into the profile before starting the browser. This is a way to support Firefox versions less than 49, as they don't support remote installation. Specifying this option implies `--no-reload`.
 
 Environment variable: `$WEB_EXT_PRE_INSTALL=true`
+</section>
+
+<section id="pref">
 
 #### `--pref`
 
@@ -333,6 +406,9 @@ Customize any Firefox preference without creating or modifying the profile. Use 
 Specify this option multiple times to set more than one preference.
 
 Environment variable: `$WEB_EXT_PREF`
+</section>
+
+<section id="target">
 
 #### `--target`, `-t`
 
@@ -353,6 +429,9 @@ Here are the supported targets:
 If no target is specified, the extension will run in `firefox-desktop`.
 
 Environment variable: `$WEB_EXT_TARGET`
+</section>
+
+<section id="args">
 
 #### `--args`, `--arg`
 Additional CLI options passed to the Browser binary. Example:
@@ -360,13 +439,22 @@ Additional CLI options passed to the Browser binary. Example:
 ```shell
 --arg="--search=mozilla" --arg="--new-tab=https://duckduckgo.com"
 ```
+</section>
+
+<section id="chromium-binary">
 
 #### `--chromium-binary`
 Path or alias to a Chromium executable such as google-chrome, google-chrome.exe or opera.exe etc.
 If not specified, the default Google Chrome will be used.
+</section>
+
+<section id="chromium-profile">
 
 #### `--chromium-profile`
 Path to a custom Chromium profile.
+</section>
+
+<section id="start-url">
 
 #### `--start-url`
 
@@ -383,6 +471,9 @@ web-ext run --start-url www.mozilla.com --start-url developer.mozilla.org
 ```
 
 Environment variable: `$WEB_EXT_START_URL`
+</section>
+
+<section id="watch-file">
 
 #### `--watch-file`, `--watch-files`
 
@@ -391,6 +482,9 @@ A list of files that should be watched for changes. This is useful if you want w
 ```shell
 web-ext run --watch-file dist/background.js dist/content-script.js
 ```
+</section>
+
+<section id="watch-ignored">
 
 #### `--watch-ignored`
 
@@ -403,14 +497,18 @@ web-ext run --watch-ignored dir1/to/file.js dir2/*.js dir3/**
 ::: note alert
 This option is useful to prevent issues when the number of watched files is higher than what the underlying OS feature allows. As an example, on Linux a `Error: ENOSPC: System limit for number of file watchers reached` exception is raised if too many files are being watched (See [web-ext#2022](https://github.com/mozilla/web-ext/issues/2022)).
 :::
+</section>
+</section> <!-- web-ext-run -->
 
-<section id="web-ext-sign"></section>
+<section id="web-ext-sign">
 
 ### `web-ext sign`
 
 This command uses the [addons.mozilla.org API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) to sign your extension. If successful, it will download the signed `.xpi` file, which you can use to [self-host your extension](/documentation/publish/self-distribution/).
 
 You need to create [API access credentials](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#access-credentials) to run this command. [Obtain your personal access credentials here](https://addons.mozilla.org/developers/addon/api/key/).
+
+<section id="use-submission-api">
 
 #### `--use-submission-api`
 
@@ -423,18 +521,27 @@ Environment variable: `$WEB_EXT_USE_SUBMISSION_API`
 ::: note
 This option was added in web-ext 7.3.1.
 :::
+</section>
+
+<section id="api-key">
 
 #### `--api-key`
 
 Your API key ([JWT issuer](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#create-a-jwt-for-each-request/)) for accessing the [addons.mozilla.org API](http://addons-server.readthedocs.org/en/latest/topics/api/index.html). This should always be a string.
 
 Environment variable: `$WEB_EXT_API_KEY`
+</section>
+
+<section id="api-secret">
 
 #### `--api-secret`
 
 Your API secret ([JWT secret](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#create-a-jwt-for-each-request)) from [addons.mozilla.org API](http://addons-server.readthedocs.org/en/latest/topics/api/index.html). This should always be a string.
 
 Environment variable: `$WEB_EXT_API_SECRET`
+</section>
+
+<section id="api-url-prefix">
 
 #### `--api-url-prefix`
 
@@ -445,6 +552,9 @@ This option is ignored when `--use-submission-api` is used. See `--amo-base-url`
 :::
 
 Environment variable: `$WEB_EXT_API_URL_PREFIX`
+</section>
+
+<section id="amo-base-url">
 
 #### `--amo-base-url`
 
@@ -455,16 +565,18 @@ This option is ignored when `--use-submission-api` is used. See `--api-url-prefi
 :::
 
 Environment variable: `$WEB_EXT_AMO_BASE_URL`
+</section>
 
-<section id="api-proxy"></section>
+<section id="api-proxy">
 
 #### `--api-proxy`
 
 A proxy host to use for all API connections. Example: `https://yourproxy:6000.`Read more about [how proxy requests work](https://github.com/request/request#proxies). There is a separate section about [signing in a restricted environment](/documentation/develop/getting-started-with-web-ext/#restricted-environment) if the proxy approach doesn't work for you.
 
 Environment variable: `$WEB_EXT_API_PROXY`
+</section>
 
-<section id="channel"></section>
+<section id="channel">
 
 #### `--channel`
 
@@ -494,12 +606,18 @@ Setting `--channel=listed` for a new version of a listed extension is not well s
 See [documentation on the signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html#uploading-a-version) for more information.
 
 Environment variable: `$WEB_EXT_CHANNEL`
+</section>
+
+<section id="timeout">
 
 #### `--timeout`
 
 Number of milleseconds to wait before giving up on a&nbsp;response from Mozilla's web service. This should always be a number.
 
 Environment variable: `$WEB_EXT_TIMEOUT`
+</section>
+
+<section id="id">
 
 #### `--id`
 
@@ -510,6 +628,9 @@ This option cannot be used when `--use-submission-api` is also used: the add-on 
 :::
 
 Environment variable: `$WEB_EXT_ID`
+</section>
+
+<section id="amo-metadata">
 
 #### `--amo-metadata`
 
@@ -520,11 +641,12 @@ This option is only used when combined with `--use-submission-api`.
 :::
 
 Environment variable: `$WEB_AMO_METADATA`
+</section>
+</section> <!-- web-ext-sign -->
 
 </div>
 </article>
 </section>
-
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
@@ -537,6 +659,8 @@ Environment variable: `$WEB_AMO_METADATA`
 
 web-ext has the following global options that may apply to multiple commands.
 
+<section id="artifacts-dir">
+
 ### `--artifacts-dir`, `-a`
 
 Specifies a particular directory to save artifacts in, e.g. the `.zip` file, once you've built an extension. This can be specified as a relative or absolute path, and should always be a string.
@@ -546,20 +670,27 @@ If this is not specified, the default is the relative path `./web-ext-artifacts`
 :::
 
 Environment variable: `$WEB_EXT_ARTIFACTS_DIR`
+</section>
+
+<section id="config">
 
 ### `--config`, `-c`
 
 Load a config file to set option value defaults. See an example of [what config files look like and how they work](/documentation/develop/getting-started-with-web-ext/#setting-option-defaults-in-a-configuration-file).
 
 Environment variable: `$WEB_EXT_CONFIG`
+</section>
+
+<section id="config-discovery">
 
 ### `--config-discovery=false`, `--no-config-discovery`
 
 Disable [automatic config file discovery](/documentation/develop/getting-started-with-web-ext/#automatic-discovery-of-configuration-files).
 
 Environment variable: `$WEB_EXT_CONFIG_DISCOVERY=false` or `$WEB_EXT_NO_CONFIG_DISCOVERY`
+</section>
 
-<section id="ignore-files"></section>
+<section id="ignore-files">
 
 ### `--ignore-files`, `-i`
 
@@ -590,6 +721,9 @@ Order is important! You must specify the web-ext command before specifying the `
 :::
 
 Environment variable: `$WEB_EXT_IGNORE_FILES`
+</section>
+
+<section id="help">
 
 ### `--help`, `-h`
 
@@ -598,12 +732,18 @@ Lists all the available commands and options available for the web-ext tool.
 ::: note
 You can list the options available for a specific command by including the command name as you request help, for example `web-ext --help run`.
 :::
+</section>
+
+<section id="no-input">
 
 ### `--no-input`
 
 Disable all features that require standard input.
 
 Environment variable: `$WEB_EXT_NO_INPUT=true`
+</section>
+
+<section id="source-dir">
 
 ### `--source-dir`, `-s`
 
@@ -614,19 +754,23 @@ If this is not specified, the default is the directory you are currently inside 
 :::
 
 Environment variable: `$WEB_EXT_SOURCE_DIR`
+</section>
 
-<section id="verbose"></section>
+<section id="verbose">
 
 ### `--verbose`, `-v`
 
 Shows verbose output when commands are run.
 
 Environment variable: `$WEB_EXT_VERBOSE=true`
+</section>
+
+<section id="version">
 
 ### `--version`
 
 Shows the version number of the installed web-ext tool.
-
+</section>
 </div>
 </article>
 </section>
