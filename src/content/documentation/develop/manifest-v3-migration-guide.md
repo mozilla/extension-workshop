@@ -148,35 +148,36 @@ Move all host permission specifications to the manifest.json key `host_permissio
 
 ### Browser action
 
-The features available under the manifest.json key `browser_action` and the `browserAction` API have moved to a new `action` [key](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) and [API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms). As the old and new key and API are otherwise identical, the only change you need to make is to rename the manifest.json key 'browser_action' to 'action', like this:
+The features available under the manifest.json key `browser_action` and the `browserAction` API have moved to a new `action` [key](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) and [API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms). Also, the `_execute_action` [special shortcut](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) is introduced.
 
-```json
-"action": {
-  "browser_style": true,
-  "default_icon": {
-    "16": "button/geo-16.png",
-    "32": "button/geo-32.png"
-  },
-  "default_title": "Whereami?",
-  "default_popup": "popup/geo.html",
-  "theme_icons": [{
-    "light": "icons/geo-16-light.png",
-    "dark": "icons/geo-16.png",
-    "size": 16
-  }, {
-    "light": "icons/geo-32-light.png",
-    "dark": "icons/geo-32.png",
-    "size": 32
-  }]
-}
-```
+As the old and new key and API are otherwise identical, the change is needed, are relatively straightforward, and are as follows:
 
-and update API references from `browser.browserAction` to  `browser.action`.
+- rename the manifest.json key 'browser_action' to 'action', like this:
+  ```json
+  "action": {
+    "browser_style": true,
+    "default_icon": {
+      "16": "button/geo-16.png",
+      "32": "button/geo-32.png"
+    },
+   "default_title": "Whereami?",
+    "default_popup": "popup/geo.html",
+    "theme_icons": [{
+      "light": "icons/geo-16-light.png",
+      "dark": "icons/geo-16.png",
+      "size": 16
+    }, {
+      "light": "icons/geo-32-light.png",
+      "dark": "icons/geo-32.png",
+      "size": 32
+    }]
+  }
+  ```
+- update API references from `browser.browserAction` to  `browser.action`.
+- if used, change `_execute_browser_action` to `_execute_action` in the `commands` manifest key.
 
 ::: note
-In Chromium and Safari, `page_action` is also merged into the renamed `action` key. Firefox retains the separate `page_action` in the developer preview but will merge `page_action` into `action` in a later release.
-
-Also, in Chromium and Safari the Browser Action and Page Action APIs are unified into the Action API, Firefox retains the separate Page Action API in the developer preview but will merge the Page Action API into the new Action API in a later release.
+In Chromium and Safari, the Browser Action and Page Action APIs are unified into the Action API, `page_action` is merged into the renamed `action` key, and the `_execute_page_action` special shortcut is replaced by `_execute_action`. Firefox retains the page action API, key, and special shortcut in the developer preview but will merge the page action features into action in a later release.
 :::
 
 {% endcapture %}
