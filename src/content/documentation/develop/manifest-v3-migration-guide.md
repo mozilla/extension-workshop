@@ -148,7 +148,7 @@ Move all host permission specifications to the manifest.json key `host_permissio
 
 ### Browser action
 
-The features available under the manifest.json key `browser_action` and the `browserAction` API have moved to a new `action` [key](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) and [API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms). Also, the `_execute_action` [special shortcut](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) is introduced.
+The features available under the manifest.json key `browser_action` and the `browserAction` API have moved to a new `action` [key](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) and [API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/action). Also, the `_execute_action` [special shortcut](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) is introduced.
 
 As the old and new key and API are otherwise identical, the change is needed, are relatively straightforward, and are as follows:
 
@@ -174,7 +174,7 @@ As the old and new key and API are otherwise identical, the change is needed, ar
   }
   ```
 - update API references from `browser.browserAction` to  `browser.action`.
-- if used, change `_execute_browser_action` to `_execute_action` in the `commands` manifest key.
+- if used, change `_execute_browser_action` to `_execute_action` in the `commands` manifest key and in the [`menu.create`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) and [`menu.update`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/update) API methods.
 
 ::: note
 In Chromium and Safari, the Browser Action and Page Action APIs are unified into the Action API, `page_action` is merged into the renamed `action` key, and the `_execute_page_action` special shortcut is replaced by `_execute_action`. Firefox retains the page action API, key, and special shortcut in the developer preview but will merge the page action features into action in a later release.
