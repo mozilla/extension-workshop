@@ -160,7 +160,7 @@ As the old and new key and API are otherwise identical, the change is needed, ar
       "16": "button/geo-16.png",
       "32": "button/geo-32.png"
     },
-   "default_title": "Whereami?",
+    "default_title": "Whereami?",
     "default_popup": "popup/geo.html",
     "theme_icons": [{
       "light": "icons/geo-16-light.png",
