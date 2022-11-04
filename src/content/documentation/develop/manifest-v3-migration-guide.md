@@ -79,7 +79,7 @@ This section details the Manifest V3 changes made to Firefox and available in th
 
 ### Manifest version
 
-The manifest.json key [`manifest_version`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) accepts `3`. To use Manifest V3, update your manifest.json file like this:
+The manifest.json key [`manifest_version`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version) accepts `3`. To use Manifest V3, update your manifest.json file like this:
 
 ```json
 "manifest_version": 3
