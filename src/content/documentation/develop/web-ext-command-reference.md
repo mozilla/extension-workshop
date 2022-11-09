@@ -421,8 +421,8 @@ Here are the supported targets:
 | Target            | Application                                                                                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `firefox-desktop` | The extension will run in [Firefox Desktop](https://www.mozilla.org/firefox/).                                                      |
-| `firefox-android` | The extension will run in [Firefox for Android](https://www.mozilla.org/firefox/mobile/). You must also specify `--android-device`. |
-| `chromium`        | The extension will run in a Chromium-based browser.                                                                                   |
+| `firefox-android` | The extension will run in [Firefox for Android](https://www.mozilla.org/firefox/mobile/). You must also specify [`--android-device`](#adb-device). |
+| `chromium`        | The extension will run in a Chromium-based browser. You can specificy exact binary with [`--chromium-binary`](#chromium-binary).                                                                             |
 
 </div>
 
