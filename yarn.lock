@@ -2956,10 +2956,10 @@ gray-matter@4.0.3, gray-matter@^4.0.3:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
-hamburgers@1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/hamburgers/-/hamburgers-1.1.3.tgz#eb583ede269d3a774aa5f613442b17ea13952b84"
-  integrity sha512-qpfnJwZq6ATAGJEriwuyfVNgT++GG+o+3bBfPYF7F3WY452cYKbaYGUuqwhp+3kHLI6CL4VIBfj8bfbp90Lp1A==
+hamburgers@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/hamburgers/-/hamburgers-1.2.1.tgz#0649907688335dee3d3d248c4c7ac88351527eb0"
+  integrity sha512-uFuVVF7/MeUtRWrA+S1FGGo4iVi7RgPzZAmljBnSeDh4snOZzaQ+oB6CI1m4vKD5RGz9s70ufgiJLxgivqA26Q==
 
 hamljs@^0.6.2:
   version "0.6.2"
