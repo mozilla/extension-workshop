@@ -1,8 +1,8 @@
 {
   "extends": [
-    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss",
   ],
-  "customSyntax": "postcss-scss",
   "rules": {
     "at-rule-empty-line-before": ["always", {
       "ignore": [
@@ -52,5 +52,10 @@
       }
     ],
     "value-list-comma-newline-after": null,
+    "scss/no-global-function-names": null,
+    "scss/at-import-partial-extension": null,
+    "scss/comment-no-empty": null,
+    "scss/dollar-variable-pattern": null,
+    "scss/at-mixin-pattern": null,
   }
 }
