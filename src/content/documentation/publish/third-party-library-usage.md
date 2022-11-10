@@ -22,7 +22,7 @@ If your add-on uses minified, obfuscated or otherwise machine-generated first-pa
 If you don't provide information about third-party libraries and the reviewer cannot evaluate your extension, it may be rejected.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -37,7 +37,7 @@ If you don't provide information about third-party libraries and the reviewer ca
 You must provide a link to the source code for any third-party libraries included in your extension, minified or not.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "when-must-links-for-third-party-libraries-be-provided"
   content: content_with_toc
 %}
@@ -85,7 +85,7 @@ which links to the exact file, using the tag for the version.
 Tip: If the library is on GitHub, you can usually find this version under the “releases” link, then click on the small tag icon next to the version number and navigate to the file in the repository.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "how-to-determine-the-third-party-library-link"
   content: content
 %}
@@ -101,7 +101,7 @@ You can add the links to the “Notes to Reviewers” section of your extension�
 If you miss any of the necessary information for used third-party libraries, the reviewer will have to get in touch to request the missing items. This could delay the completion of your extension’s review or, in the worst-case, result in your extension being taken down because we can't confirm it complies with the [add-on policies](/documentation/publish/add-on-policies).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "communicating-third-party-library-links-to-the-reviewer"
   content: content
 %}

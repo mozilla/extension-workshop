@@ -18,7 +18,7 @@ date: 2019-06-05
 WebExtension APIs provide a user-controlled, web-focused extension development platform used to extend the features of Firefox. The APIs strike a balance between the functionality extensions bring to Firefox and the risks they introduce to the user experience.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -37,7 +37,7 @@ Designed to offer cross-browser compatibility with Chromium-based browsers—suc
 Since its introduction, Mozilla has expanded the capabilities of the API as part of a commitment to push innovation and adoption of the API in browsers. These expanded capabilities include features such as the [Contextual Identities](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities) a.k.a. the containers API.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "about-the-webextensions-api"
     content: content
 %}

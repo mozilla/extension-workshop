@@ -31,7 +31,7 @@ Add-ons extend the core capabilities of Firefox, enabling users to modify and pe
 When an add-on is given human review or otherwise assessed by Mozilla, these policies act as guiding principles for those reviews. Add-ons that do not comply with these policies may be rejected or disabled by Mozilla. Therefore, follow these policies when making add-on design and development decisions.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -55,7 +55,7 @@ Any “unexpected” feature(s) must adhere to all of the following requirements
 - The opt-in interface must clearly state the name of the add-on requesting the change.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "no-surprises"
   content: content_with_toc
 %}
@@ -80,7 +80,7 @@ In addition, add-ons listed on addons.mozilla.org must adhere to the following p
 - Add-ons with the sole purpose of promoting, installing, loading or launching another website, application or add-on are not permitted.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "content"
   content: content
 %}
@@ -108,7 +108,7 @@ Add-ons are not allowed to contain obfuscated code, nor code that hides the purp
 Please read our [Source Code Submission guidelines](/documentation/publish/source-code-submission/) to avoid unexpected rejections or blocks.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "submission-guidelines"
   content: content
 %}
@@ -135,7 +135,7 @@ While any code, method or practice in a submitted add-on is subject to review an
 - Only release versions of third-party libraries and/or frameworks may be included with an add-on. Modifications to these libraries/frameworks are not permitted. Please read our [third party library guidelines](/documentation/publish/third-party-library-usage/) to avoid unexpected rejections.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "development-practices"
   content: content
 %}
@@ -200,7 +200,7 @@ When collecting this type of information, the user must be able to disable the d
 - Browsing data from private browsing sessions must not be stored. Information that identifies a user across browsing sessions or containers must not be made available to web content.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "data-disclosure-collection-and-management"
   content: content
 %}
@@ -218,7 +218,7 @@ When collecting this type of information, the user must be able to disable the d
 - Modifying web content or facilitating redirects to include affiliate promotion tags is not permitted. Conversely, the use of affiliate promotion in user interface elements clearly identified as belonging to the add-on are acceptable.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "monetization"
   content: content
 %}
@@ -242,7 +242,7 @@ Mozilla reserves the right to block or delete any developer’s account on addon
 For information about how rejection and blocking affects users, see [What does review rejection mean to users?](/documentation/publish/what-does-review-rejection-mean-to-users/)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "security-compliance-and-blocking"
   content: content
 %}

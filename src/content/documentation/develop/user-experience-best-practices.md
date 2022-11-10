@@ -36,7 +36,7 @@ Here we lay out the six steps to creating specific Firefox and extension UX feat
 In addition to the steps described here, your extension should follow [Add-on Policies](/documentation/publish/add-on-policies/), which include being transparent with users about user security, privacy and control.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 

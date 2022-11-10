@@ -36,7 +36,7 @@ Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 
 :::
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -63,7 +63,7 @@ Note that this is a one-way conversion: You **cannot** update an extension using
 :::
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "quick-start"
   content: content_with_toc
 %}
@@ -85,7 +85,7 @@ Here is the comparison chart showing [SDK APIs and their WebExtensions format co
 Here is the comparison chart showing [XUL/XPCOM APIs and their WebExtensions format counterparts](/documentation/develop/comparison-with-xul-xpcom-extensions). If you don't see the APIs you need to port to use WebExtension APIs, look below to learn how to request APIs and also how to implement them.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "migration-paths"
   content: content
 %}
@@ -105,7 +105,7 @@ Here is the comparison chart showing [XUL/XPCOM APIs and their WebExtensions for
 **Request a new WebExtensions API** - If you want to request a new WebExtensions API, please read [this page](https://wiki.mozilla.org/WebExtensions/NewAPIs).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "dont-see-the-webextensions-apis-you-need"
   content: content
 %}
@@ -126,7 +126,7 @@ Here is the comparison chart showing [XUL/XPCOM APIs and their WebExtensions for
 - [Skeleton Chrome Extension](https://github.com/sitepoint/ChromeSkel_a) is an extension bootstrap and template
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "tools"
   content: content
 %}
@@ -147,7 +147,7 @@ Here is the comparison chart showing [XUL/XPCOM APIs and their WebExtensions for
 - [Examples of extensions](https://developer.mozilla.org/Add-ons/WebExtensions/Examples)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "documentation"
   content: content
 %}
@@ -163,7 +163,7 @@ Here is the comparison chart showing [XUL/XPCOM APIs and their WebExtensions for
 You can use the links [here](https://developer.mozilla.org/docs/Mozilla/Add-ons#Contact_us) to get help, keep up to date with news around add-ons, and give us feedback.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "contact"
   content: content
 %}

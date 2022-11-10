@@ -18,7 +18,7 @@ date: 2019-03-23 06:22:00
 There may be occasions where you want to retire one of your extensions. This article suggests the steps you might want to follow, as well as offering some pointers to a suitable timeline.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -37,7 +37,7 @@ There are two main reasons why you might want to end-of-life your extension:
 - You're replacing the extension with a new one, which isn't a direct upgrade. In this case, you'll want to encourage existing users to install the new extension, before you remove the old extension from browsers.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "reasons-for-withdrawing"
   content: content_with_toc
 %}
@@ -74,7 +74,7 @@ When you want to withdraw an extension, considered taking the following steps:
 Your hidden extension will not be available either to a search of AMO or an attempt to access it directly using the page’s AMO URL.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "steps-to-retiring-an-extension"
   content: content
 %}
@@ -96,7 +96,7 @@ There is no ideal period between publication of your end-of-life timetable and t
 When you’ve started retiring the extension, use the active user statistics on AMO to fine-tune your timing. For example, if the number of active users isn't declining significantly you may want to delay deploying your extension’s final version and send out a reminder about your plans. To access the active user statistics, open your extension in the AMO Developer Hub and click **View Statistics Dashboard** on the shortcut menu.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "suggested-retirement-timetable"
   content: content
 %}

@@ -39,7 +39,7 @@ This article describes how add-on IDs are handled for extensions that are built 
 Firefox add-ons contain a unique identifier which is used both inside Firefox itself and on the [addons.mozilla.org](https://addons.mozilla.org/) (AMO) website. For example, it's used by Firefox to check for updates to installed add-ons and to identify which objects (such as data stores) are controlled by this add-on.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
   content: page_hero_banner_content
 %}
 

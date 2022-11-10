@@ -26,7 +26,7 @@ Minifying your code isn't recommended. It rarely protects your code, as these te
 If you do not provide source code with clear instructions and the reviewer cannot evaluate your extension, it may be rejected.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -85,7 +85,7 @@ Code submission process happens after the add-on validation step.
 ![Upload sources screenshot](/assets/img/publish/upload-process-sources.png)
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "provide-your-extension-source-code"
   content: content_with_toc
 %}
@@ -124,7 +124,7 @@ var _0x364e=['\x70\x61\x72\x73\x65','\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x6
 </section>
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "use-of-obfuscated-code"
   content: content
 %}
@@ -156,7 +156,7 @@ Use this checklist to confirm that you are providing the right details with your
 Remember, if you miss any of the necessary content from your uploaded source code package the reviewer will have to get in touch to request the missing items. This could delay the completion of your extension’s review or, in the worst-case, result in your extension being taken down because we can't confirm it complies with the [add-on policies](/documentation/publish/add-on-policies).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "source-code-checklist"
   content: content
 %}

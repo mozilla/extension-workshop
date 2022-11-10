@@ -18,7 +18,7 @@ date: 2021-01-27
 This article explains how to add enterprise policy support to your extension to allow enterprises to preconfigure settings in your extension. 
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -85,7 +85,7 @@ browser.storage.managed.get(['STRING','BOOLEAN','INTEGER'], function (data) {
 It works the same as the other [browser.storage APIs](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage).
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "how-to-add"
   content: content_with_toc
 %}
@@ -242,7 +242,7 @@ macOS uses configuration profiles for policy configuration. macOS administrators
 For Linux, you can provide a sample `policies.json` similar to what was provided earlier in this document. Policies.json is the only mechanism supported on Linux.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "distributing-your-policy"
   content: content
 %}
