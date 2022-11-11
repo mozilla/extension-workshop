@@ -1,7 +1,7 @@
 ---
 layout: sidebar
-title: Distributing Manifest V2 and V3 extensions
-permalink: /documentation/publish/publish-manifest-versions/
+title: Distribute Manifest V2 and V3 extensions
+permalink: /documentation/publish/distribute-manifest-versions/
 topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]
 contributors: [Rob--W, rebloor]
@@ -13,7 +13,7 @@ date: 2022-11-17
 
 {% capture page_hero_banner_content %}
 
-# Distributing Manifest V2 and V3 extensions
+# Distribute Manifest V2 and V3 extensions
 
 Learn how to distribute versions of your extension supporting Manifest V2 and V3.
 

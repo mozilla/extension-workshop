@@ -875,8 +875,8 @@
             "category": "Distribute",
             "pages": [
               {
-                "title": "Distributing Manifest V2 and V3 extensions",
-                "url": "/documentation/publish/publish–manifest-versions/"
+                "title": "Distribute Manifest V2 and V3 extensions",
+                "url": "/documentation/publish/distribute-manifest-versions/"
               },
               {
                 "title": "Distribute pre-release versions",
