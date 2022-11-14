@@ -36,7 +36,7 @@ When deciding which version is most appropriate to distribute to your users thro
 
 So, if your user base is large, or you have requirements to provide support for older Firefox versions for an extended period, we recommend that you consider using this alternate distribution for your MV3 version.
 
-If you choose to remain on MV2 and wait to transition to MV3 later, there are steps you can take in MV2 that [move your extension closer to what is necessary in MV3](https://blog.mozilla.org/addons/2022/10/31/begin-your-mv3-migration-by-implementing-new-features-today/). As usual, if your extension depends on features only available to recent Firefox versions, specify the compatible Firefox version in the [`strict_min_version`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) field in manifest.json. Older Firefox extensions will not receive an update, and a new user on an old Firefox version can install an older version of the extension using the “See all versions” link at the extension listing on AMO.
+If you choose to remain on MV2 and wait to transition to MV3 later, there are steps you can take in MV2 that [move your extension closer to what is necessary in MV3](https://blog.mozilla.org/addons/2022/10/31/begin-your-mv3-migration-by-implementing-new-features-today/). As usual, if your extension depends on features only available to recent Firefox versions, specify the compatible Firefox version in the [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) field in manifest.json. Older Firefox extensions will not receive an update, and a new user on an old Firefox version can install an older version of the extension using the “See all versions” link at the extension listing on AMO.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
@@ -57,7 +57,7 @@ To get a signed version of your MV3 extension:
    ::: note
    You need to change it back to “on this site” for MV2 versions, as the most recently used channel is remembered.
    :::
-2. For API uploads, specify “channel=unlisted” for the self-distribution channel.
+2. For API uploads, specify `channel=unlisted` for the self-distribution channel.
 
 See [Self distribution](/documentation/publish/submitting-an-add-on/#self-distribution), for more details on the process.
 
