@@ -4,7 +4,7 @@ title: Distribute Manifest V2 and V3 extensions
 permalink: /documentation/publish/distribute-manifest-versions/
 topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]
-contributors: [Rob--W, rebloor]
+contributors: [rebloor]
 last_updated_by: rebloor
 date: 2022-11-17
 ---
