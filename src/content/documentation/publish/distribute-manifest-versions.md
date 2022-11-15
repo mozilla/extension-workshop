@@ -51,11 +51,11 @@ If you choose to remain on MV2 and wait to transition to MV3 later, there are st
 
 ## Prepare your MV3 version
 
-Because you are distributing your extension from AMO and a third-party website, you need to specify the origins of the sites where the MV3 version's XPI file is hosted in the [`install_origins`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/install_origins) manifest key.
+If you choose to distribute your MV3 extension from a third-party website – which could be your website – you need to specify the origins of the sites where the MV3 version's XPI file is hosted. You do this in the [`install_origins`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/install_origins) manifest key.
 
-To support automatic updates to newer MV3 versions, you also need to create and make available an [update manifest file](/documentation/manage/updating-your-extension/), and add the update manifest file's url to the `update_url` in the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest key.
+To support automatic updates to newer MV3 versions, you also need to create and make available an [update manifest file](/documentation/manage/updating-your-extension/) and add the update manifest file's url to the `update_url` in the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest key.
 
-See [Updating your extension](/documentation/manage/updating-your-extension/), for more details on the process.
+See [Updating your extension](/documentation/manage/updating-your-extension/) for more details about the update process.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -78,7 +78,7 @@ To get a signed version of your MV3 extension:
    :::
 2. For API uploads, specify `channel=unlisted` for the self-distribution channel.
 
-See [Self distribution](/documentation/publish/submitting-an-add-on/#self-distribution), for more details on the process.
+See [Self distribution](/documentation/publish/submitting-an-add-on/#self-distribution) for more details on the process.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -95,7 +95,7 @@ See [Self distribution](/documentation/publish/submitting-an-add-on/#self-distri
 
 Self-distributed versions cannot be downloaded by users directly from AMO. You must distribute the experimental XPI to users yourself, such as by a download from your website, email, etc.
 
-See [Distributing an add-on yourself](/documentation/publish/self-distribution/), for more details on the process.
+See [Distributing an add-on yourself](/documentation/publish/self-distribution/) for more details on the process.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
