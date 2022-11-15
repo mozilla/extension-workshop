@@ -51,11 +51,9 @@ If you choose to remain on MV2 and wait to transition to MV3 later, there are st
 
 ## Prepare your MV3 version
 
-If you choose to distribute your MV3 extension from a third-party website – which could be your website – you need to specify the origins of the sites where the MV3 version's XPI file is hosted. You do this in the [`install_origins`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/install_origins) manifest key.
+To support automatic updates to newer MV3 versions, you need to create and make available an update manifest file and include the file's location in the extension's manifest file.
 
-To support automatic updates to newer MV3 versions, you also need to create and make available an [update manifest file](/documentation/manage/updating-your-extension/) and add the update manifest file's url to the `update_url` in the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest key.
-
-See [Updating your extension](/documentation/manage/updating-your-extension/) for more details about the update process.
+See [Updating your extension](/documentation/manage/updating-your-extension/) for details about the update manifest file format and manifest change needed.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
