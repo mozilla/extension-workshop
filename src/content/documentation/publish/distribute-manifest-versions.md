@@ -49,7 +49,26 @@ If you choose to remain on MV2 and wait to transition to MV3 later, there are st
 
 {% capture content %}
 
-## How to sign an MV3 version
+## Prepare your MV3 version
+
+Because you are distributing your extension from AMO and a third-party website, you need to specify the origins of the sites where the MV3 version's XPI file is hosted in the [`install_origins`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/install_origins) manifest key.
+
+To support automatic updates to newer MV3 versions, you also need to create and make available an [update manifest file](/documentation/manage/updating-your-extension/), and add the update manifest file's url to the `update_url` in the [`browser_specific_settings`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest key.
+
+See [Updating your extension](/documentation/manage/updating-your-extension/), for more details on the process.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "listing-on-amo"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
+## Get a signed MV3 version
 
 To get a signed version of your MV3 extension:
 
@@ -76,10 +95,6 @@ See [Self distribution](/documentation/publish/submitting-an-add-on/#self-distri
 
 Self-distributed versions cannot be downloaded by users directly from AMO. You must distribute the experimental XPI to users yourself, such as by a download from your website, email, etc.
 
-Remember that:
-* When you distribute the XPI file from a website that is not AMO, you also need to add the `install_origins` key to the manifest. This key lists the origin of the host that you place the XPI on.
-* To support automatic updates to newer MV3 versions an [update manifest file](/documentation/manage/updating-your-extension/) must be created and made available, and the url to this update manifest [specified in the extension’s manifest.json](/documentation/manage/updating-your-extension/).
-
 See [Distributing an add-on yourself](/documentation/publish/self-distribution/), for more details on the process.
 
 {% endcapture %}
@@ -95,7 +110,7 @@ See [Distributing an add-on yourself](/documentation/publish/self-distribution/)
 
 ## Transition your experimental MV3 version to your live version
 
-When you want to support just MV3-compatible versions of Firefox for your extension, visit AMO and upload the MV3 version to the primary AMO listed channel (“on this site”), without the `update_url` manifest key. If you are distributing the MV3 version from your website also specify `install_origins` in the manifest. Then, when signed, download the XPI and distribute it to your users as you did originally. The lack of the `update_url` manifest key means users will get updates from the AMO channel in the future.
+When you want to support just MV3-compatible versions of Firefox for your extension, visit AMO and upload the MV3 version to the primary AMO listed channel (“on this site”), without the `update_url` in the [`browser_specific_settings`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest key. If you are distributing the MV3 version from your website also specify [`install_origins`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/install_origins) in the manifest. Then, when signed, download the XPI and distribute it to your users as you did originally. The lack of the `update_url` manifest key means users will get updates from the AMO channel in the future.
 
 ::: note
 Take care with version numbers. Firefox only upgrades the extension if the version number is greater than the installed version. The version number needs to be higher than both the earlier listed MV2 versions and the experimental MV3 versions.
