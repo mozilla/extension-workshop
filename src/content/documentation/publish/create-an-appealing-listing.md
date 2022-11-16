@@ -28,7 +28,7 @@ There are two essential steps to getting people to use your add-on: they need to
 So, let us look at some of the ways you can encourage users to get to your listing page and, once there, install your add-on.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 

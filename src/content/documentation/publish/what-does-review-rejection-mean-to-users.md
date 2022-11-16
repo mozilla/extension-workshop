@@ -18,7 +18,7 @@ date: 2019-07-15 12:58:07
 This article explains how users and people looking for your extension are affected should you get a rejection from the Mozilla review process.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -37,7 +37,7 @@ The machine validation tells you immediately if anything needs to be fixed to en
 For more information on these processes, see [Submitting an add-on](/documentation/publish/submitting-an-add-on/) and [Add-on Policies](/documentation/publish/add-on-policies/).
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "review-overview"
   content: content_with_toc
 %}
@@ -58,7 +58,7 @@ Should your extension be rejected by the human review:
 People who have installed your extension will not notice any change as a result of the review rejection; they will be able to continue using your extension as usual.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "impact-of-review-rejection"
   content: content
 %}
@@ -77,7 +77,7 @@ If you do not respond to review feedback and fix any issues promptly your extens
 For more information on blocklisting, see [Add-ons blocking process](/documentation/publish/add-ons-blocking-process/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "blocklisting"
   content: content
 %}

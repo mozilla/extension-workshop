@@ -17,7 +17,7 @@ date: 2021-04-02
 You can use themes to customize how your browser looks by adding images and adjusting the color of various components.
 
 {% endcapture %}
-{% include modules/overview-page-hero.liquid
+{% include modules/overview-page-hero.liquid,
 	content: page_hero_banner_content
 	background: "develop-overview-hero-bg.jpg"
 %}
@@ -35,7 +35,7 @@ These themes use the [WebExtensions API](https://developer.mozilla.org/en-US/doc
 Not a coder? Not a problem! It's easy to create a static theme using the [AMO theme generator](/documentation/themes/using-the-amo-theme-generator) or [Firefox Color](https://color.firefox.com). 
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	id: "creating-themes"
 	content: content
 %}
@@ -61,7 +61,7 @@ There are four ways you can create themes:
 ![Themes](/assets/img/documentation/develop/Themes_fullwidth.jpg)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	id: "creating-themes"
 	content: content
 %}

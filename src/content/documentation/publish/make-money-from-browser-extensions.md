@@ -20,7 +20,7 @@ While users can download browser extensions for Firefox free of cost from [addon
 This article reviews your options for generating revenue from browser extensions by adding paid for features, advertising, or asking for donations. The article then concludes by suggesting some things you can do to maximize revenue generation. But, first the article looks at AMO and the limitations on revenue mechanisms in browser extensions.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -35,7 +35,7 @@ This article reviews your options for generating revenue from browser extensions
 Mozilla intends to maintain AMO as a free to download source of browser extensions and themes.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "sell-through-AMO"
   content: content_with_toc
 %}
@@ -62,7 +62,7 @@ Mozilla places few restraints on how you can monetize your browser extension. Th
 For full details, see the [Content](/documentation/publish/add-on-policies/#content) and [Monetization](/documentation/publish/add-on-policies#monetization) sections of the [Add-on Policies](/documentation/publish/add-on-policies/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "what-cant-you-do"
   content: content
 %}
@@ -214,7 +214,7 @@ You won’t get a donation if you don’t ask for it, but excessive requests for
 Also, remember that if you are requesting regular donations you will also need to provide new content or features on a regular basis too.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "what-can-you-do"
   content: content
 %}
@@ -232,7 +232,7 @@ As your extension gains popularity it’s highly likely that you will be contact
 Treat any such offers with great caution. The likelihood is that the scheme will be looking to capture your users’ private data to sell on. And, if you get any money at all, it’s likely to be much less than originally promised. But worse, you could end up with your extension blocklisted and your reputation tarnished.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "unsolicited-offers"
   content: content
 %}
@@ -252,7 +252,7 @@ Building a large, loyal user base is key to maximizing the revenue you generate,
 - engage with your users as much as possible through social media, forums, and by responding to support requests and feedback.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "maximize-income"
   content: content
 %}

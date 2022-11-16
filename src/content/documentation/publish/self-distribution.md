@@ -4,9 +4,9 @@ title: Distributing an add-on yourself
 permalink: /documentation/publish/self-distribution/
 topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
-contributors: [caitmuenster, rebloor]
-last_updated_by: rebloor
-date: 2022-05-17
+contributors: [caitmuenster, rebloor, mryanmurphy]
+last_updated_by: mryanmurphy
+date: 2022-09-12
 ---
 
 <!-- Page Hero Banner -->
@@ -16,7 +16,7 @@ date: 2022-05-17
 # Distributing an add-on yourself
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -35,7 +35,7 @@ You aren't required to list or distribute your add-on through [addons.mozilla.or
 For more information on how to submit an add-on for distribution on AMO or self-distribution, see [Submitting an add-on](/documentation/publish/submitting-an-add-on/).
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
 	id: "self-distribution-introduction"
 	content: content_with_toc
 %}
@@ -50,13 +50,13 @@ For more information on how to submit an add-on for distribution on AMO or self-
 
 When you choose to distribute an add-on yourself, they can be installed using the following methods:
 
-- [Web download](#web-download)—make your extension available on a suitable web accessible server and when the user downloads the signed add-on file Firefox installs it.
+- [Web download](#web-download)—make your extension available on a suitable web accessible server and when the user downloads the signed add-on file Firefox installs it. The web accessible server must serve the signed addon xpi file with `Content-Type: application/x-xpinstall` in the HTTP response headers.
 - [Installing add-on from file](/documentation/publish/distribute-sideloading)—enables a user to install an add-on using an `.xpi` file saved on their computer.
 - Add-ons for use with a desktop app—starting with Firefox 74, it is no longer be possible to have an extension be automatically installed as part of another application install. See the [Add-ons Blog](https://blog.mozilla.org/addons/2020/03/10/support-for-extension-sideloading-has-ended/) for more information.
 - [Add-ons in an enterprise environment](/documentation/enterprise/enterprise-distribution/)—this page discusses the use of signed compared to unsigned extensions, installation options, the Firefox settings affecting installation, and including add-ons with a custom Firefox install package.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "options"
   content: content
 %}
@@ -102,7 +102,7 @@ Using either method, when the user downloads the signed add-on file Firefox inst
 See [submitting an add-on](/documentation/publish/submitting-an-add-on/#self-distribution) for details on how to download your signed add-on file.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "web-download"
   content: content
 %}

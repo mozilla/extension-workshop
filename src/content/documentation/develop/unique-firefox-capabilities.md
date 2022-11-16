@@ -18,7 +18,7 @@ date: 2020-04-24
 Take advantage of features unique to Firefox to extend the Web even further.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -31,7 +31,7 @@ Firefox is a great place to begin your browser extension development. To start, 
 Firefox also offers some unique features that you can use to build more secure, easy to use, and more visually appealing extensions. Just take a look at what’s available:
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     content: content
 %}
 
@@ -50,7 +50,7 @@ Help users separate their browser activities with [Contextual Identities](https:
 ![Containers-screenshot](/assets/img/documentation/develop/containers.png "A screenshot of a container dropdown menu, which includes Personal, Work, Banking, and Shopping containers, and the option to Manage Containers")
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 %}
@@ -70,7 +70,7 @@ Record and display additional or complementary information about a web page with
 ![Sidebar-screenshot](/assets/img/documentation/develop/sidebar.png "A screenshot of the Annotator extension, which adds a sidebar to the browser window and lets users write text in a box")
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 %}
@@ -90,7 +90,7 @@ Better integrate your extension with the browser using the ability to pick up th
 ![Sidebar-screenshot](/assets/img/documentation/develop/icon_placement.png "A screenshot the Firefox toolbar that shows extension icons. The icon for the Beastify is clicked to show a dropdown menu.")
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 %}
@@ -110,7 +110,7 @@ Help users locate content of interest in a web page, with the ability to [find a
 ![Find-screenshot](/assets/img/documentation/develop/find.png "A screenshot of text on a page with the word Color highlighted in purple")
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 %}
@@ -130,7 +130,7 @@ Perform searches directly from your extension, with features to [get details of 
 ![Search-extension-screenshot](/assets/img/documentation/develop/search_extension.png "A screenshot of the Wikipedia entry for Extension")
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 %}
@@ -150,7 +150,7 @@ Add an extra dimension to your themes by [updating the browser theme at runtime]
 ![Dynamic-theme-screenshot](/assets/img/documentation/develop/dynamic_theme.png "A screenshot a yellow browser theme with a timer that transforms it into an earth-colored browser theme")
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 %}
@@ -170,7 +170,7 @@ Provide users with control over their browsing experience from your extension wi
 ![Extension-controlling-settings](/assets/img/documentation/develop/extension_controlling_settings.png "A screenshot of the user preferences screen for New Windows and Tabs, which shows an extension is controlling the user's home page and New Tab page.")
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 %}
@@ -190,7 +190,7 @@ Enable users to reliably add your extension’s features to new pages and sites,
 ![Script-inject-screenshot](/assets/img/documentation/develop/script_inject.png "A screenshot of code showing how the protocol for IRC can be handled.")
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 	aside: ""
@@ -211,7 +211,7 @@ Take advantage of external services to handle protocols or content types by regi
 ![Protocol-handlers--screenshot](/assets/img/documentation/develop/protocol.png "A screenshot of a configuration page for setting proxy access to the Internet")
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 %}
@@ -231,7 +231,7 @@ Perform additional web tasks such as [resolving domain names](https://developer.
 ![Proxy-settings-screenshot](/assets/img/documentation/develop/proxy_settings.png "A screenshot of a configuration page for setting proxy access to the Internet")
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 %}
@@ -251,7 +251,7 @@ Add advanced security capabilities using [PKCS #11 security modules to source ke
 ![Certificate-key--screenshot](/assets/img/documentation/develop/certificate_key.png "A graphic of a scroll with an award on it and a key next to it.")
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 %}

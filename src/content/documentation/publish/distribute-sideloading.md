@@ -25,7 +25,7 @@ No automatic updates will be performed for add-ons installed using these methods
 :::
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -56,7 +56,7 @@ An email address style ID is recommended.
 2. Sign the add-on in [addons.mozilla.org](https://addons.mozilla.org) (AMO). Depending on how you want to make your add-on available, you can use either the unlisted (if you are distributing the add-on exclusively) or listed options. For more details, see [Signing and distributing your add-on](/documentation/publish/signing-and-distribution-overview/).
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
 	id: "preparing-your-addon"
 	content: content_with_toc
 %}
@@ -90,7 +90,7 @@ To use Install Add-on From File in Add-on Manager, send the user the signed add-
    ![add-on appears in add-ons manager](/assets/img/documentation/publish/add_on_added.png)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "install-addon-from-file"
   content: content
 %}
@@ -205,7 +205,7 @@ To install an add-on for a specific user, copy the XPI file to:
 ```
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "standard-extension-folders"
   content: content
 %}

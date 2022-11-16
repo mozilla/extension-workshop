@@ -41,7 +41,7 @@ This article explains how to use the Firefox developer tools to debug extensions
 An extension can consist of several components—background scripts, popups, options pages, content scripts, sidebars, and alike—and you'll use slightly different workflows to debug each component. Each component has a section in this article, and you can read each section in isolation. We'll begin by introducing the developer tools, which you'll use to debug all the pieces of your extension.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -82,7 +82,7 @@ You can now drag the toolbox tab to a separate window, so you can place it along
 ![developers tool split screenshot](/assets/img/documentation/develop/arranging_tools.png)
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "developer-tools-toolbox"
   content: content_with_toc
 %}
@@ -117,7 +117,7 @@ It occasionally contains more detailed information about errors reported to your
 - [Browser Console](https://developer.mozilla.org/docs/Tools/Browser_Console)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "viewing_log_output"
   content: content
 %}
@@ -165,7 +165,7 @@ For more information about using the debugger, see the [Debugger](https://develo
 
 {% endcapture %}
 
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "debugging-background-scripts"
   content: content
 %}
@@ -209,7 +209,7 @@ To debug the options page's HTML and CSS, point the tools at the iframe that hos
 For more information about using **Inspector**, see the [Inspector](https://developer.mozilla.org/docs/Tools/Page_Inspector) guide.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "debugging-options-pages"
   content: content
 %}
@@ -253,7 +253,7 @@ To inspect the popup's HTML and CSS, use **Inspector** in the [split console](ht
 If your extension has multiple HTML documents open, click the page select icon (![pages selector](/assets/img/documentation/develop/page-selector.png)) to open the popup's document.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "debugging-popups"
   content: content
   aside: ""
@@ -289,7 +289,7 @@ If the developer tools tab was not open when the content script injected, the co
 :::
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "debugging-content-scripts"
   content: content
 %}
@@ -323,7 +323,7 @@ To inspect the sidebar's HTML and CSS, use **Inspector** in the [split console](
 If your extension has multiple HTML documents open, click the page select icon (![pages selector](/assets/img/documentation/develop/page-selector.png)) to open the sidebar's document.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "debugging-sidebars"
   content: content
 %}
@@ -345,7 +345,7 @@ An extension can store data using the [Storage API](https://wiki.developer.mozil
 ![sidebar script in debugger](/assets/img/documentation/develop/sidebar_data_in_storage.png)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "debugging-storage"
   content: content
 %}
@@ -383,7 +383,7 @@ To debug the custom developer tools pages' HTML and CSS:
 You can [review and modify the custom development tools page HTML and CSS in **Inspector**](https://developer.mozilla.org/docs/Tools/Page_Inspector), as you would with any webpage.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "debugging-developer-tools-pages-and-panels"
   content: content
   aside: ""
@@ -400,7 +400,7 @@ You can [review and modify the custom development tools page HTML and CSS in **I
 For information on debugging permission requests, see [Test permission requests](/documentation/develop/test-permission-requests/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "debug-permission-requests"
   content: content
 %}
@@ -418,7 +418,7 @@ If your extension could be affected by the browser restarting, such as when a se
 For more details, see [Testing persistent and restart features](/documentation/develop/testing-persistent-and-restart-features/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "debugging-browser-restarts"
   content: content
 %}

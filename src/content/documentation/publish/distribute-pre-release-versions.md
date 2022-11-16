@@ -18,7 +18,7 @@ date: 2020-05-06
 Learn how to distribute an alpha or beta pre-release version of your extension for Firefox.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -46,7 +46,7 @@ If you decide to discontinue your beta channel and your add-on is listed on AMO,
 
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "listing-on-amo"
   content: content
 %}

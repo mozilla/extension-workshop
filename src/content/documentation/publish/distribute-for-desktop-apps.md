@@ -16,7 +16,7 @@ date: 2020-03-20 22:38:00
 ## Add-ons for desktop apps
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -39,7 +39,7 @@ If you would like to direct users to install the add-on from your website, pleas
 Enterprise administrators and people who distribute their own builds of Firefox (such as some Linux and Selenium distributions) will be able to continue to deploy extensions to users. Enterprise administrators can do this via [policies](https://github.com/mozilla/policy-templates#extensionsettings). Additionally, Firefox Extended Support Release (ESR) will continue to support sideloading as an extension installation method.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "what-cant-you-do"
   content: content
 %}

@@ -29,7 +29,7 @@ date: 2021-01-23 00:04:00
 Mozilla and the Firefox browser extension developer community have created a range of tools that can simplify and speed up your browser extension development. This page provides a summary of those tools including details on the features each offers, how to get started, where in the development cycle it fits, and links to useful resources.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -48,7 +48,7 @@ Mozilla and the Firefox browser extension developer community have created a ran
 Create a scaffold for your browser extensions. Provide the tool with extension name, description, and version. Then specify whether you want background and content scripts, browser and page actions, and extension options. create-web-ext then delivers a boilerplate project as a zip download, containing all the folders and files you need to start development.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
     content: content_with_toc
 %}
 
@@ -77,7 +77,7 @@ To get started, [visit the tool online](https://webext.eu/) or [install it local
 - [GitHub UI project](https://github.com/web-ext-labs/ui-tool)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     content: content
     aside: aside
 %}
@@ -105,7 +105,7 @@ The [webextensions-examples GitHub repository](https://github.com/mdn/webextensi
 - [Examples page on MDN](https://developer.mozilla.org/Add-ons/WebExtensions/Examples)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     content: content
     aside: aside
 %}
@@ -125,7 +125,7 @@ The [webextensions-examples GitHub repository](https://github.com/mdn/webextensi
 If you're looking for information about text editor in which to write your code, see the [Common questions](https://developer.mozilla.org/docs/Learn/Common_questions) article [Available text editors](https://developer.mozilla.org/docs/Learn/Common_questions/Available_text_editors).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     content: content
 %}
 
@@ -164,7 +164,7 @@ To get started with web-ext, install it with the [nodejs/npm](https://nodejs.org
 - [GitHub project](https://github.com/mozilla/web-ext)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     content: content
     aside: aside
 %}
@@ -197,7 +197,7 @@ To get started, add the plug-in to your `webpack.config.js`.
 - [Example](https://github.com/birtles/rikaichamp/)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     content: content
     aside: aside
 %}
@@ -228,7 +228,7 @@ To get started, install using npm and load the library into the contexts where b
 - [GitHub project](https://github.com/mozilla/webextension-polyfill/)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     content: content
     aside: aside
 %}
@@ -246,7 +246,7 @@ To get started, install using npm and load the library into the contexts where b
 ## Testing and debugging tools
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     content: content
 %}
 
@@ -276,7 +276,7 @@ To get started, type `about:debugging` in the Firefox address bar.
 - [MDN page](https://developer.mozilla.org/docs/Tools/about:debugging)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: ""
     content: content
     aside: aside
@@ -310,7 +310,7 @@ To get started, enable Browser Toolbox then open `about:debugging` and click deb
 - [MDN page](https://developer.mozilla.org/docs/Tools/Browser_Toolbox)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     content: content
     aside: aside
 %}
@@ -328,7 +328,7 @@ To get started, enable Browser Toolbox then open `about:debugging` and click deb
 ## Translation tools
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     content: content
 %}
 
@@ -363,7 +363,7 @@ To get started, visit the [online version](https://lusito.github.io/web-ext-tran
 - [GitHub repo](https://github.com/Lusito/web-ext-translator)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     content: content
     aside: aside
 %}
@@ -397,7 +397,7 @@ To get started, [visit the tool online](https://morikko.github.io/translate-web-
 - [Translate Web-Ext](https://morikko.github.io/translate-web-extension)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: ""
     content: content
     aside: aside
@@ -423,7 +423,7 @@ When developing browser extensions for Firefox for Android, you can make use of:
 For more details, see [Developing extensions for Firefox for Android](/documentation/develop/developing-extensions-for-firefox-for-android/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: ""
     content: content
     aside: ""

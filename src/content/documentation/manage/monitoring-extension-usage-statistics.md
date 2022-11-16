@@ -18,7 +18,7 @@ date: 2020-07-30
 Learn how to use the built-in dashboard on addons.mozilla.org (AMO) to monitor usage statistics for your extension.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -31,7 +31,7 @@ Learn how to use the built-in dashboard on addons.mozilla.org (AMO) to monitor u
 Developers can use the statistics dashboard feature on addons.mozilla.org (AMO) to find more information related to their extension’s usage. These stats are aggregated from [Firefox telemetry data](https://support.mozilla.org/kb/telemetry-clientid) and do not include any personally identifiable user data. This information provides developers with more information about user adoption, general demographics, and other insights that might help them make changes or improvements.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "introduction"
   content: content_with_toc
 %}
@@ -51,7 +51,7 @@ The easiest way to access the dashboard is to sign in to AMO and navigate to “
 ![Screenshot of an add-on on the Manage My Submissions page; below the add-on name is a link titled Statistics](/assets/img/documentation/manage/manage_my_submissions_statistics.png)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "accessing-the-statistics-dashboard"
   content: content
 %}
@@ -78,7 +78,7 @@ If you link to your add-on’s listing page you can append the following [standa
 | <em>utm_campaign</em> | The specific product promotion or strategic campaign. | <em>utm_campaign=launch-announcement</em> |
 
 {% endcapture %}
-{% include modules/table.liquid
+{% include modules/table.liquid,
 	content: table
 %}
 
@@ -95,7 +95,7 @@ There is a limit of 40 characters for each UTM parameter value. Longer values wi
 :::
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "tracking-external-sources"
   content: content
 %}
@@ -113,7 +113,7 @@ Below is an example of a link to your add-on's listing page with UTM parameters:
 `https://addons.mozilla.org/addon/firefox-color?utm_source=mysite.wordpress.com&utm_medium=blog&utm_content=top-banner&utm_campaign=get-my-addons`
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "add-on-listing-example"
   content: content
 %}

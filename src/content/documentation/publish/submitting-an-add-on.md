@@ -18,7 +18,7 @@ date: 2022-10-17
 This article walks through the process of publishing an add-on. If you just want to get started, head to the [Submit a New Add-on](https://addons.mozilla.org/developers/addon/submit/) page on AMO.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -51,7 +51,7 @@ Choose:
 - **On your own**, if you plan to distribute the add-on yourself and don't want it listed on AMO. <br/> Click **Continue** and follow the [Self-distribution guide](#self-distribution) to find out how.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "transfer-ownership"
   content: content_with_toc
 %}
@@ -103,7 +103,7 @@ When you're ready to release a new version of your add-on, update it by visiting
 Learn how to make your add-on listing appealing with these [tips](/documentation/develop/create-an-appealing-listing/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "listing-on-amo"
   content: content
 %}
@@ -138,7 +138,7 @@ If you want Firefox to handle updates to your add-on, remember to include the [`
 You can now distribute your add-on. Note, however, that your add-on may still be subject to further review, if it is you'll receive notification of the outcome of the review later.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "self-distribution"
   content: content
 %}
@@ -153,7 +153,7 @@ You can now distribute your add-on. Note, however, that your add-on may still be
 For resources that can help now you've published an add-on and details of how to get help if you encounter issues, check out [Resources for publishers](/documentation/manage/resources-for-publishers/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "get-help"
   content: content
 %}

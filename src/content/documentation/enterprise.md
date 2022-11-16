@@ -17,7 +17,7 @@ date: 2019-07-09 09:00:00
 Firefox gives your enterprise a high-performance, standards compliant, manageable browser environment.
 
 {% endcapture %}
-{% include modules/overview-page-hero.liquid
+{% include modules/overview-page-hero.liquid,
 	content: page_hero_banner_content
 	background: "develop-overview-hero-bg.jpg"
 %}
@@ -31,7 +31,7 @@ Firefox gives your enterprise a high-performance, standards compliant, manageabl
 Extensions give you the ability to complement standard browser features and provide richer interfaces to enterprise web applications.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
 	id: "introduction"
 	content: content_with_toc
 %}
@@ -49,7 +49,7 @@ Extensions give you the ability to complement standard browser features and prov
 ## Developing your enterprise extension
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	content: content
 %}
 
@@ -69,7 +69,7 @@ Developing extensions for your enterprise is straightforward – you can follow 
 [Some Firefox enterprise policies](/documentation/enterprise/enterprise-policies-that-impact-extensions/) might affect the installation, behavior, and update of extensions.
 
 {% endcapture %}
-{% include modules/two-column.liquid
+{% include modules/two-column.liquid,
 	col_1: col_1_content
 	col_2: col_2_content
 	reverse: false
@@ -92,7 +92,7 @@ Extensions for enterprise deployments of Firefox Extended Support Release (ESR) 
 Once your extension is developed and tested, you can use one of the [enterprise distribution](/documentation/enterprise/enterprise-distribution/) methods to install it in Firefox.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	id: "distributing-your-enterprise-extension"
 	content: content
 	aside: ""
