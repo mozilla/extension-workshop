@@ -6,7 +6,7 @@ topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]
 contributors: [rebloor]
 last_updated_by: rebloor
-date: 2022-11-17
+date: 2022-11-16
 ---
 
 <!-- Page Hero Banner -->
