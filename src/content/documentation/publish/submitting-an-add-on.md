@@ -4,9 +4,9 @@ title: Submitting an add-on
 permalink: /documentation/publish/submitting-an-add-on/
 topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]
-contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz]
-last_updated_by: Rob--W
-date: 2021-04-27
+contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz, wesinator]
+last_updated_by: wesinator
+date: 2022-10-17
 ---
 
 <!-- Page Hero Banner -->
@@ -90,7 +90,7 @@ Choose:
    - Support email and website: an email address and website where users can get in touch when they have questions, issues, or compliments.
    - License: select the appropriate license for your add-on. Click Details to learn more about each license.
    - This add-on has a privacy policy: if any data is being transmitted from the user’s device, a privacy policy is required explaining what is being sent and how it’s used. Check this box and provide the privacy policy.
-   - Notes to Reviewer: information that will assist the AMO reviewer, such as log in details for a dummy account, source code information, or similar.
+   - Notes for Reviewers: information that will assist the AMO reviewer, such as log in details for a dummy account, source code information, or similar.
 9. Click **Submit Version**
 10. The Version Submitted page displays. You'll also receive an email confirmation. <br/><br/> <img src="/assets/img/publish/Submit_add_on_version_submitted.png" style="box-shadow:0 0 0.5em gray;" /> <br/>
 
