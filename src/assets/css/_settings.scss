@@ -81,7 +81,6 @@ $foundation-palette: (
   warning: #ffd568,
   alert: #ff4f5e,
 );
-
 $primary-color-hover: #003eaa;
 $warning-color-light: #ffeb80;
 $alert-color-light: #ffbdc5;
@@ -293,6 +292,7 @@ $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.5;
 $paragraph-margin-bottom: 1.5rem;
 $paragraph-text-rendering: optimizeLegibility;
+
 // Disable .code-inline in Foundation because we are not using it and it breaks
 // our own style for inline code blocks, see: https://github.com/mozilla/extension-workshop/issues/1315
 $enable-code-inline: false;
