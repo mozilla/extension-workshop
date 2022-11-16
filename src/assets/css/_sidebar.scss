@@ -88,7 +88,7 @@ $sidebar-nav-width: rem-calc(240);
       }
     }
 
-    .primary > li:not(.is-active, .has-active-children) {
+    .primary > li:not(.is-active):not(.has-active-children) {
       display: none;
     }
 
@@ -110,7 +110,7 @@ $sidebar-nav-width: rem-calc(240);
             display: none;
           }
 
-          > li:not(.is-active, .has-active-children) {
+          > li:not(.is-active):not(.has-active-children) {
             display: none;
           }
         }
@@ -285,7 +285,7 @@ $sidebar-nav-width: rem-calc(240);
     }
   }
 
-  .subfolder > li:not(.is-active, .has-active-children) {
+  .subfolder > li:not(.is-active):not(.has-active-children) {
     display: none;
   }
 
