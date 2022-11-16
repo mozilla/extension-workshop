@@ -139,7 +139,7 @@ Stylesheet: Full Width Page Stylesheet
     position: relative;
   }
 
-  .cell:not(.tile, .tile-compact) a,
+  .cell:not(.tile):not(.tile-compact) a,
   .tiles-intro a {
     color: $white;
     text-decoration: underline;
@@ -154,8 +154,8 @@ Stylesheet: Full Width Page Stylesheet
     }
   }
 
-  .cell:not(.tile, .tile-compact) h1,
-  .cell:not(.tile, .tile-compact) h2,
+  .cell:not(.tile):not(.tile-compact) h1,
+  .cell:not(.tile):not(.tile-compact) h2,
   .tiles-intro h1,
   .tiles-intro h2 {
     &::after {
@@ -277,7 +277,7 @@ Stylesheet: Full Width Page Stylesheet
 
   @include breakpoint(medium only) {
     &:not(.tile-block-link) {
-      &:not(.medium-6, .no-img) {
+      &:not(.medium-6):not(.no-img) {
         > * {
           max-width: 70%;
 
@@ -292,7 +292,7 @@ Stylesheet: Full Width Page Stylesheet
     }
 
     &.tile-block-link {
-      &:not(.medium-6, .no-img) .block-link {
+      &:not(.medium-6):not(.no-img) .block-link {
         > * {
           max-width: 70%;
 

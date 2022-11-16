@@ -51,6 +51,7 @@
         "camelCaseSvgKeywords": true
       }
     ],
+    "selector-not-notation": null,
     "value-list-comma-newline-after": null,
     "scss/no-global-function-names": null,
     "scss/at-import-partial-extension": null,
