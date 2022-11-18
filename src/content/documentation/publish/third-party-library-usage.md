@@ -4,9 +4,9 @@ title: Third Party Library Usage
 permalink: /documentation/publish/third-party-library-usage/
 topic: Publish
 tags: [add-ons, extensions, review-policy]
-contributors: [ChrisRoss5, One]
-last_updated_by: ChrisRoss5
-date: 2019-05-16 09:19:15
+contributors: [ChrisRoss5, One, wesinator]
+last_updated_by: wesinator
+date: 2022-10-17
 ---
 
 <!-- Page Hero Banner -->
@@ -94,7 +94,9 @@ Tip: If the library is on GitHub, you can usually find this version under the �
 
 ## Communicating third-party library links to the reviewer
 
-You can add the links to the “Notes to Reviewers” section of your extension’s details on AMO.
+You can add the links to the “Notes for Reviewers” section of your extension’s details on AMO.
+
+This section can be found under “Manage Status & Versions” for each version.
 
 ---
 

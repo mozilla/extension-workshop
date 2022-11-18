@@ -205,7 +205,7 @@ blockquote {
 // ------
 
 .horizontal-list {
-  @include horizontal_list();
+  @include horizontal_list;
 }
 
 // Down Arrow

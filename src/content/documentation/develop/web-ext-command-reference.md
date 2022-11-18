@@ -28,10 +28,11 @@ contributors:
     ankushduacodes,
     willdurand,
     eviljeff,
-    hamatti
+    hamatti,
+    LowerDimensions
   ]
 last_updated_by: hamatti
-date: 2022-11-10
+date: 2022-11-18
 ---
 
 <!-- Page Hero Banner -->
@@ -351,6 +352,7 @@ Environment variable: `$WEB_EXT_FIREFOX_PROFILE`
 </section>
 
 <section id="profile-create-if-missing">
+
 #### `--profile-create-if-missing`
 
 With this option, the profile directory (specified by the `--firefox-profile` or `--chromium-profile` options) will be created if it does not exist yet.
