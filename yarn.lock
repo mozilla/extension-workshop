@@ -4108,12 +4108,7 @@ linkify-it@^4.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-liquidjs@9.42.1:
-  version "9.42.1"
-  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.42.1.tgz#7c3200e40d17b264ddb3e4d949fbc46b403d02d4"
-  integrity sha512-7Dbxs2M7W0EwemTWkBNCLR7YZJ6Bm5FYJ+djMgAj4znqquSoex314JncMSxFsU5CkOC/4LZxecMq3LNgXrVYoQ==
-
-liquidjs@^9.40.0:
+liquidjs@9.43.0, liquidjs@^9.40.0:
   version "9.43.0"
   resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-9.43.0.tgz#69924ed3bbe143c17c13ea675cc70390d72eb307"
   integrity sha512-qZZuL5Emja2UgCqiLewiw9bvwZQwm19TTGFxDkonVzB4YSTOZ8tuTVo/7Uu/AeW1cL2Qb/at3DSoV8wwyFXQCw==
