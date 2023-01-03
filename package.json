@@ -29,7 +29,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "4.2.0",
     "acorn": "8.8.1",
     "acorn-walk": "8.2.0",
-    "chalk": "4.1.2",
+    "chalk": "5.2.0",
     "chokidar-cli": "3.0.0",
     "eleventy-xml-plugin": "0.1.0",
     "eslint": "8.30.0",
