@@ -26,7 +26,7 @@ date: 2019-09-19 12:01:01
 
 {% capture content_with_toc %}
 
-[Recommended extensions](https://addons.mozilla.org/firefox/search/?recommended=true&type=extension) are curated extensions that meet the highest standards of security, functionality, and user experience. Firefox staff thoroughly evaluate each extension before it receives Recommended status.
+[Recommended extensions](https://addons.mozilla.org/firefox/search/?promoted=recommended&type=extension) are curated extensions that meet the highest standards of security, functionality, and user experience. Firefox staff thoroughly evaluate each extension before it receives Recommended status.
 
 Recommended extensions are easy to identify because of their distinctive “Recommended” badge.
 
