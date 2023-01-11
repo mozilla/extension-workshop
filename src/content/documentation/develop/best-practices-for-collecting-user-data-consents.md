@@ -133,7 +133,7 @@ In this example:
     - opts OUT of any feature that cannot be disabled &rarr; offer them the option to remove the extension. If they choose not to remove the extension present the consent dialog again.
     - opts OUT only from features that can be disabled &rarr; disable those features and continue running the extension.
 
-You can prompt the user to uninstall the extension with [`management.uninstallSelf()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf)
+You can prompt the user to uninstall the extension with [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
