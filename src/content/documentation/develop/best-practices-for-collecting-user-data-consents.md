@@ -5,9 +5,9 @@ permalink: /documentation/develop/best-practices-for-collecting-user-data-consen
 topic: Develop
 tags:
   [add-ons, extensions, how-to, privacy, ui, user-interface, ux, webextensions]
-contributors: [rebloor]
-last_updated_by: kewisch
-date: 2021-12-01
+contributors: [rebloor, hamatti]
+last_updated_by: hamatti
+date: 2023-01-11
 ---
 
 <!-- Page Hero Banner -->
@@ -132,6 +132,8 @@ In this example:
     - opts IN to all features &rarr; continue with all extension features enabled.
     - opts OUT of any feature that cannot be disabled &rarr; offer them the option to remove the extension. If they choose not to remove the extension present the consent dialog again.
     - opts OUT only from features that can be disabled &rarr; disable those features and continue running the extension.
+
+You can prompt the user to uninstall the extension with [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
