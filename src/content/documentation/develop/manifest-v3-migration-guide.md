@@ -216,10 +216,24 @@ To migrate your extension to using non-persistent background pages you need to:
 - Ensure listeners are at the top-level and use the synchronous pattern.
 - Record state changes in local storage.
 - Change timers to alarms.
-- Switch from using [`extension.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage) to call a function from the background page, to [`runtime.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage).
-— Place menu creation using `menus.create` in a `runtime.onInstalled` listener.
+- Switch from using [`extension.getBackgroundPage`](https://developer.mozilla.org/en-US/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage) to call a function from the background page, to [`runtime.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage).
+- Place menu creation using [`menus.create`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) or its alias `contextMenus.create` in a `runtime.onInstalled` listener. Also, note that the `menus.onClicked` event or its alias `contextMenus.onClicked` must be used to handle menu entry click events from an event page. If the `onclick` property of `menus.create` or its alias `contextMenus.create` are used from a call originating from an event page, they throw synchronously. When you migrate an MV2 extension to the event page model, you can use this `onclick` behavior to provide backward-compatible code for Firefox 105 or earlier, where the event pages aren’t supported. For example:
 
-More information on the migration process can be found on the [background script](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) page on MDN.
+  ```javascript
+  eventPagesSupported = false;
+  try {
+    browser.contextMenus.create({ id: "test-menu", onclick: () => {} });
+  } catch (err) {
+    if (err?.message.includes("Property \"onclick\" cannot be used in menus.create")) {
+      // Firefox is detected running with event pages support enabled.
+      eventPagesSupported = true;
+    }
+  } finally {
+    browser.contextMenus.remove("test-menu");
+  }
+  ```
+
+More information on the migration process can be found on the [background script](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) page on MDN.
 
 ::: note
 Safari also supports event-driven background scripts, however, Chromium has adopted service workers instead.
