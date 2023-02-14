@@ -235,7 +235,7 @@ An extension designed as a non-persistent background page works even when event 
 with one exception: the registration of context menus. In an event page, context menus persist across restarts, while they do not in persistent background pages.
 If the recommendation to register menus in `runtime.onInstalled` is followed, these menus are removed after a browser restart in Firefox 105 and earlier.
 To work around this issue, you could unconditionally call `browser.contextMenus.create`.
-When the menu already exists, the `browser.runtime.lastError` property will be set when the (optional) `create` callback is called.
+When the menu exists, the `browser.runtime.lastError` property is set when the (optional) `create` callback is called.
 
 ```javascript
 browser.contextMenus.create(
