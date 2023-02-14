@@ -231,8 +231,8 @@ More information on the migration process can be found on the [background script
 This section is only relevant if your extension supports Firefox 105 and earlier.
 :::
 
-An extension designed as a non-persistent background page generally works even when event pages are not supported (i.e. in Firefox 105 and earlier).
-There is one exception: the registration of context menus. In an event page, context menus persist across restarts, while they do not in persistent background pages.
+An extension designed as a non-persistent background page works even when event pages are not supported (i.e. in Firefox 105 and earlier) 
+with one exception: the registration of context menus. In an event page, context menus persist across restarts, while they do not in persistent background pages.
 If the recommendation to register menus in `runtime.onInstalled` is followed, these menus are removed after a browser restart in Firefox 105 and earlier.
 To work around this issue, you could unconditionally call `browser.contextMenus.create`.
 When the menu already exists, the `browser.runtime.lastError` property will be set when the (optional) `create` callback is called.
