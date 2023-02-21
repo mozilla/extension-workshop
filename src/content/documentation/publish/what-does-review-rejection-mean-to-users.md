@@ -30,9 +30,9 @@ This article explains how users and people looking for your extension are affect
 
 ## Review overview
 
-Any extension you submit to [addons.mozilla.org](https://addons.mozilla.org) (AMO) is subject to two reviews. There is a machine validation of your extension as part of the submission flow, and a human review that takes place after your extension is published.
+Any extension you submit to [addons.mozilla.org](https://addons.mozilla.org) (AMO) is subject to two reviews. There is a machine validation of your extension as part of the submission flow, and a human review that can take place at any time, sometimes before publication.
 
-The machine validation tells you immediately if anything needs to be fixed to enable the publication of your extension. The human review occurs after publication and can occur at any time. When this review starts, the reviewer may ask for clarification about your extension. The outcome of the review could be the rejection of your extension’s latest version, and the rejection of earlier unreviewed versions if they also contain issues.
+The machine validation tells you immediately if anything needs to be fixed to enable the publication of your extension. In some cases, a human review may be necessary for publication. When this review starts, the reviewer may ask for clarification about your extension. The outcome of the review could be the rejection of your extension’s latest version and the rejection of earlier unreviewed versions if they also contain issues.
 
 For more information on these processes, see [Submitting an add-on](/documentation/publish/submitting-an-add-on/) and [Add-on Policies](/documentation/publish/add-on-policies/).
 

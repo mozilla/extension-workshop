@@ -204,40 +204,86 @@ Also, the `code` parameter is removed so that arbitrary strings can no longer be
 
 ### Event-driven background scripts
 
-Firefox has extended its support for [background scripts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) by enabling non-persistent background pages for Manifest V2 and V3. Using non-persistent background scripts greatly reduces your extension use of browser resources. However, MV3 removes support for persistent background pages.
-
-::: note
-If you want to migrate your MV2 extension to using non-persistent background pages, you can test them in the MV3 developer preview by enabling the preference `extensions.eventPages.enabled`.
-:::
+Firefox has extended its support for [background scripts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) by enabling non-persistent background pages (aka Event Pages) for Manifest V2 and V3. Using non-persistent background scripts greatly reduces your extension use of browser resources. However, MV3 removes support for persistent background pages.
 
 To migrate your extension to using non-persistent background pages you need to:
 
-- Update your manifest.json `background` key to remove the `"persistent"` property or set it to `false`.
+- Update your manifest.json `background` key to remove the `"persistent"` property or set it to `false`. This feature is also supported in MV2 from Firefox 106.
 - Ensure listeners are at the top-level and use the synchronous pattern.
 - Record state changes in local storage.
 - Change timers to alarms.
 - Switch from using [`extension.getBackgroundPage`](https://developer.mozilla.org/en-US/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage) to call a function from the background page, to [`runtime.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage).
-- Place menu creation using [`menus.create`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) or its alias `contextMenus.create` in a `runtime.onInstalled` listener. Also, note that the `menus.onClicked` event or its alias `contextMenus.onClicked` must be used to handle menu entry click events from an event page. If the `onclick` property of `menus.create` or its alias `contextMenus.create` are used from a call originating from an event page, they throw synchronously. When you migrate an MV2 extension to the event page model, you can use this `onclick` behavior to provide backward-compatible code for Firefox 105 or earlier, where the event pages aren’t supported. For example:
-
-  ```javascript
-  eventPagesSupported = false;
-  try {
-    browser.contextMenus.create({ id: "test-menu", onclick: () => {} });
-  } catch (err) {
-    if (err?.message.includes("Property \"onclick\" cannot be used in menus.create")) {
-      // Firefox is detected running with event pages support enabled.
-      eventPagesSupported = true;
-    }
-  } finally {
-    browser.contextMenus.remove("test-menu");
-  }
-  ```
-
-More information on the migration process can be found on the [background script](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) page on MDN.
+- Place menu creation using [`menus.create`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) or its alias `contextMenus.create` in a `runtime.onInstalled` listener. Also, note that the [`menus.onClicked`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked) event or its alias `contextMenus.onClicked` must be used to handle menu entry click events from an event page, instead of the `onclick` parameter of the `contextMenus.create` or `contextMenus.update` methods. If the `onclick` property of `menus.create` or its alias `contextMenus.create` are used from a call originating from an event page, they throw synchronously.
 
 ::: note
 Safari also supports event-driven background scripts, however, Chromium has adopted service workers instead.
 :::
+
+::: note
+Firefox supports non-persistent background pages from Firefox 106. In Firefox 105 and earlier, event pages are run as if they are a persistent background page.
+:::
+
+More information on the migration process can be found on the [background script](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) page on MDN.
+
+#### Event pages and backwards-compatibility
+
+::: note
+This section is only relevant if your extension supports Firefox 105 and earlier.
+:::
+
+An extension designed as a non-persistent background page works even when event pages are not supported (i.e. in Firefox 105 and earlier) 
+with one exception: the registration of context menus. In an event page, context menus persist across restarts, while they do not in persistent background pages.
+If the recommendation to register menus in `runtime.onInstalled` is followed, these menus are removed after a browser restart in Firefox 105 and earlier.
+To work around this issue, you could unconditionally call `browser.contextMenus.create`.
+When the menu exists, the `browser.runtime.lastError` property is set when the (optional) `create` callback is called.
+
+```javascript
+browser.contextMenus.create(
+  {
+    id: "my-menu",
+    // etc.
+  },
+  () => {
+    // TODO: Do not forget to read the "browser.runtime.lastError" property to
+    // avoid warnings about an uncaught error when the menu item was created
+    // before ("ID already exists: my-menu").
+  }
+);
+```
+
+If the initialization of the menu is expensive or requires complex logic,
+an alternative is to check whether event pages are supported, and if so,
+run the logic less frequently than at every wakeup of the event page
+(e.g. with
+[`runtime.onInstalled`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) or
+[`runtime.onStartup`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onStartup)
+).
+
+You can detect the availability of event pages using the characteristic that an
+error is thrown synchronously when `onclick` is passed to `contextMenus.create`
+in an event page.
+
+The following code shows how you can use such a test to register menus.
+
+```javascript
+let eventPagesSupported = true;
+try {
+  // Firefox throws a synchronous error when onclick is passed in an event page.
+  browser.contextMenus.create({ id: "test-menu", onclick: () => {} });
+  eventPagesSupported = false;
+  browser.contextMenus.remove("test-menu");
+} catch (err) {
+  // Firefox 106+ error: Property "onclick" cannot be used in menus.create, replace with an "onClicked" event listener.
+}
+async function registerMyMenus() {
+  browser.contextMenus.create({ id: "my-menu", /* etc. */ });
+}
+if (eventPagesSupported) {
+  browser.runtime.onInstalled.addListener(registerMyMenus);
+} else {
+  registerMyMenus();
+}
+```
 
 {% endcapture %}
 {% include modules/one-column.liquid,
