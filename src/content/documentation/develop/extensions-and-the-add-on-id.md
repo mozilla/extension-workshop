@@ -20,9 +20,10 @@ contributors:
     andymckay-github,
     timdream,
     Timendum,
+    willdurand,
   ]
-last_updated_by: Rob--W
-date: 2021-08-17
+last_updated_by: willdurand
+date: 2022-05-17
 ---
 
 <!-- Page Hero Banner -->
@@ -37,16 +38,8 @@ This article describes how add-on IDs are handled for extensions that are built 
 
 Firefox add-ons contain a unique identifier which is used both inside Firefox itself and on the [addons.mozilla.org](https://addons.mozilla.org/) (AMO) website. For example, it's used by Firefox to check for updates to installed add-ons and to identify which objects (such as data stores) are controlled by this add-on.
 
-With older types of Firefox add-on, the add-on developer must set the add-on ID explicitly. XUL/XPCOM add-ons set the ID in the [install manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Install_Manifests), while SDK add-ons set it in the [package.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/SDK/Tools/package_json).
-
-However, from Firefox 48 you can develop, debug, publish, and update extensions without needing to set an explicit ID at all.
-
-::: note
-Note that the ability to develop and debug WebExtensions that don't include an ID is new in Firefox 48\. If you need to use an earlier version of Firefox, then you must use the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key to set an ID explicitly.
-:::
-
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
   content: page_hero_banner_content
 %}
 
@@ -63,23 +56,21 @@ Note that the ability to develop and debug WebExtensions that don't include an I
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
 
-## Basic workflow with no add-on ID
+## Basic workflow with no add-on ID (Manifest V2)
 
-Extensions can explicitly set the add-on ID using the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json. However, this key is usually optional. If you don't set it, then you can usually develop, debug, publish, and update your extension without ever having to deal with an ID. One advantage of this is that Google Chrome does not recognize the `browser_specific_settings` key and will show a warning if you include it.
+Extensions can explicitly set the add-on ID using the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json. However, this key is usually optional for Manifest V2 extensions. If you don't set it, then you can usually develop, debug, publish, and update your extension without ever having to deal with an ID. One advantage of this is that Google Chrome does not recognize the `browser_specific_settings` key and will show a warning if you include it.
 
 Note, though, that some WebExtension APIs use the add-on ID and expect it to be the same from one browser session to the next. If you use these APIs in Firefox, then you must set the ID explicitly using the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. See [When do you need an Add-on ID?](#when-do-you-need-an-add-on-id).
 
 ### Developing and debugging
 
-Starting in Firefox 48, if your manifest.json does not contain an ID then the extension will be assigned a randomly-generated temporary ID when you [install it in Firefox](/documentation/develop/temporary-installation-in-firefox/) through `about:debugging`. If you then reload the extension using the "Reload" button, the same ID will be used. If you then restart Firefox and load the add-on again, it will get a new ID.
+If your manifest.json does not contain an ID then the extension will be assigned a randomly-generated temporary ID when you [install it in Firefox](/documentation/develop/temporary-installation-in-firefox/) through `about:debugging`. If you then reload the extension using the "Reload" button, the same ID will be used. If you then restart Firefox and load the add-on again, it will get a new ID.
 
 If you turn the extension into an `.xpi` or `.zip` and install it through `about:addons`, it will not work. To have it work in this scenario, you will need to add in the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`.
 
 ### Publishing
 
 Once you have finished developing the extension, you can [package it and submit it to AMO for review and signing](/documentation/publish/signing-and-distribution-overview/). If the packaged extension you upload does not contain an ID, AMO will generate one for you. It's only at this point that the add-on will be assigned a permanent ID, which will be embedded in the signed packaged extension.
-
-Note that once an extension has been given a permanent ID, you can't then update it to use the Add-on SDK or legacy XUL/XPCOM techniques. If you do switch to one of these platforms, you must submit it as a distinct new add-on, with a new ID.
 
 ### Updating
 
@@ -89,7 +80,9 @@ Even after this point, though, you don't generally have to deal with the ID at a
 It's essential with this workflow that you update the add-on _manually using its page on AMO_, otherwise AMO will not understand that the submission is an update to an existing add-on, and will treat the update as a brand-new add-on.
 :::
 
-You can do the same thing if you are updating from an older add-on type, such as a XUL/XPCOM add-on, to use WebExtensions APIs. Just visit the old add-on's page on AMO, upload the new extension there, and it will be treated as an update to the old version.
+## What happens with Manifest V3?
+
+All [Manifest V3 extensions](/documentation/develop/manifest-v3-migration-guide/) need an add-on ID in their manifest.json when submitted to AMO. Contrary to Manifest V2 extensions, AMO will not accept Manifest V3 extensions without an ID and it will not automatically embed this ID in the signed packaged extension.
 
 </div>
 </article>
@@ -104,6 +97,10 @@ You can do the same thing if you are updating from an older add-on type, such as
 <div class="cell small-12">
 
 ## When do you need an add-on ID?
+
+All [Manifest V3 extensions](/documentation/develop/manifest-v3-migration-guide/) need an add-on ID in their manifest.json when submitted to AMO.
+
+For Manifest V2 extensions, you need an add-on ID when:
 
 - If you want to install an unsigned add-on from its XPI file, rather than loading it temporarily using `about:debugging`.
 - If you want to have a value other than a randomly generated ID upon [getting your extension signed](/documentation/publish/#get-your-extension-signed) for the first time.

@@ -18,7 +18,7 @@ date: 2020-09-15
 Here is a list of best practices you should follow to keep the users of your extension safe. If you don't follow these best practices your extension may fail the reviews on [addons.mozilla.org](https://addons.mozilla.org) (AMO), preventing you from distributing your add-on or resulting in it being blocked from installation in Firefox.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 

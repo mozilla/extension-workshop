@@ -634,7 +634,7 @@ Stylesheet: Full Width Page Stylesheet
   }
 
   > p a {
-    @include button();
+    @include button;
 
     font-size: 0.7333rem;
     padding: rem-calc(8);

@@ -5,9 +5,9 @@ permalink: /documentation/develop/best-practices-for-collecting-user-data-consen
 topic: Develop
 tags:
   [add-ons, extensions, how-to, privacy, ui, user-interface, ux, webextensions]
-contributors: [rebloor]
-last_updated_by: kewisch
-date: 2021-12-01
+contributors: [rebloor, hamatti]
+last_updated_by: hamatti
+date: 2023-01-11
 ---
 
 <!-- Page Hero Banner -->
@@ -21,7 +21,7 @@ If your extension collects user data, it needs to comply with the requirement of
 A common developer question about these policies is how to translate them into browser extension features that are compliant to [Mozilla’s Add-on policies](/documentation/publish/add-on-policies/). This how-to is the result of those requests and offers advice on implementing prompts to meet the data collection and add-on policies. This article suggests how you can implement suitable prompts but it doesn’t replace or supersede the policies; you still need to confirm that your extension complies with the policies.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -42,7 +42,7 @@ To create the consent flow and consent dialogs your extension needs, you should 
 If you are unsure if your add-on collects personal data, technical data, or interaction data, check out the definition in [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management).
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "know-your-privacy-settings"
   content: content_with_toc
 %}
@@ -62,7 +62,7 @@ Before designing the data collection consent for your extension, you should:
 - create a privacy policy.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "get-prepared"
   content: content
 %}
@@ -78,7 +78,7 @@ Before designing the data collection consent for your extension, you should:
 When your users arrive at your data and privacy consent dialog, they need to know what they're consenting to and this is where your privacy policy comes in. The  [privacy policy](/documentation/publish/add-on-policies/#privacy-policy) section of the [Add-on Policies](/documentation/publish/add-on-policies/) provides clear guidelines on what the policy should include. If you’re collecting significant quantities of data and making significant use of it, taking legal advice may be prudent. However, your first strategy should be to reduce or eliminate the collection of user data where possible. If your data collection and use is fairly low-level, it’s possible that a privacy policy generator may be helpful. You may also want to take a look at [Mozilla's privacy policy](https://www.mozilla.org/privacy/) as a model to follow.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "create-a-privacy-policy"
   content: content
 %}
@@ -104,7 +104,7 @@ Where you provide the user with an opt-in option, the related feature **must be 
 Where you provide the user with an opt-out, option the related features **can be turned on by default** but **must be turned off if the user indicates** they want to opt-out.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "prompt-after-install"
   content: content
 %}
@@ -133,8 +133,10 @@ In this example:
     - opts OUT of any feature that cannot be disabled &rarr; offer them the option to remove the extension. If they choose not to remove the extension present the consent dialog again.
     - opts OUT only from features that can be disabled &rarr; disable those features and continue running the extension.
 
+You can prompt the user to uninstall the extension with [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
+
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "determine-your-consent-flow"
   content: content
 %}
@@ -167,7 +169,7 @@ The extension requires personal or technical data collection to provide its func
   ![Mockup of a prompt that could be used when the user provides insufficient permission for privacy related features so that the extension cannot work. Gives the user the option to uninstall the extension or review their privacy settings.](/assets/img/documentation/develop/privacy_prompt_mockup_remove_extension.png)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "your-consent-dialogs"
   content: content
   aside: ""

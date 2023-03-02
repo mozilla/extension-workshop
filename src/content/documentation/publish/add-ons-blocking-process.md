@@ -21,7 +21,7 @@ When Mozilla becomes aware of add-ons that go against user expectations or other
 The following describes Mozilla’s common practices for dealing with add-ons that appear to violate the [Add-on Policies](/documentation/publish/add-on-policies/). Authoritative information on the conditions for removing or revoking add-ons can be found in the [Firefox Add-on Distribution Agreement](/documentation/publish/firefox-add-on-distribution-agreement/) and the [Add-on Policies](/documentation/publish/add-on-policies/).
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -36,7 +36,7 @@ The following describes Mozilla’s common practices for dealing with add-ons th
 When deciding whether to block an add-on from running in Firefox, we ask whether the risk is so great that it outweighs the user’s choice to install the software, the utility it provides, as well as the developer’s freedom to distribute and control their software. If we encounter a situation where we cannot make a clear-cut decision, we will err on the side of security to protect the user.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "security-over-choice"
   content: content_with_toc
 %}
@@ -58,7 +58,7 @@ Blocking is reserved for add-ons with the following characteristics:
 Add-ons that appear to be clones, repeats or close copies of already blocked add-ons will also be removed. If an issue is known to affect only a subset of versions, the block may be applied to the affected versions specifically. Add-ons that contain obfuscated or comparably unreadable code will also be blocked.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "blocking-criteria"
   content: content
 %}
@@ -75,7 +75,7 @@ When we decide to block an add-on, we may reach out to the developer if we belie
 More commonly, we will not reach out to developers prior to blocking if it appears that the add-on is intentionally violating our policies, or the violation is sufficiently severe.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "developer-outreach"
   content: content
 %}
@@ -92,7 +92,7 @@ If you have encountered an add-on that you believe meets the criteria for being 
 Mozilla only blocks add-ons based on the [Firefox distribution agreement](/documentation/publish/firefox-add-on-distribution-agreement/) and [add-on policies](/documentation/publish/add-on-policies/). When requesting a block, please read these carefully as the policies do allow certain forms of monetization and data collection.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "requesting-a-block"
   content: content
 %}
@@ -108,7 +108,7 @@ In addition to add-ons, Mozilla may also block other types of software that pose
 
 Mozilla may limit hardware acceleration features of graphics cards for certain graphics driver versions in accordance with the [graphics driver blocks](https://wiki.mozilla.org/Blocklisting/Graphics) policy. This is done for stability reasons, to avoid driver crashes that would interrupt the user.
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "blocking-other-types-of-third-party-software"
   content: content
 %}

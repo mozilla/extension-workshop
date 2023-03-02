@@ -20,7 +20,7 @@ When it comes to accessibility, extensions should follow the same guidelines as 
 There is more information on design and accessibility in the [Photon Design System](https://design.firefox.com/photon/) and [Accessibility and Mozilla](https://developer.mozilla.org/docs/Mozilla/Accessibility) section on MDN.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 

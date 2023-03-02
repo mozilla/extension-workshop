@@ -4,9 +4,9 @@ title: Submitting an add-on
 permalink: /documentation/publish/submitting-an-add-on/
 topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]
-contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz]
-last_updated_by: Rob--W
-date: 2021-04-27
+contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz, wesinator]
+last_updated_by: wesinator
+date: 2022-10-17
 ---
 
 <!-- Page Hero Banner -->
@@ -18,7 +18,7 @@ date: 2021-04-27
 This article walks through the process of publishing an add-on. If you just want to get started, head to the [Submit a New Add-on](https://addons.mozilla.org/developers/addon/submit/) page on AMO.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -51,7 +51,7 @@ Choose:
 - **On your own**, if you plan to distribute the add-on yourself and don't want it listed on AMO. <br/> Click **Continue** and follow the [Self-distribution guide](#self-distribution) to find out how.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "transfer-ownership"
   content: content_with_toc
 %}
@@ -90,7 +90,7 @@ Choose:
    - Support email and website: an email address and website where users can get in touch when they have questions, issues, or compliments.
    - License: select the appropriate license for your add-on. Click Details to learn more about each license.
    - This add-on has a privacy policy: if any data is being transmitted from the user’s device, a privacy policy is required explaining what is being sent and how it’s used. Check this box and provide the privacy policy.
-   - Notes to Reviewer: information that will assist the AMO reviewer, such as log in details for a dummy account, source code information, or similar.
+   - Notes for Reviewers: information that will assist the AMO reviewer, such as log in details for a dummy account, source code information, or similar.
 9. Click **Submit Version**
 10. The Version Submitted page displays. You'll also receive an email confirmation. <br/><br/> <img src="/assets/img/publish/Submit_add_on_version_submitted.png" style="box-shadow:0 0 0.5em gray;" /> <br/>
 
@@ -103,7 +103,7 @@ When you're ready to release a new version of your add-on, update it by visiting
 Learn how to make your add-on listing appealing with these [tips](/documentation/develop/create-an-appealing-listing/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "listing-on-amo"
   content: content
 %}
@@ -138,7 +138,7 @@ If you want Firefox to handle updates to your add-on, remember to include the [`
 You can now distribute your add-on. Note, however, that your add-on may still be subject to further review, if it is you'll receive notification of the outcome of the review later.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "self-distribution"
   content: content
 %}
@@ -153,7 +153,7 @@ You can now distribute your add-on. Note, however, that your add-on may still be
 For resources that can help now you've published an add-on and details of how to get help if you encounter issues, check out [Resources for publishers](/documentation/manage/resources-for-publishers/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "get-help"
   content: content
 %}

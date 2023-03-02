@@ -35,7 +35,7 @@ For extension development, automate the processes described on this page by usin
 Note that this is not how end-users should install add-ons in Firefox. End-users install add-ons by downloading and opening packaged add-ons that have been signed by Mozilla. To learn how you get an add-on packaged and signed, see [Publishing your extension](/documentation/publish/package-your-extension).
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -58,7 +58,7 @@ The extension installs and remains installed until you remove it or restart Fire
 
 <!-- Video Popup Thumbnail -->
 
-{% include modules/video-popup.liquid
+{% include modules/video-popup.liquid,
     title: "Temporarily Install Extension"
     youtube_id: "J7el77F1ckg"
     image: "documentation/develop/temp-install-extension.png"
@@ -68,7 +68,7 @@ The extension installs and remains installed until you remove it or restart Fire
 <!-- END: Video Popup Thumbnail -->
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "intro"
   content: content_with_toc
 %}
@@ -92,7 +92,7 @@ This:
 
 <!-- Video Popup Thumbnail -->
 
-{% include modules/video-popup.liquid
+{% include modules/video-popup.liquid,
     title: "Reload Temporary Extension"
     youtube_id: "d3hgLMVJAzY"
     image: "documentation/develop/reload-temp-extension.png"
@@ -106,7 +106,7 @@ Note that in Firefox 48 only, "Reload" does not update the extension's name and 
 :::
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "reloading-a-temporary-extension"
   content: content
 %}
@@ -122,7 +122,7 @@ Note that in Firefox 48 only, "Reload" does not update the extension's name and 
 If you use the command line for development, check out [web-ext](/documentation/develop/getting-started-with-web-ext). It automates the temporary installation and automatically reloads your extension when its source code changes.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "using-the-command-line"
   content: content
   aside: ""
@@ -139,7 +139,7 @@ If you use the command line for development, check out [web-ext](/documentation/
 An extension can detect whether it was installed from `about:debugging`, rather than as a signed extension downloaded from [addons.mozilla.org](https://addons.mozilla.org). It does this by listening for the [`runtime.onInstalled`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) event, and checking the value of `details.temporary`.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "detecting-temporary-installation"
   content: content
 %}
@@ -157,7 +157,7 @@ The temporary installation of an extension doesn’t fully mimic the behavior of
 For information on how to address these situations, see [Test permission requests](/documentation/develop/test-permission-requests/) and [Testing persistent and restart features.](/documentation/develop/testing-persistent-and-restart-features/)
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "limitations"
   content: content
 %}

@@ -26,7 +26,7 @@ date: 2020-03-24 12:47:00
 # Firefox workflow overview
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -65,7 +65,7 @@ date: 2020-03-24 12:47:00
             <td></td>
         </tr>
         <tr>
-            <td><a href="https://webextensions.in/">Create your extension scaffold</a></td>
+            <td><a href="https://webext.eu/">Create your extension scaffold</a></td>
             <td>Debug with the <a href="https://developer.mozilla.org/docs/Tools/Browser_Toolbox/">Add-on Debugging Window</a></td>
             <td><a href="/documentation/publish/source-code-submission/">Submit your source code</a> (if required)</td>
             <td><a href="/documentation/manage/updating-your-extension/">Update and improve your extension</a></td>
@@ -86,7 +86,7 @@ date: 2020-03-24 12:47:00
 **Have an extension you want to bring to Firefox?** We provide advice, guidelines, and tools to help making make porting straightforward. To get started, visit [Porting a Google Chrome extension](/documentation/develop/porting-a-google-chrome-extension/).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
     id: "workflow-table"
     content: content
 %}

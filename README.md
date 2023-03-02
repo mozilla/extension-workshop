@@ -120,7 +120,6 @@ extensionworkshop.com
 ├── .eslintrc                    # eslint config
 ├── .eslintignore                # Files ignored by eslint
 ├── package.json                 # Node.js package manifest
-├── renovate.json                # Renovate configuration
 ├── yarn.lock                    # Package manager lock file
 └── README.md                    # This file
 ```

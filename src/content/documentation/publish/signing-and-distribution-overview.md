@@ -36,10 +36,10 @@ contributors:
     tedmcox,
     iwanrezpect,
     SolidAxel,
-    
+    jean-acsas,
   ]
-last_updated_by: SolidAxel
-date: 2021-12-15 19:35:00
+last_updated_by: jean-acsas
+date: 2022-05-17 18:52:00
 ---
 
 <!-- Page Hero Banner -->
@@ -53,7 +53,7 @@ Add-ons need to be signed before they can be installed into release and beta ver
 Here we look at the signing requirements and the related reviews, before discussing how to choose between distributing on AMO or distributing an add-on yourself. We also look at the channels available on AMO and answer questions about code ownership and disputes.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 
@@ -81,7 +81,7 @@ Mozilla signs add-ons through [addons.mozilla.org](https://addons.mozilla.org). 
 | Submit using [web-ext sign](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#web-ext-sign) or using the [AMO signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) | Brand new submissions can only be submitted as self-distributed (unlisted) extensions. <br /><br /> Subsequent updates can be listed on AMO or self-distributed (unlisted)| 
 
 {% endcapture %}
-{% include modules/table.liquid
+{% include modules/table.liquid,
 	content: table
 %}
 
@@ -90,7 +90,7 @@ Mozilla signs add-ons through [addons.mozilla.org](https://addons.mozilla.org). 
 All submissions, regardless of how they are signed, are subject to Mozilla's [Add-on Policies](/documentation/publish/add-on-policies/) and the the [Firefox Add-on Distribution Agreement](/documentation/publish/firefox-add-on-distribution-agreement/).
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
 	id: "signing-your-addons"
 	content: content_with_toc
 %}
@@ -102,7 +102,7 @@ All submissions, regardless of how they are signed, are subject to Mozilla's [Ad
 {% capture content %}
 
 ## Distributing your add-on
-You can choose to distribute your add-on publicly on addons.mozilla.org (AMO) or distribute an it yourself. Here are some things to consider when you are deciding which method is most appropriate for your needs. 
+You can choose to distribute your add-on publicly on addons.mozilla.org (AMO) or distribute it yourself. Here are some things to consider when you are deciding which method is most appropriate for your needs. 
 
 ### Public listing on addons.mozilla.org (AMO) 
 AMO is a very popular distribution platform, with millions of monthly visitors and installations. It's integrated into the Firefox Add-ons Manager, allowing for easy installation of add-ons published on AMO. You can boost your extension’s SEO and attract more users by [creating an appealing listing](/documentation/develop/create-an-appealing-listing/). 
@@ -117,7 +117,7 @@ Self-distributed add-ons are sometimes referred to as “unlisted” extensions 
 If you choose this method, be sure to read the article on [self-distribution](/documentation/publish/self-distribution/) to learn how users can install self-distributed add-ons and how to push automatic updates to your users. 
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "distributing-your-addon"
   content: content
   aside: ""
@@ -137,7 +137,7 @@ All add-ons are subject to a manual code review at any time after submission. Th
 See [What does review rejection mean to users?](/documentation/publish/what-does-review-rejection-mean-to-users/) and [Add-ons Blocking Process](/documentation/publish/add-ons-blocking-process/) for more information.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "post-submission-review"
   content: content
 %}
@@ -175,7 +175,7 @@ If we're notified of a copyright or license infringement, we will take steps to 
 If you are unsure of the current copyright status of an add-on's source code, you must contact the author and get explicit permission before using the source code.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "about-amo"
   content: content
 %}

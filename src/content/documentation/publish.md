@@ -17,7 +17,7 @@ date: 2021-09-13
 Learn how to get your extension signed and distributed worldwide or to your enterprise.
 
 {% endcapture %}
-{% include modules/overview-page-hero.liquid
+{% include modules/overview-page-hero.liquid,
 	content: page_hero_banner_content
 	background: "develop-overview-hero-bg.jpg"
 %}
@@ -39,7 +39,7 @@ When you are ready to submit your add-on, create an extension package either [ma
 Once your extension is submitted, it is subject to review by Mozilla at any time. In order to review your extension, Mozilla add-on reviewers must be able to reproduce your build. If your extension makes use of code minifiers, tools that generate a single file from other files, template engines, or any other custom tool that pre-processes and generates file(s) to include in your extension, you are required to [submit the source code](/documentation/publish/source-code-submission/) for your extension.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
 	id: "get-your-extension-signed"
 	content: content_with_toc
 %}
@@ -71,7 +71,7 @@ Check out our [publisher’s resources](/documentation/manage/resources-for-publ
 - get in touch with who manages the add-on resources
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	id: "distribute-your-signed-extension"
 	content: content
 %}
@@ -88,7 +88,7 @@ Improve your add-on's SEO and attract more users by [creating an appealing listi
 
 <!-- Video Popup Thumbnail -->
 
-{% include modules/video-popup.liquid
+{% include modules/video-popup.liquid,
 	title: "Tips for great content and design for your extension"
 	youtube_id: "a0_OsLGI0k4"
 	image: "documentation/develop/extension-workshop-content-and-design.png"
@@ -110,7 +110,7 @@ Users of Developer Edition or Nightly can also disable Firefox's signing enforce
 :::
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
 	id: "promote-your-extension"
 	content: content
 %}

@@ -35,7 +35,7 @@ date: 2021-01-27 23:47:23
 `web-ext` is a command line tool designed to speed up various parts of the extension development process, making development faster and easier. This article explains how to install and use `web-ext`.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 

@@ -205,7 +205,7 @@ blockquote {
 // ------
 
 .horizontal-list {
-  @include horizontal_list();
+  @include horizontal_list;
 }
 
 // Down Arrow
@@ -254,10 +254,11 @@ table {
 // ------
 
 code {
-  border-radius: $global-radius;
-  overflow-wrap: break-word;
   background-color: $light-gray;
+  border-radius: $global-radius;
   color: $black;
+  overflow-wrap: break-word;
+  padding: rem-calc(1 5);
 
   &.nobackground {
     background: none;
@@ -520,7 +521,7 @@ html {
       .search-input-open {
         position: absolute;
         top: rem-calc(6);
-        right: rem-calc(56);
+        right: rem-calc(78);
         padding: rem-calc(6 16 6 6);
         transition: opacity 0.3s ease-in-out;
 

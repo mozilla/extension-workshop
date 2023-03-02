@@ -18,7 +18,7 @@ date: 2019-03-21 12:27:40
 Your extension may contain two types of permission request: **install time** and **runtime** permission requests. This page explains how you can test the way your users will see requests for these permissions.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -34,7 +34,7 @@ When you’re testing with an unpackaged extension, using either `about:debuggin
 - <dfn>runtime permission</dfn> requests display the door hanger request as normal. These permissions remain in place until they are revoked programmatically by the extension, the extension is removed using `about:debugging`, or Firefox restart.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "permission-grant-behavior-during-testing"
   content: content_with_toc
 %}
@@ -132,7 +132,7 @@ If the upgrade doesn't happen, look for `addons.update-checker` logs in the [Bro
 :::
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "observe-or-verify-install-time-permission-requests"
   content: content
 %}
@@ -156,7 +156,7 @@ To retest your extension’s runtime permission grants and its post-install beha
 You can then rerun the extension and any runtime permission requests will be displayed as if the extension was being run for the first time.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "retest-runtime-permission-grants"
   content: content
 %}

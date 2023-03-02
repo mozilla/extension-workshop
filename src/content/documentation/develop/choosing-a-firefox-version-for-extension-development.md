@@ -18,7 +18,7 @@ date: 2019-03-18 16:36:22
 Firefox provides several versions that offer different capabilities for developing web extensions. This article provides an overview of the differences among these versions of Firefox and recommends how to use each in the development lifecycle.
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
 	content: page_hero_banner_content
 %}
 

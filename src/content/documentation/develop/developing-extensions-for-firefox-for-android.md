@@ -17,7 +17,7 @@ date: 2021-08-17
 Learn more about developing extensions for Firefox for Android
 
 {% endcapture %}
-{% include modules/page-hero.liquid
+{% include modules/page-hero.liquid,
     content: page_hero_banner_content
 %}
 
@@ -30,7 +30,7 @@ Learn more about developing extensions for Firefox for Android
 You approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code. However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid
+{% include modules/column-w-toc.liquid,
   id: "introduction"
   content: content_with_toc
 %}
@@ -70,7 +70,7 @@ Then, on your development computer:
   Where the hex string is your device’s (or emulator’s) code. This means adb has found your device (or emulator).
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "set-up-your-computer-and-android-emulator-or-device"
   content: content
 %}
@@ -113,7 +113,7 @@ When setting `strict_min_version`, unless you’re targeting a specific version 
 ```
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "check-for-firefox-for-android-compatibility"
   content: content
 %}
@@ -147,7 +147,7 @@ web-ext run -t firefox-android --adb-device XXX --firefox-apk org.mozilla.fenix
 :::
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "install-and-run-your-extension-in-firefox-for-android"
   content: content
 %}
@@ -215,7 +215,7 @@ I/Gecko (30440): 1496056181889 addons.xpi WARN Addon with ID borderify@example.c
 If your add-on fails to run, check these messages as they may provide information explaining why.
 
 {% endcapture %}
-{% include modules/one-column.liquid
+{% include modules/one-column.liquid,
   id: "debug-your-extension"
   content: content
 %}
