@@ -297,7 +297,7 @@ Move the extension’s CSP to the manifest.json key to `extension_pages`, like t
 
 ### Web Accessible Resources
 
-Web accessible resources are available only to the sites and extensions specified in the manifest. Manifest V3 supports `resources` and `matches`, but does not support the `extension_ids` and `use_dynamic_url` properties.
+Web accessible resources are available only to the sites and extensions specified in the manifest. In Manifest V3, Firefox supports the `extension_ids`, `matches`, and `resources` properties to specify the packaged resources you want to make available. Firefox does not support the `use_dynamic_url` property.
 
 To migrate your extension, rewrite the manifest.json key [‘web_accessible_resources’](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)  to specify the sites and extensions that can access the resources.
 
@@ -311,7 +311,7 @@ To migrate your extension, rewrite the manifest.json key [‘web_accessible_reso
 
 ### Features already supported by Firefox
 
-As part of its Manifest V3 implementation Chromium introduces [promise](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview#promises) support to many methods with the goal of eventually supporting promises on all appropriate methods. This will provide for greater compatibility between Firefox and Chrome extensions, given that Firefox already supports promises when using the `browser.*` namespace.
+As part of its Manifest V3 implementation, Chromium introduces [promise](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview#promises) support to many methods with the goal of eventually supporting promises on all appropriate methods. This will provide for greater compatibility between Firefox and Chrome extensions, given that Firefox already supports promises when using the `browser.*` namespace.
 
 In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace with APIs that provide asynchronous event handling using callbacks. In Manifest v3, Firefox supports promises for asynchronous events in the `chrome.*` namespace.
 
