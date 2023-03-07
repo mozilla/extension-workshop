@@ -6,7 +6,7 @@ topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]
 contributors: [rebloor]
 last_updated_by: rebloor
-date: 2022-11-16
+date: 2023-03-03
 ---
 
 <!-- Page Hero Banner -->
@@ -26,17 +26,13 @@ Learn how to distribute versions of your extension supporting Manifest V2 and V3
 
 {% capture content_with_toc %}
 
-Firefox is adding support for Manifest Version 3 (MV3) extensions in Firefox 109, which releases to general availability January 17, 2023. However, earlier versions of Firefox are only compatible with Manifest Version 2 (MV2) extensions. And, it is not possible to create a version of an extension that is MV2 and MV3 compatible.
+Firefox added support for Manifest Version 3 (MV3) extensions in Firefox 109, which was released to general availability January 17, 2023. Earlier versions of Firefox are only compatible with Manifest Version 2 (MV2) extensions.
+
+It is not possible to create a version of an extension that is MV2- and MV3-compatible. Therefore, you need a way of distributing both types of extension if you need to continue supporting older clients, such as Firefox ESR. (Firefox ESR 102.x, the extended support release for enterprises – large companies and organizations – is supported until September 2023, when the ESR release moves to a version supporting MV3).
 
 To help address the situation, AMO can distribute your MV2-compatible extension and sign an MV3-compatible version for [self-distribution](/documentation/publish/self-distribution/). Some developers use this as a form of a beta channel, though it is not officially supported as such. 
 
-When deciding which version is most appropriate to distribute to your users through AMO, consider that:
-* When Firefox 109 becomes available, it may take several weeks for most users to update from a version of the browser that only supports MV2. 
-* Older clients, such as Firefox ESR – the extended support release for enterprises (large companies and organizations) – will remain in use for several months (Firefox ESR 102.x is supported until September 2023, when the ESR release will move to a version supporting MV3).
-
-So, if your user base is large, or you have requirements to provide support for older Firefox versions for an extended period, we recommend you consider using this alternate distribution for your MV3 version.
-
-If you choose to remain on MV2 and wait to transition to MV3 later, you can take steps in MV2 that [move your extension closer to what is necessary for MV3](https://blog.mozilla.org/addons/2022/10/31/begin-your-mv3-migration-by-implementing-new-features-today/). As usual, if your extension depends on features only available to recent Firefox versions, specify the compatible Firefox version in the [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) field in manifest.json. Older Firefox extensions will not receive an update. A new user on an old Firefox version can install an older version of the extension using the “See all versions” link at the extension listing on AMO.
+However, if you choose to remain on MV2 and wait to transition to MV3 later, you can take steps in MV2 that [move your extension closer to what is necessary for MV3](https://blog.mozilla.org/addons/2022/10/31/begin-your-mv3-migration-by-implementing-new-features-today/). As usual, if your extension depends on features only available to recent Firefox versions, specify the compatible Firefox version in the [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) field in manifest.json. Then, older Firefox extensions are not updated. A new user on an old Firefox version can install an older version of the extension using the “See all versions” link at the extension listing on AMO.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
@@ -51,7 +47,7 @@ If you choose to remain on MV2 and wait to transition to MV3 later, you can take
 
 ## Prepare your MV3 version
 
-To support automatic updates to newer MV3 versions, you need to create and make an update manifest file available and include the file’s location in the extension’s manifest file.
+To support automatic updates to newer MV3 versions, you must create and make an update manifest file available and include the file’s location in the extension’s manifest file.
 
 See [Updating your extension](/documentation/manage/updating-your-extension/) for details about the update manifest file format and manifest change needed.
 
@@ -72,7 +68,7 @@ To get a signed version of your MV3 extension:
 
 1. On AMO, when you upload the MV3 extension version, change “Where to host version”  to “on your own”.
    ::: note
-   You need to change it back to “on this site” for MV2 versions, as the most recently used channel is remembered.
+   You must change it back to “on this site” for MV2 versions, as the most recently used channel is remembered.
    :::
 2. For API uploads, specify `channel=unlisted` for the self-distribution channel.
 
@@ -108,10 +104,10 @@ See [Distributing an add-on yourself](/documentation/publish/self-distribution/)
 
 ## Transition your experimental MV3 version to your live version
 
-When you want to support just MV3-compatible versions of Firefox for your extension, visit AMO and upload the MV3 version to the primary AMO listed channel (“on this site”), without the `update_url` in the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest key. Then, when signed, download the XPI and distribute it to your users as you did originally. The lack of the `update_url` manifest key means users will get updates from the AMO channel in the future.
+When you want to support just MV3-compatible versions of Firefox for your extension, visit AMO and upload the MV3 version to the primary AMO listed channel (“on this site”), without the `update_url` in the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest key. Then, when signed, download the XPI and distribute it to your users as you did originally. The lack of the `update_url` manifest key means users get future updates from the AMO channel.
 
 ::: note
-Take care with version numbers. The version number needs to be higher than the earlier listed MV2 and experimental MV3 versions. Firefox only upgrades the extension if the version number is greater than the installed version.
+Take care with version numbers. The version number must be higher than the earlier listed MV2 and experimental MV3 versions. Firefox only upgrades the extension if the version number is greater than the installed version.
 :::
 
 {% endcapture %}
