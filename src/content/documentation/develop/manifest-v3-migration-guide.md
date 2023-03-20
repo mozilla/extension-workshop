@@ -172,7 +172,7 @@ In Chromium and Safari, the Browser Action and Page Action APIs are unified into
 
 ### Scripting API
 
-The [Scripting API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting) takes over the features of `tabs.insertCSS()`, `tabs.removeCSS()`,  and `tabs.executeScript()` and adds capabilities to register, update, and unregister content scripts at runtime.
+The [Scripting API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting) takes over the features of `tabs.insertCSS()`, `tabs.removeCSS()`, and `tabs.executeScript()` and adds capabilities to register, update, and unregister content scripts at runtime.
 
 Also, the `code` parameter is removed so that arbitrary strings can no longer be executed. This API requires the [`scripting` permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So, you need to move any arbitrary strings executed as scripts to files and rewrite your code to use the Scripting API.
 
@@ -207,17 +207,24 @@ Firefox supports non-persistent background pages from Firefox 106. In Firefox 10
 
 More information on the migration process can be found on the [background script](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) page on MDN.
 
+{% endcapture %}
+
+{% include modules/one-column.liquid,
+    id: "event-driven-background-scripts"
+    content: content
+%}
+
+{% capture content %}
+
 #### Event pages and backward-compatibility
 
 ::: note
 This section is only relevant if your extension supports Firefox 105 and earlier.
 :::
 
-An extension designed as a non-persistent background page works even when event pages are not supported (i.e., in Firefox 105 and earlier) 
-with one exception: the registration of context menus. In an event page, context menus persist across restarts, while they do not in persistent background pages.
-If the recommendation to register menus in `runtime.onInstalled` is followed, these menus are removed after a browser restart in Firefox 105 and earlier.
-To work around this issue, you could unconditionally call `browser.contextMenus.create`.
-When the menu exists, the `browser.runtime.lastError` property is set when the (optional) `create` callback is called.
+An extension designed as a non-persistent background page works even when event pages are not supported (i.e., in Firefox 105 and earlier) with one exception: the registration of context menus. In an event page, context menus persist across restarts, while they do not in persistent background pages.
+
+If the recommendation to register menus in `runtime.onInstalled` is followed, these menus are removed after a browser restart in Firefox 105 and earlier. To work around this issue, you could unconditionally call `browser.contextMenus.create`. When the menu exists, the `browser.runtime.lastError` property is set when the (optional) `create` callback is called.
 
 ```javascript
 browser.contextMenus.create(
@@ -233,17 +240,9 @@ browser.contextMenus.create(
 );
 ```
 
-If the initialization of the menu is expensive or requires complex logic,
-an alternative is to check whether event pages are supported and, if so,
-run the logic less frequently than at every wakeup of the event page
-(e.g., with
-[`runtime.onInstalled`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) or
-[`runtime.onStartup`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onStartup)
-).
+If the initialization of the menu is expensive or requires complex logic, an alternative is to check whether event pages are supported and, if so, run the logic less frequently than at every wakeup of the event page (e.g., with [`runtime.onInstalled`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) or [`runtime.onStartup`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onStartup)).
 
-You can detect the availability of event pages using the characteristic that an
-error is thrown synchronously when `onclick` is passed to `contextMenus.create`
-in an event page.
+You can detect the availability of event pages using the characteristic that an error is thrown synchronously when `onclick` is passed to `contextMenus.create` in an event page.
 
 The following code shows how to use such a test to register menus.
 
@@ -268,8 +267,9 @@ if (eventPagesSupported) {
 ```
 
 {% endcapture %}
+
 {% include modules/one-column.liquid,
-    id: "event-driven-background-dscripts"
+    id: "event-pages-and-backward-compatibility"
     content: content
 %}
 
