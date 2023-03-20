@@ -97,6 +97,11 @@ jobs:
 
             AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
             AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
+            EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
+            ./.utils/setup-object-redirection.sh
+
+            AWS_ACCESS_KEY_ID="${DEV_AWS_ACCESS_KEY_ID}"                 \
+            AWS_SECRET_ACCESS_KEY="${DEV_AWS_SECRET_ACCESS_KEY}"         \
             DISTRIBUTION_ID="${DEV_DISTRIBUTION_ID}"                     \
             EXTENSION_WORKSHOP_BUCKET="${DEV_EXTENSION_WORKSHOP_BUCKET}" \
             ./.utils/circleci/invalidate-cloudfront-cache.sh
@@ -121,11 +126,17 @@ jobs:
 
               AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
               AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"         \
+              EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}" \
+              ./.utils/setup-object-redirection.sh
+
+              AWS_ACCESS_KEY_ID="${STAGE_AWS_ACCESS_KEY_ID}"                 \
+              AWS_SECRET_ACCESS_KEY="${STAGE_AWS_SECRET_ACCESS_KEY}"         \
               DISTRIBUTION_ID="${STAGE_DISTRIBUTION_ID}"                     \
               EXTENSION_WORKSHOP_BUCKET="${STAGE_EXTENSION_WORKSHOP_BUCKET}" \
               ./.utils/circleci/invalidate-cloudfront-cache.sh
             elif [[ "$CIRCLE_TAG" =~ ^20[0-9]{2}\.[0-9]{2}\.[0-9]{2}(-[0-9]+)?$ ]] ; then
               ./.utils/deploy.sh
+              ./.utils/setup-object-redirection.sh
               ./.utils/circleci/invalidate-cloudfront-cache.sh
             else
               echo "Unrecognized tag: \`${CIRCLE_TAG}'. A good tag example is 2022.08.03, or 2022.08.03-stage" 1>&2
