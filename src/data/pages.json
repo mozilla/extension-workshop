@@ -404,32 +404,6 @@
                 ]
               },
               {
-                "title": "Developing extensions for Firefox for Android (Fennec)",
-                "url": "/documentation/develop/developing-extensions-for-firefox-for-android-fennec/",
-                "subpageitems": [
-                  {
-                    "title": "Set up your computer and Android emulator or device",
-                    "id": "set-up-your-computer-and-android-emulator-or-device"
-                  },
-                  {
-                    "title": "Set up your computer and Android emulator or device",
-                    "id": "set-up-your-computer-and-android-emulator-or-device"
-                  },
-                  {
-                    "title": "Check for Firefox for Android compatibility",
-                    "id": "check-for-firefox-for-android-compatibility"
-                  },
-                  {
-                    "title": "Install and run your extension in Firefox for Android",
-                    "id": "install-and-run-your-extension-in-firefox-for-android"
-                  },
-                  {
-                    "title": "Debug your extension",
-                    "id": "debug-your-extension"
-                  }
-                ]
-              },
-              {
                 "title": "GeckoView Extensions (Android library)",
                 "url": "https://github.com/mozilla/geckoview"
               }
@@ -445,104 +419,6 @@
               {
                 "title": "Porting a Google Chrome Extension",
                 "url": "/documentation/develop/porting-a-google-chrome-extension/"
-              },
-              {
-                "title": "Porting a legacy Firefox extension",
-                "url": "/documentation/develop/porting-a-legacy-firefox-extension/",
-                "subpageitems": [
-                  {
-                    "title": "Quick start",
-                    "id": "quick-start"
-                  },
-                  {
-                    "title": "Migration paths",
-                    "id": "migration-paths"
-                  },
-                  {
-                    "title": "Don't see the WebExtensions APIs you need?",
-                    "id": "dont-see-the-webextensions-apis-you-need"
-                  },
-                  {
-                    "title": "Tools",
-                    "id": "tools"
-                  },
-                  {
-                    "title": "Documentation",
-                    "id": "documentation"
-                  },
-                  {
-                    "title": "Contact",
-                    "id": "contact"
-                  }
-                ]
-              },
-              {
-                "title": "Comparison with the Add-on SDK",
-                "url": "/documentation/develop/comparison-with-the-add-on-sdk/",
-                "subpageitems": [
-                  {
-                    "title": "Manifest files",
-                    "id": "manifest-files"
-                  },
-                  {
-                    "title": "Persistent scripts",
-                    "id": "persistent-scripts"
-                  },
-                  {
-                    "title": "Content scripts",
-                    "id": "content-scripts"
-                  },
-                  {
-                    "title": "UI elements",
-                    "id": "ui-elements"
-                  },
-                  {
-                    "title": "Settings",
-                    "id": "settings"
-                  },
-                  {
-                    "title": "Internationalization",
-                    "id": "internationalization"
-                  },
-                  {
-                    "title": "Command-line tool",
-                    "id": "command-line-tool"
-                  },
-                  {
-                    "title": "JavaScript APIs",
-                    "id": "javascript-apis"
-                  }
-                ]
-              },
-              {
-                "title": "Comparison with XUL/XPCOM extensions",
-                "url": "/documentation/develop/comparison-with-xul-xpcom-extensions/",
-                "subpageitems": [
-                  {
-                    "title": "Manifest",
-                    "id": "manifest"
-                  },
-                  {
-                    "title": "UI",
-                    "id": "ui"
-                  },
-                  {
-                    "title": "Privileged APIs",
-                    "id": "privileged-apis"
-                  },
-                  {
-                    "title": "Interacting with web content",
-                    "id": "interacting-with-web-content"
-                  },
-                  {
-                    "title": "Localization",
-                    "id": "localization"
-                  },
-                  {
-                    "title": "Settings",
-                    "id": "settings"
-                  }
-                ]
               }
             ]
           },
