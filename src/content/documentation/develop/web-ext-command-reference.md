@@ -6,33 +6,33 @@ topic: Develop
 tags: [commands, options, reference, tools, web-ext, webextensions]
 contributors:
   [
-    ankushduacodes,
-    lfilho,
-    rebloor,
-    mdnwebdocs-bot,
-    kumar303,
-    Rob--W,
-    smile4ever,
-    Dietrich,
-    andrewtruongmoz,
-    saintsebastian,
-    niharikak101,
-    wbamberg,
-    aniketkudale,
-    groovecoder,
-    tofumatt,
-    sharang,
-    chrisdavidmills,
-    noraj,
     akhilpanchal,
+    andrewtruongmoz,
+    aniketkudale,
     ankushduacodes,
-    willdurand,
+    ankushduacodes,
+    chrisdavidmills,
+    Dietrich,
     eviljeff,
+    groovecoder,
     hamatti,
-    LowerDimensions
+    kumar303,
+    lfilho,
+    LowerDimensions,
+    mdnwebdocs-bot,
+    niharikak101,
+    noraj,
+    rebloor,
+    Rob--W,
+    saintsebastian,
+    sharang,
+    smile4ever,
+    tofumatt,
+    wbamberg,
+    willdurand
   ]
-last_updated_by: hamatti
-date: 2022-11-18
+last_updated_by: rebloor
+date: 2023-03-03
 ---
 
 <!-- Page Hero Banner -->
@@ -162,9 +162,7 @@ Environment variable: `$WEB_EXT_WARNINGS_AS_ERRORS=true`
 
 #### `--firefox-preview`
 
-Turn on developer preview features in Firefox. This option accepts multiple values, although it currently only supports the `mv3` value, which is also the default value.
-
-The `mv3` value allows developers to lint Manifest Version 2 **and** Manifest Version 3 extensions.
+Turn on developer preview features in Firefox. This option accepts multiple values, depending on the available developer previews.
 
 ::: note
 This option was added in web-ext 7.3.0.
@@ -331,9 +329,7 @@ Environment variable: `$WEB_EXT_FIREFOX_APK`
 
 #### `--firefox-preview`
 
-Turn on developer preview features in Firefox. This option accepts multiple values, although it currently only supports the `mv3` value, which is also the default value.
-
-The `mv3` value allows developers to test their extensions with Firefox Manifest Version 3 support (without having to [manually flipping the related preferences](/documentation/develop/manifest-v3-migration-guide/)).
+Turn on developer preview features in Firefox. This option accepts multiple values, depending on the available developer previews.
 
 ::: note
 This option was added in web-ext 7.1.0.
