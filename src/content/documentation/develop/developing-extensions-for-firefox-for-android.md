@@ -27,15 +27,7 @@ Learn more about developing extensions for Firefox for Android
 
 {% capture content_with_toc %}
 
-::: note alert
-In August 2020, Mozilla launched a new, reimagined Firefox for Android experience (codenamed "Fenix"). The  browser for Android has been rebuilt from the ground up using [GeckoView](https://mozilla.github.io/geckoview/), Mozilla's mobile browsing engine.
-
-Currently only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) are supported on the release channel. However, we are continuously working on increasing support, taking into account usage and feedback to ensure we are making the most of our available resources. We will post updates to [The Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android)) as plans solidify each quarter.
-
-If you are interested in Firefox for Android 68 and earlier (Fennec), please visit [this article](/documentation/develop/developing-extensions-for-firefox-for-android-fennec/).
-:::
-
-You'll approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code. However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process.
+You approach the coding of an extension for Firefox for Android in the same way as you would for a desktop extension; using a text editor or tool of your choice to write the code. However, when you want to test and debug your extension you need to follow a different process, this article walks you through that process.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
