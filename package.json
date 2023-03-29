@@ -56,7 +56,7 @@
     "prismjs": "1.29.0",
     "rimraf": "4.4.1",
     "serialize-javascript": "6.0.1",
-    "slugify": "1.6.5",
+    "slugify": "1.6.6",
     "stylelint": "14.16.1",
     "stylelint-config-prettier-scss": "0.0.1",
     "stylelint-config-standard": "29.0.0",
