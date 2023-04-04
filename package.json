@@ -32,7 +32,7 @@
     "chalk": "4.1.2",
     "chokidar-cli": "3.0.0",
     "eleventy-xml-plugin": "0.1.0",
-    "eslint": "8.36.0",
+    "eslint": "8.37.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
     "fs-extra": "11.1.1",
