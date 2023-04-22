@@ -21,10 +21,11 @@ contributors:
     timdream,
     Timendum,
     wbamberg,
-    willdurand
+    willdurand,
+    djbrown
   ]
-last_updated_by: rebloor
-date: 2023-03-03
+last_updated_by: djbrown
+date: 2023-04-22
 ---
 
 <!-- Page Hero Banner -->
@@ -60,7 +61,7 @@ For Manifest V2 extensions, you need to add an add-on ID when:
 
 - You want to install an unsigned add-on from its XPI file, rather than loading it temporarily using `about:debugging`.
 - You want a specific ID, rather than one randomly generated when [your extension is first signed](/documentation/publish/#get-your-extension-signed).
-- You use [AMO's API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) for uploading your add-on, rather than uploading it manually on its page, you must include the add-on's ID in the request.
+- You use [AMO's API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) for uploading your add-on, rather than uploading it manually on its page, you must include the add-on's ID in the request.
 - You use WebExtension APIs that use the add-on ID and expect it to be the same from one browser session to the next. If you use these APIs, you must explicitly set the ID using the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. This applies to the following APIs:
   - [`storage.managed`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed "A storage.StorageArea object that represents the managed storage area. Items in managed storage are set by the domain administrator or other native applications installed on user's computer, and are read-only for the extension. Trying to modify this storage area results in an error.")
   - [`storage.sync`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync 'Represents the sync storage area. Items in sync storage are synced by the browser, and are available across all instances of that browser that the user is logged into (e.g. via Firefox sync, or a Google account), across different devices.')

@@ -29,10 +29,11 @@ contributors:
     smile4ever,
     tofumatt,
     wbamberg,
-    willdurand
+    willdurand,
+    djbrown
   ]
-last_updated_by: rebloor
-date: 2023-03-03
+last_updated_by: djbrown
+date: 2023-04-22
 ---
 
 <!-- Page Hero Banner -->
@@ -502,7 +503,7 @@ This option is useful to prevent issues when the number of watched files is high
 
 ### `web-ext sign`
 
-This command uses the [addons.mozilla.org API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) to sign your extension. If successful, it will download the signed `.xpi` file, which you can use to [self-host your extension](/documentation/publish/self-distribution/).
+This command uses the [addons.mozilla.org API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to sign your extension. If successful, it will download the signed `.xpi` file, which you can use to [self-host your extension](/documentation/publish/self-distribution/).
 
 You need to create [API access credentials](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#access-credentials) to run this command. [Obtain your personal access credentials here](https://addons.mozilla.org/developers/addon/api/key/).
 
@@ -510,7 +511,7 @@ You need to create [API access credentials](http://addons-server.readthedocs.org
 
 #### `--use-submission-api`
 
-Use the experimental [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) to sign your extension. This allows listed versions to be freely created by enabling all necessary additional metadata to be submitted at the same time as the extension file.
+Use the experimental [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to sign your extension. This allows listed versions to be freely created by enabling all necessary additional metadata to be submitted at the same time as the extension file.
 
 With this option enabled, `--channel` changes to be a required option with no default.  The choices remain `listed` and `unlisted`.
 
@@ -601,7 +602,7 @@ Setting `--channel=listed` for a new extension is not yet supported. See [https:
 Setting `--channel=listed` for a new version of a listed extension is not well supported. It will upload your new version to [addons.mozilla.org](https://addons.mozilla.org) as if you'd [submitted it manually](/documentation/publish/submitting-an-add-on/). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.
 :::
 
-See [documentation on the signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html#uploading-a-version) for more information.
+See [documentation on the signing API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html#uploading-a-version) for more information.
 
 Environment variable: `$WEB_EXT_CHANNEL`
 </section>
