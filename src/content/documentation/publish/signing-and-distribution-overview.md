@@ -37,9 +37,10 @@ contributors:
     iwanrezpect,
     SolidAxel,
     jean-acsas,
+    djbrown
   ]
-last_updated_by: jean-acsas
-date: 2022-05-17 18:52:00
+last_updated_by: djbrown
+date: 2023-04-22
 ---
 
 <!-- Page Hero Banner -->
@@ -78,7 +79,7 @@ Mozilla signs add-ons through [addons.mozilla.org](https://addons.mozilla.org). 
 | Signing method     | Supported distribution channel(s) | 
 | ------------------------------------- | ------------------- | 
 | Web upload via the [AMO Developer Hub](https://addons.mozilla.org/developers/) | Public listing on AMO or self-distribution| 
-| Submit using [web-ext sign](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#web-ext-sign) or using the [AMO signing API](https://addons-server.readthedocs.io/en/latest/topics/api/signing.html) | Brand new submissions can only be submitted as self-distributed (unlisted) extensions. <br /><br /> Subsequent updates can be listed on AMO or self-distributed (unlisted)| 
+| Submit using [web-ext sign](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#web-ext-sign) or using the [AMO signing API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) | Brand new submissions can only be submitted as self-distributed (unlisted) extensions. <br /><br /> Subsequent updates can be listed on AMO or self-distributed (unlisted)| 
 
 {% endcapture %}
 {% include modules/table.liquid,
