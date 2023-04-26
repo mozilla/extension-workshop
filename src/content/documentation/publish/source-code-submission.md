@@ -84,6 +84,12 @@ Code submission process happens after the add-on validation step.
 
 ![Upload sources screenshot](/assets/img/publish/upload-process-sources.png)
 
+#### Uploading source to an existing version
+
+You can also upload the source on an existing addon version, under "Manage Status & Versions".
+
+![Upload source to existing version screenshot](/assets/img/publish/upload-source-existing-version.png)
+
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
   id: "provide-your-extension-source-code"
@@ -162,5 +168,3 @@ Remember, if you miss any of the necessary content from your uploaded source cod
 %}
 
 <!-- END: Single Column Body Module -->
-
-
