@@ -151,20 +151,63 @@ You can prompt the user to uninstall the extension with [`management.uninstallSe
 
 Once you understand your privacy consent flow, you can add a suitable consent dialog. The following are suggestions on how to present a data collection consent dialog. Where the mockups include the linked text “our Privacy Policy”, this should go to your extension’s privacy policy page on AMO. If you choose to follow these mockups, remember to modify them appropriately for your extension.
 
-**Note:** All consent options should be offered to the user under one consent dialog, so there is one main page for the user consent flow.
+  - [Consent for only personally identifying information]()
+  - [Consent for only technical or interaction data]()
+  - [Consent for both personal and technical data]()
+
+No matter how many types of consent your extension uses, all consent options should be clearly provided to the user on one consent page.
+
+<!-- Single Column Body Module -->
+
+{% capture content %} 
 
 ### Only personally identifying information
 The default option is not to collect personally identifying information. If you do, the user needs to actively opt-in. Remember to list the data you’re collecting; don’t make the user read your privacy policy to determine what data you are collecting and why.
 
   ![Mockup of a prompt that could be used when an extension requires consent for processing personal data only.](/assets/img/documentation/develop/privacy_prompt_mockup_personal_data.png)
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "data-disclosure-collection-and-management"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 ### Only technical or interaction data
 Data collected does not include user identifiers. The option to collect technical data can be set as the default response.
 
   ![Mockup of a prompt that could be used when an extension requires consent for processing technical data only.](/assets/img/documentation/develop/privacy_prompt_mockup_anonymous_data.png)
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "consent-technical-interaction-data"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 ### Combination: Personal and technical data.
-The add-on is requesting both types of data collection. Please ensure the choices are separate.
+The add-on is requesting both types of data collection. Please ensure the choices are separate, but both choices are on one consent page.
 
   ![Mockup of a prompt that could be used when extension requires consent for processing personal and technical data.](/assets/img/documentation/develop/privacy_prompt_mockup_combined.png)
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "consent-personal-and-technical-data"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
+
 ### Required data collection
 The extension requires personal or technical data collection to provide its functionality, it cannot be used without. The default option is your choice.
 
