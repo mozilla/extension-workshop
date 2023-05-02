@@ -151,9 +151,9 @@ You can prompt the user to uninstall the extension with [`management.uninstallSe
 
 Once you understand your privacy consent flow, you can add a suitable consent dialog. The following are suggestions on how to present a data collection consent dialog. Where the mockups include the linked text “our Privacy Policy”, this should go to your extension’s privacy policy page on AMO. If you choose to follow these mockups, remember to modify them appropriately for your extension.
 
-  - [Consent for only personally identifying information]()
-  - [Consent for only technical or interaction data]()
-  - [Consent for both personal and technical data]()
+  - [Consent for only personally identifying information](/documentation/develop/best-practices-for-collecting-user-data-consents/#consent-personally-identifying-info)
+  - [Consent for only technical or interaction data](/documentation/develop/best-practices-for-collecting-user-data-consents/#consent-technical-interaction-data)
+  - [Consent for both personal and technical data](/documentation/develop/best-practices-for-collecting-user-data-consents/#consent-personal-and-technical-data)
 
 No matter how many types of consent your extension uses, all consent options should be clearly provided to the user on one consent page.
 
@@ -168,7 +168,7 @@ The default option is not to collect personally identifying information. If you 
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-  id: "data-disclosure-collection-and-management"
+  id: "consent-personally-identifying-info"
   content: content
 %}
 
