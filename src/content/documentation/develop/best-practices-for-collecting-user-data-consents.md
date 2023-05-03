@@ -196,7 +196,7 @@ Data collected does not include user identifiers. The option to collect technica
 {% capture content %}
 
 ### Combination: Personal and technical data.
-The add-on is requesting both types of data collection. Please ensure the choices are separate, but both choices are on one consent page.
+The add-on requests both types of data collection. Please ensure the choices are separate, but both are on one consent page.
 
   ![Mockup of a prompt that could be used when extension requires consent for processing personal and technical data.](/assets/img/documentation/develop/privacy_prompt_mockup_combined.png)
 
