@@ -75,7 +75,7 @@ Choose:
    Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
    The message informs you of what failed. You'll not be able to continue. Address the issues and return to step 1.
 
-5. If you need to provide source code, click **Browse** and locate and upload your source code package.
+5. If you need to provide source code, click **Browse** and locate and upload your source code package. See [Source code submission](/documentation/publish/source-code-submission/)
 6. Select the add-on's compatible platform(s).
 7. Click **Continue**.
 8. The Describe Add-on page displays. <br/> ![Submit an add-on page](/assets/img/publish/Submit_add_on_describe_add_on.png) <br/>
