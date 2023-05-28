@@ -135,6 +135,8 @@ An extension is a simple collection of files that modify the browser’s appeara
 
 Add toolbar buttons, menu choices, and—only in Firefox—sidebars to display additional content. Manage tab behavior and create pop-up windows that respond to user events.
 
+[Learn more](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface)
+
 <button class="close"></button>
 
 </aside>
@@ -146,6 +148,8 @@ Add toolbar buttons, menu choices, and—only in Firefox—sidebars to display a
 
 Change webpage content. Remove ads, highlight key words, and reformat elements for readability.
 
+[Learn more](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+
 <button class="close"></button>
 
 </aside>
@@ -156,6 +160,8 @@ Change webpage content. Remove ads, highlight key words, and reformat elements f
 #### Background Scripts
 
 Manage long-term configuration beyond the current tab, and respond to user events such as button clicks and menu selections.
+
+[Learn more](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)
 
 <button class="close"></button>
 
