@@ -135,7 +135,7 @@ An extension is a simple collection of files that modify the browser’s appeara
 
 Add toolbar buttons, menu choices, and—only in Firefox—sidebars to display additional content. Manage tab behavior and create pop-up windows that respond to user events.
 
-[Learn more](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface)
+[Learn more](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface)
 
 <button class="close"></button>
 
