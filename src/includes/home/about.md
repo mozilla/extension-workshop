@@ -148,7 +148,7 @@ Add toolbar buttons, menu choices, and—only in Firefox—sidebars to display a
 
 Change webpage content. Remove ads, highlight key words, and reformat elements for readability.
 
-[Learn more](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+[Learn more](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 
 <button class="close"></button>
 
@@ -161,7 +161,7 @@ Change webpage content. Remove ads, highlight key words, and reformat elements f
 
 Manage long-term configuration beyond the current tab, and respond to user events such as button clicks and menu selections.
 
-[Learn more](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)
+[Learn more](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)
 
 <button class="close"></button>
 
