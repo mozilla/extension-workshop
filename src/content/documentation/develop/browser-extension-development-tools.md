@@ -16,8 +16,8 @@ tags:
     webextensions,
   ]
 contributors: [rebloor, mdnwebdocs-bot, hellosct1, ani-sha, ankushduacodes]
-last_updated_by: ankushduacodes
-date: 2021-01-23 00:04:00
+last_updated_by: rebloor
+date: 2023-06-02
 ---
 
 <!-- Page Hero Banner -->
@@ -258,9 +258,9 @@ To get started, install using npm and load the library into the contexts where b
 
 ### about:debugging
 
-This Firefox page enables you to manually install add-ons into Firefox for testing and to kickoff debugging, using the Addon Debugging Window, for any browser extension installed in Firefox.
+This Firefox page enables you to manually install add-ons into Firefox for testing and to kickoff debugging, using the [Addon Debugging Window](#addon_debugging_window), for any browser extension installed in Firefox.
 
-![About Debugging](/assets/img/documentation/develop/about-debugging.png)
+![The about debugging page](/assets/img/documentation/develop/about-debugging.png)
 
 To get started, type `about:debugging` in the Firefox address bar.
 
@@ -311,6 +311,7 @@ To get started, enable Browser Toolbox then open `about:debugging` and click deb
 
 {% endcapture %}
 {% include modules/one-column.liquid,
+    id: "addon_debugging_window"
     content: content
     aside: aside
 %}
