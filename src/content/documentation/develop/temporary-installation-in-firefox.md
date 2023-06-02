@@ -18,8 +18,8 @@ contributors:
     kumar303,
     Rob--W,
   ]
-last_updated_by: Rob--W
-date: 2021-04-27
+last_updated_by: rebloor
+date: 2023-06-02
 ---
 
 <!-- Page Hero Banner -->
@@ -100,10 +100,6 @@ This:
 %}
 
 <!-- END: Video Popup Thumbnail -->
-
-::: note
-Note that in Firefox 48 only, "Reload" does not update the extension's name and description that are displayed in `about:debugging` and `about:addons`. This is fixed in Firefox 49.
-:::
 
 {% endcapture %}
 {% include modules/one-column.liquid,
