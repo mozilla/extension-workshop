@@ -128,6 +128,23 @@ Move all host permission specifications to the manifest.json key `host_permissio
 
 {% capture content %}
 
+### `browser_style`
+
+The [browser_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [options_ui](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui), [page_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), and [sidebar_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest keys may include the `browser_style` property.
+
+The goal of this property was to enable extension UI components to take on the browser's style. However, it only partially worked as intended. As a consequence, it has been deprecated for Manifest V3. Therefore, remove any references from the manifest keys. 
+
+See [Manifest V3 migration for `browser_style`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) for more information.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+    id: "browser-style"
+    content: content
+%}
+
+
+{% capture content %}
+
 ### Browser action
 
 The features available under the manifest.json key `browser_action` and the `browserAction` API have moved to a new `action` [key](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) and [API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/action). Also, the `_execute_action` [special shortcut](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) is introduced.
@@ -137,7 +154,6 @@ As the old and new key and API are otherwise identical, the changes needed are r
 - rename the manifest.json key 'browser_action' to 'action', like this:
   ```json
   "action": {
-    "browser_style": true,
     "default_icon": {
       "16": "button/geo-16.png",
       "32": "button/geo-32.png"
@@ -155,6 +171,7 @@ As the old and new key and API are otherwise identical, the changes needed are r
     }]
   }
   ```
+  Remember to remove any reference to `browser_style`.
 - update API references from `browser.browserAction` to  `browser.action`.
 - if used, change `_execute_browser_action` to `_execute_action` in the `commands` manifest key and in the [`menu.create`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) and [`menu.update`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/update) API methods (or their aliases `contextMenus.create` and `contextMenus.update`).
 
@@ -167,7 +184,6 @@ In Chromium and Safari, the Browser Action and Page Action APIs are unified into
     id: "browser-action"
     content: content
 %}
-
 {% capture content %}
 
 ### Scripting API
@@ -332,6 +348,7 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 - Update the manifest.json key `manifest_version` to `3`.
 - If your extension adds a search engine, add a local icon and reference it in the manifest.json key `chrome_settings_overrides.search_provider.favicon_url`.
 - Remove any host permissions from the manifest.json keys `permissions` and `optional_permissions` and add them to the `host_permissions` key.
+- Remove references to `browser_style` from the manifest.json keys `browser_action`, `options_ui`, `page_action`, and `sidebar_action`.
 - Rename the manifest.json key `browser_action` to `action` and update any API references from `browser.browserAction` to `browser.action`.
 - Convert background pages to be non-persistent.
 - Move the extension’s CSP to the manifest.json key `content_security_policy.extension_pages` and update the CSP to conform to Manifest V3 requirements.
