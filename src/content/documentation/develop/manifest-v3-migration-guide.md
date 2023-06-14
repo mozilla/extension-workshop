@@ -130,9 +130,9 @@ Move all host permission specifications to the manifest.json key `host_permissio
 
 ### `browser_style`
 
-The [browser_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [options_ui](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui), [page_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), and [sidebar_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest keys may include the `browser_style` property.
+`browser_style: true` is no longer supported on the [options_ui](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui), [action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action), [page_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), and [sidebar_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest keys in Manifest Version 3. When not explicitly set to `false`, `browser_style` used to default to `true` for `options_ui` and `sidebar_action` in Manifest Version 2.
 
-The goal of this property was to enable extension UI components to take on the browser's style. However, it only partially worked as intended. As a consequence, it has been deprecated for Manifest V3. Therefore, remove any references from the manifest keys. 
+The goal of this property was to enable extension UI components to take on the browser's style. However, it only partially worked as intended. As a consequence, it has been deprecated for Manifest V3. Therefore, remove any references from the manifest keys, and confirm that the appearance of `options_ui` and `sidebar_action` matches your intended design, even if `"browser_style": true` was not explicitly specified.
 
 See [Manifest V3 migration for `browser_style`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) for more information.
 
@@ -349,6 +349,7 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 - If your extension adds a search engine, add a local icon and reference it in the manifest.json key `chrome_settings_overrides.search_provider.favicon_url`.
 - Remove any host permissions from the manifest.json keys `permissions` and `optional_permissions` and add them to the `host_permissions` key.
 - Remove references to `browser_style` from the manifest.json keys `browser_action`, `options_ui`, `page_action`, and `sidebar_action`.
+- Confirm that the appearance of `options_ui` and `sidebar_action` has not changed, if `browser_style:false` was not explicitly specified before.
 - Rename the manifest.json key `browser_action` to `action` and update any API references from `browser.browserAction` to `browser.action`.
 - Convert background pages to be non-persistent.
 - Move the extension’s CSP to the manifest.json key `content_security_policy.extension_pages` and update the CSP to conform to Manifest V3 requirements.
