@@ -134,10 +134,9 @@ The features available under the manifest.json key `browser_action` and the `bro
 
 As the old and new key and API are otherwise identical, the changes needed are relatively straightforward and are as follows:
 
-- rename the manifest.json key 'browser_action' to 'action', like this:
+- rename the manifest.json key 'browser_action' to 'action' and remove any reference to [`browser_style`](#browser-style), like this:
   ```json
   "action": {
-    "browser_style": true,
     "default_icon": {
       "16": "button/geo-16.png",
       "32": "button/geo-32.png"
@@ -165,6 +164,24 @@ In Chromium and Safari, the Browser Action and Page Action APIs are unified into
 {% endcapture %}
 {% include modules/one-column.liquid,
     id: "browser-action"
+    content: content
+%}
+
+{% capture content %}
+
+### `browser_style`
+
+In Manifest Version 3, `browser_style: true` is no longer supported in the [options_ui](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui), [action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action), [page_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), and [sidebar_action](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest keys.
+
+The goal of this property was to enable extension UI components to take on the browser's style. However, it only partially worked as intended. As a consequence, it has been deprecated for Manifest V3. Therefore, remove any references from the manifest keys.  
+
+In Manifest Version 2, `browser_style` defaults to `true` for `options_ui` and `sidebar_action`. Therefore, unless you had set `"browser_style": false`, confirm that the appearance of `options_ui` and `sidebar_action` match your intended design.
+
+See [Manifest V3 migration for `browser_style`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) for more information.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+    id: "browser-style"
     content: content
 %}
 
@@ -332,6 +349,8 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 - Update the manifest.json key `manifest_version` to `3`.
 - If your extension adds a search engine, add a local icon and reference it in the manifest.json key `chrome_settings_overrides.search_provider.favicon_url`.
 - Remove any host permissions from the manifest.json keys `permissions` and `optional_permissions` and add them to the `host_permissions` key.
+- Remove references to `browser_style` from the manifest.json keys `browser_action`, `options_ui`, `page_action`, and `sidebar_action`.
+- If `browser_style:false` was not specified in `options_ui` and `sidebar_action`, confirm that their appearance has not changed.
 - Rename the manifest.json key `browser_action` to `action` and update any API references from `browser.browserAction` to `browser.action`.
 - Convert background pages to be non-persistent.
 - Move the extension’s CSP to the manifest.json key `content_security_policy.extension_pages` and update the CSP to conform to Manifest V3 requirements.
