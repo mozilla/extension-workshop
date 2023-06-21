@@ -1189,16 +1189,8 @@
                     "id": "signed-vs-unsigned"
                   },
                   {
-                    "title": "Sideloading",
-                    "id": "sideloading"
-                  },
-                  {
-                    "title": "Installation using the Windows registry",
-                    "id": "installation-using-windows-registry"
-                  },
-                  {
-                    "title": "Firefox settings",
-                    "id": "firefox-settings"
+                    "title": "Using an ExtensionSettings policy",
+                    "id": "using-an-extensionsettings-policy"
                   },
                   {
                     "title": "Bundling add-ons with a custom Firefox",
