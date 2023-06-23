@@ -277,15 +277,21 @@ if (eventPagesSupported) {
 
 ### Content security policies
 
-[Content security policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) in the manifest.json key is changing to use the `extension_pages` property. Manifest V3 has a more restrictive content security policy than Manifest V2, this may require further changes in your pages.
+[Content security policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) in the [`content_security_policy`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key is changing to use the `extension_pages` property. 
 
-Move the extension’s CSP to the manifest.json key to `extension_pages`, like this:
+Therefore, you need to move the extension’s CSP to the manifest.json key to `extension_pages`, like this:
 
 ```json
 "content_security_policy": {
  "extension_pages": "default-src 'self'"
 }
 ```
+
+Manifest V3 has a more restrictive content security policy than Manifest V2, this may require further changes in your pages.
+
+Mozilla’s long-standing [add-on policies](/documentation/publish/add-on-policies/) prohibit remote code execution. In keeping with these policies, the [content_security_policy](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) field no longer supports sources permitting remote code in script-related directives, such as `script-src` or `’unsafe-eval’`. The only permitted values for the `script-src` directive are `’self’` and `’wasm-unsafe-eval’`. `’wasm-unsafe-eval’` must be specified in the CSP if an extension is to use WebAssembly. In Manifest V3, content scripts are subject to the same CSP as other parts of the extension.
+
+Historically, a custom extension CSP required `object-src` to be specified. This is not required in Manifest V3 (and was removed from Manifest V2 in Firefox 106). See [`object-src` in the `content_security_policy` documentation](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive)). This change makes it easier for extensions to customize the CSP with minimal boilerplate.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
