@@ -38,7 +38,7 @@ In August 2020, Mozilla [launched](https://blog.mozilla.org/blog/2020/08/25/intr
 Currently, only a limited number of [Recommended Extensions](https://support.mozilla.org/kb/recommended-extensions-program?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=developing-extensions-for-firefox-for-android) are supported. However, we are continuously working on increasing support, taking into account usage and feedback to ensure we are making the most of our available resources. We will post updates to the [Add-ons Blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=differences-between-desktop-and-android-extensions) as plans solidify each quarter.
 :::
 
-To make sure your users have a great experience with your extension on Firefox for Android, you’ll want to make sure your extension’s user interface integrates well with the browser.
+To make sure your users have a great experience with your extension on Firefox for Android, you want to make sure your extension’s user interface integrates well with the browser.
 
 This article provides guidelines for optimizing your extension’s user experience on mobile. We’ve broken these guidelines up into three segments: the basics, which lists the minimum requirements needed for your extension to work well on a variety of devices; the extra mile, which details how you can make your extension look and feel like Firefox for Android; and the last mile, which describes how you can make your extension feel mobile-native or mobile-first.
 
