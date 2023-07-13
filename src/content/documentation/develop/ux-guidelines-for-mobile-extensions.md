@@ -148,7 +148,7 @@ Frequently used elements in your extension should use mobile-optimized [Material
 
 ## The last mile
 
-If you’d like your extension to behave as though it is integrated in the browser, use these guidelines to design your extension to be mobile-native.
+If you’d like your extension to behave as though it is integrated into the browser, use these guidelines to design your extension to be mobile-native.
 
 ### Layout and typography
 
