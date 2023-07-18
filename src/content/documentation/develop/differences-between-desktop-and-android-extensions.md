@@ -68,23 +68,24 @@ For information about extension development in Firefox for Android, please see [
 
 Firefox for Android offers a streamlined version of the UI found in desktop Firefox, ensuring Firefox offers an enjoyable and engaging experience on mobile. Some differences relate to how the Android UI differs from the desktop UIs found in Linux, Mac OS, and Windows. For example, Android does not support a windowing environment, and devices do not usually include a physical keyboard from which keyboard shortcuts can be issued. Other differences relate to optimizing usability on smaller mobile device screens.
 
+### UI API and `manifest.json` key differences
+
 As a result of the UI differences, extensions for Firefox for Android do not support the following APIs and `manifest.json` keys:
 
+- [`chrome_url_overrides`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/chrome_url_overrides) and [`chrome_settings_overrides`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) `manifest.json` keys, which means you cannot add custom home and new tab pages.
 - [`commands`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/commands) and the related [`commands`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/commands) `manifest.json` key, as Android tablets and smartphones do not usually have a physical keyboard from which ‘commands’ can be issued.
-- [`sidebarAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) and the related [`sidebar_action`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/sidebar_action) `manifest.json` key, due to the limited screen real estate on Android devices sidebars, such as the browser history, are presented in full browser tabs. Where possible, you should move any sidebar content to tabs.
-- [`windows`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/windows), as there is only one Firefox on Android 'window', and the browser cannot open or otherwise manipulate additional browser windows.
-
-
-### Other UI related API and `manifest.json` key differences
-
-There are some other UI features not supported, these are:
-
-- [`bookmarks`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks), which means you cannot manipulate the user's bookmarks, although the user can do this themselves through the UI.
-- The [`chrome_url_overrides`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/chrome_url_overrides) and [`chrome_settings_overrides`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) `manifest.json` keys, which means you cannot add custom home and new tab pages.
-- [`menus`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/menus), which means you cannot add options to context menus.
-- [`history`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/history), which means you cannot search or manipulate the history of browsed pages.
 - [`omnibox`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/omnibox) and the related [`omnibox`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/omnibox) `manifest.json` key, which means you cannot provide custom address bar suggestions.
+- [`menus`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/menus), which means you cannot add options to context menus.
+- [`sidebarAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) and the related [`sidebar_action`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/sidebar_action) `manifest.json` key, due to the limited screen real estate on Android devices sidebars, such as the browser history, are presented in full browser tabs. Where possible, you should move any sidebar content to tabs.
+
+### Other related API and `manifest.json` key differences
+
+There are some other related features that are not supported, these are:
+
+- [`bookmarks`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks), which means you cannot manipulate the user’s bookmarks, although the user can do this themselves through the UI.
+- [`history`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/history), which means you cannot search or manipulate the history of browsed pages.
 - [`sessions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/sessions), which means you cannot list and restore tabs that have been closed while the browser has been running.
+- [`windows`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/windows), as there is only one Firefox on Android ‘window’, and the browser cannot open or otherwise manipulate additional browser windows.
 
 Developer tools for Firefox for Android are provided through remote debugging mechanisms [over USB](https://developer.android.com/studio/debug/dev-options) or [Wi-Fi](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_over_Wifi) that connect to the WebIDE on a desktop. Therefore, Firefox for Android does not provide any built-in developer tools and its extensions do not support the APIs to extend the developer tools:
 
@@ -105,7 +106,7 @@ You can also use an address bar button (through the `manifest.json` [`page_actio
 
 The features of [`pageAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) in Firefox for Android differ slightly from the desktop version. 
 
-The `manifest.json` key [page_action](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) lets you define the button icon and a popup. You then have use of [`pageAction.show()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) and [`pageAction.hide()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide); however, once ‘shown’, the address bar button is visible in all tabs (unlike the desktop behavior, where the button is shown only for a specified tab.) You can hide the pageAction using [`pageAction.hide()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) on a tab (say, for example, you wish to hide your extension's page action icon in `about:addons` or `about:memory` tabs) 
+The `manifest.json` key [page_action](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) lets you define the button icon and a popup. You then have use of [`pageAction.show()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) and [`pageAction.hide()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide); however, once ‘shown’, the address bar button is visible in all tabs (unlike the desktop behavior, where the button is shown only for a specified tab.) You can hide the pageAction using [`pageAction.hide()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) on a tab (say, for example, you wish to hide your extension’s page action icon in `about:addons` or `about:memory` tabs) 
 
 You can set a listener to [`pageAction.onClicked()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked). [`pageAction.setPopup()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup) and [`pageAction.getPopup()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup) are also available, so you can update the popup or create a popup once the add-on is running.
 
@@ -115,8 +116,7 @@ You can also manipulate tabs on Firefox for Android. The [`tabs`](https://develo
 
 - zoom features, Firefox for Android has one zoom level only, which the user can override with a pinch gesture on the page.
 - features related to selecting and moving tabs, again as these features are not supported on Android.
-- the ability to detect a tab's language or muted status.
-
+- the ability to detect a tab’s language or muted status.
 
 {% endcapture %}
 {% include modules/one-column.liquid,

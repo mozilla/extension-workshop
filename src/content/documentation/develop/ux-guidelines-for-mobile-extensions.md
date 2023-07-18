@@ -90,13 +90,7 @@ To provide a seamless experience between your extension and the browser, use the
 
 ### Themes
 
-Use the Protocol Design System’s [color palette](https://protocol.mozilla.org/fundamentals/color.html).
-
-<!--
-- Match Firefox for Android’s [color usage](https://www.figma.com/proto/TebIgESfWmQkMcEmwNaYZl/Android?node-id=0%3A498&viewport=-4823%2C213%2C0.5&scaling=min-zoom&hide-ui=1) for light and dark themes. 
-
-(This link requires figma login, any idea where it should go?)
--->
+Use the Acorn Design System’s [color palette](https://acorn.firefox.com/latest/styles/color-MZHBVuZc).
 
 ### Color contrast
 
@@ -111,18 +105,9 @@ Match the font families used in Firefox for Android:
 - [Inter](https://fonts.google.com/specimen/Inter) for body and caption context
 - [Metropolis](https://www.1001fonts.com/metropolis-font.html) for headlines, subtitles, and buttons
 
-<!--
-#### Type scale
-
-Follow the [Firefox for Android typographic scale](https://www.figma.com/proto/TebIgESfWmQkMcEmwNaYZl/Android?node-id=0%3A806&viewport=115%2C161%2C0.5&scaling=min-zoom). 
-
-This link requires figma login, any idea where it should go?
-
--->
-
 ### Iconography
 
-Use either [Photon Android icons](https://design.firefox.com/icons/viewer/) or [Material icons](https://material.io/resources/icons/).
+Use either [Acorn Android icons](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H/) or [Material icons](https://material.io/resources/icons/).
 
 ### Components
 
@@ -161,13 +146,6 @@ Most, if not all, elements in your extension should use mobile-optimized [Materi
 - [Top app bar](https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar)
 
 Seldom used elements that could be mobile-optimized include [Card](https://material-components.github.io/material-components-web-catalog/#/component/card), [Chips](https://material-components.github.io/material-components-web-catalog/#/component/chips), [Data table](https://material-components.github.io/material-components-web-catalog/#/component/data-table), [Dialog](https://material-components.github.io/material-components-web-catalog/#/component/dialog), [Drawer](https://material-components.github.io/material-components-web-catalog/#/component/drawer), [Image list](https://material-components.github.io/material-components-web-catalog/#/component/image-list), and [Snackbar](https://material-components.github.io/material-components-web-catalog/#/component/snackbar).
-
-<!--
-Components should match [Firefox for Android color usage](https://www.figma.com/proto/TebIgESfWmQkMcEmwNaYZl/Android?node-id=0%3A498&viewport=-4823%2C213%2C0.5&scaling=min-zoom&hide-ui=1) for light and dark themes. 
-
-This link requires figma login, any idea where it should go?
-
--->
 
 {% endcapture %}
 {% include modules/one-column.liquid,
