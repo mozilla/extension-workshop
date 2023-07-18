@@ -34,7 +34,7 @@ Make your extension seamlessly integrate with Firefox for Android.
 ## Introduction
 
 ::: note alert
-Only a limited number of [recommended extensions](/documentation/publish/recommended-extensions/) are supported for Firefox for Android. Look out for updates on the [add-ons blog](https://blog.mozilla.org/addons/tag/android/).
+Only a limited number of [recommended extensions](/documentation/publish/recommended-extensions/) are supported for Firefox for Android. Look out for updates on the [add-ons blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=differences-between-desktop-and-android-extensions).
 :::
 
 To make sure your users have a great experience with your extension on Firefox for Android, you want to ensure your extension’s user interface integrates well with the browser.

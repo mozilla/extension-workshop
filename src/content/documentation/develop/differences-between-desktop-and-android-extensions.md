@@ -41,7 +41,7 @@ There are some important distinctions to be aware of when developing an extensio
 {% capture content_with_toc %}
 
 ::: note alert
-Only a limited number of [recommended extensions](/documentation/publish/recommended-extensions/) are supported for Firefox for Android. Look out for updates on the [add-ons blog](https://blog.mozilla.org/addons/tag/android/).
+Only a limited number of [recommended extensions](/documentation/publish/recommended-extensions/) are supported for Firefox for Android. Look out for updates on the [add-ons blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=differences-between-desktop-and-android-extensions).
 :::
 
 Firefox for Android offers a subset of the WebExtensions APIs available to the desktop version of Firefox. Some of these differences are due to the nature of the Android environment and therefore the features Firefox can implement, others are where Firefox for Android does not offer all the desktop features. This article explores these differences and how they affect your add-on development.
@@ -132,7 +132,7 @@ You can also manipulate tabs on Firefox for Android. The [`tabs`](https://develo
 
 ## Execution model
 
-The process model on Android kills idle background processes to maintain device performance. Among the background processes Android can kill are extension processes. To account for this behavior, extensions should be designed to recover after they have been killed. [Event pages, or non-persistent background scripts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts), are the best mechanism to support this. If your extension uses persistent background script, [learn how to convert them to event pages](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts#convert_to_non-persistent).
+The [process model on Android](https://developer.android.com/guide/components/activities/process-lifecycle) kills idle processes to maintain device performance. Among the processes Android can kill are extension processes. To account for this behavior, extensions should be designed to recover after they have been killed. [Event pages, or non-persistent background scripts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts), are the best mechanism to support this. If your extension uses persistent background script, [learn how to convert them to event pages](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts#convert_to_non-persistent).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
