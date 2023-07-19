@@ -32,6 +32,10 @@ Recommended extensions are easy to identify because of their distinctive “Reco
 
 ![Add-ons Manager setting cog](/assets/img/documentation/publish/RecEx_badge.png)
 
+::: note alert
+Following the launch of the reimagined [Firefox for Android]((https://blog.mozilla.org/blog/2020/08/25/introducing-a-new-firefox-for-android-experience/)) experience (codenamed "Fenix") in August 2020, only a limited number of recommended extensions are supported. We are working to increase support, considering usage and feedback to ensure we are making the most of our available resources. Look out for updates on the [add-ons blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=differences-between-desktop-and-android-extensions).
+:::
+
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
   id: "overview"

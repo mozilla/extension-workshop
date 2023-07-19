@@ -155,7 +155,7 @@ Find out best practices for putting your best foot forward with your extension.
 
 ### Understanding how to develop extensions for Android
 
-To offer your extension to Firefox for Android users, you’ll need to consider some [differences between Firefox for the desktop and Android](/documentation/develop/differences-between-desktop-and-android-extensions/).
+To offer your extension to Firefox for Android users, you need to consider some [differences between Firefox for the desktop and Android](/documentation/develop/differences-between-desktop-and-android-extensions/).
 
 Get started with everything you need to know about [developing for Firefox for Android](/documentation/develop/developing-extensions-for-firefox-for-android/).
 
