@@ -209,7 +209,7 @@ A typical scenario for using this approach is the `"geoLocation"` permission. Sa
 
 ![Example of an additional or runtime permission request message](/assets/img/documentation/develop/Permissions_optional_request.png)
 
-Making a runtime permission request is straightforward. Include any permissions you want to request under the `manifest.json` [`optional_permissions`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions) key. Then pass the permissions you want granted to [`WebExtAPIRef("permissions.request")`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. `true` is returned if the user grants the request, `false` if they don't.
+Making a runtime permission request is straightforward. Include any permissions you want to request under the `manifest.json` [`optional_permissions`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions) key. Then pass the permissions you want granted to [`permissions.request`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. `true` is returned if the user grants the request, `false` if they don't.
 
 You can't request all the permissions available to `"permissions"` using optional permissions. You can't request the following API permissions:
 
