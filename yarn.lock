@@ -4227,10 +4227,10 @@ linkify-it@^4.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-liquidjs@10.8.4:
-  version "10.8.4"
-  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-10.8.4.tgz#32596e189e264f60794af8f41cd26c0c66f6da49"
-  integrity sha512-HSpYAFBVWxhwWsTKPBJgPm3bnwwIzAZjy17XhX7uJCKJ8H6A1YstZSFmPqMmWfSuJOg43RSx+qWVSA1Fu3+B2w==
+liquidjs@10.9.1:
+  version "10.9.1"
+  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-10.9.1.tgz#3baf399efd447dafe48ee8431c81fb36d5733b73"
+  integrity sha512-1191NKgWdsxc7VJKuLR2hNfacyn1LSA2/1bMMECDGckajVCvbDC4OWlcZJ+il3fkhuiGSHYd++HNgjP35gbDWw==
   dependencies:
     commander "^10.0.0"
 
