@@ -200,7 +200,7 @@ For more details on using the web developer tools, see [Firefox Developer Tools]
 
 ### Viewing manifest validation messages using the console
 
-In addition to the console messages output through the Console, there may also be messages relating to the validation of the extension’s `manifest.json` files. These messages can be viewed using the adb logcat command. To avoid receiving other, unrelated messages, you can pipe the output through grep, filtering by the extension’s ID, for example:
+In addition to the messages from your code, the console may also include messages about the validation of the extension's `manifest.json` files. These messages can be viewed using the adb logcat command. To avoid receiving other unrelated messages, you can pipe the output through grep, filtering by the extension's ID. For example:
 
 ```shell
 /path/to/adb logcat | grep borderify@example.com
