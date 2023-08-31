@@ -560,7 +560,7 @@ Environment variable: `$WEB_EXT_API_URL_PREFIX`
 The add-on submission API base URL. This should always be a string. If not specified, this will default to&nbsp;`https://addons.mozilla.org/api/v5` which is the production API.
 
 ::: note alert
-This option is ignored when `--use-submission-api` is used. See `--api-url-prefix` instead.
+This option is only used when `--use-submission-api` is used. See `--api-url-prefix` instead.
 :::
 
 Environment variable: `$WEB_EXT_AMO_BASE_URL`
