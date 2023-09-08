@@ -1315,6 +1315,10 @@
             "url": "https://blog.mozilla.org/addons/"
           },
           {
+            "title": "Office Hours",
+            "url": "/community/#office-hours"
+          },
+          {
             "title": "Stack Overflow",
             "url": "https://stackoverflow.com/tags/firefox-addon"
           },
