@@ -10,7 +10,7 @@ If you would like to update content or other resources on Firefox Extension Work
 
 ## Development Guide: Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 For notes on how to deploy the project on a live system, see [Deployment](#deployment).
 
@@ -76,7 +76,7 @@ For the `asset-pipeline` script to do its thing, all you need to do is refer to 
 
 ## Development Guide: Content Updates
 
-This site has three templates: 
+This site has three templates:
 
 1. A full-width page
 2. A sidebar "page" for documentation
