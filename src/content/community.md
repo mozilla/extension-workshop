@@ -3,9 +3,9 @@ layout: sidebar
 title: Community
 permalink: /community/
 tags: [community, contribute, webextensions]
-contributors: [caitmuenster, grlwholifts]
+contributors: [caitmuenster, grlwholifts, Rob--W]
 author: caitmuenster
-date: 2020-12-03 
+date: 2023-09-20
 ---
 
 <!-- Overview Page Hero Banner -->
@@ -54,16 +54,11 @@ Stay up to date with the latest information about add-on technology on the [Add-
 
 ### Questions about add-on development
 
-You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon), or the [developer mailing list](https://mail.mozilla.org/listinfo/dev-addons). You can also talk with us on [Matrix](https://wiki.mozilla.org/Matrix) in the [Add-ons room](https://mzl.la/2u8ZGbg) (for general development questions) or in the [add-on reviewers room](https://mzl.la/2IJ2Oi1) (for questions about an add-on review).
+You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons) or [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon). You can also talk with us on [Matrix](https://wiki.mozilla.org/Matrix) in the [Add-ons room](https://mzl.la/2u8ZGbg) (for general development questions) or in the [add-on reviewers room](https://mzl.la/2IJ2Oi1) (for questions about an add-on review).
 
-### Meetup IRL
+### Public meetings
 
-Find out whether there is a browser extensions or Mozilla related group or meet up near you from these resources:
-
-- [Mozilla Reps program](https://reps.mozilla.org/events/#/period/future/), where you can find events arranged by volunteer Mozillians from around the world. And, if there are no events local to you, the program can help you get things started.
-
-- [Campus Clubs](https://campus.mozilla.community/), for events arranged by students with a passion for keeping the web open, at universities and colleges worldwide.
-  You can also attend Mozilla’s public meetings and events for extension developers, such as add-on demo sessions Details of these events are found in the [Developer Communication Calendar](https://wiki.mozilla.org/Add-ons/developer/communication#Add-on_Developer_Communication_Calendar).
+You can also attend Mozilla’s public meetings and events for extension developers. Details of these events are found in the [Developer Communication Calendar](https://wiki.mozilla.org/Add-ons/developer/communication#Add-on_Developer_Communication_Calendar).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
