@@ -1,0 +1,10 @@
+// Styles for /community/
+// ------
+
+#booking-frame {
+  width: 100%;
+  margin-bottom: -6px; // removes extra whitespace after iframe
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-radius: $global-radius;
+}

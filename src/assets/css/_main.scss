@@ -2255,14 +2255,6 @@ details[open] > summary {
   font-weight: $global-weight-bold;
 }
 
-details > iframe {
-  width: 100%;
-  margin-bottom: -6px; // removes extra whitespace after iframe
-  box-sizing: border-box;
-  border: 1px solid gray;
-  border-radius: $global-radius;
-}
-
 // Expandable List
 // ------
 
