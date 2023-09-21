@@ -10,7 +10,7 @@ If you would like to update content or other resources on Firefox Extension Work
 
 ## Development Guide: Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+These instructions get a copy of the project up and running on your local machine for development and testing purposes.
 
 For notes on how to deploy the project on a live system, see [Deployment](#deployment).
 
@@ -34,12 +34,12 @@ yarn start
 
 ### Available yarn commands
 
-| Command                | Description                                                                             |
-| ---------------------- | --------------------------------------------------------------------------------------- |
+| Command                  | Description                                                                             |
+| ------------------------ | --------------------------------------------------------------------------------------- |
 | `yarn start`             | Starts eleventy and includes unpublished content.                                       |
 | `yarn build:production`  | Builds the site for production.                                                         |
 | `yarn build:unpublished` | Builds the site for production with unpublished content.                                |
-| `yarn clean`             | Clears the output directory. (You probably won't need to use this manually.)             |
+| `yarn clean`             | Clears the output directory. (You probably won't need to use this manually.)            |
 
 ## How the site is built
 
@@ -76,7 +76,7 @@ For the `asset-pipeline` script to do its thing, all you need to do is refer to 
 
 ## Development Guide: Content Updates
 
-This site has three templates: 
+This site has three templates:
 
 1. A full-width page
 2. A sidebar "page" for documentation

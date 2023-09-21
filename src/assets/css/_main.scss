@@ -2234,6 +2234,27 @@ span.example {
   font-size: $small-font-size;
 }
 
+// Details
+// ------
+
+details {
+  border: 1px solid $medium-light-gray;
+  padding: rem-calc(4);
+  border-radius: $global-radius;
+}
+
+details > summary {
+  font-size: $small-font-size;
+  font-weight: $global-weight-normal;
+  padding-left: rem-calc(1);
+  cursor: pointer;
+}
+
+details[open] > summary {
+  margin-bottom: $global-margin / 2;
+  font-weight: $global-weight-bold;
+}
+
 // Expandable List
 // ------
 

@@ -40,7 +40,7 @@ CSP="\"content-security-policy\": \"default-src 'none'; "\
 "font-src 'self'; "\
 "form-action 'self' https://www.mozilla.org/en-US/newsletter/; "\
 "frame-ancestors 'none'; "\
-"frame-src https://www.youtube.com/embed/; "\
+"frame-src https://www.youtube.com/embed/ https://calendar.google.com/calendar/appointments/; "\
 "img-src 'self' data:; "\
 "object-src 'none'; "\
 "script-src 'self' https://www.youtube.com/iframe_api https://www.youtube.com/s/player/ 'sha256-cEol3PeVsUqXLYFr6jKFJdNafMQx9RDvCSi6+kCHa6U=' https://www.google-analytics.com/analytics.js; "\
