@@ -75,23 +75,34 @@ Choose:
    Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
    The message informs you of what failed. You'll not be able to continue. Address the issues and return to step 1.
 
-5. If you need to provide source code, click **Browse** and locate and upload your source code package. See [Source code submission](/documentation/publish/source-code-submission/) for more information.
-6. Select the add-on's compatible platform(s).
-7. Click **Continue**.
-8. The Describe Add-on page displays. <br/> ![Submit an add-on page](/assets/img/publish/Submit_add_on_describe_add_on.png) <br/>
+5. Select the add-on's compatible platform(s).
+
+6. Click **Continue**.
+
+7. Select whether or not you need to provide your source code. <br/><br/> <img src="/assets/img/publish/Submit_add_on_source_code.png" style="box-shadow:0px 0px 0.5em gray;" />
+
+    If you do, select **Yes** and a new section will appear that describes what you will need to submit. Click **Browse** and locate and upload your source code package. See [Source code submission](/documentation/publish/source-code-submission/) for more information.
+    
+    If you do not, select **No**.
+
+8. Click **Continue**.
+9. The Describe Add-on page displays. <br/><br/> <img src="/assets/img/publish/Submit_add_on_describe_add_on.png" style="box-shadow:0px 0px 0.5em gray;" alt="Submit an add-on page"/> <br/>
    Provide the following:
-   - Name: your add-on's name.
-   - Add-on URL: the URL for your add-on on AMO. A URL will be automatically assigned based on your add-on's name, to change this, click Edit. Note: The URL must be unique, you'll be warned if another add-on is using your chosen URL and you'll have to enter a different one before you can set the URL.
-   - Summary: a useful and descriptive summary of your add-on.
-   - This add-on is experimental: your add-on is experimental or otherwise not ready for general use. The add-on will be listed but with reduced visibility. You can remove this flag when your add-on is ready for general use.
-   - This add-on requires payment, non-free services or software, or additional hardware: indicate if your add-on requires users to make an additional purchase for it to work fully.
-   - Select up to 2 Firefox categories for this add-on: select categories that describe your add-on.
-   - Select up to 2 Firefox for Android categories for this add-on: select categories that describe your add-on.
-   - Support email and website: an email address and website where users can get in touch when they have questions, issues, or compliments.
-   - License: select the appropriate license for your add-on. Click Details to learn more about each license.
-   - This add-on has a privacy policy: if any data is being transmitted from the user’s device, a privacy policy is required explaining what is being sent and how it’s used. Check this box and provide the privacy policy.
-   - Notes for Reviewers: information that will assist the AMO reviewer, such as log in details for a dummy account, source code information, or similar.
+   - **Name:** your add-on's name.
+   - **Add-on URL:** the URL for your add-on on AMO. A URL will be automatically assigned based on your add-on's name, to change this, click Edit. Note: The URL must be unique, you'll be warned if another add-on is using your chosen URL and you'll have to enter a different one before you can set the URL.
+   - **Summary:** a useful and descriptive short summary of your add-on.
+   - **Description:** a longer description that provides users with a more detailed oveview of the extensin's features and functionality.
+   - **This add-on is experimental:** your add-on is experimental or otherwise not ready for general use. The add-on will be listed but with reduced visibility. You can remove this flag when your add-on is ready for general use.
+   - **This add-on requires payment, non-free services or software, or additional hardware:** indicate if your add-on requires users to make an additional purchase for it to work fully.
+   - **Select up to 2 Firefox categories for this add-on:** select categories that describe your add-on.
+   - **Select up to 2 Firefox for Android categories for this add-on:** select categories that describe your add-on.
+   - **Support email** and **Support website:** an email address and website where users can get in touch when they have questions, issues, or compliments.
+   - **License:** select the appropriate license for your add-on. Click Details to learn more about each license.
+   - **This add-on has a privacy policy:** if any data is being transmitted from the user’s device, a privacy policy is required explaining what is being sent and how it’s used. Check this box and provide the privacy policy.
+   - **Notes for Reviewers:** information that will assist the AMO reviewer, such as log in details for a dummy account, source code information, or similar.
+
 9. Click **Submit Version**
+
 10. The Version Submitted page displays. You'll also receive an email confirmation. <br/><br/> <img src="/assets/img/publish/Submit_add_on_version_submitted.png" style="box-shadow:0 0 0.5em gray;" /> <br/>
 
 Your add-on is published and available on AMO for users to discover and install. Note, however, that your add-on may still be subject to further review, if it is you'll receive notification of the outcome of the review later.
