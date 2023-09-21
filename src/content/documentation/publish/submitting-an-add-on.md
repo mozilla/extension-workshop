@@ -4,9 +4,9 @@ title: Submitting an add-on
 permalink: /documentation/publish/submitting-an-add-on/
 topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]
-contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz, wesinator]
-last_updated_by: wesinator
-date: 2022-10-17
+contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz, wesinator, dotproto]
+last_updated_by: dotproto
+date: 2023-09-21
 ---
 
 <!-- Page Hero Banner -->
@@ -105,6 +105,33 @@ Learn how to make your add-on listing appealing with these [tips](/documentation
 {% endcapture %}
 {% include modules/one-column.liquid,
   id: "listing-on-amo"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
+## Version compatibility
+
+You can control what versions of Firefox can install your add-on by manually configuring a version's compatibility settings. 
+
+1. Visit the [Add-on Developer Hub](https://addons.mozilla.org/en-US/developers/). <br/><br/> <img src="/assets/img/publish/configure_versions_dev_hub.png" style="box-shadow:0 0 0.5em gray;" />
+
+2. Find the add-on you want to configure and click "Edit Product Page."
+
+3. Click "Manage Status & Versions" in the left navigation menu. <br/><br/> <img src="/assets/img/publish/configure_versions_manage_menu.png" style="box-shadow:0 0 0.5em gray;" />
+
+4. Click the version number you want to configure.
+
+5. Use the dropdowns to select the Firefox version numbers this version of your add-on is compatible with. <br/><br/> <img src="/assets/img/publish/configure_versions_manage_page.png" style="box-shadow:0 0 0.5em gray;" />
+
+6. Click **Save Changes** to apply your edits.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "version-compatibility"
   content: content
 %}
 

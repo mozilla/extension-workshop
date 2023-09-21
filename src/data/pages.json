@@ -771,6 +771,10 @@
                     "id": "listing-on-amo"
                   },
                   {
+                    "title": "Version compatibility",
+                    "id": "version-compatibility"
+                  },
+                  {
                     "title": "Self-distribution",
                     "id": "self-distribution"
                   },
