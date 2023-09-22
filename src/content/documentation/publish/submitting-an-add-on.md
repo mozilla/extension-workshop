@@ -145,13 +145,13 @@ If you want Firefox to handle updates to your add-on, remember to include the [`
     If you select **Yes**, a section displays describing what you need to submit. Click **Browse** and locate and upload your source code package. See [Source code submission](/documentation/publish/source-code-submission/) for more information.
 
 8. Click **Continue**.
-8. The Version Signature Pending page displays. <br/><br/> <img src="/assets/img/publish/Submit_add_version_signature_pending.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+8. The Version Signature Pending page displays. <br/><br/> <img src="/assets/img/publish/Submit_add_version_signature_pending.png" style="box-shadow:0px 0px 0.5em gray;" />
 10. Click **Go to My Submissions**.
 11. You receive an email when your extension has been signed. 
 12. Follow the link in the email or open your extension from My Add-ons and, under the latest version details, click  **View All**. <br/><br/> <img src="/assets/img/publish/view_all_versions.png
-" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+" style="box-shadow:0px 0px 0.5em gray;" />
 13. Select the version you uploaded and, on the version page, click the file link to download the signed copy of your add-on. <br/><br/> <img src="/assets/img/publish/signed_file.png
-" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+" style="box-shadow:0px 0px 0.5em gray;" />
 
 You can now distribute your add-on. Note, however, that your add-on may be subject to further review. If it is, you receive notification of the outcome of the review later.
 
