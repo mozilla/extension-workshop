@@ -72,7 +72,9 @@ Choose:
 4. If your add-on passes all the checks, you receive this message: <br/><br/> <img src="/assets/img/publish/uploadsuccess.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
 
    You may receive a message that you only have warnings. It's advisable to address these warnings, particularly those flagged as security or privacy issues, as they may result in your add-on failing review. However, you can continue with the submission.
-   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
+
+   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+
    The message informs you of what failed. You cannot continue. Address these issues and return to step 1.
 
 5. Select the add-on's compatible platform(s).
@@ -84,7 +86,8 @@ Choose:
    If you select **Yes**, a section displays describing what you need to submit. Click **Browse** and locate and upload your source code package. See [Source code submission](/documentation/publish/source-code-submission/) for more information.
 
 8. Click **Continue**.
-9. The Describe Add-on page displays. <br/><br/> <img src="/assets/img/publish/Submit_add_on_describe_add_on.png" style="box-shadow:0px 0px 0.5em gray;" alt="Submit an add-on page"/> <br/>
+9. The Describe Add-on page displays. <br/><br/> <img src="/assets/img/publish/Submit_add_on_describe_add_on.png" style="box-shadow:0px 0px 0.5em gray;" alt="Submit an add-on page"/>
+
    Provide the following:
    - **Name**: your add-on's name.
    - **Add-on URL**: the URL for your add-on on AMO. A URL is automatically assigned based on your add-on's name. To change this, click **Edit**. The URL must be unique. You are warned if another add-on is using your chosen URL, and you must enter a different one.
@@ -135,8 +138,10 @@ If you want Firefox to handle updates to your add-on, remember to include the [`
 4. If your add-on passes all the checks, you receive this message: <br/><br/> <img src="/assets/img/publish/uploadsuccess.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
 
    You may receive a message that you only have warnings. It's advisable to address these warnings, particularly those flagged as security or privacy issues, as they may result in your add-on failing review. However, you can continue with the submission.
-   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" /> <br/>
-   The message informs you of what failed. You cannot continue. Address the issues and return to step 1.
+
+   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+
+   The message informs you of what failed. You cannot continue. Address these issues and return to step 1.
 
 5. Select the add-on's compatible platform(s).
 6. Click **Continue**.
@@ -147,7 +152,7 @@ If you want Firefox to handle updates to your add-on, remember to include the [`
 8. Click **Continue**.
 8. The Version Signature Pending page displays. <br/><br/> <img src="/assets/img/publish/Submit_add_version_signature_pending.png" style="box-shadow:0px 0px 0.5em gray;" />
 10. Click **Go to My Submissions**.
-11. You receive an email when your extension has been signed. 
+11. You receive an email when your extension has been signed.
 12. Follow the link in the email or open your extension from My Add-ons and, under the latest version details, click  **View All**. <br/><br/> <img src="/assets/img/publish/view_all_versions.png
 " style="box-shadow:0px 0px 0.5em gray;" />
 13. Select the version you uploaded and, on the version page, click the file link to download the signed copy of your add-on. <br/><br/> <img src="/assets/img/publish/signed_file.png
