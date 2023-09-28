@@ -107,7 +107,7 @@ When setting `strict_min_version` in [`browser_specific_settings`](https://devel
     "strict_min_version": "102.0"
   },
   "gecko_android": {
-    "strict_min_version": "119.0a1"
+    "strict_min_version": "113.0"
   }
 }
 ```
