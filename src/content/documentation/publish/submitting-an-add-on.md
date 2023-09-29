@@ -43,12 +43,12 @@ Create your developer account. On [addons.mozilla.org](https://addons.mozilla.or
 
 Go to [Add-ons Developer Hub](https://addons.mozilla.org/developers/) and click **Submit Your First Add-on** or **Submit a New Add-on**. You reach the following page:
 
-<img src="/assets/img/publish/newstepone.png" style="box-shadow:0 0 0.5em gray;" />
+<img src="/assets/img/publish/newstepone.png" alt="The submit an add-on page showing the submission options: list the add-on on AMO or your site." style="box-shadow:0 0 0.5em gray;" />
 
 Choose:
 
 - **On this site**, if you want your add-on listed on AMO. <br/> Click **Continue** and follow the [Listing on AMO](#listing-on-amo) guide.
-- **On your own**, if you plan to distribute the add-on yourself and don't want it listed on AMO. <br/> Click **Continue** and follow the [Self-distribution guide](#self-distribution) guide.
+- **On your own**, if you plan to distribute the add-on yourself and don't want it listed on AMO. <br/> Click **Continue** and follow the [Self-distribution](#self-distribution) guide.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
@@ -63,17 +63,17 @@ Choose:
 
 ## Listing on AMO
 
-1. The Upload Version page displays. <br/><br/> ![Submit an add-on page](/assets/img/publish/Submit_add_on_before_upload.png)
+1. The Upload Version page displays. <br/><br/> ![The submit an add-on page showing the option to select a file containing your add-on.](/assets/img/publish/Submit_add_on_before_upload.png)
 
 2. Click **Select a file**, select and upload your add-on.
 
-3. The validator checks the add-on for issues and the page updates. <br/><br/> <img src="/assets/img/publish/Submit_add_on_after_upload.png" style="box-shadow:0 0 0.5em gray;" />
+3. The validator checks the add-on for issues and the page updates. <br/><br/> <img src="/assets/img/publish/Submit_add_on_after_upload.png" alt="The submit an add-on page showing that add-on validation is complete." style="box-shadow:0 0 0.5em gray;" />
 
-4. If your add-on passes all the checks, you receive this message: <br/><br/> <img src="/assets/img/publish/uploadsuccess.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+4. If your add-on passes all the checks, you receive this message: <br/><br/> <img src="/assets/img/publish/uploadsuccess.png" alt="A message saying that your add-on was validated with no errors or warnings." style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
 
    You may receive a message that you only have warnings. It's advisable to address these warnings, particularly those flagged as security or privacy issues, as they may result in your add-on failing review. However, you can continue with the submission.
 
-   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" alt="A message saying that your add-on failed validation with errors." style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
 
    The message informs you of what failed. You cannot continue. Address these issues and return to step 1.
 
@@ -81,12 +81,12 @@ Choose:
 
 6. Click **Continue**.
 
-7. Indicate whether you need to provide your source code. <br/><br/> <img src="/assets/img/publish/Submit_add_on_source_code.png" style="box-shadow:0px 0px 0.5em gray;" />
+7. Indicate whether you need to provide your source code. <br/><br/> <img src="/assets/img/publish/Submit_add_on_source_code.png" alt="The submit an add-on page asking whether your extension requires a source code submission, showing the option to browse and upload a source code package when you select yes." style="box-shadow:0px 0px 0.5em gray;" />
 
    If you select **Yes**, a section displays describing what you need to submit. Click **Browse** and locate and upload your source code package. See [Source code submission](/documentation/publish/source-code-submission/) for more information.
 
 8. Click **Continue**.
-9. The Describe Add-on page displays. <br/><br/> <img src="/assets/img/publish/Submit_add_on_describe_add_on.png" style="box-shadow:0px 0px 0.5em gray;" alt="Submit an add-on page"/>
+9. The Describe Add-on page displays. <br/><br/> <img src="/assets/img/publish/Submit_add_on_describe_add_on.png" style="box-shadow:0px 0px 0.5em gray;" alt="The submit an add-on page with the options to add details about your add-on that display in its AMO listing."/>
 
    Provide the following:
    - **Name**: your add-on's name.
@@ -104,7 +104,7 @@ Choose:
 
 9. Click **Submit Version**
 
-10. The Version Submitted page displays. You also receive an email confirmation. <br/><br/> <img src="/assets/img/publish/Submit_add_on_version_submitted.png" style="box-shadow:0 0 0.5em gray;" /> <br/>
+10. The Version Submitted page displays. You also receive an email confirmation. <br/><br/> <img src="/assets/img/publish/Submit_add_on_version_submitted.png" alt="The submit an add-on page confirming that the add-on has been submitted and providing buttons for things you can do next, including managing the listing, editing the submission, adding a new submission, or going to a list of your submissions." style="box-shadow:0 0 0.5em gray;" /> <br/>
 
 Your add-on is published and available on AMO for users to discover and install. Note, however, that your add-on may be subject to further review. If it is, you receive notification of the outcome of the review later.
 
@@ -134,29 +134,28 @@ If you want Firefox to handle updates to your add-on, remember to include the [`
 1. The Upload Version page displays. <br/><br/> ![Submit an add-on page](/assets/img/publish/Submit_add_on_before_upload.png)
 
 2. Click **Select a file**, select and upload your add-on.
-3. The validator checks the add-on for issues and the page updates. <br/><br/> <img src="/assets/img/publish/Submit_add_on_after_upload.png" style="box-shadow:0 0 0.5em gray;" />
-4. If your add-on passes all the checks, you receive this message: <br/><br/> <img src="/assets/img/publish/uploadsuccess.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+3. The validator checks the add-on for issues and the page updates. <br/><br/> <img src="/assets/img/publish/Submit_add_on_after_upload.png" alt="The submit an add-on page showing that add-on validation is complete." style="box-shadow:0 0 0.5em gray;" />
+4. If your add-on passes all the checks, you receive this message: <br/><br/> <img src="/assets/img/publish/uploadsuccess.png" alt="A message saying that your add-on was validated with no errors or warnings." style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
 
    You may receive a message that you only have warnings. It's advisable to address these warnings, particularly those flagged as security or privacy issues, as they may result in your add-on failing review. However, you can continue with the submission.
 
-   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
+   Otherwise, you receive a message similar to this: <br/><br/> <img src="/assets/img/publish/errorsubmit.png" alt="A message saying that your add-on failed validation with errors." style="box-shadow:0px 0px 0.5em gray; height:50px; width:500px;" />
 
    The message informs you of what failed. You cannot continue. Address these issues and return to step 1.
 
 5. Select the add-on's compatible platform(s).
 6. Click **Continue**.
-7. Indicate whether you need to provide your source code. <br/><br/> <img src="/assets/img/publish/Submit_add_on_source_code.png" style="box-shadow:0px 0px 0.5em gray;" />
+7. Indicate whether you need to provide your source code. <br/><br/> <img src="/assets/img/publish/Submit_add_on_source_code.png" alt="The submit an add-on page asking whether your extension requires a source code submission, showing the option to browse and upload a source code package when you select yes." style="box-shadow:0px 0px 0.5em gray;" />
 
     If you select **Yes**, a section displays describing what you need to submit. Click **Browse** and locate and upload your source code package. See [Source code submission](/documentation/publish/source-code-submission/) for more information.
 
 8. Click **Continue**.
-8. The Version Signature Pending page displays. <br/><br/> <img src="/assets/img/publish/Submit_add_version_signature_pending.png" style="box-shadow:0px 0px 0.5em gray;" />
+8. The Version Signature Pending page displays. <br/><br/> <img src="/assets/img/publish/Submit_add_version_signature_pending.png" alt="The submit an add-on page displaying a message indicating that the version signature is pending and providing a link to a list of your submissions." style="box-shadow:0px 0px 0.5em gray;" />
 10. Click **Go to My Submissions**.
 11. You receive an email when your extension has been signed.
-12. Follow the link in the email or open your extension from My Add-ons and, under the latest version details, click  **View All**. <br/><br/> <img src="/assets/img/publish/view_all_versions.png
-" style="box-shadow:0px 0px 0.5em gray;" />
+12. Follow the link in the email or open your extension from My Add-ons and, under the latest version details, click  **View All**. <br/><br/> <img src="/assets/img/publish/view_all_versions.png" alt="The option to view all versions highlighted in the latest version box of an add-on submission page." style="box-shadow:0px 0px 0.5em gray;" />
 13. Select the version you uploaded and, on the version page, click the file link to download the signed copy of your add-on. <br/><br/> <img src="/assets/img/publish/signed_file.png
-" style="box-shadow:0px 0px 0.5em gray;" />
+" alt="The download link for a signed copy of an add-on highlighted in an add-on submission version page." style="box-shadow:0px 0px 0.5em gray;" />
 
 You can now distribute your add-on. Note, however, that your add-on may be subject to further review. If it is, you receive notification of the outcome of the review later.
 
