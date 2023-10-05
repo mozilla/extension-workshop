@@ -83,6 +83,8 @@ Then, on your development computer:
 
 ## Check for Firefox for Android compatibility
 
+### Lint with web-ext 
+
 Before running your extension on Firefox for Android, consider using [`web-ext lint`](/documentation/develop/web-ext-command-reference#web-ext-lint). Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android. Lint relies on your extension’s manifest.json file including `strict_min_version`, it then reports on the features that are not supported by the minimum version you have set.
 
 In the lint report:
@@ -111,6 +113,18 @@ When setting `strict_min_version` in [`browser_specific_settings`](https://devel
   }
 }
 ```
+
+### Android API and UX checklist
+
+Before making your extension publicly availabile on AMO, test your extension on Android to make sure it works as expected. Reviewers may reject or request changes to submissions that don't meet basic usibility requirements.
+
+- Check [Browser Support for JavaScript APIs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) to verify that the APIs your extension uses are available on Firefox for Android.
+<!-- - Notable omissions include bookmarks, commands, devtools, downloads, find, history, menus, notifications, some privacy capablities, search, sessions, sidebarAction, storage.sync, theme, topSites, omnibox, and windows. -->
+- Make sure HTML pages have [viewport meta tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag#viewport_basics) to properly scale your extension's UI on mobile screens.
+- Use [responsive design patterns](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) to ensure that your UI follows user expectations on Android.
+- Go through all of your extension's critical paths on an Android device to ensure they work as expected.
+- Make sure the extension works well without an internet connection, as connectivity can be flaky on mobile devices.
+- Test your extension on a vareity of device types and sizes. Android Studio's [virtual devices](https://developer.android.com/studio/run/managing-avds) can really help with this.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
