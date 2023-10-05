@@ -771,10 +771,6 @@
                     "id": "listing-on-amo"
                   },
                   {
-                    "title": "Version compatibility",
-                    "id": "version-compatibility"
-                  },
-                  {
                     "title": "Self-distribution",
                     "id": "self-distribution"
                   },
@@ -799,6 +795,16 @@
                   {
                     "title": "Source code checklist",
                     "id": "source-code-checklist"
+                  }
+                ]
+              },
+              {
+                "title": "Firefox version compatibility",
+                "url": "/documentation/publish/version-compatibility/",
+                "subpageitems": [
+                  {
+                    "title": "Compatibility settings",
+                    "id": "compatibility"
                   }
                 ]
               },

@@ -113,33 +113,6 @@ Learn how to make your add-on listing appealing with these [tips](/documentation
 
 {% capture content %}
 
-## Version compatibility
-
-You can control the versions of Firefox that can install your add-on by configuring a version's compatibility settings. 
-
-1. Visit the [Add-on Developer Hub](https://addons.mozilla.org/en-US/developers/). <br/><br/> <img src="/assets/img/publish/configure_versions_dev_hub.png" style="box-shadow:0 0 0.5em gray;" />
-
-2. In My Add-ons, find the add-on you want to configure and click **Edit Product Page**.
-
-3. Click **Manage Status & Versions** in the left navigation menu. <br/><br/> <img src="/assets/img/publish/configure_versions_manage_menu.png" style="box-shadow:0 0 0.5em gray;" />
-
-4. Click the version number you want to configure.
-
-5. In the compatibility section, for the product you want to specify versions for, select the earliest and latest product versions this version of your add-on is compatible with. <br/><br/> <img src="/assets/img/publish/configure_versions_manage_page.png" style="box-shadow:0 0 0.5em gray;" />
-
-6. Click **Save Changes** to apply your edits.
-
-{% endcapture %}
-{% include modules/one-column.liquid,
-  id: "version-compatibility"
-  content: content
-%}
-
-<!-- END: Single Column Body Module -->
-<!-- Single Column Body Module -->
-
-{% capture content %}
-
 ## Self-distribution
 
 ::: note
