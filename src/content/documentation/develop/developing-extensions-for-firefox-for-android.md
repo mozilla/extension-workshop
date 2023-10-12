@@ -83,7 +83,9 @@ Then, on your development computer:
 
 ## Check for Firefox for Android compatibility
 
-Before running your extension on Firefox for Android, consider using [`web-ext lint`](/documentation/develop/web-ext-command-reference#web-ext-lint). Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android. Lint relies on your extension’s manifest.json file including `strict_min_version`, it then reports on the features that are not supported by the minimum version you have set.
+### Lint with web-ext 
+
+Before running your extension on Firefox for Android, consider using [`web-ext lint`](/documentation/develop/web-ext-command-reference#web-ext-lint). Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you're using are incompatible with Firefox for Android. Lint relies on your extension's manifest.json file including `strict_min_version` values for the optional `gecko` and `gecko_android` sub-keys in [`browser_specific_settings`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings). It then reports on the features that are not supported by the minimum version you have set.
 
 In the lint report:
 
@@ -99,7 +101,7 @@ similar to this:
 Lint does not report on APIs that are not implemented by Firefox or Firefox for Android.
 :::
 
-When setting `strict_min_version` in [`browser_specific_settings`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings), unless you’re targeting a specific version of Firefox, choose the most recent version of Firefox you expect your extension to be compatible with. Due to the different APIs and form factors on Android (compared to desktop Firefox), set `gecko_android` after explicitly verifying compatibility. This field enables a compatibility range that is distinct from Firefox for desktop.
+When setting `strict_min_version` values in `browser_specific_settings`, unless you're targeting a specific version of Firefox, choose the most recent version of Firefox you expect your extension to be compatible with. Due to Android's different APIs and form factors (compared to desktop Firefox), set `gecko_android` after explicitly verifying compatibility. This sub-key enables a compatibility range that is distinct from Firefox for desktop.
 
 ```json
 "browser_specific_settings": {
@@ -115,6 +117,34 @@ When setting `strict_min_version` in [`browser_specific_settings`](https://devel
 {% endcapture %}
 {% include modules/one-column.liquid,
   id: "check-for-firefox-for-android-compatibility"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
+### Android API and UX checklist
+
+Before making your extension available, test it on Android to ensure it works as expected. When you publish it on AMO, reviewers may reject it or request changes if it doesn't meet basic usability requirements.
+
+- If you haven't used `web-ext lint`, check [Browser Support for JavaScript APIs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) to verify that the APIs your extension uses are available on Firefox for Android.
+
+- Make sure HTML pages have [viewport meta tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag#viewport_basics) to scale your extension's UI on mobile screens properly.
+
+- Use [responsive design patterns](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) to ensure that your UI meets the expectations of Android users.
+
+- Go through all of your extension's critical paths on an Android device to ensure they work as expected.
+
+- Make sure the extension works well without an internet connection, as connectivity can be unreliable on mobile devices.
+
+- Test your extension on a variety of device types and sizes. Android Studio's [virtual devices](https://developer.android.com/studio/run/managing-avds) can help.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "android-ux-checklist"
   content: content
 %}
 
