@@ -114,21 +114,37 @@ When setting `strict_min_version` values in `browser_specific_settings`, unless 
 }
 ```
 
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "check-for-firefox-for-android-compatibility"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 ### Android API and UX checklist
 
 Before making your extension available, test it on Android to ensure it works as expected. When you publish it on AMO, reviewers may reject it or request changes if it doesn't meet basic usability requirements.
 
 - If you haven't used `web-ext lint`, check [Browser Support for JavaScript APIs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) to verify that the APIs your extension uses are available on Firefox for Android.
-<!-- - Notable omissions include bookmarks, commands, devtools, downloads, find, history, menus, notifications, some privacy capablities, search, sessions, sidebarAction, storage.sync, theme, topSites, omnibox, and windows. -->
+
 - Make sure HTML pages have [viewport meta tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag#viewport_basics) to properly scale your extension's UI on mobile screens.
+
 - Use [responsive design patterns](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) to ensure that your UI meets the expectations of Android users.
+
 - Go through all of your extension's critical paths on an Android device to ensure they work as expected.
+
 - Make sure the extension works well without an internet connection, as connectivity can be unreliable on mobile devices.
+
 - Test your extension on a variety of device types and sizes. Android Studio's [virtual devices](https://developer.android.com/studio/run/managing-avds) can help with this.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-  id: "check-for-firefox-for-android-compatibility"
+  id: "android-ux-checklist"
   content: content
 %}
 
