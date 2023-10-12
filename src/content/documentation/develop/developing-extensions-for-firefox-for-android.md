@@ -85,7 +85,7 @@ Then, on your development computer:
 
 ### Lint with web-ext 
 
-Before running your extension on Firefox for Android, consider using [`web-ext lint`](/documentation/develop/web-ext-command-reference#web-ext-lint). Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android. Lint relies on your extension’s manifest.json file including `strict_min_version`, it then reports on the features that are not supported by the minimum version you have set.
+Before running your extension on Firefox for Android, consider using [`web-ext lint`](/documentation/develop/web-ext-command-reference#web-ext-lint). Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you’re using are incompatible with Firefox for Android. Lint relies on your extension’s manifest.json file including `strict_min_version` values for the optional `gecko` and `gecko_android` objects in [`browser_specific_settings`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings). It then reports on the features that are not supported by the minimum version you have set.
 
 In the lint report:
 
@@ -101,7 +101,7 @@ similar to this:
 Lint does not report on APIs that are not implemented by Firefox or Firefox for Android.
 :::
 
-When setting `strict_min_version` in [`browser_specific_settings`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings), unless you’re targeting a specific version of Firefox, choose the most recent version of Firefox you expect your extension to be compatible with. Due to the different APIs and form factors on Android (compared to desktop Firefox), set `gecko_android` after explicitly verifying compatibility. This field enables a compatibility range that is distinct from Firefox for desktop.
+When setting `strict_min_version` values in `browser_specific_settings`, unless you’re targeting a specific version of Firefox, choose the most recent version of Firefox you expect your extension to be compatible with. Due to the different APIs and form factors on Android (compared to desktop Firefox), set `gecko_android` after explicitly verifying compatibility. This field enables a compatibility range that is distinct from Firefox for desktop.
 
 ```json
 "browser_specific_settings": {
