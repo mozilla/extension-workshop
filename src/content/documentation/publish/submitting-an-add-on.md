@@ -38,8 +38,8 @@ If your add-on includes code that might be difficult to read, such as code creat
 
 Create your developer account on [addons.mozilla.org](https://addons.mozilla.org) (AMO):
 
-- If you have a Firefox Account, connect it with AMO: visit AMO, in the page header click **Log in**, then log in with your Firefox Account.
-- If you don't have a Firefox Account: visit AMO and, in the page header, click **Register**.
+- If you have a Mozilla account, connect it with AMO: visit AMO, in the page header click **Log in**, then log in with your Mozilla account.
+- If you don't have a Mozilla account: visit AMO and, in the page header, click **Register**.
 
 Go to the [Add-ons Developer Hub](https://addons.mozilla.org/developers/) and click **Submit Your First Add-on** or **Submit a New Add-on**. You'll reach the following page:
 

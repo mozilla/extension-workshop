@@ -162,7 +162,7 @@ Permissions to use certain WebExtension APIs must be requested in the `manifest.
 ## Other notes
 
 ::: note
-At the time of writing there was an issue with [`storage.sync()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) and data is not synchronized with the user’s Firefox account from Firefox for Android. More details can be found in [bug 1316442](https://bugzilla.mozilla.org/show_bug.cgi?id=1316442).
+At the time of writing there was an issue with [`storage.sync()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) and data is not synchronized with the user’s Mozilla account from Firefox for Android. More details can be found in [bug 1316442](https://bugzilla.mozilla.org/show_bug.cgi?id=1316442).
 :::
 
 {% endcapture %}

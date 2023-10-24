@@ -29,7 +29,7 @@ The theme generator on [addons.mozilla.org](https://addons.mozilla.org?utm_sourc
 ## Getting Started
 
 ::: note
-You will need to be logged in to your Firefox Account to access the Theme Generator.
+You need to be logged in to your Mozilla account to access the Theme Generator.
 :::
 
 If you would like to publish your theme on [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator) (AMO), begin by going to the [listed Theme Generator page](https://addons.mozilla.org/developers/addon/submit/wizard-listed?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=using-amo-generator).
