@@ -100,7 +100,9 @@ $sidebar-nav-width: rem-calc(240);
       background-color: $lighter-gray;
       overflow-y: auto;
       box-shadow: $element-shadow;
-      transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
+      transition:
+        transform 0.4s ease-in-out,
+        height 0.4s ease-in-out;
       z-index: 10;
 
       .primary > .is-active.has-children,
@@ -127,7 +129,9 @@ $sidebar-nav-width: rem-calc(240);
       border-right: 1px solid $medium-light-gray;
       overflow-y: auto;
       overflow-x: hidden;
-      transition: top 0.4s ease-in-out, height 0.4s ease-in-out;
+      transition:
+        top 0.4s ease-in-out,
+        height 0.4s ease-in-out;
     }
   }
 }
@@ -167,7 +171,9 @@ $sidebar-nav-width: rem-calc(240);
       height: 100%;
       padding: rem-calc(16);
       line-height: rem-calc(18);
-      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      transition:
+        opacity 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
       pointer-events: none;
     }
 
@@ -213,7 +219,9 @@ $sidebar-nav-width: rem-calc(240);
       background: $white;
       box-shadow: $element-shadow-highlight;
       border-radius: $global-radius;
-      transition: box-shadow 0.4s ease-in-out, transform 0.3s ease-in-out,
+      transition:
+        box-shadow 0.4s ease-in-out,
+        transform 0.3s ease-in-out,
         opacity 0.3s ease-in-out;
 
       li {

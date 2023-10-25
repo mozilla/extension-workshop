@@ -84,6 +84,10 @@ Code submission process happens after the add-on validation step.
 
 ![Upload sources screenshot](/assets/img/publish/upload-process-sources.png)
 
+#### Upload source for an existing version
+
+You can add source code to an existing add-on version. To do this, open [My Add-ons](https://addons.mozilla.org/en-US/developers/addons) and your add-on. In the left navigation, click **Manage Status & Versions**, then open the version you want to add source code to. At the bottom of the editor, next to **Source code**, click **Browse** and select the source code file. Make any other changes and then click **Save changes**.
+
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
   id: "provide-your-extension-source-code"
@@ -162,5 +166,3 @@ Remember, if you miss any of the necessary content from your uploaded source cod
 %}
 
 <!-- END: Single Column Body Module -->
-
-

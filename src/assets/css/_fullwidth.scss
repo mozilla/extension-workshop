@@ -223,7 +223,9 @@ Stylesheet: Full Width Page Stylesheet
   &:not(.tile-block-link) {
     a img {
       border-radius: $global-radius;
-      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      transition:
+        transform 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
     }
 
     a:hover img {
@@ -543,7 +545,9 @@ Stylesheet: Full Width Page Stylesheet
     &.tile-block-link {
       &::before {
         will-change: transform;
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        transition:
+          transform 0.2s ease-in-out,
+          box-shadow 0.2s ease-in-out;
       }
 
       &:hover::before {
@@ -947,7 +951,9 @@ Stylesheet: Full Width Page Stylesheet
 
         .tile {
           cursor: pointer;
-          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+          transition:
+            transform 0.3s ease-in-out,
+            opacity 0.3s ease-in-out;
 
           &.hover {
             transform: translate(#{rem-calc(8)}, 0);
@@ -990,7 +996,9 @@ Stylesheet: Full Width Page Stylesheet
 
     #anatomy-control {
       button {
-        transition: opacity 0.3s 0.15s ease-in-out, transform 0.3s ease-in-out;
+        transition:
+          opacity 0.3s 0.15s ease-in-out,
+          transform 0.3s ease-in-out;
       }
 
       &:not(.step-two) {
@@ -1068,8 +1076,12 @@ Stylesheet: Full Width Page Stylesheet
   width: 100%;
   height: 47.5vw;
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom left, bottom right;
-  background-size: auto 100%, auto 100%;
+  background-position:
+    bottom left,
+    bottom right;
+  background-size:
+    auto 100%,
+    auto 100%;
   @include breakpoint(medium) {
     bottom: rem-calc(-82.5);
     height: rem-calc(330);

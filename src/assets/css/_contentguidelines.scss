@@ -290,7 +290,9 @@ $sidebar-w: rem-calc(230);
         &::before {
           top: rem-calc(-20);
           opacity: 1;
-          transition: top 0.2s ease-in-out, opacity 0.2s ease-in-out;
+          transition:
+            top 0.2s ease-in-out,
+            opacity 0.2s ease-in-out;
         }
 
         .site-nav {

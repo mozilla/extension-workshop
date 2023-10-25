@@ -209,7 +209,7 @@ A typical scenario for using this approach is the `"geoLocation"` permission. Sa
 
 ![Example of an additional or runtime permission request message](/assets/img/documentation/develop/Permissions_optional_request.png)
 
-Making a runtime permission request is straightforward. Include any permissions you want to request under the `manifest.json` [`optional_permissions`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions) key. Then pass the permissions you want granted to [`WebExtAPIRef("permissions.request")`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. `true` is returned if the user grants the request, `false` if they don't.
+Making a runtime permission request is straightforward. Include any permissions you want to request under the `manifest.json` [`optional_permissions`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions) key. Then pass the permissions you want granted to [`permissions.request`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. `true` is returned if the user grants the request, `false` if they don't.
 
 You can't request all the permissions available to `"permissions"` using optional permissions. You can't request the following API permissions:
 
@@ -253,9 +253,20 @@ Permissions messages are most likely to prevent a user from installing your exte
 
 To address this issue, provide information in your extension's AMO description that explains what permissions your extension is requesting and why.
 
-A good example of this approach is [Gesturefy](https://addons.mozilla.org/firefox/addon/gesturefy/), which offers users the following advice:
+A good example of this approach is [Gesturefy](https://addons.mozilla.org/firefox/addon/gesturefy/), which offers users this advice:
 
-![Extract from Gesturefy's AMO description providing information on the permissions requested by this extension](/assets/img/documentation/develop/gesturefy_permissions_explanation.png)
+<table>
+  <tr>
+    <td>
+      <p><strong>Permissions explained:</strong></p>
+      <ul>
+        <li>Access your data for all websites: <em>This is a key permission, because the complete gesture functionality is injected in every webpage you visit (which means a part of the code is running in each tab). This is necessary, because with the new API there is no other way to track your mouse movement or draw anything on the screen. It’s also needed to perform page specific commands like scroll down or up.</em></li>
+        <li>Read and modify browser settings: <em>This is required to change the context menu behaviour for MacOS and Linux users to support the usage of the right mouse button.</em> </li>
+        <li>Display notifications: <em>This is used to show a notification on Gesturefy updates or to display certain error messages.</em></li>
+      <ul>
+    </td>
+  </tr>
+</table>
 
 </div>
 </article>

@@ -3,9 +3,10 @@ layout: sidebar
 title: Community
 permalink: /community/
 tags: [community, contribute, webextensions]
-contributors: [caitmuenster, grlwholifts]
+contributors: [caitmuenster, grlwholifts, Rob--W, dotproto]
 author: caitmuenster
-date: 2020-12-03 
+last_updated_by: dotproto
+date: 2023-09-20
 ---
 
 <!-- Overview Page Hero Banner -->
@@ -52,18 +53,23 @@ There are several ways to stay up-to-date with Firefox add-on technology and con
 
 Stay up to date with the latest information about add-on technology on the [Add-ons blog](https://blog.mozilla.org/addons).
 
+### Firefox for Android office hours <span id="office-hours"></span>
+
+The Firefox Add-ons team holds one-on-one office hours sessions to help you make your extensions available on Android. This is in addition to the [Firefox for Android Add-ons](https://discourse.mozilla.org/c/add-ons/android/9393) forum, where you can seek advice and assistance anytime.
+
+<details>
+  <summary>Book a session</summary>
+
+  <iframe id="booking-frame" src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3yNnoZNBdJCTiJjqziXs9GoCYpfW9XZFkB0QWKNy9dfoqqPlCw7UsYh48Ff0i3lZcA5YzygwrU?gv=true" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" style="height: 600px;"></iframe>
+</details>
+
 ### Questions about add-on development
 
-You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon), or the [developer mailing list](https://mail.mozilla.org/listinfo/dev-addons). You can also talk with us on [Matrix](https://wiki.mozilla.org/Matrix) in the [Add-ons room](https://mzl.la/2u8ZGbg) (for general development questions) or in the [add-on reviewers room](https://mzl.la/2IJ2Oi1) (for questions about an add-on review).
+You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons) or [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon). You can also talk with us on [Matrix](https://wiki.mozilla.org/Matrix) in the [Add-ons room](https://mzl.la/2u8ZGbg) (for general development questions) or in the [add-on reviewers room](https://mzl.la/2IJ2Oi1) (for questions about an add-on review).
 
-### Meetup IRL
+### Public meetings
 
-Find out whether there is a browser extensions or Mozilla related group or meet up near you from these resources:
-
-- [Mozilla Reps program](https://reps.mozilla.org/events/#/period/future/), where you can find events arranged by volunteer Mozillians from around the world. And, if there are no events local to you, the program can help you get things started.
-
-- [Campus Clubs](https://campus.mozilla.community/), for events arranged by students with a passion for keeping the web open, at universities and colleges worldwide.
-  You can also attend Mozilla’s public meetings and events for extension developers, such as add-on demo sessions Details of these events are found in the [Developer Communication Calendar](https://wiki.mozilla.org/Add-ons/developer/communication#Add-on_Developer_Communication_Calendar).
+You can also attend Mozilla’s public meetings and events for extension developers. Details of these events are found in the [Developer Communication Calendar](https://wiki.mozilla.org/Add-ons/developer/communication#Add-on_Developer_Communication_Calendar).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
