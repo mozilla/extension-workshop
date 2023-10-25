@@ -15,7 +15,7 @@ date: 2019-06-06 07:38:43
 
 # Developer accounts
 
-Developer accounts for addons.mozilla.org are integrated with [Firefox Accounts](https://accounts.firefox.com/signup), which lets you access and manage multiple Mozilla services from one account. You can manage your Firefox Account from [accounts.firefox.com/settings](https://accounts.firefox.com/settings).
+Developer accounts for addons.mozilla.org are integrated with [Mozilla accounts](https://accounts.firefox.com/signup), which lets you access and manage multiple Mozilla services from one account. You can manage your Mozilla account from [accounts.firefox.com/settings](https://accounts.firefox.com/settings).
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -31,7 +31,7 @@ Developer accounts for addons.mozilla.org are integrated with [Firefox Accounts]
 It’s important to set a display name on your profile on [addons.mozilla.org](https://addons.mozilla.org) to increase transparency with users, add-on reviewers, and the greater community.
 
 ::: note
-Your Firefox Account display name will not sync to your profile on addons.mozilla.org. You will need to set your developer account display name from your profile on addons.mozilla.org.
+Your Mozilla account display name will not sync to your profile on addons.mozilla.org. You will need to set your developer account display name from your profile on addons.mozilla.org.
 :::
 
 {% endcapture %}

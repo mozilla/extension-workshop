@@ -77,7 +77,7 @@ This Firefox Add-on Distribution Agreement ("Agreement") governs Your distributi
 
 ### 2. Accounts
 
-In order to distribute an Add-on, You'll need to create a Firefox account. During registration, You will be asked to set a password. You are responsible for keeping Your password confidential and for the activity that happens through Your account. Mozilla is not responsible for any losses arising out of unauthorized use of Your account.
+In order to distribute an Add-on, You'll need to create a Mozilla account. During registration, You will be asked to set a password. You are responsible for keeping Your password confidential and for the activity that happens through Your account. Mozilla is not responsible for any losses arising out of unauthorized use of Your account.
 
 We may require you to disclose all Accounts and Add-ons that You own or control. You agree that you will disclose all Accounts and Add-ons that You own or control if we request this information.
 
