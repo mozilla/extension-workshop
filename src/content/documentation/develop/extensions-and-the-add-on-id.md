@@ -22,10 +22,11 @@ contributors:
     Timendum,
     wbamberg,
     willdurand,
-    djbrown
+    djbrown,
+    kirinokirino
   ]
-last_updated_by: djbrown
-date: 2023-04-22
+last_updated_by: kirinokirino
+date: 2023-10-28
 ---
 
 <!-- Page Hero Banner -->
@@ -70,7 +71,7 @@ For Manifest V2 extensions, you need to add an add-on ID when:
   - [`pkcs11`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11 'The pkcs11 API enables an extension to enumerate PKCS #11 security modules and to make them accessible to the browser as sources of keys and certificates.')
   - [`runtime.onMessageExternal`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal "This API can't be used in a content script.")
   - [`runtime.onConnectExternal`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal 'Fired when an extension receives a connection request from a different extension.')
-- You use the [`dictionaries` key in manifest.json](https://developer.mozilla.org/Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries).
+- You use the [`dictionaries` key in manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries).
 
 Otherwise, for Manifest V2 extensions, AMO adds an add-on ID during the signing process.
 
