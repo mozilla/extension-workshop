@@ -106,15 +106,3 @@ Use the following instructions to manually configure browser compatibility setti
 %}
 
 <!-- END: Single Column Body Module -->
-
-<!-- Single Column Body Module -->
-
-{% capture content %}
-
-{% endcapture %}
-{% include modules/one-column.liquid,
-  id: "bss-vs-amo"
-  content: content
-%}
-
-<!-- END: Single Column Body Module -->
