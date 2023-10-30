@@ -22,17 +22,70 @@ Learn how to customize Firefox version compatibility settings on addons.mozilla.
     content: page_hero_banner_content
 %}
 
+<!-- END: Overview Page Hero Banner -->
+
 <!-- Content with Table of Contents Module -->
 
 {% capture content_with_toc %}
 
-## AMO settings vs. `browser_specific_settings`
+## `browser_specific_settings` vs. AMO compatibility settings
+
+There are two ways to control Firefox version compatibility settings for an add-on: using the `browser_specific_settings` field in the add-on's manifest or with the compatibility controls in AMO's version management interface. Each setting controls a different part of the addon
+
+Due to the way these two control mechanisms interact, it's possible for a developer to accidentally make an extension available for download in a browser that will fail to install it. To avoid this, we recommend that developes only use `browser_specific_settings` to control browser compatibility settings.
+
+{% endcapture %}
+{% include modules/column-w-toc.liquid,
+  id: "bsp-vs-amo"
+  content: content_with_toc
+%}
+
+<!-- END: Content with Table of Contents Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
 
 ## Manifest `browser_specific_settings` key
 
+The [`browser_specific_settings`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)  manifest key allows you to statically declare what versions of Firefox can load the extension. Versions outside of the supported range will fail during the installation process. Since these values are hardcoded in the extension itself, they cannot be changed after a version has been packaged. When distributing on AMO, you must submit a new version of the add-on to modify the range of browsers that can load the extension
+
+There are two relevant subkeys for Firefox browsers:
+
+| Key             | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| `gecko`         | Used to specify settings for the desktop version of Firefox. |
+| `gecko_android` | Specifies settings for the Android version of Firefox.       |
+
+::: note
+Firefox for iOS and Firefox Focus do not support add-ons and therefore do not have subkeys.
+:::
+
+Both `gecko` and `gecko_android` accept two version-related subkeys:
+
+| Subkey               | Description                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------ |
+| `strict_min_version` | Specifies the lowest or minimum version of the browser that can load the extension.  |
+| `strict_max_version` | Specifies the highest or maximum version of the browser that can load the extension. |
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "compatibility"
+  content: content
+%}
+
+
+<!-- END: Content with Table of Contents Module -->
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 ## AMO compatibility setting
 
-You can control the versions of Firefox that can install your add-on by configuring a version's compatibility settings. 
+AMO's browser version compatibility settings determine which versions of Firefox can search for and install a given extension. The browser compatibility settings for a newly uploaded version of an extension using the `browser_specific_settings` data from the extension's manifest.
+
+Use the following instructions to manually configure browser compatibility settings.
 
 1. Visit the [Add-on Developer Hub](https://addons.mozilla.org/en-US/developers/). <br/><br/> <img src="/assets/img/publish/configure_versions_dev_hub.png" alt="Screen showing the My Add-ons list in the Add-on Developer Hub" style="box-shadow:0 0 0.5em gray;" />
 
@@ -47,24 +100,8 @@ You can control the versions of Firefox that can install your add-on by configur
 6. Click **Save Changes** to apply your edits.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid,
-  id: "compatibility"
-  content: content_with_toc
-%}
-
-<!-- END: Content with Table of Contents Module -->
-
-<!-- Single Column Body Module -->
-
-{% capture content %}
-
-## 
-
-Add some content.
-
-{% endcapture %}
 {% include modules/one-column.liquid,
-  id: "TODO"
+  id: "amo-compatibility"
   content: content
 %}
 
@@ -74,13 +111,9 @@ Add some content.
 
 {% capture content %}
 
-## TODO
-
-Add some content.
-
 {% endcapture %}
 {% include modules/one-column.liquid,
-  id: "TODO"
+  id: "bss-vs-amo"
   content: content
 %}
 
