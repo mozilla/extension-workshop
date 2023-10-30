@@ -34,12 +34,12 @@ yarn start
 
 ### Available yarn commands
 
-| Command                | Description                                                                             |
-| ---------------------- | --------------------------------------------------------------------------------------- |
+| Command                  | Description                                                                             |
+| ------------------------ | --------------------------------------------------------------------------------------- |
 | `yarn start`             | Starts eleventy and includes unpublished content.                                       |
 | `yarn build:production`  | Builds the site for production.                                                         |
 | `yarn build:unpublished` | Builds the site for production with unpublished content.                                |
-| `yarn clean`             | Clears the output directory. (You probably won't need to use this manually.)             |
+| `yarn clean`             | Clears the output directory. (You probably won't need to use this manually.)            |
 
 ## How the site is built
 
