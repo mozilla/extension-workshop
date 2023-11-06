@@ -32,7 +32,7 @@ Learn how to customize Firefox version compatibility settings on addons.mozilla.
 
 There are two ways to control Firefox version compatibility settings for an add-on: using the `browser_specific_settings` field in the add-on's manifest or with the compatibility controls in AMO's version management interface. Each setting controls a different part of the addon
 
-Due to the way these two control mechanisms interact, it's possible for a developer to accidentally make an extension available for download in a browser that will fail to install it. To avoid this, we recommend that developes only use `browser_specific_settings` to control browser compatibility settings.
+Due to the way these two control mechanisms interact, it's possible for a developer to accidentally make an extension available for download in a browser that will fail to install it. To avoid this, we recommend that developers only use `browser_specific_settings` to control browser compatibility settings.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
