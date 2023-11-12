@@ -7,7 +7,7 @@ tags: [add-ons, beginner, guide, mobile, webextensions]
 contributors:
   [Rob--W, caitmuenster, rebloor, juraj, mdnwebdocs-bot, ExE-Boss, Ding-Fan, andrewtruongmoz]
 last_updated_by: Rob--W
-date: 2023-08-29
+date: 2023-11-12
 ---
 
 {% capture page_hero_banner_content %}
@@ -194,11 +194,11 @@ web-ext run -t firefox-android --adb-device XXX --firefox-apk org.mozilla.fenix
 Currently, you cannot inspect the markup of Fenix's browserAction popups using the Firefox Developer Tools Inspector (see [bug 1637616](https://bugzilla.mozilla.org/show_bug.cgi?id=1637616)). As a workaround, we recommend that you temporarily change the extension to open the popup extension page into a tab to be able to inspect it.
 :::
 
-You can debug your extension in the web developer tools and view any `manifest.json` validation messages using `adb logcat`. To make use of these features, first set up Firefox remote debugging [over USB](https://developer.android.com/studio/debug/dev-options).
+You can debug your extension in the web developer tools and view any `manifest.json` validation messages using `adb logcat`. To make use of these features, first set up Firefox remote debugging [over USB](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-a-remote-device) or [via Wi-Fi](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-android-over-wi-fi).
 
 ### Using web development tools to debug your extension
 
-With your device connected over USB, open `about:debugging` and enable the device connection.
+With your device connected over USB or Wi-Fi, open `about:debugging` and enable the device connection.
 
 ![Enable USB Devices](/assets/img/documentation/develop/enable-device-connection.png)
 
