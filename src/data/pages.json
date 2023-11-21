@@ -536,6 +536,10 @@
                     "id": "retest-runtime-permission-grants"
                   }
                 ]
+              },
+              {
+                "title": "Known issues",
+                "url": "/documentation/develop/known-issues/"
               }
             ]
           }
