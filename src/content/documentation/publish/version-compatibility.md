@@ -53,7 +53,7 @@ Due to the way these two mechanisms interact, it's possible to accidentally make
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
-  id: "bsp-vs-amo"
+  id: "compatibility"
   content: content_with_toc
 %}
 
@@ -63,7 +63,7 @@ Due to the way these two mechanisms interact, it's possible to accidentally make
 
 {% capture content %}
 
-## Manifest `browser_specific_settings` key
+## The `browser_specific_settings` key
 
 This is our recommended method of managing an extension's browser compatibility settings.
 
@@ -106,7 +106,7 @@ In order to signal that your extension is compatible with Android, your manifest
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-  id: "compatibility"
+  id: "browser-specific-settings"
   content: content
 %}
 

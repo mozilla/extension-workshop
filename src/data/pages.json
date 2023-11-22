@@ -803,16 +803,20 @@
                 "url": "/documentation/publish/version-compatibility/",
                 "subpageitems": [
                   {
-                    "title": "browser_specific_settings vs. AMO compatibility settings",
-                    "id": "bsp-vs-amo"
+                    "title": "Version compatibility",
+                    "id": "compatibility"
                   },
                   {
-                    "title": "Manifest browser_specific_settings key",
-                    "id": "compatibility"
+                    "title": "The `browser_specific_settings` key",
+                    "id": "browser-specific-settings"
                   },
                   {
                     "title": "AMO compatibility setting",
                     "id": "amo-compatibility"
+                  },
+                  {
+                    "title": "Recommendations",
+                    "id": "recommendations"
                   }
                 ]
               },
