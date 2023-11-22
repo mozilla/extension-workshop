@@ -58,7 +58,7 @@ This is the recommended method for managing an extension's browser compatibility
 
 The [`browser_specific_settings`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest key enables you to statically declare what versions of Firefox can load the extension. The extension's installation fails on Firefox versions outside the supported range.
 
-Since these values are hardcoded in the extension itself, they cannot be changed after a version has been packaged. When distributing on AMO, you must submit a new version of the add-on to modify the range of browsers that can load the extension
+As these values are hardcoded in the extension, they cannot be changed after a version has been packaged. When distributing on AMO, you must submit a new version of the extension to modify the range of Firefox versions that can load the extension.
 
 There are two subkeys for Firefox browsers:
 - `gecko` for the desktop version of Firefox. 
@@ -102,7 +102,9 @@ To signal to AMO that your extension is compatible with Android, include, at lea
 
 ## AMO compatibility setting
 
-AMO's browser version compatibility settings determine whether the extension is listed in a search of AMO from a version of Firefox and, therefore, make it available for installation. When an extension is uploaded to AMO, the extension's browser compatibility settings in AMO are set from the `browser_specific_settings` of the extension's manifest.
+AMO's browser version compatibility settings determine whether the extension is listed in a search of AMO from a version of Firefox and whether it is available for installation. When an extension is uploaded to AMO, the extension's browser compatibility settings in AMO are set from the `browser_specific_settings` of the extension's manifest.
+
+AMO's compatibility settings can be used to adjust an extension's availability after publication. For example, if user feedback reveals compatibility issues with older versions of Firefox, you can adjust the minimum Firefox version setting to prevent other users from encountering that bug. Remember, if you set a wider range of supported versions in AMO, AMO will show that the extension is installable but the installation process will fail due to the Firefox version limits set in its manifest file.
 
 To manually configure the browser compatibility settings:
 
