@@ -799,6 +799,28 @@
                 ]
               },
               {
+                "title": "Firefox version compatibility",
+                "url": "/documentation/publish/version-compatibility/",
+                "subpageitems": [
+                  {
+                    "title": "Version compatibility",
+                    "id": "compatibility"
+                  },
+                  {
+                    "title": "The `browser_specific_settings` key",
+                    "id": "browser-specific-settings"
+                  },
+                  {
+                    "title": "AMO compatibility setting",
+                    "id": "amo-compatibility"
+                  },
+                  {
+                    "title": "Recommendations",
+                    "id": "recommendations"
+                  }
+                ]
+              },
+              {
                 "title": "Add-on ownership",
                 "url": "/documentation/publish/add-on-ownership/",
                 "subpageitems": [
