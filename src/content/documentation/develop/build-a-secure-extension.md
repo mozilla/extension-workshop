@@ -35,7 +35,7 @@ Here is a list of best practices you should follow to keep the users of your ext
 - **Ensure you insert remote content safely**
   Make sure you follow best practices when your extension makes use of remote content:
 
-  - insert strings using safe native DOM manipulation methods: [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement), [`Element.setAtttribute()`](https://developer.mozilla.org/docs/Web/API/Element/setAttribute), and [`Node.textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent).
+  - insert strings using safe native DOM manipulation methods: [`document.createElement()`](https://developer.mozilla.org/docs/Web/API/Document/createElement), [`Element.setAttribute()`](https://developer.mozilla.org/docs/Web/API/Element/setAttribute), and [`Node.textContent`](https://developer.mozilla.org/docs/Web/API/Node/textContent).
   - use jQuery functions `attr()` and `text()` to insert strings.
   - sanitize HTML content with  [DOMPurify](https://github.com/cure53/DOMPurify).
   ::: note
