@@ -1,15 +1,16 @@
 ---
 layout: sidebar
-title: Differences between desktop and Android extensions
+title: User experience guidelines for mobile extensions
 permalink: /documentation/develop/user-experience-guidelines-for-mobile-extensions/
 topic: Develop
 tags: [add-ons, guide, mobile, webextensions, ux, user-experience]
 contributors:
   [
-    caitmuenster
+    caitmuenster,
+    dotproto
   ]
-last_updated_by: caitmuenster
-date: 2020-10-19
+last_updated_by: dotproto
+date: 2023-12-01
 ---
 
 <!-- Page Hero Banner -->
@@ -33,9 +34,7 @@ Make your extension seamlessly integrate with Firefox for Android.
 
 ## Introduction
 
-::: note alert
-Only a limited number of [recommended extensions](/documentation/publish/recommended-extensions/) are supported for Firefox for Android. Look out for updates on the [add-ons blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=differences-between-desktop-and-android-extensions).
-:::
+{%- include android-alert.liquid -%}
 
 To make sure your users have a great experience with your extension on Firefox for Android, you want to ensure your extension’s user interface integrates well with the browser.
 
