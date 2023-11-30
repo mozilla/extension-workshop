@@ -33,11 +33,11 @@ Manifest V3 became generally available in Firefox 109 after being available as a
 
 ## What is Manifest V3?
 
-Manifest v3 (MV3) is the umbrella term for several foundational changes to the WebExtensions API in Firefox. The name refers to the declared `manifest_version` key in each extension’s [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
+Manifest V3 (MV3) is the umbrella term for several foundational changes to the WebExtensions API in Firefox. The name refers to the declared `manifest_version` key in each extension’s [manifest.json](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-The Manifest v3 changes apply to extensions for Safari, Firefox, and Chromium-based browsers – such as Chrome, Edge, and Opera. While the goal is to maintain a high degree of compatibility between the Firefox, Safari, and Chromium extension platforms, our implementation diverges where we think it matters and where our values point to a different direction.
+The Manifest V3 changes apply to extensions for Safari, Firefox, and Chromium-based browsers – such as Chrome, Edge, and Opera. While the goal is to maintain a high degree of compatibility between the Firefox, Safari, and Chromium extension platforms, our implementation diverges where we think it matters and where our values point to a different direction.
 
-This article discusses the changes introduced with Manifest v3 in Firefox and highlights where they diverge from the Chrome and Safari implementation.
+This article discusses the changes introduced with Manifest V3 in Firefox and highlights where they diverge from the Chrome and Safari implementation.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
@@ -338,7 +338,7 @@ To migrate your extension, rewrite the manifest.json key [‘web_accessible_reso
 
 As part of its Manifest V3 implementation, Chromium introduces [promise](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview#promises) support to many methods with the goal of eventually supporting promises on all appropriate methods. This will provide for greater compatibility between Firefox and Chrome extensions, given that Firefox already supports promises when using the `browser.*` namespace.
 
-In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace with APIs that provide asynchronous event handling using callbacks. In Manifest v3, Firefox supports promises for asynchronous events in the `chrome.*` namespace.
+In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace with APIs that provide asynchronous event handling using callbacks. In Manifest V3, Firefox supports promises for asynchronous events in the `chrome.*` namespace.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
