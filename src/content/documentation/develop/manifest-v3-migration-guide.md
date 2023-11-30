@@ -104,6 +104,8 @@ To accommodate this change, provide a local icon and define it in your manifest.
 
 Host permissions are no longer defined in the manifest.json keys `permissions` or `optional_permissions`. Instead, they are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) key.
 
+In addition, unlike Manifest V2, where host permissions in `permissions` are granted on install, `host_permissions` in Manifest V3 are treated as optional permissions in Firefox and Safari and, therefore, must be requested. See [Requested permissions and user prompts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions#requested_permissions_and_user_prompts) in the `host_permissions` documentation for more information.
+
 Move all host permission specifications to the manifest.json key `host_permissions` like this:
 
 ```json
@@ -354,7 +356,7 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 
 - Update the manifest.json key `manifest_version` to `3`.
 - If your extension adds a search engine, add a local icon and reference it in the manifest.json key `chrome_settings_overrides.search_provider.favicon_url`.
-- Remove any host permissions from the manifest.json keys `permissions` and `optional_permissions` and add them to the `host_permissions` key.
+- Remove any host permissions from the manifest.json keys `permissions` and `optional_permissions` and add them to the `host_permissions` key. Remember that `host_permissions` is treated as an optional permission in Firefox and Safari but granted at install in Chrome.
 - Remove references to `browser_style` from the manifest.json keys `browser_action`, `options_ui`, `page_action`, and `sidebar_action`.
 - If `browser_style:false` was not specified in `options_ui` and `sidebar_action`, confirm that their appearance has not changed.
 - Rename the manifest.json key `browser_action` to `action` and update any API references from `browser.browserAction` to `browser.action`.
