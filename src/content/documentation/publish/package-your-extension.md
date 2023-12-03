@@ -9,7 +9,6 @@ contributors:
     potterwrit,
     irenesmith,
     rebloor,
-    mdnwebdocs-bot,
     Alston,
     andrewtruongmoz,
     julienw,
