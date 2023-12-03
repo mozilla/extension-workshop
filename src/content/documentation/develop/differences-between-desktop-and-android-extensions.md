@@ -7,7 +7,6 @@ tags: [add-ons, guide, mobile, needsupdate, webextensions]
 contributors:
   [
     caitmuenster,
-    mdnwebdocs-bot,
     ExE-Boss,
     gokulakrishna,
     hellosct1,
@@ -17,7 +16,7 @@ contributors:
     rebloor,
     wbamberg,
   ]
-last_updated_by: mdnwebdocs-bot
+last_updated_by: rebloor
 date: 2020-09-15
 ---
 

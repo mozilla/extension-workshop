@@ -15,8 +15,8 @@ tags:
     web-ext,
     webextensions,
   ]
-contributors: [mdnwebdocs-bot, freaktechnik, Rob--W, rebloor, tophf, Dietrich]
-last_updated_by: mdnwebdocs-bot
+contributors: [freaktechnik, Rob--W, rebloor, tophf, Dietrich]
+last_updated_by: rebloor
 date: 2019-03-18 18:03:56
 ---
 

@@ -4,7 +4,7 @@ title: Test permission requests
 permalink: /documentation/develop/test-permission-requests/
 topic: Develop
 tags: [add-ons, extensions, guide, permissions, testing, webextensions]
-contributors: [rebloor, mdnwebdocs-bot]
+contributors: [rebloor]
 last_updated_by: rebloor
 date: 2019-03-21 12:27:40
 ---

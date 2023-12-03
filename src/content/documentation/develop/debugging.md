@@ -11,7 +11,6 @@ contributors:
     irenesmith,
     hellosct1,
     janat08,
-    mdnwebdocs-bot,
     MNizam0802,
     ExE-Boss,
     Dietrich,

@@ -13,7 +13,6 @@ contributors:
     freaktechnik,
     jsantell,
     mconca,
-    mdnwebdocs-bot,
     rebloor,
     Rob--W,
     scheinercc,

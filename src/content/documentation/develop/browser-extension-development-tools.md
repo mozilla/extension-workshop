@@ -15,7 +15,7 @@ tags:
     translation,
     webextensions,
   ]
-contributors: [rebloor, mdnwebdocs-bot, hellosct1, ani-sha, ankushduacodes]
+contributors: [rebloor, hellosct1, ani-sha, ankushduacodes]
 last_updated_by: rebloor
 date: 2023-06-02
 ---
