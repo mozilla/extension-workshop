@@ -16,7 +16,7 @@ tags:
     webextensions,
     workflow,
   ]
-contributors: [irenesmith, hellosct1, rebloor, ani-sha]
+contributors: [irenesmith, hellosct1, rebloor, mdnwebdocs-bot, ani-sha]
 last_updated_by: ani-sha
 date: 2020-03-24 12:47:00
 ---
