@@ -8,6 +8,7 @@ contributors:
   [
     jennyevans,
     blossomica,
+    mdnwebdocs-bot,
     aseffasamson,
     rebloor,
     Uemmra3,

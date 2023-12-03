@@ -7,6 +7,7 @@ tags: [add-ons, guide, mobile, webextensions]
 contributors:
   [
     caitmuenster,
+    mdnwebdocs-bot,
     ExE-Boss,
     gokulakrishna,
     hellosct1,

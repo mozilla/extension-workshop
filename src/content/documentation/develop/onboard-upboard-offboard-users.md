@@ -13,7 +13,7 @@ tags:
     user-experience,
     webextensions,
   ]
-contributors: [alxwrd, NiklasGollenstede, David263, rebloor, hamatti]
+contributors: [mdnwebdocs-bot, alxwrd, NiklasGollenstede, David263, rebloor, hamatti]
 last_updated_by: hamatti
 date: 2022-10-18
 ---

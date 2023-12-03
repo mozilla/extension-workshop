@@ -8,6 +8,7 @@ contributors:
   [
     irenesmith,
     rebloor,
+    mdnwebdocs-bot,
     Alston,
     andrewtruongmoz,
     julienw,

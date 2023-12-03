@@ -5,7 +5,7 @@ permalink: /documentation/develop/developing-extensions-for-firefox-for-android/
 topic: Develop
 tags: [add-ons, beginner, guide, mobile, webextensions]
 contributors:
-  [Rob--W, caitmuenster, rebloor, juraj, ExE-Boss, Ding-Fan, andrewtruongmoz]
+  [Rob--W, caitmuenster, rebloor, juraj, mdnwebdocs-bot, ExE-Boss, Ding-Fan, andrewtruongmoz]
 last_updated_by: Rob--W
 date: 2023-11-12
 ---
