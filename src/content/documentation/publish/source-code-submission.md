@@ -4,7 +4,7 @@ title: Source code submission
 permalink: /documentation/publish/source-code-submission/
 topic: Publish
 tags: [add-ons, distribution, extensions, review-policy]
-contributors: [kewisch, One, rebloor, wbamberg, atsay]
+contributors: [kewisch, mdnwebdocs-bot, One, rebloor, wbamberg, atsay]
 last_updated_by: kewisch
 date: 2019-06-10 06:33:38
 ---

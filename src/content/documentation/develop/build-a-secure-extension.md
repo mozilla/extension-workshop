@@ -4,7 +4,7 @@ title: Build a secure extension
 permalink: /documentation/develop/build-a-secure-extension/
 topic: Develop
 tags: [beginner, extensions, intermediate, reviews, security, webextensions]
-contributors: [ caitmuenster, irenesmith, tomrittervg, rebloor]
+contributors: [ caitmuenster, irenesmith, tomrittervg, mdnwebdocs-bot, rebloor]
 last_updated_by: caitmuenster
 date: 2020-09-15
 ---

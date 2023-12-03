@@ -19,6 +19,7 @@ contributors:
     kumar303,
     lfilho,
     LowerDimensions,
+    mdnwebdocs-bot,
     niharikak101,
     noraj,
     rebloor,

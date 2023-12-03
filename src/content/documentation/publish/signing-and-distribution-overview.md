@@ -9,6 +9,7 @@ contributors:
     caitmuenster,
     Kaligule,
     chrisdavidmills,
+    mdnwebdocs-bot,
     musakarakas,
     MeridelW,
     jvillalobos,

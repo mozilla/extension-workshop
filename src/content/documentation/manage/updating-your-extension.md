@@ -7,6 +7,7 @@ tags: [update, manage, distribution]
 contributors:
   [
     Wulf,
+    mdnwebdocs-bot,
     rebloor,
     JayFields,
     andrewtruongmoz,

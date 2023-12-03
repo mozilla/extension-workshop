@@ -8,6 +8,7 @@ contributors:
   [
     kewisch,
     omnicorpltd,
+    mdnwebdocs-bot,
     shiy23,
     edprince,
     hatem45,
