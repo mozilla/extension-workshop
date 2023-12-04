@@ -6,7 +6,6 @@ topic: Develop
 tags: [add-ons, extensions, guide, ui, ux]
 contributors:
   [
-    mdnwebdocs-bot,
     MeridelW,
     andrewtruongmoz,
     rebloor,
@@ -17,7 +16,7 @@ contributors:
     atsay,
     bryanyou,
   ]
-last_updated_by: mdnwebdocs-bot
+last_updated_by: rebloor
 date: 2019-03-18 17:05:14
 ---
 

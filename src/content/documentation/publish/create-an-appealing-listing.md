@@ -6,14 +6,13 @@ topic: Publish
 tags: [add-ons, beginner, guide, publishing, webextension]
 contributors:
   [
-    mdnwebdocs-bot,
     wbamberg,
     bravetoaster2,
     caitmuenster,
     andrewtruongmoz,
     rebloor,
   ]
-last_updated_by: mdnwebdocs-bot
+last_updated_by: rebloor
 date: 2019-03-18 17:05:25
 ---
 
