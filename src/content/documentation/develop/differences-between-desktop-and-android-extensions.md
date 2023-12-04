@@ -13,7 +13,6 @@ contributors:
     hellosct1,
     ramkumar.kr94,
     andrewtruongmoz,
-    PikadudeNo1,
     rebloor,
     wbamberg,
   ]

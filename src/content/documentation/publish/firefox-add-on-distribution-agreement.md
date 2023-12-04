@@ -14,7 +14,6 @@ contributors:
     hatem45,
     cpallin0,
     jvillalobos,
-    david_ross,
     wbamberg,
     Adora,
     kmaglione,

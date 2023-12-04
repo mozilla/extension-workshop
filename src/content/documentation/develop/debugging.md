@@ -22,7 +22,6 @@ contributors:
     CaemU,
     carlin-scott,
     matthewjwein,
-    johnadungan,
     abdullahdiaa,
     aroraharsh010
   ]

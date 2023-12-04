@@ -6,7 +6,6 @@ topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
 contributors:
   [
-    potterwrit,
     irenesmith,
     rebloor,
     mdnwebdocs-bot,
@@ -14,7 +13,6 @@ contributors:
     andrewtruongmoz,
     julienw,
     hellosct1,
-    david_ross,
     wbamberg,
     mrj,
     mickro,

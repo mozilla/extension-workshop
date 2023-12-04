@@ -13,7 +13,6 @@ contributors:
     hellosct1,
     wbamberg,
     0711kps,
-    dsmatlak,
     atsay,
     bryanyou,
   ]
