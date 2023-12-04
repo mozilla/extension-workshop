@@ -258,7 +258,7 @@ Firefox for Android does not have full feature parity with the desktop version o
 
 | Issue description | Tracking bug |
 | --- | --- |
-| Background service workers are not supported on Firefox for Android. | [Bug&nbsp;1573659](https://bugzilla.mozilla.org/show_bug.cgi?id=1573659) |
+| Background service workers are not supported on Firefox for Android. Instead, use [event pages](/documentation/develop/manifest-v3-migration-guide.md#event-pages-and-backward-compatibility). | [Bug&nbsp;1573659](https://bugzilla.mozilla.org/show_bug.cgi?id=1573659) |
 | Firefox for Android does not have a visual indicator when an extension has a pending host_permissions grant request for the user. | [Bug&nbsp;1820867](https://bugzilla.mozilla.org/show_bug.cgi?id=1820867) |
 | Users cannot edit an extension's host permission grants in the Firefox for Android's Add-ons Manager. | [Bug&nbsp;1812125](https://bugzilla.mozilla.org/show_bug.cgi?id=1812125) |
 
