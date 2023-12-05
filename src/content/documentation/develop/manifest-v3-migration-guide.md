@@ -22,7 +22,7 @@ date: 2023-03-03
 
 Manifest V3 became generally available in Firefox 109 after being available as a developer preview from Firefox 101. This page details what's changed and how you adapt your extensions to take advantage of Manifest V3.
 
-If you are planning to support Android, see the [Developing extensions for Firefox for Android](/documentation/develop/developing-extensions-for-firefox-for-android/#mv3-compatibility) page for additional guidance.
+See the [Developing extensions for Firefox for Android](/documentation/develop/developing-extensions-for-firefox-for-android/#mv3-compatibility) page for additional guidance if you plan to support Firefox for Android.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -60,7 +60,6 @@ This section details the Manifest V3 changes made to Firefox.
 %}
 
 {% capture content %}
-
 
 ### Manifest version
 
@@ -377,6 +376,4 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 %}
 
 <!-- END: Single Column Body Module -->
-
-
 

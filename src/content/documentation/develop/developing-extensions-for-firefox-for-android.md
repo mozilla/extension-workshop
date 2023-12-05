@@ -254,13 +254,13 @@ If your add-on fails to run, check these messages as they may provide informatio
 
 ## Manifest V3 compatibility
 
-Firefox for Android does not have full feature parity with the desktop version of Firefox. There are several known issues with Firefox for Android that may lead to a sub-optimal user experience. As a result, we recommend that developers targeting Android use Manifest V2.
+Firefox for Android doesn't have full feature parity with the desktop version of Firefox. There are several known issues with Firefox for Android that can lead to a poor user experience. Therefore, it's recommended you use Manifest V2 for extensions targeting Firefox for Android.
 
 | Issue description | Tracking bug |
 | --- | --- |
-| Background service workers are not supported on Firefox for Android. Instead, use [event pages](/documentation/develop/manifest-v3-migration-guide.md#event-pages-and-backward-compatibility). | [Bug&nbsp;1573659](https://bugzilla.mozilla.org/show_bug.cgi?id=1573659) |
-| Firefox for Android does not have a visual indicator when an extension has a pending host_permissions grant request for the user. | [Bug&nbsp;1820867](https://bugzilla.mozilla.org/show_bug.cgi?id=1820867) |
-| Users cannot edit an extension's host permission grants in the Firefox for Android's Add-ons Manager. | [Bug&nbsp;1812125](https://bugzilla.mozilla.org/show_bug.cgi?id=1812125) |
+| Background service workers aren't supported on Firefox for Android. Instead, use [event pages](/documentation/develop/manifest-v3-migration-guide.md#event-pages-and-backward-compatibility). | [Bug&nbsp;1573659](https://bugzilla.mozilla.org/show_bug.cgi?id=1573659) |
+| Firefox for Android doesn't visually indicate when an extension has a pending `"host_permissions"` grant request for the user. | [Bug&nbsp;1820867](https://bugzilla.mozilla.org/show_bug.cgi?id=1820867) |
+| Users can't edit an extension's host permission grants in Add-ons Manager on Firefox for Android. | [Bug&nbsp;1812125](https://bugzilla.mozilla.org/show_bug.cgi?id=1812125) |
 
 {% endcapture %}
 {% include modules/one-column.liquid,
