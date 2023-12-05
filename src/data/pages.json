@@ -400,6 +400,10 @@
                   {
                     "title": "Debug your extension",
                     "id": "debug-your-extension"
+                  },
+                  {
+                    "title": "Manifest V3 compatibility",
+                    "id": "mv3-compatibility"
                   }
                 ]
               },
