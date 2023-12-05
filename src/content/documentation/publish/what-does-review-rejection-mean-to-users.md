@@ -4,8 +4,8 @@ title: What does review rejection mean to users?
 permalink: /documentation/publish/what-does-review-rejection-mean-to-users/
 topic: Publish
 tags: [add-ons, extensions, guide, publication, review, webextensions]
-contributors: [potterwrit, rebloor]
-last_updated_by: potterwrit
+contributors: [rebloor]
+last_updated_by: rebloor
 date: 2019-07-15 12:58:07
 ---
 
