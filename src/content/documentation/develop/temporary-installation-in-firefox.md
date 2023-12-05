@@ -7,7 +7,6 @@ tags: [webextensions]
 contributors:
   [
     caitmuenster,
-    mdnwebdocs-bot,
     ldevernay,
     rebloor,
     Abhro,
