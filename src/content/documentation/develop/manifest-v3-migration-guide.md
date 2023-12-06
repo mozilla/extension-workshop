@@ -31,7 +31,9 @@ See the [Developing extensions for Firefox for Android](/documentation/develop/d
 
 <!-- END: Page Hero Banner -->
 
-{% capture content %}
+<!-- Content with Table of Contents Module -->
+
+{% capture content_with_toc %}
 
 ## What is Manifest V3?
 
@@ -42,10 +44,15 @@ The Manifest V3 changes apply to extensions for Safari, Firefox, and Chromium-ba
 This article discusses the changes introduced with Manifest V3 in Firefox and highlights where they diverge from the Chrome and Safari implementation.
 
 {% endcapture %}
+
 {% include modules/column-w-toc.liquid,
     id: "what-is-manifest-v3"
-    content: content
+    content: content_with_toc
 %}
+
+<!-- END: Content with Table of Contents -->
+
+<!-- Single Column Body Module -->
 
 {% capture content %}
 
@@ -354,6 +361,14 @@ In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace w
 
 The format of the top-level manifest.json `version` key in Firefox has evolved and became simpler: letters and other previously allowed symbols are no longer accepted. The value must be a string with 1 to 4 numbers separated by dots (e.g., `1.2.3.4`). Each number can have up to 9 digits and leading zeros before another digit are not allowed (e.g., `2.01` is forbidden, but `0.2`, `2.0.1`, and `2.1` are allowed).
 
+{% endcapture %}
+{% include modules/one-column.liquid,
+    id: "extension-version"
+    content: content
+%}
+
+{% capture content %}
+
 ## Migration checklist
 
 - Update the manifest.json key `manifest_version` to `3`.
@@ -371,9 +386,8 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-    id: "developer-preview-changes"
+    id: "migration-checklist"
     content: content
 %}
 
 <!-- END: Single Column Body Module -->
-
