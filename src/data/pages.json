@@ -539,7 +539,25 @@
               },
               {
                 "title": "Known issues",
-                "url": "/documentation/develop/known-issues/"
+                "url": "/documentation/develop/known-issues/",
+                "subpageitems": [
+                  {
+                    "title": "Content scripts don't appear in DevTools",
+                    "id": "invisible-content-scripts"
+                  },
+                  {
+                    "title": "Extension source don't update in DevTools",
+                    "id": "devtools-updates-missing"
+                  },
+                  {
+                    "title": "\"Destroyed actor\" errors when debugging Android",
+                    "id": "android-destroyed-actor"
+                  },
+                  {
+                    "title": "Empty temporary extensions list when debugging Android",
+                    "id": "android-temp-ext-missing"
+                  }
+                ]
               }
             ]
           }
