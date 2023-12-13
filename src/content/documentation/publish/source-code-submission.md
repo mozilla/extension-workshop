@@ -63,15 +63,6 @@ To reproduce the build, the reviewer runs the instructions you provided and then
 - details, including required version and installation instructions, of any tools or utilities that need to be downloaded, for example, [yuicompressor](http://yui.github.io/yuicompressor/).
 - a list of all the commands to generate an identical copy of the extension from the source code, for example, npm install or a grunt target. Ideally, you should include every command in the build script file.
 
-Reviewers will try to replicate your build environment if specified. However, if you do not specify the build environment, here's the default build environment that reviewers use:
-
-- Ubuntu 22.04 LTS (Desktop edition)
-- 10GB of system memory (RAM), 6 cores of vCPU
-- Node 20 LTS and npm 10
-- 35GB of free disk space
-
-Should any of the above differ from your build environment, it is essential that you let the reviewers know about it via the README file in your source submission otherwise the build might not match and your submission may get rejected.
-
 The tools you use to minify, or concatenate your source code:
 
 - must be open source: we cannot verify a build made with commercial tools.
@@ -103,6 +94,24 @@ You can add source code to an existing add-on version. To do this, open [My Add-
 
 <!-- END: Content with Table of Contents -->
 <!-- Single Column Body Module -->
+
+{% capture content %}
+
+### Default reviewer build environment
+Reviewers will try to replicate your build environment if specified. However, if you do not specify the build environment, here's the default build environment that reviewers use:
+
+- Ubuntu 22.04 LTS (Desktop edition)
+- 10GB of system memory (RAM), 6 cores of vCPU
+- Node 20 LTS and npm 10
+- 35GB of free disk space
+
+Should any of the above differ from your build environment, it is essential that you let the reviewers know about it via the README file in your source submission otherwise the build might not match and your submission may get rejected.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "default-build-environment"
+  content: content
+%}
 
 {% capture content %}
 
