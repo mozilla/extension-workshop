@@ -63,14 +63,21 @@ To reproduce the build, the reviewer runs the instructions you provided and then
 - details, including required version and installation instructions, of any tools or utilities that need to be downloaded, for example, [yuicompressor](http://yui.github.io/yuicompressor/).
 - a list of all the commands to generate an identical copy of the extension from the source code, for example, npm install or a grunt target. Ideally, you should include every command in the build script file.
 
+Reviewers will try to replicate your build environment if specified. However, if you do not specify the build environment, here's the default build environment that reviewers use:
+
+- Latest Ubuntu LTS (Desktop edition) virtualized via VirtualBox running on an x64_84 host
+- 10GB of system memory (RAM), 6 cores of vCPU
+- Latest Node LTS and corresponding npm
+- 50GB of disk space
+
+Should any of the above differ from your build environment, it is essential that you let the reviewers know about it via the README file in your source submission otherwise the build might not match and your submission may get rejected.
+
 The tools you use to minify, or concatenate your source code:
 
 - must be open source: we cannot verify a build made with commercial tools.
 - cannot be web-based: all review builds are run locally. Using a web-based tool doesn’t allow the reviewers to be certain that your sources match the minified code. Some web-based tools offer a version that can be run locally, in which case provide a script to run the tool locally.
 
 When using npm, yarn, or other package management tools that support it, be sure to include the lockfile, for example, `package-lock.json`. Otherwise, reviewers may use a different version resulting in differences between the generated code and that in the extension.
-
-Assume the reviewer hasn’t installed any developer tools on their computer, that is, make sure you include all the set-up and build instructions to create your code. However, you don’t need to describe how to install common tools such as npm or node.
 
 Tip: Use a build target relative to the directory containing the source, such as a `dist` subfolder. This makes it easier for the reviewer to locate your extension’s built code.
 
