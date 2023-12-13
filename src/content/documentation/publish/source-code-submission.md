@@ -65,10 +65,10 @@ To reproduce the build, the reviewer runs the instructions you provided and then
 
 Reviewers will try to replicate your build environment if specified. However, if you do not specify the build environment, here's the default build environment that reviewers use:
 
-- Latest Ubuntu LTS (Desktop edition) virtualized via VirtualBox running on an x86_64 host
+- Ubuntu 22.04 LTS (Desktop edition)
 - 10GB of system memory (RAM), 6 cores of vCPU
-- Latest Node LTS and corresponding npm
-- 50GB of disk space
+- Node 20 LTS and npm 10
+- 35GB of free disk space
 
 Should any of the above differ from your build environment, it is essential that you let the reviewers know about it via the README file in your source submission otherwise the build might not match and your submission may get rejected.
 
