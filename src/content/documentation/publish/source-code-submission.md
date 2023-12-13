@@ -65,7 +65,7 @@ To reproduce the build, the reviewer runs the instructions you provided and then
 
 Reviewers will try to replicate your build environment if specified. However, if you do not specify the build environment, here's the default build environment that reviewers use:
 
-- Latest Ubuntu LTS (Desktop edition) virtualized via VirtualBox running on an x64_84 host
+- Latest Ubuntu LTS (Desktop edition) virtualized via VirtualBox running on an x86_64 host
 - 10GB of system memory (RAM), 6 cores of vCPU
 - Latest Node LTS and corresponding npm
 - 50GB of disk space
