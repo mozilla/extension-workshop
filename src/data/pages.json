@@ -566,10 +566,6 @@
                   {
                     "title": "\"Destroyed actor\" errors when debugging Android",
                     "id": "android-destroyed-actor"
-                  },
-                  {
-                    "title": "Empty temporary extensions list when debugging Android",
-                    "id": "android-temp-ext-missing"
                   }
                 ]
               }

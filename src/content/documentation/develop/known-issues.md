@@ -54,7 +54,7 @@ This page contains a list of significant known issues that affect the experience
 
 ### Extension source don't update in DevTools
 
-**Description:** Sources files open in DevTools are not updated after you edit the file on disk. This issue applies to temporary extensions that are installed in Firefox or on an Android device using `web-ext`.
+**Description:** Sources files open in DevTools are not updated after you edit the file on disk. This issue applies to temporary extensions installed in Firefox or on an Android device using `web-ext`.
 
 **Workaround:** Close and re-open DevTools.
 
@@ -82,7 +82,7 @@ Cannot connect to the debug target. See error details below:<br><br>
 
 **Workaround:** In the `about:debugging` page on your development computer, disconnect from and reconnect to the Android device.
 
-**Additional notes:** This issue appears to be related to simultaneous connections to the Android device from `web-ext` and Firefox's developer tools. To minimize the occurrence of this issue, set `web-ext` to auto-reload specific files only using the `--watch-files` flag. For example:
+**Additional notes:** This issue appears to be related to simultaneous connections to the Android device from `web-ext` and Firefox's developer tools. To minimize the likelihood of this issue, set `web-ext` to auto-reload specific files only using the `--watch-files` flag. For example:
 
 ```bash
 web-ext run -t firefox-android \
