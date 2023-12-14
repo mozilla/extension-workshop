@@ -64,7 +64,21 @@
             "pages": [
               {
                 "title": "Manifest V3 migration guide",
-                "url": "/documentation/develop/manifest-v3-migration-guide/"
+                "url": "/documentation/develop/manifest-v3-migration-guide/",
+                "subpageitems": [
+                  {
+                    "title": "What is Manifest V3?",
+                    "id": "what-is-manifest-v3"
+                  },
+                  {
+                    "title": "Manifest V3 changes",
+                    "id": "developer-preview-changes"
+                  },
+                  {
+                    "title": "Migration checklist",
+                    "id": "migration-checklist"
+                  }
+                ]
               }
             ]
           },
@@ -534,6 +548,24 @@
                   {
                     "title": "Retest runtime permission grants",
                     "id": "retest-runtime-permission-grants"
+                  }
+                ]
+              },
+              {
+                "title": "Known issues",
+                "url": "/documentation/develop/known-issues/",
+                "subpageitems": [
+                  {
+                    "title": "Content scripts don't appear in DevTools",
+                    "id": "invisible-content-scripts"
+                  },
+                  {
+                    "title": "Extension source don't update in DevTools",
+                    "id": "devtools-updates-missing"
+                  },
+                  {
+                    "title": "\"Destroyed actor\" errors when debugging Android",
+                    "id": "android-destroyed-actor"
                   }
                 ]
               }
