@@ -10,6 +10,7 @@ tags: [
     development,
     firefox,
     testing,
+    web-ext,
     webextensions
   ]
 contributors: [dotproto]
