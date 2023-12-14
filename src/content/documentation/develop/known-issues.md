@@ -81,7 +81,7 @@ Cannot connect to the debug target. See error details below:<br><br>
 
 **Workaround:** In the `about:debugging` page on your development computer, disconnect from and reconnect to the Android device.
 
-**Additional notes:** This issue appears to be related to having simultaneous connections to the Android device from `web-ext` and from Firefox's developer tools. To minimize the appearance of this issue, you can set `web-ext` to only auto-reload specific files by using the `--watch-files` flag. For example:
+**Additional notes:** This issue appears to be related to simultaneous connections to the Android device from `web-ext` and Firefox's developer tools. To minimize the occurrence of this issue, set `web-ext` to auto-reload specific files only using the `--watch-files` flag. For example:
 
 ```bash
 web-ext run -t firefox-android \
@@ -104,7 +104,7 @@ This approach also allows you to manually trigger a refresh by pressing `R` whil
 
 ### Empty temporary extensions list when debugging Android
 
-**Description:** When debugging an extension on Android, the "`about:debugging`" page in Firefox on the development machine's may show an empty list of temporary extensions.
+**Description:** When debugging an extension on Android, the "`about:debugging`" page in Firefox on the development machine may show an empty list of temporary extensions.
 
 **Workaround:** Disconnect from and reconnect to the Android device on `about:debugging`.
 
