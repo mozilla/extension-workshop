@@ -24,7 +24,7 @@ date: 2023-11-20
 
 # Known issues
 
-This page contains a list of major known issues that affect experience of developing extensions for Firefox and Firefox for Android.
+This page contains a list of significant known issues that affect the experience of developing extensions for Firefox and Firefox for Android.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -38,7 +38,7 @@ This page contains a list of major known issues that affect experience of develo
 
 ### Content scripts don't appear in DevTools
 
-**Description:** Content scripts sometimes won't appear in the sources list when debugging a tab on Android.
+**Description:** Content scripts sometimes don't appear in the sources list when debugging a tab on Android.
 
 **Workaround:** Add a `debugger` statement to your content script to manually trigger a breakpoint when the content script first executes.
 
@@ -54,7 +54,7 @@ This page contains a list of major known issues that affect experience of develo
 
 ### Extension source don't update in DevTools
 
-**Description:** Sources files that have been opened in DevTools are not updated after you edit the file on disk. This issue applies to temporary extensions that have been installed in Firefox or that have been installed on an Android device using `web-ext`.
+**Description:** Sources files open in DevTools are not updated after you edit the file on disk. This issue applies to temporary extensions that are installed in Firefox or on an Android device using `web-ext`.
 
 **Workaround:** Close and re-open DevTools.
 
