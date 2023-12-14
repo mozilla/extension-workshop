@@ -101,20 +101,4 @@ This approach also allows you to manually trigger a refresh by pressing `R` whil
     content: content
 %}
 
-{% capture content %}
-
-### Empty temporary extensions list when debugging Android
-
-**Description:** When debugging an extension on Android, the "`about:debugging`" page in Firefox on the development machine may show an empty list of temporary extensions.
-
-**Workaround:** Disconnect from and reconnect to the Android device on `about:debugging`.
-
-**Tracking issue:** [Bug 1856481](https://bugzilla.mozilla.org/show_bug.cgi?id=1856481)
-
-{% endcapture %}
-{% include modules/one-column.liquid,
-  id: "android-temp-ext-missing"
-  content: content
-%}
-
 <!-- END: Single Column Body Module -->
