@@ -105,7 +105,7 @@ Reviewers will try to replicate your build environment if specified. However, if
 - Node 20 LTS and npm 10
 - 35GB of free disk space
 
-Should any of the above differ from your build environment, it is essential that you let the reviewers know about it via the README file in your source submission otherwise the build might not match and your submission may get rejected.
+You must let the reviewers know if any of the above differs from your build environment. Do this in the README file in your source submission. Otherwise, the reviewer's build might not match yours, and your submission may be rejected.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
