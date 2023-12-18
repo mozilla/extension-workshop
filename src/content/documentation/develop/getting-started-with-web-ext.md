@@ -53,7 +53,7 @@ date: 2021-01-27 23:47:23
 
 ## Installation
 
-`web-ext` is a node-based application than can be installed it with `brew` or natively with [nodejs/npm](https://nodejs.org/) tool.
+`web-ext` is a node-based application. You install it with `brew` or the [nodejs](https://nodejs.org/) npm tool.
 
 Installing with `brew`:
 
