@@ -94,22 +94,16 @@ Developer tools for Firefox for Android are provided through remote debugging me
 
 ### Effect on your add-on UI
 
-You cannot reveal your add-on through a sidebar or context menu. However, you can expose your extension as an option under the Add-ons item in the browser menu or as an address bar button.
+#### Reveal your add-on
 
-Depending on the manifest version used by your app, you add an option under the Add-ons item in the browser menu:
+You reveal your add-on as an option under the Add-ons item in the Firefox for Android browser menu. Depending on the manifest version used by your app, you add an option like this:
 
 - for Manifest V2 with the `manifest.json` [`browser_action`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key and [`browserAction`](https://developer.mozilla.org//Add-ons/WebExtensions/API/browserAction) API.
 - for Manifest V3 with the `manifest.json` [`action`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key and [`action`](https://developer.mozilla.org//Add-ons/WebExtensions/API/action) API.
 
-You can also use an address bar button (through the `manifest.json` [`page_action`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key and [`pageAction`](https://developer.mozilla.org//Add-ons/WebExtensions/API/pageAction) API), remembering that this button is hidden by default and must be shown programmatically.
+Note that the [`browserAction`](https://developer.mozilla.org//Add-ons/WebExtensions/API/browserAction) and [`action`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/action) popup content opens as an overlay, covering the browser window until the user closes the overlay.
 
-The features of [`pageAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) in Firefox for Android differ slightly from the desktop version. 
-
-The `manifest.json` key [page_action](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) lets you define the button icon and a popup. You then have use of [`pageAction.show()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) and [`pageAction.hide()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide); however, once ‘shown’, the address bar button is visible in all tabs (unlike the desktop behavior, where the button is shown only for a specified tab.) You can hide the pageAction using [`pageAction.hide()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) on a tab (say, for example, you wish to hide your extension’s page action icon in `about:addons` or `about:memory` tabs) 
-
-You can set a listener to [`pageAction.onClicked()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked). [`pageAction.setPopup()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup) and [`pageAction.getPopup()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup) are also available, so you can update the popup or create a popup once the add-on is running.
-
-Also, in [`pageAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), [`browserAction`](https://developer.mozilla.org//Add-ons/WebExtensions/API/browserAction), and [`action`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/action) popup content opens as an overlay, covering the browser window until the user closes the overlay.
+#### Work with tabs
 
 You can also manipulate tabs on Firefox for Android. The [`tabs`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/tabs) API enables you to perform most of the actions you can on the desktop, the main exceptions are:
 
