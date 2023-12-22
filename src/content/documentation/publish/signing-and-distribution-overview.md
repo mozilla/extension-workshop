@@ -27,13 +27,10 @@ contributors:
     Noitidart,
     mconnormoz,
     hasangol,
-    Cikgu77,
-    01787500664,
     Macarte,
     kumar303,
     SphinxKnight,
     tedmcox,
-    iwanrezpect,
     SolidAxel,
     jean-acsas,
     djbrown

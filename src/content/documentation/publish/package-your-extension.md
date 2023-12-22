@@ -6,14 +6,12 @@ topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]
 contributors:
   [
-    potterwrit,
     irenesmith,
     rebloor,
     Alston,
     andrewtruongmoz,
     julienw,
     hellosct1,
-    david_ross,
     wbamberg,
     mrj,
     mickro,

@@ -12,7 +12,6 @@ tags:
     how-to,
     intermediate,
     testing,
-    web-ext,
     webextensions,
   ]
 contributors: [freaktechnik, Rob--W, rebloor, tophf, Dietrich]

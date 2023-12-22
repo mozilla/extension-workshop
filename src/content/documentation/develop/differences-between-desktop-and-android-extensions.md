@@ -3,7 +3,7 @@ layout: sidebar
 title: Differences between desktop and Android extensions
 permalink: /documentation/develop/differences-between-desktop-and-android-extensions/
 topic: Develop
-tags: [add-ons, guide, mobile, needsupdate, webextensions]
+tags: [add-ons, guide, mobile, webextensions]
 contributors:
   [
     caitmuenster,
@@ -12,12 +12,12 @@ contributors:
     hellosct1,
     ramkumar.kr94,
     andrewtruongmoz,
-    PikadudeNo1,
     rebloor,
     wbamberg,
+    dotproto,
   ]
-last_updated_by: rebloor
-date: 2020-09-15
+last_updated_by: dotproto
+date: 2023-12-01
 ---
 
 <!-- Page Hero Banner -->
@@ -39,9 +39,7 @@ There are some important distinctions to be aware of when developing an extensio
 
 {% capture content_with_toc %}
 
-::: note alert
-Only a limited number of [recommended extensions](/documentation/publish/recommended-extensions/) are supported for Firefox for Android. Look out for updates on the [add-ons blog](https://blog.mozilla.org/addons/category/mobile?utm_source=extensionworkshop.com&utm_medium=dev-article&utm_content=differences-between-desktop-and-android-extensions).
-:::
+{%- include android-alert.liquid -%}
 
 Firefox for Android offers a subset of the WebExtensions APIs available to the desktop version of Firefox. Some of these differences are due to the nature of the Android environment and therefore the features Firefox can implement, others are where Firefox for Android does not offer all the desktop features. This article explores these differences and how they affect your add-on development.
 
