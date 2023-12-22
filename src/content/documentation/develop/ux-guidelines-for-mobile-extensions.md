@@ -34,8 +34,6 @@ Make your extension seamlessly integrate with Firefox for Android.
 
 ## Introduction
 
-{%- include android-alert.liquid -%}
-
 To make sure your users have a great experience with your extension on Firefox for Android, you want to ensure your extension’s user interface integrates well with the browser.
 
 This article provides guidelines for optimizing your extension’s user experience on mobile. We’ve broken these guidelines up into three segments: the basics, which lists the minimum requirements needed for your extension to work well on a variety of devices; the extra mile, which details how you can make your extension look and feel like Firefox for Android; and the last mile, which describes how you can make your extension feel mobile-native or mobile-first.
