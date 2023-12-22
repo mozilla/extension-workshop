@@ -16,8 +16,8 @@ contributors:
     wbamberg,
     dotproto,
   ]
-last_updated_by: dotproto
-date: 2023-12-01
+last_updated_by: rebloor
+date: 2023-12-22
 ---
 
 <!-- Page Hero Banner -->
@@ -74,6 +74,7 @@ As a result of the UI differences, extensions for Firefox for Android do not sup
 - [`omnibox`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/omnibox) and the related [`omnibox`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/omnibox) `manifest.json` key, which means you cannot provide custom address bar suggestions.
 - [`menus`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/menus), which means you cannot add options to context menus.
 - [`sidebarAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) and the related [`sidebar_action`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/sidebar_action) `manifest.json` key, due to the limited screen real estate on Android devices sidebars, such as the browser history, are presented in full browser tabs. Where possible, you should move any sidebar content to tabs.
+- [`browserAction`](https://developer.mozilla.org//Add-ons/WebExtensions/API/browserAction) (Manifest V2), [`action`](https://developer.mozilla.org//Add-ons/WebExtensions/API/action) (Manifest V3), and [`pageAction`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) add their "button" to the Add-ons item in the Firefox for Android browser menu. Also, popup content opens as an overlay, covering the browser window until the user closes the overlay.
 
 ### Other related API and `manifest.json` key differences
 
