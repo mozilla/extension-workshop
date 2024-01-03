@@ -27,7 +27,7 @@
   "devDependencies": {
     "@11ty/eleventy": "1.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "4.2.0",
-    "acorn": "8.11.2",
+    "acorn": "8.11.3",
     "acorn-walk": "8.3.0",
     "chalk": "4.1.2",
     "chokidar-cli": "3.0.0",
