@@ -825,6 +825,10 @@
                     "id": "provide-your-extension-source-code"
                   },
                   {
+                    "title": "Default reviewer build environment",
+                    "id": "default-reviewer-build-environment"
+                  },
+                  {
                     "title": "Use of obfuscated code",
                     "id": "use-of-obfuscated-code"
                   },

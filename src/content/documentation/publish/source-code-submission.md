@@ -70,8 +70,6 @@ The tools you use to minify, or concatenate your source code:
 
 When using npm, yarn, or other package management tools that support it, be sure to include the lockfile, for example, `package-lock.json`. Otherwise, reviewers may use a different version resulting in differences between the generated code and that in the extension.
 
-Assume the reviewer hasn’t installed any developer tools on their computer, that is, make sure you include all the set-up and build instructions to create your code. However, you don’t need to describe how to install common tools such as npm or node.
-
 Tip: Use a build target relative to the directory containing the source, such as a `dist` subfolder. This makes it easier for the reviewer to locate your extension’s built code.
 
 ### How to upload source code
@@ -96,6 +94,24 @@ You can add source code to an existing add-on version. To do this, open [My Add-
 
 <!-- END: Content with Table of Contents -->
 <!-- Single Column Body Module -->
+
+{% capture content %}
+
+### Default reviewer build environment
+Reviewers will try to replicate your build environment if specified. However, if you do not specify the build environment, here's the default build environment that reviewers use:
+
+- Ubuntu 22.04 LTS (Desktop edition)
+- 10GB of system memory (RAM), 6 cores of vCPU
+- Node 20 LTS and npm 10
+- 35GB of free disk space
+
+You must let the reviewers know if any of the above differs from your build environment. Do this in the README file in your source submission. Otherwise, the reviewer's build might not match yours, and your submission may be rejected.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "default-reviewer-build-environment"
+  content: content
+%}
 
 {% capture content %}
 
