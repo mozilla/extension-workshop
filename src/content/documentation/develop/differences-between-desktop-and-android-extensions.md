@@ -17,7 +17,7 @@ contributors:
     dotproto,
   ]
 last_updated_by: rebloor
-date: 2023-12-22
+date: 2024-01-10
 ---
 
 <!-- Page Hero Banner -->
@@ -168,15 +168,17 @@ Permissions to use certain WebExtension APIs must be requested in the `manifest.
 
 {% capture content %}
 
-## Other notes
+## Storage
 
-::: note
-At the time of writing there was an issue with [`storage.sync()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) and data is not synchronized with the user’s Mozilla account from Firefox for Android. More details can be found in [bug 1316442](https://bugzilla.mozilla.org/show_bug.cgi?id=1316442).
-:::
+Desktop Firefox supports the [local](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/local), [managed](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed), [session](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/session), and [sync](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) storage areas.
+
+Firefox for Android supports local, session, and sync storage. However, data in sync storage is not synchronized with the user's Mozilla account from Firefox for Android. More details can be found in [bug 1316442](https://bugzilla.mozilla.org/show_bug.cgi?id=1316442).
+
+Firefox for Android doesn't support the managed storage area. All calls to [StorageArea](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea#methods) methods are rejected.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-    id: "other-notes"
+    id: "storage"
     content: content
 %}
 
