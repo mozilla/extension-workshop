@@ -172,7 +172,7 @@ Permissions to use certain WebExtension APIs must be requested in the `manifest.
 
 Desktop Firefox supports the [local](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/local), [managed](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed), [session](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/session), and [sync](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync) storage areas.
 
-Firefox for Android supports local, session, and sync storage. However, data in sync storage is not synchronized with the user's Mozilla account from Firefox for Android. More details can be found in [bug 1316442](https://bugzilla.mozilla.org/show_bug.cgi?id=1316442).
+Firefox for Android supports local, session, and sync storage. However, data in sync storage is not synchronized with the user's Mozilla account from Firefox for Android. More details can be found in [bug 1625257](https://bugzilla.mozilla.org/show_bug.cgi?id=1625257).
 
 Firefox for Android doesn't support the managed storage area. All calls to [StorageArea](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea#methods) methods are rejected.
 
