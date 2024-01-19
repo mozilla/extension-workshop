@@ -435,8 +435,13 @@ Environment variable: `$WEB_EXT_TARGET`
 Additional CLI options passed to the Browser binary. Example:
 
 ```shell
---arg="--search=mozilla" --arg="--new-tab=https://duckduckgo.com"
+web-ext run --arg="--search=mozilla" --arg="--new-tab=https://duckduckgo.com"
 ```
+
+```shell
+web-ext run --arg="--remote-debugging-port=9229" --target chromium
+```
+
 </section>
 
 <section id="chromium-binary">
