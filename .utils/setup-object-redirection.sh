@@ -14,12 +14,18 @@ redirection_objects=(
   documentation/develop/developing-extensions-for-firefox-for-android-fennec
   documentation/develop/developing-extensions-for-firefox-for-android-fennec/index.html
 )
-for obj in "${redirection_objects[@]}" ; do
-  if aws s3api head-object --bucket "$EXTENSION_WORKSHOP_BUCKET" --key "$obj" &> /dev/null ; then
-    aws s3api put-object                    \
-      --bucket "$EXTENSION_WORKSHOP_BUCKET" \
-      --key "$obj"                          \
-      --website-redirect-location /documentation/develop/developing-extensions-for-firefox-for-android/
+# for obj in "${redirection_objects[@]}" ; do
+#   if aws s3api head-object --bucket "$EXTENSION_WORKSHOP_BUCKET" --key "$obj" &> /dev/null ; then
+#     aws s3api put-object                    \
+#       --bucket "$EXTENSION_WORKSHOP_BUCKET" \
+#       --key "$obj"                          \
+#       --website-redirect-location /documentation/develop/developing-extensions-for-firefox-for-android/
+#   fi
+# done
+
+for obj in "${REDIRECTION_OBJECTS[@]}" ; do
+  if gsutil stat "gs://$EXTENSION_WORKSHOP_BUCKET/$obj" &> /dev/null ; then
+    gsutil web set -m "gs://$EXTENSION_WORKSHOP_BUCKET/$obj" -e "/documentation/develop/developing-extensions-for-firefox-for-android/"
   fi
 done
 
@@ -31,11 +37,17 @@ redirection_objects=(
   documentation/develop/comparison-with-xul-xpcom-extensions
   documentation/develop/comparison-with-xul-xpcom-extensions/index.html
 )
-for obj in "${redirection_objects[@]}" ; do
-  if aws s3api head-object --bucket "$EXTENSION_WORKSHOP_BUCKET" --key "$obj" &> /dev/null ; then
-    aws s3api put-object                    \
-      --bucket "$EXTENSION_WORKSHOP_BUCKET" \
-      --key "$obj"                          \
-      --website-redirect-location /documentation/develop/
+# for obj in "${redirection_objects[@]}" ; do
+#   if aws s3api head-object --bucket "$EXTENSION_WORKSHOP_BUCKET" --key "$obj" &> /dev/null ; then
+#     aws s3api put-object                    \
+#       --bucket "$EXTENSION_WORKSHOP_BUCKET" \
+#       --key "$obj"                          \
+#       --website-redirect-location /documentation/develop/
+#   fi
+# done
+
+for obj in "${REDIRECTION_OBJECTS[@]}" ; do
+  if gsutil stat "gs://$EXTENSION_WORKSHOP_BUCKET/$obj" &> /dev/null ; then
+    gsutil web set -m "gs://$EXTENSION_WORKSHOP_BUCKET/$obj" -e "/documentation/develop/"
   fi
-done
+  done
