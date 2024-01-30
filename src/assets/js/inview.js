@@ -71,14 +71,14 @@
                 a.left > c.left
                   ? 'right'
                   : a.left + e.width < c.left + m
-                  ? 'left'
-                  : 'both'),
+                    ? 'left'
+                    : 'both'),
               (l =
                 a.top > c.top
                   ? 'bottom'
                   : a.top + e.height < c.top + l
-                  ? 'top'
-                  : 'both'),
+                    ? 'top'
+                    : 'both'),
               (c = m + '-' + l),
               (!g || g !== c) &&
                 b.data('inview', c).trigger('inview', [!0, m, l]))
