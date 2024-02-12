@@ -3,7 +3,7 @@ layout: sidebar
 title: Enterprise
 permalink: /documentation/enterprise/
 tags: [enterprise]
-contributors: [caitmuenster]
+contributors: [caitmuenster, mkaply]
 last_updated_by: mkaply
 date: 2019-07-09 09:00:00
 ---

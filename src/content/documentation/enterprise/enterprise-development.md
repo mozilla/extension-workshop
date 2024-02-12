@@ -15,7 +15,7 @@ date: 2021-01-27
 
 # Enterprise development
 
-As an extension developer, you might may want to customize your add-on via policy or modify its behavior when installed in an enterprise.
+As an extension developer, you may want to customize your add-on via policy or modify its behavior when installed in an enterprise.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
