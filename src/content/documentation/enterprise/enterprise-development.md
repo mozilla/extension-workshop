@@ -1,7 +1,7 @@
 ---
 layout: sidebar
-title: Adding policy support to your extension
-permalink: /documentation/enterprise/adding-policy-support-to-your-extension/
+title: Enterprise development
+permalink: /documentation/enterprise/enterprise-development/
 topic: Enterprise
 tags: [enterprise, policies]
 contributors: [mkaply]
@@ -13,9 +13,9 @@ date: 2021-01-27
 
 {% capture page_hero_banner_content %}
 
-# Adding policy support to your extension
+# Enterprise development
 
-This article explains how to add enterprise policy support to your extension to allow enterprises to preconfigure settings in your extension. 
+As an extension developer, you might may want to customize your add-on via policy or modify its behavior when installed in an enterprise.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -25,6 +25,19 @@ This article explains how to add enterprise policy support to your extension to 
 <!-- END: Page Hero Banner -->
 
 <!-- Content with Table of Contents Module -->
+
+{% capture content_with_toc %}
+
+## Disclosure and consent for enterprise extensions
+
+If your extension is installed in an enterprise via the `force_installed` or `normal_installed` options in the [ExtensionSettings enterprise policy](https://mozilla.github.io/policy-templates/#extensionsettings), you must still implement the disclosure and consent experience in the add-on.
+You can set a value via the [3rdparty enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty) and read it with `storage.managed` in the add-on to determine if consent is granted. You must display the disclosure and consent experience if the value is not set in `storage.managed`.
+
+{% endcapture %}
+{% include modules/column-w-toc.liquid,
+  id: "enterprise-consent"
+  content: content_with_toc
+%}
 
 {% capture content_with_toc %}
 
@@ -86,7 +99,7 @@ It works the same as the other [browser.storage APIs](https://developer.mozilla.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
-  id: "how-to-add"
+  id: "how-to-add-policy"
   content: content_with_toc
 %}
 

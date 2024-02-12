@@ -1215,9 +1215,13 @@
             "category": "Enterprise resources",
             "pages": [
               {
-                "title": "Adding policy support to your extension",
-                "url": "/documentation/enterprise/adding-policy-support-to-your-extension/",
+                "title": "Enterprise development",
+                "url": "/documentation/enterprise/enterprise-development/",
                 "subpageitems": [
+                  {
+                    "title": "Disclosure and consent for enterprise extensions",
+                    "id": "enterprise-consent"
+                  },
                   {
                     "title": "How to add policy support",
                     "id": "how-to-add"
