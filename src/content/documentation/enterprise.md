@@ -3,8 +3,8 @@ layout: sidebar
 title: Enterprise
 permalink: /documentation/enterprise/
 tags: [enterprise]
-contributors: [caitmuenster]
-last_updated_by: caitmuenster
+contributors: [caitmuenster, mkaply]
+last_updated_by: mkaply
 date: 2019-07-09 09:00:00
 ---
 
@@ -64,7 +64,7 @@ Extensions give you the ability to complement standard browser features and prov
 {% endcapture %}
 {% capture col_2_content %}
 
-Developing extensions for your enterprise is straightforward – you can follow the standard extension development path. You can also [add policy support](/documentation/enterprise/adding-policy-support-to-your-extension/) to your extension to allow enterprises to preconfigure settings for your extension. 
+Developing extensions for your enterprise is straightforward – you can follow the standard extension development path. You can also [add policy support](/documentation/enterprise/enterprise-development/#how-to-add-policy) to your extension to allow enterprises to preconfigure settings for your extension.
 
 [Some Firefox enterprise policies](/documentation/enterprise/enterprise-policies-that-impact-extensions/) might affect the installation, behavior, and update of extensions.
 
