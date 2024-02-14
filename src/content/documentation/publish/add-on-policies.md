@@ -163,7 +163,7 @@ Add-ons that collect or transmit user data must maintain a privacy policy in the
   - If your add-on installs cookies, the placing and purpose of those cookies must be disclosed,
 - disclose how the extension collects, uses, stores, and shares or discloses information about users,
   - If data is sent to a third party, your policy must disclose the identity of those services,
-  - If your add on enables third party websites to see that it is installed, that fact must also be disclosed,
+  - If your add-on enables third party websites to see that it is installed, that fact must also be disclosed,
 - clearly describe the purpose of the data collection,
 - be the full policy text; it cannot be a link to an externally hosted privacy policy.
 
