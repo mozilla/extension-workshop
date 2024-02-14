@@ -28,7 +28,7 @@ As an extension developer, you may want to customize your add-on via policy or m
 
 {% capture content_with_toc %}
 
-## Disclosure and consent for enterprise extensions
+## Data collection disclosure and consent for enterprise extensions
 
 If your extension is installed in an enterprise via the `force_installed` or `normal_installed` options in the [ExtensionSettings enterprise policy](https://mozilla.github.io/policy-templates/#extensionsettings), you must still implement the disclosure and consent experience in the add-on.
 You can set a value via the [3rdparty enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty) and read it with `storage.managed` in the add-on to determine if consent is granted. You must display the disclosure and consent experience if the value is not set in `storage.managed`.
@@ -39,7 +39,7 @@ You can set a value via the [3rdparty enterprise policy](https://mozilla.github.
   content: content_with_toc
 %}
 
-{% capture content_with_toc %}
+{% capture content %}
 
 ## How to add policy support 
 
@@ -98,9 +98,9 @@ browser.storage.managed.get(['STRING','BOOLEAN','INTEGER'], function (data) {
 It works the same as the other [browser.storage APIs](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage).
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid,
+{% include modules/one-column.liquid,
   id: "how-to-add-policy"
-  content: content_with_toc
+  content: content
 %}
 
 <!-- END: Content with Table of Contents -->
