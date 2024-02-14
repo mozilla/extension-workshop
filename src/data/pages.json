@@ -1219,12 +1219,12 @@
                 "url": "/documentation/enterprise/enterprise-development/",
                 "subpageitems": [
                   {
-                    "title": "Disclosure and consent for enterprise extensions",
+                    "title": "Data collection disclosure and consent for enterprise extensions",
                     "id": "enterprise-consent"
                   },
                   {
                     "title": "How to add policy support",
-                    "id": "how-to-add"
+                    "id": "how-to-add-policy"
                   },
                   {
                     "title": "Distributing your policy",
