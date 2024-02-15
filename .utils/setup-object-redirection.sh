@@ -39,3 +39,17 @@ for obj in "${redirection_objects[@]}" ; do
       --website-redirect-location /documentation/develop/
   fi
 done
+
+# Per https://github.com/mozilla/extension-workshop/issues/1793
+redirection_objects=(
+  documentation/enterprise/adding-policy-support-to-your-extension/
+  documentation/enterprise/adding-policy-support-to-your-extension/index.html
+)
+for obj in "${redirection_objects[@]}" ; do
+  if aws s3api head-object --bucket "$EXTENSION_WORKSHOP_BUCKET" --key "$obj" &> /dev/null ; then
+    aws s3api put-object                    \
+      --bucket "$EXTENSION_WORKSHOP_BUCKET" \
+      --key "$obj"                          \
+      --website-redirect-location /documentation/enterprise/enterprise-development/
+  fi
+done
