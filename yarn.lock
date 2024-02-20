@@ -4006,10 +4006,10 @@ linkify-it@^5.0.0:
   dependencies:
     uc.micro "^2.0.0"
 
-liquidjs@10.10.0, liquidjs@^10.7.0:
-  version "10.10.0"
-  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-10.10.0.tgz#349197e674994b8a0c6c21db09cfa9bd4b69a702"
-  integrity sha512-f4gPvCq4uV4Fm5YezVUQoAMPmBMEuIE2LvgCnzyWoPRx+ZefH6b8DU2eb7znltRqATHF8zYvOsd5FD2z1spJgg==
+liquidjs@10.10.1, liquidjs@^10.7.0:
+  version "10.10.1"
+  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-10.10.1.tgz#1432ae7cc18641bd21e51aba551f8af963c0ad4d"
+  integrity sha512-h699VW79OLoshCTjFF02tmRCrd8t/E49LSIsjLwlg4k0TbMVjxsCRXVUEsURXbfKl3HUln2cShlDQCrSNm2YaA==
   dependencies:
     commander "^10.0.0"
 
