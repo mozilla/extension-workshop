@@ -41,6 +41,7 @@ To create the consent flow and consent dialogs your extension needs, you should 
 
 1. Does my extension collect technical or interaction data? If so, offer the user the opportunity to opt-out of this data collection, although you can always offer opt-in consent if you prefer.
 2. Does my extension collect personally identifying information? If so, get the user’s opt-in consent before collecting any of this data. Remember that personally identifying information includes technical or interaction data tagged with the user’s identity or information that can be used to identify the user, such as an URL.
+3. Does my extension exhange data with native applications using [NativeMessaging](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging).
 
 If you are unsure if your add-on collects personal data, technical data, or interaction data, check out the definition in [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management).
 
@@ -94,11 +95,13 @@ When your users arrive at your data and privacy consent dialog, they need to kno
 
 ## Prompt after install
 
-As part of your extension’s onboarding flow, include information about your privacy policy and data collection, and seek any necessary user consents. Any privacy information and settings should be clear and unmissable, separating these details from general information about your extension can help.
+As part of your extension’s onboarding flow, include information about your privacy policy and data collection, and seek any necessary user consents. Any privacy information and settings should be clear and unmissable, separating these details from general information about your extension can help. We recommend using a new tab in the currently focussed window.
 
 For more information on how to implement a post-install page or dialog, see [Best practices for onboarding, upboarding, and offboarding users](/documentation/develop/onboard-upboard-offboard-users/).
 
 As mentioned in the [Add-on policies](/documentation/publish/add-on-policies/), if your extension collects user data in association with features that run in the background, such as ad blocking, you need to make sure the data collection is not activated until you have obtained user consent.
+
+It is worth noting that if an update to your add-on adds data collection, updating users must be consented to the newly collected data. The same holds true if your add-on didn't collect any data in the past, but does so in a new update.
 
 We have talked about how you could let users opt-out of collecting technical and interaction data but must have users opt-in to collecting personally identifying information. Before you design your extension features around your consent requests, it is important to understand how these options affect your design.
 
