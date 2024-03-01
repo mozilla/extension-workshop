@@ -117,6 +117,19 @@ Where you provide the user with an opt-out, option the related features **can be
 
 <!-- END: Single Column Body Module -->
 
+{% capture content %}
+
+## Data classification
+It is important to classify data into its right category and set defaults accordingly. AMO policies require an opt-in data collection consent for personally identifiable data, and opt-out for technical and user interaction data. 
+
+Incorrect classification of data on the data collection consent will result in a review rejection.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "data-classification"
+  content: content
+%}
+
 <!-- Single Column Body Module -->
 
 {% capture content %}
