@@ -41,11 +41,12 @@ To create the consent flow and consent dialogs your extension needs, you should 
 
 1. Does my extension collect technical or interaction data? If so, offer the user the opportunity to opt-out of this data collection, although you can always offer opt-in consent if you prefer.
 2. Does my extension collect personally identifying information? If so, get the user’s opt-in consent before collecting any of this data. Remember that personally identifying information includes technical or interaction data tagged with the user’s identity or information that can be used to identify the user, such as an URL.
-3. Does my extension exchange data with native applications using [NativeMessaging](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)? If so, then the data exchanged needs to be declared in the data collection consent.
 
 If you are unsure if your add-on collects personal data, technical data, or interaction data, check out the definition in [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management). 
 
-It is important to note that “data” includes all information the add-on collects, regardless of the manner of collection. These include, but aren't limited to, data collection leading from user action (clicks, form submissions, logging in), statistical data about add-on usage, error logging within the add-on etc. 
+It is important to note that “data” includes all information the add-on collects, regardless of the manner of collection or the reason for collection. This also includes data collected as part of the add-on's primary functionality.
+
+Data sent to native applications using [NativeMessaging](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) must be declared in the data collection consent and categorized in the appropriate consent model (whether opt-in or opt-out). 
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
