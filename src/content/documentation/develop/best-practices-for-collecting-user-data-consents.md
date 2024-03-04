@@ -112,7 +112,7 @@ Where you provide the user with an opt-in option, the related feature **must be 
 
 Where you provide the user with an opt-out option, the related features **can be turned on by default** but **must be turned off if the user indicates** they want to opt-out.
 
-If the main functionality of your add-on doesn't work without collecting user data, you should provide an option within the data collection consent to uninstall the add-on. [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf) API can be used to uninstall your add-on programmatically. Please label the buttons accordingly. We recommend "Uninstall (name of add-on)" or "Remove (name of add-on)".
+If the main functionality of your add-on doesn't work without collecting user data, you should provide an option within the data collection consent to uninstall the add-on if your users don't consent to your data collection. [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf) API can be used to uninstall your add-on programmatically. We recommend naming the consent decline button appropriately, like "Decline and uninstall".
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -173,7 +173,9 @@ You can prompt the user to uninstall the extension with [`management.uninstallSe
 
 ## Your consent dialogs
 
-Once you understand your privacy consent flow, you can add a suitable consent dialog. The following are suggestions on how to present a data collection consent dialog. We recommend that all of the data collection controls and actions (that is, toggles and confirmation buttons) be present within the same view. Where the mockups include the linked text “our Privacy Policy”, this should go to your extension’s privacy policy page on AMO. If you choose to follow these mockups, remember to modify them appropriately for your extension.
+Once you understand your privacy consent flow, you can add a suitable consent dialog. The following are suggestions on how to present a data collection consent dialog. We recommend that all of the data collection controls and actions (that is, toggles and confirmation buttons) be present within the same view. Note that a summary of the data collected and how it is used must be present for each type of data collected within the consent dialog.
+
+Where the mockups include the linked text “our Privacy Policy”, this should go to your extension’s privacy policy page on AMO. If you choose to follow these mockups, remember to modify them appropriately for your extension. 
 
 ### Only personally identifying information
 The default option is not to collect personally identifying information. If you do, the user needs to actively opt-in. Remember to list the data you’re collecting; don’t make the user read your privacy policy to determine what data you are collecting and why.
