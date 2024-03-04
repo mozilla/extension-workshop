@@ -45,7 +45,7 @@ To create the consent flow and consent dialogs your extension needs, you should 
 
 If you are unsure if your add-on collects personal data, technical data, or interaction data, check out the definition in [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management). 
 
-It is important to note that “data” includes all information the add-on collects, regardless of the manner of collection. These include, but aren't limited to, data collection leading from user action (clicks, form submissions), statistical data about add-on usage, error logging within the add-on etc. 
+It is important to note that “data” includes all information the add-on collects, regardless of the manner of collection. These include, but aren't limited to, data collection leading from user action (clicks, form submissions, logging in), statistical data about add-on usage, error logging within the add-on etc. 
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
