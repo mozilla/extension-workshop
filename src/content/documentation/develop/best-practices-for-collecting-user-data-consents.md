@@ -104,7 +104,7 @@ For more information on how to implement a post-install page or dialog, see [Bes
 
 As mentioned in the [Add-on policies](/documentation/publish/add-on-policies/), if your extension collects user data in association with features that run in the background, such as ad blocking, you need to make sure the data collection is not activated until you have obtained user consent.
 
-It is worth noting that if an update to your add-on adds new personally identifyable data collection, updating users must be consented to the newly collected data (opt-in).
+It is worth noting that if an update to your add-on collects new personally identifying information, updating users must be consented to the newly collected data (opt-in).
 
 We have talked about how you could let users opt-out of collecting technical and interaction data but must have users opt-in to collecting personally identifying information. Before you design your extension features around your consent requests, it is important to understand how these options affect your design.
 
