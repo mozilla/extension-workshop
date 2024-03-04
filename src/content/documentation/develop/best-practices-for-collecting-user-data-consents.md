@@ -107,7 +107,9 @@ We have talked about how you could let users opt-out of collecting technical and
 
 Where you provide the user with an opt-in option, the related feature **must be turned off by default** and only turned on once the user has actively agreed to use that feature.
 
-Where you provide the user with an opt-out, option the related features **can be turned on by default** but **must be turned off if the user indicates** they want to opt-out.
+Where you provide the user with an opt-out option, the related features **can be turned on by default** but **must be turned off if the user indicates** they want to opt-out.
+
+If the main functionality of your add-on doesn't work without collecting user data, please provide an option within the data collection consent to uninstall the add-on. [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf) API can be used to achieve unstallation of your add-on programmatically. Please label the buttons accordingly. We recommend "Uninstall (name of add-on)" or "Remove (name of add-on)"
 
 {% endcapture %}
 {% include modules/one-column.liquid,
