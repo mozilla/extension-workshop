@@ -9,7 +9,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    enviroment: stage 
+    environment:  stage
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
