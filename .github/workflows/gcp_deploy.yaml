@@ -2,12 +2,13 @@ name: Deploy to GCS
 
 on:
   push:
-   branches:
-      - gcs-pipleine
+    branches:
+      - gcs-pipeline
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: stage
+    environment:  stage
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -17,7 +18,7 @@ jobs:
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
-      - name: set up gcloud 
+      - name: set up gcloud
         uses: google-github-actions/setup-gcloud@v2
  
       - name: stage build with unpublsiehd contents
@@ -26,6 +27,7 @@ jobs:
           yarn build:unpublished
       - name: Run deployment script
         run: |
-           export EXTENSION_WORKSHOP_BUCKET_GCS=${{ env.EXTENSION_WORKSHOP_BUCKET_GCS }}
-           bash ${Github_Workspace}/bin/gcs-deploy.sh 
-  
+          bash ${Github_Workspace}/bin/gcs-deploy.sh 
+        env:
+          EXTENSION_WORKSHOP_BUCKET_GCS: ${{ env.EXTENSION_WORKSHOP_BUCKET_GCS }}
+         
