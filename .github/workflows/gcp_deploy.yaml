@@ -2,14 +2,22 @@ name: Deploy to GCS
 
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'stage'
+        options:
+          - stage
+          - prod
   push:
     branches:
       - gcs-pipeline
+    
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:  stage
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
