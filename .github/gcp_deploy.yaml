@@ -1,0 +1,33 @@
+name: Deploy to GCS
+
+on:
+  workflow_dispatch:
+    branches:
+      - gcs-pipeline
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    enviroment: stage 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0.3.0
+        with:
+          version: 'latest'
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+      - name: Echo pwd
+        run: pwd 
+      - name: stage build with unpublsiehd contents
+        run: |
+          yarn install
+          yarn build:unpublished
+      - name: Run deployment script
+        run: |
+          bash ${Github_Workspace}/bin/gcs-deploy.sh 
+        env:
+          EXTENSION_WORKSHOP_BUCKET_GCS = ${{ secrets.EXTENSION_WORKSHOP_BUCKET_GCS }}
+         
