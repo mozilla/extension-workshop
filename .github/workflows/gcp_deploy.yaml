@@ -25,9 +25,10 @@ jobs:
         run: |
           yarn install
           yarn build:unpublished
+      - name: echo env variables
+        run: |
+          echo $EXTENSION_WORKSHOP_BUCKET_GCS
       - name: Run deployment script
         run: |
-          bash ${Github_Workspace}/bin/gcs-deploy.sh 
-        env:
-          EXTENSION_WORKSHOP_BUCKET_GCS: ${{ env.EXTENSION_WORKSHOP_BUCKET_GCS }}
+          bash ./bin/gcs-deploy.sh  code 
          
