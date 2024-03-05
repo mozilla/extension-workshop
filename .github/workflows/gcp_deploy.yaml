@@ -10,9 +10,7 @@ on:
         options:
           - stage
           - prod
-  push:
-    branches:
-      - gcs-pipeline
+
     
 
 jobs:
