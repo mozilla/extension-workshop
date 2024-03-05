@@ -1,21 +1,14 @@
 name: Deploy to GCS
 
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Environment to deploy to'
-        required: true
-        default: 'stage'
-        options:
-          - stage
-          - prod
-
-    
+  push:
+    branches:
+      - gcs-pipleine
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: stage
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -34,7 +27,6 @@ jobs:
           yarn build:unpublished
       - name: Run deployment script
         run: |
-          bash ${Github_Workspace}/bin/gcs-deploy.sh 
-        env:
-          EXTENSION_WORKSHOP_BUCKET_GCS = ${{ secrets.EXTENSION_WORKSHOP_BUCKET_GCS }}
-         
+           export EXTENSION_WORKSHOP_BUCKET_GCS=${{ env.EXTENSION_WORKSHOP_BUCKET_GCS }}
+           bash ${Github_Workspace}/bin/gcs-deploy.sh 
+  
