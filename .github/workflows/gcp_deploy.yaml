@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - gcs-pipleine
+  workflow_dispatch:
+    
 
 jobs:
   deploy:
