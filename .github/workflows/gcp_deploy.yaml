@@ -2,10 +2,8 @@ name: Deploy to GCS
 
 on:
   push:
-    branches:
+   branches:
       - gcs-pipleine
-    
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
