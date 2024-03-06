@@ -1,6 +1,9 @@
 #!/bin/bash
 
 set -ex
+ EXTENSION_WORKSHOP_BUCKET_GCS=$1
+
+ echo $EXTENSION_WORKSHOP_BUCKET_GCS
 
  CODE_DIR="dist"
  # For short-lived assets; in seconds

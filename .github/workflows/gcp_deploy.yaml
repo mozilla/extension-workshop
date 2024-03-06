@@ -6,7 +6,7 @@ on:
       - gcs-pipeline
 
 jobs:
-  deploy:
+  deploy-stage:
     runs-on: ubuntu-latest
     environment:  stage
     steps:
@@ -25,10 +25,7 @@ jobs:
         run: |
           yarn install
           yarn build:unpublished
-      - name: echo env variables
+      - name: Deploying unpublsiehd content to stage. 
         run: |
-          echo $EXTENSION_WORKSHOP_BUCKET_GCS
-      - name: Run deployment script
-        run: |
-          bash ./bin/gcs-deploy.sh  code 
+          sh ./bin/gcs-deploy.sh  ${{vars.EXTENSIONWORKSHOP_BUCKET_STAGE}}
          
