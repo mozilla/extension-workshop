@@ -125,7 +125,7 @@ If your extension doesn't work without collecting user data, provide an option i
 {% capture content %}
 
 ## Data classification
-It is important to classify data into its right category and set defaults accordingly. AMO policies require an opt-in data collection consent for personally identifiable data, and opt-out for technical and user interaction data. 
+It is important to classify data into its right category and set defaults accordingly. AMO policies require an opt-in data collection consent for personally identifiable data and opt-out for technical and user interaction data. 
 
 Incorrect classification of data on the data collection consent will result in a review rejection.
 
