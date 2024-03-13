@@ -173,7 +173,7 @@ You can prompt the user to uninstall the extension with [`management.uninstallSe
 
 ## Your consent dialogs
 
-Once you understand your privacy consent flow, you can add a suitable consent dialog. The following are suggestions on how to present a data collection consent dialog. We recommend that all of the data collection controls and actions (that is, toggles and confirmation buttons) be present within the same view. Note that a summary of the data collected and how it is used must be present for each type of data collected within the consent dialog.
+Once you understand your privacy consent flow, you can add a suitable consent dialog. The following are suggestions on how to present a data collection consent dialog. We recommend that all of the data collection controls and actions (toggles and confirmation buttons) be present within the same view. Note that a summary of the data collected and how it is used must be present for each type of data collected within the consent dialog.
 
 Where the mockups include the linked text “our Privacy Policy”, this should go to your extension’s privacy policy page on AMO. If you choose to follow these mockups, remember to modify them appropriately for your extension. 
 
