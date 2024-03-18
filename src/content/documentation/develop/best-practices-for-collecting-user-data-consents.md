@@ -180,19 +180,17 @@ Where the mockups include the linked text “our Privacy Policy”, this should 
 ### Only personally identifying information
 The default option is not to collect personally identifying information. If you do, the user needs to actively opt-in. Remember to list the data you’re collecting; don’t make the user read your privacy policy to determine what data you are collecting and why.
 
-  ![Mockup of a prompt that could be used when an extension requires consent for processing personal data only.](/assets/img/documentation/develop/privacy_prompt_mockup_personal_data.png)
+  ![Mockup of a prompt that could be used when an extension requires consent for processing personal data only.](/assets/img/documentation/develop/consent-personal.jpg)
 ### Only technical or interaction data
 Data collected does not include user identifiers. The option to collect technical data can be set as the default response.
 
-  ![Mockup of a prompt that could be used when an extension requires consent for processing technical data only.](/assets/img/documentation/develop/privacy_prompt_mockup_anonymous_data.png)
+  ![Mockup of a prompt that could be used when an extension requires consent for processing technical data only.](/assets/img/documentation/develop/consent-anon.jpg)
 ### Combination: Personal and technical data.
 The add-on is requesting both types of data collection. Please ensure the choices are separate.
 
-  ![Mockup of a prompt that could be used when extension requires consent for processing personal and technical data.](/assets/img/documentation/develop/privacy_prompt_mockup_combined.png)
+  ![Mockup of a prompt that could be used when extension requires consent for processing personal and technical data.](/assets/img/documentation/develop/consent-mixed.jpg)
 ### Required data collection
-The extension requires personal or technical data collection to provide its functionality, it cannot be used without. The default option is your choice.
-
-  ![Mockup of a prompt that could be used when the user provides insufficient permission for privacy related features so that the extension cannot work. Gives the user the option to uninstall the extension or review their privacy settings.](/assets/img/documentation/develop/privacy_prompt_mockup_remove_extension.png)
+The extension requires personal or technical data collection to provide its functionality and cannot be used without. The consent decline option uninstalls the extension.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
