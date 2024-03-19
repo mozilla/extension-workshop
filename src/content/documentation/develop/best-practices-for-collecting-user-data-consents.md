@@ -98,7 +98,7 @@ When your users arrive at your data and privacy consent dialog, they need to kno
 
 ## Prompt after install
 
-As part of your extension’s onboarding flow, include information about your privacy policy and data collection and seek any necessary user consent. Any privacy information and settings should be clear and unmissable. Separating these details from general information about your extension can help. Using a new tab in the focused window is a good way of doing this.
+As part of your extension’s onboarding flow, include information about your privacy policy and data collection and seek any necessary user consent. Any privacy information and settings should be clear and unmissable. Separating these details from general information about your extension can help. Using a new tab in the focused window is recommended.
 
 For more information on how to implement a post-install page or dialog, see [Best practices for onboarding, upboarding, and offboarding users](/documentation/develop/onboard-upboard-offboard-users/).
 
