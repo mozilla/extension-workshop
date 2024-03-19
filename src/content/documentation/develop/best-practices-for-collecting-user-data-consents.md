@@ -143,7 +143,7 @@ Incorrect classification of data on the data collection consent will result in a
 
 Before designing your consent dialogs, you should determine the privacy consent flow for your extension, based on the data it collects. Here is an example of a consent flow where an extension collects personally identifying information and technical data:
 
-![Illustrating an example of the application flow for handling privacy consents.](/assets/img/documentation/develop/MDN_Privacy_Flags_Flow_Diagram.png)
+![Illustrating an example of the application flow for handling privacy consents.](/assets/img/documentation/develop/consent-flowchart.png)
 
 In this example:
 
