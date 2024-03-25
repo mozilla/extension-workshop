@@ -5,7 +5,7 @@ permalink: /documentation/develop/best-practices-for-collecting-user-data-consen
 topic: Develop
 tags:
   [add-ons, extensions, how-to, privacy, ui, user-interface, ux, webextensions]
-contributors: [rebloor, hamatti, mkaply]
+contributors: [rebloor, hamatti, mkaply, abhn]
 last_updated_by: mkaply
 date: 2023-01-11
 ---
@@ -42,7 +42,11 @@ To create the consent flow and consent dialogs your extension needs, you should 
 1. Does my extension collect technical or interaction data? If so, offer the user the opportunity to opt-out of this data collection, although you can always offer opt-in consent if you prefer.
 2. Does my extension collect personally identifying information? If so, get the user’s opt-in consent before collecting any of this data. Remember that personally identifying information includes technical or interaction data tagged with the user’s identity or information that can be used to identify the user, such as an URL.
 
-If you are unsure if your add-on collects personal data, technical data, or interaction data, check out the definition in [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management).
+If you are unsure whether your add-on collects personal, technical, or interaction data, refer to the definition in [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management). 
+
+"Data” includes all information the extension collects, regardless of the manner of collection or the reason for collection. This also includes data collected as part of the extension’s  primary functionality.
+
+Data sent to native applications using [NativeMessaging](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) must be declared in the data collection consent and categorized in the appropriate consent model (whether opt-in or opt-out). 
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
@@ -94,17 +98,21 @@ When your users arrive at your data and privacy consent dialog, they need to kno
 
 ## Prompt after install
 
-As part of your extension’s onboarding flow, include information about your privacy policy and data collection, and seek any necessary user consents. Any privacy information and settings should be clear and unmissable, separating these details from general information about your extension can help.
+As part of your extension’s onboarding flow, include information about your privacy policy and data collection and seek any necessary user consent. Any privacy information and settings should be clear and unmissable. Separating these details from general information about your extension can help. Using a new tab in the focused window is recommended.
 
 For more information on how to implement a post-install page or dialog, see [Best practices for onboarding, upboarding, and offboarding users](/documentation/develop/onboard-upboard-offboard-users/).
 
 As mentioned in the [Add-on policies](/documentation/publish/add-on-policies/), if your extension collects user data in association with features that run in the background, such as ad blocking, you need to make sure the data collection is not activated until you have obtained user consent.
 
+If an update to your extension collects new personally identifying information, existing users must consent to the new data collection (opt-in) when your extension updates.
+
 We have talked about how you could let users opt-out of collecting technical and interaction data but must have users opt-in to collecting personally identifying information. Before you design your extension features around your consent requests, it is important to understand how these options affect your design.
 
 Where you provide the user with an opt-in option, the related feature **must be turned off by default** and only turned on once the user has actively agreed to use that feature.
 
-Where you provide the user with an opt-out, option the related features **can be turned on by default** but **must be turned off if the user indicates** they want to opt-out.
+Where you provide the user with an opt-out option, the related features **can be turned on by default** but **must be turned off if the user indicates** they want to opt-out.
+
+If your extension doesn't work without collecting user data, provide an option in the data collection consent to uninstall it if your users don't consent to the data collection. The [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf) API can be used to uninstall your extension. Name the consent decline button appropriately, such as "Decline and uninstall".
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -114,6 +122,19 @@ Where you provide the user with an opt-out, option the related features **can be
 
 <!-- END: Single Column Body Module -->
 
+{% capture content %}
+
+## Data classification
+It is important to classify data into its right category and set defaults accordingly. Mozilla's add-on policies require an opt-in data collection consent for personally identifiable data and opt-out for technical and user interaction data. 
+
+Incorrect classification of data on the data collection consent will result in a review rejection.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "data-classification"
+  content: content
+%}
+
 <!-- Single Column Body Module -->
 
 {% capture content %}
@@ -122,7 +143,7 @@ Where you provide the user with an opt-out, option the related features **can be
 
 Before designing your consent dialogs, you should determine the privacy consent flow for your extension, based on the data it collects. Here is an example of a consent flow where an extension collects personally identifying information and technical data:
 
-![Illustrating an example of the application flow for handling privacy consents.](/assets/img/documentation/develop/MDN_Privacy_Flags_Flow_Diagram.png)
+![Illustrating an example of the application flow for handling privacy consents.](/assets/img/documentation/develop/consent-flowchart.png)
 
 In this example:
 
@@ -152,24 +173,24 @@ You can prompt the user to uninstall the extension with [`management.uninstallSe
 
 ## Your consent dialogs
 
-Once you understand your privacy consent flow, you can add a suitable consent dialog. The following are suggestions on how to present a data collection consent dialog. Where the mockups include the linked text “our Privacy Policy”, this should go to your extension’s privacy policy page on AMO. If you choose to follow these mockups, remember to modify them appropriately for your extension.
+Once you understand your privacy consent flow, you can add a suitable consent dialog. The following are suggestions on how to present a data collection consent dialog. We recommend that all of the data collection controls and actions (toggles and confirmation buttons) be present within the same view. A summary of the data collected and how it is used must be present for each type of data collected within the consent dialog.
+
+Where the mockups include the linked text “our Privacy Policy”, this should go to your extension’s privacy policy page on AMO. If you choose to follow these mockups, remember to modify them appropriately for your extension. 
 
 ### Only personally identifying information
 The default option is not to collect personally identifying information. If you do, the user needs to actively opt-in. Remember to list the data you’re collecting; don’t make the user read your privacy policy to determine what data you are collecting and why.
 
-  ![Mockup of a prompt that could be used when an extension requires consent for processing personal data only.](/assets/img/documentation/develop/privacy_prompt_mockup_personal_data.png)
+  ![Mockup of a prompt that could be used when an extension requires consent for processing personal data only.](/assets/img/documentation/develop/consent-personal.jpg)
 ### Only technical or interaction data
 Data collected does not include user identifiers. The option to collect technical data can be set as the default response.
 
-  ![Mockup of a prompt that could be used when an extension requires consent for processing technical data only.](/assets/img/documentation/develop/privacy_prompt_mockup_anonymous_data.png)
+  ![Mockup of a prompt that could be used when an extension requires consent for processing technical data only.](/assets/img/documentation/develop/consent-anon.jpg)
 ### Combination: Personal and technical data.
 The add-on is requesting both types of data collection. Please ensure the choices are separate.
 
-  ![Mockup of a prompt that could be used when extension requires consent for processing personal and technical data.](/assets/img/documentation/develop/privacy_prompt_mockup_combined.png)
+  ![Mockup of a prompt that could be used when extension requires consent for processing personal and technical data.](/assets/img/documentation/develop/consent-mixed.jpg)
 ### Required data collection
-The extension requires personal or technical data collection to provide its functionality, it cannot be used without. The default option is your choice.
-
-  ![Mockup of a prompt that could be used when the user provides insufficient permission for privacy related features so that the extension cannot work. Gives the user the option to uninstall the extension or review their privacy settings.](/assets/img/documentation/develop/privacy_prompt_mockup_remove_extension.png)
+The extension requires personal or technical data collection to provide its functionality and cannot be used without. The consent decline option uninstalls the extension.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
