@@ -188,7 +188,7 @@ The add-on is requesting both types of data collection. Please ensure the choice
 
   ![Mockup of a prompt that could be used when extension requires consent for processing personal and technical data.](/assets/img/documentation/develop/consent-mixed.jpg)
 ### Required data collection
-The extension requires personal or technical data collection to provide its functionality and cannot be used without. The consent decline option uninstalls the extension using [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
+The extension requires personal or technical data collection to provide its main functionality and cannot be used without. The consent decline option uninstalls the extension using [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
