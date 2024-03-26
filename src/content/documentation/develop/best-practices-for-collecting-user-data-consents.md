@@ -153,9 +153,9 @@ In this example:
 3. The option for collecting personally identifying information must default to disabled so that the user has to actively opt-in.
 4. The options for technical data may default to enabled, so that the user may choose to opt-out.
 5. If the user:
-    - opts IN to all features &rarr; continue with all extension features enabled.
-    - opts OUT of any feature that cannot be disabled &rarr; uninstall the extension with [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
-    - opts OUT only from features that can be disabled &rarr; disable those features and continue running the extension.
+    - accepts mandatory and optional data collection &rarr; continue with data collection enabled enabled.
+    - declines mandatory data collection &rarr; uninstall the extension with [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
+    - declines optional data collection &rarr; disable optional data collection and continue running the extension.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
