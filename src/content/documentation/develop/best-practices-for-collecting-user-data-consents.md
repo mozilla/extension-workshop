@@ -154,8 +154,8 @@ In this example:
 4. The options for technical data may default to enabled, so that the user may choose to opt-out.
 5. If the user:
     - accepts mandatory and optional data collection &rarr; continue with data collection enabled enabled.
-    - declines mandatory data collection &rarr; uninstall the extension with [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
     - declines optional data collection &rarr; disable optional data collection and continue running the extension.
+    - declines mandatory data collection &rarr; uninstall the extension with [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
