@@ -148,7 +148,7 @@ Before designing your consent dialogs, you should determine the privacy consent 
 In this example:
 
 1. Your extension should start up with all data collection functionality disabled.
-2. Immediately after installation (see [Best practices for onboarding, upboarding, and offboarding users](/documentation/develop/onboard-upboard-offboard-users/)), present them with a consent dialog.
+2. Immediately after installation, present them with a consent dialog. (See [Best practices for onboarding, upboarding, and offboarding users](/documentation/develop/onboard-upboard-offboard-users/) for more.)
    On this dialog:
 3. The option for collecting personally identifying information must default to disabled so that the user has to actively opt-in.
 4. The options for technical data may default to enabled, so that the user may choose to opt-out.
