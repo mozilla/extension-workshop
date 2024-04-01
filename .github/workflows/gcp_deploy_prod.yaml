@@ -3,13 +3,12 @@ name: Deploy to GCS
 on:
   push:
     tags:
-    - '20[0-9][0-9].[0-9][0-9].[0-9][0-9](-[0-9]+)?'
-    
+      - "20[0-9][0-9].[0-9][0-9].[0-9][0-9](-[0-9]+)?"
 
 jobs:
   deploy-prod:
     runs-on: ubuntu-latest
-    environment:  Prod
+    environment: Prod
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -21,12 +20,11 @@ jobs:
 
       - name: set up gcloud
         uses: google-github-actions/setup-gcloud@v2
- 
+
       - name: stage build with unpublsiehd contents
         run: |
           yarn install
           yarn build:production
-      - name: Deploying unpublsiehd content to stage. 
+      - name: Deploying unpublsiehd content to stage.
         run: |
           sh ./bin/gcs-deploy.sh  ${{vars.EXTENSIONWORKSHOP_BUCKET_PROD}}
-
