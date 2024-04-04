@@ -25,12 +25,12 @@
     mv version.json dist/__version__
     gsutil cp  -a public-read   dist/__version__  "gs://${EXTENSION_WORKSHOP_BUCKET_GCS}/__version__"
   # __version__ JSON; short cache
-    gsutil                                      \
+    gsutil                                       \
+    setmeta                                      \
     -h "cache-control: max-age=${TEN_MINS}"     \
     -h "content-type: application/json"          \
     -h "$CSPSTATIC"                              \
     -h "$ACAO"                                   \
-    setmeta                                       \
     "gs://${EXTENSION_WORKSHOP_BUCKET_GCS}/__version__"
 
   fi
