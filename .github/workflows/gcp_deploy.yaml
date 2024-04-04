@@ -30,6 +30,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+          fetch-tags: true
+
       - name: Setup Node js
         uses: actions/setup-node@v3
 
@@ -54,6 +58,6 @@ jobs:
           bash  ./.utils/build-version-json.sh
           fi
 
-      - name: Deploying unpublsiehd content to stage.
+      - name: Deploy the website to stage
         run: |
           sh ./.utils/gcs-deploy.sh  ${{ vars.EXTENSIONWORKSHOP_BUCKET_STAGE }}
