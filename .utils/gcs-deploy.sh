@@ -23,7 +23,7 @@
 
    if [ -e version.json ]; then
     mv version.json dist/__version__
-    gsutil cp dist/__version__/  "gs://${EXTENSION_WORKSHOP_BUCKET_GCS}/__version__"
+    gsutil cp dist/__version__  "gs://${EXTENSION_WORKSHOP_BUCKET_GCS}/__version__"
   # __version__ JSON; short cache
     gsutil                                      \
     -h "cache-control: max-age=${TEN_MINS}"     \
@@ -33,7 +33,7 @@
     rsync                                       \
     -J                                          \
     -a public-read                              \
-    dist/_version_ "gs://${EXTENSION_WORKSHOP_BUCKET_GCS}/__version__"
+    dist/_version_/ "gs://${EXTENSION_WORKSHOP_BUCKET_GCS}/__version__"
 
   fi
 
