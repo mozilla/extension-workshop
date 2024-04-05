@@ -16,12 +16,14 @@ jobs:
           fetch-depth: 1
           fetch-tags: true
 
-      - name: Setup Node js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
+
       - name: Install dependencies
         run: yarn install --immutable
+
       - name: Test current build
         run: yarn run test-ci
         continue-on-error: true
@@ -50,13 +52,14 @@ jobs:
         run: |
           yarn install
           yarn build:production
+
       - name: Build version.json file
         run: |
           if [ -e version.json ]; then
-          echo "version.json exists, skipping build"
+            echo "version.json exists, skipping build"
           else
-          echo "version.json does not exist, running build-version-json.sh"
-          bash  ./.utils/build-version-json.sh
+            echo "version.json does not exist, running build-version-json.sh"
+            bash  ./.utils/build-version-json.sh
           fi
 
       - name: Deploy website to prod
