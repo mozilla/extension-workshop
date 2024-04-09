@@ -50,7 +50,7 @@ jobs:
 
       - name: Build the website
         run: |
-          yarn install
+          yarn install --immutable
           yarn build:production
 
       - name: Build version.json file
