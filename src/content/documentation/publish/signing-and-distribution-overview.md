@@ -33,10 +33,11 @@ contributors:
     tedmcox,
     SolidAxel,
     jean-acsas,
-    djbrown
+    djbrown,
+    thatshubham
   ]
-last_updated_by: djbrown
-date: 2023-04-22
+last_updated_by: thatshubham
+date: 2024-04-16
 ---
 
 <!-- Page Hero Banner -->
@@ -84,7 +85,7 @@ Mozilla signs add-ons through [addons.mozilla.org](https://addons.mozilla.org). 
 
 <!-- END: Table -->
 
-All submissions, regardless of how they are signed, are subject to Mozilla's [Add-on Policies](/documentation/publish/add-on-policies/) and the the [Firefox Add-on Distribution Agreement](/documentation/publish/firefox-add-on-distribution-agreement/).
+All submissions, regardless of how they are signed, are subject to Mozilla's [Add-on Policies](/documentation/publish/add-on-policies/) and the [Firefox Add-on Distribution Agreement](/documentation/publish/firefox-add-on-distribution-agreement/).
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
