@@ -11,7 +11,7 @@ TEN_MINS="600"
 # For long-lived assets; in seconds
 ONE_YEAR="31536000"
 
-CSPSTATIC="x-goog-meta-content-security-policy: default-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors: 'none'; object-src 'none'"
+CSPSTATIC="x-goog-meta-content-security-policy: default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'"
 CSP="x-goog-meta-content-security-policy: default-src 'none'; img-src 'self' data:; form-action 'self' https://www.mozilla.org/en-US/newsletter/;  media-src 'self' blob:; script-src 'self' https://www.youtube.com/iframe_api https://www.youtube.com/s/player/ 'sha256-vqFvYKh0rwFP9fSa0PuzUff2ElHQ+rkjGfycqUNqufQ=' https://www.googletagmanager.com/gtag/js ; font-src 'self'; frame-ancestors 'none';  frame-src  https://www.youtube.com/embed/ https://calendar.google.com/calendar/appointments/; base-uri 'none'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://blog.mozilla.org/addons/feed/ https://www.mozilla.org/en-US/newsletter/ https://*.google-analytics.com;"
 ACAO="x-goog-meta-access-control-allow-origin: *"
 
