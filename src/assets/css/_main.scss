@@ -72,7 +72,6 @@ a:not(.button) {
 main {
   a[href*="//"]:not([href*="extension-workshop.com"]),
   a[href*="//"]:not([href*="extensionworkshop.allizom.org"]),
-  a[href*="//"]:not([href*="extensionworkshop-dev.allizom.org"]),
   a[href*="//"]:not([href*="localhost"]),
   a[target='_blank'] {
     &::after {
