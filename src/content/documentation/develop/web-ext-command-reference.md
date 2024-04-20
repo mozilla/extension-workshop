@@ -29,10 +29,11 @@ contributors:
     tofumatt,
     wbamberg,
     willdurand,
-    djbrown
+    djbrown,
+    Robot-Inventor
   ]
-last_updated_by: djbrown
-date: 2023-04-22
+last_updated_by: Robot-Inventor
+date: 2024-04-20
 ---
 
 <!-- Page Hero Banner -->
@@ -87,6 +88,15 @@ Environment variable: `$WEB_EXT_AS_NEEDED=true`
 Overwrite destination package file if it exists. Without this option, web-ext will exit in error if the destination file already exists.
 
 Environment variable: `$WEB_EXT_OVERWRITE_DEST=true`
+</section>
+
+<section id="filename">
+
+#### `--filename`, `-n`
+
+Name of the created extension package file. In this option, the values defined in `manifest.json` can be used by enclosing them with `{ }`. The default value is `{name}-{version}.zip`.
+
+Environment variable: `$WEB_EXT_FILENAME`
 </section>
 </section><!-- web-ext-build -->
 
