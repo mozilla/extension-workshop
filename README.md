@@ -329,22 +329,13 @@ If you don't want the page to be labelled as a draft (such as and when it's read
 ### Tagging
 
 Tags should aim to follow the AMO calendar format: `YYYY.MM.DD` with an optional
-`-x` suffix for cherry-picking, and an optional additional `-stage` suffix for stage
-deploys as mentioned below.
+`-x` suffix for cherry-picking.
 
 ## Deployment
 
-All deployments for staging and production are handled via the [Releases](https://github.com/mozilla/extension-workshop/releases) page.
-
-### Dev Deploys
-
-The site is auto-deployed on commits to `master` to https://extensionworkshop-dev.allizom.org/. You can check the version on -dev with [the dev version link](https://extensionworkshop-dev.allizom.org/__version__).
-
 ### Stage Deploys
 
-Tags matching `^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?-stage$` will be deployed to https://extensionworkshop.allizom.org/. You can check the version on stage with [the stage version link](https://extensionworkshop.allizom.org/__version__).
-
-A good example tag for a stage deploy would be `2022.03.03-stage`.
+The site is auto-deployed on commits to `master` to https://extensionworkshop.allizom.org/. You can check the version with [the stage version link](https://extensionworkshop.allizom.org/__version__).
 
 ### Production Deploys
 
