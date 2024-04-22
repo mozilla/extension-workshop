@@ -341,4 +341,4 @@ The site is auto-deployed on commits to `master` to https://extensionworkshop.al
 
 Tags matching `^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?$` regular expression will be deployed to https://extensionworkshop.com/. You can check the version on production with [the production version link](https://extensionworkshop.com/__version__).
 
-A good example tag for a production deploy would be `2022.03.03`.
+A good example tag for a production deploy would be `2022.03.03`. 
