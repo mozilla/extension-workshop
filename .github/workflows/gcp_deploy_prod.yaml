@@ -3,7 +3,7 @@ name: Deploy to GCS Prod
 on:
   push:
     tags:
-      - "20[0-9][0-9].[0-9][0-9].[0-9][0-9](-[0-9]+)?"
+      - "202[0-9].[0-9][0-9].[0-9][0-9]"
   workflow_dispatch:
 
 jobs:
@@ -13,8 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 1
-          fetch-tags: true
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -22,7 +21,7 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: yarn install
 
       - name: Test current build
         run: yarn run test-ci
@@ -50,7 +49,7 @@ jobs:
 
       - name: Build the website
         run: |
-          yarn install --immutable
+          yarn install 
           yarn build:production
 
       - name: Build version.json file
