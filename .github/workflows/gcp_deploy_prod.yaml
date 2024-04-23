@@ -3,7 +3,7 @@ name: Deploy to GCS Prod
 on:
   push:
     tags:
-      - "202[0-9].[0-9][0-9].[0-9][0-9]"
+      - "202[0-9].[0-9][0-9].[0-9][0-9]*"
   workflow_dispatch:
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
 
       - name: Test current build
         run: yarn run test-ci
@@ -52,7 +52,7 @@ jobs:
 
       - name: Build the website
         run: |
-          yarn install 
+          yarn install  --immutable 
           yarn build:production
 
       - name: Build version.json file
