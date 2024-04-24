@@ -20,7 +20,7 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
 
       - name: Test current build
         run: yarn run test-ci
