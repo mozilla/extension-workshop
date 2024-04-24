@@ -3,7 +3,7 @@ name: Deploy to GCS Prod
 on:
   push:
     tags:
-      - "202[0-9].[0-9][0-9].[0-9][0-9]*"
+      - "20*"
   workflow_dispatch:
 
 jobs:
