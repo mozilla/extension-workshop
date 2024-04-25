@@ -145,14 +145,6 @@ web-ext run --firefox="C:\Program Files\Mozilla Firefox\firefox.exe"
 
 See the [run command](/documentation/develop/web-ext-command-reference/#web-ext-run) reference to learn more.
 
-### Testing in Firefox 48
-
-Firefox 48 was the first stable version to use the WebExtension platform, but it doesn't allow `web-ext` to install an extension remotely. You need to run your extension in Firefox 48 using:
-
-```shell
-web-ext run --pre-install
-```
-
 <section id="testing-in-firefox-for-android"></section>
 
 ### Testing in Firefox for Android
