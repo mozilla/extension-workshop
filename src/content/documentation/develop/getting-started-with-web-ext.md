@@ -398,7 +398,10 @@ module.exports = {
 
 `web-ext` will load existing configuration files in the following order:
 
-- A config file named .web-ext-config.js in your home directory, for example: - On Windows: `C:\Users\<username>\.web-ext-config.js` - On macOS: `/Users/<username>/.web-ext-config.js` - On Linux: `/home/<username>/.web-ext-config.js`
+- A config file named .web-ext-config.js in your home directory, for example: 
+  - On Windows: `C:\Users\<username>\.web-ext-config.js`
+  - On macOS: `/Users/<username>/.web-ext-config.js`
+  - On Linux: `/home/<username>/.web-ext-config.js`
 - A config property named `"webExt"` included in a `package.json` file in the current directory.
 - A config file named `web-ext-config.js` in the current directory.
 

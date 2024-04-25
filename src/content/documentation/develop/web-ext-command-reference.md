@@ -31,8 +31,8 @@ contributors:
     willdurand,
     djbrown
   ]
-last_updated_by: djbrown
-date: 2023-04-22
+last_updated_by: rebloor
+date: 2024-04-26
 ---
 
 <!-- Page Hero Banner -->
@@ -97,6 +97,18 @@ Environment variable: `$WEB_EXT_OVERWRITE_DEST=true`
 Opens the [web-ext documentation](/documentation/develop/getting-started-with-web-ext/) in the user's default browser.
 
 </section><!-- web-ext-docs -->
+
+<section id="web-ext-dump-config">
+
+### `web-ext dump-config`
+
+::: note
+This command was added in web-ext 8.0.0.
+:::
+
+Outputs the configuration file in JSON format.
+
+</section><!-- web-ext-dump-config -->
 
 <section id="web-ext-lint">
 
@@ -507,23 +519,24 @@ This option is useful to prevent issues when the number of watched files is high
 
 ### `web-ext sign`
 
-This command uses the [addons.mozilla.org API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to sign your extension. If successful, it will download the signed `.xpi` file, which you can use to [self-host your extension](/documentation/publish/self-distribution/).
+This command uses the [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html) (8.0.0 or later) or the [addons.mozilla.org API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) (7.11.0 or earlier) to sign your extension. If successful, it downloads the signed `.xpi` file, which you can use to [self-host your extension](/documentation/publish/self-distribution/).
 
-You need to create [API access credentials](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#access-credentials) to run this command. [Obtain your personal access credentials here](https://addons.mozilla.org/developers/addon/api/key/).
+You must create [API access credentials](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#access-credentials) to run this command. [Obtain your personal access credentials here](https://addons.mozilla.org/developers/addon/api/key/).
 
 <section id="use-submission-api">
 
-#### `--use-submission-api`
+#### `--use-submission-api` 
 
-Use the experimental [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to sign your extension. This allows listed versions to be freely created by enabling all necessary additional metadata to be submitted at the same time as the extension file.
+::: note
+This option was added in web-ext 7.3.1 and removed in 8.0.0. In 8.0.0 and later the addons.mozilla.org add-on submission API is used by default.
+:::
 
-With this option enabled, `--channel` changes to be a required option with no default.  The choices remain `listed` and `unlisted`.
+Use the [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to sign your extension. This allows listed versions to be freely created by enabling all necessary additional metadata to be submitted at the same time as the extension file.
+
+With this option enabled, `--channel` changes to be a required option with no default. The choices remain `listed` and `unlisted`.
 
 Environment variable: `$WEB_EXT_USE_SUBMISSION_API`
 
-::: note
-This option was added in web-ext 7.3.1.
-:::
 </section>
 
 <section id="api-key">
@@ -548,7 +561,11 @@ Environment variable: `$WEB_EXT_API_SECRET`
 
 #### `--api-url-prefix`
 
-The signing API URL prefix. This should always be a string. If not specified, this will default to&nbsp;`https://addons.mozilla.org/api/v4` which is the production API.
+::: note alert
+This option was removed in 8.0.0.
+:::
+
+A string containing the signing API URL prefix. If not specified, defaults to the production API: `https://addons.mozilla.org/api/v4`.
 
 ::: note alert
 This option is ignored when `--use-submission-api` is used. See `--amo-base-url` instead.
@@ -557,14 +574,27 @@ This option is ignored when `--use-submission-api` is used. See `--amo-base-url`
 Environment variable: `$WEB_EXT_API_URL_PREFIX`
 </section>
 
+<section id="--approval-timeout">
+
+#### `--approval-timeout`
+
+::: note alert
+This option was added in 8.0.0.
+:::
+
+Number of milliseconds to wait for approval before giving up. Set to 0 to disable wait for approval. Defaults to `timeout` if not set.
+
+Environment variable: `$WEB_EXT_API_APPROVAL_TIMEOUT`
+</section>
+
 <section id="amo-base-url">
 
 #### `--amo-base-url`
 
-The add-on submission API base URL. This should always be a string. If not specified, this will default to&nbsp;`https://addons.mozilla.org/api/v5` which is the production API.
+A string containing the add-on submission API base URL. If not specified, defaults to the production API: `https://addons.mozilla.org/api/v5`.
 
 ::: note alert
-This option is only used when `--use-submission-api` is used. See `--api-url-prefix` instead.
+In 7.11.0 and earlier, this option is only used when `--use-submission-api` is used. See `--api-url-prefix` instead.
 :::
 
 Environment variable: `$WEB_EXT_AMO_BASE_URL`
@@ -583,7 +613,14 @@ Environment variable: `$WEB_EXT_API_PROXY`
 
 #### `--channel`
 
-This specifies the `channel` in which the extension is signed. It defaults to `unlisted` or the `channel` of your extension's latest version. When the `--use-submission-api` option is specified the behaviour of `--channel` - and the limitations - are quite different than explained here: see the documentation for `--use-submission-api` above for more information.
+This specifies the `channel` in which the extension is signed. 
+
+In 8.0.0. or later this option is required.
+
+In 7.11.0 or earlier:
+
+- without the `--use-submission-api` option , this option defaults to `unlisted` or the `channel` of your extension's latest version.
+- with  the `--use-submission-api` option, this option is required.
 
 The allowed values for `channel` are:
 
@@ -645,6 +682,20 @@ This option is only used when combined with `--use-submission-api`.
 
 Environment variable: `$WEB_AMO_METADATA`
 </section>
+
+<section id="upload-source-code">
+
+#### `--upload-source-code`
+
+::: note alert
+This option was added in 8.0.0.
+:::
+
+Path to an archive file containing human readable source code for this submission. See [Source code submission](/documentation/publish/source-code-submission/) for details.
+
+Environment variable: `$WEB_EXT_API_UPLOAD_SOURCE_CODE`
+</section>
+
 </section> <!-- web-ext-sign -->
 
 </div>
