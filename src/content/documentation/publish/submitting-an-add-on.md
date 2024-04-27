@@ -92,7 +92,7 @@ Choose:
    - **Name**: your add-on's name.
    - **Add-on URL**: the URL for your add-on on AMO. A URL is automatically assigned based on your add-on's name. To change this, click **Edit**. The URL must be unique. You are warned if another add-on is using your chosen URL, and you must enter a different one.
    - **Summary**: a useful and descriptive short summary of your add-on.
-   - **Description**: a longer description that provides users with details of the extensin's features and functionality.
+   - **Description**: a longer description that provides users with details of the extension's features and functionality.
    - **This add-on is experimental**: your add-on is experimental or otherwise not ready for general use. The add-on will be listed but with reduced visibility. You can remove this flag when your add-on is ready for general use.
    - **This add-on requires payment, non-free services or software, or additional hardware**: indicate if your add-on requires users to make an additional purchase for it to work fully.
    - **Select up to 2 Firefox categories for this add-on**: select categories that describe your add-on.
