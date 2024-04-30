@@ -52,12 +52,60 @@ This page lists all the commands and options available under the [web-ext](https
 
 <!-- Single Column Body Module -->
 
-<section id="commands" class="module">
+<section id="version-8-section" class="module">
+
 <aside class="module-aside table-of-contents">
 
 {%- include contents.liquid -%}
 
 </aside>
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12">
+
+## What's change in Version 8
+
+Released in May 2024, the main change in version 8 of `web-ext` is from use of the [addons.mozilla.org API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to the [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html) for signing. 
+
+### Removed
+
+These `web-ext sign` options were removed:
+
+- --use-submission-api
+- --api-url-prefix
+- --disable-progress-bar (undocumented feature)
+
+These items are ifentified with ![](/assets/img/v7.png "Icon indicating last supported in version 7 ")
+
+### Updates
+
+The following `web-ext sign' options changed in version 8:
+
+- `--amo-base-url` no longer requires `use-submission-api` to be set.
+- `--channel` is now required.
+
+These items are ifentified with ![](/assets/img/v8_update.png "Icon indicating supported from version 8 ")
+
+### Additions
+
+The following veatures were added in version 8:
+
+- `web-ext dump-config` this new command prints a copy of the configuration data to the terminal.
+- 'web-ext sign --approval-timeout' enables ths number of milliseconds to wait for approval before giving up to be set.
+- `web-ext sign --upload-source-code` enables a file containg human readable source code to be uploaded.
+
+These items are ifentified with ![](/assets/img/v8.png "Icon indicating supported from version 8 ")
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+
+<!-- Single Column Body Module -->
+
+<section id="commands" class="module">
+
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
 
@@ -100,11 +148,7 @@ Opens the [web-ext documentation](/documentation/develop/getting-started-with-we
 
 <section id="web-ext-dump-config">
 
-### `web-ext dump-config`
-
-::: note
-This command was added in web-ext 8.0.0.
-:::
+### `web-ext dump-config` ![](/assets/img/v8.png "Introduced in version 8") 
 
 Outputs the configuration file in JSON format.
 
@@ -525,11 +569,7 @@ You must create [API access credentials](http://addons-server.readthedocs.org/en
 
 <section id="use-submission-api">
 
-#### `--use-submission-api` 
-
-::: note
-This option was added in web-ext 7.3.1 and removed in 8.0.0. In 8.0.0 and later the addons.mozilla.org add-on submission API is used by default.
-:::
+#### `--use-submission-api` ![](/assets/img/v7.png "Last supported in version 7 ")
 
 Use the [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to sign your extension. This allows listed versions to be freely created by enabling all necessary additional metadata to be submitted at the same time as the extension file.
 
@@ -559,11 +599,7 @@ Environment variable: `$WEB_EXT_API_SECRET`
 
 <section id="api-url-prefix">
 
-#### `--api-url-prefix`
-
-::: note alert
-This option was removed in 8.0.0.
-:::
+#### `--api-url-prefix` ![](/assets/img/v7.png "Last supported in version 7 ")
 
 A string containing the signing API URL prefix. If not specified, defaults to the production API: `https://addons.mozilla.org/api/v4`.
 
@@ -576,11 +612,7 @@ Environment variable: `$WEB_EXT_API_URL_PREFIX`
 
 <section id="--approval-timeout">
 
-#### `--approval-timeout`
-
-::: note alert
-This option was added in 8.0.0.
-:::
+#### `--approval-timeout` ![](/assets/img/v8.png "Introduced in version 8") 
 
 Number of milliseconds to wait for approval before giving up. Set to 0 to disable wait for approval. Defaults to `timeout` if not set.
 
@@ -589,7 +621,7 @@ Environment variable: `$WEB_EXT_API_APPROVAL_TIMEOUT`
 
 <section id="amo-base-url">
 
-#### `--amo-base-url`
+#### `--amo-base-url` ![](/assets/img/v8_update.png "Updated in version 8")
 
 A string containing the add-on submission API base URL. If not specified, defaults to the production API: `https://addons.mozilla.org/api/v5`.
 
@@ -611,7 +643,7 @@ Environment variable: `$WEB_EXT_API_PROXY`
 
 <section id="channel">
 
-#### `--channel`
+#### `--channel` ![](/assets/img/v8_update.png "Updated in version 8")
 
 This specifies the `channel` in which the extension is signed. 
 
@@ -685,11 +717,7 @@ Environment variable: `$WEB_AMO_METADATA`
 
 <section id="upload-source-code">
 
-#### `--upload-source-code`
-
-::: note alert
-This option was added in 8.0.0.
-:::
+#### `--upload-source-code` ![](/assets/img/v8.png "Introduced in version 8") 
 
 Path to an archive file containing human readable source code for this submission. See [Source code submission](/documentation/publish/source-code-submission/) for details.
 

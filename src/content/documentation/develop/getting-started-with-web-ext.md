@@ -75,9 +75,35 @@ To test whether the installation worked run the following command, which display
 web-ext --version
 ```
 
-::: note
-`web-ext` will notify you when it is time to update to the newest version. To update your global install, use the command `npm install -g web-ext`.
-:::
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
+<section id="upgrade-section" class="module">
+
+{%- include contents.liquid -%}
+
+</aside>
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12">
+
+## Update
+
+`web-ext` notifies you when a new version is available. To update use the same commands as you did to install:
+
+```shell
+brew install web-ext
+```
+
+or
+
+```shell
+npm install --global web-ext
+```
 
 </div>
 </article>
