@@ -62,9 +62,9 @@ This page lists all the commands and options available under the [web-ext](https
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
 
-## What's change in Version 8
+## What's changed in Version 8
 
-Released in May 2024, the main change in version 8 of `web-ext` is from use of the [addons.mozilla.org API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to the [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html) for signing. 
+Released in May 2024, the main change in version 8 of `web-ext` is from the signing features of [addons.mozilla.org API v4](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to the submission features of [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html). The V5 API was available to use experimentally in version 7 but is now the standard in version 8. This change enables web-ext to create listed versions of your extension for publication on AMO, rather than providing a signed file for self-hosting.
 
 ### Removed
 
@@ -74,7 +74,7 @@ These `web-ext sign` options were removed:
 - [--api-url-prefix](#api-url-prefix)
 - --disable-progress-bar (undocumented feature)
 
-These items are ifentified with ![](/assets/img/v7.png "Icon indicating last supported in version 7 ")
+These items are identified with ![](/assets/img/v7.png "Icon indicating last supported in version 7 ")
 
 ### Updates
 
@@ -83,17 +83,17 @@ The following `web-ext sign` options changed in version 8:
 - `--amo-base-url` no longer requires `use-submission-api` to be set.
 - `--channel` is now required.
 
-These items are ifentified with ![](/assets/img/v8_update.png "Icon indicating supported from version 8 ")
+These items are identified with ![](/assets/img/v8_update.png "Icon indicating supported from version 8 ")
 
 ### Additions
 
-The following veatures were added in version 8:
+The following features were added in version 8:
 
-- `web-ext dump-config` this new command prints a copy of the configuration data to the terminal.
+- `web-ext dump-config`, this new command prints a copy of the configuration data to the terminal.
 - `web-ext sign --approval-timeout` enables this number of milliseconds to wait for approval before giving up to be set.
-- `web-ext sign --upload-source-code <path-to-file>` enables a file containing human readable source code to be uploaded.
+- `web-ext sign --upload-source-code <path-to-file>` enables a file containing human-readable source code to be uploaded.
 
-These items are ifentified with ![](/assets/img/v8.png "Icon indicating supported from version 8 ")
+These items are identified with ![](/assets/img/v8.png "Icon indicating supported from version 8 ")
 
 </div>
 </article>
@@ -117,13 +117,13 @@ web-ext has the following commands; options specific to these commands are inclu
 
 ### `web-ext build`
 
-Packages an extension into a `.zip` file, ignoring files that are commonly unwanted in packages, such as `.git` and other artifacts. The name of the `.zip` file is taken from the [name](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) field in the extension [manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+Packages an extension into a `.zip` file, ignoring files commonly unwanted in packages, such as `.git` and other artifacts. The name of the `.zip` file is taken from the [name](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) field in the extension [manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 <section id="as-needed">
 
 #### `--as-needed`
 
-Re-build the extension anytime you edit and save a source file. This allows you to continuously create a package with the most up to date source code.
+Rebuild the extension when you edit and save a source file. This enables you to continuously create a package with the most up-to-date source code.
 
 Environment variable: `$WEB_EXT_AS_NEEDED=true`
 </section>
@@ -132,7 +132,7 @@ Environment variable: `$WEB_EXT_AS_NEEDED=true`
 
 #### `--overwrite-dest`, `-o`
 
-Overwrite destination package file if it exists. Without this option, web-ext will exit in error if the destination file already exists.
+Overwrite the destination package file if it exists. Without this option, web-ext will exit in error if the destination file already exists.
 
 Environment variable: `$WEB_EXT_OVERWRITE_DEST=true`
 </section>
@@ -158,7 +158,7 @@ Outputs the tool's configuration settings in JSON format.
 
 ### `web-ext lint`
 
-Reports errors in the extension [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) or other source code files. When [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is set in your extension’s manifest file, lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. See the [addons-linter](https://github.com/mozilla/addons-linter) project for more information about what kind of rules are used to validate extension source.
+Reports errors in the extension [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) or other source code files. When [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is set in your extension’s manifest file, lint reports on the permissions, manifest keys, and web extension APIs used that are not available in that version. See the [addons-linter](https://github.com/mozilla/addons-linter) project for more information about the rules used to validate the extension source.
 
 <section id="output">
 
@@ -230,13 +230,13 @@ This option was added in web-ext 7.3.0.
 
 ### `web-ext run`
 
-Builds and then temporarily installs an extension on the target application, so it can be tested. By default, watches extension source files and reload the extension in each target as files change.
+Builds and then temporarily installs an extension on the target application, so it can be tested. By default, it watches extension source files and reloads the extension in each target as files change.
 
 <section id="adb-bin">
 
 #### `--adb-bin`
 
-Path to the [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html) executable on the machine you are running `web-ext` from. By default, the `adb` executable will be located on your `PATH`.
+The path to the [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html) executable on the machine you are running `web-ext` from. By default, the `adb` executable is located on your `PATH`.
 
 Environment variable: `$WEB_EXT_ADB_BIN`
 </section>
@@ -245,7 +245,7 @@ Environment variable: `$WEB_EXT_ADB_BIN`
 
 #### `--adb-device`, `--android-device`
 
-The ID of your target Android device. If you do not specify this option, `web-ext` will list the IDs of each device connected. If you don't see a list of connected devices, make sure [yours is set up for development](/documentation/develop/developing-extensions-for-firefox-for-android/#set-up-your-computer-and-android-emulator-or-device).
+The ID of your target Android device. If you do not specify this option, `web-ext` will list the IDs of each device connected. If you don't see a list of connected devices, ensure [yours is set up for development](/documentation/develop/developing-extensions-for-firefox-for-android/#set-up-your-computer-and-android-emulator-or-device).
 
 Example:
 
@@ -260,7 +260,7 @@ Environment variable: `$WEB_EXT_ADB_DEVICE`
 
 #### `--adb-host`
 
-Host name to use when connecting to an Android device with [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html). This will be discovered automatically by default.
+THe host name to use when connecting to an Android device with [ADB (Android Device Bridge)](https://developer.android.com/studio/command-line/adb.html). By default, this is discovered automatically.
 
 Environment variable: `$WEB_EXT_ADB_HOST`
 </section>
@@ -278,12 +278,12 @@ Environment variable: `$WEB_EXT_ADB_PORT`
 
 #### `--adb-remove-old-artifacts`
 
-`web-ext` automatically removes all the temporary files that were written to the target adb device when it does exit. This may fail, for example when the device is disconnected before
-`web-ext run` exited.
+When it exits, `web-ext` removes all the temporary files written to the target adb device. However, it may not happen, for example, when the device is disconnected before
+`web-ext run` exits.
 
-Starting from v5.0.0, `web-ext run` will automatically detect and warn the user if old artifacts have been found on the adb device, but it does not automatically remove them by default.
+Starting from v5.0.0, `web-ext run` detects and warns the user if old artifacts are found on the adb device, but it does not remove them.
 
-This flag forces web-ext to automatically remove these discovered artifacts.
+This flag forces web-ext to remove any discovered artifacts.
 
 Environment variable: `$WEB_EXT_ADB_REMOVE_OLD_ARTIFACTS`
 </section>
@@ -300,7 +300,7 @@ web-ext run --browser-console
 
 Environment variable: `$WEB_EXT_BROWSER_CONSOLE=true`
 
-Note: The browser console may not show all debugging output from content-scripts. Use the web console when debugging content-scripts.
+Note: The browser console may not show all debugging output from content scripts. Use the web console when debugging content scripts.
 </section>
 
 <section id="devtools">
@@ -313,10 +313,10 @@ This opens the Developer Tools for the installed extension on startup. See [this
 web-ext run --devtools
 ```
 
-Note: The opened Developer Tools may not show all debugging output from content-scripts. Use the web console when debugging content-scripts.
+Note: The opened Developer Tools may not show all debugging output from content scripts. Use the web console when debugging content scripts.
 
 ::: note
-This option was added in web-ext 7.3.0 and it requires Firefox 106 and newer.
+This option was added in web-ext 7.3.0, and requires Firefox 106 or later.
 :::
 </section>
 
@@ -324,7 +324,7 @@ This option was added in web-ext 7.3.0 and it requires Firefox 106 and newer.
 
 #### `--firefox`, `-f`
 
-Specify a particular version of [Firefox Desktop](https://www.mozilla.org/firefox/) to run the extension in. The value is an absolute path to the Firefox executable or&nbsp;an alias string. If this is not specified, it will attempt to run the extension inside the system's default installation of Firefox.
+Specify a the version of [Firefox Desktop](https://www.mozilla.org/firefox/) to run the extension in. The value is an absolute path to the Firefox executable or an alias string. If not specified, runs the extension in the system's default installation of Firefox.
 
 Here is an example specifying a full path to a Firefox executable on Windows:
 
@@ -338,7 +338,7 @@ Here is an example specifying an executable path on Mac OS:
 --firefox=/Applications/FirefoxNightly.app/Contents/MacOS/firefox-bin
 ```
 
-You can also use aliases, like this:
+You can also use aliases like this:
 
 ```shell
 --firefox=beta
@@ -370,7 +370,7 @@ Environment variable: `$WEB_EXT_FIREFOX`
 
 #### `--firefox-apk`
 
-The exact [APK](https://en.wikipedia.org/wiki/Android_application_package) name for [Firefox](https://www.mozilla.org/firefox/mobile/) on your Android device. Without specifying this option, `web-ext` will automatically select it for you. If more than one Firefox APK is installed, `web-ext` will show a list of values to choose from.
+The [APK](https://en.wikipedia.org/wiki/Android_application_package) name for [Firefox](https://www.mozilla.org/firefox/mobile/) on your Android device. Without specifying this option, `web-ext`selects the APK used for you. If more than one Firefox APK is installed, `web-ext` shows a list of values to choose from.
 
 Example:
 
@@ -385,7 +385,7 @@ Environment variable: `$WEB_EXT_FIREFOX_APK`
 
 #### `--firefox-preview`
 
-Turn on developer preview features in Firefox. This option accepts multiple values, depending on the available developer previews.
+Turns on developer preview features in Firefox. This option accepts multiple values, depending on the available developer previews.
 
 ::: note
 This option was added in web-ext 7.1.0.
@@ -396,7 +396,7 @@ This option was added in web-ext 7.1.0.
 
 #### `--firefox-profile`, `-p`
 
-Specify a base Firefox profile to run the extension in. This is specified as a string containing your profile name or an absolute path to its directory. The profile you specify is copied into a new temporary profile and some settings are added that are required for `web-ext` to function.
+Specifies a base Firefox profile to run the extension in. This is specified as a string containing your profile name or an absolute path to its directory. The profile you specify is copied into a new temporary profile, and settings required for `web-ext` to function added.
 
 If a profile is not specified, it runs the extension using a new temporary profile.
 
@@ -407,10 +407,10 @@ Environment variable: `$WEB_EXT_FIREFOX_PROFILE`
 
 #### `--profile-create-if-missing`
 
-With this option, the profile directory (specified by the `--firefox-profile` or `--chromium-profile` options) will be created if it does not exist yet.
+Create the profile directory (specified by the `--firefox-profile` or `--chromium-profile` options) if it does not exist.
 
 ::: note alert
-When this option is specified, the `--firefox-profile` option is always treated as a directory path.
+The `--firefox-profile` option is treated as a directory path when this option is specified.
 :::
 
 Environment variable: `$WEB_EXT_PROFILE_CREATE_IF_MISSING`
@@ -420,10 +420,10 @@ Environment variable: `$WEB_EXT_PROFILE_CREATE_IF_MISSING`
 
 #### `--keep-profile-changes`
 
-With this option, any changes made to the profile directory (specified by `--firefox-profile`) are saved. Without this option, profile changes are not saved.
+Save any changes made to the profile directory (specified by `--firefox-profile`). Without this option, profile changes are not saved.
 
 ::: note alert
-This option makes the profile specified by `--firefox-profile` completely insecure for daily use. It turns off auto-updates and allows silent remote connections, among other things. Specifically, it will make destructive changes to the profile that are required for `web-ext` to operate.
+This option makes the profile specified by `--firefox-profile` insecure for daily use. It turns off auto-updates and allows silent remote connections, among other things. Specifically, it makes destructive changes to the profile that are required for `web-ext` to operate.
 :::
 
 Environment variable: `$WEB_EXT_KEEP_PROFILE_CHANGES=true`
@@ -442,7 +442,7 @@ Environment variable: `$WEB_EXT_NO_RELOAD=true`
 
 #### `--pre-install`
 
-Pre-install the extension into the profile before starting the browser. This is a way to support Firefox versions less than 49, as they don't support remote installation. Specifying this option implies `--no-reload`.
+Install the extension into the profile before starting the browser. This is a way to support Firefox versions 49 or earlier, as they don't support remote installation. Specifying this option implies `--no-reload`.
 
 Environment variable: `$WEB_EXT_PRE_INSTALL=true`
 </section>
@@ -466,7 +466,7 @@ Environment variable: `$WEB_EXT_PREF`
 
 #### `--target`, `-t`
 
-This specifies which application to run your extension in. Specify this option multiple times to run the extension in each application concurrently.
+Specify the application to run your extension in. Specify this option multiple times to run the extension in each application concurrently.
 
 Here are the supported targets:
 
@@ -474,13 +474,13 @@ Here are the supported targets:
 
 | Target            | Application                                                                                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `firefox-desktop` | The extension will run in [Firefox Desktop](https://www.mozilla.org/firefox/).                                                      |
-| `firefox-android` | The extension will run in [Firefox for Android](https://www.mozilla.org/firefox/mobile/). You must also specify [`--android-device`](#adb-device). |
-| `chromium`        | The extension will run in a Chromium-based browser. You can specificy exact binary with [`--chromium-binary`](#chromium-binary).                                                                             |
+| `firefox-desktop` | The extension runs in [Firefox Desktop](https://www.mozilla.org/firefox/).                                                      |
+| `firefox-android` | The extension runs in [Firefox for Android](https://www.mozilla.org/firefox/mobile/). You must also specify [`--android-device`](#adb-device). |
+| `chromium`        | The extension runs in a Chromium-based browser. You can specificy a binary with [`--chromium-binary`](#chromium-binary).                                                                             |
 
 </div>
 
-If no target is specified, the extension will run in `firefox-desktop`.
+If no target is specified, the extension runs in `firefox-desktop`.
 
 Environment variable: `$WEB_EXT_TARGET`
 </section>
@@ -488,7 +488,7 @@ Environment variable: `$WEB_EXT_TARGET`
 <section id="args">
 
 #### `--args`, `--arg`
-Additional CLI options passed to the Browser binary. Example:
+Additional CLI options passed to the browser binary. Examples:
 
 ```shell
 web-ext run --arg="--search=mozilla" --arg="--new-tab=https://duckduckgo.com"
@@ -503,8 +503,8 @@ web-ext run --arg="--remote-debugging-port=9229" --target chromium
 <section id="chromium-binary">
 
 #### `--chromium-binary`
-Path or alias to a Chromium executable such as google-chrome, google-chrome.exe or opera.exe etc.
-If not specified, the default Google Chrome will be used.
+Path or alias to a Chromium executable such as google-chrome, google-chrome.exe, or opera.exe.
+If not specified, the default Google Chrome is used.
 </section>
 
 <section id="chromium-profile">
@@ -563,7 +563,7 @@ This option is useful to prevent issues when the number of watched files is high
 
 ### `web-ext sign`
 
-This command uses the [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html) (8.0.0 or later) or the [addons.mozilla.org API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) (7.11.0 or earlier) to sign your extension. If successful, it downloads the signed `.xpi` file, which you can use to [self-host your extension](/documentation/publish/self-distribution/).
+This command uses the submission features of [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html) (8.0.0 or later) or the signing features of [addons.mozilla.org API v4](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) (7.11.0 or earlier) to sign your extension. In version 8, the command creates a listed versions on AMO by enabling the  necessary metadata to be submitted with the extension file. In version 7, the command downloads a signed `.xpi` file that you can use to [self-host your extension](/documentation/publish/self-distribution/).
 
 You must create [API access credentials](http://addons-server.readthedocs.org/en/latest/topics/api/auth.html#access-credentials) to run this command. [Obtain your personal access credentials here](https://addons.mozilla.org/developers/addon/api/key/).
 
@@ -571,7 +571,7 @@ You must create [API access credentials](http://addons-server.readthedocs.org/en
 
 #### `--use-submission-api` ![](/assets/img/v7.png "Last supported in version 7 ")
 
-Use the [addons.mozilla.org add-on submission API](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the [addons.mozilla.org signing API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to sign your extension. This allows listed versions to be freely created by enabling all necessary additional metadata to be submitted at the same time as the extension file.
+Use the submission features of the [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html), rather than the signing features of [addons.mozilla.org API v4](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to sign your extension. 
 
 With this option enabled, `--channel` changes to be a required option with no default. The choices remain `listed` and `unlisted`.
 
