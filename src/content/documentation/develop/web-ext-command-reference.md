@@ -70,15 +70,15 @@ Released in May 2024, the main change in version 8 of `web-ext` is from use of t
 
 These `web-ext sign` options were removed:
 
-- --use-submission-api
-- --api-url-prefix
+- [--use-submission-api](#use-submission-api)
+- [--api-url-prefix](#api-url-prefix)
 - --disable-progress-bar (undocumented feature)
 
 These items are ifentified with ![](/assets/img/v7.png "Icon indicating last supported in version 7 ")
 
 ### Updates
 
-The following `web-ext sign' options changed in version 8:
+The following `web-ext sign` options changed in version 8:
 
 - `--amo-base-url` no longer requires `use-submission-api` to be set.
 - `--channel` is now required.
@@ -90,8 +90,8 @@ These items are ifentified with ![](/assets/img/v8_update.png "Icon indicating s
 The following veatures were added in version 8:
 
 - `web-ext dump-config` this new command prints a copy of the configuration data to the terminal.
-- 'web-ext sign --approval-timeout' enables ths number of milliseconds to wait for approval before giving up to be set.
-- `web-ext sign --upload-source-code` enables a file containg human readable source code to be uploaded.
+- `web-ext sign --approval-timeout` enables this number of milliseconds to wait for approval before giving up to be set.
+- `web-ext sign --upload-source-code <path-to-file>` enables a file containing human readable source code to be uploaded.
 
 These items are ifentified with ![](/assets/img/v8.png "Icon indicating supported from version 8 ")
 
@@ -150,7 +150,7 @@ Opens the [web-ext documentation](/documentation/develop/getting-started-with-we
 
 ### `web-ext dump-config` ![](/assets/img/v8.png "Introduced in version 8") 
 
-Outputs the configuration file in JSON format.
+Outputs the tool's configuration settings in JSON format.
 
 </section><!-- web-ext-dump-config -->
 
@@ -623,7 +623,7 @@ Environment variable: `$WEB_EXT_API_APPROVAL_TIMEOUT`
 
 #### `--amo-base-url` ![](/assets/img/v8_update.png "Updated in version 8")
 
-A string containing the add-on submission API base URL. If not specified, defaults to the production API: `https://addons.mozilla.org/api/v5`.
+A string containing the add-on submission API base URL. If not specified, defaults to the production API: `https://addons.mozilla.org/api/v5/`.
 
 ::: note alert
 In 7.11.0 and earlier, this option is only used when `--use-submission-api` is used. See `--api-url-prefix` instead.

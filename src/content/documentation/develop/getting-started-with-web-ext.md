@@ -84,10 +84,6 @@ web-ext --version
 <!-- Single Column Body Module -->
 
 <section id="upgrade-section" class="module">
-
-{%- include contents.liquid -%}
-
-</aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
 
@@ -416,7 +412,7 @@ module.exports = {
 
 `web-ext` will load existing configuration files in the following order:
 
-- A config file named .web-ext-config.js in your home directory, for example: 
+- A config file named `.web-ext-config.js` in your home directory, for example: 
   - On Windows: `C:\Users\<username>\.web-ext-config.js`
   - On macOS: `/Users/<username>/.web-ext-config.js`
   - On Linux: `/home/<username>/.web-ext-config.js`
