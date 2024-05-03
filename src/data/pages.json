@@ -183,8 +183,34 @@
                 ]
               },
               {
-                "title": "web-ext command reference",
+                "title": "web-ext v8 tcommand reference",
                 "url": "/documentation/develop/web-ext-command-reference/",
+                "subpageitems": [
+                  {
+                    "title": "What's new",
+                    "id": "whats-new"
+                  },
+                  {
+                    "title": "Commands",
+                    "id": "commands"
+                  },
+                  {
+                    "title": "Global options",
+                    "id": "global-options"
+                  },
+                  {
+                    "title": "Setting option environment variables",
+                    "id": "setting-option-environment-variables"
+                  },
+                  {
+                    "title": "See also",
+                    "id": "see-also"
+                  }
+                ]
+              },
+              {
+                "title": "web-ext v7 command reference",
+                "url": "/documentation/develop/web-ext-command-reference-v7/",
                 "subpageitems": [
                   {
                     "title": "Commands",
