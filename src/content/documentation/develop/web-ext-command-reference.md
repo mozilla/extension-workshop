@@ -70,24 +70,24 @@ Released in May 2024, the main change in version 8 of `web-ext` is that `web-ext
 
 These version 7 `web-ext sign` options are removed:
 
-- [--use-submission-api](#use-submission-api)
-- [--api-url-prefix](#api-url-prefix)
+- [`--use-submission-api`](#use-submission-api)
+- [`--api-url-prefix`](#api-url-prefix)
 - --disable-progress-bar (undocumented feature)
 
 ### Updates
 
 These `web-ext sign` options have changed:
 
-- `[--amo-base-url](#amo-base-url)` no longer requires `use-submission-api` to be set.
-- `[--channel](#channel)` is now required.
+- [`--amo-base-url`](#amo-base-url) no longer requires `use-submission-api` to be set.
+- [`--channel`](#channel) is now required.
 
 ### Additions
 
 These features are added:
 
-- `[web-ext dump-config](#web-ext-dump-config)`, this new command prints a copy of the configuration data to the terminal.
-- `web-ext sign [--approval-timeout](#approval-timeout)` enables this number of milliseconds to wait for approval before giving up to be set.
-- `web-ext sign [--upload-source-code](#upload-source-code) <path-to-file>` enables a file containing human-readable source code to be uploaded.
+- [`web-ext dump-config`](#web-ext-dump-config), this new command prints a copy of the configuration data to the terminal.
+- [`web-ext sign --approval-timeout`](#approval-timeout) enables this number of milliseconds to wait for approval before giving up to be set.
+- [`web-ext sign --upload-source-code`](#upload-source-code) enables a file containing human-readable source code to be uploaded.
 
 </div>
 </article>
@@ -629,19 +629,6 @@ Environment variable: `$WEB_EXT_CHANNEL`
 Number of milliseconds to wait before giving up on a response from Mozilla's web service. This should always be a number.
 
 Environment variable: `$WEB_EXT_TIMEOUT`
-</section>
-
-<section id="id">
-
-#### `--id`
-
-A custom identifier string for the extension. This has no effect if the extension has declared an identifier in its manifest. This option may be useful for signing versions of an extension you own. 
-
-::: note alert
-This option cannot be used when `--use-submission-api` is used: the add-on ID must be specified in the `manifest.json` file.
-:::
-
-Environment variable: `$WEB_EXT_ID`
 </section>
 
 <section id="amo-metadata">
