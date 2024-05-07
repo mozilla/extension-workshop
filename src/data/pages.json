@@ -173,6 +173,10 @@
                     "id": "installation-section"
                   },
                   {
+                    "title": "Update",
+                    "id": "update-section"
+                  },
+                  {
                     "title": "Using web-ext",
                     "id": "using-web-ext-section"
                   },

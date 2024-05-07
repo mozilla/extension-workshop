@@ -31,7 +31,7 @@ date: 2021-01-27 23:47:23
 
 # Getting started with web-ext
 
-`web-ext` is a command line tool designed to speed up various parts of the extension development process, making development faster and easier. This article explains how to install and use `web-ext`.
+`web-ext` is a command line tool designed to make development faster and easier. This article explains how to install and use `web-ext`.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -83,7 +83,7 @@ web-ext --version
 
 <!-- Single Column Body Module -->
 
-<section id="upgrade-section" class="module">
+<section id="update-section" class="module">
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
 
@@ -94,7 +94,6 @@ web-ext --version
 ```shell
 brew install web-ext
 ```
-
 or
 
 ```shell
@@ -115,7 +114,7 @@ npm install --global web-ext
 
 ## Using web-ext
 
-Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the [webextensions-examples](https://github.com/mdn/webextensions-examples) repo. If you would like to start from scratch, use our community developed [boilerplating tool](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/#boilerplating-tools) to get started with a fresh extension.
+Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the [webextensions-examples](https://github.com/mdn/webextensions-examples) repo. If you would like to start from scratch, use the community developed [boilerplating tool](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/#boilerplating-tools) to get started with a fresh extension.
 
 <section id="testing-out-an-extension"></section>
 
@@ -187,7 +186,7 @@ Now, add the device ID to the command:
 web-ext run --target=firefox-android --android-device=<device ID>
 ```
 
-If you've multiple versions of Firefox installed, you may need to choose a specific version. For example:
+If you've multiple versions of Firefox installed, you may need to choose a version. For example:
 
 ```shell
 web-ext run --target=firefox-android ... --firefox-apk=org.mozilla.firefox
@@ -201,29 +200,29 @@ See the [run command](/documentation/develop/web-ext-command-reference/#web-ext-
 
 ### Debugging in Firefox for Android
 
-When using `web-ext run` to test an extension on Firefox for Android, you'll notice a message like this in the console output:
+When using `web-ext run` to test an extension on Firefox for Android, you see a message like this in the console output:
 
 ```shell
 You can connect to this Android device on TCP port 51499
 ```
 
-This is a remote debugger port that you can [connect to with Firefox's developer tools](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Firefox_for_Android#Connecting). In this case, you'd connect to host `localhost` on port `51499`.
+This is a remote debugger port that you can [connect to with Firefox's developer tools](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Firefox_for_Android#Connecting). In this case, you connect to host `localhost` on port `51499`.
 
-See [this guide](/documentation/develop/developing-extensions-for-firefox-for-android/#debug-your-extension) for more information about debugging an extension on Firefox for Android.
+See [the Debug your extensionis guide](/documentation/develop/developing-extensions-for-firefox-for-android/#debug-your-extension) for more information about debugging an extension on Firefox for Android.
 
 ### Testing unsigned extensions
 
-When you execute [web-ext run](/documentation/develop/web-ext-command-reference/#web-ext-run), the extension gets installed temporarily until you close Firefox. This does not violate any signing restrictions. If instead you create a zip file with [web-ext build](/documentation/develop/web-ext-command-reference/#web-ext-build) and try to install it into Firefox, you will see an error telling you that the add-on is not signed. You will need to use an [unbranded build](https://wiki.mozilla.org/Addons/Extension_Signing#Unbranded_Builds) or use a [development build](https://www.mozilla.org/firefox/developer/) to install unsigned extensions.
+When you execute [web-ext run](/documentation/develop/web-ext-command-reference/#web-ext-run), the extension gets installed temporarily until you close Firefox. This does not violate any signing restrictions. If instead you create a zip file with [web-ext build](/documentation/develop/web-ext-command-reference/#web-ext-build) and try to install it into Firefox, you see an error telling you that the add-on is not signed. You must use an [unbranded build](https://wiki.mozilla.org/Addons/Extension_Signing#Unbranded_Builds) or [development build](https://www.mozilla.org/firefox/developer/) to install unsigned extensions.
 
 ### Using a custom profile
 
-By default, the `run` command will create a temporary Firefox profile. To run your extension with a specific profile use the `--firefox-profile` option, like this:
+By default, the `run` command creates a temporary Firefox profile. To run your extension with a specific profile use the `--firefox-profile` option, like this:
 
 ```shell
 web-ext run --firefox-profile=your-custom-profile
 ```
 
-This option accepts a string containing the name of your profile or an absolute path to the profile directory. This is helpful if you want to manually configure some settings that will always be available to the `run` command.
+This option accepts a string containing the name of your profile or an absolute path to the profile directory. This is helpful if you want to configure settings for the `run` command.
 
 ### Keeping profile changes
 
@@ -236,14 +235,28 @@ web-ext run --keep-profile-changes --firefox-profile=your-custom-profile
 This may be helpful if your extension has many different run states.
 
 ::: note alert
-This option makes the profile specified by `--firefox-profile` completely insecure for daily use. It turns off auto-updates and allows silent remote connections, among other things. Specifically, it will make destructive changes to the profile that are required for `web-ext` to operate.
-:::
+This option makes destructive changes to the profile that are required for `web-ext` to operate. It turns off auto-updates and allows silent remote connections, among other things. These changes make the profile insecure for daily use. 
+::: 
+
+<section id="checking-with-lint"></section>
+
+### Checking for code "lint"
+
+Before trying out your extension with the [`run`](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to make sure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files do not contain any errors. You can also set [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file and lint reports on the permissions, manifest keys, and web extension APIs used that are not available in that version. Example:
+
+```shell
+web-ext lint
+```
+
+This uses the [addons-linter](https://github.com/mozilla/addons-linter) library to walk through your source code directory and report any errors, such as the declaration of an unknown permission.
+
+See the [lint reference guide](/documentation/develop/web-ext-command-reference/#web-ext-lint) to learn more.
 
 <section id="packaging-your-extension"></section>
 
-### Packaging your extension
+### Package your extension
 
-Once you've tested your extension and verified that it's working, you can turn it into a package for submitting to `addons.mozilla.org` using the following command:
+After testing your extension and verifying that it's working, you can turn it into a package for submitting to `addons.mozilla.org` using this command:
 
 ```shell
 web-ext build
@@ -259,12 +272,111 @@ The generated `.zip` file doesn't work on Firefox without signing or adding [`br
 
 See the [build reference guide](/documentation/develop/web-ext-command-reference/#web-ext-build) to learn more.
 
+### Sign and submit your extension for publication
+
+When you have confirm that your extension works as expected, you can publish it on [addons.mozilla.org](https://addons.mozilla.org/). You can do this using the website or  `web-ext sign`. To use `web-ext sign` you need to:
+
+- create a JSON file containing the metadata needed by addons.mozilla.org to list the extension.
+- obtain an API key from addons.mozilla.org
+
+#### Create your metadata file
+
+(need to confirm the required attributes and update the example accordingly)
+
+For example:
+
+``` json
+{
+  "version": { "license": "MPL2.0" } },
+  "categories": { "firefox": ["shopping", "bookmarks"] },
+  "contributions_url": "https://donate.mozilla.org",
+  "requires_payment": false,
+  "homepage": {
+    "en-US": "http://example.org?lang=en-US",
+    "fr": "http://example.org?lang=fr"
+  },
+  "support_email": {
+    "en-US": "support@example.org",
+    "fr": "support-fr@example.org"
+  }
+}
+```
+
+See ?? for more details about creating your metadata file.
+
+#### Obtain you API key
+
+Visit the [addons.mozilla.org credentials](https://addons.mozilla.org/developers/addon/api/key/) page. You must register if you haven't done so before. From this page you obtain:
+
+- The JWT issuer key, a string that looks something like `user:12345:67`. You supply this to `web-ext sign` as the API key in `--api-key`
+- The JWT secret, a string that looks something like `634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009`. You supply this to `web-ext sign` as the API secret in `--api-secret`. 
+
+#### Run `web-ext sign`
+
+You can now run `web-ext sign` supplying the API key and location of the JSON file containing the metedata.:
+
+```shell
+web-ext sign --channel=listed --amo-metadata=<path to your metadata JSON file> --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
+```
+
+See the [sign reference guide](/documentation/develop/web-ext-command-reference/#web-ext-sign) to learn more.
+
+### Sign and submit your updated extension for publication
+
+As you improve and update your extension you want to submit new versions for publication on [addons.mozilla.org](https://addons.mozilla.org/). You can do this using the website or  `web-ext sign`. To use `web-ext sign` you need to:
+
+- create a JSON file containing any updated metadata to be used on addons.mozilla.org.
+- obtain an API key from addons.mozilla.org.
+
+#### Create your metadata file
+
+You don't need to provide updated metadata to publish an update to your extension. However, typically you might update:
+
+- (List of typical attributes updated)
+
+For example
+
+``` json
+{
+  "version": { "license": "MPL2.0" } },
+  "categories": { "firefox": ["shopping", "bookmarks"] },
+  "contributions_url": "https://donate.mozilla.org",
+  "requires_payment": false,
+  "homepage": {
+    "en-US": "http://example.org?lang=en-US",
+    "fr": "http://example.org?lang=fr"
+  },
+  "support_email": {
+    "en-US": "support@example.org",
+    "fr": "support-fr@example.org"
+  }
+}
+```
+See ?? for more details about creating your metadata file.
+
+#### Obtain you API key
+
+Visit the [addons.mozilla.org credentials](https://addons.mozilla.org/developers/addon/api/key/) page. You must register if you haven't done so before. From this page you obtain:
+
+- The JWT issuer key, a string that looks something like `user:12345:67`. You supply this to `web-ext sign` as the API key in `--api-key`
+- The JWT secret, a string that looks something like `634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009`. You supply this to `web-ext sign` as the API secret in `--api-secret`. 
+
+#### Run `web-ext sign`
+
+You can now run `web-ext sign` supplying the API key and location of the JSON file containing the metedata.:
+
+```shell
+web-ext sign --channel=listed --amo-metadata=<path to your metadata JSON file> --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
+```
+
+See the [sign reference guide](/documentation/develop/web-ext-command-reference/#web-ext-sign) to learn more.
+
 ### Signing your extension for self-distribution
 
 As an alternative to publishing your extension on [addons.mozilla.org](https://addons.mozilla.org/), you can self-host your package file but it needs to be [signed by Mozilla](/documentation/publish/signing-and-distribution-overview/) first. The following command packages and signs a ZIP file, then returns it as a signed XPI file for distribution:
 
 ```shell
-web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
+web-ext sign --channel=unlisted --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
 ```
 
 The API options are required to specify your [addons.mozilla.org credentials](https://addons.mozilla.org/developers/addon/api/key/).
@@ -312,39 +424,14 @@ The following domains are used for signing and downloading files:
 If you've [listed](/documentation/publish/submitting-an-add-on/) an extension on [addons.mozilla.org](https://addons.mozilla.org/), use `web-ext` to create a signed but [unlisted](/documentation/publish/self-distribution/) version for testing purposes. For example, you may wish to distribute an alpha or beta version to users for early feedback and testing.
 
 First, change the version number in your [`manifest.json`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json) so that it is different from the latest listed version. Then, create the unlisted version by using the [`--channel`](/documentation/develop/web-ext-command-reference/#web-ext-sign) option like this:
+
 ```shell
 web-ext sign --channel=unlisted --api-key=... --api-secret=...
 ```
 
 This signs and downloads an XPI file that can be installed into Firefox.
 
-Once you've finished testing, **to publish the extension you must define** `--channel` **as listed**, as the channel option defaults to the one used previously. So, after incrementing the version in your [`manifest.json`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json), run:
-
-```shell
-web-ext sign --channel=listed --api-key=... --api-secret=...
-```
-
-This publishes and submits your extension for review as if you had uploaded it to [addons.mozilla.org](https://addons.mozilla.org/).
-
-<div class="note alert">
-
-Setting `--channel=listed` for a new version of a listed extension is not well supported. It uploads your new version to [addons.mozilla.org](https://addons.mozilla.org/) as if you'd [submitted it manually](/documentation/publish/submitting-an-add-on/). However, the command will fail and you'll have to check [addons.mozilla.org/developers/addons](https://addons.mozilla.org/developers/addons) for the correct status.
-
-</div>
-
 See the [sign reference guide](/documentation/develop/web-ext-command-reference/#web-ext-sign) to learn more.
-
-### Checking for code "lint"
-
-Before trying out your extension with the [`run`](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to make sure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files do not contain any errors. You can also set [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file and lint will report on the permissions, manifest keys, and web extension APIs used that are not available in that version. Example:
-
-```shell
-web-ext lint
-```
-
-This uses the [addons-linter](https://github.com/mozilla/addons-linter) library to walk through your source code directory and report any errors, such as the declaration of an unknown permission.
-
-See the [lint reference guide](/documentation/develop/web-ext-command-reference/#web-ext-lint) to learn more.
 
 <section id="setting-option-defaults-in-a-configuration-file"></section>
 
@@ -393,7 +480,7 @@ module.exports = {
 };
 ```
 
-`web-ext` will also try to load its configuration options from a `"webExt"` property included in the `package.json` file in the current directory:
+`web-ext` also tries to load its configuration options from a `"webExt"` property included in the `package.json` file in the current directory:
 
 ```js
 {
@@ -410,7 +497,7 @@ module.exports = {
 
 ### Automatic discovery of configuration files
 
-`web-ext` will load existing configuration files in the following order:
+`web-ext` loads configuration files in the following order:
 
 - A config file named `.web-ext-config.js` in your home directory, for example: 
   - On Windows: `C:\Users\<username>\.web-ext-config.js`
@@ -419,7 +506,7 @@ module.exports = {
 - A config property named `"webExt"` included in a `package.json` file in the current directory.
 - A config file named `web-ext-config.js` in the current directory.
 
-If a home directory config and a local directory config define the same option, the value from the latter file will be used.
+If a home directory config and a local directory config define the same option, the value from the latter file is used.
 
 To disable automatic loading of configuration files, set this option:
 
@@ -427,7 +514,7 @@ To disable automatic loading of configuration files, set this option:
 web-ext --no-config-discovery run
 ```
 
-To diagnose an issue related to config files, re-run your command with `--verbose`. This will tell you which config file affected which option value.
+To diagnose an issue related to config files, re-run your command with `--verbose`. This tells you which config file affected which option value.
 
 ### Specifying different source and destination directories
 
