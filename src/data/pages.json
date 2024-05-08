@@ -885,6 +885,10 @@
                   {
                     "title": "Blocked accounts",
                     "id": "blocked-accounts"
+                  },
+                  {
+                    "title": "Issues receiving reviewer emails",
+                    "id": "email-issues"
                   }
                 ]
               },
