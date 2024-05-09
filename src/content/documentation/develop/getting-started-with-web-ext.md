@@ -116,9 +116,62 @@ npm install --global web-ext
 
 Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the [webextensions-examples](https://github.com/mdn/webextensions-examples) repo. If you would like to start from scratch, use the community developed [boilerplating tool](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/#boilerplating-tools) to get started with a fresh extension.
 
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+
+<!-- Single Column Body Module -->
+
+<section id="check-with-lint" class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12">
+
+## Check your code
+
+Before trying out your extension with the [`run`](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to make sure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files are free of errors. If you set [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file lint reports on the permissions, manifest keys, and web extension APIs used that are not available in that version. 
+
+To check your extension code `cd` into your extensions’s root directory and enter:
+
+```shell
+web-ext lint
+```
+
+This uses the [addons-linter](https://github.com/mozilla/addons-linter) library to walk through your source code directory and report any errors, such as the declaration of an unknown permission.
+
+See the [lint reference guide](/documentation/develop/web-ext-command-reference/#web-ext-lint) to learn more.
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+
+<!-- Single Column Body Module -->
+
+<section id="test-and-degug-an-extention" class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12">
+
+## Test and debug your extension
+
+In this section learn how to:
+
+- [Test your extension](#testing-out-an-extension)
+- [Automatically reload your extension](#automatically-reload-your-extension)
+- [Test in different versions of Firefox](#test-in-different-versions-of-firefox)
+- [Test in Firefox for Android](#testing-in-firefox-for-android)
+- [Debug in Firefox for Android](#debug-in-firefox-for-android)
+- [Test unsigned extensions](#test-unsigned-extensions)
+- [Use a custom profile](#use-a-custom-profile)
+- [Keep profile changes](#keep-profile-changes)
+
 <section id="testing-out-an-extension"></section>
 
-### Testing out an extension
+### Test your extension
 
 Test an extension in Firefox by `cd`'ing into your extensions’s root directory and entering:
 
@@ -130,7 +183,9 @@ This starts Firefox and loads the extension temporarily in the browser, just as 
 
 See the [run reference guide](/documentation/develop/web-ext-command-reference/#web-ext-run) to learn more.
 
-### Automatic extension reloading
+<section id="automatically-reload-your-extension"></section>
+
+### Automatically reload your extension
 
 The `run` command watches your source files and tells Firefox to reload the extension after you edit and save a file. For example, if you changed the `name` property in your `manifest.json` file, Firefox displays the new name. This makes it easy to try out new features because you can see the effect immediately. The automatic reloading feature is active by default, you use it like this:
 
@@ -150,7 +205,9 @@ web-ext run --no-reload
 Extension reloading is only supported in Firefox 49 or higher.
 :::
 
-### Testing in different versions of Firefox
+<section id="test-in-different-versions-of-firefox"></section>
+
+### Test in different versions of Firefox
 
 To run your extension in a version of [Firefox Desktop](https://www.mozilla.org/firefox/) other than the default, use the `--firefox` option to specify a full path to the binary file. Here is an example for Mac OS:
 
@@ -168,7 +225,7 @@ See the [run command](/documentation/develop/web-ext-command-reference/#web-ext-
 
 <section id="testing-in-firefox-for-android"></section>
 
-### Testing in Firefox for Android
+### Test in Firefox for Android
 
 To run your extension in [Firefox for Android](https://www.mozilla.org/firefox/mobile/), follow these instructions to [set up your computer and device](/documentation/develop/developing-extensions-for-firefox-for-android/#set-up-your-computer-and-android-emulator-or-device).
 
@@ -198,7 +255,9 @@ The `web-ext` command does not alter any of your existing Firefox for Android pr
 
 See the [run command](/documentation/develop/web-ext-command-reference/#web-ext-run) reference to learn more.
 
-### Debugging in Firefox for Android
+<section id="debug-in-firefox-for-android"></section>
+
+### Debug in Firefox for Android
 
 When using `web-ext run` to test an extension on Firefox for Android, you see a message like this in the console output:
 
@@ -210,11 +269,15 @@ This is a remote debugger port that you can [connect to with Firefox's developer
 
 See [the Debug your extensionis guide](/documentation/develop/developing-extensions-for-firefox-for-android/#debug-your-extension) for more information about debugging an extension on Firefox for Android.
 
-### Testing unsigned extensions
+<section id="test-unsigned-extensions"></section>
+
+### Test unsigned extensions
 
 When you execute [web-ext run](/documentation/develop/web-ext-command-reference/#web-ext-run), the extension gets installed temporarily until you close Firefox. This does not violate any signing restrictions. If instead you create a zip file with [web-ext build](/documentation/develop/web-ext-command-reference/#web-ext-build) and try to install it into Firefox, you see an error telling you that the add-on is not signed. You must use an [unbranded build](https://wiki.mozilla.org/Addons/Extension_Signing#Unbranded_Builds) or [development build](https://www.mozilla.org/firefox/developer/) to install unsigned extensions.
 
-### Using a custom profile
+<section id="use-a-custom-profile"></section>
+
+### Use a custom profile
 
 By default, the `run` command creates a temporary Firefox profile. To run your extension with a specific profile use the `--firefox-profile` option, like this:
 
@@ -224,7 +287,9 @@ web-ext run --firefox-profile=your-custom-profile
 
 This option accepts a string containing the name of your profile or an absolute path to the profile directory. This is helpful if you want to configure settings for the `run` command.
 
-### Keeping profile changes
+<section id="keep-profile-changes"></section>
+
+### Keep profile changes
 
 The `run` command does not save any changes made to the custom profile specified by `--firefox-profile`. To keep changes, add this option:
 
@@ -238,19 +303,20 @@ This may be helpful if your extension has many different run states.
 This option makes destructive changes to the profile that are required for `web-ext` to operate. It turns off auto-updates and allows silent remote connections, among other things. These changes make the profile insecure for daily use. 
 ::: 
 
-<section id="checking-with-lint"></section>
+</div>
+</article>
+</section>
 
-### Checking for code "lint"
+<!-- END: Single Column Body Module -->
 
-Before trying out your extension with the [`run`](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to make sure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files do not contain any errors. You can also set [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file and lint reports on the permissions, manifest keys, and web extension APIs used that are not available in that version. Example:
 
-```shell
-web-ext lint
-```
+<!-- Single Column Body Module -->
 
-This uses the [addons-linter](https://github.com/mozilla/addons-linter) library to walk through your source code directory and report any errors, such as the declaration of an unknown permission.
+<section id="package-sign-and-publish-an-extension" class="module">
+<article class="module-conten-t grid-x grid-padding-x">
+<div class="cell small-12">
 
-See the [lint reference guide](/documentation/develop/web-ext-command-reference/#web-ext-lint) to learn more.
+## Package, sign, and publish your extension
 
 <section id="packaging-your-extension"></section>
 
@@ -433,6 +499,22 @@ This signs and downloads an XPI file that can be installed into Firefox.
 
 See the [sign reference guide](/documentation/develop/web-ext-command-reference/#web-ext-sign) to learn more.
 
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+
+<!-- Single Column Body Module -->
+
+<section id="use-the-configuration-file" class="module">
+<article class="module-conten-t grid-x grid-padding-x">
+<div class="cell small-12">
+
+## Use the configuration file
+
+
 <section id="setting-option-defaults-in-a-configuration-file"></section>
 
 ### Setting option defaults in a configuration file
@@ -515,6 +597,22 @@ web-ext --no-config-discovery run
 ```
 
 To diagnose an issue related to config files, re-run your command with `--verbose`. This tells you which config file affected which option value.
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+
+<!-- Single Column Body Module -->
+
+<section id="advanced-topics" class="module">
+<article class="module-conten-t grid-x grid-padding-x">
+<div class="cell small-12">
+
+## Advanced topics
+
 
 ### Specifying different source and destination directories
 

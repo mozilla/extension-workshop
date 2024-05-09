@@ -181,13 +181,33 @@
                     "id": "using-web-ext-section"
                   },
                   {
+                    "title": "Check your code",
+                    "id": "check-with-lint"
+                  },
+                  {
+                    "title": "Test and debug",
+                    "id": "test-and-degug-an-extention"
+                  },
+                  {
+                    "title": "Package, sign, and publish",
+                    "id": "package-sign-and-publish-an-extension"
+                  },
+                  {
+                    "title": "Use the configuration file",
+                    "id": "use-the-configuration-file"
+                  },
+                  {
+                    "title": "Advanced topics",
+                    "id": "advanced-topics"
+                  },
+                  {
                     "title": "See also",
                     "id": "see-also-section"
                   }
                 ]
               },
               {
-                "title": "web-ext v8 tcommand reference",
+                "title": "web-ext v8 command reference",
                 "url": "/documentation/develop/web-ext-command-reference/",
                 "subpageitems": [
                   {
