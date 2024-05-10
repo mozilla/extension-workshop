@@ -1,7 +1,7 @@
 ---
 layout: sidebar.liquid
 title: web-ext command reference
-permalink: /documentation/develop/web-ext-command-reference-v7/-v7
+permalink: /documentation/develop/web-ext-command-reference-v7/
 topic: Develop
 tags: [commands, options, reference, tools, web-ext, webextensions]
 contributors:
@@ -40,7 +40,7 @@ date: 2024-04-20
 
 {% capture page_hero_banner_content %}
 
-# web-ext command reference
+# web-ext v7 command reference
 
 This page lists all the commands and options available under version 7 of the [web-ext](https://github.com/mozilla/web-ext) command line tool. See [the command reference](/documentation/develop/web-ext-command-reference/) for documentation of the current version of the tool.
 

@@ -219,6 +219,30 @@
                     "id": "commands"
                   },
                   {
+                    "title": "<code>web-ext build</code>",
+                    "id": "web-ext-build"
+                  },
+                  {
+                    "title": "<code>web-ext docs</code>",
+                    "id": "web-ext-docs"
+                  },
+                  {
+                    "title": "<code>web-ext dump-config</code>",
+                    "id": "web-ext-dump-config"
+                  },
+                  {
+                    "title": "<code>web-ext lint</code>",
+                    "id": "web-ext-lint"
+                  },
+                  {
+                    "title": "<code>web-ext run</code>",
+                    "id": "web-ext-run"
+                  },
+                  {
+                    "title": "<code>web-ext sign</code>",
+                    "id": "web-ext-sign"
+                  },
+                  {
                     "title": "Global options",
                     "id": "global-options"
                   },
