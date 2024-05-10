@@ -318,6 +318,15 @@ This option makes destructive changes to the profile that are required for `web-
 
 ## Package, sign, and publish your extension
 
+In this section learn how to:
+
+- [Package your extension](#packaging-your-extension)
+- [Sign and submit your extension for publication](#sign-and-submit-for-publication)
+- [Sign and submit your updated extension for publication](#sign-and-submit-update)
+- [Sign your extension for self-distribution](#sign-for-self-distribution)
+- [Sign in a restricted environment](#restricted-environment)
+- [Sign a test version of a listed extension](#signing-test-version-listed)
+
 <section id="packaging-your-extension"></section>
 
 ### Package your extension
@@ -337,6 +346,8 @@ The generated `.zip` file doesn't work on Firefox without signing or adding [`br
 `web-ext build` is designed to ignore files that are commonly not wanted in packages, such as `.git`, `node_modules`, and other artifacts.
 
 See the [build reference guide](/documentation/develop/web-ext-command-reference/#web-ext-build) to learn more.
+
+<section id="sign-and-submit-for-publication"></section>
 
 ### Sign and submit your extension for publication
 
@@ -386,6 +397,8 @@ web-ext sign --channel=listed --amo-metadata=<path to your metadata JSON file> -
 ```
 
 See the [sign reference guide](/documentation/develop/web-ext-command-reference/#web-ext-sign) to learn more.
+
+<section id="sign-and-submit-update"></section>
 
 ### Sign and submit your updated extension for publication
 
@@ -437,7 +450,9 @@ web-ext sign --channel=listed --amo-metadata=<path to your metadata JSON file> -
 
 See the [sign reference guide](/documentation/develop/web-ext-command-reference/#web-ext-sign) to learn more.
 
-### Signing your extension for self-distribution
+<section id="sign-for-self-distribution"></section>
+
+### Sign your extension for self-distribution
 
 As an alternative to publishing your extension on [addons.mozilla.org](https://addons.mozilla.org/), you can self-host your package file but it needs to be [signed by Mozilla](/documentation/publish/signing-and-distribution-overview/) first. The following command packages and signs a ZIP file, then returns it as a signed XPI file for distribution:
 
@@ -458,7 +473,7 @@ If you've [listed](/documentation/publish/submitting-an-add-on/) the extension o
 
 See the [sign reference guide](/documentation/develop/web-ext-command-reference/#web-ext-sign) to learn more.
 
-### Signing extensions without an explicit ID
+### Sign extensions without an explicit ID
 
 `web-ext` supports signing extensions that do not declare the [`browser_specific_settings.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings) property in their manifest. The first time you sign an extension without an explicit ID, [addons.mozilla.org](https://addons.mozilla.org/) will generate an ID and `web-ext` will save it to `.web-extension-id` in the working directory. You should save the ID file so that you can sign future versions of the same extension. If you lose the ID file, you will have to add back the `browser_specific_settings.gecko.id` property or use the `--id` option when signing, for example:
 
@@ -468,7 +483,7 @@ web-ext sign --api-key=... --api-secret=... --id="{c23c69a7-f889-447c-9d6b-7694b
 
 <section id="restricted-environment"></section>
 
-### Signing in a restricted environment
+### Sign in a restricted environment
 
 If you're working in an environment that restricts access to certain domains, you can try using a proxy when signing:
 
@@ -485,7 +500,7 @@ The following domains are used for signing and downloading files:
 
 <section id="signing-test-version-listed"></section>
 
-### Signing a test version of a listed extension
+### Sign a test version of a listed extension
 
 If you've [listed](/documentation/publish/submitting-an-add-on/) an extension on [addons.mozilla.org](https://addons.mozilla.org/), use `web-ext` to create a signed but [unlisted](/documentation/publish/self-distribution/) version for testing purposes. For example, you may wish to distribute an alpha or beta version to users for early feedback and testing.
 
@@ -514,10 +529,15 @@ See the [sign reference guide](/documentation/develop/web-ext-command-reference/
 
 ## Use the configuration file
 
+In this section learn how to:
+
+- [Set option defaults in a configuration file](#setting-option-defaults-in-a-configuration-file)
+- [Automatically discover configuration files](#automatic-discovery-of-configuration-files)
+
 
 <section id="setting-option-defaults-in-a-configuration-file"></section>
 
-### Setting option defaults in a configuration file
+### Set option defaults in a configuration file
 
 You can specify `--config=my-config.js` to set default values for any option. Here is an example with the `build` command:
 
@@ -577,7 +597,7 @@ module.exports = {
 
 <section id="automatic-discovery-of-configuration-files"></section>
 
-### Automatic discovery of configuration files
+### Automatically discover configuration files
 
 `web-ext` loads configuration files in the following order:
 
@@ -604,7 +624,6 @@ To diagnose an issue related to config files, re-run your command with `--verbos
 
 <!-- END: Single Column Body Module -->
 
-
 <!-- Single Column Body Module -->
 
 <section id="advanced-topics" class="module">
@@ -613,10 +632,20 @@ To diagnose an issue related to config files, re-run your command with `--verbos
 
 ## Advanced topics
 
+In this section learn how to:
 
-### Specifying different source and destination directories
+- [Specify different source and destination directories](#specify-different-source-and-destination)
+- [Output verbose messages](#output-verbose-messages)
+- [View all commands and options](#view-all-commands-and-options)
+- [Detect temporary installation](#detect-temporary-installation)
+- [Use web-ext from a script](#use-web-ext-from-a-script)
 
-The preceding commands use default directories for the extension source and artifact creation (for example, built `.zip` files). The defaults are:
+
+<section id="specify-different-source-and-destination"></section>
+
+### Specify different source and destination directories
+
+The commands use default directories for the extension source and artifact creation (for example, built `.zip` files). The defaults are:
 
 - Source: The directory you are in.
 - Artifacts: A directory called `./web-ext-artifacts`, created inside the current directory.
@@ -627,7 +656,9 @@ You can specify different source and destination directories using the `--source
 web-ext build --source-dir=webextension-examples/notify-link-clicks-i18n --artifacts-dir=zips
 ```
 
-### Outputting verbose messages
+<section id="output-verbose-messages"></section>
+
+### Output verbose messages
 
 To see in detail what web-ext is doing when you run a command, include the --verbose option. For example:
 
@@ -635,7 +666,9 @@ To see in detail what web-ext is doing when you run a command, include the --ver
 web-ext build --verbose
 ```
 
-### Viewing all commands and options
+<section id="view-all-commands-and-options"></section>
+
+### View all commands and options
 
 You can list all commands and options like this:
 
@@ -649,11 +682,15 @@ You can list options for a specific command by adding it as an argument:
 web-ext --help run
 ```
 
-### Detecting temporary installation
+<section id="detect-temporary-installation"></section>
+
+### Detect temporary installation
 
 Your extension can detect whether it was installed using `web-ext run`, rather than as a built and signed extension downloaded from `addons.mozilla.org`. Listen for the [`runtime.onInstalled`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) event and check the value of `details.temporary`.
 
-### Using web-ext from a script
+<section id="use-web-ext-from-a-script"></section>
+
+### Use web-ext from a script
 
 You can use `web-ext` as a `NodeJS module`. Here is [more information](https://github.com/mozilla/web-ext#using-web-ext-in-nodejs-code), with example code.
 
