@@ -63,7 +63,7 @@ If you believe your account has been incorrectly blocked, please email amo-admin
 
 {% capture content %}
 
-## Issues receiving reviewer emails
+## Issues receiving emails from AMO
 
 If you're expecting but haven't received emails from the https://addons.mozilla.org (AMO) platform, check that:
 
