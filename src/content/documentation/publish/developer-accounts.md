@@ -59,5 +59,27 @@ If you believe your account has been incorrectly blocked, please email amo-admin
 %}
 
 <!-- END: Single Column Body Module -->
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
+## Issues receiving emails from AMO
+
+If you're expecting but haven't received emails from the https://addons.mozilla.org (AMO) platform, check that:
+
+1. Your Mozilla account's primary email address is correct. To update it, see the support article [Change primary email address on Mozilla account](https://support.mozilla.org/en-US/kb/change-primary-email-address-firefox-accounts).
+1. The email isn't in your spam or junk folder. If it is, consider adding the AMO email domain (@mozilla.org) to your [approved senders](https://clean.email/blog/email-security/how-to-whitelist-an-email) list.
+1. Your inbox isn't full.
+1. Your mail provider hasn't implemented a security filter that blocked the email delivery.
+
+If you're still experiencing issues after making these checks, posting details of your issue to the [add-ons community forum](https://discourse.mozilla.org/c/add-ons/35) may help.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "email-issues"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
 
 
