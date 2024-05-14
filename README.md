@@ -1,5 +1,3 @@
-[![CircleCI](https://circleci.com/gh/mozilla/extension-workshop/tree/master.svg?style=svg)](https://circleci.com/gh/mozilla/extension-workshop/tree/master)
-
 # Firefox Extension Workshop
 
 Welcome to Firefox Extension Workshop, a launchpad for building Firefox extensions! 🚀
