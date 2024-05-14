@@ -65,7 +65,7 @@ This page lists all the commands and options available under version 8 of the [w
 
 ## What's changed in Version 8
 
-Released in May 2024, the main change in version 8 of `web-ext` is that `web-ext sign` now creates a listing for an extension not previously listed on AMO by default. This feature was previewed in version 7 with the [--use-submission-api](#use-submission-api) option, which is now removed. This feature is achieved using the submission features of [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html).
+Released in May 2024, the main change in version 8 of `web-ext` is that `web-ext sign` now creates a listing for an extension not previously listed on [addons.mozilla.org](https://addons.mozilla.org) (AMO) by default. This feature was previewed in version 7 with the [--use-submission-api](#use-submission-api) option, which is now removed. This feature is achieved using the submission features of [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html).
 
 ### Removed
 
@@ -645,7 +645,11 @@ Environment variable: `$WEB_EXT_TIMEOUT`
 
 #### `--amo-metadata`
 
-The path to a JSON file containing an object with metadata to be passed to the add-on submission API (e.g., `categories`; `license`), but any [supported JSON metadata](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html) can be supplied. Typically, this is used to submit the metadata required for the first version of an extension listed on AMO. 
+The path to a JSON file containing an object with metadata for the extension's [addons.mozilla.org](https://addons.mozilla.org) (AMO) listing.
+
+Metadata is required for the first version of an extension listed on AMO. This metadata can include any of the properties of the [addons.mozilla.org add-on API Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#create). However, the`"categories"` and `"summary"` properties must be provided.
+
+When publishing an extension update metadata isn't required. However, any of the properties of the [addons.mozilla.org add-on API Version Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) can be provided.
 
 Environment variable: `$WEB_AMO_METADATA`
 </section>

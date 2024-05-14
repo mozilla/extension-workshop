@@ -19,7 +19,8 @@ contributors:
     arai,
     tofumatt,
     chrisdavidmills,
-    ankushduacodes
+    ankushduacodes,
+    rebloor
   ]
 last_updated_by: rebloor
 date: 2024-05-15
@@ -31,7 +32,7 @@ date: 2024-05-15
 
 # Getting started with web-ext
 
-`web-ext` is a command line tool designed to make development faster and easier. This article explains how to install and use `web-ext`.
+`web-ext` is a command-line tool designed to speed up and simplify development. This article explains how to install and use `web-ext`.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -69,7 +70,7 @@ npm install --global web-ext
 
 `web-ext` requires the current [LTS](https://github.com/nodejs/Release#release-schedule) (long-term support) versions of [NodeJS](https://nodejs.org/).
 
-To test whether the installation worked run the following command, which displays the `web-ext` version number:
+To test whether the installation worked, run the following command, which displays the `web-ext` version number:
 
 ```shell
 web-ext --version
@@ -89,7 +90,7 @@ web-ext --version
 
 ## Update
 
-`web-ext` notifies you when a new version is available. To update use the same commands as you did to install:
+`web-ext` notifies you when a new version is available. To update, use the same commands as you did to install:
 
 ```shell
 brew install web-ext
@@ -114,7 +115,7 @@ npm install --global web-ext
 
 ## Using web-ext
 
-Before you start using `web-ext` locate an example extension to use—if you don’t have one, use one from the [webextensions-examples](https://github.com/mdn/webextensions-examples) repo. If you would like to start from scratch, use the community developed [boilerplating tool](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/#boilerplating-tools) to get started with a fresh extension.
+Before you use `web-ext`, locate an example extension. If you don’t have one, use one from the [webextensions-examples](https://github.com/mdn/webextensions-examples) repo. If you want to start from scratch, use the community-developed [boilerplating tool](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/#boilerplating-tools) to start with a fresh extension.
 
 </div>
 </article>
@@ -131,15 +132,15 @@ Before you start using `web-ext` locate an example extension to use—if you don
 
 ## Check your code
 
-Before trying out your extension with the [`run`](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to make sure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files are free of errors. If you set [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file lint reports on the permissions, manifest keys, and web extension APIs used that are not available in that version. 
+Before trying out your extension with the [`run`](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to rnsure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files are error-free. If you set [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file, lint reports on the permissions, manifest keys, and web extension APIs used that are not available in that version. 
 
-To check your extension code `cd` into your extensions’s root directory and enter:
+To check your extension code, `cd` into your extensions’s root directory and enter:
 
 ```shell
 web-ext lint
 ```
 
-This uses the [addons-linter](https://github.com/mozilla/addons-linter) library to walk through your source code directory and report any errors, such as the declaration of an unknown permission.
+This uses the [addons-linter](https://github.com/mozilla/addons-linter) library to walk through your source code directory and report any errors, such as declaring an unknown permission.
 
 See the [lint reference guide](/documentation/develop/web-ext-command-reference/#web-ext-lint) to learn more.
 
@@ -158,7 +159,7 @@ See the [lint reference guide](/documentation/develop/web-ext-command-reference/
 
 ## Test and debug your extension
 
-In this section learn how to:
+In this section, learn how to:
 
 - [Test your extension](#testing-out-an-extension)
 - [Automatically reload your extension](#automatically-reload-your-extension)
@@ -187,7 +188,7 @@ See the [run reference guide](/documentation/develop/web-ext-command-reference/#
 
 ### Automatically reload your extension
 
-The `run` command watches your source files and tells Firefox to reload the extension after you edit and save a file. For example, if you changed the `name` property in your `manifest.json` file, Firefox displays the new name. This makes it easy to try out new features because you can see the effect immediately. The automatic reloading feature is active by default, you use it like this:
+The `run` command watches your source files and tells Firefox to reload the extension after you edit and save a file. For example, if you change the `name` property in your `manifest.json` file, Firefox displays the new name. This makes it easy to try out new features because you can see the effect immediately. The automatic reloading feature is active by default. You use it like this:
 
 ```shell
 web-ext run
@@ -227,7 +228,7 @@ See the [run command](/documentation/develop/web-ext-command-reference/#web-ext-
 
 ### Test in Firefox for Android
 
-To run your extension in [Firefox for Android](https://www.mozilla.org/firefox/mobile/), follow these instructions to [set up your computer and device](/documentation/develop/developing-extensions-for-firefox-for-android/#set-up-your-computer-and-android-emulator-or-device).
+To run your extension in [Firefox for Android](https://www.mozilla.org/firefox/mobile/), follow the instructions to [set up your computer and device](/documentation/develop/developing-extensions-for-firefox-for-android/#set-up-your-computer-and-android-emulator-or-device).
 
 With your device connected to your development computer, run:
 
@@ -235,7 +236,7 @@ With your device connected to your development computer, run:
 web-ext run --target=firefox-android
 ```
 
-This command displays the device ID for your connected Android device or devices. If you don't see a list of device IDs, make sure you set up the device for development correctly.
+This command displays the device ID for your connected Android device or devices. If you don't see a device ID, check that you set up the device correctly for development.
 
 Now, add the device ID to the command:
 
@@ -243,15 +244,15 @@ Now, add the device ID to the command:
 web-ext run --target=firefox-android --android-device=<device ID>
 ```
 
-If you've multiple versions of Firefox installed, you may need to choose a version. For example:
+If you've installed multiple versions of Firefox on the device, choose one like this:
 
 ```shell
 web-ext run --target=firefox-android ... --firefox-apk=org.mozilla.firefox
 ```
 
-The first time you run this command, you may need to grant Android permissions for the APK. This is because the command needs read/write access to the device storage, so that Firefox for Android can run on a temporary profile. The `web-ext` output guides you in how to grant these permissions.
+The first time you run this command, you may need to grant Android permissions for the APK. This is because the command needs read/write access to the device storage so that Firefox for Android can run on a temporary profile. The `web-ext` output guides you on how to grant these permissions.
 
-The `web-ext` command does not alter any of your existing Firefox for Android preferences or data. To see more information about how `web-ext` is interacting with your device, run the command with `--verbose`.
+The `web-ext` command does not alter your Firefox for Android preferences or data. To learn more about how `web-ext` interacts with your device, run the command with `--verbose`.
 
 See the [run command](/documentation/develop/web-ext-command-reference/#web-ext-run) reference to learn more.
 
@@ -267,13 +268,13 @@ You can connect to this Android device on TCP port 51499
 
 This is a remote debugger port that you can [connect to with Firefox's developer tools](https://developer.mozilla.org/docs/Tools/Remote_Debugging/Firefox_for_Android#Connecting). In this case, you connect to host `localhost` on port `51499`.
 
-See [the Debug your extensionis guide](/documentation/develop/developing-extensions-for-firefox-for-android/#debug-your-extension) for more information about debugging an extension on Firefox for Android.
+See [the Debug your extension guide](/documentation/develop/developing-extensions-for-firefox-for-android/#debug-your-extension) for more information about debugging an extension on Firefox for Android.
 
 <section id="test-unsigned-extensions"></section>
 
 ### Test unsigned extensions
 
-When you execute [web-ext run](/documentation/develop/web-ext-command-reference/#web-ext-run), the extension gets installed temporarily until you close Firefox. This does not violate any signing restrictions. If instead you create a zip file with [web-ext build](/documentation/develop/web-ext-command-reference/#web-ext-build) and try to install it into Firefox, you see an error telling you that the add-on is not signed. You must use an [unbranded build](https://wiki.mozilla.org/Addons/Extension_Signing#Unbranded_Builds) or [development build](https://www.mozilla.org/firefox/developer/) to install unsigned extensions.
+When you execute [web-ext run](/documentation/develop/web-ext-command-reference/#web-ext-run), the extension is installed and remains installed until you close Firefox. This does not violate any signing restrictions. If instead you create a zip file with [web-ext build](/documentation/develop/web-ext-command-reference/#web-ext-build) and try to install it into Firefox, you see an error telling you that the add-on is not signed. Yo install unsigned extensions, use an [unbranded build](https://wiki.mozilla.org/Addons/Extension_Signing#Unbranded_Builds) or [development build](https://www.mozilla.org/firefox/developer/).
 
 <section id="use-a-custom-profile"></section>
 
@@ -358,7 +359,7 @@ When you have confirm that your extension works as expected, you can publish it 
 
 #### Create your metadata file
 
-(need to confirm the required attributes and update the example accordingly)
+Metadata is required for the first version of an extension listed on AMO. This metadata can include any of the properties of the [addons.mozilla.org add-on API Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#create). However, the`"categories"` and `"summary"` properties must be provided.
 
 For example:
 
@@ -378,8 +379,6 @@ For example:
   }
 }
 ```
-
-See ?? for more details about creating your metadata file.
 
 #### Obtain you API key
 
@@ -409,29 +408,7 @@ As you improve and update your extension you want to submit new versions for pub
 
 #### Create your metadata file
 
-You don't need to provide updated metadata to publish an update to your extension. However, typically you might update:
-
-- (List of typical attributes updated)
-
-For example
-
-``` json
-{
-  "version": { "license": "MPL2.0" } },
-  "categories": { "firefox": ["shopping", "bookmarks"] },
-  "contributions_url": "https://donate.mozilla.org",
-  "requires_payment": false,
-  "homepage": {
-    "en-US": "http://example.org?lang=en-US",
-    "fr": "http://example.org?lang=fr"
-  },
-  "support_email": {
-    "en-US": "support@example.org",
-    "fr": "support-fr@example.org"
-  }
-}
-```
-See ?? for more details about creating your metadata file.
+When publishing an extension update metadata isn't required. However, any of the properties of the [addons.mozilla.org add-on API Version Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) can be provided.
 
 #### Obtain you API key
 
@@ -539,10 +516,10 @@ In this section learn how to:
 
 ### Set option defaults in a configuration file
 
-You can specify `--config=my-config.js` to set default values for any option. Here is an example with the `build` command:
+You can specify `--config=my-config.cjs` or `--config=my-config.mjs` to set default values for any option. Here is an example with the `build` command:
 
 ```shell
-web-ext --config=my-config.js build
+web-ext --config=my-config.mjs build
 ```
 
 The file should be a CommonJS module [as understood by NodeJS](https://nodejs.org/docs/latest/api/modules.html#modules_modules) and must export each configuration value. Here is how you would set the default value of [--verbose](/documentation/develop/web-ext-command-reference/#verbose) to `true`:
@@ -553,7 +530,7 @@ module.exports = {
 };
 ```
 
-If you want to specify options that only apply to a specific command, you nest the configuration under the command name. Here is an example of adding configuration for [--overwrite-dest](/documentation/develop/web-ext-command-reference/#overwrite-dest) that only applies to the `build` command as well as [--firefox](/documentation/develop/web-ext-command-reference/#--firefox) that only applies to the `run` command:
+If you want to specify options that only apply to a specific command, you nest the configuration under the command name. Here is an example of adding configuration for [--overwrite-dest](/documentation/develop/web-ext-command-reference/#overwrite-dest) that only applies to the `build` command and [--firefox](/documentation/develop/web-ext-command-reference/#--firefox) that only applies to the `run` command:
 
 ```js
 module.exports = {
@@ -601,14 +578,33 @@ module.exports = {
 
 `web-ext` loads configuration files in the following order:
 
-- A config file named `.web-ext-config.js` in your home directory, for example: 
-  - On Windows: `C:\Users\<username>\.web-ext-config.js`
-  - On macOS: `/Users/<username>/.web-ext-config.js`
-  - On Linux: `/home/<username>/.web-ext-config.js`
+- A config file named `.web-ext-config.mjs` in your home directory, for example: 
+  - On Windows: `C:\Users\<username>\.web-ext-config.mjs`
+  - On macOS: `/Users/<username>/.web-ext-config.mjs`
+  - On Linux: `/home/<username>/.web-ext-config.mjs`
 - A config property named `"webExt"` included in a `package.json` file in the current directory.
-- A config file named `web-ext-config.js` in the current directory.
+- A config file named `web-ext-config.mjs` in the current directory.
+
+(`web-ext` also recognizes files named `.web-ext-config.cjs` as configuration files.)
 
 If a home directory config and a local directory config define the same option, the value from the latter file is used.
+
+For example, creating `~/.web-ext-config.mjs` containg:
+
+```
+export default {
+  "sign": {
+    "apiKey": "<API_KEY>",
+    "apiSecret": "<API_SECRET>"
+  }
+}
+```
+
+Is the equivalent of:
+
+```
+web-ext sign --api-key <API_KEY> --api-secret <API_SECRET>
+```
 
 To disable automatic loading of configuration files, set this option:
 
