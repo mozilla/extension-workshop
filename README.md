@@ -1,3 +1,5 @@
+[![CI](https://github.com/mozilla/extension-workshop/actions/workflows/ci.yml/badge.svg)](https://github.com/mozilla/extension-workshop/actions/workflows/ci.yml)
+
 # Firefox Extension Workshop
 
 Welcome to Firefox Extension Workshop, a launchpad for building Firefox extensions! 🚀
