@@ -4,9 +4,9 @@ title: Submitting an add-on
 permalink: /documentation/publish/submitting-an-add-on/
 topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]
-contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz, wesinator]
-last_updated_by: wesinator
-date: 2022-10-17
+contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz, wesinator, achangofpace]
+last_updated_by: achangofpace
+date: 2024-04-28
 ---
 
 <!-- Page Hero Banner -->
@@ -92,7 +92,7 @@ Choose:
    - **Name**: your add-on's name.
    - **Add-on URL**: the URL for your add-on on AMO. A URL is automatically assigned based on your add-on's name. To change this, click **Edit**. The URL must be unique. You are warned if another add-on is using your chosen URL, and you must enter a different one.
    - **Summary**: a useful and descriptive short summary of your add-on.
-   - **Description**: a longer description that provides users with details of the extensin's features and functionality.
+   - **Description**: a longer description that provides users with details of the extension's features and functionality.
    - **This add-on is experimental**: your add-on is experimental or otherwise not ready for general use. The add-on will be listed but with reduced visibility. You can remove this flag when your add-on is ready for general use.
    - **This add-on requires payment, non-free services or software, or additional hardware**: indicate if your add-on requires users to make an additional purchase for it to work fully.
    - **Select up to 2 Firefox categories for this add-on**: select categories that describe your add-on.

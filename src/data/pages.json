@@ -959,6 +959,10 @@
                   {
                     "title": "Blocked accounts",
                     "id": "blocked-accounts"
+                  },
+                  {
+                    "title": "Issues receiving emails from AMO",
+                    "id": "email-issues"
                   }
                 ]
               },
