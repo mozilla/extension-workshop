@@ -354,6 +354,7 @@ See the [build reference guide](/documentation/develop/web-ext-command-reference
 
 When you have confirm that your extension works as expected, you can publish it on [addons.mozilla.org](https://addons.mozilla.org/). You can do this using the website or  `web-ext sign`. To use `web-ext sign` you need to:
 
+- if you're submitting a Manifest V3 extension, ensure that you've set an ID for the extension in its manifest.json file using the key [`browser_specific_settings.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
 - create a JSON file containing the metadata needed by addons.mozilla.org to list the extension.
 - obtain an API key from addons.mozilla.org.
 
@@ -394,6 +395,7 @@ You can now run `web-ext sign` supplying the API key and location of the JSON fi
 ```shell
 web-ext sign --channel=listed --amo-metadata=<path to your metadata JSON file> --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
 ```
+If you sign a Manifest V2 extension without an explicit ID, [addons.mozilla.org](https://addons.mozilla.org/) generates an ID and `web-ext` saves it to `.web-extension-id` in the working directory. Add the ID to the extension's [`browser_specific_settings.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in its manifest.json file. The ID needs to be present to publish updates with `web-ext`.
 
 See the [sign reference guide](/documentation/develop/web-ext-command-reference/#web-ext-sign) to learn more.
 
@@ -403,6 +405,7 @@ See the [sign reference guide](/documentation/develop/web-ext-command-reference/
 
 As you improve and update your extension you want to submit new versions for publication on [addons.mozilla.org](https://addons.mozilla.org/). You can do this using the website or `web-ext sign`. To use `web-ext sign` you need to:
 
+- ensure you've set the extension's ID in the manifest.json key [`browser_specific_settings.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
 - create a JSON file containing any updated metadata to be used on addons.mozilla.org.
 - obtain an API key from addons.mozilla.org.
 
@@ -449,14 +452,6 @@ If you've [listed](/documentation/publish/submitting-an-add-on/) the extension o
 </div>
 
 See the [sign reference guide](/documentation/develop/web-ext-command-reference/#web-ext-sign) to learn more.
-
-### Sign extensions without an explicit ID
-
-`web-ext` supports signing extensions that do not declare the [`browser_specific_settings.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings) property in their manifest. The first time you sign an extension without an explicit ID, [addons.mozilla.org](https://addons.mozilla.org/) will generate an ID and `web-ext` will save it to `.web-extension-id` in the working directory. You should save the ID file so that you can sign future versions of the same extension. If you lose the ID file, you will have to add back the `browser_specific_settings.gecko.id` property or use the `--id` option when signing, for example:
-
-```shell
-web-ext sign --api-key=... --api-secret=... --id="{c23c69a7-f889-447c-9d6b-7694be8035bc}"
-```
 
 <section id="restricted-environment"></section>
 
