@@ -65,22 +65,23 @@ This page lists all the commands and options available under version 8 of the [w
 
 ## What's changed in Version 8
 
-Released in May 2024, the main change in version 8 of `web-ext` is that `web-ext sign` now creates a listing for an extension not previously listed on [addons.mozilla.org](https://addons.mozilla.org) (AMO) by default. This feature was previewed in version 7 with the [--use-submission-api](#use-submission-api) option, which is now removed. This feature is achieved using the submission features of [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html).
+Released in May 2024, the main change in version 8 of `web-ext` is that `web-ext sign` now creates a listing for an extension not previously listed on [addons.mozilla.org](https://addons.mozilla.org) (AMO) by default. This feature was previewed in version 7 with the [`--use-submission-api`](/documentation/develop/web-ext-command-reference-v7/#use-submission-api) option, which is now removed. This feature is achieved using the submission features of [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html).
 
 ### Removed
 
 These version 7 `web-ext sign` options are removed:
 
-- [`--use-submission-api`](#use-submission-api)
-- [`--api-url-prefix`](#api-url-prefix)
-- --disable-progress-bar (undocumented feature)
+- [`--use-submission-api`](/documentation/develop/web-ext-command-reference-v7/#use-submission-api)
+- [`--api-url-prefix`](/documentation/develop/web-ext-command-reference-v7/#api-url-prefix)
+- `--disable-progress-bar` (undocumented feature)
 
 ### Updates
 
 These `web-ext sign` options have changed:
 
-- [`--amo-base-url`](#amo-base-url) no longer requires `use-submission-api` to be set.
+- [`--amo-base-url`](#amo-base-url) no longer requires the (removed) `--use-submission-api` option to be set.
 - [`--channel`](#channel) is now required.
+- To submit updates, an extension's `manifest.json` must include an [extension ID](/documentation/develop/extensions-and-the-add-on-id/#how-do-i-set-an-add-on-id).
 
 ### Additions
 
@@ -106,7 +107,7 @@ These features are added:
 
 ## Commands
 
-web-ext has these commands; a command's options are included as subsections.
+`web-ext` has these commands; a command's options are included as subsections.
 
 <section id="web-ext-build">
 
@@ -127,7 +128,7 @@ Environment variable: `$WEB_EXT_AS_NEEDED=true`
 
 #### `--overwrite-dest`, `-o`
 
-Overwrite the destination package file if it exists. Without this option, web-ext exits in error if the destination file exists.
+Overwrite the destination package file if it exists. Without this option, `web-ext` exits with an error if the destination file exists.
 
 Environment variable: `$WEB_EXT_OVERWRITE_DEST=true`
 </section>
@@ -748,7 +749,7 @@ Environment variable: `$WEB_EXT_IGNORE_FILES`
 
 ### `--help`, `-h`
 
-Lists all the commands and options for the web-ext tool. When you request help, you can list the options for a command by including the command name.. For example, `web-ext --help run`.
+Lists all the commands and options for the `web-ext` tool. When you request help, you can list the options for a command by including the command name. For example, `web-ext --help run`.
 </section>
 
 <section id="no-input">

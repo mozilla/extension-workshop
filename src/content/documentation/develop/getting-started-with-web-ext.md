@@ -292,7 +292,7 @@ This option accepts a string containing the name of your profile or an absolute 
 
 ### Keep profile changes
 
-The `run` command does not save any changes made to the custom profile specified by `--firefox-profile`. To keep changes, add this option:
+The `run` command does not save any changes made to the custom profile specified by `--firefox-profile`. To keep changes, add use the `--keep-profile-changes` option:
 
 ```shell
 web-ext run --keep-profile-changes --firefox-profile=your-custom-profile
@@ -314,7 +314,7 @@ This option makes destructive changes to the profile that are required for `web-
 <!-- Single Column Body Module -->
 
 <section id="package-sign-and-publish-an-extension" class="module">
-<article class="module-conten-t grid-x grid-padding-x">
+<article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
 
 ## Package, sign, and publish your extension
@@ -355,7 +355,7 @@ See the [build reference guide](/documentation/develop/web-ext-command-reference
 When you have confirm that your extension works as expected, you can publish it on [addons.mozilla.org](https://addons.mozilla.org/). You can do this using the website or  `web-ext sign`. To use `web-ext sign` you need to:
 
 - create a JSON file containing the metadata needed by addons.mozilla.org to list the extension.
-- obtain an API key from addons.mozilla.org
+- obtain an API key from addons.mozilla.org.
 
 #### Create your metadata file
 
@@ -384,7 +384,7 @@ For example:
 
 Visit the [addons.mozilla.org credentials](https://addons.mozilla.org/developers/addon/api/key/) page. You must register if you haven't done so before. From this page you obtain:
 
-- The JWT issuer key, a string that looks something like `user:12345:67`. You supply this to `web-ext sign` as the API key in `--api-key`
+- The JWT issuer key, a string that looks something like `user:12345:67`. You supply this to `web-ext sign` as the API key in `--api-key`.
 - The JWT secret, a string that looks something like `634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009`. You supply this to `web-ext sign` as the API secret in `--api-secret`. 
 
 #### Run `web-ext sign`
@@ -401,7 +401,7 @@ See the [sign reference guide](/documentation/develop/web-ext-command-reference/
 
 ### Sign and submit your updated extension for publication
 
-As you improve and update your extension you want to submit new versions for publication on [addons.mozilla.org](https://addons.mozilla.org/). You can do this using the website or  `web-ext sign`. To use `web-ext sign` you need to:
+As you improve and update your extension you want to submit new versions for publication on [addons.mozilla.org](https://addons.mozilla.org/). You can do this using the website or `web-ext sign`. To use `web-ext sign` you need to:
 
 - create a JSON file containing any updated metadata to be used on addons.mozilla.org.
 - obtain an API key from addons.mozilla.org.
@@ -414,7 +414,7 @@ When publishing an extension update metadata isn't required. However, any of the
 
 Visit the [addons.mozilla.org credentials](https://addons.mozilla.org/developers/addon/api/key/) page. You must register if you haven't done so before. From this page you obtain:
 
-- The JWT issuer key, a string that looks something like `user:12345:67`. You supply this to `web-ext sign` as the API key in `--api-key`
+- The JWT issuer key, a string that looks something like `user:12345:67`. You supply this to `web-ext sign` as the API key in `--api-key`.
 - The JWT secret, a string that looks something like `634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009`. You supply this to `web-ext sign` as the API secret in `--api-secret`. 
 
 #### Run `web-ext sign`
@@ -501,7 +501,7 @@ See the [sign reference guide](/documentation/develop/web-ext-command-reference/
 <!-- Single Column Body Module -->
 
 <section id="use-the-configuration-file" class="module">
-<article class="module-conten-t grid-x grid-padding-x">
+<article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
 
 ## Use the configuration file
@@ -533,7 +533,7 @@ module.exports = {
 If you want to specify options that only apply to a specific command, you nest the configuration under the command name. Here is an example of adding configuration for [--overwrite-dest](/documentation/develop/web-ext-command-reference/#overwrite-dest) that only applies to the `build` command and [--firefox](/documentation/develop/web-ext-command-reference/#--firefox) that only applies to the `run` command:
 
 ```js
-module.exports = {
+export default {
   // Global options:
   verbose: true,
   // Command options:
@@ -561,7 +561,7 @@ module.exports = {
 
 `web-ext` also tries to load its configuration options from a `"webExt"` property included in the `package.json` file in the current directory:
 
-```js
+```json
 {
   "name": "an-extension-src-dir-with-a-package-json",
   "version": "1.0.0",
@@ -591,7 +591,7 @@ If a home directory config and a local directory config define the same option, 
 
 For example, creating `~/.web-ext-config.mjs` containg:
 
-```
+```js
 export default {
   "sign": {
     "apiKey": "<API_KEY>",
@@ -602,7 +602,7 @@ export default {
 
 Is the equivalent of:
 
-```
+```shell
 web-ext sign --api-key <API_KEY> --api-secret <API_SECRET>
 ```
 
@@ -623,7 +623,7 @@ To diagnose an issue related to config files, re-run your command with `--verbos
 <!-- Single Column Body Module -->
 
 <section id="advanced-topics" class="module">
-<article class="module-conten-t grid-x grid-padding-x">
+<article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
 
 ## Advanced topics
