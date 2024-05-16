@@ -525,7 +525,7 @@ web-ext --config=my-config.mjs build
 The file should be a CommonJS module [as understood by NodeJS](https://nodejs.org/docs/latest/api/modules.html#modules_modules) and must export each configuration value. Here is how you would set the default value of [--verbose](/documentation/develop/web-ext-command-reference/#verbose) to `true`:
 
 ```js
-module.exports = {
+export default {
   verbose: true,
 };
 ```
@@ -551,7 +551,7 @@ To create a configuration key for a command line option, you remove the precedin
 If an option can be specified multiple times on the command line then you define it as an array. For example, here is how to specify multiple [--ignore-files](/documentation/develop/web-ext-command-reference/#global-options) patterns:
 
 ```js
-module.exports = {
+export default {
   ignoreFiles: [
     'package-lock.json',
     'yarn.lock',
