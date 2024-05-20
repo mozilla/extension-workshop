@@ -1,5 +1,4 @@
 [![CI](https://github.com/mozilla/extension-workshop/actions/workflows/ci.yml/badge.svg)](https://github.com/mozilla/extension-workshop/actions/workflows/ci.yml)
-[![CircleCI](https://circleci.com/gh/mozilla/extension-workshop/tree/master.svg?style=svg)](https://circleci.com/gh/mozilla/extension-workshop/tree/master)
 
 # Firefox Extension Workshop
 
