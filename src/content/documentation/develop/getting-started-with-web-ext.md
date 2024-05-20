@@ -19,10 +19,11 @@ contributors:
     arai,
     tofumatt,
     chrisdavidmills,
-    ankushduacodes
+    ankushduacodes,
+    huyenltnguyen
   ]
-last_updated_by: ankushduacodes
-date: 2021-01-27 23:47:23
+last_updated_by: huyenltnguyen
+date: 2024-05-17
 ---
 
 <!-- Page Hero Banner -->
@@ -53,7 +54,7 @@ date: 2021-01-27 23:47:23
 
 ## Installation
 
-`web-ext` is a node-based application. You install it with `brew` or the [nodejs](https://nodejs.org/) npm tool.
+`web-ext` is a node-based application. You install it with `brew` or the [NodeJS](https://nodejs.org/) `npm` tool.
 
 Install with `brew` using:
 
@@ -99,7 +100,7 @@ Before you start using `web-ext` locate an example extension to use—if you don
 
 ### Testing out an extension
 
-Test an extension in Firefox by `cd`'ing into your extensions’s root directory and entering:
+Test an extension in Firefox by `cd`'ing into your extension’s root directory and entering:
 
 ```shell
 web-ext run
