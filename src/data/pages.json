@@ -173,8 +173,32 @@
                     "id": "installation-section"
                   },
                   {
+                    "title": "Update",
+                    "id": "update-section"
+                  },
+                  {
                     "title": "Using web-ext",
                     "id": "using-web-ext-section"
+                  },
+                  {
+                    "title": "Check your code",
+                    "id": "check-with-lint"
+                  },
+                  {
+                    "title": "Test and debug",
+                    "id": "test-and-degug-an-extention"
+                  },
+                  {
+                    "title": "Package, sign, and publish",
+                    "id": "package-sign-and-publish-an-extension"
+                  },
+                  {
+                    "title": "Use the configuration file",
+                    "id": "use-the-configuration-file"
+                  },
+                  {
+                    "title": "Advanced topics",
+                    "id": "advanced-topics"
                   },
                   {
                     "title": "See also",
@@ -183,8 +207,58 @@
                 ]
               },
               {
-                "title": "web-ext command reference",
+                "title": "web-ext v8 command reference",
                 "url": "/documentation/develop/web-ext-command-reference/",
+                "subpageitems": [
+                  {
+                    "title": "What's new",
+                    "id": "whats-new"
+                  },
+                  {
+                    "title": "Commands",
+                    "id": "commands"
+                  },
+                  {
+                    "title": "<code>web-ext build</code>",
+                    "id": "web-ext-build"
+                  },
+                  {
+                    "title": "<code>web-ext docs</code>",
+                    "id": "web-ext-docs"
+                  },
+                  {
+                    "title": "<code>web-ext dump-config</code>",
+                    "id": "web-ext-dump-config"
+                  },
+                  {
+                    "title": "<code>web-ext lint</code>",
+                    "id": "web-ext-lint"
+                  },
+                  {
+                    "title": "<code>web-ext run</code>",
+                    "id": "web-ext-run"
+                  },
+                  {
+                    "title": "<code>web-ext sign</code>",
+                    "id": "web-ext-sign"
+                  },
+                  {
+                    "title": "Global options",
+                    "id": "global-options"
+                  },
+                  {
+                    "title": "Setting option environment variables",
+                    "id": "setting-option-environment-variables"
+                  },
+                  {
+                    "title": "See also",
+                    "id": "see-also"
+                  }
+                ]
+              },
+              {
+                "title": "web-ext v7 command reference",
+                "url": "/documentation/develop/web-ext-command-reference-v7/",
                 "subpageitems": [
                   {
                     "title": "Commands",
