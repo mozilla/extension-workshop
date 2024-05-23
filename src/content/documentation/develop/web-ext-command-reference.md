@@ -32,8 +32,8 @@ contributors:
     djbrown,
     Robot-Inventor
   ]
-last_updated_by: rebloor
-date: 2024-05-20
+last_updated_by: willdurand
+date: 2024-05-23
 ---
 
 <!-- Page Hero Banner -->
@@ -42,7 +42,7 @@ date: 2024-05-20
 
 # web-ext command reference
 
-This page lists all the commands and options available under version 8 of the [web-ext](https://github.com/mozilla/web-ext) command line tool. See [the version 7 command reference](/documentation/develop/web-ext-command-reference-v7/) for documentation of the previous version of the tool.
+This page lists all the commands and options available under version 8 of the [web-ext](https://github.com/mozilla/web-ext) command line tool, which is **not released yet**. See [the version 7 command reference](/documentation/develop/web-ext-command-reference-v7/) for documentation of the previous version of the tool.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -65,7 +65,7 @@ This page lists all the commands and options available under version 8 of the [w
 
 ## What's changed in Version 8
 
-Released in May 2024, the main change in version 8 of `web-ext` is that `web-ext sign` now creates a listing for an extension not previously listed on [addons.mozilla.org](https://addons.mozilla.org) (AMO) by default. This feature was previewed in version 7 with the [`--use-submission-api`](/documentation/develop/web-ext-command-reference-v7/#use-submission-api) option, which is now removed. This feature is achieved using the submission features of [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html).
+The main change in version 8 of `web-ext` is that `web-ext sign` now creates a listing for an extension not previously listed on [addons.mozilla.org](https://addons.mozilla.org) (AMO) by default. This feature was previewed in version 7 with the [`--use-submission-api`](/documentation/develop/web-ext-command-reference-v7/#use-submission-api) option, which is now removed. This feature is achieved using the submission features of [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html).
 
 ### Removed
 
