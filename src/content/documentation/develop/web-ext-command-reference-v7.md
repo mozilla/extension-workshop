@@ -1,6 +1,6 @@
 ---
 layout: sidebar.liquid
-title: web-ext command reference
+title: web-ext v7 command reference
 permalink: /documentation/develop/web-ext-command-reference-v7/
 topic: Develop
 tags: [commands, options, reference, tools, web-ext, webextensions]
@@ -32,8 +32,8 @@ contributors:
     djbrown,
     Robot-Inventor
   ]
-last_updated_by: rebloor
-date: 2024-05-15
+last_updated_by: willdurand
+date: 2024-05-23
 ---
 
 <!-- Page Hero Banner -->
