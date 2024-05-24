@@ -227,13 +227,6 @@ Treat warnings as errors by exiting non-zero for warnings.
 Environment variable: `$WEB_EXT_WARNINGS_AS_ERRORS=true`
 </section>
 
-<section id="lint-firefox-preview">
-
-#### `--firefox-preview`
-
-Turn on developer preview features in Firefox. This option accepts multiple values, depending on the available developer previews.
-
-</section>
 </section> <!-- web-ext-lint -->
 
 <section id="web-ext-run">
@@ -386,14 +379,6 @@ web-ext run --target=firefox-android --firefox-apk=org.mozilla.firefox
 ```
 
 Environment variable: `$WEB_EXT_FIREFOX_APK`
-</section>
-
-<section id="run-firefox-preview">
-
-#### `--firefox-preview`
-
-Turn on developer preview features in Firefox. To turn on multiple developer preview options, provide multiple values.
-
 </section>
 
 <section id="firefox-profile">
