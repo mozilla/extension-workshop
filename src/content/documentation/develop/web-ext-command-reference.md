@@ -33,7 +33,7 @@ contributors:
     Robot-Inventor
   ]
 last_updated_by: willdurand
-date: 2024-05-23
+date: 2024-05-24
 ---
 
 <!-- Page Hero Banner -->
@@ -68,6 +68,14 @@ This page lists all the commands and options available under version 8 of the [w
 The main change in version 8 of `web-ext` is that `web-ext sign` now creates a listing for an extension not previously listed on [addons.mozilla.org](https://addons.mozilla.org) (AMO) by default. This feature was previewed in version 7 with the [`--use-submission-api`](/documentation/develop/web-ext-command-reference-v7/#use-submission-api) option, which is now removed. This feature is achieved using the submission features of [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html).
 
 ### Removed
+
+These version 7 `web-ext lint` options are removed:
+
+- [`--firefox-preview`](/documentation/develop/web-ext-command-reference-v7/#lint-firefox-preview)
+
+These version 7 `web-ext run` options are removed:
+
+- [`--firefox-preview`](/documentation/develop/web-ext-command-reference-v7/#run-firefox-preview)
 
 These version 7 `web-ext sign` options are removed:
 
