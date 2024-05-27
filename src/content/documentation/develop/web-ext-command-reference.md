@@ -33,7 +33,7 @@ contributors:
     Robot-Inventor
   ]
 last_updated_by: willdurand
-date: 2024-05-24
+date: 2024-05-27
 ---
 
 <!-- Page Hero Banner -->
@@ -81,6 +81,7 @@ These version 7 `web-ext sign` options are removed:
 
 - [`--use-submission-api`](/documentation/develop/web-ext-command-reference-v7/#use-submission-api)
 - [`--api-url-prefix`](/documentation/develop/web-ext-command-reference-v7/#api-url-prefix)
+- [`--id`](/documentation/develop/web-ext-command-reference-v7/#id)
 - `--disable-progress-bar` (undocumented feature)
 
 ### Updates
@@ -580,7 +581,7 @@ Environment variable: `$WEB_EXT_API_SECRET`
 
 <section id="approval-timeout">
 
-#### `--approval-timeout` 
+#### `--approval-timeout`
 
 Number of milliseconds to wait for approval before giving up. Set to 0 to disable the wait for approval. Defaults to `timeout` if not set.
 
