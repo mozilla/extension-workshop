@@ -21,10 +21,11 @@ contributors:
     chrisdavidmills,
     ankushduacodes,
     huyenltnguyen,
-    rebloor
+    rebloor,
+    Jamesllllllllll
   ]
-last_updated_by: rebloor
-date: 2024-05-20
+last_updated_by: Jamesllllllllll
+date: 2024-05-26
 ---
 
 <!-- Page Hero Banner -->
@@ -55,7 +56,7 @@ date: 2024-05-20
 
 ## Installation
 
-`web-ext` is a node-based application. You install it with `brew` or the [NodeJS](https://nodejs.org/) `npm` tool.
+`web-ext` is a Node-based application. You install it with `brew` or the [NodeJS](https://nodejs.org/) `npm` tool.
 
 Install with `brew` using:
 
@@ -133,9 +134,9 @@ Before you use `web-ext`, locate an example extension. If you don’t have one, 
 
 ## Check your code
 
-Before trying out your extension with the [`run`](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to rnsure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files are error-free. If you set [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file, lint reports on the permissions, manifest keys, and web extension APIs used that are not available in that version. 
+Before trying out your extension with the [`run`](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to ensure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files are error-free. If you set [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file, lint reports on the permissions, manifest keys, and web extension APIs used that are not available in that version. 
 
-To check your extension code, `cd` into your extensions’s root directory and enter:
+To check your extension code, `cd` into your extension’s root directory and enter:
 
 ```shell
 web-ext lint
@@ -293,7 +294,7 @@ This option accepts a string containing the name of your profile or an absolute 
 
 ### Keep profile changes
 
-The `run` command does not save any changes made to the custom profile specified by `--firefox-profile`. To keep changes, add use the `--keep-profile-changes` option:
+The `run` command does not save any changes made to the custom profile specified by `--firefox-profile`. To keep changes, use the `--keep-profile-changes` option:
 
 ```shell
 web-ext run --keep-profile-changes --firefox-profile=your-custom-profile
@@ -353,7 +354,7 @@ See the [build reference guide](/documentation/develop/web-ext-command-reference
 
 ### Sign and submit your extension for publication
 
-When you have confirm that your extension works as expected, you can publish it on [addons.mozilla.org](https://addons.mozilla.org/). You can do this using the website or  `web-ext sign`. To use `web-ext sign` you need to:
+When you have confirmed that your extension works as expected, you can publish it on [addons.mozilla.org](https://addons.mozilla.org/). You can do this using the website or  `web-ext sign`. To use `web-ext sign` you need to:
 
 - if you're submitting a Manifest V3 extension, ensure that you've set an ID for the extension in its manifest.json file using the key [`browser_specific_settings.gecko.id`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
 - create a JSON file containing the metadata needed by addons.mozilla.org to list the extension.
@@ -382,7 +383,7 @@ For example:
 }
 ```
 
-#### Obtain you API key
+#### Obtain your API key
 
 Visit the [addons.mozilla.org credentials](https://addons.mozilla.org/developers/addon/api/key/) page. You must register if you haven't done so before. From this page you obtain:
 
@@ -414,7 +415,7 @@ As you improve and update your extension you want to submit new versions for pub
 
 When publishing an extension update metadata isn't required. However, any of the properties of the [addons.mozilla.org add-on API Version Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) can be provided.
 
-#### Obtain you API key
+#### Obtain your API key
 
 Visit the [addons.mozilla.org credentials](https://addons.mozilla.org/developers/addon/api/key/) page. You must register if you haven't done so before. From this page you obtain:
 
