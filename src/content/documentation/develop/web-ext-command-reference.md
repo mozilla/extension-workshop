@@ -668,7 +668,7 @@ When publishing an extension update metadata isn't required. If metadata isn't p
 ```json
 {
   "version": {
-    "approval_notes": "Information for Mozilla reviewers, for when the add-on is reviewed. Only visible to Mozilla."
+    "approval_notes": "Information that helps Mozilla reviewers if they review the add-on. Only visible to Mozilla."
   }
 }
 ```
