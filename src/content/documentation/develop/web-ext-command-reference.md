@@ -663,7 +663,7 @@ A minimal JSON file looks like this:
 
 The `"license"` field accepts one of these [SPDX identifiers](https://spdx.org/licenses/): `MPL-1.1`, `MPL-2.0`, `GPL-2.0-or-later`, `GPL-3.0-or-later`, `LGPL-2.1-or-later`, `LGPL-3.0-or-later`, `MIT`, `BSD-2-Clause`, `cc-all-rights-reserved`, `CC-BY-3.0`, `CC-BY-NC-3.0`, `CC-BY-NC-ND-3.0`, `CC-BY-NC-SA-3.0`, `CC-BY-ND-3.0`, `CC-BY-SA-3.0`, and `all-rights-reserved`.
 
-When publishing an extension update metadata isn't required, and the license specified for the first version will be reused. However, any of the properties of the [addons.mozilla.org add-on API Version Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) can be provided. For example, if you want to specify approval notes (`"approval_notes"`), the JSON file should look like:
+When publishing an extension update metadata isn't required. If metadata isn't provided, the license specified for the first version is reused. However, any of the properties of the [addons.mozilla.org add-on API Version Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) can be provided. For example, if you want to specify `"approval_notes"`, the JSON file looks like this:
 
 ```json
 {
