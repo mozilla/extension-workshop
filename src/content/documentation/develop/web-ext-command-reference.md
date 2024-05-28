@@ -642,9 +642,37 @@ Environment variable: `$WEB_EXT_TIMEOUT`
 
 The path to a JSON file containing an object with metadata for the extension's [addons.mozilla.org](https://addons.mozilla.org) (AMO) listing.
 
-Metadata is required for the first version of an extension listed on AMO. This metadata can include any of the properties of the [addons.mozilla.org add-on API Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#create). However, the`"categories"` and `"summary"` properties must be provided.
+Metadata is required for the first version of an extension listed on AMO. This metadata can include any of the properties of the [addons.mozilla.org add-on API Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#create). However:
+- `"categories"`, `"summary"` and the version's `"license"` properties must be provided. 
+- [Translated fields](https://mozilla.github.io/addons-server/topics/api/overview.html#api-overview-translations) must include at least one locale. 
 
-When publishing an extension update metadata isn't required. However, any of the properties of the [addons.mozilla.org add-on API Version Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) can be provided.
+A minimal JSON file looks like this:
+
+```json
+{
+  "summary": {
+    "en-US": "A short sentence that explains what the extension does."
+  },
+  "categories": [
+    "other"
+  ],
+  "version": {
+    "license": "MPL-2.0"
+  }
+}
+```
+
+The `"license"` field accepts one of these [SPDX identifiers](https://spdx.org/licenses/): `MPL-1.1`, `MPL-2.0`, `GPL-2.0-or-later`, `GPL-3.0-or-later`, `LGPL-2.1-or-later`, `LGPL-3.0-or-later`, `MIT`, `BSD-2-Clause`, `cc-all-rights-reserved`, `CC-BY-3.0`, `CC-BY-NC-3.0`, `CC-BY-NC-ND-3.0`, `CC-BY-NC-SA-3.0`, `CC-BY-ND-3.0`, `CC-BY-SA-3.0`, and `all-rights-reserved`.
+
+When publishing an extension update metadata isn't required. If metadata isn't provided, the license specified for the first version is reused. However, any of the properties of the [addons.mozilla.org add-on API Version Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) can be provided. For example, if you want to specify `"approval_notes"`, the JSON file looks like this:
+
+```json
+{
+  "version": {
+    "approval_notes": "Information that helps Mozilla reviewers if they review the add-on. Only visible to Mozilla."
+  }
+}
+```
 
 Environment variable: `$WEB_AMO_METADATA`
 </section>
