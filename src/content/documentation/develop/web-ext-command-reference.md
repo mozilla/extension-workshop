@@ -641,7 +641,11 @@ Environment variable: `$WEB_EXT_TIMEOUT`
 
 The path to a JSON file containing an object with metadata for the extension's [addons.mozilla.org](https://addons.mozilla.org) (AMO) listing.
 
-**Metadata is required for the first version** of an extension listed on AMO. This metadata can include any of the properties of the [addons.mozilla.org add-on API Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#create). [Translated fields](https://mozilla.github.io/addons-server/topics/api/overview.html#api-overview-translations) must include at least one locale. However, the`"categories"`, `"summary"` and the version's `"license"` properties must be provided. A minimal JSON file should look like:
+Metadata is required for the first version of an extension listed on AMO. This metadata can include any of the properties of the [addons.mozilla.org add-on API Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#create). However:
+- `"categories"`, `"summary"` and the version's `"license"` properties must be provided. 
+- [Translated fields](https://mozilla.github.io/addons-server/topics/api/overview.html#api-overview-translations) must include at least one locale. 
+
+A minimal JSON file looks like this:
 
 ```json
 {
