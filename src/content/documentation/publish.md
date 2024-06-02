@@ -30,7 +30,7 @@ Learn how to get your extension signed and distributed worldwide or to your ente
 
 ## Get your extension signed
 
-Extensions and themes need to be [submitted for signing](/documentation/publish/signing-and-distribution-overview/) by Mozilla before they can be installed and used in the [Release](https://www.mozilla.org/firefox/) and [Beta](https://www.mozilla.org/firefox/channel/desktop/) versions of Firefox. Signing provides Firefox users with the assurance that an extension hasn’t been tampered with and gives Mozilla the ability to block malicious extensions. 
+Extensions and themes need to be [submitted for signing](/documentation/publish/signing-and-distribution-overview/) by Mozilla before they can be installed and used in the [release](https://www.mozilla.org/firefox/) and [Beta](https://www.mozilla.org/firefox/channel/desktop/) versions of Firefox. Signing provides Firefox users with the assurance that an extension hasn’t been tampered with and gives Mozilla the ability to block malicious extensions. 
 
 After you have coded and tested your add-on, take a few minutes to see that it needs to meet the policies in the [Firefox Add-on Distribution Agreement](/documentation/publish/firefox-add-on-distribution-agreement/) and [Add-on Policies](/documentation/publish/add-on-policies/). If your extension does not comply with these policies, it may not get a signature or it could be [blocked](/documentation/publish/add-ons-blocking-process/) after signing.
 
