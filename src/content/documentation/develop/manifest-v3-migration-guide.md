@@ -113,9 +113,7 @@ To accommodate this change, provide a local icon and define it in your manifest.
 
 Host permissions are no longer defined in the manifest.json keys `permissions` or `optional_permissions`. Instead, they are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) keys.
 
-From Firefox 127, `host_permissions` for Manifest V3 extensions is considered a required permission and displayed to users during installation. However, if an extension update grants new host permissions, these are not shown to the user (see [Firefox bug 1893232](https://bugzil.la/1893232)). The user may grant or revoke host permissions on an ad hoc basis, including those granted at installation.
-
-In Chrome and `host_permissions` in Manifest V3 are treated as optional permissions and, therefore, must be requested.
+From Firefox 127, `host_permissions` for Manifest V3 extensions is considered a requested permission and displayed to users during installation. However, if an extension update grants new host permissions, these are not shown to the user (see [Firefox bug 1893232](https://bugzil.la/1893232)). The user may grant or revoke host permissions on an ad hoc basis, including those granted at installation.
 
 See [Requested permissions and user prompts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions#requested_permissions_and_user_prompts) in the `host_permissions` documentation for more information.
 
