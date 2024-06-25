@@ -169,7 +169,7 @@ As the old and new key and API are otherwise identical, the changes needed are r
 - if used, change `_execute_browser_action` to `_execute_action` in the `commands` manifest key and in the [`menu.create`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) and [`menu.update`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/update) API methods (or their aliases `contextMenus.create` and `contextMenus.update`).
 
 ::: note
-Users can define custom shortcuts for the browser action, which are saved against `_execute_browser_action` in Manifest V2 and `_execute_action` in Manifest V2. When an extension is migrated to Manifest V3, the user-defined shortcuts are not migrated. From Firefox 127, to prevent the loss of user-defined shortcuts, when there are no user shortcuts for `_execute_action`, but there are for `_execute_browser_action`, the user shortcuts defined in `_execute_browser_action` are used.
+If the user changes the shortcut of the `_execute_browser_action` command, it is automatically carried over to the `_execute_action` command when an extension migrates from Manifest V2 to V3. This was implemented in Chrome 111 and Firefox 127.
 :::
 
 ::: note
