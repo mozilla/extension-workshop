@@ -505,10 +505,6 @@
             "category": "Port Your Extension",
             "pages": [
               {
-                "title": "Extension compatibility test",
-                "url": "https://www.extensiontest.com/"
-              },
-              {
                 "title": "Porting a Google Chrome Extension",
                 "url": "/documentation/develop/porting-a-google-chrome-extension/"
               }
