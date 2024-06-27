@@ -111,9 +111,15 @@ To accommodate this change, provide a local icon and define it in your manifest.
 
 ### Host permissions
 
-Host permissions are no longer defined in the manifest.json keys `permissions` or `optional_permissions`. Instead, they are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) key.
+In Manifest V2, host permissions are defined in the manifest.json keys `permissions` or `optional_permissions`.  The host permissions defined in the manifest.json keys `permissions` are displayed to the user on installation and granted to the extension permanently.
 
-In addition, unlike Manifest V2, where host permissions in `permissions` are granted on install, `host_permissions` in Manifest V3 are treated as optional permissions in Firefox and Safari and, therefore, must be requested. See [Requested permissions and user prompts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions#requested_permissions_and_user_prompts) in the `host_permissions` documentation for more information.
+In Manifest V3, host permissions are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) keys. With Manifest V3 extensions, users can grant or revoke any host permissions on an ad hoc basis.
+
+Up to Firefox 126, Manifest V3 host permissions were not granted on installation and were not displayed to the user. From Firefox 127, host permissions listed in `host_permissions` and `content_scripts` are displayed in the install prompt and granted on installation. However, if an extension update grants new host permissions, these are not shown to the user (see [Firefox bug 1893232](https://bugzil.la/1893232)).
+
+As users can revoke host permissions, your extension should check for the availability of any expected host permissions and request them if necessary.
+
+See [Requested permissions and user prompts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions#requested_permissions_and_user_prompts) in the `host_permissions` documentation for more information.
 
 Move all host permission specifications to the manifest.json key `host_permissions` like this:
 
