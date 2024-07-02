@@ -179,7 +179,7 @@ If the user changes the shortcut of the `_execute_browser_action` command, it is
 :::
 
 ::: note
-In Chromium and Safari, the Browser Action and Page Action APIs are unified into the Action API, `page_action` is merged into the renamed `action` key, and the `_execute_page_action` special shortcut is replaced by `_execute_action`. Firefox retains the page action API, key, and special shortcut in the developer preview but will merge the page action features into action in a later release.
+In Chromium and Safari, the Browser Action and Page Action APIs are unified into the Action API, `page_action` is merged into the renamed `action` key, and the `_execute_page_action` special shortcut is replaced by `_execute_action`. Firefox retains the page action API, key, and special shortcut.
 :::
 
 {% endcapture %}
