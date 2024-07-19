@@ -127,7 +127,6 @@ In general, developers are free to maintain their add-ons in the manner they cho
 
 The following requirements are of particular importance:
 
-
 - Add-ons must only request those permissions that are necessary for them to function.
 - Add-ons must be self-contained and not load remote code for execution.
 - Add-ons must not load or redirect to a remote new tab page. The new tab page must be contained within the add-on.
@@ -135,7 +134,7 @@ The following requirements are of particular importance:
 - Add-ons must use encryption when transporting data remotely.
 - Add-ons should avoid including redundant code or files.
 - Add-ons must not negatively impact the performance or stability of Firefox.
-- Only release versions of third-party libraries and/or frameworks may be included with an add-on. Modifications to these libraries/frameworks are not permitted. Please read our [third party library guidelines](/documentation/publish/third-party-library-usage/) to better understand related requirements.
+- Only release versions of third-party libraries and/or frameworks may be included with an add-on. Modifications to these libraries/frameworks are not permitted. Please read our [third party library guidelines](/documentation/publish/third-party-library-usage/) to better understand related requirements. {% comment %}Changes to this line should also be copied to /src/content/documentation/publish/third-party-library-usage.md{% endcomment %}
 
 {% endcapture %}
 {% include modules/one-column.liquid,
