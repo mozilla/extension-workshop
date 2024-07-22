@@ -17,9 +17,9 @@ date: 2022-10-17
 
 > Only release versions of third-party libraries and/or frameworks may be included with an add-on. Modifications to these libraries/frameworks are not permitted.
 >
-> [Development Practices](/documentation/publish/add-on-policies/#development-practices), [Add-ons Policies](/documentation/publish/add-on-policies/)
+> See [Development Practices](/documentation/publish/add-on-policies/#development-practices) and [Add-ons Policies](/documentation/publish/add-on-policies/) for more information.
 
-To complete the review process at [addons.mozilla.org](https://addons.mozilla.org) (AMO), reviewers must be able to verify the code in your extension. If you include third-party libraries in your extension, you will need to provide links to the library source code as part of the AMO submission process.
+To complete the [addons.mozilla.org](https://addons.mozilla.org) (AMO) review process, reviewers must be able to verify the code in your extension. If you include third-party libraries in your extension, you must provide links to the library source code as part of the AMO submission process.
 
 If your add-on uses minified, obfuscated or otherwise machine-generated first-party code, please see [our requirements](/documentation/publish/source-code-submission/) for that.
 
