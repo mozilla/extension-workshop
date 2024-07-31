@@ -22,10 +22,11 @@ contributors:
     ankushduacodes,
     huyenltnguyen,
     rebloor,
-    Jamesllllllllll
+    Jamesllllllllll,
+    TimWitzdam
   ]
-last_updated_by: Jamesllllllllll
-date: 2024-05-26
+last_updated_by: TimWitzdam
+date: 2024-07-31
 ---
 
 <!-- Page Hero Banner -->
@@ -368,7 +369,7 @@ For example:
 
 ``` json
 {
-  "version": { "license": "MPL2.0" } },
+  "version": { "license": "MPL-2.0" },
   "categories": { "firefox": ["shopping", "bookmarks"] },
   "contributions_url": "https://donate.mozilla.org",
   "requires_payment": false,
