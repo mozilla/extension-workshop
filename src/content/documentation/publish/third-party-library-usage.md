@@ -37,7 +37,7 @@ If your extension uses minified, obfuscated or otherwise machine-generated first
 
 ## When must links for third-party libraries be provided?
 
-When submitting a version to AMO, links to third-party libraries must be provided. You can add the links to the "Notes for Reviewers" section of your extension's details. 
+When submitting a version to AMO, links to third-party libraries must be provided. You can add the links to the "Notes for Reviewers" section of your extension's details.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
@@ -101,7 +101,7 @@ Extensions developers can use package managers and package repositories like [np
 
 With a default npm configuration, third party library dependencies are declared in the project's `package.json` file: this qualifies as a third party library link as [previously described](#how-to-determine-the-third-party-library-link).
 
-Reviewers must be be able to retrieve and review all packages used by your extension, so the use of private packages or non-public registries is not recommended. If you do, you will need to provide reviewers with access to the private packages. Access information should be provided along with build instructions as part of the [source code submission](https://extensionworkshop.com/documentation/publish/source-code-submission/) process.
+Reviewers must be able to retrieve and review all packages used by your extension. Therefore, the use of private packages or non-public registries is permissible but not recommended. If you use non-public dependencies, you must include the relevant `node_modules` sub-directories in your [source code submission](/documentation/publish/source-code-submission/).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
