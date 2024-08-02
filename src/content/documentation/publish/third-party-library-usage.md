@@ -37,9 +37,7 @@ If your extension uses minified, obfuscated or otherwise machine-generated first
 
 ## When must links for third-party libraries be provided?
 
-Links to third party libraries must be provided when submitting the extension. The links may either be included in the extension's archive, the source archive, or in the "notes for reviewers" on the submission.
-
-If you include links in one of the archives, we recommend either adding them to a README file in the root directory or another root file clearly intended for AMO reviewers.
+When submitting a version to AMO, links to third-party libraries must be provided. You can add the links to the "Notes for Reviewers" section of your extension's details. 
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
