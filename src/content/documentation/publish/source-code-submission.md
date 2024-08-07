@@ -78,7 +78,7 @@ Tip: Use a build target relative to the directory containing the source, such as
 If you need to provide it, matching source code must be attached to every extension version.
 :::
 
-Code submission process happens after the add-on validation step.
+Code submission process happens after the add-on validation step. The maximum file size for source code files is 200MB.
 
 ![Upload sources screenshot](/assets/img/publish/upload-process-sources.png)
 
