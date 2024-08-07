@@ -34,10 +34,11 @@ contributors:
     SolidAxel,
     jean-acsas,
     djbrown,
-    thatshubham
+    thatshubham,
+    dotproto
   ]
-last_updated_by: thatshubham
-date: 2024-04-16
+last_updated_by: dotproto
+date: 2024-06-26
 ---
 
 <!-- Page Hero Banner -->
@@ -75,8 +76,10 @@ Mozilla signs add-ons through [addons.mozilla.org](https://addons.mozilla.org). 
 
 | Signing method     | Supported distribution channel(s) | 
 | ------------------------------------- | ------------------- | 
-| Web upload via the [AMO Developer Hub](https://addons.mozilla.org/developers/) | Public listing on AMO or self-distribution| 
-| Submit using [web-ext sign](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#web-ext-sign) or using the [AMO signing API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) | Brand new submissions can only be submitted as self-distributed (unlisted) extensions. <br /><br /> Subsequent updates can be listed on AMO or self-distributed (unlisted)| 
+| Web upload via the [AMO Developer Hub](https://addons.mozilla.org/developers/) | Public listing on AMO or self-distribution (unlisted). | 
+| Upload using [web-ext sign](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#web-ext-sign) | <strong>Version 8 and higher:</strong> Public listing on AMO or self-distribution (unlisted). <br /><br /><strong>Version 7 and lower:</strong> New add-on submissions can only be submitted as self-distributed (unlisted) extensions. Subsequent add-on updates can be listed on AMO or self-distributed (unlisted). | 
+| AMO's [Add-on Create API (V5)](https://mozilla.github.io/addons-server/topics/api/addons.html#create) and [Version Create API (V5)](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) | Public listing on AMO or self-distribution (unlisted). |
+| AMO's [Signing API (V4)](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) | New add-on submissions can only be submitted as self-distributed (unlisted) extensions. Subsequent add-on updates can be publicly listed on AMO or self-distributed (unlisted). |
 
 {% endcapture %}
 {% include modules/table.liquid,
