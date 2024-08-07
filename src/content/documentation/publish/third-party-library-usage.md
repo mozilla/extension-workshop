@@ -15,11 +15,14 @@ date: 2022-10-17
 
 # Third Party Library Usage
 
-To complete the review process at [addons.mozilla.org](https://addons.mozilla.org) (AMO), reviewers must be able to verify the code in your extension. You may include third-party libraries in your extension. In that case, when you upload your extension to AMO, you will need to provide links to the library source code.
+The [Development Practices](/documentation/publish/add-on-policies/#development-practices) section of the [Add-ons Policies](/documentation/publish/add-on-policies/) states that you can include third party libraries in your extension as long the following conditions are met:
 
-If your add-on uses minified, obfuscated or otherwise machine-generated first-party code, please see [our requirements](/documentation/publish/source-code-submission/) for that.
+* Extensions may only use the release versions of third party libraries.
+* Third party libraries may not be modified.
 
-If you don't provide information about third-party libraries and the reviewer cannot evaluate your extension, it may be rejected.
+In order for reviewers to verify that these requirements are met, you must provide links to the library source code as part of the AMO submission process. If you don't provide information about third-party libraries and the reviewer cannot evaluate your extension, it may be rejected.
+
+If your extension uses minified, obfuscated or otherwise machine-generated first-party code, please see [our requirements](/documentation/publish/source-code-submission/) for that.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -34,7 +37,7 @@ If you don't provide information about third-party libraries and the reviewer ca
 
 ## When must links for third-party libraries be provided?
 
-You must provide a link to the source code for any third-party libraries included in your extension, minified or not.
+When submitting a version to AMO, links to third-party libraries must be provided. You can add the links to the "Notes for Reviewers" section of your extension's details.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
@@ -52,7 +55,7 @@ You must provide a link to the source code for any third-party libraries include
 
 You must provide links to the original copies of the files included in your extension and links to the readable source code for those files. For repositories or version controlled files, please specify the link using release tag that you’ve used. Note that non-release versions of third-party libraries are not accepted.
 
-You should download third-party libraries from their official site, not from a CDN or other location. This point is important. Reviewers confirm that your code contains the original library using checksums. Unofficial sources often make small changes to a library’s files, such as whitespace changes, so the checksums don't match.
+You should download third-party libraries from their official site, not from a CDN or other location. This point is important. Reviewers confirm that your code contains the original library using checksums, so the version in the extension must be identical to the official distribution. Unofficial sources often make small changes to a library’s files, such as whitespace changes, so the checksums don't match.
 
 Example: If you’re using the minified version of mousetrap release 1.4.2 (because you haven’t had the chance to update to the latest version) the following links are **incorrect**.
 
@@ -92,6 +95,22 @@ Tip: If the library is on GitHub, you can usually find this version under the �
 
 {% capture content %}
 
+## Use of package managers
+
+Extensions developers can use package managers and package repositories like [npm](https://www.npmjs.com/) to retrieve third party libraries.
+
+With a default npm configuration, third party library dependencies are declared in the project's `package.json` file: this qualifies as a third party library link as [previously described](#how-to-determine-the-third-party-library-link).
+
+Reviewers must be able to retrieve and review all packages used by your extension. Therefore, the use of private packages or non-public registries is permissible but not recommended. If you use non-public dependencies, you must include the relevant `node_modules` sub-directories in your [source code submission](/documentation/publish/source-code-submission/).
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "use-of-package-managers"
+  content: content
+%}
+
+{% capture content %}
+
 ## Communicating third-party library links to the reviewer
 
 You can add the links to the “Notes for Reviewers” section of your extension’s details on AMO.
@@ -107,5 +126,3 @@ If you miss any of the necessary information for used third-party libraries, the
   id: "communicating-third-party-library-links-to-the-reviewer"
   content: content
 %}
-
-
