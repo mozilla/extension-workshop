@@ -15,7 +15,7 @@ date: 2022-10-17
 
 # Third Party Library Usage
 
-The [Development Practices](/documentation/publish/add-on-policies/#development-practices) section of the [Add-ons Policies](/documentation/publish/add-on-policies/) lists the requirements for the use of third party libraries in add-ons.
+The [Development Practices](/documentation/publish/add-on-policies/#development-practices) section of the [Add-ons Policies](/documentation/publish/add-on-policies/) lists the requirements for the use of third-party libraries in add-ons.
 
 In order for reviewers to verify that these requirements are met, you must provide links to the library source code as part of the AMO submission process. If you don't provide information about third-party libraries and the reviewer cannot evaluate your extension, it may be rejected.
 
