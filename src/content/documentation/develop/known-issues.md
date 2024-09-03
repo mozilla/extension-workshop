@@ -72,13 +72,9 @@ This page contains a list of significant known issues that affect the experience
 
 **Description:** While debugging an extension on Android, you may encounter an error in Firefox on your desktop that says something like:
 
-<blockquote style="padding-left: 1rem; border-left: 5px solid #aaa;">
-
-Cannot connect to the debug target. See error details below:<br><br>
-
-`Error: Protocol error (Error): Attempted to write a response containing a destroyed actor from: root (resource://devtools/shared/protocol/types.js:358:17)`
-
-</blockquote>
+> Cannot connect to the debug target. See error details below:
+>
+> `Error: Protocol error (Error): Attempted to write a response containing a destroyed actor from: root (resource://devtools/shared/protocol/types.js:358:17)`
 
 **Workaround:** In the `about:debugging` page on your development computer, disconnect from and reconnect to the Android device.
 
