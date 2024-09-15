@@ -585,7 +585,7 @@ Environment variable: `$WEB_EXT_API_SECRET`
 
 Number of milliseconds to wait for approval before giving up. Set to 0 to disable the wait for approval. Defaults to `timeout` if not set.
 
-Environment variable: `$WEB_EXT_API_APPROVAL_TIMEOUT`
+Environment variable: `$WEB_EXT_APPROVAL_TIMEOUT`
 </section>
 
 <section id="amo-base-url">
