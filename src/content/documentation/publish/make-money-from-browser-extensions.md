@@ -117,7 +117,7 @@ To create a payment system yourself, a simple and reasonably robust approach is 
 
 In addition to having a way for the user to input the license key manually, it is important to handle interactions with the purchase page so that the license is installed automatically. This saves a lot of support work explaining how to install the license.
 
-Developer Tip: Do not spend too much time securing your licensing system against hackers, because users who are inclined to use a hacked license are unlikely to paid for one. Your time is better spent developing new extension features that attract more paying users.
+Developer Tip: Do not spend too much time securing your licensing system against hackers, because users who are inclined to use a hacked license are unlikely to pay for one. Your time is better spent developing new extension features that attract more paying users.
 
 #### Converting from free to paid
 
