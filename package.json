@@ -25,7 +25,7 @@
     "velocity-ui-pack": "1.2.2"
   },
   "devDependencies": {
-    "@11ty/eleventy": "2.0.1",
+    "@11ty/eleventy": "3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
     "acorn": "8.14.0",
     "acorn-walk": "8.3.4",
