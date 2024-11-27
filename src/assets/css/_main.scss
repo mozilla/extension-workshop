@@ -1056,9 +1056,8 @@ $hamburger-hover-transition-timing-function: linear;
       text-decoration: none;
       text-indent: 120%;
       white-space: nowrap;
-      background: #fff url('/assets/img/moz-logo.svg') no-repeat 0 0 /#{rem-calc(
-          100
-        )};
+      background: #fff url('/assets/img/moz-logo.svg') no-repeat 0
+        0 /#{rem-calc(100)};
       color: $white;
     }
   }
