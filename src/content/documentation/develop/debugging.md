@@ -36,7 +36,7 @@ date: 2020-01-24 20:07:00
 
 This article explains how to use the Firefox developer tools to debug extensions.
 
-An extension can consist of several components—background scripts, popups, options pages, content scripts, sidebars, and alike—and you'll use slightly different workflows to debug each component. Each component has a section in this article, and you can read each section in isolation. We'll begin by introducing the developer tools, which you'll use to debug all the pieces of your extension.
+An extension can consist of several components—background scripts, popups, options pages, content scripts, sidebars, and alike—and you use slightly different workflows to debug each component. Each component has a section in this article, and you can read each section in isolation. We begin by introducing the developer tools, which you use to debug all the pieces of your extension.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -61,7 +61,7 @@ A new tab opens showing **Inspector** in the Toolbox.
 
 ![developers tool screenshot](/assets/img/documentation/develop/developing_tools_inspector.png)
 
-To debug your extension, you'll use:
+To debug your extension, you use:
 
 - [**Inspector**](https://developer.mozilla.org/docs/Tools/Page_Inspector) to examine and modify the HTML and CSS used to build your extension's pages.
 - [**Console**](https://developer.mozilla.org/docs/Tools/Web_Console) to view messages logged by the extension and error messages logged by the browser as it runs the extension. It also provides a command line, where you can execute JavaScript in the extension's context.
@@ -71,11 +71,11 @@ To debug your extension, you'll use:
 This console shows messages from your background script and extension pages; other logs may appear elsewhere.
 There is an overview of all relevant places to look for messages at [Viewing log output](#viewing_log_output).
 
-For much of the debugging work, it's useful to be able to view **Console** with **Inspector** or **Debugger**. You do this using the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console), press `esc` to activate this mode.
+For much of the debugging work, it's useful to view **Console** with **Inspector** or **Debugger**. You do this using the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console), press `esc` to activate this mode.
 
 ![developers tool split screenshot](/assets/img/documentation/develop/developing_tools_inspector_split.png)
 
-You can now drag the toolbox tab to a separate window, so you can place it alongside the window where you're executing the extension.
+You now drag the toolbox tab to a separate window, so you can place it alongside the window where you're executing the extension.
 
 ![developers tool split screenshot](/assets/img/documentation/develop/arranging_tools.png)
 
@@ -93,9 +93,10 @@ You can now drag the toolbox tab to a separate window, so you can place it along
 
 ## Viewing log output
 
-Your extension can generate log messages, e.g. with the [Console API](https://developer.mozilla.org/docs/Web/API/Console_API) or by triggering (uncaught) errors.
+Your extension can generate log messages, e.g., with the [Console API](https://developer.mozilla.org/docs/Web/API/Console_API) or by triggering (uncaught) errors.
 
-Log messages can usually be viewed via the [Console](https://developer.mozilla.org/docs/Tools/Web_Console) of the context where the script runs.
+Log messages are usually viewed in the [Console](https://developer.mozilla.org/docs/Tools/Web_Console) of the context where the script runs.
+
 The [Developer tools toolbox](#developer-tools-toolbox) at `about:debugging` shows log messages from extension scripts. For specific cases, see:
 
   - [Debugging background scripts](#debugging-background-scripts)
@@ -108,9 +109,7 @@ Log messages from content scripts can be viewed in the developer tools of the ta
 
 - [Debugging content scripts](#debugging-content-scripts)
 
-Log messages not associated with an extension script, such as the `stderr` output of the [nativeMessaging API](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
-can only be viewed via the Browser Console. This console contains messages from the whole browser, including your and other extensions.
-It occasionally contains more detailed information about errors reported to your extension. For more information, see:
+Log messages not associated with an extension script, such as the `stderr` output of the [nativeMessaging API](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) can only be viewed in the Browser Console. This console contains messages from the whole browser, including your and other extensions. It occasionally contains more detailed information about errors reported to your extension. For more information, see:
 
 - [Browser Console](https://developer.mozilla.org/docs/Tools/Browser_Console)
 
@@ -269,21 +268,27 @@ If your extension has multiple HTML documents open, click the page select icon (
 We use the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension example to illustrate the debugging features relevant to content scripts. This example is in the [webextensions-examples](https://github.com/mdn/webextensions-examples) repository.
 :::
 
-A [content script](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) is a part of your extension that runs in the context of a webpage; it enables your extension to react to events on the webpage and make changes to a webpage's content.
+A [content script](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) is a part of your extension that runs in the context of a webpage; it enables your extension to react to events on the webpage and make changes to its content.
 
-Because [Firefox is multiprocess](https://developer.mozilla.org/docs/Mozilla/Firefox/Multiprocess_Firefox), content scripts run in a different process to other parts of an extension. Therefore, to debug content scripts, you use the developer tools for the page containing the script. To do this:
+Because [Firefox is multiprocess](https://developer.mozilla.org/docs/Mozilla/Firefox/Multiprocess_Firefox), content scripts run in a different process than other parts of an extension. Therefore, to debug content scripts, you use the developer tools for the page containing the script. To do this:
 
-- in the Firefox menu (or **Tools** menu if you display the menu bar or are on macOS), click **Web Developer** then **Debugger**.
+- in the Firefox menu (or **Tools** menu if you display the menu bar or are on macOS), click **Web Developer**, then **Debugger**.
 - press `Ctrl + Shift + i` (`Command + Option + i` on macOS) and click **Debugger**.
 
-If you've already activated the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console) view, so you can view the **Console** below **Debugger**, the tools open in this mode. Otherwise, press `esc` to activate this mode.
+If you activated the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console) view, to view the **Console** below **Debugger**, the tools open in this mode. Otherwise, press `esc` to activate this mode.
+
+Content scripts may not be visible by default. If you can't see your extension and its content scripts, click the gear icon in  **Sources** and select **Show content scripts**.
+
+![content script in debug](/assets/img/documentation/develop/content_script_in_debug_enable.png)
+
+Now, select your content scripts in **Sources**.
 
 ![content script in debug](/assets/img/documentation/develop/content_script_in_debug.png)
 
-Select your content scripts listed in **Sources**. You can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
+You can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
 
 ::: note
-If the developer tools tab was not open when the content script injected, the content script may not be list in **Sources**. If you experience this behavior, reloading the page with the developer tools open should provide a fix.
+If the developer tools tab was not open when the content script was injected, the content script may not be listed in **Sources**. Reload the page with the developer tools open to show the content script.
 :::
 
 {% endcapture %}
