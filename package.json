@@ -1,6 +1,4 @@
 {
-  "name": "extension-workshop",
-  "version": "2.0.0",
   "description": "Firefox Extension Workshop",
   "main": "assets/scripts/scripts.js",
   "repository": "https://github.com/mozilla/extension-workshop",
