@@ -28,7 +28,7 @@ So, let us look at some of the ways you can encourage users to get to your listi
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
-	content: page_hero_banner_content
+ content: page_hero_banner_content
 %}
 
 <!-- END: Page Hero Banner -->
@@ -293,6 +293,86 @@ And, when users suggest improvements or highlight issues in the reviews, use the
 
 <!-- Single Column Body Module -->
 
+<section id="make-use-of-markdown" class="module">
+<article class="module-content grid-x grid-padding-x">
+<div class="cell small-12">
+
+## Make use of Markdown
+
+Some fields in your add-on's listing support a limited set of Markdown.
+<table>
+   <thead>
+      <tr>
+         <th scope="col">Style</th>
+         <th scope="col">Syntax</th>
+         <th scope="col">Example</th>
+         <th scope="col">Output</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>Bold</td>
+         <td><code>** **</code> or <code>__ __</code></td>
+         <td><code>**This is bold**</code></td>
+         <td><strong>This is bold</strong></td>
+      </tr>
+      <tr>
+         <td>Italic</td>
+         <td><code>* *</code> or <code>_ _</code>     </td>
+         <td><code>_This is italicized_</code></td>
+         <td><em>This is italicized</em></td>
+      </tr>
+      <tr>
+        <td>Links</td>
+        <td><code>[Text](Link)</code></td>
+        <td><code>[Click me!](https://addons.mozilla.org/)</code></td>
+        <td><a href="https://addons.mozilla.org/">Click me!</a></td>
+      </tr>
+      <tr>
+        <td>Abbreviations</td>
+        <td><code>*[abbr]: Abbreviation</code></td>
+        <td><code>*[HTML]: Hyper Text Markup Language</code></td>
+        <td><abbr title="Hypertext Markup Language">HTML</abbr></td>
+      </tr>
+      <tr>
+        <td>Blockquote</td>
+        <td><code>&gt;</code></td>
+        <td><code>&gt; This is a blockquote.</code></td>
+        <td><blockquote>This is a blockquote.</blockquote></td>
+      </tr>
+      <tr>
+        <td>Code</td>
+        <td><code>```</code></td>
+        <td><code>
+        ```<br/>console.log("Hello, world!");<br/>```
+        </code></td>
+        <td><code>console.log("Hello, world!");</code></td>
+      </tr>
+      <tr>
+        <td>Unordered Lists</td>
+        <td><code>-</code>, <code>*</code>, or <code>+</code></td>
+        <td><code>- List Item
+        </code></td>
+        <td><ul><li>List item</li></ul></td>
+      </tr>
+      <tr>
+        <td>Ordered Lists</td>
+        <td><code>1.</code>, <code>2.</code>, <code>3.</code> ...</td>
+        <td><code>1. List Item
+        </code></td>
+        <td><ol><li>List item</li></ol></td>
+      </tr>
+   </tbody>
+</table>
+
+</div>
+</article>
+</section>
+
+<!-- END: Single Column Body Module -->
+
+<!-- Single Column Body Module -->
+
 <section id="some-other-points" class="module">
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
@@ -307,5 +387,3 @@ And, when users suggest improvements or highlight issues in the reviews, use the
 </section>
 
 <!-- END: Single Column Body Module -->
-
-
