@@ -299,7 +299,7 @@ And, when users suggest improvements or highlight issues in the reviews, use the
 
 ## Make use of Markdown
 
-Some fields in your add-on's listing support a limited set of Markdown.
+<abbr title="The description, developer comments, EULA, Privacy policy, and version release notes">Some fields</abbr> in your add-on's listing support a limited set of Markdown.
 <table>
    <thead>
       <tr>
