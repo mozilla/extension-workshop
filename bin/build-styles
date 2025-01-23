@@ -3,7 +3,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs-extra');
 const util = require('util');
-const sass = require('node-sass');
+const sass = require('sass-embedded');
 
 const renderSass = util.promisify(sass.render);
 const inputFile = './src/assets/css/styles.scss';
@@ -19,7 +19,7 @@ const buildSass = async function () {
       'node_modules/hamburgers/_sass/hamburgers',
       'node_modules/prismjs/themes',
     ],
-    outputStyle: isProduction ? 'compressed' : 'nested',
+    outputStyle: isProduction ? 'compressed' : 'expanded',
   });
 
   // This is a hint to know if this is a first run, in which case
