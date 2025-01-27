@@ -1060,6 +1060,10 @@
                     "id": "gently-ask-for-a-review"
                   },
                   {
+                    "title": "Make use of Markdown",
+                    "id": "make-use-of-markdown"
+                  },
+                  {
                     "title": "Some other points",
                     "id": "some-other-points"
                   }
