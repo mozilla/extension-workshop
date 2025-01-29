@@ -331,8 +331,10 @@ And, when users suggest improvements or highlight issues in the reviews, use the
       <tr>
         <td>Abbreviations</td>
         <td><code>*[abbr]: Abbreviation</code></td>
-        <td><code>*[HTML]: Hyper Text Markup Language</code></td>
-        <td><abbr title="Hypertext Markup Language">HTML</abbr></td>
+        <td><code>
+        HTML is fun!<br/>*[HTML]: Hyper Text Markup Language
+        </code></td>
+        <td><abbr title="Hypertext Markup Language">HTML</abbr> is fun!</td>
       </tr>
       <tr>
         <td>Blockquote</td>
