@@ -54,7 +54,7 @@ These messages could discourage some users from installing your extension, as th
 - Request permissions at runtime, which enables you to ask for the permissions in context and offer a fallback if the user doesn't grant them.
 - Describe why your extension is requesting its permissions in its AMO description.
 
-Tip: Permission warnings aren't issued [when you load an unpacked extension](/documentation/develop/temporary-installation-in-firefox/). For information on how to see the standard runtime permission flow, see [Test permission requests](/documentation/develop/test-permission-requests/).
+Tip: Permission messages aren't issued [when you load an unpacked extension](/documentation/develop/temporary-installation-in-firefox/). For information on how to see the standard runtime permission flow, see [Test permission requests](/documentation/develop/test-permission-requests/).
 
 </div>
 </article>
@@ -96,8 +96,10 @@ Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExte
 | `proxy`                                                                                                                        | Control browser proxy settings                                                                                                                                                                                   |
 | `sessions`                                                                                                                     | Access recently closed tabs                                                                                                                                                                                      |
 | `tabs`                                                                                                                         | Access browser tabs                                                                                                                                                                                              |
+| `tabHide`                                                                                                                      | Hide and show browser tabs                                                                                                                                                                                           |
 | `topSites`                                                                                                                     | Access browsing history                                                                                                                                                                                          |
-| `topSites`                                                                                                                     | Access browsing history                                                                                                                                                                                          |
+| `trialML`                                                                                                                      | Download and run AI models on your device                                                                                                                                                                            |
+| `webNavigation`                                                                                                                | Access browser activity during navigation                                                                                                                                                                            |
 | `userScripts`                                                                                                                  | Unverified scripts can pose security and privacy risks. Only run scripts from extensions or sources you trust.                                                                                                       |
 | Clipboard access:                                                                                              
 | `clipboardWrite`                                                                                                               | Input data to the clipboard                                                                                                                                                                                      |
@@ -208,7 +210,7 @@ Firefox doesn't restrict local storage size, although it does ask users to appro
 
 Users may not understand the context of permissions requested during installation. To provide the user with context, request permissions when they are needed using the [Permissions API](https://developer.mozilla.org/Add-ons/WebExtensions/API/permissions).
 
-Permissions that can be requested a runtime are known as [optional premiissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/man fest.json/optional_permissions#optional-only_permissions). However, not all permissions can be requested at runtime. There are also a small number of [optional-only permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions#optional-only_permissions) that can only be requested at runtime. An example of one such optional-only permission is the `userScript` permission in Firefox.
+Permissions that can be requested a runtime are known as [optional permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions). However, not all permissions can be requested at runtime. There are also a small number of [optional-only permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions#optional-only_permissions) that can only be requested at runtime. An example of one such optional-only permission is the `userScript` permission in Firefox.
 
 A typical scenario for using this approach is the `"geoLocation"` permission. Say you've written a note-taking extension that includes the ability to add a minimap of the note-takers location. Requesting location access during installation might leave the user unclear why the extension needs to access location, so they might not install it. However, if permission to use location is requested when the user first tries the feature to add a minimap, they'll get a clearer understanding of why the permission is needed and be more likely to grant it. Should they choose not to grant the permission, the extension can offer a graceful fallback—in this example, not adding the minimap—but the important outcome of this approach is that the user has installed and used your extension.
 
@@ -232,7 +234,6 @@ You can't request all the permissions available to `"permissions"` using optiona
 - `privacy`
 - `storage`
 - `theme`
-- `userScripts` (optional-only permission)
 
 There are a couple of things to note:
 
