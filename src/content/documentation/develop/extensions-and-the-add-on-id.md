@@ -34,7 +34,7 @@ date: 2023-10-28
 
 # Extensions and the add-on ID
 
-Firefox add-ons contain a unique ID that is used to distinguish one add-on from any other Firefox add-on.
+Firefox add-ons contain a unique ID, chosen by the developer, that is used to distinguish one add-on from any other Firefox add-on.
 
 Firefox uses an extension's unique ID inside Firefox and on the [addons.mozilla.org](https://addons.mozilla.org/) (AMO) website. For example, it's used by Firefox to check for updates to installed add-ons and to identify which objects (such as data stores) are controlled by the add-on.
 
@@ -106,6 +106,12 @@ See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org
 </aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
+  
+## Basic workflow with no add-on ID (Manifest V3)
+
+In Manifest V3 an extension ID is required before AMO submission. You can decide the ID yourself - it must be less than 80 characters and have the format `^[a-zA-Z0-9-._]*@[a-zA-Z0-9-._]+$`, such as `myextension@example.org`.
+
+When you submit the extension the extension ID will be checked for uniqueness.
 
 ## Basic workflow with no add-on ID (Manifest V2)
 
