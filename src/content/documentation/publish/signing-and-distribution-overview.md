@@ -77,9 +77,9 @@ Mozilla signs add-ons through [addons.mozilla.org](https://addons.mozilla.org). 
 | Signing method     | Supported distribution channel(s) | 
 | ------------------------------------- | ------------------- | 
 | Web upload via the [AMO Developer Hub](https://addons.mozilla.org/developers/) | Public listing on AMO or self-distribution (unlisted). | 
-| Upload using [`web-ext sign`](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#web-ext-sign) | **Version 8 and higher**: Public listing on AMO or self-distribution (unlisted). <br /><br />**Version 7 and lower**: Initial submissions only provide for self-distributed (unlisted) extensions. Updates can be for extensions listed on AMO or self-distributed (unlisted). |
-| The AMO [Add-on Create API (V5)](https://mozilla.github.io/addons-server/topics/api/addons.html#create) and [Version Create API (V5)](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) | Public listing on AMO or self-distribution (unlisted). |
-| The AMO [Signing API (V4)](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) | Initial submissions only provide for self-distributed (unlisted) extensions. Updates can be to extensions publicly listed on AMO or self-distributed (unlisted). |
+| Upload using [`web-ext sign`](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#web-ext-sign) | **Version 8 and higher**: Initial submission and updates for extensions listed on AMO or self-distributed (unlisted). <br /><br />**Version 7 and lower**: Initial submissions for self-distributed (unlisted) extensions. Updates for extensions listed on AMO or self-distributed (unlisted). |
+| The AMO [Add-on Create API (V5)](https://mozilla.github.io/addons-server/topics/api/addons.html#create) and [Version Create API (V5)](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) | Initial submission and updates for extensions listed on AMO or self-distributed (unlisted). |
+| The AMO [Signing API (V4)](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) | Initial submissions for self-distributed (unlisted) extensions. Updates to extensions publicly listed on AMO or self-distributed (unlisted). |
 
 {% endcapture %}
 {% include modules/table.liquid,
