@@ -22,8 +22,8 @@ contributors:
     wbamberg,
     willdurand,
     djbrown,
-    kirinokirino
-    dotproto
+    kirinokirino,
+    dotproto,
     andrewbaxter
   ]
 last_updated_by: andrewbaxter
