@@ -34,10 +34,11 @@ contributors:
     SolidAxel,
     jean-acsas,
     djbrown,
-    thatshubham
+    thatshubham,
+    dotproto
   ]
-last_updated_by: thatshubham
-date: 2024-04-16
+last_updated_by: dotproto
+date: 2024-08-21
 ---
 
 <!-- Page Hero Banner -->
@@ -75,8 +76,10 @@ Mozilla signs add-ons through [addons.mozilla.org](https://addons.mozilla.org). 
 
 | Signing method     | Supported distribution channel(s) | 
 | ------------------------------------- | ------------------- | 
-| Web upload via the [AMO Developer Hub](https://addons.mozilla.org/developers/) | Public listing on AMO or self-distribution| 
-| Submit using [web-ext sign](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#web-ext-sign) or using the [AMO signing API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) | Brand new submissions can only be submitted as self-distributed (unlisted) extensions. <br /><br /> Subsequent updates can be listed on AMO or self-distributed (unlisted)| 
+| Web upload via the [AMO Developer Hub](https://addons.mozilla.org/developers/) | Public listing on AMO or self-distribution (unlisted). | 
+| Upload using [`web-ext sign`](https://extensionworkshop.com/documentation/develop/web-ext-command-reference/#web-ext-sign) | **Version 8 and higher**: Initial submission and updates for extensions listed on AMO or self-distributed (unlisted). <br /><br />**Version 7 and lower**: Initial submissions for self-distributed (unlisted) extensions. Updates for extensions listed on AMO or self-distributed (unlisted). |
+| The AMO [Add-on Create API (V5)](https://mozilla.github.io/addons-server/topics/api/addons.html#create) and [Version Create API (V5)](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) | Initial submission and updates for extensions listed on AMO or self-distributed (unlisted). |
+| The AMO [Signing API (V4)](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) | Initial submissions for self-distributed (unlisted) extensions. Updates to extensions publicly listed on AMO or self-distributed (unlisted). |
 
 {% endcapture %}
 {% include modules/table.liquid,
@@ -112,7 +115,7 @@ For more information on how to submit an add-on for distribution on AMO or self-
 ### Self-distribution
 Self-distributed add-ons are sometimes referred to as “unlisted” extensions because they cannot be publicly viewed or installed from AMO. You may want to self-distribute your extension if it is a beta version or if it is intended to be used by a limited audience. All add-ons, including self-distributed ones, are subject to be manually reviewed at any time after submission to check for compliance with the [Add-on Policies](/documentation/publish/add-on-policies/).
 
-If you choose this method, be sure to read the article on [self-distribution](/documentation/publish/self-distribution/) to learn how users can install self-distributed add-ons and how to push automatic updates to your users. 
+If you choose this method, be sure to read the article on [self-distribution](/documentation/publish/self-distribution/) to learn how users can install self-distributed add-ons and how to push automatic updates to your users.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
