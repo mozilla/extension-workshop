@@ -23,6 +23,7 @@ contributors:
     willdurand,
     djbrown,
     kirinokirino
+    dotproto
     andrewbaxter
   ]
 last_updated_by: andrewbaxter
