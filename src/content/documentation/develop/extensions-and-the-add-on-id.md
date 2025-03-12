@@ -36,7 +36,7 @@ date: 2025-03-10
 
 # Extensions and the add-on ID
 
-Firefox add-ons are distinguish by a unique ID. These unique IDs are used inside Firefox and on the [addons.mozilla.org](https://addons.mozilla.org/) (AMO) website. For example, they are used by Firefox to check for updates to installed add-ons and to identify which objects (such as data stores) are controlled by the add-on.
+Firefox add-ons are distinguished by a unique ID. These unique IDs are used inside Firefox and on the [addons.mozilla.org](https://addons.mozilla.org/) (AMO) website. For example, they are used by Firefox to check for updates to installed add-ons and to identify which objects (such as data stores) are controlled by the add-on.
 
 This article describes how add-on IDs are handled for extensions built with WebExtensions APIs.
 
@@ -57,7 +57,7 @@ This article describes how add-on IDs are handled for extensions built with WebE
 
 ### Signing and publishing
 
-All signed add-on have a unique ID. 
+All signed add-ons have a unique ID. 
 
 For [Manifest V3 extensions](/documentation/develop/manifest-v3-migration-guide/) you must define this add-on ID in your extension's manifest.json file before it's submitted to AMO (online, using [webext](/documentation/develop/web-ext-command-reference/), or the [AMO API]((https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen)). It's recommended that you set your extsnison ID when you begin development.
 
