@@ -59,11 +59,11 @@ This article describes how add-on IDs are handled for extensions built with WebE
 
 All signed add-ons have a unique ID. 
 
-For [Manifest V3 extensions](/documentation/develop/manifest-v3-migration-guide/) you must define this add-on ID in your extension's manifest.json file before it's submitted to AMO (online, using [webext](/documentation/develop/web-ext-command-reference/), or the [AMO API]((https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen)). It's recommended that you set your extsnison ID when you begin development.
+For [Manifest V3 extensions](/documentation/develop/manifest-v3-migration-guide/) you must create the add-on ID and add it to your extension's manifest.json file before it's submitted to AMO (online, using [webext](/documentation/develop/web-ext-command-reference/), or the [AMO API]((https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen)). It's recommended that you set your extension ID when you begin development.
 
-You can define an ID for a Manifest V2 extension in its manifest.json file before submission, but if you don't AMO assigns your extension an ID when [your extension is first signed](/documentation/publish/#get-your-extension-signed). See [Working without an ID in Manifiest V2](#working-without-an-id-in-manifiest-v2).
+You can define an ID for a Manifest V2 extension in its manifest.json file before submission, but if you don't, AMO assigns your extension an ID when [your extension is first signed](/documentation/publish/#get-your-extension-signed). See [Working without an ID in Manifiest V2](#working-without-an-id-in-manifiest-v2).
 
-When you submit an add-on to AMO with a ID defined, AMO check that the ID is unique.
+When you submit an add-on to AMO with an ID defined, AMO checks that the ID is unique.
 
 ### Development and testing
 
@@ -71,8 +71,8 @@ You need to set an ID in your extensions manifest.json file when:
 
 - You want to install an unsigned add-on from its XPI file, rather than loading it temporarily using `about:debugging`.
 - You use these WebExtension APIs that rely on the add-on ID and expect it to be the same from one browser session to the next:
-  - [`storage.managed`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed "A storage.StorageArea object that represents the managed storage area. Items in managed storage are set by the domain administrator or other native applications installed on user's computer, and are read-only for the extension. Trying to modify this storage area results in an error.")
-  - [`storage.sync`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync 'Represents the sync storage area. Items in sync storage are synced by the browser, and are available across all instances of that browser that the user is logged into (e.g. via Firefox sync, or a Google account), across different devices.')
+  - [`storage.managed`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed "A storage.StorageArea object that represents the managed storage area. Items in managed storage are set by the domain administrator or other native applications installed on the user's computer and are read-only for the extension. Trying to modify this storage area results in an error.")
+  - [`storage.sync`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync 'Represents the sync storage area. Items in sync storage are synced by the browser and are available across all instances of that browser that the user is logged into (e.g. using Firefox sync, or a Google account), across different devices.')
   - [`identity.getRedirectURL`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL 'Generates a URL that you can use as a redirect URL.')
   - [Native messaging](https://developer.mozilla.org/Add-ons/WebExtensions/Native_messaging)
   - [`pkcs11`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11 'The pkcs11 API enables an extension to enumerate PKCS #11 security modules and to make them accessible to the browser as sources of keys and certificates.')
