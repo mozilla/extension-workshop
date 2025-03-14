@@ -59,9 +59,9 @@ This article describes how add-on IDs are handled for extensions built with WebE
 
 All signed add-ons have a unique ID. 
 
-For [Manifest V3 extensions](/documentation/develop/manifest-v3-migration-guide/) you must create the add-on ID and add it to your extension's manifest.json file before it's submitted to AMO (online, using [webext](/documentation/develop/web-ext-command-reference/), or the [AMO API]((https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen)). It's recommended that you set your extension ID when you begin development.
+For [Manifest V3 extensions](/documentation/develop/manifest-v3-migration-guide/) you must create the add-on ID and add it to your extension's manifest.json file before it's submitted to AMO ([online](/documentation/publish/submitting-an-add-on/) or using [`web-ext sign`](/documentation/develop/web-ext-command-reference/#web-ext-sign) or the [AMO API create endpoint](https://mozilla.github.io/addons-server/topics/api/addons.html#create)). It's recommended that you set your extension ID when you begin development.
 
-You can define an ID for a Manifest V2 extension in its manifest.json file before submission, but if you don't, AMO assigns your extension an ID when [your extension is first signed](/documentation/publish/#get-your-extension-signed). See [Working without an ID in Manifiest V2](#working-without-an-id-in-manifiest-v2).
+You can define an ID for a Manifest V2 extension in its manifest.json file before submission. If you don't, AMO assigns your extension an ID when you submit it to AMO (online or using `web-ext sign` or the AMO API create endpoint).
 
 When you submit an add-on to AMO with an ID defined, AMO checks that the ID is unique.
 
