@@ -83,6 +83,7 @@ Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExte
 | `bookmarks`                                                                                                                    | Read and modify bookmarks                                                                                                                                                                                        |
 | `browserSettings`                                                                                                              | Read and modify browser settings                                                                                                                                                                                 |
 | `browsingData`                                                                                                                 | Clear recent browsing history, cookies, and related data                                                                                                                                                         |
+| `declarativeNetRequest`                                                                                                        | Block content on any page                                                                                                                                                         |
 | `downloads`                                                                                                                    | Download files and read and modify the browser’s download history                                                                                                                                                |
 | `downloads.open`                                                                                                               | Open files downloaded to your computer                                                                                                                                                                           |
 | `find`                                                                                                                         | Read the text of all open tabs                                                                                                                                                                                   |
@@ -123,6 +124,7 @@ These permissions don't get alerted to users:
   - `contextMenus`
   - `contextualIdentities`
   - `cookies`
+  - `declarativeNetRequestWithHostAccess`
   - `identity`
   - `idle`
   - `menus`
