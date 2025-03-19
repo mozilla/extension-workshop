@@ -4,9 +4,9 @@ title: Dynamic themes
 permalink: /documentation/themes/dynamic-themes/
 topic: Themes
 tags: [themes, dynamic-themes, firefox]
-contributors: [caitmuenster]
-last_updated_by: [caitmuenster]
-date: 2021-04-02 
+contributors: [caitmuenster, karanvirheer]
+last_updated_by: [karanvirheer]
+date: 2025-03-18
 ---
 
 <!-- Page Hero Banner -->
@@ -122,7 +122,7 @@ If you have not built a browser extension before, check out [Your first extensio
 
 ## Publishing dynamic themes 
 
-The workflow for publishing dynamic themes follows the same path as publishing browser extensions for Firefox. You can read an [overview](/documentation/publish/) of the process in the Publish section of Firefox Etension Workshop. 
+The workflow for publishing dynamic themes follows the same path as publishing browser extensions for Firefox. You can read an [overview](/documentation/publish/) of the process in the Publish section of Firefox Extension Workshop. 
 
 First, you will need to [package](/documentation/publish/package-your-extension/) your dynamic theme. Then, you will need to submit it to [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=dynamic-themes) (AMO) for signing. If you would like to to distribute your dynamic theme on AMO, follow the instructions for [Listing on AMO](/documentation/publish/submitting-an-add-on/#listing-on-amo) in the [Submitting an add-on](/documentation/publish/submitting-an-add-on/) article. If you do not want to list your dynamic theme on AMO, follow the instructions for [Self-distribution](documentation/publish/submitting-an-add-on/#self-distribution). 
 
