@@ -11,7 +11,7 @@
     "not dead"
   ],
   "dependencies": {
-    "dompurify": "3.2.4",
+    "dompurify": "3.2.5",
     "foundation-sites": "6.7.5",
     "glob": "10.4.3",
     "hamburgers": "1.1.3",
