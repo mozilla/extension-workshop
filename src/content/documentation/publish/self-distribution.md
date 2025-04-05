@@ -57,10 +57,10 @@ When you choose to distribute an add-on yourself, users can install them using t
 
 - [Web download](#web-download) in Firefox for desktop—make your extension available on a suitable web-accessible server. When a user downloads the signed add-on file, Firefox installs it. The web-accessible server must serve the signed add-on xpi file with `Content-Type: application/x-xpinstall` in the HTTP response headers.
   ::: note alert
-  This method doesn't work in Firefox for Android. In this case, the add-on is downloaded, and the user needs to follow the instructions for [installing add-on from file](/documentation/publish/distribute-sideloading#install-addon-from-file-android).
+  This method doesn't work in Firefox for Android. In this case, the add-on is downloaded, and the user needs to follow the instructions for [installing add-on from file](/documentation/publish/install-self-distributed#install-addon-from-file-android).
   :::
 
-- [Installing add-on from file](/documentation/publish/distribute-sideloading)—enables a user to install an add-on using an `.xpi` file saved on their computer or Android device.
+- [Installing add-on from file](/documentation/publish/install-self-distributed)—enables a user to install an add-on using an `.xpi` file saved on their computer or Android device.
 
 - [Add-ons in an enterprise environment](/documentation/enterprise/enterprise-distribution/)—this page discusses the use of signed compared to unsigned extensions, installation options, the Firefox settings affecting installation, and including add-ons with a custom Firefox install package.
 

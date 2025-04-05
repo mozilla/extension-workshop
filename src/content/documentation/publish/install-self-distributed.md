@@ -1,7 +1,7 @@
 ---
 layout: sidebar
 title: Installing self-distributed extensions
-permalink: /documentation/publish/distribute-sideloading/
+permalink: /documentation/publish/install-self-distributed/
 topic: Publish
 tags: [add-on, distribution, testing, guide, installation]
 contributors: [caitmuenster, irenesmith, jwilk, hellosct1, gray_-_wolf, luanmm, rebloor]
