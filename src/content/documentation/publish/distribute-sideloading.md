@@ -1,9 +1,9 @@
 ---
 layout: sidebar
-title: Add-ons for desktop apps
+title: Installing self-distributed extensions
 permalink: /documentation/publish/distribute-sideloading/
 topic: Publish
-tags: [add-on, distribution, sideloading, guide, installation]
+tags: [add-on, distribution, testing, guide, installation]
 contributors: [caitmuenster, irenesmith, jwilk, hellosct1, gray_-_wolf, luanmm, rebloor]
 last_updated_by: rebloor
 date: 2025-03-31
@@ -13,7 +13,7 @@ date: 2025-03-31
 
 {% capture page_hero_banner_content %}
 
-# Sideloading add-ons
+# Installing self-distributed extensions
 
 You can make a self-distributed extension available as a [web download](/documentation/publish/self-distribution/#options) that is installed automatically into desktop Firefox. To install self-distributed extensions downloaded in Firefox for Android or distributed in another way, you need to provide instructions for installing the extension from file.
 
