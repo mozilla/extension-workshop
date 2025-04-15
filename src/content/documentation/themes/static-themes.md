@@ -52,20 +52,21 @@ A theme and browser extension functionality cannot be defined in one package, su
 To create a simple, single image static theme, follow these instructions:
 
 1. Create a folder in a suitable location on your computer.
-2. Add the theme image file to the folder: 
+2. Add the theme image files to the folder: 
 
  <!-- Syntax Highlighting -->
 
 ```js
 <mytheme>
  <your_header_image>.<type>
+ <your_dark_header_image>.<type>
 ```
 <!-- END: Syntax Highlighting -->
 
 3. Create a file called manifest.json in the folder and edit its content as follows: 
 
 <!-- Syntax Highlighting -->
-```js
+```json
 {
   "manifest_version": 2,
   "version": "1.0",
@@ -78,13 +79,25 @@ To create a simple, single image static theme, follow these instructions:
       "frame": "#FFFFFF",
       "tab_background_text": "#000"
     }
+  },
+  "dark-theme": {
+    "images": {
+      "theme_frame": "<your_dark_header_image>.<type>"
+    },
+    "colors": {
+      "frame": "#000000",
+      "tab_background_text": "#FFF"
+    }
   }
+
 }
 ```
 <!-- END: Syntax Highlighting -->
 
 Where: 
-  * `"frame":` is the heading area background color for your theme.
+  * `"theme":` defines the theme that applies when Firefox is using the light color scheme.
+  * `"dark_theme":` defines the theme that applies when Firefox is using the dark color scheme.
+  * `"frame":` is the heading area background color for your themes.
   * `"tab_background_text":` is the color of the text in the heading area.
 
 4. Package your theme and submit it to [addons.mozilla.org](https://addons.mozilla.org?utm_source=extensionworkshop.com&utm_medium=referral&utm_content=static-themes) (AMO). Information about how to package, sign, and distribute process can be found in the [Signing and distribution overview](/documentation/publish/signing-and-distribution-overview/). You can choose to publically distribute your theme on AMO or [distribute it yourself](/documentation/publish/self-distribution/). 
