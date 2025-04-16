@@ -80,7 +80,7 @@ To create a simple, single image static theme, follow these instructions:
       "tab_background_text": "#000"
     }
   },
-  "dark-theme": {
+  "dark_theme": {
     "images": {
       "theme_frame": "<your_dark_header_image>.<type>"
     },
