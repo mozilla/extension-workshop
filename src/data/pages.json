@@ -973,20 +973,20 @@
                 ]
               },
               {
-                "title": "Sideloading",
-                "url": "/documentation/publish/distribute-sideloading/",
+                "title": "Installing self-distributed extensions",
+                "url": "/documentation/publish/install-self-distributed/",
                 "subpageitems": [
                   {
                     "title": "Preparing your add-on",
                     "id": "preparing-your-addon"
                   },
                   {
-                    "title": "Install add-on from file",
+                    "title": "Install from file on a computer",
                     "id": "install-addon-from-file"
                   },
                   {
-                    "title": "Installation using the standard extension folders",
-                    "id": "standard-extension-folders"
+                    "title": "Install from file on Android",
+                    "id": "install-addon-from-file-android"
                   }
                 ]
               },

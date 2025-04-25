@@ -81,7 +81,7 @@ date: 2020-03-24 12:47:00
     </tbody>
 </table>
 
-<p id="distribute-extension">* Or distribute your extension for <a href="/documentation/publish/distribute-sideloading/">sideloading</a>, <a href="/documentation/publish/distribute-for-desktop-apps/">desktop apps</a>, or <a href="/documentation/enterprise/enterprise-distribution/">in an enterprise</a>.</p>
+<p id="distribute-extension">* Or distribute your extension for <a href="/documentation/publish/install-self-distributed/">manual installation</a>, <a href="/documentation/publish/distribute-for-desktop-apps/">desktop apps</a>, or <a href="/documentation/enterprise/enterprise-distribution/">use in an enterprise</a>.</p>
 
 **Have an extension you want to bring to Firefox?** We provide advice, guidelines, and tools to help making make porting straightforward. To get started, visit [Porting a Google Chrome extension](/documentation/develop/porting-a-google-chrome-extension/).
 
