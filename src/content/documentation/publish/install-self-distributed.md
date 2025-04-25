@@ -15,7 +15,7 @@ date: 2025-03-31
 
 # Installing self-distributed extensions
 
-You can make a self-distributed extension available as a [web download](/documentation/publish/self-distribution/#options) that is installed automatically into desktop Firefox. To install self-distributed extensions downloaded in Firefox for Android or distributed in another way, you need to provide instructions for installing the extension from file.
+You can make a self-distributed extension available as a [web download](/documentation/publish/self-distribution/#options) that is installed automatically into desktop Firefox. To install self-distributed extensions downloaded in Firefox for Android or distributed in another way, you need to provide instructions for installing the extension from a file.
 
 ::: note
 If you use self-distribution for a beta version of a listed extension, Firefox doesn’t automatically update the beta version when you sign a new beta version on AMO. For more information on delivering beta updates, see [Distribute pre-release versions](/documentation/publish/distribute-pre-release-versions/).
