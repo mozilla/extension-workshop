@@ -187,7 +187,7 @@ With browser extensions for Firefox you have two ways in which you can request d
 
 You can add a “contributions” button to your extension’s AMO page that links through to your payment page from one of the supported providers. To add the button:
 
-- Set up an account with one of the supported providers: [liberapay.com](https://liberapay.com/), [micropayment.de](https://www.micropayment.de/), [opencollective.com](https://opencollective.com/), [patreon.com](https://www.patreon.com/), [paypal.com](https://www.paypal.com/), or [paypal.me](https://www.paypal.me/).
+- Set up an account with one of the supported providers: [buymeacoffee.com](https://buymeacoffee.com/), [GitHub Sponsors](https://github.com/sponsors), [ko-fi.com](https://ko-fi.com/), [liberapay.com](https://liberapay.com/), [micropayment.de](https://www.micropayment.de/), [opencollective.com](https://opencollective.com/), [patreon.com](https://www.patreon.com/), [paypal.com](https://www.paypal.com/), or [paypal.me](https://www.paypal.me/).
 - Obtain the link to your donations page.
 - In the AMO developer hub, for the extension or theme you want to add a contributions button to, click Edit details.
 - In the Basic information section add your donations page link to Contributions URL.
