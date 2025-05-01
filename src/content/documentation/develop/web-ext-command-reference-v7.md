@@ -625,7 +625,7 @@ Environment variable: `$WEB_EXT_CHANNEL`
 
 #### `--timeout`
 
-Number of milleseconds to wait before giving up on a&nbsp;response from Mozilla's web service. This should always be a number.
+Number of milleseconds to wait before giving up on a&nbsp;response from Mozilla's web service. This should always be a number. _Defaults to 5 minutes (300000 ms)_
 
 Environment variable: `$WEB_EXT_TIMEOUT`
 </section>
