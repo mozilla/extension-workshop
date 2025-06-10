@@ -35,7 +35,7 @@
     "eslint-plugin-prettier": "5.4.1",
     "fs-extra": "11.3.0",
     "gray-matter": "4.0.3",
-    "jest": "29.7.0",
+    "jest": "30.0.0",
     "jest-environment-jsdom": "29.7.0",
     "markdown-it": "14.1.0",
     "markdown-it-container": "3.0.0",
