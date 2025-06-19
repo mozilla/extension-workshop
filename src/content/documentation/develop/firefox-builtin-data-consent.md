@@ -81,7 +81,7 @@ Technical data describes information about the environment the user is running, 
 
 ## Specifying data types
 
-You specify data types your extension transmits in the `browser_specific_settings.gecko` key in the `manifest.json` file. As a reminder, our policies state that data transmission refers to any data that is collected, used, transferred, shared, or handled outside of the add-on or the local browser.
+You specify data types your extension transmits in the `browser_specific_settings.gecko.data_collection_permissions` key in the `manifest.json` file. As a reminder, our policies state that data transmission refers to any data that is collected, used, transferred, shared, or handled outside of the add-on or the local browser.
 
 ### Personal data
 
