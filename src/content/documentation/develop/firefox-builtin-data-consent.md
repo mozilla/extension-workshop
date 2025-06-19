@@ -7,10 +7,11 @@ tags: [data-collection, data-transmission, api, permissions, firefox, guide]
 contributors:
   [
     abyrne-moz,
-    wagnerand
+    wagnerand,
+    willdurand
   ]
 last_updated_by: wagnerand
-date: 2025-08-04
+date: 2025-06-19
 ---
 
 <!-- Page Hero Banner -->
@@ -21,7 +22,7 @@ date: 2025-08-04
 
 ::: note
 Firefox built-in consent for data collection and transmission is supported in Firefox for desktop 140 and later, and Firefox for Android 142 and above.
-Please follow our [community blog](https://blog.mozilla.org/addons/) for updates on the overall rollout process and a timeline when we will start accepting accepting submissions on AMO that make us of this feature.
+Please follow our [community blog](https://blog.mozilla.org/addons/) for updates on the overall rollout process and a timeline when we will start accepting accepting submissions on AMO that make use of this feature.
 :::
 
 Developers can specify what data they wish to collect or transmit in their extensions `manifest.json` file. This information will be parsed by the browser and shown to the user when they first install the extension. A user can then choose to accept or reject the data collection, just like they do with extension permissions. The developer can also specify that the extension collects no data.
@@ -218,7 +219,16 @@ await browser.permissions.getAll()
 }
 ```
 
-Extension developers can also use the [`browser.permissions.request()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request) API method (MDN docs) to get consent from users for ancillary data collection (defined in the optional list):
+The presence/absence of the `data_collection` key in the response of the `getAll()` method can also be used to feature-detect the built-in data collection consent experience in Firefox at runtime.
+
+```js
+const perms = await browser.permissions.getAll();  
+if (!perms.data_collection) {  
+  // no built-in data consent in Firefox  
+}
+```
+
+Extension developers can use the [`browser.permissions.request()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request) API method (MDN docs) to get consent from users for ancillary data collection (defined in the optional list):
 
 ```js
 await browser.permissions.request({ data_collection: ["healthInfo"] });
