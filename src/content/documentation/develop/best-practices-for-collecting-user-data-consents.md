@@ -112,7 +112,7 @@ Where you provide the user with an opt-in option, the related feature **must be 
 
 Where you provide the user with an opt-out option, the related features **can be turned on by default** but **must be turned off if the user indicates** they want to opt-out.
 
-If the main functionality of your extension doesn't work without collecting user data, provide an option in the data collection consent to uninstall it if your users don't consent to the data collection. The [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf) API can be used to uninstall your extension. Name the consent decline button appropriately, such as "Decline and uninstall".
+If the primary function of your extension requires collecting user data, provide an option in the data collection consent to uninstall it if your users don't consent to the data collection. The [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf) API can be used to uninstall your extension. Name the consent decline button appropriately, such as "Decline and uninstall".
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -188,7 +188,7 @@ The add-on is requesting both types of data collection. Please ensure the choice
 
   ![Mockup of a prompt that could be used when extension requires consent for processing personal and technical data.](/assets/img/documentation/develop/consent-mixed.jpg)
 ### Required data collection
-The extension requires personal or technical data collection to provide its main functionality and cannot be used without. The consent decline option uninstalls the extension using [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
+The extension requires personal or technical data collection to provide its primary function and cannot be used without. The consent decline option uninstalls the extension using [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
