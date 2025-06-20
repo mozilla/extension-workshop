@@ -192,11 +192,6 @@ The "no data collected" type is also listed in the *Permissions and data* tab of
 ![Figure 4: The "no data collected" permission is listed in about:addons](/assets/img/documentation/develop/data-collection-permissions-about-addons-no-transmission.webp)
 *Figure 4: The "no data collected" permission is listed in about:addons*
 
-Note: The `none` data type can only be required, and it cannot be used with other data types, including optional types. When that happens, Firefox will ignore the `none` type, and only consider the other data types (see next section for more information). In addition, Firefox will show a warning message intended to developers in `about:debugging` as shown in Figure 5.
-
-![Figure 5: A warning message is displayed when the none type is combined with other data collection permissions](/assets/img/documentation/develop/data-collection-none-type-warning.webp)
-*Figure 5: A warning message is displayed when the none type is combined with other data collection permissions*
-
 {% endcapture %}
 {% include modules/one-column.liquid,
     id: "specifying-data-types"
@@ -235,10 +230,10 @@ Extension developers can use the [`browser.permissions.request()`](https://devel
 await browser.permissions.request({ data_collection: ["healthInfo"] });
 ```
 
-This will show the following message to the Firefox user, giving them the choice to opt in to this data collection or not (Figure 6)
+This will show the following message to the Firefox user, giving them the choice to opt in to this data collection or not (Figure 5)
 
-![Figure 6: Prompt when requesting data collection permissions programmatically](/assets/img/documentation/develop/data-collection-permissions-prompt-programmatic.webp)
-*Figure 6: Prompt when requesting data collection permissions programmatically*
+![Figure 5: Prompt when requesting data collection permissions programmatically](/assets/img/documentation/develop/data-collection-permissions-prompt-programmatic.webp)
+*Figure 5: Prompt when requesting data collection permissions programmatically*
 
 {% endcapture %}
 {% include modules/one-column.liquid,
