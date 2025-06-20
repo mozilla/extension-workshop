@@ -653,7 +653,7 @@ Path to a JSON file containing an object with metadata to be passed to the add-o
 This option is only used when combined with `--use-submission-api`.
 :::
 
-Environment variable: `$WEB_AMO_METADATA`
+Environment variable: `$WEB_EXT_AMO_METADATA`
 </section>
 </section> <!-- web-ext-sign -->
 

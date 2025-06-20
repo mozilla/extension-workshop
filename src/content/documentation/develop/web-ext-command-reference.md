@@ -674,7 +674,7 @@ When publishing an extension update metadata isn't required. If metadata isn't p
 }
 ```
 
-Environment variable: `$WEB_AMO_METADATA`
+Environment variable: `$WEB_EXT_AMO_METADATA`
 </section>
 
 <section id="upload-source-code">
