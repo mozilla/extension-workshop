@@ -2767,10 +2767,10 @@ foreground-child@^3.1.0, foreground-child@^3.3.1:
     cross-spawn "^7.0.6"
     signal-exit "^4.0.1"
 
-foundation-sites@6.7.5:
-  version "6.7.5"
-  resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.7.5.tgz#6bc2bdd06819e6ed4d7fd8e3090246a0b6ac81c0"
-  integrity sha512-MEjAENdF/IV2XQvlQmg20o+iDTyyWu0N/j440e8fKbEylbKxARzgg5S7vcnxtjukC1Lqg+rRm7ZDSSyGhVVoUQ==
+foundation-sites@6.9.0:
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.9.0.tgz#ef4d51fa1c669cbdf61d080d8a328686ff85992a"
+  integrity sha512-bZpjL6lxuGViy1UU/NuMddyAAJP0YgJYKNh+8ZtDWhQRtiY1yQISxHmgF4V8EFx7DWHDTdZC1fwFysnMAYkdQg==
 
 fs-extra@11.3.0:
   version "11.3.0"
