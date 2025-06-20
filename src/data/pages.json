@@ -336,6 +336,28 @@
                 ]
               },
               {
+                "title": "Firefox built-in consent for data collection and transmission",
+                "url": "/documentation/develop/firefox-builtin-data-consent/",
+                "subpageitems": [
+                  {
+                    "title": "Taxonomy",
+                    "id": "taxonomy"
+                  },
+                  {
+                    "title": "Specifying data types",
+                    "id": "specifying-data-types"
+                  },
+                  {
+                    "title": "Accessing the data collection permissions programmatically",
+                    "id": "acessing-data-permissions-programmatically"
+                  },
+                  {
+                    "title": "Updates",
+                    "id": "updates"
+                  }
+                ]
+              },
+              {
                 "title": "Best practices for collecting user data consents",
                 "url": "/documentation/develop/best-practices-for-collecting-user-data-consents/",
                 "subpageitems": [
@@ -687,6 +709,40 @@
                   {
                     "title": "Data Disclosure, Collection and Management",
                     "id": "data-disclosure-collection-and-management"
+                  },
+                  {
+                    "title": "Monetization",
+                    "id": "monetization"
+                  },
+                  {
+                    "title": "Security, Compliance and Blocking",
+                    "id": "security-compliance-and-blocking"
+                  }
+                ]
+              },
+              {
+                "title": "Add-on Policies (Aug 4, 2025)",
+                "url": "/documentation/publish/add-on-policies-preview-2025-08/",
+                "subpageitems": [
+                  {
+                    "title": "No Surprises",
+                    "id": "no-surprises"
+                  },
+                  {
+                    "title": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "title": "Submission Guidelines",
+                    "id": "submission-guidelines"
+                  },
+                  {
+                    "title": "Development Practices",
+                    "id": "development-practices"
+                  },
+                  {
+                    "title": "Data Collection and Transmission Disclosure and Control",
+                    "id": "data-collection-and-transmission-disclosure-and-control"
                   },
                   {
                     "title": "Monetization",
