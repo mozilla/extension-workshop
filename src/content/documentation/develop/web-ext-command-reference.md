@@ -583,7 +583,7 @@ Environment variable: `$WEB_EXT_API_SECRET`
 
 #### `--approval-timeout`
 
-Number of milliseconds to wait for approval before giving up. Set to 0 to disable the wait for approval. Defaults to `timeout` if not set.
+Number of milliseconds to wait for approval before giving up. Set to 0 to disable the wait for approval. Defaults to `timeout` if not set. _Defaults to 15 minutes (900000 ms)._
 
 Environment variable: `$WEB_EXT_APPROVAL_TIMEOUT`
 </section>
@@ -631,7 +631,7 @@ Environment variable: `$WEB_EXT_CHANNEL`
 
 #### `--timeout`
 
-Number of milliseconds to wait before giving up on a response from Mozilla's web service. This should always be a number.
+Number of milliseconds to wait before giving up on a response from Mozilla's web service. This should always be a number. _Defaults to 5 minutes (300000 ms)_
 
 Environment variable: `$WEB_EXT_TIMEOUT`
 </section>
