@@ -23,7 +23,7 @@
     "velocity-ui-pack": "1.2.2"
   },
   "devDependencies": {
-    "@11ty/eleventy": "2.0.1",
+    "@11ty/eleventy": "3.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.1",
     "@eslint/js": "9.29.0",
     "acorn": "8.15.0",
