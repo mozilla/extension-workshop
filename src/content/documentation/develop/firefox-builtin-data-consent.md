@@ -22,6 +22,7 @@ date: 2025-06-19
 
 ::: note
 Firefox built-in consent for data collection and transmission is supported in Firefox for desktop 140 and later, and Firefox for Android 142 and above.
+
 Please follow our [community blog](https://blog.mozilla.org/addons/) for updates on the overall rollout process and a timeline when we will start accepting accepting submissions on AMO that make use of this feature.
 :::
 
