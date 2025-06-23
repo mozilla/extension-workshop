@@ -74,7 +74,7 @@
     "test": "npm run clean-tests && jest --watch",
     "clean": "rimraf './build/' './dist/'",
     "clean-dist": "rimraf './dist/'",
-    "clean-tests": "rimraf './tests/fixtures/dist/**/*!(.gitkeep)'",
+    "clean-tests": "rimraf -g './tests/fixtures/dist/**/*!(.gitkeep)'",
     "build": "npm run clean && eleventy --config=./eleventy.config.js && npm run sass:build && npm run uglify:build",
     "build:unpublished": "ELEVENTY_ENV=production BUILD_UNPUBLISHED=1 npm run build && bin/asset-pipeline",
     "build:production": "ELEVENTY_ENV=production npm run build && bin/asset-pipeline",
