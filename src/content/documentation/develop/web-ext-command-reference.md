@@ -683,7 +683,7 @@ Environment variable: `$WEB_EXT_AMO_METADATA`
 
 The path to an archive file containing human-readable source code for this submission. See [Source code submission](/documentation/publish/source-code-submission/) for details.
 
-Environment variable: `$WEB_EXT_API_UPLOAD_SOURCE_CODE`
+Environment variable: `$WEB_EXT_UPLOAD_SOURCE_CODE`
 </section>
 
 </section> <!-- web-ext-sign -->
