@@ -43,8 +43,8 @@
       if (!(b = e)) {
         var g = { height: i.innerHeight, width: i.innerWidth };
         if (!g.height && ((b = h.compatMode) || !d.support.boxModel))
-          (b = 'CSS1Compat' === b ? f : h.body),
-            (g = { height: b.clientHeight, width: b.clientWidth });
+          ((b = 'CSS1Compat' === b ? f : h.body),
+            (g = { height: b.clientHeight, width: b.clientWidth }));
         b = g;
       }
       e = b;

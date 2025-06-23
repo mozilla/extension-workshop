@@ -21,17 +21,17 @@ if (void 0 === Mzp) var Mzp = {};
         e < t.length;
         e++
       )
-        t[e].setAttribute('data-previous-language', t[e].value),
+        (t[e].setAttribute('data-previous-language', t[e].value),
           t[e].addEventListener(
             'change',
             function (t) {
               var e = t.target.value,
                 i = t.target.getAttribute('data-previous-language');
-              'function' == typeof n && n(i, e),
-                a.doRedirect(a.switchPath(window.location, e));
+              ('function' == typeof n && n(i, e),
+                a.doRedirect(a.switchPath(window.location, e)));
             },
             !1
-          );
+          ));
     },
   };
   window.Mzp.LangSwitcher = a;
