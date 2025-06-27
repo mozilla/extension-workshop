@@ -101,6 +101,7 @@ You can add source code to an existing add-on version. To do this, open [My Add-
 Reviewers will try to replicate your build environment if specified. However, if you do not specify the build environment, here's the default build environment that reviewers use:
 
 - Ubuntu 24.04 LTS (Desktop edition)
+- ARM64 CPU architecture
 - 10GB of system memory (RAM), 6 cores of vCPU
 - Node 22 LTS and npm 10
 - 35GB of free disk space
