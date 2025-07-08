@@ -755,6 +755,32 @@
                 ]
               },
               {
+                "title": "Add-on Policies FAQ",
+                "url": "/documentation/publish/add-on-policies-faq/",
+                "subpageitems": [
+                  {
+                    "title": "No Surprises",
+                    "id": "no-surprises"
+                  },
+                  {
+                    "title": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "title": "Submission Guidelines",
+                    "id": "submission-guidelines"
+                  },
+                  {
+                    "title": "Data Collection and Transmission Disclosure and Control",
+                    "id": "data-collection-and-transmission-disclosure-and-control"
+                  },
+                  {
+                    "title": "Security, Compliance and Blocking",
+                    "id": "security-compliance-and-blocking"
+                  }
+                ]
+              },
+              {
                 "title": "Firefox Add-on Distribution Agreement",
                 "url": "/documentation/publish/firefox-add-on-distribution-agreement/",
                 "subpageitems": [
