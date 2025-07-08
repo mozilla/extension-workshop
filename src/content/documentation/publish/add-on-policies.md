@@ -24,6 +24,10 @@ date: 2024-02-15
 
 # Add-on Policies
 
+::: note
+We are updating our policies on Aug 4, 2025. You can read the upcoming policies on the [preview page](/documentation/publish/add-on-policies-preview-2025-08/).
+:::
+
 Add-ons extend the core capabilities of Firefox, enabling users to modify and personalize their web experience. A healthy ecosystem, built on trust, is vital for developers to be successful and users to feel safe making Firefox their own. For these reasons, Mozilla requires all add-ons to comply with the following policies. These policies are not intended to serve as legal advice: depending on where you are located, additional requirements may apply to your add-on’s privacy policy, and to your other practices.
 
 **All add-ons are subject to these policies, regardless of how they are distributed.**
