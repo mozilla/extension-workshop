@@ -91,7 +91,7 @@ Yes. Add-ons intended for internal or private groups can be listed on AMO.
 
 ### What are the key requirements when submitting an add-on?
 
-Your add-on must function as described, pass functional and code reviews, and include testing information and credentials if necessary. Unrelated changes in updates can complicate the review process. More info, including default reviewer environment, can be found on the [source code submission guidelines](https://extensionworkshop.com/documentation/publish/source-code-submission/). 
+Your add-on must function as described, pass functional and code reviews, and include testing information and credentials if necessary. Unrelated changes in updates can complicate the review process. More info, including default reviewer environment, can be found on the [source code submission guidelines](/documentation/publish/source-code-submission/).
 
 ### Do I need to submit my source code?
 
@@ -113,7 +113,7 @@ Yes, especially if your add-on contains minified, transpiled, or machine-generat
 
 ### What is the definition of data transmission?
 
-Data transmission refers to any data that is collected, used, transferred, shared, or handled outside of the add-on or the local browser. 
+Data transmission refers to any data that is collected, used, transferred, shared, or handled outside of the add-on or the local browser.
 
 ### What data transmission practices are prohibited?
 
@@ -121,15 +121,15 @@ Transmitting search terms or browsing activity unrelated to the add-on's primary
 
 ### What data transmission practices are permitted?
 
-Add-ons may provide user-initiated local backup features without requiring explicit user consent. For example, a bookmark add-on could allow a user to download an export of their bookmarks to their local filesystem. Sending this same export file to a remote server would require that the extension follow the [Add-on Policies' Data Collection and Consent provisions](https://extensionworkshop.com/documentation/publish/add-on-policies-preview-2025-08/#data-collection-and-transmission-disclosure-and-control). 
+Add-ons may provide user-initiated local backup features without requiring explicit user consent. For example, a bookmark add-on could allow a user to download an export of their bookmarks to their local filesystem. Sending this same export file to a remote server would require that the extension follow the [Add-on Policies' Data Collection and Consent provisions](/documentation/publish/add-on-policies-preview-2025-08/#data-collection-and-transmission-disclosure-and-control). 
 
 ### Do I have to host my privacy policy on addons.mozilla.org (AMO)?
 
-A privacy policy is no longer required to be hosted on AMO. It is recommended that developers provide a link to their privacy policy on their AMO listing page. 
+A privacy policy is no longer required to be hosted on AMO. It is recommended that developers provide a link to their privacy policy on their AMO listing page.
 
 ### What data requires affirmative consent (opt-in)?
 
-Personally identifying information may only be collected after receiving explicit consent from the user. For more information on how different types of data are classified, see [Add-ons Data Collection Taxonomy](https://extensionworkshop.com/documentation/develop/firefox-builtin-data-consent/).
+Personally identifying information may only be collected after receiving explicit consent from the user. For more information on how different types of data are classified, see [Add-ons Data Collection Taxonomy](/documentation/develop/firefox-builtin-data-consent/).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -153,10 +153,10 @@ Add-ons must safely manage data and interactions with the browser, web, and OS. 
 
 Add-ons may be blocked if they:
 
-* Intentionally violate policies.  
-* Contain critical security vulnerabilities.  
-* Compromise user privacy.  
-* Circumvent user consent or control.  
+* Intentionally violate policies.
+* Contain critical security vulnerabilities.
+* Compromise user privacy.
+* Circumvent user consent or control.
 * Obfuscate or contain unreadable code.
 
 ### Will I be notified before my add-on is blocked?
