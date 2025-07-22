@@ -112,10 +112,10 @@ See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org
 </aside>
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
-  
+
 ## Working without an ID in Manifiest V2
 
-An add-on ID is optional for Manifest V2 extensions. If you don't set it, you can generally develop, debug, publish, and update your extension without ever having to deal with an ID. One advantage of this is that Google Chrome does not recognize the `browser_specific_settings` key and shows a warning if you include it.
+An add-on ID is optional for Manifest V2 extensions. If you don't set it, you can generally develop, debug, publish, and update your extension without ever having to deal with an ID. One advantage of this is that Google Chrome ignores the `browser_specific_settings` manifest key and Apple Safari ignores Firefox's `gecko` and `gecko_android` sub-keys.
 
 However, there are some implications of not setting an add-on ID that are described in this section.
 
