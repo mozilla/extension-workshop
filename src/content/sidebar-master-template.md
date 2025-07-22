@@ -559,7 +559,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 ###### List Example:
 
-- [Honey ](https://firefox.com 'Honey ')
+- [Honey](https://firefox.com 'Honey')
 - [Ghoastery](https://firefox.com 'Ghoastery')
 - [Disconnect](https://firefox.com 'Disconnect')
 - [Ecoesia](https://firefox.com 'Ecoesia')
@@ -675,5 +675,3 @@ An extension that improves YouTube is called **Enhancer for YouTube**
 %}
 
 <!-- END: Single Column Body Module -->
-
-

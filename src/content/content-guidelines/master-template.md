@@ -181,7 +181,7 @@ While the name “hoyv” doesn’t work, the name “uBlock Origin” for an ad
 
 ##### List Example:
 
-- [Honey ](https://firefox.com 'Honey ')
+- [Honey](https://firefox.com 'Honey')
 - [Ghoastery](https://firefox.com 'Ghoastery')
 - [Disconnect](https://firefox.com 'Disconnect')
 - [Ecoesia](https://firefox.com 'Ecoesia')
@@ -265,7 +265,7 @@ Take the popular extension, Remembear, as an example. You can imagine the creato
 
 #### 2. Identify key words
 
-Pull out the key words (nouns, adjectives, verbs) and phrases from your description and create a word list. Add other words that come to mind based on those words, including synonyms.
+Pull out the key words (nouns, adjectives, verbs) and phrases from your descriptionand create a word list. Add other words that come to mind based on those words, including synonyms.
 
 Remembear Example:
 
@@ -283,10 +283,10 @@ Remembear Example:
 
 #### 3. Example Lorum Ipsum
 
-Pull out the key words (nouns, adjectives, verbs) and phrases from your description and create a word list. Add other words that come to mind based on those words, including synonyms.
+Pull out the key words (nouns, adjectives, verbs) and phrases from your descriptionand create a word list. Add other words that come to mind based on those words, including synonyms.
 
 Remembear: dolore eu fugiat nulla pariatur lemera dosada peel.
 
-- [Extension Link ](https://firefox.com 'Extension Link ')
-- [Extension Link ](https://firefox.com 'Extension Link ')
-- [Extension Link ](https://firefox.com 'Extension Link ')
+- [Extension Link](https://firefox.com 'Extension Link')
+- [Extension Link](https://firefox.com 'Extension Link')
+- [Extension Link](https://firefox.com 'Extension Link')
