@@ -38,13 +38,13 @@ Automatic compatibility checks are performed for extensions installed from a fil
 
 To prepare your add-on for installation from file:
 
-1. Include an ID in the extension’s `manifest.json` file, replacing **_your-add-on-name@your-domain.com_** with a suitable ID for your add-on:
+1. Include an ID in the extension’s `manifest.json` file, replacing **@your-addon-id** with a suitable ID for your add-on:
 
 <!-- Syntax Highlighting -->
 ```json
 "browser_specific_settings": {
   "gecko": {
-    "id": "your-add-on-name@your-domain.com"
+    "id": "@your-addon-id"
   }
 }
 ```

@@ -119,7 +119,7 @@ In the example `manifest.json` file below, the developer specifies a single type
   ],
   "browser_specific_settings": {
     "gecko": {
-        "id": "example-data-collection-with-fallback@test.mozilla.org",
+        "id": "@example-data-collection-with-fallback",
         "data_collection_permissions": {
           "required": [
              "locationInfo"
@@ -218,9 +218,9 @@ await browser.permissions.getAll()
 The presence/absence of the `data_collection` key in the response of the `getAll()` method can also be used to feature-detect the built-in data collection consent experience in Firefox at runtime.
 
 ```js
-const perms = await browser.permissions.getAll();  
-if (!perms.data_collection) {  
-  // no built-in data consent in Firefox  
+const perms = await browser.permissions.getAll();
+if (!perms.data_collection) {
+  // no built-in data consent in Firefox
 }
 ```
 

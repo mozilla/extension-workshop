@@ -55,11 +55,10 @@ The add-on ID is used to uniquely identify each extension and in turn that ID is
 
 An extension can be assigned an add-on ID using the `manifest.json` file [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key.
 
-
 {% highlight javascript linenos %}
 "browser_specific_settings": {
   "gecko": {
-    "id": "addon@example.com"
+    "id": "@your-addon-id"
   }
 }
 {% endhighlight %}
@@ -161,5 +160,3 @@ To get your extension to behave like a signed extension during development testi
 %}
 
 <!-- END: Single Column Body Module -->
-
-
