@@ -115,7 +115,7 @@ See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org
 
 ## Working without an ID in Manifiest V2
 
-An add-on ID is optional for Manifest V2 extensions. If you don't set it, you can generally develop, debug, publish, and update your extension without ever having to deal with an ID. One advantage of this is that Google Chrome ignores the `browser_specific_settings` manifest key and Apple Safari ignores Firefox's `gecko` and `gecko_android` sub-keys.
+An add-on ID is optional for Manifest V2 extensions. If you don't set it, you can generally develop, debug, publish, and update your extension without ever having to deal with an ID. However, if you do add the `browser_specific_settings` manifest key (to add an ID), Google Chrome ignores it, and Apple Safari ignores Firefox's `gecko` and `gecko_android` sub-keys.
 
 However, there are some implications of not setting an add-on ID that are described in this section.
 
