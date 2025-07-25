@@ -83,7 +83,7 @@ Then, on your development computer:
 
 ## Check for Firefox for Android compatibility
 
-### Lint with web-ext 
+### Lint with web-ext
 
 Before running your extension on Firefox for Android, consider using [`web-ext lint`](/documentation/develop/web-ext-command-reference#web-ext-lint). Lint performs a check to determine if any of the permissions, manifest keys, and web extension APIs you're using are incompatible with Firefox for Android. Lint relies on your extension's manifest.json file including `strict_min_version` values for the optional `gecko` and `gecko_android` sub-keys in [`browser_specific_settings`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings). It then reports on the features that are not supported by the minimum version you have set.
 
@@ -233,13 +233,13 @@ For more details on using the web developer tools, see [Firefox Developer Tools]
 In addition to the messages from your code, the console may also include messages about the validation of the extension's `manifest.json` files. These messages can be viewed using the adb logcat command. To avoid receiving other unrelated messages, you can pipe the output through grep, filtering by the extension's ID. For example:
 
 ```shell
-/path/to/adb logcat | grep borderify@example.com
+/path/to/adb logcat | grep @your-addon-id
 ```
 
 This will give output similar to this:
 
 ```shell
-I/Gecko (30440): 1496056181889 addons.xpi WARN Addon with ID borderify@example.com already installed, older version will be disabled
+I/Gecko (30440): 1496056181889 addons.xpi WARN Addon with ID @your-addon-id already installed, older version will be disabled
 ```
 
 If your add-on fails to run, check these messages as they may provide information explaining why.
