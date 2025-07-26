@@ -87,7 +87,7 @@ To perform the test you'll need to:
   "gecko": {
     "strict_min_version": "54.0a1",
     "update_url": "https://your-account.github.io/webextensions/upgrade.json",
-    "id": "test@your-address.com"
+    "id": "@your-addon-id"
   }
 },
 ```
@@ -106,7 +106,7 @@ If the packages were generated with `.zip` extensions change them to `.xpi`, oth
   "gecko": {
     "strict_min_version": "54.0a1",
     "update_url": "https://your-account.github.io/webextensions/upgrade.json",
-    "id": "test@your-address.com"
+    "id": "@your-addon-id"
   }
 },
 ```
@@ -162,5 +162,3 @@ You can then rerun the extension and any runtime permission requests will be dis
 %}
 
 <!-- END: Single Column Body Module -->
-
-

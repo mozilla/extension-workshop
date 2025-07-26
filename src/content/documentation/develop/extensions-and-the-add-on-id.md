@@ -47,11 +47,9 @@ This article describes how add-on IDs are handled for extensions built with WebE
 
 <!-- END: Page Hero Banner -->
 
-<!-- Single Column Body Module -->
+<!-- Content with Table of Contents Module -->
 
-<section id="when-do-you-need-an-add-on-id" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
+{% capture content_with_toc %}
 
 ## When do I need an add-on ID?
 
@@ -80,38 +78,33 @@ You need to set an ID in your extensions manifest.json file when:
   - [`runtime.onConnectExternal`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal 'Fired when an extension receives a connection request from a different extension.')
 - You use the [`dictionaries` key in manifest.json](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries).
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/column-w-toc.liquid,
+  id: "when-do-you-need-an-add-on-id"
+  content: content_with_toc
+%}
 
-<!-- END: Single Column Body Module -->
+<!-- END: Content with Table of Contents -->
 
 <!-- Single Column Body Module -->
 
-<section id="how-do-i-set-an-add-on-id" class="module">
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
+{% capture content %}
 
 ## How do I set an add-on ID?
 
 See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings) for the syntax of setting the extension ID.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "how-do-i-set-an-add-on-id"
+  content: content
+%}
 
 <!-- END: Single Column Body Module -->
 
 <!-- Single Column Body Module -->
 
-<section id="basic-workflow-with-no-add-on-id" class="module">
-<aside class="module-aside table-of-contents">
-
-{%- include contents.liquid -%}
-
-</aside>
-<article class="module-content grid-x grid-padding-x">
-<div class="cell small-12">
+{% capture content %}
 
 ## Working without an ID in Manifiest V2
 
@@ -135,8 +128,10 @@ After publication, you don't generally have to deal with the ID. You can continu
 
 However, if you use [AMO's API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to upload an update to a Manifiest V2 extension that doesn't define the ID in its manifest.json file you must include the add-on's ID in the request.
 
-</div>
-</article>
-</section>
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "basic-workflow-with-no-add-on-id"
+  content: content
+%}
 
 <!-- END: Single Column Body Module -->
