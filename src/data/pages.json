@@ -741,6 +741,10 @@
                     "id": "development-practices"
                   },
                   {
+                    "title": "User Scripts",
+                    "id": "user-scripts"
+                  },
+                  {
                     "title": "Data Collection and Transmission Disclosure and Control",
                     "id": "data-collection-and-transmission-disclosure-and-control"
                   },

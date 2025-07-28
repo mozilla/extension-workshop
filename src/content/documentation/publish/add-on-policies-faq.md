@@ -129,7 +129,7 @@ A privacy policy is no longer required to be hosted on AMO. It is recommended th
 
 ### What data requires affirmative consent (opt-in)?
 
-Personally identifying information may only be collected after receiving explicit consent from the user. For more information on how different types of data are classified, see [Add-ons Data Collection Taxonomy](/documentation/develop/firefox-builtin-data-consent/).
+Personally identifying information may only be collected after receiving explicit consent from the user. For more information on how different types of data are classified, see the [Firefox add-on data classification taxonomy](/documentation/develop/firefox-builtin-data-consent/#taxonomy).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
