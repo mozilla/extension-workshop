@@ -707,40 +707,6 @@
                     "id": "development-practices"
                   },
                   {
-                    "title": "Data Disclosure, Collection and Management",
-                    "id": "data-disclosure-collection-and-management"
-                  },
-                  {
-                    "title": "Monetization",
-                    "id": "monetization"
-                  },
-                  {
-                    "title": "Security, Compliance and Blocking",
-                    "id": "security-compliance-and-blocking"
-                  }
-                ]
-              },
-              {
-                "title": "Add-on Policies (Aug 4, 2025)",
-                "url": "/documentation/publish/add-on-policies-preview-2025-08/",
-                "subpageitems": [
-                  {
-                    "title": "No Surprises",
-                    "id": "no-surprises"
-                  },
-                  {
-                    "title": "Content",
-                    "id": "content"
-                  },
-                  {
-                    "title": "Submission Guidelines",
-                    "id": "submission-guidelines"
-                  },
-                  {
-                    "title": "Development Practices",
-                    "id": "development-practices"
-                  },
-                  {
                     "title": "User Scripts",
                     "id": "user-scripts"
                   },

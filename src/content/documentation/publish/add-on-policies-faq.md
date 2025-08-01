@@ -11,7 +11,7 @@ contributors:
     wagnerand
   ]
 last_updated_by: wagnerand
-date: 2025-07-29
+date: 2025-08-04
 ---
 
 <!-- Page Hero Banner -->
@@ -19,10 +19,6 @@ date: 2025-07-29
 {% capture page_hero_banner_content %}
 
 # Add-on Policies – Frequently Asked Questions
-
-::: note
-This is a preview of Frequently Asked Questions that will become effective on Aug 4, 2025.
-:::
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -121,7 +117,7 @@ Transmitting search terms or browsing activity unrelated to the add-on's primary
 
 ### What data transmission practices are permitted?
 
-Add-ons may provide user-initiated local backup features without requiring explicit user consent. For example, a bookmark add-on could allow a user to download an export of their bookmarks to their local filesystem. Sending this same export file to a remote server would require that the extension follow the [Add-on Policies' Data Collection and Consent provisions](/documentation/publish/add-on-policies-preview-2025-08/#data-collection-and-transmission-disclosure-and-control). 
+Add-ons may provide user-initiated local backup features without requiring explicit user consent. For example, a bookmark add-on could allow a user to download an export of their bookmarks to their local filesystem. Sending this same export file to a remote server would require that the extension follow the [Add-on Policies' Data Collection and Consent provisions](/documentation/publish/add-on-policies/#data-collection-and-transmission-disclosure-and-control). 
 
 ### Do I have to host my privacy policy on addons.mozilla.org (AMO)?
 

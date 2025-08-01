@@ -11,7 +11,7 @@ contributors:
     willdurand
   ]
 last_updated_by: wagnerand
-date: 2025-07-29
+date: 2025-08-04
 ---
 
 <!-- Page Hero Banner -->
@@ -47,7 +47,7 @@ To standardize this information for both developers and end users, Mozilla has c
 
 Personally identifiable information can be actively provided by the user or obtained through extension APIs. It includes, but is not limited to names, email addresses, search terms and browsing activity data, as well as access to and placement of cookies.
 
-| Data type<br>Visible during install    | Data collection permission**<br>Used in the manifest | Definition / Examples                                                                                                                                                                                           | Eligible for [implicit consent](/documentation/publish/add-on-policies-preview-2025-08/#data-collection-and-transmission-disclosure-and-control)? |
+| Data type<br>Visible during install    | Data collection permission**<br>Used in the manifest | Definition / Examples                                                                                                                                                                                           | Eligible for [implicit consent](/documentation/publish/add-on-policies/#data-collection-and-transmission-disclosure-and-control)? |
 |----------------------------------------|------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Personally identifying information** | `personallyIdentifyingInfo`                          | Examples: contact information like name and address, email, and phone number, as well as other identifying data such as ID numbers, voice or video recordings, age, demographic information, or biometric data. | no                                                                                                                                                |
 | **Health information**                 | `healthInfo`                                         | Examples: medical history, symptoms, diagnoses, treatments, procedures, or heart rate data.                                                                                                                     | no                                                                                                                                                |
