@@ -181,7 +181,7 @@ If the add-on uses native messaging, the Add-on Policies (including those relate
 
 ### User Consent and Control
 
-The user must be provided with a clear way to control the add-on’s data transmission, either through a consent experience created by the add-on developer, or by using Firefox’s built in data collection and transmission consent experience. In the case of add-ons that qualify for implicit consent, under the “Implicit Consent for Self-Evident, Single-Use Data Transmission” policy, installation is the consent.
+The user must be provided with a clear way to control the add-on’s data transmission, either through a consent experience created by the add-on developer, or by using Firefox’s built in data collection and transmission consent experience. In the case of add-ons that qualify for implicit consent, under the “Implicit Consent for Self-Evident, Single-Use Extension” policy, installation is the consent.
 
 Add-ons installed in an enterprise environment can bypass asking for data collection consent when they are installed by enterprise policy. For more information, refer to the [enterprise documentation](/documentation/enterprise/enterprise-development/). If the add-on uses Firefox’s built-in data collection and transmission consent experience, then the browser will bypass this by default.
 
@@ -214,7 +214,7 @@ Before an add-on may transmit personal information, it must clearly describe, an
 
 If the primary function of the add-on does not work without transmitting personal data, the add-on must provide a choice for the user to either accept the data transmission or uninstall the add-on.
 
-#### Implicit Consent for Self-Evident, Single-Use Data Transmission
+#### Implicit Consent for Self-Evident, Single-Use Extension
 
 
 Implicit consent applies only to add-ons hosted on addons.mozilla.org when all of the following conditions are satisfied. Otherwise the standard explicit consent rules apply.
