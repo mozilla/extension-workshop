@@ -272,7 +272,7 @@ A [content script](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensi
 
 Because [Firefox is multiprocess](https://developer.mozilla.org/docs/Mozilla/Firefox/Multiprocess_Firefox), content scripts run in a different process than other parts of an extension. Therefore, to debug content scripts, you use the developer tools for the page containing the script. To do this:
 
-- in the Firefox menu (or **Tools** menu if you display the menu bar or are on macOS), click **Web Developer**, then **Debugger**.
+- in the Firefox menu click **More tools**, then **Debugger** (or, in the manu bar on macOS, **Tools > Browser Tools > Browser Console**).
 - press `Ctrl + Shift + i` (`Command + Option + i` on macOS) and click **Debugger**.
 
 If you activated the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console) view, to view the **Console** below **Debugger**, the tools open in this mode. Otherwise, press `esc` to activate this mode.
