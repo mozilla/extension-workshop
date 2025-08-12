@@ -36,8 +36,6 @@ Now that your add-on is published on [addons.mozilla.org](https://addons.mozilla
 
 - A high-quality product page (also known as a listing page) on AMO makes it more likely that users will discover and install your extension. [Learn how to create an appealing listing](/documentation/develop/create-an-appealing-listing/).
 
-- Need to get in touch with the administrators of AMO? [Contact them by email](mailto:amo-admins@mozilla.com).
-
 - Join the conversation on the [community forum](https://discourse.mozilla.org/c/add-ons) and on [Twitter](https://twitter.com/mozamo).
 
 {% endcapture %}
