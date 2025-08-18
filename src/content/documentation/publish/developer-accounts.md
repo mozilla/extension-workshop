@@ -50,7 +50,7 @@ Your Mozilla account display name will not sync to your profile on addons.mozill
 
 To mitigate malicious actors from submitting spam to addons.mozilla.org, we will not accept submissions from accounts that use a disposable temporary email address, or that have submitted multiple add-ons that violate our [Add-on Policies](/documentation/publish/add-on-policies).
 
-If you believe your account has been incorrectly blocked, please email amo-admins [at] mozilla [dot] com and include a link to your developer profile.
+If you believe your account has been incorrectly blocked, please use the appeal link in the decision notification email you have received.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
