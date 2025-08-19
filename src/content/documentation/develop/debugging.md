@@ -428,4 +428,19 @@ For more details, see [Testing persistent and restart features](/documentation/d
 
 <!-- END: Single Column Body Module -->
 
+<!-- Single Column Body Module -->
 
+{% capture content %}
+
+## Debugging with an external development environment (IDE)
+You can also debug your extension using an external integrated development environment (IDE).
+
+For more details, see their respective documentation pages, e.g. [here is the one of the extension for Visual Studio Code (VSCode)](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug).
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "debugging-with-an-external-development-environment-IDE"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
