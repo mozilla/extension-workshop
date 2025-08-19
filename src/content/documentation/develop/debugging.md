@@ -420,6 +420,10 @@ If your extension could be affected by the browser restarting, such as when a se
 
 For more details, see [Testing persistent and restart features](/documentation/develop/testing-persistent-and-restart-features/).
 
+## Debugging with an external development environment (IDE)
+You can also debug your extension using an external integrated development environment (IDE).
+For more details, see their respective documentation pages, e.g. [here is the one of the extension for Visual Studio Code (VSCode)](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug).
+
 {% endcapture %}
 {% include modules/one-column.liquid,
   id: "debugging-browser-restarts"
