@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.2",
     "@eslint/js": "9.34.0",
     "acorn": "8.15.0",
     "acorn-walk": "8.3.4",
