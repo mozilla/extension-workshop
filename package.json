@@ -54,7 +54,7 @@
     "pretty-quick": "4.2.2",
     "prismjs": "1.30.0",
     "rimraf": "6.0.1",
-    "sass-embedded": "^1.90.0",
+    "sass-embedded": "^1.91.0",
     "serialize-javascript": "6.0.2",
     "slugify": "1.6.6",
     "stylelint": "14.16.1",
