@@ -433,9 +433,15 @@ For more details, see [Testing persistent and restart features](/documentation/d
 {% capture content %}
 
 ## Debugging with an external development environment (IDE)
-You can also debug your extension using an external integrated development environment (IDE).
 
-For more details, see their respective documentation pages, e.g. [here is the one of the extension for Visual Studio Code (VSCode)](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug).
+Mozilla provides a [Debug Adapter for Firefox](https://www.npmjs.com/package/firefox-debugadapter) that implements the [Debug Adapter Protocol (DAP)](https://microsoft.github.io/debug-adapter-protocol/). This adapter enables debug integration with any IDE that supports DAP.
+
+At the time of writing, September 2025, these integrations are available:
+
+- Visual Studio Code [Debugger for Firefox](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug)—this extension is maintained by the [Firefox DevTools](https://marketplace.visualstudio.com/publishers/firefox-devtools) team.
+- [Eclipse Wild Web Developer : 🌐 Web dev in Eclipse IDE 🌘](https://github.com/eclipse-wildwebdeveloper/wildwebdeveloper/)
+
+In addition, other DAP adapters have been reported to work, such as debugging in [Neovim](https://neovim.io/), using [nvim-dap](https://github.com/mfussenegger/nvim-dap).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
