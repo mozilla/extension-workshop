@@ -939,6 +939,25 @@
                 ]
               },
               {
+                "title": "Version Rollback",
+                "url": "/documentation/publish/version-rollback/",
+                "subpageitems": [
+                  {
+                    "title": "Eligibility",
+                    "id": "eligibility"
+                  },
+                  {
+                    "title": "How to use the feature in Developer Hub",
+                    "id": "devhub"
+                  }
+                  ,
+                  {
+                    "title": "Activation via the addon submission api",
+                    "id": "api"
+                  }
+                ]
+              },
+              {
                 "title": "Source code submission",
                 "url": "/documentation/publish/source-code-submission/",
                 "subpageitems": [
