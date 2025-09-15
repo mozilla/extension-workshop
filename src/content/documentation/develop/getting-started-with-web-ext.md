@@ -73,7 +73,7 @@ npm install --global web-ext
 
 `web-ext` requires the current [LTS](https://github.com/nodejs/Release#release-schedule) (long-term support) versions of [NodeJS](https://nodejs.org/).
 
-To test whether the installation worked, run the following command, which displays the `web-ext` version number:
+To test whether the installation worked, in a new terminal window, run this command to display the `web-ext` version number:
 
 ```shell
 web-ext --version
@@ -102,6 +102,12 @@ or
 
 ```shell
 npm install --global web-ext
+```
+
+To see which version you now have installed, in a new terminal window, run:
+
+```shell
+web-ext --version
 ```
 
 </div>
