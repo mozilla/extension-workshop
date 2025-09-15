@@ -947,12 +947,12 @@
                     "id": "eligibility"
                   },
                   {
-                    "title": "How to use the feature in Developer Hub",
+                    "title": "Roll back using Developer Hub",
                     "id": "devhub"
                   }
                   ,
                   {
-                    "title": "Activation via the addon submission api",
+                    "title": "Roll back using the Add-on Submission API",
                     "id": "api"
                   }
                 ]
