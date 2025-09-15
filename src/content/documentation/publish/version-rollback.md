@@ -65,7 +65,7 @@ Launch the form with **Rollback to a previous version**.
 
 The version rolled back from will be preselected for versions distributed from [addons.mozilla.org](https://addons.mozilla.org/).  The developer has to enter a new version number, for example, in this case, 1.2.1.  It must be a higher version number than all previously submitted versions for distribution on [addons.mozilla.org](https://addons.mozilla.org/).
 
-Release notes can be edited as required to give detail to users about this version.
+A basic release note is provided. Edit this to provide users with more information about this version.
 
 Click **Roll back** to generate the rolled back version. All the authors of the extension receive an email when the process is complete and the rolled-back XPI is signed and approved.
 
