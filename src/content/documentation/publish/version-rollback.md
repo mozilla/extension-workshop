@@ -20,7 +20,7 @@ Sometimes a developer realises, after a new version has been approved and distri
 
 The developer will be looking to fix the bug in a subsequent version but a) this could take some development time, and b) it may need to be reviewed by Mozilla before it is approved - impacting existing users in the meantime.
 
-Now the add-on can be rolled back to the previous version - by automatically republishing it with a new version number and pushing out the new version to existing users, through the [Developer Hub](https://addons.mozilla.org/developers/), or the [Add-on Submission API](https://addons.mozilla.org/api/v5/addons/).
+To address this issue, you can roll back your extension by republishing a previous version with a new version number and pushing this version to users through the [Developer Hub](https://addons.mozilla.org/developers/) or the [Add-on Submission API](https://addons.mozilla.org/api/v5/addons/).
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
