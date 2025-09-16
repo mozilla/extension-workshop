@@ -13,9 +13,10 @@ contributors:
     jvillalobos,
     wbamberg,
     kmaglione,
+    dotproto,
   ]
-last_updated_by: wagnerand
-date: 2025-08-04
+last_updated_by: dotproto
+date: 2025-09-17
 ---
 
 <!-- Page Hero Banner -->
@@ -185,11 +186,11 @@ The user must be provided with a clear way to control the add-on’s data transm
 
 Add-ons installed in an enterprise environment can bypass asking for data collection consent when they are installed by enterprise policy. For more information, refer to the [enterprise documentation](/documentation/enterprise/enterprise-development/). If the add-on uses Firefox’s built-in data collection and transmission consent experience, then the browser will bypass this by default.
 
-#### If the add-on is only compatible with Firefox 140 or later and uses Firefox’s built-in data collection and transmission consent experience
+#### If the add-on is only compatible with Firefox 140 or later and uses Firefox’s built-in data collection and transmission consent experience:
 
 It must accurately state the data collection practices in the extension manifest, including when it does not collect data, in line with the [Firefox add-on data classification taxonomy](/documentation/develop/firefox-builtin-data-consent/#taxonomy).
 
-#### If the add-on is compatible with Firefox 139 and earlier or uses Firefox’s built-in data collection and transmission consent experience
+#### If the add-on is compatible with Firefox 139 and earlier or does not use Firefox’s built-in data collection and transmission consent experience:
 
 The user must be provided with a clear way to control the add-on’s data transmission immediately after installation of the add-on. If data transmission starts or changes in an add-on update, or the consent and control is introduced in an update, it must be shown to all new and upgrading users immediately after the update.
 
