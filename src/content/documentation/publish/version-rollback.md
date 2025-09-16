@@ -105,6 +105,12 @@ If an add-on has AMO and self-distributed versions, the form includes a channel 
 
 Rollback can also be triggered using the [Add-on Submission API](https://mozilla.github.io/addons-server/topics/api/addons.html#version-rollback). The rollback is activated on the version to be rolled back *to*.
 
+For example:
+
+```shell
+curl -d '{"new_version_string": "1.2.1", "release_notes": {"en-us": "Rolling back to 1.1.1"}' -H "Authorization: <auth header>" -H "Content-type: application/json" https://addons.mozilla.org/api/v5/addons/addon/<add-on id>/versions/1.1.1/rollback/
+```
+See [API documentation](https://mozilla.github.io/addons-server/topics/api/auth.html) for how to generate an Authorization header with your toolchain.
 {% endcapture %}
 {% include modules/one-column.liquid,
   id: "api"
