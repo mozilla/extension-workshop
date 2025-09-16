@@ -16,9 +16,9 @@ published: false
 
 # Roll back to a previous version of your add-on
 
-Sometimes a developer realises, after a new version has been approved and distributed to users, that it contains a serious bug. The new version can be disabled by the developer immediately but any Firefox users who received the update will keep using the version with the serious bug.
+After a new version of your extension has been approved and distributed to users, you may discover an issue that must be resolved quickly. You can disable the new version immediately in AMO, so it's no longer available to install. However, some Firefox users may have received and are using the new version. 
 
-The developer will be looking to fix the bug in a subsequent version but a) this could take some development time, and b) it may need to be reviewed by Mozilla before it is approved - impacting existing users in the meantime.
+If developing a revised version and obtaining a review won't address the issue quickly enough, you can roll back to an earlier version of your extension. Users then update to the rolled back version when their browser next checks for extension updates, which, by default, means within 24 hours.
 
 To address this issue, you can roll back your extension by republishing a previous version with a new version number and pushing this version to users through the [Developer Hub](https://addons.mozilla.org/developers/) or the [Add-on Submission API](https://addons.mozilla.org/api/v5/addons/).
 
