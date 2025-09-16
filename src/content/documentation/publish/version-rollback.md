@@ -6,8 +6,8 @@ topic: Publish
 tags: [manage, distribution, review, add-ons, publishing]
 contributors: [eviljeff]
 last_updated_by: eviljeff
-date: 2025-09-10 11:39:00
-published: false
+date: 2025-09-16 15:47:00
+published: true
 ---
 
 <!-- Page Hero Banner -->
