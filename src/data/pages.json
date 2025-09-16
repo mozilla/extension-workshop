@@ -939,6 +939,25 @@
                 ]
               },
               {
+                "title": "Version Rollback",
+                "url": "/documentation/publish/version-rollback/",
+                "subpageitems": [
+                  {
+                    "title": "Eligibility",
+                    "id": "eligibility"
+                  },
+                  {
+                    "title": "Roll back using Developer Hub",
+                    "id": "devhub"
+                  }
+                  ,
+                  {
+                    "title": "Roll back using the Add-on Submission API",
+                    "id": "api"
+                  }
+                ]
+              },
+              {
                 "title": "Source code submission",
                 "url": "/documentation/publish/source-code-submission/",
                 "subpageitems": [
