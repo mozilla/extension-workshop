@@ -63,7 +63,7 @@ Launch the form with **Rollback to a previous version**.
 
 ![Developer Hub rollback form](/assets/img/documentation/publish/rollback-devhub-form.png)
 
-The version rolled back from will be preselected for versions distributed from [addons.mozilla.org](https://addons.mozilla.org/).  The developer has to enter a new version number, for example, in this case, 1.2.1.  It must be a higher version number than all previously submitted versions for distribution on [addons.mozilla.org](https://addons.mozilla.org/).
+**Version** identifies the version available for rollback, which is the previous version distributed from [addons.mozilla.org](https://addons.mozilla.org/). Enter a new version number, for example, 1.2.1. The new version number must be higher than all previous versions submitted for distribution on [addons.mozilla.org](https://addons.mozilla.org/).
 
 A basic release note is provided. Edit this to provide users with more information about this version.
 
@@ -103,7 +103,7 @@ If an add-on has AMO and self-distributed versions, the form includes a channel 
 
 ## Roll back using the Add-on Submission API
 
-Rollback can also be triggered via the [addon submission api](https://mozilla.github.io/addons-server/topics/api/addons.html#version-rollback) in the same way. The rollback is activated on the version to be rolled back *to*.
+Rollback can also be triggered using the [Add-on Submission API](https://mozilla.github.io/addons-server/topics/api/addons.html#version-rollback). The rollback is activated on the version to be rolled back *to*.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
