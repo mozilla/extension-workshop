@@ -66,7 +66,7 @@ date: 2020-03-24 12:47:00
         </tr>
         <tr>
             <td><a href="https://webext.eu/">Create your extension scaffold</a></td>
-            <td>Debug with the <a href="https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html">Add-on Debugging Window</a></td>
+            <td>Debug with Firefox's <a href="https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html">Browser Toolbox</a></td>
             <td><a href="/documentation/publish/source-code-submission/">Submit your source code</a> (if required)</td>
             <td><a href="/documentation/manage/updating-your-extension/">Update and improve your extension</a></td>
             <td></td>
