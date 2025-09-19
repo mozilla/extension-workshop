@@ -432,6 +432,33 @@ For more details, see [Testing persistent and restart features](/documentation/d
 
 {% capture content %}
 
+## Resolving "can't access dead object" errors
+
+Extensions are prevented from keeping references to DOM objects after their parent document is destroyed. This prevents memory leaks in extensions.
+
+If your extension references a nonexistent DOM object, you get an error message similar to this in the Console:
+
+```
+Error: TypeError: can't access dead object
+Source File: chrome://addon/content/file.js
+Line: 42
+```
+
+To correct this …
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "cant-access-dead-object"
+  content: content
+%}
+
+<!-- END: Single Column Body Module -->
+
+
+<!-- Single Column Body Module -->
+
+{% capture content %}
+
 ## Debugging with an external development environment (IDE)
 
 Mozilla provides a [Debug Adapter for Firefox](https://www.npmjs.com/package/firefox-debugadapter) that implements the [Debug Adapter Protocol (DAP)](https://microsoft.github.io/debug-adapter-protocol/). This adapter enables debug integration with any IDE that supports DAP.
