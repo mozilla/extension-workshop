@@ -47,16 +47,24 @@ Complete some one-off setup tasks on your computer and Android device.
 
 On your development computer:
 
-- Install or update [web-ext](https://github.com/mozilla/web-ext) to version 4.1.0 or later.
+- Install or update [web-ext](https://github.com/mozilla/web-ext) to version 7.12.0 or later.
 - Use the Android Studio [SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager) or the [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html) command-line tool to install the [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools.html)
 - Make sure you have adb installed ([Linux](https://dl.google.com/android/repository/platform-tools-latest-linux.zip), [Mac](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip), [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)) and in your `PATH`.
 
 On your device or Android emulator:
 
-- Install [Firefox for Android Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix)
+- Install Firefox on your Android device. You can use any edition of Firefox, although it's recommended that you use the same version on your computer and Android device.
+  - [Firefox for Nightly for Developers](https://play.google.com/store/apps/details?id=org.mozilla.fenix) if debugging from Nightly
+  - [Firefox beta for testers](https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta) if debugging from Developer Edition.
+  - [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) if debugging from the release edition of Firefox.
+  ::: note alert
+  You receive a warning if the versions of Firefox on your computer and Android device are different. Generally, this isn't an issue. However, if you encounter issues, make sure your versions are the same.
+  :::
 - [Enable Android USB debugging on the device](https://developer.android.com/studio/debug/dev-options).
 - Attach your device to the development computer using a USB cable. When prompted, allow USB debugging for the connection.
-- In the settings view for Firefox for Android Nightly, enable "Remote debugging via USB."
+- In settings, enable "Remote debugging via USB."
+
+For more information, see [Connecting to a remote device](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-a-remote-device) in the Firefox Source Docs. To connect over Wi-Fi, see [Connecting to Android over Wi-Fi](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-android-over-wi-fi).
 
 Then, on your development computer:
 
@@ -160,7 +168,10 @@ Before making your extension available, test it on Android to ensure it works as
 These instructions are for temporarily loading an extension. Instructions for persistent loading of extensions in Firefox for Android Nightly or Beta can be found on [this blog post](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly/).
 :::
 
-In the unzipped directory of your extension, run `web-ext run -t firefox-android` and follow the instructions on screen to make sure you select the right device. Select `org.mozilla.fenix` as the apkname (or `org.mozilla.firefox_beta` for Firefox Beta for Android).
+In the unzipped directory of your extension, run `web-ext run -t firefox-android`. Follow the instructions to select the correct device and the apkname as:
+- `org.mozilla.fenix` for Nightly
+- `org.mozilla.firefox_beta` for Beta.
+- `org.mozilla.firefox` for the release edition.
 
 Here is an example of the command:
 
@@ -173,7 +184,7 @@ web-ext run -t firefox-android --adb-device XXX --firefox-apk org.mozilla.fenix
 <!-- END: Syntax Highlighting -->
 
 ::: note
- The add-on will be loaded in the main browser profile instead of a new temporary profile directory.
+ The add-on is loaded in the main browser profile instead of a new temporary profile directory.
 :::
 
 {% endcapture %}
@@ -191,10 +202,10 @@ web-ext run -t firefox-android --adb-device XXX --firefox-apk org.mozilla.fenix
 ## Debug your extension
 
 ::: note alert
-Currently, you cannot inspect the markup of Fenix's browserAction popups using the Firefox Developer Tools Inspector (see [bug 1637616](https://bugzilla.mozilla.org/show_bug.cgi?id=1637616)). As a workaround, we recommend that you temporarily change the extension to open the popup extension page into a tab to be able to inspect it.
+You cannot inspect the markup of Fenix's browserAction popups using the Firefox Developer Tools Inspector (see [bug 1637616](https://bugzilla.mozilla.org/show_bug.cgi?id=1637616)). As a workaround, temporarily change the extension to open the popup extension page into a tab to inspect it.
 :::
 
-You can debug your extension in the web developer tools and view any `manifest.json` validation messages using `adb logcat`. To make use of these features, first set up Firefox remote debugging [over USB](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-a-remote-device) or [via Wi-Fi](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-android-over-wi-fi).
+You can debug your extension in the web developer tools and view any `manifest.json` validation messages using `adb logcat`. First [set up Firefox remote debugging](#set-up-your-computer-and-android-emulator-or-device).
 
 ### Using web development tools to debug your extension
 
