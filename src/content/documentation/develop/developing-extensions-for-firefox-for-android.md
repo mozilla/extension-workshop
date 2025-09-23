@@ -62,7 +62,7 @@ On your device or Android emulator:
   :::
 - [Enable Android USB debugging on the device](https://developer.android.com/studio/debug/dev-options).
 - Attach your device to the development computer using a USB cable. When prompted, allow USB debugging for the connection.
-- In settings, enable "Remote debugging via USB."
+- In the Firefox settings, enable "Remote debugging via USB."
 
 For more information, see [Connecting to a remote device](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-a-remote-device) in the Firefox Source Docs. To connect over Wi-Fi, see [Connecting to Android over Wi-Fi](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html#connecting-to-android-over-wi-fi).
 
