@@ -103,7 +103,7 @@ When distributing an add–on from your website, you have two options for making
 If the download link or triggering JavaScript is not on the top-level frame of the website, none of the frames between the top-level page and the frame containing the download or JavaScript can be third-party or cross-origin frames.
 
 ::: note
-You may find references to using the `InstallTrigger` API to trigger a download from JavaScript. This API is not supported and it will be removed (see [Bug 1776426](https://bugzilla.mozilla.org/show_bug.cgi?id=1776426)). Its use is, therefore, not recommended.
+You may find references to using the `InstallTrigger` API to trigger a download from JavaScript. Don't use this API, it's not supported and was removed in Firefox 144 (see [Bug 1776426](https://bugzilla.mozilla.org/show_bug.cgi?id=1776426)).
 :::
 
 Using either method, Firefox installs the signed add-on file when the user downloads it.
