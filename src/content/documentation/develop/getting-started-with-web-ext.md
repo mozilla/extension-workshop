@@ -23,10 +23,11 @@ contributors:
     huyenltnguyen,
     rebloor,
     Jamesllllllllll,
-    TimWitzdam
+    TimWitzdam,
+    willdurand
   ]
-last_updated_by: TimWitzdam
-date: 2024-07-31
+last_updated_by: willdurand
+date: 2025-09-24
 ---
 
 <!-- Page Hero Banner -->
@@ -141,7 +142,7 @@ Before you use `web-ext`, locate an example extension. If you don’t have one, 
 
 ## Check your code
 
-Before trying out your extension with the [`run`](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to ensure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files are error-free. If you set [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file, lint reports on the permissions, manifest keys, and web extension APIs used that are not available in that version. 
+Before trying out your extension with the [`run`](/documentation/develop/web-ext-command-reference/#web-ext-run) command or submitting your package to [addons.mozilla.org](https://addons.mozilla.org/firefox/), use the `lint` command to ensure your [manifest](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json) and other source files are error-free. If you set [`strict_min_version`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) in your extension’s manifest file, lint reports on the permissions, manifest keys, and web extension APIs used that are not available in that version.
 
 To check your extension code, `cd` into your extension’s root directory and enter:
 
@@ -310,8 +311,8 @@ web-ext run --keep-profile-changes --firefox-profile=your-custom-profile
 This may be helpful if your extension has many different run states.
 
 ::: note alert
-This option makes destructive changes to the profile that are required for `web-ext` to operate. It turns off auto-updates and allows silent remote connections, among other things. These changes make the profile insecure for daily use. 
-::: 
+This option makes destructive changes to the profile that are required for `web-ext` to operate. It turns off auto-updates and allows silent remote connections, among other things. These changes make the profile insecure for daily use.
+:::
 
 </div>
 </article>
@@ -395,7 +396,7 @@ For example:
 Visit the [addons.mozilla.org credentials](https://addons.mozilla.org/developers/addon/api/key/) page. You must register if you haven't done so before. From this page you obtain:
 
 - The JWT issuer key, a string that looks something like `user:12345:67`. You supply this to `web-ext sign` as the API key in `--api-key`.
-- The JWT secret, a string that looks something like `634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009`. You supply this to `web-ext sign` as the API secret in `--api-secret`. 
+- The JWT secret, a string that looks something like `634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009`. You supply this to `web-ext sign` as the API secret in `--api-secret`.
 
 #### Run `web-ext sign`
 
@@ -427,7 +428,7 @@ When publishing an extension update metadata isn't required. However, any of the
 Visit the [addons.mozilla.org credentials](https://addons.mozilla.org/developers/addon/api/key/) page. You must register if you haven't done so before. From this page you obtain:
 
 - The JWT issuer key, a string that looks something like `user:12345:67`. You supply this to `web-ext sign` as the API key in `--api-key`.
-- The JWT secret, a string that looks something like `634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009`. You supply this to `web-ext sign` as the API secret in `--api-secret`. 
+- The JWT secret, a string that looks something like `634f34bee43611d2f3c0fd8c06220ac780cff681a578092001183ab62c04e009`. You supply this to `web-ext sign` as the API secret in `--api-secret`.
 
 #### Run `web-ext sign`
 
@@ -526,7 +527,7 @@ You can specify `--config=my-config.cjs` or `--config=my-config.mjs` to set defa
 web-ext --config=my-config.mjs build
 ```
 
-The file should be a CommonJS module [as understood by NodeJS](https://nodejs.org/docs/latest/api/modules.html#modules_modules) and must export each configuration value. Here is how you would set the default value of [--verbose](/documentation/develop/web-ext-command-reference/#verbose) to `true`:
+The file should be an ES module [as understood by Node.js](https://nodejs.org/docs/latest/api/esm.html) and must export each configuration value. Here is how you would set the default value of [--verbose](/documentation/develop/web-ext-command-reference/#verbose) to `true`:
 
 ```js
 export default {
@@ -582,7 +583,7 @@ export default {
 
 `web-ext` loads configuration files in the following order:
 
-- A config file named `.web-ext-config.mjs` in your home directory, for example: 
+- A config file named `.web-ext-config.mjs` in your home directory, for example:
   - On Windows: `C:\Users\<username>\.web-ext-config.mjs`
   - On macOS: `/Users/<username>/.web-ext-config.mjs`
   - On Linux: `/home/<username>/.web-ext-config.mjs`
