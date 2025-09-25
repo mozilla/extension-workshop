@@ -6,28 +6,28 @@ topic: Develop
 tags: [guide, installing, packaging, testing, tools, web-ext, webextension]
 contributors:
   [
-    caitmuenster,
-    rebloor,
-    Sheppy,
-    kumar303,
-    platy,
-    hellosct1,
-    lgreco,
-    wbamberg,
-    andrewtruongmoz,
-    saintsebastian,
-    arai,
-    tofumatt,
-    chrisdavidmills,
-    ankushduacodes,
-    huyenltnguyen,
-    rebloor,
     Jamesllllllllll,
+    Sheppy,
     TimWitzdam,
+    andrewtruongmoz,
+    ankushduacodes,
+    arai,
+    caitmuenster,
+    chrisdavidmills,
+    hellosct1,
+    huyenltnguyen,
+    inan-hira,
+    kumar303,
+    lgreco,
+    platy,
+    rebloor,
+    saintsebastian,
+    tofumatt,
+    wbamberg,
     willdurand
   ]
-last_updated_by: willdurand
-date: 2025-09-24
+last_updated_by: inan-hira
+date: 2025-09-25
 ---
 
 <!-- Page Hero Banner -->
@@ -58,7 +58,7 @@ date: 2025-09-24
 
 ## Installation
 
-`web-ext` is a Node-based application. You install it with `brew` or the [NodeJS](https://nodejs.org/) `npm` tool.
+`web-ext` is a Node-based application. You install it with `brew` or the [Node.js](https://nodejs.org/) `npm` tool.
 
 Install with `brew` using:
 
@@ -72,7 +72,7 @@ Install with `npm` using:
 npm install --global web-ext
 ```
 
-`web-ext` requires the current [LTS](https://github.com/nodejs/Release#release-schedule) (long-term support) versions of [NodeJS](https://nodejs.org/).
+`web-ext` requires the current [LTS](https://github.com/nodejs/Release#release-schedule) (long-term support) versions of [Node.js](https://nodejs.org/).
 
 To test whether the installation worked, in a new terminal window, run this command to display the `web-ext` version number:
 
@@ -220,7 +220,7 @@ Extension reloading is only supported in Firefox 49 or higher.
 
 ### Test in different versions of Firefox
 
-To run your extension in a version of [Firefox Desktop](https://www.mozilla.org/firefox/) other than the default, use the `--firefox` option to specify a full path to the binary file. Here is an example for Mac OS:
+To run your extension in a version of [Firefox Desktop](https://www.mozilla.org/firefox/) other than the default, use the `--firefox` option to specify a full path to the binary file. Here is an example for macOS:
 
 ```shell
 web-ext run --firefox=/Applications/FirefoxNightly.app/Contents/MacOS/firefox-bin
@@ -381,8 +381,8 @@ For example:
   "contributions_url": "https://donate.mozilla.org",
   "requires_payment": false,
   "homepage": {
-    "en-US": "http://example.org?lang=en-US",
-    "fr": "http://example.org?lang=fr"
+    "en-US": "https://example.org?lang=en-US",
+    "fr": "https://example.org?lang=fr"
   },
   "support_email": {
     "en-US": "support@example.org",
@@ -400,7 +400,7 @@ Visit the [addons.mozilla.org credentials](https://addons.mozilla.org/developers
 
 #### Run `web-ext sign`
 
-You can now run `web-ext sign` supplying the API key and location of the JSON file containing the metedata.:
+You can now run `web-ext sign` supplying the API key and location of the JSON file containing the metadata:
 
 ```shell
 web-ext sign --channel=listed --amo-metadata=<path to your metadata JSON file> --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
@@ -432,7 +432,7 @@ Visit the [addons.mozilla.org credentials](https://addons.mozilla.org/developers
 
 #### Run `web-ext sign`
 
-You can now run `web-ext sign` supplying the API key and location of the JSON file containing the metedata.:
+You can now run `web-ext sign` supplying the API key and location of the JSON file containing the metadata:
 
 ```shell
 web-ext sign --channel=listed --amo-metadata=<path to your metadata JSON file> --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET
@@ -594,7 +594,7 @@ export default {
 
 If a home directory config and a local directory config define the same option, the value from the latter file is used.
 
-For example, creating `~/.web-ext-config.mjs` containg:
+For example, creating `~/.web-ext-config.mjs` with the contents:
 
 ```js
 export default {
@@ -605,7 +605,7 @@ export default {
 }
 ```
 
-Is the equivalent of:
+is the equivalent of:
 
 ```shell
 web-ext sign --api-key <API_KEY> --api-secret <API_SECRET>
@@ -693,7 +693,7 @@ Your extension can detect whether it was installed using `web-ext run`, rather t
 
 ### Use web-ext from a script
 
-You can use `web-ext` as a `NodeJS module`. Here is [more information](https://github.com/mozilla/web-ext#using-web-ext-in-nodejs-code), with example code.
+You can use `web-ext` as a `Node.js module`. Here is [more information](https://github.com/mozilla/web-ext#using-web-ext-in-nodejs-code), with example code.
 
 </div>
 </article>
