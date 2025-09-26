@@ -1,6 +1,6 @@
 ---
 layout: sidebar
-title: Publish
+title: Distribute and promote your extension to the right audience
 permalink: /documentation/publish/
 tags: []
 contributors: [caitmuenster,Nanush7]

@@ -1,6 +1,6 @@
 ---
 layout: sidebar
-title: Manage
+title: Monitor and update your extension to keep users engaged
 permalink: /documentation/manage/
 tags: [manage]
 contributors: [caitmuenster]

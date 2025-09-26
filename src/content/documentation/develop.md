@@ -1,6 +1,6 @@
 ---
 layout: sidebar.liquid
-title: Develop
+title: Create extensions for Firefox and Firefox for Android
 permalink: /documentation/develop/
 tags: []
 contributors: [caitmuenster]
