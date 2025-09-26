@@ -1,6 +1,6 @@
 ---
 layout: sidebar
-title: Enterprise
+title: Enhance your workflows with extensions for the enterprise
 permalink: /documentation/enterprise/
 tags: [enterprise]
 contributors: [caitmuenster, mkaply]
