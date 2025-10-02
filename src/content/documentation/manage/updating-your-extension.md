@@ -83,7 +83,7 @@ A typical update manifest looks something like:
 
 ## Enabling updates to your extension
 
-If your extension is not hosted on AMO, you must specify the location of your update manifest in your extension. For extensions developed with WebExtension APIs, add the following to your manifest:
+If your extension is not hosted on AMO, you must specify the location of your update manifest in your extension. For extensions developed with WebExtension APIs, add this to your manifest:
 
 ```json
 "browser_specific_settings": {
@@ -103,7 +103,7 @@ If your extension is not hosted on AMO, you must specify the location of your up
 
 ## Manifest Structure
 
-The manifest is a JSON file, with a top-level object literal. This object may have the following properties:
+The manifest is a JSON file, with a top-level object literal. This object may have these properties:
 
 <!-- Table -->
 
@@ -111,7 +111,7 @@ The manifest is a JSON file, with a top-level object literal. This object may ha
 
 | Property | Type     | Description                                                                                                                                                                                                                                |
 | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `addons` | `object` | An object containing one entry for each add-on to be updated. For each such entry, the name of the property must be the add-on's UUID, and the value must be an <a href="#addon-objects">object describing the add-on</a> and its updates. |
+| `addons` | `object` | An object containing one entry for each add-on to be updated. For each such entry, the name of the property must be the [add-on's ID](/documentation/develop/extensions-and-the-add-on-id/), and the value must be an <a href="#addon-objects">object describing the add-on</a> and its updates. |
 
 {% endcapture %}
 {% include modules/table.liquid,

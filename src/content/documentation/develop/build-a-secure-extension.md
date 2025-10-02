@@ -75,8 +75,8 @@ Here is a list of best practices you should follow to keep the users of your ext
   If the standard UI components aren’t sufficient for your needs use iframes with [data URLs](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) to prevent fingerprinting, or add `iframe`s to the extension code so a page can’t interact with your UI content, such as buttons.
 - **Add eslint-plugin-no-unsanitized to ESLint**
   If you make use of ESLint to check your extension code, consider adding `eslint-plugin-no-unsanitized`. This ESLint rules plug-in will flag instances where unsanitized code from APIs or user input could cause issues.
-- **Don't inject moz-extension paths directly**
-  When injected links, includes, or images include paths to `moz-extension://{hash}` a page’s tracking script could use this information to [fingerprint](https://en.wikipedia.org/wiki/Device_fingerprint) the user, as the hash (UUID) is unique to the extension installation and, therefore, the user.
+- **Don’t inject moz-extension paths directly**
+  When injected links, includes, or images include paths to `moz-extension://{internal UUID}` a page’s tracking script could use this information to [fingerprint](https://en.wikipedia.org/wiki/Device_fingerprint) the user, as the internal UUID is unique to the extension installation and, therefore, the user.
   The best way to avoid this issue is to follow the general advice about not injecting content. However, if you believe injecting content is your only practical approach, ensure that moz-extension paths are embedded inside an iframe using a [data URL](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) or the [srcdoc](https://developer.mozilla.org/docs/Web/HTML/Element/iframe#attr-srcdoc) attribute.
 - **Ensure that third-party libraries are up to date**
   Reputable third-party libraries will be updated when any issues are found. The use of outdated (and potentially insecure) third-party libraries is strongly discouraged and, when a significant risk is identified, AMO may act to block extensions using the out of date code.
