@@ -1,6 +1,6 @@
 ---
 layout: sidebar
-title: Themes
+title: Let users express their personality with themes
 permalink: /documentation/themes/
 tags: [themes]
 contributors: [caitmuenster]
