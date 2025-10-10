@@ -644,6 +644,10 @@
                 ]
               },
               {
+                "title": "Test localizations",
+                "url": "/documentation/develop/test-localizations/"
+              },
+              {
                 "title": "Known issues",
                 "url": "/documentation/develop/known-issues/",
                 "subpageitems": [
