@@ -36,9 +36,9 @@ All you need to create extensions for Firefox is a [text editor](https://develop
 
 ### Chromium-based browser extensions
 
-Get familiar with the [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) library if you’re planning on developing for both Firefox and chromium based browsers.
+Get familiar with the [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) library if you’re planning on developing for both Firefox and Chromium-based browsers.
 
-This enables you to switch between the different Firefox and chromium based namespaces and asynchronous call handling methods for each type of browser.
+This enables you to switch between the different Firefox and Chromium-based namespaces and asynchronous call handling methods for each type of browser.
 
 ### web-ext command line tool
 
@@ -215,7 +215,7 @@ If you develop Android apps, when you want to include a browser experience in yo
 
 ### Bring your Chrome extension to Firefox
 
-The Firefox extension environment is highly compatible with chromium-based extension technology. Your extension might already be capable of running on Firefox, or need only a few changes.
+The Firefox extension environment is highly compatible with Chromium-based extension technology. Your extension might already be capable of running on Firefox, or need only a few changes.
 
 Check out our [porting guide](/documentation/develop/porting-a-google-chrome-extension/) to get started.
 
