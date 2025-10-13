@@ -55,7 +55,7 @@
     "prismjs": "1.30.0",
     "rimraf": "6.0.1",
     "sass-embedded": "^1.93.2",
-    "serialize-javascript": "6.0.2",
+    "serialize-javascript": "7.0.0",
     "slugify": "1.6.6",
     "stylelint": "14.16.1",
     "stylelint-config-prettier-scss": "0.0.1",
