@@ -1,6 +1,6 @@
 ---
 layout: sidebar
-title: Test localizations
+title: Testing localizations
 description: Learn how to test extension localizations using language packs in Firefox or Firefox Beta to ensure everything displays correctly in the Firefox and extension UI.
 permalink: /documentation/develop/test-localizations/
 topic: Develop
