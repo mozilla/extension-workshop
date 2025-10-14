@@ -14,7 +14,7 @@ date: 2025-10-17
 
 {% capture page_hero_banner_content %}
 
-# Test localizations
+# Testing localizations
 
 To test your extension's localization, you use [Firefox](https://www.firefox.com/en-US/) or [Firefox Beta](https://www.firefox.com/en-US/channel/desktop/), the Firefox builds where you can install language packs.
 
