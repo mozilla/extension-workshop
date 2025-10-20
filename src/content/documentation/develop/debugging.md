@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Debugging
+description: Master the tools and techniques for debugging and testing your Firefox extension. Resolve issues quickly using the Developer Tools window.
 permalink: /documentation/develop/debugging/
 topic: Develop
 tags: [debugging, firefox, guide, mozilla, webextensions]

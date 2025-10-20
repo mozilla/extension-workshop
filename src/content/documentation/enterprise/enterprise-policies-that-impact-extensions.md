@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Enterprise policies that impact extensions
+description: Understand the enterprise policies that impact Firefox extensions. Ensure your add-on functions correctly in corporate environments.
 permalink: /documentation/enterprise/enterprise-policies-that-impact-extensions/
 topic: Enterprise
 tags: [enterprise, policies]

@@ -1,6 +1,7 @@
 ---
 layout: sidebar.liquid
 title: Build a secure extension
+description: Learn best practices to build a secure Firefox extension. Protect your users and your add-on by implementing key security and privacy measures.
 permalink: /documentation/develop/build-a-secure-extension/
 topic: Develop
 tags: [beginner, extensions, intermediate, reviews, security, webextensions]

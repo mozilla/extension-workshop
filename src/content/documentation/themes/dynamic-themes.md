@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Dynamic themes
+description: Guide to creating dynamic themes for Firefox that change based on user actions, time, or other conditions.
 permalink: /documentation/themes/dynamic-themes/
 topic: Themes
 tags: [themes, dynamic-themes, firefox]

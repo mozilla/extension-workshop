@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Differences between desktop and Android extensions
+description: Understand the key differences between desktop and Firefox for Android extensions. Optimize your add-on for the mobile environment.
 permalink: /documentation/develop/differences-between-desktop-and-android-extensions/
 topic: Develop
 tags: [add-ons, guide, mobile, webextensions]

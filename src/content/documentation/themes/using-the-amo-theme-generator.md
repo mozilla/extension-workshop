@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Using the AMO theme generator
+description: Use the addons.mozilla.org (AMO) Theme Generator tool to easily create and visualize your Firefox static themes before submission.
 permalink: /documentation/themes/using-the-amo-theme-generator/
 topic: Themes
 tags: [add-on, add-ons, amo, firefox, guide, tutorial, themes]

@@ -1,6 +1,7 @@
 ---
 layout: sidebar.liquid
 title: web-ext command reference
+description: The complete command reference for the web-ext tool. Quickly look up commands for developing, testing, and packaging your Firefox extension.
 permalink: /documentation/develop/web-ext-command-reference/
 topic: Develop
 tags: [commands, options, reference, tools, web-ext, webextensions]

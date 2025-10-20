@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Version Rollback
+description: Learn how to perform a version rollback for your Firefox extension on addons.mozilla.org (AMO) if a critical issue is found in a new release.
 permalink: /documentation/publish/version-rollback/
 topic: Publish
 tags: [manage, distribution, review, add-ons, publishing]

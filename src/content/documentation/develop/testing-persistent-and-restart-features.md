@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Testing persistent and restart features
+description: Learn to test persistent features in your Firefox extension, ensuring data integrity across browser restarts and session changes.
 permalink: /documentation/develop/testing-persistent-and-restart-features/
 topic: Develop
 tags:

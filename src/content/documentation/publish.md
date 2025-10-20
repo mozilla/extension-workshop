@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Distribute and promote your extension to the right audience
+description: Everything you need to publish your Firefox extension on addons.mozilla.org (AMO). Understand add-on policies, signing, distribution methods, and effective promotion strategies.
 permalink: /documentation/publish/
 tags: []
 contributors: [caitmuenster,Nanush7]

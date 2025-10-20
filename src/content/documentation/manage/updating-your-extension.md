@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Updating your extension
+description: Step-by-step guide on updating your Firefox extension. Submit new versions and make changes to your add-on on addons.mozilla.org (AMO).
 permalink: /documentation/manage/updating-your-extension/
 topic: Manage
 tags: [update, manage, distribution]

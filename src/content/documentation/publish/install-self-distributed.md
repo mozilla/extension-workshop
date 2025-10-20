@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Installing self-distributed extensions
+description: Instructions on how users can install your self-distributed Firefox extension from a file on desktop or Android.
 permalink: /documentation/publish/install-self-distributed/
 topic: Publish
 tags: [add-on, distribution, testing, guide, installation]

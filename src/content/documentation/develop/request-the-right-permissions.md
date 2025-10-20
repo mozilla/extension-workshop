@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Request the right permissions
+description: Learn how to request the right permissions for your Firefox extension. Follow security best practices and only request what your extension needs.
 permalink: /documentation/develop/request-the-right-permissions/
 topic: Develop
 tags: [add-ons, beginner, extensions, how-to, intermediate, permissions]

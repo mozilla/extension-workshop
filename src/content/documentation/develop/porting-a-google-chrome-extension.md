@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Porting a Google Chrome extension
+description: Efficiently port your Chrome extension to Firefox. Follow the step-by-step guide for converting your code and ensuring compatibility.
 permalink: /documentation/develop/porting-a-google-chrome-extension/
 topic: Develop
 tags: [webextensions]

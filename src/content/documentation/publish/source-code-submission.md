@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Source code submission
+description: Requirements for submitting your extension's source code. Essential if your add-on uses complex build processes or minified code.
 permalink: /documentation/publish/source-code-submission/
 topic: Publish
 tags: [add-ons, distribution, extensions, review-policy]

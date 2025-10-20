@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Temporary installation in Firefox
+description: Discover how to install your Firefox extension temporarily to enable effective testing and debugging before submitting to addons.mozilla.org (AMO).
 permalink: /documentation/develop/temporary-installation-in-firefox/
 topic: Develop
 tags: [webextensions]

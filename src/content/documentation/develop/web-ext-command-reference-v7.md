@@ -1,6 +1,7 @@
 ---
 layout: sidebar.liquid
 title: web-ext v7 command reference
+description: The full command reference for web-ext v7. Quickly look up commands for developing, testing, and packaging your Firefox extension.
 permalink: /documentation/develop/web-ext-command-reference-v7/
 topic: Develop
 tags: [commands, options, reference, tools, web-ext, webextensions]

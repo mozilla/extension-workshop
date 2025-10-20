@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Distribute pre-release versions
+description: Learn how to distribute pre-release or beta versions of your Firefox extension for testing with a select group of users.
 permalink: /documentation/publish/distribute-pre-release-versions/
 topic: Publish
 tags: [beta, alpha, testing, pre-release, publish, guide, how-to]

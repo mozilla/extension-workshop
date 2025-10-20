@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Firefox Add-on Distribution Agreement
+description: Read the Firefox Add-on Distribution Agreement. Essential legal information for every extension developer using addons.mozilla.org (AMO).
 permalink: /documentation/publish/firefox-add-on-distribution-agreement/
 topic: Publish
 tags: [add-on, agreement, firefox]
@@ -17,7 +18,6 @@ contributors:
     Adora,
     kmaglione,
   ]
-description: This page details the Firefox Add-on distribution agreement.
 last_updated_by: kewisch
 date: 2021-12-01
 ---
