@@ -65,7 +65,7 @@ Personally identifiable information can be actively provided by the user or obta
 
 Technical data describes the environment the user is running, such as browser settings, platform information, and hardware properties. User interaction data includes how the user interacts with Firefox and the installed add-on, metrics for product improvement, and error information.
 
-| Data type<br>wisible during install | Data collection permission<br>used in the manifest | Definition and examples                                                                          |
+| Data type<br>visible during install | Data collection permission<br>used in the manifest | Definition and examples                                                                          |
 |-------------------------------------|----------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **Technical and interaction data**  | `technicalAndInteraction`                          | Examples: Device and browser info, extension usage and settings data, crash and error reports. |
 
@@ -104,13 +104,13 @@ The rest of this section describes each key in the `data_collection_permissions`
 
 #### Required data
 
-When you specify data types in the required list, users must accept this data collection to use the extension. Users cannot opt out. To enables the user to review the data-collection requirements of an extension before installing it, data collection information is presented to the user, like this:
+When you specify data types in the required list, users must accept this data collection to use the extension, they cannot opt out. To enables the user to review the data-collection requirements of an extension before installing it, data collection information is presented to the user in the installation prompt, like this:
 
 ![The extension installation prompt shows data types as specified in the manifest.](/assets/img/documentation/develop/data-collection-permissions-prompt-install.webp)
 
 If the user doesn’t agree to data collection, they can cancel the extension installation.
 
-This example `manifest.json` file specifies one required data type: `locationInfo`.
+This installation prompt is the result of a `manifest.json` file that specifies one required data type, `locationInfo`, and one optional data type, `technicalAndInteraction`.
 
 ```json
 {
@@ -156,7 +156,7 @@ Optional data collection permissions are specified using the optional list. Thes
 
 ### Technical and interaction data
 
-The `technicalAndInteraction` data type behaves differently to all other data types. This data permission must be optional, but unlike other optional data collection options, the user can turn permission on or off during the installation flow. This choice is available in the optional settings section of the installation prompt (see the screenshot in the Required data section).
+The `technicalAndInteraction` data type behaves differently to all other data types. This data permission must be optional, but unlike other optional data collection options, the user can turn this permission on or off during the installation flow. This choice is available in the optional settings section of the extension installation prompt.
 
 ### No data collection
 
