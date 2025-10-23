@@ -47,7 +47,7 @@ Complete some one-off setup tasks on your computer and Android device.
 
 On your development computer:
 
-- Install or update [web-ext](https://github.com/mozilla/web-ext) to version 7.12.0 or later.
+- Install or update [web-ext](https://github.com/mozilla/web-ext) to version 7.12.0 or later. (Always installing or upgrading to the latest version is recommended.)
 - Use the Android Studio [SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager) or the [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html) command-line tool to install the [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools.html)
 - Make sure you have adb installed ([Linux](https://dl.google.com/android/repository/platform-tools-latest-linux.zip), [Mac](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip), [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)) and in your `PATH`.
 
