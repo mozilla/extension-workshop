@@ -258,7 +258,7 @@ To get started, install using npm and load the library into the contexts where b
 
 ### about:debugging
 
-This Firefox page enables you to manually install add-ons into Firefox for testing and to kickoff debugging, using the [Addon Debugging Window](#addon_debugging_window), for any browser extension installed in Firefox.
+This Firefox page enables you to manually install add-ons into Firefox for testing and to kickoff debugging, using the [Addon Developer Tools](#addon_debugging_window), for any browser extension installed in Firefox.
 
 ![The about debugging page](/assets/img/documentation/develop/about-debugging.png)
 
@@ -288,15 +288,13 @@ To get started, type `about:debugging` in the Firefox address bar.
 
 {% capture content %}
 
-### Addon Debugging Window
+### Addon Developer Tools
 
-Debug your browser extensions with this version of the standard Firefox developer toolbox. With Addon Debugging Window you get access to a [console](https://developer.mozilla.org/docs/Tools/Browser_Console), [debugger](https://developer.mozilla.org/docs/Tools/Debugger), [scratchpad](https://developer.mozilla.org/docs/Tools/Scratchpad), [page inspector](https://developer.mozilla.org/docs/Tools/Page_Inspector), [style editor](https://developer.mozilla.org/docs/Tools/Style_Editor), [network monitor](https://developer.mozilla.org/docs/Tools/Network_Monitor), [performance analyzer](https://developer.mozilla.org/docs/Tools/Profiler), [storage inspector](https://developer.mozilla.org/docs/Tools/Storage_Inspector), and [accessibility inspector](https://developer.mozilla.org/docs/Tools/Accessibility_inspector).
+Debug your web extensions with a version of the standard Firefox developer tools. With the developer tools, you get access to a [page inspector](https://developer.mozilla.org/docs/Tools/Page_Inspector), [console](https://developer.mozilla.org/docs/Tools/Browser_Console), [debugger](https://developer.mozilla.org/docs/Tools/Debugger), [network monitor](https://developer.mozilla.org/docs/Tools/Network_Monitor), [style editor](https://developer.mozilla.org/docs/Tools/Style_Editor), [storage inspector](https://developer.mozilla.org/docs/Tools/Storage_Inspector), and [accessibility inspector](https://developer.mozilla.org/docs/Tools/Accessibility_inspector).
 
-![Addon Debugging Window](/assets/img/documentation/develop/Addon_Debugging_Window.png)
+![Developer tools for addon debugging](/assets/img/documentation/develop/Addon_Debugging_Window.png)
 
-To get started, enable Browser Toolbox then open `about:debugging` and click debug next to the extension you want to debug.
-
-[Get started](https://developer.mozilla.org/docs/Tools/Browser_Toolbox#Enabling_the_Browser_Toolbox)
+To get started, open `about:debugging` and click inspect next to the extension you want to debug.
 
 {% endcapture %}
 {% capture aside %}
