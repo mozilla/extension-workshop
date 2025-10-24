@@ -24,7 +24,9 @@ date: 2025-08-04
 ::: note
 Firefox built-in consent for data collection and transmission is supported in Firefox for desktop 140 and later, and Firefox for Android 142 and above.
 
-Please follow our [community blog](https://blog.mozilla.org/addons/) for updates on the overall rollout process and a timeline when we will start accepting accepting submissions on AMO that make use of this feature.
+Beginning November 3rd 2025, all new extensions will be required to adopt the Firefox built-in data collection consent system. Extensions will need to state if and what data they collect or transmit. New versions and updates for add-ons that were created before November 3rd don’t need to use it at this time, but will have to at some later date.
+
+Please follow our [community blog](https://blog.mozilla.org/addons/) for updates on the overall rollout process and for tips on how to take advantage of it.
 :::
 
 Developers can specify what data they wish to collect or transmit in their extensions `manifest.json` file. This information will be parsed by the browser and shown to the user when they first install the extension. A user can then choose to accept or reject the data collection, just like they do with extension permissions. The developer can also specify that the extension collects no data.
