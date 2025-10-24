@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Signing and distribution overview
+description: Overview of the signing and distribution process for Firefox extensions. Get your add-on verified and ready for users.
 permalink: /documentation/publish/signing-and-distribution-overview/
 topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]

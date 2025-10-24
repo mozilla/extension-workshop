@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Add-on Policies
+description: The complete guide to Firefox add-on policies. Ensure your extension complies with all the requirements for security, functionality, and user data.
 permalink: /documentation/publish/add-on-policies/
 topic: Publish
 tags: [add-ons, review, policies]

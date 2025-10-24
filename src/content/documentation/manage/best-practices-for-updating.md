@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Best practices for updating your extension
+description: Follow best practices for updating your Firefox extension. Ensure a smooth transition for your users with every new version.
 permalink: /documentation/manage/best-practices-for-updating/
 topic: Manage
 tags: [update, manage, distribution]

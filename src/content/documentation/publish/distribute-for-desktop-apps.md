@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Add-ons for desktop apps
+description: Learn how to distribute extensions designed to work with desktop applications. Integrate your add-on with external software.
 permalink: /documentation/publish/distribute-for-desktop-apps/
 topic: Publish
 tags: [add-on, distribution, apps, desktop, guide, installation]

@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Choosing a Firefox version for extension development
+description: Learn about the characteristics of Firefox versions for extension development. Understand the differences between release channels for testing your add-on.
 permalink: /documentation/develop/choosing-a-firefox-version-for-extension-development/
 topic: Develop
 tags: [add-ons, development, extensions, guide, tools]

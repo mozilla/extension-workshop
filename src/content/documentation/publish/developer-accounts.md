@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Developer accounts
+description: How to set up and manage your developer account on addons.mozilla.org (AMO). Start submitting and publishing your Firefox extensions.
 permalink: /documentation/publish/developer-accounts/
 topic: Publish
 tags: [development, extensions, publishing]

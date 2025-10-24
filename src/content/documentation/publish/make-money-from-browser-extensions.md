@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Make money from browser extensions
+description: Explore options for how to make money from your browser extensions. Learn monetization strategies and policy compliance for Firefox add-ons.
 permalink: /documentation/publish/make-money-from-browser-extensions/
 topic: Publish
 tags: [add-on, distribution, guide, monetization]

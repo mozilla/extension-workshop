@@ -1,6 +1,7 @@
 ---
 layout: sidebar.liquid
 title: Browser compatibility
+description: Check browser compatibility for WebExtension APIs. Ensure your code works across Firefox and other browsers with these compatibility tables.
 permalink: /documentation/develop/browser-compatibility/
 topic: Develop
 tags: [beginner, extensions, webextensions, compatibility, cross-browser]

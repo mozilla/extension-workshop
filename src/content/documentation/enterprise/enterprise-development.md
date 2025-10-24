@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Enterprise development
+description: Learn about developing Firefox extensions for enterprise use. Integrate your add-ons with corporate infrastructure and custom settings.
 permalink: /documentation/enterprise/enterprise-development/
 topic: Enterprise
 tags: [enterprise, policies]

@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Distribute Manifest V2 and V3 extensions
+description: Guide on distributing extensions for different Manifest versions. Ensure your add-on reaches the widest possible user base.
 permalink: /documentation/publish/distribute-manifest-versions/
 topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]

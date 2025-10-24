@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Submitting an add-on
+description: Step-by-step guide to submitting your Firefox extension to addons.mozilla.org (AMO) for review and publication. Get your add-on listed today.
 permalink: /documentation/publish/submitting-an-add-on/
 topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]

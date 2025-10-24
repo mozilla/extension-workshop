@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Known issues
+description: Review known issues and limitations when developing Firefox extensions. Find workarounds and solutions for common development problems.
 permalink: /documentation/develop/known-issues/
 topic: Develop
 tags: [

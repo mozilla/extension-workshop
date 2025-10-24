@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Third Party Library Usage
+description:  Guidelines for using third-party libraries and frameworks in your Firefox extension. Ensure compliance with all policies. 
 permalink: /documentation/publish/third-party-library-usage/
 topic: Publish
 tags: [add-ons, extensions, review-policy]

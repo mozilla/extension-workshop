@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Onboard, upboard, offboard users
+description: Learn best practices for onboarding, upboarding, and offboarding users in your Firefox extension to always create a great impression.
 permalink: /documentation/develop/onboard-upboard-offboard-users/
 topic: Develop
 tags:

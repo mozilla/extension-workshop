@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Let users express their personality with themes
+description: Documentation for creating themes for Firefox. Customize the look and feel of the browser with guides on static and dynamic themes.
 permalink: /documentation/themes/
 tags: [themes]
 contributors: [caitmuenster]

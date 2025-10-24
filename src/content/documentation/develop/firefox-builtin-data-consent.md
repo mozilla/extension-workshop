@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Firefox built-in consent for data collection and transmission
+description: Understand the Firefox built-in data consent mechanisms. Use Firefox's features to inform users about data collection in your extension.
 permalink: /documentation/develop/firefox-builtin-data-consent/
 topic: Develop
 tags: [data-collection, data-transmission, api, permissions, firefox, guide]
@@ -23,7 +24,9 @@ date: 2025-08-04
 ::: note
 Firefox supports built-in consent for data collection and transmission in Firefox for desktop 140 and later, and Firefox for Android 142 and later.
 
-For updates on the rollout and the timeline for AMO accepting submissions using this feature, see the [community blog](https://blog.mozilla.org/addons/).
+From November 3, 2025, all new extensions must adopt the Firefox built-in data collection consent system. Extensions must state if and what data they collect or transmit. New versions and updates for add-ons created before November 3 don’t need to use this feature, but will have to at a later date.
+
+For updates on the rollout and the timeline for AMO accepting submissions using this feature and for tips on how to take advantage of it, see the [community blog](https://blog.mozilla.org/addons/).
 :::
 
 You can specify the data your extension collects or transmits in the extension’s `manifest.json` file. This information is shown to the user when they first install the extension. A user can then choose to accept or reject the data collection, just as they do with extension permissions. You can also specify that the extension collects no data.

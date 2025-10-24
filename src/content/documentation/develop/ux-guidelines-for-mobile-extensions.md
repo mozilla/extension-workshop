@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: User experience guidelines for mobile extensions
+description: Get user experience guidelines for mobile extensions on Firefox for Android. Design your add-on for a touch-friendly environment.
 permalink: /documentation/develop/user-experience-guidelines-for-mobile-extensions/
 topic: Develop
 tags: [add-ons, guide, mobile, webextensions, ux, user-experience]

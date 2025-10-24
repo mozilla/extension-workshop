@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Resources for publishers
+description: Essential resources and links for Firefox extension publishers. Stay up-to-date with news, community, and official documentation.
 permalink: /documentation/manage/resources-for-publishers/
 topic: Manage
 tags: [publish, manage, distribution]

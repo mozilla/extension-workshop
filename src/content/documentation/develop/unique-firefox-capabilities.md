@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Unique Firefox Capabilities
+description: Use unique Firefox WebExtension APIs and features not available elsewhere. Discover powerful tools to enhance your browser add-ons.
 permalink: /documentation/develop/unique-firefox-capabilities/
 topic: Develop
 tags: [getting-started, webextensions, api, firefox]

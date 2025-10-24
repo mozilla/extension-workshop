@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Distributing an add-on yourself
+description: Guide to self-distribution of your Firefox add-on, bypassing the public listing on addons.mozilla.org (AMO) while getting your extension signed.
 permalink: /documentation/publish/self-distribution/
 topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]

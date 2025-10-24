@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Enhance your workflows with extensions for the enterprise
+description: Resources for deploying and managing Firefox extensions within your organization. Find documentation on enterprise policies and distribution methods.
 permalink: /documentation/enterprise/
 tags: [enterprise]
 contributors: [caitmuenster, mkaply]
