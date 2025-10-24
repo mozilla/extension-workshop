@@ -29,7 +29,7 @@ From November 3, 2025, all new extensions must adopt the Firefox built-in data c
 For updates on the rollout and the timeline for AMO accepting submissions using this feature and for tips on how to take advantage of it, see the [community blog](https://blog.mozilla.org/addons/).
 :::
 
-You can specify the data your extension collects or transmits in the extension’s `manifest.json` file. This information is shown to the user when they first install the extension. A user can then choose to accept or reject the data collection, just as they do with extension permissions. You can also specify that the extension collects no data.
+To use Firefox's built-in consent experience, you have to specify what data your extension collects or transmits in the extension’s `manifest.json` file. This information is shown to the user when they first install the extension. A user can then choose to accept or reject the data collection, just as they do with extension permissions. You can also specify that the extension collects no data.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -151,11 +151,11 @@ This installation prompt is the result of a `manifest.json` file that specifies 
 
 This adds the require required data collection paragraph to the installation prompt. The data permissions are also listed in `about:addons` like this:
 
-![The about:addons page shows details of required and optional data collection permissions,](/assets/img/documentation/develop/data-collection-permissions-about-addons.webp)
+![The about:addons page shows details of required and optional data collection permissions.](/assets/img/documentation/develop/data-collection-permissions-about-addons.webp)
 
 #### Optional data
 
-Optional data collection permissions are specified using the optional list. These aren’t presented during installation (except for `technicalAndInteraction`), and they aren’t granted by default. The extension can request that the user opts in to this data collection after installation using a prompt, and the user can enable or disable this optional data collection in `about:addons` in the *Permissions and data* section of the extension settings.
+Optional data collection permissions are specified using the optional list. These aren’t presented during installation (except for `technicalAndInteraction`), and they aren’t granted by default. The extension can request that the user opts in to this data collection after installation by calling [`permissions.request()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request) in an user-activated event handler, and the user can enable or disable this optional data collection in `about:addons` in the *Permissions and data* section of the extension settings.
 
 ### Technical and interaction data
 
@@ -163,7 +163,7 @@ The `technicalAndInteraction` data type behaves differently to all other data ty
 
 ### No data collection
 
-If your extension doesn’t collect or transmit any data, you should explicitly indicate that by specifying the `none` required permission in the manifest, as follows:
+If your extension doesn’t collect or transmit any data, you indicate that by specifying the `none` required permission in the manifest, as follows:
 
 ```json
 {
