@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Static themes
+description: Learn how to create static themes to customize Firefox's appearance, including colors, background images, and more.
 permalink: /documentation/themes/static-themes/
 topic: Themes
 tags: [themes, amo, firefox]

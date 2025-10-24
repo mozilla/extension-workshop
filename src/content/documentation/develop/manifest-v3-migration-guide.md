@@ -1,6 +1,7 @@
 ---
 layout: sidebar.liquid
 title: Manifest V3 migration guide
+description: Migrate your extension to Manifest V3. A comprehensive guide to understanding and implementing the necessary changes for your extension.
 permalink: /documentation/develop/manifest-v3-migration-guide/
 topic: Develop
 tags: [webextensions, api, firefox]

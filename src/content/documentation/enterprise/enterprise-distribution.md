@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Enterprise distribution
+description: Guide to distributing Firefox extensions to organizations. Learn about methods for enterprise-level deployment and management.
 permalink: /documentation/enterprise/enterprise-distribution/
 topic: Enterprise
 tags: [enterprise, policies, distribution, guide, installation]

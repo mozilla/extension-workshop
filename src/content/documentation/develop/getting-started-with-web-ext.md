@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Getting started with web-ext
+description: Start using the web-ext command-line tool. Automate and simplify your workflow for developing, running, and packaging Firefox extensions.
 permalink: /documentation/develop/getting-started-with-web-ext/
 topic: Develop
 tags: [guide, installing, packaging, testing, tools, web-ext, webextension]

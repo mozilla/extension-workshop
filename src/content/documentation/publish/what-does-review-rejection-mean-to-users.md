@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: What does review rejection mean to users?
+description: Understand what a review rejection of your extension means for your users and how to communicate any changes effectively.
 permalink: /documentation/publish/what-does-review-rejection-mean-to-users/
 topic: Publish
 tags: [add-ons, extensions, guide, publication, review, webextensions]

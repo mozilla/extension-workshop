@@ -1,6 +1,7 @@
 ---
 layout: sidebar.liquid
 title: About the WebExtensions API
+description: Learn the fundamentals of the WebExtensions API. Explore the power of the browser extensions APIs for building robust and feature-rich Firefox add-ons.
 permalink: /documentation/develop/about-the-webextensions-api/
 topic: Develop
 tags: [webextensions, api, firefox]

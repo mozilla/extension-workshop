@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Monitor and update your extension to keep users engaged
+description: Maintain and grow your Firefox add-on. Find resources for updating your extension, enterprise deployment support, and optimizing your listing.
 permalink: /documentation/manage/
 tags: [manage]
 contributors: [caitmuenster]

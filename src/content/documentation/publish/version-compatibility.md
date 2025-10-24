@@ -1,7 +1,7 @@
 ---
 layout: sidebar
 title: Firefox version compatibility
-description: Learn how to customize your extension's Firefox version compatibility settings on addons.mozilla.org and when to use this feature.
+description: Learn how to customize your extension's Firefox version compatibility settings on addons.mozilla.org (AMO) and when to use this feature.
 permalink: /documentation/publish/version-compatibility/
 topic: Publish
 tags: [add-ons, intermediate, tutorial, webextensions, amo, distribution]

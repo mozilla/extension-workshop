@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Promoting your extension or theme
+description: Learn strategies for promoting your Firefox extension and increasing downloads. Create an appealing listing and drive traffic to your add-on.
 permalink: /documentation/publish/promoting-your-extension/
 topic: Publish
 tags: [add-on, distribution, guide, promote]

@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Test permission requests
+description: Guide on how to test extension permission requests. Ensure your add-on prompts users correctly for access to browser features.
 permalink: /documentation/develop/test-permission-requests/
 topic: Develop
 tags: [add-ons, extensions, guide, permissions, testing, webextensions]

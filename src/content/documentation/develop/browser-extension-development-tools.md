@@ -1,6 +1,7 @@
 ---
 layout: sidebar.liquid
 title: Browser Extension Development Tools
+description: Discover the range of tools for Firefox extension development, including web-ext and boilerplating utilities to streamline your workflow.
 permalink: /documentation/develop/browser-extension-development-tools/
 topic: Develop
 tags:

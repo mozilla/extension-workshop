@@ -1,6 +1,7 @@
 ---
 layout: sidebar.liquid
 title: Best practices for collecting user data consents
+description: Follow best practices for collecting user data consent in your Firefox extension. Ensure privacy compliance and maintain user trust.
 permalink: /documentation/develop/best-practices-for-collecting-user-data-consents/
 topic: Develop
 tags:

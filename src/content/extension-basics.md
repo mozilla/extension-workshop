@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Extension Basics
+description: Learn the basics of Firefox extension development. Explore the anatomy of a browser add-on, WebExtensions API concepts, and the manifest.json file.
 permalink: /extension-basics/
 tags: []
 contributors:

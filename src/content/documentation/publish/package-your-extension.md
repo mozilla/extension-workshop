@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Package your extension
+description: Step-by-step guide to packaging your Firefox extension into a distributable .zip file, ready for submission to addons.mozilla.org (AMO).
 permalink: /documentation/publish/package-your-extension/
 topic: Publish
 tags: [add-on, distribution, publication, reviews, signing, installation]

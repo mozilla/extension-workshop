@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Add-on Policies FAQ
+description: Get answers to frequently asked questions about Firefox add-on policies. Clarify compliance for your extension submission.
 permalink: /documentation/publish/add-on-policies-faq/
 topic: Publish
 tags: [add-ons, review, policies, faq]

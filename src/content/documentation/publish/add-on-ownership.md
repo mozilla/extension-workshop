@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Add-on ownership
+description: Understand the importance of add-on ownership and managing collaborators on  addons.mozilla.org (AMO). Protect your intellectual property and team access.
 permalink: /documentation/publish/add-on-ownership/
 topic: Publish
 tags: [development, ownership, code, dispute]

@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: User experience best practices
+description: Optimize the user experience of your Firefox add-on. Design accessible and intuitive interfaces with the official UX and design guidelines.
 permalink: /documentation/develop/user-experience-best-practices/
 topic: Develop
 tags: [add-ons, extensions, guide, ui, ux]

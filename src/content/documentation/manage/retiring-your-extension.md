@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Retiring your extension
+description: Learn the correct process for retiring your Firefox extension. Follow best practices to notify users and remove your add-on gracefully.
 permalink: /documentation/manage/retiring-your-extension/
 topic: Manage
 tags: [manage, end-of-life]

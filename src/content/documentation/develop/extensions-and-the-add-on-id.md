@@ -1,6 +1,7 @@
 ---
 layout: sidebar
-title: Extensions and the Add-on ID
+title: Extensions and the add-on ID
+description: Learn about the structure and importance of your extension's add-on ID. Crucial information for signing and distribution of your Firefox add-on.
 permalink: /documentation/develop/extensions-and-the-add-on-id/
 topic: Develop
 tags: [webextensions]

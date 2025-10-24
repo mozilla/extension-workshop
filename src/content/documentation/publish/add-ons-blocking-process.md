@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Add-ons Blocking Process
+description: Understand the add-on blocking process for Firefox. Learn why an extension might be blocked and how to address related issues.
 permalink: /documentation/publish/add-ons-blocking-process/
 topic: Publish
 contributors: [caitmuenster, kewisch]

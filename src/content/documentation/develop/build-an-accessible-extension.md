@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Build an accessible extension
+description: Design and develop an accessible Firefox extension. Ensure your add-on can be used by everyone, regardless of ability.
 permalink: /documentation/develop/build-an-accessible-extension/
 topic: Develop
 tags: [development, extensions, ui, user-interface, ux, webextensions]

@@ -1,6 +1,7 @@
 ---
 layout: sidebar.liquid
 title: Create extensions for Firefox and Firefox for Android
+description: Deep dive into developing Firefox extensions. Get guides on Manifest V3, cross-browser porting, security best practices, and debugging tools for your add-ons.
 permalink: /documentation/develop/
 tags: []
 contributors: [caitmuenster]

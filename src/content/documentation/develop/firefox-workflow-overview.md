@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Firefox workflow overview
+description: Get an overview of the Firefox extension development workflow, from coding and testing to publishing and maintaining your extension.
 permalink: /documentation/develop/firefox-workflow-overview/
 topic: Develop
 tags:

@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Developing extensions for Firefox for Android
+description: Extend your reach to Firefox for Android. Learn the capabilities and necessary steps for developing mobile extensions for the browser.
 permalink: /documentation/develop/developing-extensions-for-firefox-for-android/
 topic: Develop
 tags: [add-ons, beginner, guide, mobile, webextensions]

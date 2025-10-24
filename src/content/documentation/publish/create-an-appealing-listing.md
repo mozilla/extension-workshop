@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Create an appealing listing
+description: Maximize your visibility with an appealing add-on listing. Learn how to write a compelling description and choose effective screenshots for addons.mozilla.org (AMO).
 permalink: /documentation/develop/create-an-appealing-listing/
 topic: Publish
 tags: [add-ons, beginner, guide, publishing, webextension]

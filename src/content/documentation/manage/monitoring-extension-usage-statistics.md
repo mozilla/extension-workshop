@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Monitoring extension usage statistics
+description: Learn how to monitor extension usage statistics on addons.mozilla.org (AMO). Gain valuable insights into your add-on's performance and user base.
 permalink: /documentation/manage/monitoring-extension-usage-statistics/
 topic: Manage
 tags: [manage, distribution, amo, stats, usage, downloads]

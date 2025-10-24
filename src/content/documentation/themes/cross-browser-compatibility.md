@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Cross-browser compatibility
+description: Learn about cross-browser compatibility for themes. Build themes that work across Firefox and other browsers.
 permalink: /documentation/themes/cross-browser-compatibility/
 topic: Themes
 tags: [themes, compatibility, firefox]

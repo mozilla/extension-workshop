@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Recommended extensions
+description: Learn how to get your Firefox extension nominated for the Recommended Extensions program. Meet high standards for quality and security.
 permalink: /documentation/publish/recommended-extensions/
 topic: Publish
 tags: [promote, recommended]

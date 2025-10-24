@@ -1,6 +1,7 @@
 ---
 layout: sidebar
 title: Firefox built-in consent for data collection and transmission
+description: Understand the Firefox built-in data consent mechanisms. Use Firefox's features to inform users about data collection in your extension.
 permalink: /documentation/develop/firefox-builtin-data-consent/
 topic: Develop
 tags: [data-collection, data-transmission, api, permissions, firefox, guide]
