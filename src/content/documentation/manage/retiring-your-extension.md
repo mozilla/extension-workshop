@@ -32,7 +32,7 @@ There may be occasions where you want to retire one of your extensions. This art
 
 There are two main reasons why you might want to end-of-life your extension:
 
-- You plan to remove support for a product or service. In this case, you’ll want to remove the extension from browsers when support ends.
+- You plan to remove support for a product or service. In this case, you should remove the extension from browsers when support ends.
 
 - You’re replacing the extension with a new one, which isn’t a direct upgrade. In this case, you’ll want to encourage existing users to install the new extension before removing the old one from their browsers.
 
