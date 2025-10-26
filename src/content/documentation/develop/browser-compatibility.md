@@ -158,8 +158,9 @@ While a web extension API may be compatible between Firefox and the Chromium-bas
 Cases where the extension behavior may be affected include:
 
 - **URLs in CSS**: Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.
-- **[Web accessible resources](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)**: these are accessed using an ID associated with the extension, where:
+- **[Web accessible resources](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)**: assets declared in this structure can be retrieved by web pages or other extensions. Extension resources URLs use a browser-specific scheme and the authority is an extension-specific identifier, where:
   - Firefox uses the internal UUID, a unique identifier assigned randomly to an extension when it's installed.
+  - Safari uses the internal ID, a unique identifier assigned randomly to an extension per browser session.
   - Extensions for Chromium-based browsers use an ID assigned to the extension when it is published. However, the [key](https://developer.chrome.com/docs/extensions/reference/manifest/key) property can be used to set this ID.
 - **Content script requests context**: In Chromium-based browsers, when a request is called (for example, using `fetch())` to relative a URL, such as `/api`, from a content script, it is sent to `https://example.com/api`. Firefox uses absolute URLs.
 - **Native messaging**: there are variations in the command-line arguments, manifest key names, and manifest location between Firefox and the Chromium-based browsers.
