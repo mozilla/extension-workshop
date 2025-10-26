@@ -444,7 +444,7 @@ Source File: chrome://addon/content/file.js
 Line: 42
 ```
 
-To correct this …
+To correct this, store the data needed the first time it's retrieved rather than look it up later (when the reference is no longer valid).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
