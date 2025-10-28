@@ -252,3 +252,16 @@ When an extension is updated, Firefox only shows the added required data permiss
     id: "updates"
     content: content
 %}
+
+{% capture content %}
+
+## Testing
+
+To see how the data collection prompts appear to a user for a new install or upgrade, follow the process described in [Test permission requests](/documentation/develop/test-permission-requests/).
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+    id: "testing"
+    content: content
+%}
+
