@@ -25,10 +25,11 @@ contributors:
     djbrown,
     kirinokirino,
     dotproto,
-    andrewbaxter
+    andrewbaxter,
+    dotproto
   ]
-last_updated_by: andrewbaxter
-date: 2025-03-10
+last_updated_by: dotproto
+date: 2025-10-29
 ---
 
 <!-- Page Hero Banner -->
@@ -107,7 +108,7 @@ See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org
 
 {% capture content %}
 
-## Working without an ID in Manifiest V2
+## Working without an ID in Manifest V2
 
 An add-on ID is optional for Manifest V2 extensions. If you don't set it, you can generally develop, debug, publish, and update your extension without ever having to deal with an ID. However, if you do add the `browser_specific_settings` manifest key (to add an ID), Google Chrome ignores it, and Apple Safari ignores Firefox's `gecko` and `gecko_android` sub-keys.
 
@@ -127,7 +128,7 @@ When you have finished developing the extension, you can [package it and submit 
 
 After publication, you don't generally have to deal with the ID. You can continue to develop the add-on without an ID, and when you want to update, upload the new version by visiting the add-on's AMO page. Because you are uploading the add-on through that page, AMO knows that this is an update to the add-on, even though it doesn't contain an ID.
 
-However, if you use [AMO's API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to upload an update to a Manifiest V2 extension that doesn't define the ID in its manifest.json file you must include the add-on's ID in the request.
+However, if you use [AMO's API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to upload an update to a Manifest V2 extension that doesn't define the ID in its manifest.json file you must include the add-on's ID in the request.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
