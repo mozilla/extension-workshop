@@ -16,7 +16,7 @@ date: 2019-03-21 12:27:40
 
 # Test permission requests
 
-Your extension may contain two types of permission request: **install time** and **runtime** permission requests. This page explains how you can test the way your users will see requests for these permissions.
+Your extension may contain two types of permission requests: **install time** and **runtime**. These permissions include access to API features and [user consent to collect and transmit data](/documentation/develop/firefox-builtin-data-consent/). This page explains how you can test the way your users see requests for these permissions.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -32,7 +32,7 @@ Your extension may contain two types of permission request: **install time** and
 When you’re testing with an unpackaged extension, using either `about:debugging` or [web-ext](/documentation/develop/web-ext-command-reference), install time and runtime permissions are handled as follows:
 
 - <dfn>install time permission</dfn> requests are granted silently. You don't see the permission warnings users would.
-- <dfn>runtime permission</dfn> requests display the door hanger request as normal. These permissions remain in place until they are revoked programmatically by the extension, the extension is removed using `about:debugging`, or Firefox restart.
+- <dfn>runtime permission</dfn> requests display the door hanger request as normal. These permissions remain in place until they are revoked programmatically by the extension, the extension is removed using `about:debugging`, or Firefox restarts.
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
@@ -48,7 +48,7 @@ When you’re testing with an unpackaged extension, using either `about:debuggin
 
 ## Observe or verify install time permission requests
 
-You follow different processes depending on whether you want to observe the permissions requests associated with an installation or an upgrade.
+You follow different processes depending on whether you want to observe the permissions requests for an installation or an upgrade.
 
 ### Permission requests for extension installation
 
@@ -74,9 +74,9 @@ For details on how to deliver web extension updates when self-hosting your exten
 
 To view the install time permission warnings users see when Firefox upgrades your extension and retest runtime permission requests, you install the extension from its `.xpi` file posted on an HTTP or HTTPS server.
 
-You can use an HTTP server (such as a simple [Python localhost server](https://developer.mozilla.org/docs/Learn/Common_questions/set_up_a_local_testing_server)) or an HTTPS server. However, your HTTPS server must have a verifiable certificate, one that Firefox can auto-accept; you cannot use a self-signed certificate. If you want to test from an HTTPS server but don’t have one, GitHub pages are an option you can use.
+You can use an HTTP server (such as a simple [Python localhost server](https://developer.mozilla.org/docs/Learn/Common_questions/set_up_a_local_testing_server)) or an HTTPS server. However, your HTTPS server must have a verifiable certificate, one that Firefox can auto-accept; you cannot use a self-signed certificate. If you want to test from an HTTPS server but don’t have one, GitHub Pages is an option.
 
-To perform the test you'll need to:
+To perform the test, you need to:
 
 - determine the address of the HTTP or HTTPS server where you can host files.
 - use the `manifest.json` [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key to:
@@ -94,10 +94,10 @@ To perform the test you'll need to:
 ```
 
 - if necessary, [create a package](/documentation/publish/package-your-extension) containing your original extension.
-- update your extension and add details of the new permissions required to the `manifest.json` file, not forgetting to update the version number. Create a package containing your updated extension.
+- update your extension and add details of the new permissions required to the `manifest.json` file, remembering to update the version number. Create a package containing your updated extension.
 
 ::: note alert
-If the packages were generated with `.zip` extensions change them to `.xpi`, otherwise your browser may try to download rather than install the extension.
+If the packages were generated with `.zip` extensions, change them to `.xpi`; otherwise, your browser may try to download rather than install the extension.
 :::
 
 - create the [updates manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/Updates) with details of both extension versions, which should be similar to this:
@@ -117,19 +117,19 @@ If the packages were generated with `.zip` extensions change them to `.xpi`, oth
 - in `about:config`:
 
   - set the preference `xpinstall.signatures.required` to `false`.
-  - If you’re using [Nightly](https://nightly.mozilla.org/) and hosting your update on an HTTP server create and set `extensions.checkUpdateSecurity` and `extensions.install.requireSecureOrigin` preferences to `false`. To do this:
+  - If you’re using [Nightly](https://nightly.mozilla.org/) and hosting your update on an HTTP server, create and set `extensions.checkUpdateSecurity` and `extensions.install.requireSecureOrigin` preferences to `false`. To do this:
     - enter the preference name in the search box.
     - click **Add**. <br/> ![add preference](/assets/img/documentation/develop/preference_create_2.png)
     - toggle the preference to set it to `false`. <br/> ![toggle preferences](/assets/img/documentation/develop/preference_toggle_2.png)
 
 - open the link to the first XPI file to install it.
 - open `about:addons`, click the gear icon, and click **Check for Updates**.
-- you’ll get a permission warnings prompt, similar to the one below, detailing the additional permissions requested:
+- you get a permission warnings prompt, similar to this one, detailing the additional permissions requested:
 
 ![permissions prompt](/assets/img/documentation/develop/upgrade_install_2.png)
 
 ::: note
-If the upgrade doesn't happen, look for `addons.update-checker` logs in the [Browser Console](https://developer.mozilla.org/docs/Tools/Browser_Console). Any errors encountered during the upgrade process will be reported in the log.
+If the upgrade doesn't happen, look for `addons.update-checker` logs in the [Browser Console](https://developer.mozilla.org/docs/Tools/Browser_Console). Any errors encountered during the upgrade process are reported in the log.
 :::
 
 {% endcapture %}
@@ -146,15 +146,15 @@ If the upgrade doesn't happen, look for `addons.update-checker` logs in the [Bro
 
 ## Retest runtime permission grants
 
-To retest your extension’s runtime permission grants and its post-install behavior you've two choices:
+To retest your extension’s runtime permission grants and its post-install behavior, you've two choices:
 
-- remove the extension using `about:debugging` and reinstall it, or Firefox restart.
+- remove the extension using `about:debugging` and reinstall it, or restart Firefox.
 
 ![remove extension from debugging](/assets/img/documentation/develop/reload_to_retest.png)
 
 - if you’re using [Nightly](https://nightly.mozilla.org/) or [Developer Edition](https://www.mozilla.org/firefox/developer/), use the [Extensions Permission Manager](https://github.com/rpl/dev-webext-permissions-manager) web extension to clear permissions.
 
-You can then rerun the extension and any runtime permission requests will be displayed as if the extension was being run for the first time.
+You can then rerun the extension, and any runtime permission requests are displayed as if the extension is being run for the first time.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
