@@ -149,13 +149,13 @@ This installation prompt is the result of a `manifest.json` file that specifies 
 }
 ```
 
-This adds the require required data collection paragraph to the installation prompt. The data permissions are also listed in `about:addons` like this:
+This adds the "required" data collection paragraph to the installation prompt. The data permissions are also listed in `about:addons` like this:
 
 ![The about:addons page shows details of required and optional data collection permissions.](/assets/img/documentation/develop/data-collection-permissions-about-addons.webp)
 
 #### Optional data
 
-Optional data collection permissions are specified using the optional list. These aren’t presented during installation (except for `technicalAndInteraction`), and they aren’t granted by default. The extension can request that the user opts in to this data collection after installation by calling [`permissions.request()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request) in an user-activated event handler, and the user can enable or disable this optional data collection in `about:addons` in the *Permissions and data* section of the extension settings.
+Optional data collection permissions are specified using the optional list. These aren’t presented during installation (except for `technicalAndInteraction`), and they aren’t granted by default. The extension can request that the user opts in to this data collection after installation by calling [`permissions.request()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request) in a user-activated event handler, and the user can enable or disable this optional data collection in `about:addons` in the *Permissions and data* section of the extension settings.
 
 ### Technical and interaction data
 
