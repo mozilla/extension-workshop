@@ -59,8 +59,8 @@ Personally identifiable information can be actively provided by the user or obta
 | **Personal communications**            | `personalCommunications`                             | Examples: emails, text or chat messages, social media posts, and data from phone calls and conference calls.                                                                                                    | no                                                                                                                                                |
 | **Location**                           | `locationInfo`                                       | Examples: region, GPS coordinates, or information about things near a user’s device.                                                                                                                            | yes                                                                                                                                               |
 | **Browsing activity**                  | `browsingActivity`                                   | Information about the websites users visit, such as specific URLs, domains, or categories of pages users view.                                                                                               | yes                                                                                                                                               |
-| **Website content**                    | `websiteContent`                                     | Covers anything visible on a website — such as text, images, videos, and links — and anything embedded such as cookies, audio, page headers, and request and response information.                             | yes                                                                                                                                               |
-| **Website activity**                   | `websiteActivity`                                    | Examples: interactions and mouse and keyboard activity, such as scrolling, clicking, typing, and actions such as saving and downloading.                                                                     | yes                                                                                                                                               |
+| **Website content**                    | `websiteContent`                                     | Covers anything visible on a website — such as text, images, videos, and links — and anything embedded, such as cookies, audio, page headers, and request and response information.                             | yes                                                                                                                                               |
+| **Website activity**                   | `websiteActivity`                                    | Examples: interactions and mouse and keyboard activity, such as scrolling, clicking, typing, and actions, such as saving and downloading.                                                                     | yes                                                                                                                                               |
 | **Search terms**                       | `searchTerms`                                        | Search terms entered into search engines or the browser.                                                                                                                                                        | yes                                                                                                                                               |
 | **Bookmarks**                          | `bookmarksInfo`                                      | Information about Firefox bookmarks, including specific websites, bookmark names, and folder names.                                                                                                             | yes                                                                                                                                               |
 
@@ -107,7 +107,7 @@ The rest of this section describes each key in the `data_collection_permissions`
 
 #### Required data
 
-When you specify data types in the required list, users must accept this data collection to use the extension, they cannot opt out. To enables the user to review the data-collection requirements of an extension before installing it, data collection information is presented to the user in the installation prompt, like this:
+When you specify data types in the required list, users must accept this data collection to use the extension; they cannot opt out. So the user can review the data-collection requirements of an extension before installing it, data collection information is presented to the user in the installation prompt, like this:
 
 ![The extension installation prompt shows data types as specified in the manifest.](/assets/img/documentation/develop/data-collection-permissions-prompt-install.webp)
 
@@ -155,11 +155,11 @@ This adds the "required" data collection paragraph to the installation prompt. T
 
 #### Optional data
 
-Optional data collection permissions are specified using the optional list. These aren’t presented during installation (except for `technicalAndInteraction`), and they aren’t granted by default. The extension can request that the user opts in to this data collection after installation by calling [`permissions.request()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request) in a user-activated event handler, and the user can enable or disable this optional data collection in `about:addons` in the *Permissions and data* section of the extension settings.
+Optional data collection permissions are specified using the optional list. These aren’t presented during installation (except for `technicalAndInteraction`), and they aren’t granted by default. The extension can request that the user opts in to this data collection after installation by calling [`permissions.request()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request) in a user-activated event handler, and the user can turn this optional data collection on or off in `about:addons` in the *Permissions and data* section of the extension settings.
 
 ### Technical and interaction data
 
-The `technicalAndInteraction` data type behaves differently to all other data types. This data permission must be optional, but unlike other optional data collection options, the user can turn this permission on or off during the installation flow. This choice is available in the optional settings section of the extension installation prompt.
+The `technicalAndInteraction` data type behaves differently from all other data types. This data permission must be optional, but unlike other optional data collection options, the user can turn this permission on or off during the installation flow. This choice is available in the optional settings section of the extension installation prompt.
 
 ### No data collection
 
@@ -216,7 +216,7 @@ await browser.permissions.getAll()
 }
 ```
 
-You use the presence or absence of the `data_collection` key in the response of the `getAll()` method to feature-detect the built-in data collection consent experience in Firefox at runtime.
+You use the presence or absence of the `data_collection` key in the `getAll()` method’s response to feature-detect the built-in data collection consent experience in Firefox at runtime.
 
 ```js
 const perms = await browser.permissions.getAll();
