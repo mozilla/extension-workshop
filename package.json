@@ -13,7 +13,7 @@
   "dependencies": {
     "dompurify": "3.3.0",
     "foundation-sites": "6.9.0",
-    "glob": "11.0.3",
+    "glob": "11.1.0",
     "hamburgers": "1.2.1",
     "jquery": "3.7.1",
     "liquidjs": "10.24.0",
