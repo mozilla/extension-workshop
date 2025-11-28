@@ -70,9 +70,9 @@ a:not(.button) {
 
 .sidenav,
 main {
-  a[href*="//"]:not([href*="extension-workshop.com"]),
-  a[href*="//"]:not([href*="extensionworkshop.allizom.org"]),
-  a[href*="//"]:not([href*="localhost"]),
+  a[href*='//']:not([href*='extension-workshop.com']),
+  a[href*='//']:not([href*='extensionworkshop.allizom.org']),
+  a[href*='//']:not([href*='localhost']),
   a[target='_blank'] {
     &::after {
       color: inherit;
