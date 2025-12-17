@@ -53,16 +53,6 @@ There are several ways to stay up-to-date with Firefox add-on technology and con
 
 Stay up to date with the latest information about add-on technology on the [Add-ons blog](https://blog.mozilla.org/addons).
 
-### Firefox for Android office hours <span id="office-hours"></span>
-
-The Firefox Add-ons team holds one-on-one office hours sessions to help you make your extensions available on Android. This is in addition to the [Firefox for Android Add-ons](https://discourse.mozilla.org/c/add-ons/android/9393) forum, where you can seek advice and assistance anytime.
-
-<details>
-  <summary>Book a session</summary>
-
-  <iframe id="booking-frame" src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3yNnoZNBdJCTiJjqziXs9GoCYpfW9XZFkB0QWKNy9dfoqqPlCw7UsYh48Ff0i3lZcA5YzygwrU?gv=true" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" style="height: 600px;"></iframe>
-</details>
-
 ### Questions about add-on development
 
 You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons) or [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon). You can also talk with us on [Matrix](https://wiki.mozilla.org/Matrix) in the [Add-ons room](https://mzl.la/2u8ZGbg) (for general development questions) or in the [add-on reviewers room](https://mzl.la/2IJ2Oi1) (for questions about an add-on review).
