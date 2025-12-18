@@ -6,9 +6,9 @@ permalink: /documentation/develop/best-practices-for-collecting-user-data-consen
 topic: Develop
 tags:
   [add-ons, extensions, how-to, privacy, ui, user-interface, ux, webextensions]
-contributors: [rebloor, hamatti, mkaply, abhn]
-last_updated_by: wagnerand
-date: 2025-06-19
+contributors: [rebloor, hamatti, mkaply, abhn, dotproto]
+last_updated_by: dotproto
+date: 2025-12-18
 ---
 
 <!-- Page Hero Banner -->
@@ -39,13 +39,12 @@ You can set a value via the [3rdparty enterprise policy](https://mozilla.github.
 
 To create the consent flow and consent dialogs your extension needs, you should first answer these questions:
 
-
 1. Does my extension collect technical or interaction data? If so, offer the user the opportunity to opt-out of this data collection, although you can always offer opt-in consent if you prefer.
 2. Does my extension collect personally identifying information? If so, get the user’s opt-in consent before collecting any of this data. Remember that personally identifying information includes technical or interaction data tagged with the user’s identity or information that can be used to identify the user, such as an URL.
 
 If you are unsure whether your add-on collects personal, technical, or interaction data, refer to the definition in [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management). 
 
-"Data” includes all information the extension collects, regardless of the manner of collection or the reason for collection. This also includes data collected as part of the extension’s  primary functionality.
+"Data" includes all information the extension collects, regardless of the manner of collection or the reason for collection. This also includes data collected as part of the extension’s  primary functionality.
 
 Data sent to native applications using [NativeMessaging](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) must be declared in the data collection consent and categorized in the appropriate consent model (whether opt-in or opt-out). 
 
@@ -174,7 +173,7 @@ In this example:
 
 Once you understand your privacy consent flow, you can add a suitable consent dialog. The following are suggestions on how to present a data collection consent dialog. We recommend that all of the data collection controls and actions (toggles and confirmation buttons) be present within the same view. A summary of the data collected and how it is used must be present for each type of data collected within the consent dialog.
 
-Where the mockups include the linked text “our Privacy Policy”, this should go to your extension’s privacy policy page. Privacy policy page should be self-hosted for unlisted extensions or hosted on AMO for listed extensions.
+Where the mockups include the linked text "our Privacy Policy", this should go to your extension’s privacy policy page. Privacy policy page should be self-hosted for unlisted extensions or hosted on AMO for listed extensions.
 
 ### Only personally identifying information
 The default option is not to collect personally identifying information. If you do, the user needs to actively opt-in. Remember to list the data you’re collecting; don’t make the user read your privacy policy to determine what data you are collecting and why.
@@ -190,6 +189,22 @@ The add-on is requesting both types of data collection. Please ensure the choice
   ![Mockup of a prompt that could be used when extension requires consent for processing personal and technical data.](/assets/img/documentation/develop/consent-mixed.jpg)
 ### Required data collection
 The extension requires personal or technical data collection to provide its primary function and cannot be used without. The consent decline option uninstalls the extension using [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf).
+
+### Terminology in consent prompts
+
+While Mozilla does not require the use of specific language in consent prompts,
+the [Add-ons Policies](/documentation/publish/add-on-policies/) and this guide typically use the following phrases:
+
+| Category                | Common phrases |
+| ----------------------- | -------------- |
+| Personal                | "personal data"<br>"personal information"<br>"personally identifying information" |
+| Technical & Interaction | "technical data"<br>"anonymous data"<br>"user interaction data"<br>"technical and user interaction data" |
+
+We generally prefer that extensions follow this convention as consistent
+language directly aids user understanding. Any alternate phrases used to
+described these categories should clearly set user expectations and match the
+usage of other data-related terminology in this guide, Add-ons Policies, and
+[built-in data consent](/documentation/develop/firefox-builtin-data-consent/).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
