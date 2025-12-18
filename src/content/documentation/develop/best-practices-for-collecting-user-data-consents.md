@@ -6,9 +6,9 @@ permalink: /documentation/develop/best-practices-for-collecting-user-data-consen
 topic: Develop
 tags:
   [add-ons, extensions, how-to, privacy, ui, user-interface, ux, webextensions]
-contributors: [rebloor, hamatti, mkaply, abhn]
-last_updated_by: wagnerand
-date: 2025-06-19
+contributors: [rebloor, hamatti, mkaply, abhn, dotproto]
+last_updated_by: dotproto
+date: 2025-12-18
 ---
 
 <!-- Page Hero Banner -->
