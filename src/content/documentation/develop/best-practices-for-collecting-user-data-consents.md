@@ -67,27 +67,13 @@ Before designing the data collection consent for your extension, you should:
 
 - eliminate any unnecessary data collection.
 - design your extension to offer as much functionality as possible if the user declines the collection of data.
-- create a privacy policy.
+- (optional) create a privacy policy.
+
+While a privacy policy is not required, it can help users better understand what data your extensions uses and how that data is used.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
   id: "get-prepared"
-  content: content
-%}
-
-<!-- END: Single Column Body Module -->
-
-<!-- Single Column Body Module -->
-
-{% capture content %}
-
-## Create a privacy policy
-
-When your users arrive at your data and privacy consent dialog, they need to know what they're consenting to and this is where your privacy policy comes in. The  [privacy policy](/documentation/publish/add-on-policies/#privacy-policy) section of the [Add-on Policies](/documentation/publish/add-on-policies/) provides clear guidelines on what the policy should include. If you’re collecting significant quantities of data and making significant use of it, taking legal advice may be prudent. However, your first strategy should be to reduce or eliminate the collection of user data where possible. If your data collection and use is fairly low-level, it’s possible that a privacy policy generator may be helpful. You may also want to take a look at [Mozilla's privacy policy](https://www.mozilla.org/privacy/) as a model to follow.
-
-{% endcapture %}
-{% include modules/one-column.liquid,
-  id: "create-a-privacy-policy"
   content: content
 %}
 
