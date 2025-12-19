@@ -44,7 +44,7 @@ To create the consent flow and consent dialogs your extension needs, you should 
 
 If you are unsure whether your add-on collects personal, technical, or interaction data, refer to the definition in [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management). 
 
-"Data" includes all information the extension collects, regardless of the manner of collection or the reason for collection. This also includes data collected as part of the extension’s  primary functionality.
+“Data” includes all information the extension collects, regardless of the manner of collection or the reason for collection. This also includes data collected as part of the extension’s  primary functionality.
 
 Data sent to native applications using [NativeMessaging](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging) must be declared in the data collection consent and categorized in the appropriate consent model (whether opt-in or opt-out). 
 
@@ -112,7 +112,7 @@ Where you provide the user with an opt-in option, the related feature **must be 
 
 Where you provide the user with an opt-out option, the related features **can be turned on by default** but **must be turned off if the user indicates** they want to opt-out.
 
-If the primary function of your extension requires collecting user data, provide an option in the data collection consent to uninstall it if your users don't consent to the data collection. The [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf) API can be used to uninstall your extension. Name the consent decline button appropriately, such as "Decline and uninstall".
+If the primary function of your extension requires collecting user data, provide an option in the data collection consent to uninstall it if your users don't consent to the data collection. The [`management.uninstallSelf()`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf) API can be used to uninstall your extension. Name the consent decline button appropriately, such as “Decline and uninstall”.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -196,8 +196,8 @@ While Mozilla does not require the use of specific language in consent prompts, 
 
 | Category                | Common phrases |
 | ----------------------- | -------------- |
-| Personal                | "personal data"<br>"personal information"<br>"personally identifying information" |
-| Technical & Interaction | "technical data"<br>"anonymous data"<br>"user interaction data"<br>"technical and user interaction data" |
+| Personal                | “personal data”<br>“personal information”<br>“personally identifying information” |
+| Technical & Interaction | “technical data”<br>“anonymous data”<br>“user interaction data”<br>“technical and user interaction data” |
 
 We generally prefer that extensions follow this convention as consistent language directly aids user understanding. Any alternate phrases used to described these categories should clearly set user expectations and match the usage of other data-related terminology in this guide, Add-ons Policies, and [built-in data consent](/documentation/develop/firefox-builtin-data-consent/).
 
