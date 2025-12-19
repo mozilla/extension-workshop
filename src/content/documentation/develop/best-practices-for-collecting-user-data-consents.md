@@ -192,19 +192,14 @@ The extension requires personal or technical data collection to provide its prim
 
 ### Terminology in consent prompts
 
-While Mozilla does not require the use of specific language in consent prompts,
-the [Add-ons Policies](/documentation/publish/add-on-policies/) and this guide typically use the following phrases:
+While Mozilla does not require the use of specific language in consent prompts, the [Add-ons Policies](/documentation/publish/add-on-policies/) and this guide typically use the following phrases:
 
 | Category                | Common phrases |
 | ----------------------- | -------------- |
 | Personal                | "personal data"<br>"personal information"<br>"personally identifying information" |
 | Technical & Interaction | "technical data"<br>"anonymous data"<br>"user interaction data"<br>"technical and user interaction data" |
 
-We generally prefer that extensions follow this convention as consistent
-language directly aids user understanding. Any alternate phrases used to
-described these categories should clearly set user expectations and match the
-usage of other data-related terminology in this guide, Add-ons Policies, and
-[built-in data consent](/documentation/develop/firefox-builtin-data-consent/).
+We generally prefer that extensions follow this convention as consistent language directly aids user understanding. Any alternate phrases used to described these categories should clearly set user expectations and match the usage of other data-related terminology in this guide, Add-ons Policies, and [built-in data consent](/documentation/develop/firefox-builtin-data-consent/).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
