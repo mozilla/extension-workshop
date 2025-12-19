@@ -69,7 +69,7 @@ Before designing the data collection consent for your extension, you should:
 - design your extension to offer as much functionality as possible if the user declines the collection of data.
 - (optional) create a privacy policy.
 
-While a privacy policy is not required, it can help users better understand what data your extensions uses and how that data is used.
+While a privacy policy is not required, it can help users better understand what data your extension uses and how that data is used.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
