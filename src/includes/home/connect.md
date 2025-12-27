@@ -29,7 +29,7 @@ When you build on Firefox, you build with a community of add-on developers. And 
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://mail.mozilla.org/listinfo/dev-addons" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://wiki.mozilla.org/Matrix" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link">
 
 ![Get Involved](/assets/img/icons/get-involved.svg "Get Involved")
