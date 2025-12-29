@@ -29,14 +29,14 @@ When you build on Firefox, you build with a community of add-on developers. And 
 <!-- END: Tile 1 -->
 
 <!-- Tile 2 -->
-<a href="https://wiki.mozilla.org/Matrix" class="cell small-12 medium-6 tile-compact tile-block-link">
+<a href="https://mzl.la/2u8ZGbg" class="cell small-12 medium-6 tile-compact tile-block-link">
 <div class="block-link">
 
 ![Get Involved](/assets/img/icons/get-involved.svg "Get Involved")
 
 #### Connect with other extension developers
 
-<span class="block-link-inline">Email the community</span>
+<span class="block-link-inline">Join the community conversation</span>
 
 </div>
 </a>
