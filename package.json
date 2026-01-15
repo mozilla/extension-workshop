@@ -50,7 +50,7 @@
     "posthtml-beautify": "0.7.0",
     "posthtml-postcss": "0.5.0",
     "posthtml-urls": "1.0.0",
-    "prettier": "3.7.4",
+    "prettier": "3.8.0",
     "pretty-quick": "4.2.2",
     "prismjs": "1.30.0",
     "rimraf": "6.1.2",
