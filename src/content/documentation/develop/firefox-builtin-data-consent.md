@@ -26,6 +26,8 @@ Firefox supports built-in consent for data collection and transmission in Firefo
 
 From November 3, 2025, all new extensions must adopt the Firefox built-in data collection consent system. Extensions must state if and what data they collect or transmit. New versions and updates for add-ons created before November 3 don’t need to use this feature, but will have to at a later date.
 
+If you choose to implement the built-in consent feature for an extension created before November 3 that also runs on versions of Firefox before the introduction of the feature, see [Supporting older Firefox versions](#supporting-older-firefox-versions) for implementation advice.
+
 For updates on the rollout and the timeline for AMO accepting submissions using this feature and for tips on how to take advantage of it, see the [community blog](https://blog.mozilla.org/addons/).
 :::
 
@@ -262,6 +264,60 @@ To see how the data collection prompts appear to a user for a new install or upg
 {% endcapture %}
 {% include modules/one-column.liquid,
     id: "testing"
+    content: content
+%}
+
+{% capture content %}
+
+## Supporting older Firefox versions
+
+If your extension is available for Firefox for desktop 139 and earlier or Firefox for Android 141 and earlier, consider:
+
+- turn off the data collection for old Firefox versions, as it's likely most users are on newer versions of Firefox.
+- implement a custom data collection experience and display it when installing on an old version of Firefox. Your extension can determine the platform and Firefox version it's installed on by checking `os` from [runtime.getPlatformInfo()](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo) and `version` from [runtime.getBrowserInfo()](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo) in a [runtime.onInstalled](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) listener, like this:
+
+```js
+async function handleInstalled(details) {
+
+// Get the platform details
+  let platform = await browser.runtime.getPlatformInfo();
+
+// Get the browser details
+  let browserInfo = await browser.runtime.getBrowserInfo();
+
+// Get the major version number
+  const browserVersion = browserInfo.version
+  const browserVersionParts = browserVersion.split('.').map(Number);
+  const majorVersion = browserVersionParts[1]
+
+// Set the target browser versions
+  const androidTargetVersion = 141;
+  const desktopTargetVersion = 139;
+
+//Test for the OS and browser version 
+  if (platform.os == 'android') {
+
+    if (majorVersion <= androidTargetVersion) {
+      console.log("Installed on Firefox for Android 141 or earlier");
+      // Call your custom data collection experience.
+    }
+  } else {
+
+    if (majorVersion <=  desktopTargetVersion)  {
+      console.log("Installed on Firefox for desktop 139 or earlier");
+      // Call your custom data collection experience.
+    }
+
+  }
+
+}
+
+browser.runtime.onInstalled.addListener(handleInstalled);
+```
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+    id: "supporting-older-firefox-versions"
     content: content
 %}
 
