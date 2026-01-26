@@ -112,13 +112,13 @@ To accommodate this change, provide a local icon and define it in your manifest.
 
 ### Host permissions
 
-In Manifest V2, host permissions are defined in the manifest.json keys `permissions` or `optional_permissions`.  The host permissions defined in the manifest.json keys `permissions` are displayed to the user on installation and granted to the extension permanently.
+In Manifest V2, an extension requests its host permissions in the manifest.json `permissions` or `optional_permissions` keys. The host permissions defined in the `permissions` key are displayed to the user on installation and granted to the extension permanently.
 
-In Manifest V3, host permissions are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) keys. With Manifest V3 extensions, users can grant or revoke any host permissions on an ad hoc basis.
+In Manifest V3, host permissions are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) keys. 
 
-Up to Firefox 126, Manifest V3 host permissions were not granted on installation and were not displayed to the user. From Firefox 127, host permissions listed in `host_permissions` and `content_scripts` are displayed in the install prompt and granted on installation. However, if an extension update grants new host permissions, these are not shown to the user (see [Firefox bug 1893232](https://bugzil.la/1893232)).
+In Firefox 126 and earlier, Manifest V3 host permissions were not granted during installation and were not displayed to the user. From Firefox 127, host permissions listed in `host_permissions` and `content_scripts` are displayed in the install prompt and granted on installation. However, if an extension update grants new host permissions, these are not shown to the user (see [Firefox bug 1893232](https://bugzil.la/1893232)).
 
-As users can revoke host permissions, your extension should check for the availability of any expected host permissions and request them if necessary.
+Users can [grant or revoke any host permission on an ad-hoc basis](https://support.mozilla.org/en-US/kb/manage-optional-permissions-extensions). Therefore, your extension should check whether any required host permissions are available and request them if necessary.
 
 See [Requested permissions and user prompts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions#requested_permissions_and_user_prompts) in the `host_permissions` documentation for more information.
 
@@ -384,7 +384,7 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 
 - Update the manifest.json key `manifest_version` to `3`.
 - If your extension adds a search engine, add a local icon and reference it in the manifest.json key `chrome_settings_overrides.search_provider.favicon_url`.
-- Remove any host permissions from the manifest.json keys `permissions` and `optional_permissions` and add them to the `host_permissions` key. Remember that `host_permissions` is treated as an optional permission in Firefox and Safari but granted at install in Chrome.
+- Remove any host permissions from the manifest.json keys `permissions` and `optional_permissions`, and add them to the `host_permissions` and `optional_host_permissions` keys. Remember that users can approve or revoke host permissions at any time, so always check that relevant host permissions are available when needed.
 - Remove references to `browser_style` from the manifest.json keys `browser_action`, `options_ui`, `page_action`, and `sidebar_action`.
 - If `browser_style:false` was not specified in `options_ui` and `sidebar_action`, confirm that their appearance has not changed.
 - Rename the manifest.json key `browser_action` to `action` and update any API references from `browser.browserAction` to `browser.action`.
