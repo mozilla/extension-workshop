@@ -233,7 +233,7 @@ To migrate your extension to using non-persistent background pages, you need to:
 - Ensure listeners are at the top-level and use the synchronous pattern.
 - Record state changes in local storage.
 - Change timers to alarms.
-- Switch from using [`extension.getBackgroundPage`](https://developer.mozilla.org/en-US/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage) to call a function from the background page, to [`runtime.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage).
+- Switch from using [`extension.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage) to call a function from the background page, to [`runtime.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage).
 - Place menu creation using [`menus.create`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) or its alias `contextMenus.create` in a `runtime.onInstalled` listener. Also, note that the [`menus.onClicked`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked) event or its alias `contextMenus.onClicked` must be used to handle menu entry click events from an event page, instead of the `onclick` parameter of the `contextMenus.create` or `contextMenus.update` methods. If the `onclick` property of `menus.create` or its alias `contextMenus.create` are used from a call originating from an event page, they throw synchronously.
 
 ::: note
@@ -368,11 +368,28 @@ In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace w
 
 {% capture content %}
 
+### Extension API
+
+Two features of the `extension` API are deprecated in Manifest V2 and no longer available in Manifest V3, but have alternatives:
+
+- [`extension.lastError`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL), use [`runtime.lastError`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/lastError) instead.
+- [`extension.getURL`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL), use [`runtime.getURL`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL) instead.
+
+{% endcapture %}
+
+{% include modules/one-column.liquid,
+    id: "removed- apis"
+    content: content
+%}
+
+{% capture content %}
+
 ### Extension version in the manifest
 
 The format of the top-level manifest.json `version` key in Firefox has evolved and became simpler: letters and other previously allowed symbols are no longer accepted. The value must be a string with 1 to 4 numbers separated by dots (e.g., `1.2.3.4`). Each number can have up to 9 digits and leading zeros before another digit are not allowed (e.g., `2.01` is forbidden, but `0.2`, `2.0.1`, and `2.1` are allowed).
 
 {% endcapture %}
+
 {% include modules/one-column.liquid,
     id: "extension-version"
     content: content
@@ -393,6 +410,7 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 - Move any arbitrary strings executed as scripts to files and update your code to use the Scripting API.
 - Rename the deprecated manifest.json key `applications` to `browser_specific_settings`.
 - The add-on ID is required to publish your extension. Make sure to add one in the manifest.json key `browser_specific_settings.gecko.id`.
+- Replace `extension.lastError` with `runtime.lastError` and `extension.getURL` with `runtime.getURL`.
 - Ensure that the top-level manifest.json key `version` is a string of numbers separated by up to 3 dots. For details, see [version format](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format).
 
 {% endcapture %}
