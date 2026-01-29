@@ -112,13 +112,13 @@ To accommodate this change, provide a local icon and define it in your manifest.
 
 ### Host permissions
 
-In Manifest V2, host permissions are defined in the manifest.json keys `permissions` or `optional_permissions`.  The host permissions defined in the manifest.json keys `permissions` are displayed to the user on installation and granted to the extension permanently.
+In Manifest V2, an extension requests its host permissions in the manifest.json `permissions` or `optional_permissions` keys. The host permissions defined in the `permissions` key are displayed to the user on installation and granted to the extension permanently.
 
-In Manifest V3, host permissions are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) keys. With Manifest V3 extensions, users can grant or revoke any host permissions on an ad hoc basis.
+In Manifest V3, host permissions are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) keys. 
 
-Up to Firefox 126, Manifest V3 host permissions were not granted on installation and were not displayed to the user. From Firefox 127, host permissions listed in `host_permissions` and `content_scripts` are displayed in the install prompt and granted on installation. However, if an extension update grants new host permissions, these are not shown to the user (see [Firefox bug 1893232](https://bugzil.la/1893232)).
+In Firefox 126 and earlier, Manifest V3 host permissions were not granted during installation and were not displayed to the user. From Firefox 127, host permissions listed in `host_permissions` and `content_scripts` are displayed in the install prompt and granted on installation. However, if an extension update grants new host permissions, these are not shown to the user (see [Firefox bug 1893232](https://bugzil.la/1893232)).
 
-As users can revoke host permissions, your extension should check for the availability of any expected host permissions and request them if necessary.
+Users can [grant or revoke any host permission on an ad-hoc basis](https://support.mozilla.org/en-US/kb/manage-optional-permissions-extensions). Therefore, your extension should check whether any required host permissions are available and request them if necessary.
 
 See [Requested permissions and user prompts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions#requested_permissions_and_user_prompts) in the `host_permissions` documentation for more information.
 
@@ -233,7 +233,7 @@ To migrate your extension to using non-persistent background pages, you need to:
 - Ensure listeners are at the top-level and use the synchronous pattern.
 - Record state changes in local storage.
 - Change timers to alarms.
-- Switch from using [`extension.getBackgroundPage`](https://developer.mozilla.org/en-US/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage) to call a function from the background page, to [`runtime.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage).
+- Switch from using [`extension.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage) to call a function from the background page, to [`runtime.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage).
 - Place menu creation using [`menus.create`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) or its alias `contextMenus.create` in a `runtime.onInstalled` listener. Also, note that the [`menus.onClicked`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked) event or its alias `contextMenus.onClicked` must be used to handle menu entry click events from an event page, instead of the `onclick` parameter of the `contextMenus.create` or `contextMenus.update` methods. If the `onclick` property of `menus.create` or its alias `contextMenus.create` are used from a call originating from an event page, they throw synchronously.
 
 ::: note
@@ -368,11 +368,28 @@ In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace w
 
 {% capture content %}
 
+### Extension API
+
+Two features of the `extension` API are deprecated in Manifest V2 and no longer available in Manifest V3, but have alternatives:
+
+- [`extension.lastError`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL), use [`runtime.lastError`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/lastError) instead.
+- [`extension.getURL`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL), use [`runtime.getURL`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL) instead.
+
+{% endcapture %}
+
+{% include modules/one-column.liquid,
+    id: "removed- apis"
+    content: content
+%}
+
+{% capture content %}
+
 ### Extension version in the manifest
 
 The format of the top-level manifest.json `version` key in Firefox has evolved and became simpler: letters and other previously allowed symbols are no longer accepted. The value must be a string with 1 to 4 numbers separated by dots (e.g., `1.2.3.4`). Each number can have up to 9 digits and leading zeros before another digit are not allowed (e.g., `2.01` is forbidden, but `0.2`, `2.0.1`, and `2.1` are allowed).
 
 {% endcapture %}
+
 {% include modules/one-column.liquid,
     id: "extension-version"
     content: content
@@ -384,7 +401,7 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 
 - Update the manifest.json key `manifest_version` to `3`.
 - If your extension adds a search engine, add a local icon and reference it in the manifest.json key `chrome_settings_overrides.search_provider.favicon_url`.
-- Remove any host permissions from the manifest.json keys `permissions` and `optional_permissions` and add them to the `host_permissions` key. Remember that `host_permissions` is treated as an optional permission in Firefox and Safari but granted at install in Chrome.
+- Remove any host permissions from the manifest.json keys `permissions` and `optional_permissions`, and add them to the `host_permissions` and `optional_host_permissions` keys. Remember that users can approve or revoke host permissions at any time, so always check that relevant host permissions are available when needed.
 - Remove references to `browser_style` from the manifest.json keys `browser_action`, `options_ui`, `page_action`, and `sidebar_action`.
 - If `browser_style:false` was not specified in `options_ui` and `sidebar_action`, confirm that their appearance has not changed.
 - Rename the manifest.json key `browser_action` to `action` and update any API references from `browser.browserAction` to `browser.action`.
@@ -393,6 +410,7 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 - Move any arbitrary strings executed as scripts to files and update your code to use the Scripting API.
 - Rename the deprecated manifest.json key `applications` to `browser_specific_settings`.
 - The add-on ID is required to publish your extension. Make sure to add one in the manifest.json key `browser_specific_settings.gecko.id`.
+- Replace `extension.lastError` with `runtime.lastError` and `extension.getURL` with `runtime.getURL`.
 - Ensure that the top-level manifest.json key `version` is a string of numbers separated by up to 3 dots. For details, see [version format](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format).
 
 {% endcapture %}
