@@ -368,17 +368,17 @@ In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace w
 
 {% capture content %}
 
-### Extension API
+### Removed APIs
 
 Two features of the `extension` API are deprecated in Manifest V2 and no longer available in Manifest V3, but have alternatives:
 
-- [`extension.lastError`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL), use [`runtime.lastError`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/lastError) instead.
+- [`extension.lastError`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/lastError), use [`runtime.lastError`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/lastError) instead.
 - [`extension.getURL`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL), use [`runtime.getURL`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL) instead.
 
 {% endcapture %}
 
 {% include modules/one-column.liquid,
-    id: "removed- apis"
+    id: "removed-apis"
     content: content
 %}
 
