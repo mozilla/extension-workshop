@@ -42,7 +42,7 @@ Manifest V3 (MV3) is the umbrella term for several foundational changes to the W
 
 The Manifest V3 changes apply to extensions for Safari, Firefox, and Chromium-based browsers – such as Chrome, Edge, and Opera. While the goal is to maintain a high degree of compatibility between the Firefox, Safari, and Chromium extension platforms, our implementation diverges where we think it matters and where our values point to a different direction.
 
-This article discusses the changes introduced with Manifest V3 in Firefox and highlights where they diverge from the Chrome and Safari implementation.
+This article discusses the changes introduced with Manifest V3 in Firefox and highlights where they diverge from the Chrome and Safari implementations.
 
 {% endcapture %}
 
@@ -152,7 +152,7 @@ The features available under the manifest.json key `browser_action` and the `bro
 
 As the old and new key and API are otherwise identical, the changes needed are relatively straightforward and are as follows:
 
-- rename the manifest.json key 'browser_action' to 'action' and remove any reference to [`browser_style`](#browser-style), like this:
+- Rename the manifest.json key 'browser_action' to 'action' and remove any reference to [`browser_style`](#browser-style), like this:
   ```json
   "action": {
     "default_icon": {
@@ -172,8 +172,8 @@ As the old and new key and API are otherwise identical, the changes needed are r
     }]
   }
   ```
-- update API references from `browser.browserAction` to  `browser.action`.
-- if used, change `_execute_browser_action` to `_execute_action` in the `commands` manifest key and in the [`menu.create`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) and [`menu.update`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/update) API methods (or their aliases `contextMenus.create` and `contextMenus.update`).
+- Update API references from `browser.browserAction` to  `browser.action`.
+- If used, change `_execute_browser_action` to `_execute_action` in the `commands` manifest key and in the [`menu.create`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) and [`menu.update`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/update) API methods (or their aliases `contextMenus.create` and `contextMenus.update`).
 
 ::: note
 If the user changes the shortcut of the `_execute_browser_action` command, it is automatically carried over to the `_execute_action` command when an extension migrates from Manifest V2 to V3. This was implemented in Chrome 111 and Firefox 127.
@@ -211,7 +211,7 @@ See [Manifest V3 migration for `browser_style`](https://developer.mozilla.org/en
 
 ### Scripting API
 
-The [Scripting API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting) takes over the features of `tabs.insertCSS()`, `tabs.removeCSS()`, and `tabs.executeScript()` and adds capabilities to register, update, and unregister content scripts at runtime.
+The [Scripting API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/scripting) takes over the features of `tabs.insertCSS()`, `tabs.removeCSS()`, and `tabs.executeScript()`, and adds capabilities to register, update, and unregister content scripts at runtime.
 
 Also, the `code` parameter is removed so that arbitrary strings can no longer be executed. This API requires the [`scripting` permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). So, you need to move any arbitrary strings executed as scripts to files and rewrite your code to use the Scripting API.
 
@@ -223,9 +223,25 @@ Also, the `code` parameter is removed so that arbitrary strings can no longer be
 
 {% capture content %}
 
+### userScripts API
+
+Manifest V3 uses a [userScripts API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts) that is incompatible with the API of the same name available to Manifest  MV2 extensions.
+
+::: note
+AMO only approves of the use of the API for user script managers.
+:::
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+    id: "userscripts-api"
+    content: content
+%}
+
+{% capture content %}
+
 ### Event-driven background scripts
 
-Firefox has extended support for [background scripts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) by enabling non-persistent background pages (aka Event Pages) for Manifest V2 and V3. Using non-persistent background scripts greatly reduces your extension use of browser resources. However, MV3 removes support for persistent background pages.
+Firefox has extended support for [background scripts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) by enabling non-persistent background pages (aka Event Pages) for Manifest V2 and V3. Using non-persistent background scripts significantly reduces your extension's use of browser resources. However, MV3 removes support for persistent background pages.
 
 To migrate your extension to using non-persistent background pages, you need to:
 
@@ -234,10 +250,10 @@ To migrate your extension to using non-persistent background pages, you need to:
 - Record state changes in local storage.
 - Change timers to alarms.
 - Switch from using [`extension.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage) to call a function from the background page, to [`runtime.getBackgroundPage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage).
-- Place menu creation using [`menus.create`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) or its alias `contextMenus.create` in a `runtime.onInstalled` listener. Also, note that the [`menus.onClicked`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked) event or its alias `contextMenus.onClicked` must be used to handle menu entry click events from an event page, instead of the `onclick` parameter of the `contextMenus.create` or `contextMenus.update` methods. If the `onclick` property of `menus.create` or its alias `contextMenus.create` are used from a call originating from an event page, they throw synchronously.
+- Place menu creation using [`menus.create`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) or its alias `contextMenus.create` in a `runtime.onInstalled` listener. Also, note that the [`menus.onClicked`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked) event or its alias `contextMenus.onClicked` must be used to handle menu entry click events from an event page, instead of the `onclick` parameter of the `contextMenus.create` or `contextMenus.update` methods. If the `onclick` property of `menus.create` or its alias `contextMenus.create` is used from a call originating from an event page, they throw synchronously.
 
 ::: note
-Safari also supports event-driven background scripts, however, Chromium has adopted service workers instead.
+Safari also supports event-driven background scripts; however, Chromium has adopted service workers instead.
 :::
 
 ::: note
@@ -261,7 +277,7 @@ More information on the migration process can be found on the [background script
 This section is only relevant if your extension supports Firefox 105 and earlier.
 :::
 
-An extension designed as a non-persistent background page works even when event pages are not supported (i.e., in Firefox 105 and earlier) with one exception: the registration of context menus. In an event page, context menus persist across restarts, while they do not in persistent background pages.
+An extension designed as a non-persistent background page works even when event pages are not supported (i.e., in Firefox 105 and earlier), with one exception: the registration of context menus. In an event page, context menus persist across restarts, while they do not in persistent background pages.
 
 If the recommendation to register menus in `runtime.onInstalled` is followed, these menus are removed after a browser restart in Firefox 105 and earlier. To work around this issue, you could unconditionally call `browser.contextMenus.create`. When the menu exists, the `browser.runtime.lastError` property is set when the (optional) `create` callback is called.
 
@@ -314,6 +330,21 @@ if (eventPagesSupported) {
 
 {% capture content %}
 
+### XHR and fetch in content scripts
+
+Cross-origin requests, permitted by extension permissions, using [XHR and fetch](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch) in content scripts are no longer allowed. Instead:
+- The destination server should use CORS, or
+- The extension has to send a message to the background page (or an extension tab or frame) to ask it to make a request on the content script's behalf.
+
+{% endcapture %}
+
+{% include modules/one-column.liquid,
+    id: "xhr-and-fetch-in-content-scripts"
+    content: content
+%}
+
+{% capture content %}
+
 ### Content security policies
 
 [Content security policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) in the [`content_security_policy`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key is changing to use the `extension_pages` property. 
@@ -329,6 +360,8 @@ Therefore, you need to move the extension’s CSP to the manifest.json key to `e
 Manifest V3 has a more restrictive content security policy than Manifest V2, this may require further changes in your pages.
 
 Mozilla’s long-standing [add-on policies](/documentation/publish/add-on-policies/) prohibit remote code execution. In keeping with these policies, the [content_security_policy](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) field no longer supports sources permitting remote code in script-related directives, such as `script-src` or `’unsafe-eval’`. The only permitted values for the `script-src` directive are `’self’` and `’wasm-unsafe-eval’`. `’wasm-unsafe-eval’` must be specified in the CSP if an extension is to use WebAssembly. In Manifest V3, content scripts are subject to the same CSP as other parts of the extension.
+
+The Manifest V3 CSP also includes `upgrade-insecure-requests` by default.
 
 Historically, a custom extension CSP required `object-src` to be specified. This is not required in Manifest V3 (and was removed from Manifest V2 in Firefox 106). See [`object-src` in the `content_security_policy` documentation](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive)). This change makes it easier for extensions to customize the CSP with minimal boilerplate.
 
@@ -408,10 +441,16 @@ The format of the top-level manifest.json `version` key in Firefox has evolved a
 - Convert background pages to be non-persistent.
 - Move the extension’s CSP to the manifest.json key `content_security_policy.extension_pages` and update the CSP to conform to Manifest V3 requirements.
 - Move any arbitrary strings executed as scripts to files and update your code to use the Scripting API.
+- Switch to using the new version of the userScripts API.
+- Ensure any cross-origin requests using fetch or XHR are sent to servers that implement CORS, or are made via a background page (or an extension tab or frame).
 - Rename the deprecated manifest.json key `applications` to `browser_specific_settings`.
 - The add-on ID is required to publish your extension. Make sure to add one in the manifest.json key `browser_specific_settings.gecko.id`.
 - Replace `extension.lastError` with `runtime.lastError` and `extension.getURL` with `runtime.getURL`.
 - Ensure that the top-level manifest.json key `version` is a string of numbers separated by up to 3 dots. For details, see [version format](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version/format).
+
+::: note
+If your extension includes a data collection experience, consider using the [built-in consent for data collection and transmission](/documentation/develop/firefox-builtin-data-consent/).
+:::
 
 {% endcapture %}
 {% include modules/one-column.liquid,
