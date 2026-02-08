@@ -280,48 +280,7 @@ If your extension collects data and a user installs it on Firefox for desktop 13
 
 For new extensions, options 1 or 2 make the most sense, as most users are on newer versions of Firefox.
 
-To determine the platform and Firefox version the extension is installing on, check `os` from [runtime.getPlatformInfo()](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo) and `version` from [runtime.getBrowserInfo()](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo) in a [runtime.onInstalled](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) listener, like this:
-
-```js
-async function handleInstalled(details) {
-
-// Get the platform details
-  let platform = await browser.runtime.getPlatformInfo();
-
-// Get the browser details
-  let browserInfo = await browser.runtime.getBrowserInfo();
-
-// Get the major version number
-  const browserVersion = browserInfo.version
-  const browserVersionParts = browserVersion.split('.').map(Number);
-  const majorVersion = browserVersionParts[1]
-
-// Set the target browser versions
-  const androidTargetVersion = 141;
-  const desktopTargetVersion = 139;
-
-//Test for the OS and browser version 
-  if (platform.os == 'android') {
-
-    if (majorVersion <= androidTargetVersion) {
-      console.log("Installed on Firefox for Android 141 or earlier");
-      // Call your custom data collection experience
-      // or turn off data collection
-    }
-  } else {
-
-    if (majorVersion <=  desktopTargetVersion)  {
-      console.log("Installed on Firefox for desktop 139 or earlier");
-      // Call your custom data collection experience
-      // or turn off data collection
-    }
-
-  }
-
-}
-
-browser.runtime.onInstalled.addListener(handleInstalled)
-```
+If you choose to implement options 2 or 3, use the technique described in [Accessing the data collection permissions programmatically](#acessing-data-permissions-programmatically) to determine whether the `data_collection` key is present. If the key is absent, then turn off the data collection or trigger the display of the custom data collection experience.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
