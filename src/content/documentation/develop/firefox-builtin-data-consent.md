@@ -9,9 +9,10 @@ contributors:
   [
     abyrne-moz,
     wagnerand,
-    willdurand
+    willdurand,
+    rebloor
   ]
-last_updated_by: wagnerand
+last_updated_by: rebloor
 date: 2025-08-04
 ---
 
@@ -25,6 +26,8 @@ date: 2025-08-04
 Firefox supports built-in consent for data collection and transmission in Firefox for desktop 140 and later, and Firefox for Android 142 and later.
 
 From November 3, 2025, all new extensions must adopt the Firefox built-in data collection consent system. Extensions must state if and what data they collect or transmit. New versions and updates for add-ons created before November 3 don’t need to use this feature, but will have to at a later date.
+
+Implementing the built-in consent feature doesn't remove the obligation to create a [custom data collection experience](documentation/develop/best-practices-for-collecting-user-data-consents/) for use when installing on Firefox versions from before the feature's introduction. See [Data collection experience on older Firefox versions](#data-collection-experience-on-older-Firefox-versions) for implementation advice.
 
 For updates on the rollout and the timeline for AMO accepting submissions using this feature and for tips on how to take advantage of it, see the [community blog](https://blog.mozilla.org/addons/).
 :::
@@ -262,6 +265,26 @@ To see how the data collection prompts appear to a user for a new install or upg
 {% endcapture %}
 {% include modules/one-column.liquid,
     id: "testing"
+    content: content
+%}
+
+{% capture content %}
+
+## Data collection experience on older Firefox versions
+
+If your extension collects data and a user installs it on Firefox for desktop 139 or earlier, or Firefox for Android 141 or earlier, it must display a [custom data collection experience](documentation/develop/best-practices-for-collecting-user-data-consents/). To allow for this, you have three options:
+
+1. Set `strict_min_version` to 140 and 142 for [`gecko`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#strict_min_version) and [`gecko_android`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#strict_min_version_2) respectively in the extension's manifest.json file's `browser_specific_settings` key. This setting prevents the extension from installing or running on Firefox versions that do not support the built-in experience. 
+2. Turn off the data collection for old Firefox versions. As this may limit the extension's features, consider informing users that they can use the extension fully by upgrading to the latest version of Firefox.
+3. Triggered the display of a custom data collection experience for old Firefox versions.
+
+For new extensions, options 1 or 2 make the most sense, as most users are on newer versions of Firefox.
+
+If you choose to implement options 2 or 3, use the technique described in [Accessing the data collection permissions programmatically](#acessing-data-permissions-programmatically) to determine whether the `data_collection` key is present. If the key is absent, then turn off the data collection or trigger the display of the custom data collection experience.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+    id: "data-collection-experience-on-older-Firefox-versions"
     content: content
 %}
 
