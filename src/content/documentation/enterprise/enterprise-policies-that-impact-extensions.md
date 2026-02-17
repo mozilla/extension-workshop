@@ -16,7 +16,7 @@ date: 2019-08-12 05:01:39
 
 # Enterprise policies that impact extensions
 
-Policies enable you to control the capabilities of Firefox. This article summarizes the policies that affect the installation, behavior, and update of web extensions. For a full list of policies, see [mozilla/policy-templates](https://github.com/mozilla/policy-templates) on GitHub. For details on how to implement policies, see [Manage settings via policy](https://support.mozilla.org/products/firefox-enterprise/policies-customization-enterprise/manage-settings-policy).
+Policies enable you to control the capabilities of Firefox. This article summarizes the policies that affect the installation, behavior, and update of web extensions. For a full list of policies, see the [Firefox administrator reference ](https://firefox-admin-docs.mozilla.org/reference/policies/). For details on how to implement policies, see [Configuring policies](https://firefox-admin-docs.mozilla.org/guides/policies-configuration/).
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
