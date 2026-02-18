@@ -66,7 +66,7 @@ The recommended alternative approach is to use the option for self-distributed a
 
 This is the recommended approach to installing add-ons automatically. The ExtensionSettings policy enables you to set default behavior for the browser and installation behavior for extensions. For example, you could disable extension installation generally, then automatically install or allow installation of specific extensions.
 
-See [ExtensionSettings](https://mozilla.github.io/policy-templates/#extensionsettings) for details.
+See [ExtensionSettings](https://firefox-admin-docs.mozilla.org/reference/policies/extensionsettings/) for details.
 
 {% endcapture %}
 {% include modules/one-column.liquid,

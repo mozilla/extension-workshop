@@ -26,8 +26,8 @@ Firefox provides a built-in consent for data collection and transmission in Fire
 :::
 
 ::: note
-If your extension is installed in an enterprise via the `force_installed` or `normal_installed` options in the [ExtensionSettings enterprise policy](https://mozilla.github.io/policy-templates/#extensionsettings), you must still implement the disclosure and consent experience in the add-on.
-You can set a value via the [3rdparty enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty) and read it with `storage.managed` in the add-on to determine if consent is granted. You must display the disclosure and consent experience if the value is not set in `storage.managed`.
+If your extension is installed in an enterprise via the `force_installed` or `normal_installed` options in the [ExtensionSettings enterprise policy](https://firefox-admin-docs.mozilla.org/reference/policies/extensionsettings/), you must still implement the disclosure and consent experience in the add-on.
+You can set a value via the [3rdparty enterprise policy](https://firefox-admin-docs.mozilla.org/reference/policies/3rdparty/) and read it with `storage.managed` in the add-on to determine if consent is granted. You must display the disclosure and consent experience if the value is not set in `storage.managed`.
 :::
 
 {% endcapture %}
