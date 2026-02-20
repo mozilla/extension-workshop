@@ -25,11 +25,10 @@ contributors:
     djbrown,
     kirinokirino,
     dotproto,
-    andrewbaxter,
-    dotproto
+    andrewbaxter
   ]
-last_updated_by: dotproto
-date: 2025-10-29
+last_updated_by: Rob--W
+date: 2026-01-05
 ---
 
 <!-- Page Hero Banner -->
@@ -96,6 +95,8 @@ You need to set an ID in your extensions manifest.json file when:
 
 See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings) for the syntax of setting the extension ID.
 
+To find the ID for an extension that has already been published, install your existing extension from AMO, visit `about:debugging` and look at the `Extension ID` field of your extension.
+
 {% endcapture %}
 {% include modules/one-column.liquid,
   id: "how-do-i-set-an-add-on-id"
@@ -110,13 +111,13 @@ See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org
 
 ## Working without an ID in Manifest V2
 
-An add-on ID is optional for Manifest V2 extensions. If you don't set it, you can generally develop, debug, publish, and update your extension without ever having to deal with an ID. However, if you do add the `browser_specific_settings` manifest key (to add an ID), Google Chrome ignores it, and Apple Safari ignores Firefox's `gecko` and `gecko_android` sub-keys.
+An add-on ID is optional for Manifest V2 extensions. If you don't set it, you can generally develop, debug, publish, and update your extension without ever having to deal with an ID. If you do add the `browser_specific_settings` manifest key (to add an ID), Google Chrome ignores it, and Apple Safari ignores Firefox's `gecko` and `gecko_android` sub-keys.
 
 However, there are some implications of not setting an add-on ID that are described in this section.
 
 ### Developing and debugging
 
-If your manifest.json does not contain an ID, the extension is assigned a randomly-generated temporary ID when you [install it in Firefox](/documentation/develop/temporary-installation-in-firefox/) through `about:debugging`. If you then reload the extension using the "Reload" button, the same ID is used. If you restart Firefox and load the add-on again, it gets a new ID. This affects the APIs listed in [Development and testing](#development-and-testing].
+If your manifest.json does not contain an ID, the extension is assigned a randomly-generated temporary ID when you [install it in Firefox](/documentation/develop/temporary-installation-in-firefox/) through `about:debugging`. If you then reload the extension using the "Reload" button, the same ID is used. If you restart Firefox and load the add-on again, it gets a new ID. This affects the APIs listed in [Development and testing](#development-and-testing).
 
 If you turn the extension into an `.xpi` or `.zip` and install it through `about:addons`, it does not work. For it to work, you must add the [`browser_specific_settings`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`.
 
@@ -124,11 +125,16 @@ If you turn the extension into an `.xpi` or `.zip` and install it through `about
 
 When you have finished developing the extension, you can [package it and submit it to AMO for review and signing](/documentation/publish/signing-and-distribution-overview/). If the packaged extension you upload does not contain an ID, AMO generates one. It's only at this point that the add-on is assigned a permanent ID, which is embedded in the signed packaged extension.
 
+This ID is shown as `Extension ID` at `about:debugging` after the add-on is installed. This ID is the same for all users of the add-on.
+
 ### Updating
 
 After publication, you don't generally have to deal with the ID. You can continue to develop the add-on without an ID, and when you want to update, upload the new version by visiting the add-on's AMO page. Because you are uploading the add-on through that page, AMO knows that this is an update to the add-on, even though it doesn't contain an ID.
 
 However, if you use [AMO's API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to upload an update to a Manifest V2 extension that doesn't define the ID in its manifest.json file you must include the add-on's ID in the request.
+
+And if you update your extension to use Manifest Version 3, [the add-on ID must be set](#how-do-i-set-an-add-on-id).
+
 
 {% endcapture %}
 {% include modules/one-column.liquid,
