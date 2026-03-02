@@ -147,7 +147,7 @@ Environment variable: `$WEB_EXT_OVERWRITE_DEST=true`
 
 #### `--filename`, `-n`
 
-Name of the created extension package file. In this option, the values defined in `manifest.json` can be used by enclosing them with `{ }`. The default value is `{name}-{version}.zip`.
+Name of the created extension package file. In this option, the values defined in `manifest.json` can be used by enclosing them with `{ }`. The default value is `{name}-{version}.zip`. The package file is always created in the artifacts directory specified by e.g. `--artifacts-dir`.
 
 Environment variable: `$WEB_EXT_FILENAME`
 </section>
