@@ -22,7 +22,7 @@ If your extension collects user data, it must comply with the requirement of the
 A common developer question about these policies is how to translate them into browser extension features that are compliant to [Mozilla’s Add-on policies](/documentation/publish/add-on-policies/). This how-to is the result of those requests and offers advice on implementing prompts to meet the data collection and add-on policies. This article suggests how you can implement suitable prompts but it doesn’t replace or supersede the policies; you still need to confirm that your extension complies with the policies.
 
 ::: note
-Firefox provides a built-in consent for data collection and transmission in Firefox for desktop 140 and later, and Firefox for Android 142 and later. See [Firefox built-in consent for data collection and transmission](/documentation/develop/best-practices-for-collecting-user-data-consents/).
+Firefox provides a built-in consent for data collection and transmission in Firefox for desktop 140 and later, and Firefox for Android 142 and later. See [Firefox built-in consent for data collection and transmission](/documentation/develop/firefox-builtin-data-consent/).
 :::
 
 ::: note

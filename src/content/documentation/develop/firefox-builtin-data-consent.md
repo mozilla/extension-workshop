@@ -272,7 +272,7 @@ To see how the data collection prompts appear to a user for a new install or upg
 
 ## Data collection experience on older Firefox versions
 
-If your extension collects data and a user installs it on Firefox for desktop 139 or earlier, or Firefox for Android 141 or earlier, it must display a [custom data collection experience](documentation/develop/best-practices-for-collecting-user-data-consents/). To allow for this, you have three options:
+If your extension collects data and a user installs it on Firefox for desktop 139 or earlier, or Firefox for Android 141 or earlier, it must display a [custom data collection experience](/documentation/develop/best-practices-for-collecting-user-data-consents/). To allow for this, you have three options:
 
 1. Set `strict_min_version` to 140 and 142 for [`gecko`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#strict_min_version) and [`gecko_android`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#strict_min_version_2) respectively in the extension's manifest.json file's `browser_specific_settings` key. This setting prevents the extension from installing or running on Firefox versions that do not support the built-in experience. 
 2. Turn off the data collection for old Firefox versions. As this may limit the extension's features, consider informing users that they can use the extension fully by upgrading to the latest version of Firefox.
