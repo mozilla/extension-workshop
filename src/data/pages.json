@@ -354,6 +354,14 @@
                   {
                     "title": "Updates",
                     "id": "updates"
+                  },
+                  {
+                    "title": "Testing",
+                    "id": "testing"
+                  },
+                  {
+                    "title": "Data collection experience on older Firefox versions",
+                    "id": "data-collection-experience-on-older-Firefox-versions"
                   }
                 ]
               },
