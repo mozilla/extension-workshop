@@ -175,15 +175,31 @@ Add-ons must limit data transmission to what is necessary for functionality, and
 
 If the add-on uses native messaging, the Add-on Policies (including those related to user consent and control) apply to any data sent to the native application as well.
 
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "data-collection-and-transmission-disclosure-and-control"
+  content: content
+%}
+
+{% capture content %}
+
 ### Prohibited Data Collection and Transmission
 
 * Search functionality provided or loaded by the add-on must not transmit search terms or intercept searches that are going to a third-party search provider.
 * Transmitting or facilitating the transmission of ancillary information (e.g. any data not required for the add-on’s functionality as stated in the description) is prohibited.
 * The transmission of browsing activity is only permitted as part of the add-on’s primary function.
 
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "prohibited-data-collection-and-transmission"
+  content: content
+%}
+
+{% capture content %}
+
 ### User Consent and Control
 
-The user must be provided with a clear way to control the add-on’s data transmission, either through a consent experience created by the add-on developer, or by using Firefox’s built in data collection and transmission consent experience. In the case of add-ons that qualify for implicit consent, under the “Implicit Consent for Self-Evident, Single-Use Extension” policy, installation is the consent.
+The user must be provided with a clear way to control the add-on’s data transmission, either through a consent experience created by the add-on developer, or by using Firefox’s built in data collection and transmission consent experience. In the case of add-ons that qualify for implicit consent, under the [Implicit Consent for Self-Evident, Single-Use Extension](#implicit-consent-for-self-evident-single-use-extension) policy, installation is the consent.
 
 Add-ons installed in an enterprise environment can bypass asking for data collection consent when they are installed by enterprise policy. For more information, refer to the [enterprise documentation](/documentation/enterprise/enterprise-development/). If the add-on uses Firefox’s built-in data collection and transmission consent experience, then the browser will bypass this by default.
 
@@ -208,6 +224,14 @@ If both personal and technical data is being transmitted, the user must be provi
 
 Please refer to our [best practices](/documentation/develop/best-practices-for-collecting-user-data-consents/) for advice and examples on how to design and implement a data transmission consent prompt.
 
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "user-consent-and-control"
+  content: content
+%}
+
+{% capture content %}
+
 #### Personal Data (opt-in)
 
 Personally identifiable information can be actively provided by the user or obtained through extension APIs. It includes, but is not limited to names, email addresses, search terms and browsing activity data, as well as access to and placement of cookies.
@@ -216,8 +240,15 @@ Before an add-on may transmit personal information, it must clearly describe, an
 
 If the primary function of the add-on does not work without transmitting personal data, the add-on must provide a choice for the user to either accept the data transmission or uninstall the add-on.
 
-#### Implicit Consent for Self-Evident, Single-Use Extension
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "personal-data-opt-in"
+  content: content
+%}
 
+{% capture content %}
+
+#### Implicit Consent for Self-Evident, Single-Use Extension
 
 Implicit consent applies only to add-ons hosted on addons.mozilla.org when all of the following conditions are satisfied. Otherwise the standard explicit consent rules apply.
 
@@ -237,11 +268,27 @@ Implicit consent applies only to add-ons hosted on addons.mozilla.org when all o
 
 When all the above conditions are met, invoking the primary function is deemed implicit consent for transmitting the user-supplied data needed to perform that function. No additional dialog needs to be shown at install time. If any other data is transmitted, explicit consent at time of install is required.
 
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "implicit-consent-for-self-evident-single-use-extension"
+  content: content
+%}
+
+{% capture content %}
+
 #### Technical & User Interaction Data (opt-out)
 
 Technical data describes information about the environment the user is running, such as browser settings, platform information and hardware properties. User interaction data includes how the user interacts with Firefox and the installed add-ons, metrics for product improvement, and error information.
 
 When an add-on transmits either of these types of information, it must allow the user to disable that data transmission (opt-out) during the initial consent experience. The add-on functionality must not be restricted if the user declines transmission of this data.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "technical-and-user-rnteraction-data-opt-out"
+  content: content
+%}
+
+{% capture content %}
 
 ### Additional Privacy Protocols
 
@@ -250,7 +297,7 @@ When an add-on transmits either of these types of information, it must allow the
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-  id: "data-collection-and-transmission-disclosure-and-control"
+  id: "additional-privacy-protocols"
   content: content
 %}
 

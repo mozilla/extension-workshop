@@ -17,9 +17,9 @@ date: 2025-12-18
 
 # Prompt users for data and privacy consents
 
-If your extension collects user data, it must comply with the requirement of the [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management) section of the [Add-on Policies](/documentation/publish/add-on-policies/).
+If your extension collects user data, it must comply with the requirement of the [Data Collection and Transmission Disclosure and Control](/documentation/publish/add-on-policies/#data-collection-and-transmission-disclosure-and-control) section of the [Add-on Policies](/documentation/publish/add-on-policies/).
 
-A common developer question about these policies is how to translate them into browser extension features that are compliant to [Mozilla’s Add-on policies](/documentation/publish/add-on-policies/). This how-to is the result of those requests and offers advice on implementing prompts to meet the data collection and add-on policies. This article suggests how you can implement suitable prompts but it doesn’t replace or supersede the policies; you still need to confirm that your extension complies with the policies.
+A common developer question about these policies is how to translate them into compliant browser extension features. This how-to is the result of those requests and offers advice on implementing prompts to meet the data collection and add-on policies. This article suggests how you can implement suitable prompts but it doesn’t replace or supersede the policies; you still need to confirm that your extension complies with the policies.
 
 ::: note
 Firefox provides a built-in consent for data collection and transmission in Firefox for desktop 140 and later, and Firefox for Android 142 and later. See [Firefox built-in consent for data collection and transmission](/documentation/develop/firefox-builtin-data-consent/).
@@ -48,7 +48,7 @@ To create the consent flow and consent dialogs your extension needs, you should 
 1. Does my extension collect technical or interaction data? If so, offer the user the opportunity to opt-out of this data collection, although you can always offer opt-in consent if you prefer.
 2. Does my extension collect personally identifying information? If so, get the user’s opt-in consent before collecting any of this data. Remember that personally identifying information includes technical or interaction data tagged with the user’s identity or information that can be used to identify the user, such as an URL.
 
-If you are unsure whether your add-on collects personal, technical, or interaction data, refer to the definition in [Data Disclosure, Collection and Management](/documentation/publish/add-on-policies/#data-disclosure-collection-and-management). 
+If you are unsure whether your add-on collects personal, technical, or interaction data, refer to the definition in [Data Collection and Transmission Disclosure and Control](/documentation/publish/add-on-policies/#data-collection-and-transmission-disclosure-and-control). 
 
 “Data” includes all information the extension collects, regardless of the manner of collection or the reason for collection. This also includes data collected as part of the extension’s  primary functionality.
 
@@ -94,7 +94,7 @@ As part of your extension’s onboarding flow, include information about your pr
 
 For more information on how to implement a post-install page or dialog, see [Best practices for onboarding, upboarding, and offboarding users](/documentation/develop/onboard-upboard-offboard-users/).
 
-As mentioned in the [Add-on policies](/documentation/publish/add-on-policies/), if your extension collects user data in association with features that run in the background, such as ad blocking, you need to make sure the data collection is not activated until you have obtained user consent.
+As mentioned in the [Add-on policies](/documentation/publish/add-on-policies/#data-collection-and-transmission-disclosure-and-control), if your extension collects user data in association with features that run in the background, such as ad blocking, you need to make sure the data collection is not activated until you have obtained user consent.
 
 If an update to your extension collects new personally identifying information, existing users must consent to the new data collection (opt-in) when your extension updates.
 
