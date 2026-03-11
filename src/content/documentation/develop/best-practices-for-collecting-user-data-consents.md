@@ -7,8 +7,8 @@ topic: Develop
 tags:
   [add-ons, extensions, how-to, privacy, ui, user-interface, ux, webextensions]
 contributors: [rebloor, hamatti, mkaply, abhn, dotproto]
-last_updated_by: dotproto
-date: 2025-12-18
+last_updated_by: rebloor
+date: 2026-03-12
 ---
 
 <!-- Page Hero Banner -->

@@ -16,8 +16,8 @@ contributors:
     kmaglione,
     dotproto,
   ]
-last_updated_by: dotproto
-date: 2025-09-17
+last_updated_by: rebloor
+date: 2026-03-12
 ---
 
 <!-- Page Hero Banner -->
@@ -47,6 +47,14 @@ When an add-on is given human review or otherwise assessed by Mozilla, these pol
 
 Users should be able to easily discern the functionality of your add-on based on the listing, and should not be presented with unexpected user experiences after installing it. The listing should include an easy-to-read description of what the add-on does, and what information it transmits. Please consult our best practices guide for [creating an appealing listing](/documentation/develop/create-an-appealing-listing/).
 
+{% endcapture %}
+{% include modules/column-w-toc.liquid,
+  id: "no-surprises"
+  content: content_with_toc
+%}
+
+{% capture content %}
+
 ### Unexpected features
 
 “Unexpected” features are those that are unrelated to the add-on’s primary function, and are not clearly indicated by the add-on name or description. This may include features that impact user privacy or security, make unexpected changes to web content, or change default settings like the new tab page, homepage, or search engine.
@@ -58,9 +66,9 @@ Any “unexpected” feature(s) must adhere to all of the following requirements
 * The opt-in interface must clearly state the name of the add-on requesting the change.
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid,
-  id: "no-surprises"
-  content: content_with_toc
+{% include modules/one-column.liquid,
+  id: "unexpected-features"
+  content: content
 %}
 
 <!-- END: Content with Table of Contents -->
@@ -100,6 +108,13 @@ Add-ons must function only as described. During review, the add-on undergoes bas
 
 If corrections have been requested and are submitted as part of a new version, the new version should not contain unrelated changes, as this complicates the review process and can lead to further delays or rejections.
 
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "submission-guidelines"
+  content: content
+%}
+{% capture content %}
+
 ### Source Code Submission
 
 Code must be provided in a way that is reviewable. Add-ons may contain transpiled, minified or otherwise machine-generated code, but Mozilla needs to review a copy of the source code before any of these steps have been applied.
@@ -114,7 +129,7 @@ Please read our [Source Code Submission guidelines](/documentation/publish/sourc
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-  id: "submission-guidelines"
+  id: "source-code-submission"
   content: content
 %}
 
@@ -329,6 +344,14 @@ When an add-on transmits either of these types of information, it must allow the
 
 We expect all add-ons, whether hosted on addons.mozilla.org or not, to be secure and well-maintained in how they handle both their own data and their users’ data. They must also securely manage all of their interactions with the web and the browser and the operating system.
 
+{% endcapture %}
+{% include modules/one-column.liquid,
+  id: "security-compliance-and-blocking"
+  content: content
+%}
+
+{% capture content %}
+
 ### Policy Enforcement
 
 Mozilla may reject or block affected versions or entire add-ons that don’t comply with the above policies, depending on the extent of their non-compliance.
@@ -341,7 +364,7 @@ For more information about rejection and blocking, see [What does review rejecti
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-  id: "security-compliance-and-blocking"
+  id: "policy-enforcement"
   content: content
 %}
 
