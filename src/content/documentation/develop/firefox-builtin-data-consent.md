@@ -13,7 +13,7 @@ contributors:
     rebloor
   ]
 last_updated_by: rebloor
-date: 2025-08-04
+date: 2026-03-12
 ---
 
 <!-- Page Hero Banner -->
@@ -27,7 +27,7 @@ Firefox supports built-in consent for data collection and transmission in Firefo
 
 From November 3, 2025, all new extensions must adopt the Firefox built-in data collection consent system. Extensions must state if and what data they collect or transmit. New versions and updates for add-ons created before November 3 don’t need to use this feature, but will have to at a later date.
 
-Implementing the built-in consent feature doesn't remove the obligation to create a [custom data collection experience](documentation/develop/best-practices-for-collecting-user-data-consents/) for use when installing on Firefox versions from before the feature's introduction. See [Data collection experience on older Firefox versions](#data-collection-experience-on-older-Firefox-versions) for implementation advice.
+Implementing the built-in consent feature doesn't remove the obligation to create a [custom data collection experience](/documentation/develop/best-practices-for-collecting-user-data-consents/) for use when installing on Firefox versions from before the feature's introduction. See [Data collection experience on older Firefox versions](#data-collection-experience-on-older-Firefox-versions) for implementation advice.
 
 For updates on the rollout and the timeline for AMO accepting submissions using this feature and for tips on how to take advantage of it, see the [community blog](https://blog.mozilla.org/addons/).
 :::
@@ -53,7 +53,7 @@ Firefox uses categories to standardize data collection information for developer
 
 Personally identifiable information can be actively provided by the user or obtained through extension APIs. It includes, but isn’t limited to, names, email addresses, search terms, and browsing activity data, as well as access to and placement of cookies.
 
-| Data type<br>visible during install    | Data collection permission<br>used in the manifest | Definition and examples                                                                                                                                                                                           | Eligible for [implicit consent](/documentation/publish/add-on-policies/#data-collection-and-transmission-disclosure-and-control)? |
+| Data type<br>visible during install    | Data collection permission<br>used in the manifest | Definition and examples                                                                                                                                                                                           | Eligible for [implicit consent](/documentation/publish/add-on-policies/#implicit-consent-for-self-evident-single-use-extension)? |
 |----------------------------------------|------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Personally identifying information** | `personallyIdentifyingInfo`                          | Examples: contact information such as name and address, email, and phone number, as well as other identifying data such as ID numbers, voice or video recordings, age, demographic information, or biometric data. | no                                                                                                                                                |
 | **Health information**                 | `healthInfo`                                         | Examples: medical history, symptoms, diagnoses, treatments, procedures, or heart rate data.                                                                                                                     | no                                                                                                                                                |
