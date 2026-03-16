@@ -125,6 +125,8 @@ These features are added:
 
 Packages an extension into a `.zip` file, ignoring files commonly unwanted in packages, such as `.git` and other artifacts. The name of the `.zip` file is taken from the [name](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) field in the extension [manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
+By default, the package file is created in the relative path `./web-ext-artifacts`. The location can be controlled with the [global](#global-options) `--artifacts-dir` option.
+
 <section id="as-needed">
 
 #### `--as-needed`
@@ -147,7 +149,7 @@ Environment variable: `$WEB_EXT_OVERWRITE_DEST=true`
 
 #### `--filename`, `-n`
 
-Name of the created extension package file. In this option, the values defined in `manifest.json` can be used by enclosing them with `{ }`. The default value is `{name}-{version}.zip`. The package file is always created in the artifacts directory specified by e.g. `--artifacts-dir`.
+Name of the created extension package file. In this option, the values defined in `manifest.json` can be used by enclosing them with `{ }`. The default value is `{name}-{version}.zip`.
 
 Environment variable: `$WEB_EXT_FILENAME`
 </section>
