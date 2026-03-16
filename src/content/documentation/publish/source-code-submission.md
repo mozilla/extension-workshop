@@ -104,7 +104,7 @@ Reviewers will try to replicate your build environment if specified. However, if
 - Ubuntu 24.04.4 LTS (Desktop edition)
 - ARM64 CPU architecture
 - 10GB of system memory (RAM), 6 cores of vCPU
-- Node 22 LTS and npm 10
+- Node 24.14.0 and npm 11.9.0
 - 35GB of free disk space
 
 You must let the reviewers know if any of the above differs from your build environment. Do this in the README file in your source submission. Otherwise, the reviewer's build might not match yours, and your submission may be rejected.
