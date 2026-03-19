@@ -331,7 +331,7 @@ If you don't want the page to be labelled as a draft (such as and when it's read
 Tags should aim to follow the AMO calendar format: `YYYY.MM.DD` with an optional
 `-x` suffix for cherry-picking.
 
-## Deployment
+## Deployments/Releases
 
 ### Stage Deploys
 
@@ -339,6 +339,9 @@ The site is auto-deployed on commits to `master` to https://extensionworkshop.al
 
 ### Production Deploys
 
-Tags matching `^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?$` regular expression will be deployed to https://extensionworkshop.com/. You can check the version on production with [the production version link](https://extensionworkshop.com/__version__).
+Tags matching `^20\d{2}\.\d{2}\.\d{2}(?:-\d+)?$` regular expression will be deployed to https://extensionworkshop.com/. You can check the version on production with [the production version link](https://extensionworkshop.com/__version__). A good example tag for a production deployment is `2026.03.03`.
 
-A good example tag for a production deploy would be `2022.03.03`.
+When you need to deploy a site version, you must create a git tag following the pattern described. To perform a release, you can use the GitHub Web UI and follow the instructions in [Managing releases in a repository][github-release-docs]. Using the _Generate release notes_ option is recommended, but if you do so, remove the details of any dependencies included in the release. You can take inspiration from the [previous releases][previous releases].
+
+[github-release-docs]: https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository
+[previous releases]: https://github.com/mozilla/extension-workshop/releases
