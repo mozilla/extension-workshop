@@ -3,10 +3,10 @@ layout: sidebar
 title: Community
 permalink: /community/
 tags: [community, contribute, webextensions]
-contributors: [caitmuenster, grlwholifts, Rob--W, dotproto]
+contributors: [caitmuenster, grlwholifts, Rob--W, dotproto, bacharakis]
 author: caitmuenster
-last_updated_by: dotproto
-date: 2023-09-20
+last_updated_by: bacharakis
+date: 2026-03-20
 ---
 
 <!-- Overview Page Hero Banner -->
@@ -55,7 +55,7 @@ Stay up to date with the latest information about add-on technology on the [Add-
 
 ### Questions about add-on development
 
-You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons) or [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon). You can also talk with us on [Matrix](https://wiki.mozilla.org/Matrix) in the [Add-ons room](https://mzl.la/2u8ZGbg) (for general development questions) or in the [add-on reviewers room](https://mzl.la/2IJ2Oi1) (for questions about an add-on review).
+You can get help and support by posting to [Mozilla's community forum](https://discourse.mozilla.org/c/add-ons), which is monitored by Mozilla, or [Stack Overflow](http://stackoverflow.com/questions/tagged/firefox-addon) to get help from the broader community. 
 
 ### Public meetings
 
