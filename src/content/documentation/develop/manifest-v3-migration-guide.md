@@ -361,7 +361,8 @@ Manifest V3 has a more restrictive content security policy than Manifest V2, thi
 
 Mozilla’s long-standing [add-on policies](/documentation/publish/add-on-policies/) prohibit remote code execution. In keeping with these policies, the [content_security_policy](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) field no longer supports sources permitting remote code in script-related directives, such as `script-src` or `’unsafe-eval’`. The only permitted values for the `script-src` directive are `’self’` and `’wasm-unsafe-eval’`. `’wasm-unsafe-eval’` must be specified in the CSP if an extension is to use WebAssembly. In Manifest V3, content scripts are subject to the same CSP as other parts of the extension.
 
-The Manifest V3 CSP also includes `upgrade-insecure-requests` by default.
+The Manifest V3 CSP also includes `upgrade-insecure-requests` by default. For more information, see [
+Upgrade insecure network requests in Manifest V3](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#upgrade_insecure_network_requests_in_manifest_v3) in the web extensions content security policy guide.
 
 Historically, a custom extension CSP required `object-src` to be specified. This is not required in Manifest V3 (and was removed from Manifest V2 in Firefox 106). See [`object-src` in the `content_security_policy` documentation](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive)). This change makes it easier for extensions to customize the CSP with minimal boilerplate.
 
