@@ -125,6 +125,8 @@ These features are added:
 
 Packages an extension into a `.zip` file, ignoring files commonly unwanted in packages, such as `.git` and other artifacts. The name of the `.zip` file is taken from the [name](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) field in the extension [manifest](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
+By default, the package file is created in the relative path `./web-ext-artifacts`. The location can be controlled with the [global](#global-options) `--artifacts-dir` option.
+
 <section id="as-needed">
 
 #### `--as-needed`
