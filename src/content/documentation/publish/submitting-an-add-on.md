@@ -155,7 +155,7 @@ If you want Firefox to handle updates to your add-on, remember to include the [`
 10. Click **Go to My Submissions**.
 11. You receive an email when your extension has been signed.
 12. Follow the link in the email or open your extension from My Add-ons and, under the latest version details, click  **View All**. <br/><br/> <img src="/assets/img/publish/view_all_versions.png" alt="The option to view all versions highlighted in the latest version box of an add-on submission page." style="box-shadow:0px 0px 0.5em gray;" />
-13. Select the version you uploaded and, on the version page, click the file link to download the signed copy of your add-on. <br/><br/> <img src="/assets/img/publish/signed_file.png
+13. Select the version you uploaded and, on the version page, right-click the file link and select "Save Link As..." to download the signed copy of your add-on. <br/><br/> <img src="/assets/img/publish/signed_file.png
 " alt="The download link for a signed copy of an add-on highlighted in an add-on submission version page." style="box-shadow:0px 0px 0.5em gray;" />
 
 You can now distribute your add-on. Note, however, that your add-on may be subject to further review. If it is, you receive notification of the outcome of the review later.
