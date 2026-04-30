@@ -15,9 +15,10 @@ contributors:
     wbamberg,
     kmaglione,
     dotproto,
+    bacharakis,
   ]
-last_updated_by: rebloor
-date: 2026-03-12
+last_updated_by: bacharakis
+date: 2026-04-30
 ---
 
 <!-- Page Hero Banner -->
@@ -43,7 +44,7 @@ When an add-on is given human review or otherwise assessed by Mozilla, these pol
 
 {% capture content_with_toc %}
 
-## No Surprises
+## 1. No Surprises
 
 Users should be able to easily discern the functionality of your add-on based on the listing, and should not be presented with unexpected user experiences after installing it. The listing should include an easy-to-read description of what the add-on does, and what information it transmits. Please consult our best practices guide for [creating an appealing listing](/documentation/develop/create-an-appealing-listing/).
 
@@ -55,15 +56,15 @@ Users should be able to easily discern the functionality of your add-on based on
 
 {% capture content %}
 
-### Unexpected features
+### 1.1. Unexpected features
 
 “Unexpected” features are those that are unrelated to the add-on’s primary function, and are not clearly indicated by the add-on name or description. This may include features that impact user privacy or security, make unexpected changes to web content, or change default settings like the new tab page, homepage, or search engine.
 
 Any “unexpected” feature(s) must adhere to all of the following requirements:
 
-* The add-on description must clearly state any changes made by these features.
-* The features must be “opt-in”, meaning the user has to take non-default action to enact the change. Changes prompted by Firefox after the add-on is installed do not require an additional opt-in. The permissions prompt shown when installing an add-on does not alleviate the need for an opt-in.
-* The opt-in interface must clearly state the name of the add-on requesting the change.
+1. The add-on description must clearly state any changes made by these features.
+2. The features must be “opt-in”, meaning the user has to take non-default action to enact the change. Changes prompted by Firefox after the add-on is installed do not require an additional opt-in. The permissions prompt shown when installing an add-on does not alleviate the need for an opt-in.
+3. The opt-in interface must clearly state the name of the add-on requesting the change.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -77,18 +78,18 @@ Any “unexpected” feature(s) must adhere to all of the following requirements
 
 {% capture content %}
 
-## Content
+## 2. Content
 
 Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Guidelines](https://www.mozilla.org/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “\<Add-on name\> for Firefox”.
 
 In addition, add-ons listed on addons.mozilla.org must adhere to the following policies:
 
-* All add-ons submitted for listing on addons.mozilla.org are subject to Mozilla’s [Acceptable Use Policy](https://www.mozilla.org/about/legal/acceptable-use/).
-* Listings must disclose when payment is required to enable any add-on functionality.
-* Add-ons and their content must conform to the laws of the United States. (Add-ons that violate or have content that violates the law in other jurisdictions may also be removed or have access limited.)
-* If the add-on is a fork of another add-on, the name must clearly distinguish it from the original and provide a significant difference in functionality and/or code.
-* Add-ons with the sole purpose of promoting, installing, loading or launching an outside website, application or add-on are not permitted.
-* Themes that feature low-quality, stretched, or blank images, as well as those themes in which the header image is misaligned, are not permitted. Duplicate themes are not permitted.
+1. All add-ons submitted for listing on addons.mozilla.org are subject to Mozilla’s [Acceptable Use Policy](https://www.mozilla.org/about/legal/acceptable-use/).
+2. Listings must disclose when payment is required to enable any add-on functionality.
+3. Add-ons and their content must conform to the laws of the United States. (Add-ons that violate or have content that violates the law in other jurisdictions may also be removed or have access limited.)
+4. If the add-on is a fork of another add-on, the name must clearly distinguish it from the original and provide a significant difference in functionality and/or code.
+5. Add-ons with the sole purpose of promoting, installing, loading or launching an outside website, application or add-on are not permitted.
+6. Themes that feature low-quality, stretched, or blank images, as well as those themes in which the header image is misaligned, are not permitted. Duplicate themes are not permitted.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -102,7 +103,7 @@ In addition, add-ons listed on addons.mozilla.org must adhere to the following p
 
 {% capture content %}
 
-## Submission Guidelines
+## 3. Submission Guidelines
 
 Add-ons must function only as described. During review, the add-on undergoes basic functional testing in addition to code review. To facilitate the functional testing, the add-on author must provide testing information and, if an account is needed for any part of the add-on’s functionality, testing credentials to allow use of the add-on.
 
@@ -115,7 +116,7 @@ If corrections have been requested and are submitted as part of a new version, t
 %}
 {% capture content %}
 
-### Source Code Submission
+### 3.1. Source Code Submission
 
 Code must be provided in a way that is reviewable. Add-ons may contain transpiled, minified or otherwise machine-generated code, but Mozilla needs to review a copy of the source code before any of these steps have been applied.
 
@@ -139,20 +140,20 @@ Please read our [Source Code Submission guidelines](/documentation/publish/sourc
 
 {% capture content %}
 
-## Development Practices
+## 4. Development Practices
 
 In general, developers are free to maintain their add-ons in the manner they choose. However, in order to maintain appropriate data security measures and allow us to effectively review code, we have certain technical requirements that all add-ons must meet. In particular, potentially dangerous APIs may only be used in ways that are demonstrably safe, and code within add-ons that cannot be verified as behaving safely and correctly may need to be refactored.
 
 The following requirements are of particular importance:
 
-* Add-ons must only request those permissions that are necessary for them to function.
-* Add-ons must be self-contained and not load remote code for execution.
-* Add-ons must not load or redirect to a remote new tab page. The new tab page must be contained within the add-on.
-* Add-ons must not relax web page security headers, such as the Content Security Policy.
-* Add-ons must use encryption when transporting data remotely.
-* Add-ons should avoid including redundant code or files.
-* Add-ons must not negatively impact the performance or stability of Firefox.
-* Only release versions of third-party libraries and/or frameworks may be included with an add-on. Modifications to these libraries/frameworks are not permitted. Please read our [third party library guidelines](/documentation/publish/third-party-library-usage/) to better understand related requirements.
+1. Add-ons must only request those permissions that are necessary for them to function.
+2. Add-ons must be self-contained and not load remote code for execution.
+3. Add-ons must not load or redirect to a remote new tab page. The new tab page must be contained within the add-on.
+4. Add-ons must not relax web page security headers, such as the Content Security Policy.
+5. Add-ons must use encryption when transporting data remotely.
+6. Add-ons should avoid including redundant code or files.
+7. Add-ons must not negatively impact the performance or stability of Firefox.
+8. Only release versions of third-party libraries and/or frameworks may be included with an add-on. Modifications to these libraries/frameworks are not permitted. Please read our [third party library guidelines](/documentation/publish/third-party-library-usage/) to better understand related requirements.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -166,11 +167,11 @@ The following requirements are of particular importance:
 
 {% capture content %}
 
-## User Scripts
+## 5. User Scripts
 Usage of the `userScripts` API is allowed for user script managers only. A user script manager is an extension that allows users to manage website-specific scripts. The `userScripts` API cannot be used to extend or modify the functionality of the user script manager itself. The user must:
 
-* Proactively install a user script using an explicit action, for instance a click on a button labeled “Install this user script”.
-* Be able to see which user scripts are currently installed and remove scripts without impacting the extension.
+1. Proactively install a user script using an explicit action, for instance a click on a button labeled “Install this user script”.
+2. Be able to see which user scripts are currently installed and remove scripts without impacting the extension.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -184,7 +185,7 @@ Usage of the `userScripts` API is allowed for user script managers only. A user 
 
 {% capture content %}
 
-## Data Collection and Transmission Disclosure and Control
+## 6. Data Collection and Transmission Disclosure and Control
 
 Add-ons must limit data transmission to what is necessary for functionality, and must use the data only for the purpose for which it was transmitted. For the purposes of this policy, data transmission refers to any data that is collected, used, transferred, shared, or handled outside of the add-on or the local browser.
 
@@ -198,11 +199,11 @@ If the add-on uses native messaging, the Add-on Policies (including those relate
 
 {% capture content %}
 
-### Prohibited Data Collection and Transmission
+### 6.1. Prohibited Data Collection and Transmission
 
-* Search functionality provided or loaded by the add-on must not transmit search terms or intercept searches that are going to a third-party search provider.
-* Transmitting or facilitating the transmission of ancillary information (e.g. any data not required for the add-on’s functionality as stated in the description) is prohibited.
-* The transmission of browsing activity is only permitted as part of the add-on’s primary function.
+1. Search functionality provided or loaded by the add-on must not transmit search terms or intercept searches that are going to a third-party search provider.
+2. Transmitting or facilitating the transmission of ancillary information (e.g. any data not required for the add-on’s functionality as stated in the description) is prohibited.
+3. The transmission of browsing activity is only permitted as part of the add-on’s primary function.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -212,28 +213,28 @@ If the add-on uses native messaging, the Add-on Policies (including those relate
 
 {% capture content %}
 
-### User Consent and Control
+### 6.2. User Consent and Control
 
 The user must be provided with a clear way to control the add-on’s data transmission, either through a consent experience created by the add-on developer, or by using Firefox’s built in data collection and transmission consent experience. In the case of add-ons that qualify for implicit consent, under the [Implicit Consent for Self-Evident, Single-Use Extension](#implicit-consent-for-self-evident-single-use-extension) policy, installation is the consent.
 
 Add-ons installed in an enterprise environment can bypass asking for data collection consent when they are installed by enterprise policy. For more information, refer to the [enterprise documentation](/documentation/enterprise/enterprise-development/). If the add-on uses Firefox’s built-in data collection and transmission consent experience, then the browser will bypass this by default.
 
-#### If the add-on is only compatible with Firefox 140 or later and uses Firefox’s built-in data collection and transmission consent experience:
+#### 6.2.1. If the add-on is only compatible with Firefox 140 or later and uses Firefox’s built-in data collection and transmission consent experience:
 
 It must accurately state the data collection practices in the extension manifest, including when it does not collect data, in line with the [Firefox add-on data classification taxonomy](/documentation/develop/firefox-builtin-data-consent/#taxonomy).
 
-#### If the add-on is compatible with Firefox 139 and earlier or does not use Firefox’s built-in data collection and transmission consent experience:
+#### 6.2.2. If the add-on is compatible with Firefox 139 and earlier or does not use Firefox’s built-in data collection and transmission consent experience:
 
 The user must be provided with a clear way to control the add-on’s data transmission immediately after installation of the add-on. If data transmission starts or changes in an add-on update, or the consent and control is introduced in an update, it must be shown to all new and upgrading users immediately after the update.
 
 The data transmission consent and control must be contained within the add-on. The consent experience must:
 
-* Be unmissable. It is recommended to present it in a new focused tab in the current window. Other ways that could be missed or accidentally hidden, like a popup window, will result in a rejection.
-* Be presented on a single page, including all choices and decision options.
-* Present users with a clear, readable data transmission consent. Information explaining the data transmitted must be prominently stated and not buried or hidden.
-  * Avoid deceptive design patterns that make it harder to understand your data transmission policy, including, but not limited to, illegible font sizes, reduced color contrast, hidden options, multi-step consent decline flows, and similar techniques indicative of deceptive design.
-* Clearly state what type of data is being transmitted.
-* Inform about the impact of accepting or declining the data transmission
+1. Be unmissable. It is recommended to present it in a new focused tab in the current window. Other ways that could be missed or accidentally hidden, like a popup window, will result in a rejection.
+2. Be presented on a single page, including all choices and decision options.
+3. Present users with a clear, readable data transmission consent. Information explaining the data transmitted must be prominently stated and not buried or hidden.
+    * Avoid deceptive design patterns that make it harder to understand your data transmission policy, including, but not limited to, illegible font sizes, reduced color contrast, hidden options, multi-step consent decline flows, and similar techniques indicative of deceptive design.
+4. Clearly state what type of data is being transmitted.
+5. Inform about the impact of accepting or declining the data transmission
 
 If both personal and technical data is being transmitted, the user must be provided separate choices. If the user declines the transmission, any resulting impact on their experience or use of the add-on must be limited to the data not being available.
 
@@ -247,7 +248,7 @@ Please refer to our [best practices](/documentation/develop/best-practices-for-c
 
 {% capture content %}
 
-#### Personal Data (opt-in)
+#### 6.2.3. Personal Data (opt-in)
 
 Personally identifiable information can be actively provided by the user or obtained through extension APIs. It includes, but is not limited to names, email addresses, search terms and browsing activity data, as well as access to and placement of cookies.
 
@@ -263,11 +264,11 @@ If the primary function of the add-on does not work without transmitting persona
 
 {% capture content %}
 
-#### Implicit Consent for Self-Evident, Single-Use Extension
+#### 6.2.4. Implicit Consent for Self-Evident, Single-Use Extension
 
 Implicit consent applies only to add-ons hosted on addons.mozilla.org when all of the following conditions are satisfied. Otherwise the standard explicit consent rules apply.
 
-##### Conditions
+##### 6.2.4. Conditions
 
 1. **Purpose-bounded and user-initiated** – Data may be transmitted only as a direct, immediate consequence of a single, deliberate user command (for example, a click or tap) on a clearly labelled control supplied by the browser or the add-on. Any passive, continuous, or background transmission requires explicit consent.
 
@@ -291,7 +292,7 @@ When all the above conditions are met, invoking the primary function is deemed i
 
 {% capture content %}
 
-#### Technical & User Interaction Data (opt-out)
+#### 6.2.5. Technical & User Interaction Data (opt-out)
 
 Technical data describes information about the environment the user is running, such as browser settings, platform information and hardware properties. User interaction data includes how the user interacts with Firefox and the installed add-ons, metrics for product improvement, and error information.
 
@@ -305,10 +306,10 @@ When an add-on transmits either of these types of information, it must allow the
 
 {% capture content %}
 
-### Additional Privacy Protocols
+### 6.3. Additional Privacy Protocols
 
-* Leaking local or user-specific information to websites or other applications (e.g. through native messaging) is prohibited.
-* Data from private browsing sessions must not be stored. Information that identifies a user across browsing sessions or containers must not be made available to web content.
+1. Leaking local or user-specific information to websites or other applications (e.g. through native messaging) is prohibited.
+2. Data from private browsing sessions must not be stored. Information that identifies a user across browsing sessions or containers must not be made available to web content.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -322,11 +323,11 @@ When an add-on transmits either of these types of information, it must allow the
 
 {% capture content %}
 
-## Monetization
+## 7. Monetization
 
-* An add-on injecting advertising into web page content must clearly identify the injected content as originating from the add-on.
-* The inclusion of any cryptocurrency miners in an add-on is prohibited.
-* Modifying web content or facilitating redirects to include affiliate promotion tags is not permitted. Conversely, the inclusion of affiliate promotions in user interface elements that are clearly identified as belonging to the add-on are acceptable.
+1. An add-on injecting advertising into web page content must clearly identify the injected content as originating from the add-on.
+2. The inclusion of any cryptocurrency miners in an add-on is prohibited.
+3. Modifying web content or facilitating redirects to include affiliate promotion tags is not permitted. Conversely, the inclusion of affiliate promotions in user interface elements that are clearly identified as belonging to the add-on are acceptable.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -340,7 +341,7 @@ When an add-on transmits either of these types of information, it must allow the
 
 {% capture content %}
 
-## Security, Compliance and Blocking
+## 8. Security, Compliance and Blocking
 
 We expect all add-ons, whether hosted on addons.mozilla.org or not, to be secure and well-maintained in how they handle both their own data and their users’ data. They must also securely manage all of their interactions with the web and the browser and the operating system.
 
@@ -352,7 +353,7 @@ We expect all add-ons, whether hosted on addons.mozilla.org or not, to be secure
 
 {% capture content %}
 
-### Policy Enforcement
+### 8.1. Policy Enforcement
 
 Mozilla may reject or block affected versions or entire add-ons that don’t comply with the above policies, depending on the extent of their non-compliance.
 
