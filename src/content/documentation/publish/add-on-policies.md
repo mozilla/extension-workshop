@@ -248,7 +248,7 @@ Please refer to our [best practices](/documentation/develop/best-practices-for-c
 
 {% capture content %}
 
-#### 6.2.3. Personal Data (opt-in)
+#### 6.2.2.1 Personal Data (opt-in)
 
 Personally identifiable information can be actively provided by the user or obtained through extension APIs. It includes, but is not limited to names, email addresses, search terms and browsing activity data, as well as access to and placement of cookies.
 
@@ -264,7 +264,7 @@ If the primary function of the add-on does not work without transmitting persona
 
 {% capture content %}
 
-#### 6.2.4. Implicit Consent for Self-Evident, Single-Use Extension
+#### 6.2.2.2. Implicit Consent for Self-Evident, Single-Use Extension
 
 Implicit consent applies only to add-ons hosted on addons.mozilla.org when all of these conditions are satisfied. Otherwise, the standard explicit consent rules apply.
 
@@ -290,7 +290,7 @@ When all the above conditions are met, invoking the primary function is deemed i
 
 {% capture content %}
 
-#### 6.2.5. Technical & User Interaction Data (opt-out)
+#### 6.2.2.3 Technical & User Interaction Data (opt-out)
 
 Technical data describes information about the environment the user is running, such as browser settings, platform information and hardware properties. User interaction data includes how the user interacts with Firefox and the installed add-ons, metrics for product improvement, and error information.
 
