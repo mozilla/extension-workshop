@@ -266,9 +266,7 @@ If the primary function of the add-on does not work without transmitting persona
 
 #### 6.2.4. Implicit Consent for Self-Evident, Single-Use Extension
 
-Implicit consent applies only to add-ons hosted on addons.mozilla.org when all of the following conditions are satisfied. Otherwise the standard explicit consent rules apply.
-
-##### 6.2.4. Conditions
+Implicit consent applies only to add-ons hosted on addons.mozilla.org when all of these conditions are satisfied. Otherwise, the standard explicit consent rules apply.
 
 1. **Purpose-bounded and user-initiated** – Data may be transmitted only as a direct, immediate consequence of a single, deliberate user command (for example, a click or tap) on a clearly labelled control supplied by the browser or the add-on. Any passive, continuous, or background transmission requires explicit consent.
 
