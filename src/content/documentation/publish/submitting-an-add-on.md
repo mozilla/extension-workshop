@@ -5,9 +5,9 @@ description: Step-by-step guide to submitting your Firefox extension to addons.m
 permalink: /documentation/publish/submitting-an-add-on/
 topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]
-contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz, wesinator, achangofpace]
+contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz, wesinator, achangofpace, robbycbennett]
 last_updated_by: achangofpace
-date: 2024-04-28
+date: 2026-05-10
 ---
 
 <!-- Page Hero Banner -->
