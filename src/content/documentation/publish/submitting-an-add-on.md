@@ -6,7 +6,7 @@ permalink: /documentation/publish/submitting-an-add-on/
 topic: Publish
 tags: [add-ons, beginner, tutorial, webextensions]
 contributors: [Rob--W, Roubo, rebloor, wbamberg, chrisdavidmills, andrewtruongmoz, wesinator, achangofpace, robbycbennett]
-last_updated_by: achangofpace
+last_updated_by: robbycbennett
 date: 2026-05-10
 ---
 
