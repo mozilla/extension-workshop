@@ -95,7 +95,7 @@ You need to set an ID in your extensions manifest.json file when:
 
 See [`browser_specific_settings` in manifest.json](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/browser_specific_settings) for the syntax of setting the extension ID.
 
-To find the ID for an extension that has already been published, install your existing extension from AMO, visit `about:debugging` and look at the `Extension ID` field of your extension.
+To find the ID for a published extension, open the extension's AMO listing page and click **Copy add-on ID** in the More information section.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
