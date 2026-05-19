@@ -125,7 +125,7 @@ If you turn the extension into an `.xpi` or `.zip` and install it through `about
 
 When you have finished developing the extension, you can [package it and submit it to AMO for review and signing](/documentation/publish/signing-and-distribution-overview/). If the packaged extension you upload does not contain an ID, AMO generates one. It's only at this point that the add-on is assigned a permanent ID, which is embedded in the signed packaged extension.
 
-This ID is shown as `Extension ID` at `about:debugging` after the add-on is installed. This ID is the same for all users of the add-on.
+After the add-on is installed, the ID is shown in the `about:debugging` **Extension ID** field. This ID is the same for all users of the add-on.
 
 ### Updating
 
@@ -133,7 +133,7 @@ After publication, you don't generally have to deal with the ID. You can continu
 
 However, if you use [AMO's API](https://addons-server.readthedocs.io/en/latest/topics/api/v4_frozen/signing.html) to upload an update to a Manifest V2 extension that doesn't define the ID in its manifest.json file you must include the add-on's ID in the request.
 
-And if you update your extension to use Manifest Version 3, [the add-on ID must be set](#how-do-i-set-an-add-on-id).
+And, if you update your extension to use Manifest Version 3, [the add-on ID must be set](#how-do-i-set-an-add-on-id).
 
 
 {% endcapture %}
