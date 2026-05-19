@@ -135,7 +135,6 @@ However, if you use [AMO's API](https://addons-server.readthedocs.io/en/latest/t
 
 And, if you update your extension to use Manifest Version 3, [the add-on ID must be set](#how-do-i-set-an-add-on-id).
 
-
 {% endcapture %}
 {% include modules/one-column.liquid,
   id: "basic-workflow-with-no-add-on-id"
