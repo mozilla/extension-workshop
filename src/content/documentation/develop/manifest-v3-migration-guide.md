@@ -392,9 +392,9 @@ To migrate your extension, rewrite the manifest.json key [‘web_accessible_reso
 
 ### Features already supported by Firefox
 
-Firefox (and Safari) support [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview#promises) when using the `browser.*` namespace.
+Historically Chrome's extension APIs were exposed via callback-based interfaces in the `chrome.*` namespace only. As part of its Manifest V3 implementation, Chromium introduced support for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview#promises) in their `chrome.*` namespace. By Chromium 148, the `browser.*` namespace is also supported except for extensions with a DevTools page ([Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace)).
 
-As part of its Manifest V3 implementation, Chromium started introducing the `browser.*` namespace and promises. By Chromium 148, the `browser.*` namespace is supported except for extensions with a DevTools page. For more information, see [Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace).
+Firefox pioneered the `browser.*` namespace, and made the [webextensions-polyfill](https://github.com/mozilla/webextension-polyfill) available for (Chromium) browsers that lacked support for the API.
 
 This situation means that all major browsers now support the `browser.*` namespace, providing greater compatibility between Firefox, Safari, and Chrome extensions.
 

@@ -29,7 +29,7 @@ date: 2026-05-19
 
 Work is progressing to standardize the APIs used for browser extension development. This page summarizes the differences between Firefox and the Chromium-based browsers, such as Chrome, Opera, and Microsoft Edge. These differences include:
 
-- **Namespace**: In Chromium-based browsers, extensions access the JavaScript APIs under the `chrome` namespace. In Firefox (and Safari), extensions access the APIs under the `browser` namespace. However, starting with Chromium 148, Chromium-based browsers also support the `browser` namespace, except for extensions with a DevTools page. For more information, see [Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace).
+- **Namespace**: In Chromium-based browsers, extensions access the JavaScript APIs under the `chrome` namespace. In Firefox (and Safari), extensions access the APIs under the `browser` namespace. However, starting with Chromium 148, Chromium-based browsers also support the `browser` namespace, except for extensions with a DevTools page.
 - **Asynchronous APIs**: In Chromium-based browsers, asynchronous APIs are implemented using callbacks. Firefox (and Safari) implement asynchronous APIs using promises. However, with the introduction of Manifest V3, Chromium has been updated to support promises in all APIs except the tools devtools APIs. For more information, see [Chromium issue 41483013: Support Promises on devtools extension API](https://issues.chromium.org/issues/41483013).
 - **API support**: Support for JavaScript APIs differs among browsers.
 - **Manifest key support**: Support for `manifest.json` keys differs among browsers.
