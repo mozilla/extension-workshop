@@ -392,11 +392,11 @@ To migrate your extension, rewrite the manifest.json key [‘web_accessible_reso
 
 ### Features already supported by Firefox
 
-Historically Chrome's extension APIs were exposed via callback-based interfaces in the `chrome.*` namespace only. As part of its Manifest V3 implementation, Chromium introduced support for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview#promises) in their `chrome.*` namespace. By Chromium 148, the `browser.*` namespace is also supported except for extensions with a DevTools page ([Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace)).
+Historically, Chrome's extension APIs were exposed only through callback-based interfaces in the `chrome.*` namespace. As part of its Manifest V3 implementation, Chromium introduced support for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview#promises) in their `chrome.*` namespace. By Chromium 148, the `browser.*` namespace is also supported except for extensions with a DevTools page ([Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace)).
 
-Firefox pioneered the `browser.*` namespace, and made the [webextensions-polyfill](https://github.com/mozilla/webextension-polyfill) available for (Chromium) browsers that lacked support for the API.
+Firefox pioneered the `browser.*` namespace, and made the [webextensions-polyfill](https://github.com/mozilla/webextension-polyfill) available for (Chromium) browsers that lacked support for the namespace.
 
-This situation means that all major browsers now support the `browser.*` namespace, providing greater compatibility between Firefox, Safari, and Chrome extensions.
+This situation means that all major browsers now support the `browser.*` namespace, improving compatibility among Firefox, Safari, and Chrome extensions.
 
 In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace with APIs that provide asynchronous event handling using callbacks. In Manifest V3, Firefox supports promises for asynchronous events in the `chrome.*` namespace.
 
