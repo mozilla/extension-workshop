@@ -44,7 +44,7 @@ The browser extension APIs are designed to promote cross-browser compatibility a
 
 Starting with Chromium 148, Chrome supports the `browser` namespace and promises (except for extensions with a DevTools page), meaning all major browsers now support the `browser` namespace. For more information, see [Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace).
 
-For Chrome extensions that don't use the `browser` namespace, most of the [WebExtension APIs](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API) provide support for callback functions under the `chrome` namespace. The only APIs that aren't supported in the `chrome` namespace are those that are incompatible with Chrome or support Firefox only features. In those cases, the API documentation page states that support is provided only in the `browser` namespace.
+For Chrome extensions that don't use the `browser` namespace, the [WebExtension APIs](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API) provide support for callback functions under the `chrome` namespace.
 
 The process of porting an extension from Chrome or Opera is, therefore, relatively straightforward:
 
