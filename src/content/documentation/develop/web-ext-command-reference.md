@@ -665,7 +665,7 @@ A minimal JSON file looks like this:
 }
 ```
 
-See the [add-on server documentation](https://mozilla.github.io/addons-server/topics/api/licenses.html#license-list) for which values are accepted in the `"license"` field.
+The values accepted by the `"license"` field are listed in the [License Choices - non-Themes](https://mozilla.github.io/addons-server/topics/api/licenses.html#license-list) section of the addons-server API documentation.
 
 When publishing an extension update metadata isn't required. If metadata isn't provided, the license specified for the first version is reused. However, any of the properties of the [addons.mozilla.org add-on API Version Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#version-create) can be provided. For example, if you want to specify `"approval_notes"`, the JSON file looks like this:
 
