@@ -12,7 +12,7 @@ contributors: [
   willdurand
 ]
 last_updated_by: rebloor
-date: 2023-03-03
+date: 2026-05-19
 ---
 
 <!-- Page Hero Banner -->
@@ -97,7 +97,7 @@ To accommodate this change, provide a local icon and define it in your manifest.
     "name": "Search engine",
     "search_url": "https://www.searchengine.com/search/?q={searchTerms}",
     "keyword": "search",
-    "favicon_url": "/imager/favicon.ico"
+    "favicon_url": "/images/favicon.ico"
   }
 }
 ```
@@ -114,7 +114,7 @@ To accommodate this change, provide a local icon and define it in your manifest.
 
 In Manifest V2, an extension requests its host permissions in the manifest.json `permissions` or `optional_permissions` keys. The host permissions defined in the `permissions` key are displayed to the user on installation and granted to the extension permanently.
 
-In Manifest V3, host permissions are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) keys. 
+In Manifest V3, host permissions are defined in the [`host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) keys.
 
 In Firefox 126 and earlier, Manifest V3 host permissions were not granted during installation and were not displayed to the user. From Firefox 127, host permissions listed in `host_permissions` and `content_scripts` are displayed in the install prompt and granted on installation. However, if an extension update grants new host permissions, these are not shown to the user (see [Firefox bug 1893232](https://bugzil.la/1893232)).
 
@@ -153,7 +153,8 @@ The features available under the manifest.json key `browser_action` and the `bro
 As the old and new key and API are otherwise identical, the changes needed are relatively straightforward and are as follows:
 
 - Rename the manifest.json key 'browser_action' to 'action' and remove any reference to [`browser_style`](#browser-style), like this:
-  ```json
+
+ ```json
   "action": {
     "default_icon": {
       "16": "button/geo-16.png",
@@ -172,6 +173,7 @@ As the old and new key and API are otherwise identical, the changes needed are r
     }]
   }
   ```
+
 - Update API references from `browser.browserAction` to  `browser.action`.
 - If used, change `_execute_browser_action` to `_execute_action` in the `commands` manifest key and in the [`menu.create`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/create) and [`menu.update`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/update) API methods (or their aliases `contextMenus.create` and `contextMenus.update`).
 
@@ -333,6 +335,7 @@ if (eventPagesSupported) {
 ### XHR and fetch in content scripts
 
 Cross-origin requests, permitted by extension permissions, using [XHR and fetch](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch) in content scripts are no longer allowed. Instead:
+
 - The destination server should use CORS, or
 - The extension has to send a message to the background page (or an extension tab or frame) to ask it to make a request on the content script's behalf.
 
@@ -361,8 +364,7 @@ Manifest V3 has a more restrictive content security policy than Manifest V2, thi
 
 Mozilla’s long-standing [add-on policies](/documentation/publish/add-on-policies/) prohibit remote code execution. In keeping with these policies, the [content_security_policy](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) field no longer supports sources permitting remote code in script-related directives, such as `script-src` or `’unsafe-eval’`. The only permitted values for the `script-src` directive are `’self’` and `’wasm-unsafe-eval’`. `’wasm-unsafe-eval’` must be specified in the CSP if an extension is to use WebAssembly. In Manifest V3, content scripts are subject to the same CSP as other parts of the extension.
 
-The Manifest V3 CSP also includes `upgrade-insecure-requests` by default. For more information, see [
-Upgrade insecure network requests in Manifest V3](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#upgrade_insecure_network_requests_in_manifest_v3) in the web extensions content security policy guide.
+The Manifest V3 CSP also includes `upgrade-insecure-requests` by default. For more information, see [Upgrade insecure network requests in Manifest V3](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#upgrade_insecure_network_requests_in_manifest_v3) in the web extensions content security policy guide.
 
 Historically, a custom extension CSP required `object-src` to be specified. This is not required in Manifest V3 (and was removed from Manifest V2 in Firefox 106). See [`object-src` in the `content_security_policy` documentation](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive)). This change makes it easier for extensions to customize the CSP with minimal boilerplate.
 
@@ -390,7 +392,11 @@ To migrate your extension, rewrite the manifest.json key [‘web_accessible_reso
 
 ### Features already supported by Firefox
 
-As part of its Manifest V3 implementation, Chromium introduces [promise](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview#promises) support to many methods with the goal of eventually supporting promises on all appropriate methods. This will provide for greater compatibility between Firefox and Chrome extensions, given that Firefox already supports promises when using the `browser.*` namespace.
+Historically, Chrome's extension APIs were exposed only through callback-based interfaces in the `chrome.*` namespace. As part of its Manifest V3 implementation, Chromium introduced support for [promises](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-overview#promises) in their `chrome.*` namespace. By Chromium 148, the `browser.*` namespace is also supported except for extensions with a DevTools page ([Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace)).
+
+Firefox pioneered the `browser.*` namespace, and made the [webextensions-polyfill](https://github.com/mozilla/webextension-polyfill) available for (Chromium) browsers that lacked support for the namespace.
+
+This situation means that all major browsers now support the `browser.*` namespace, improving compatibility among Firefox, Safari, and Chrome extensions.
 
 In Manifest v2, Firefox extensions support the use of the `chrome.*` namespace with APIs that provide asynchronous event handling using callbacks. In Manifest V3, Firefox supports promises for asynchronous events in the `chrome.*` namespace.
 
