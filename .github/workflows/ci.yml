@@ -21,10 +21,10 @@ jobs:
           node-version: "22"
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: npm ci
 
       - name: Run tests
-        run: yarn run test-ci
+        run: npm run test-ci
 
       - name: Make a production build
-        run: yarn build:production
+        run: npm run build:production
