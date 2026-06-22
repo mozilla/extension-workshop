@@ -6,7 +6,6 @@
  *
  */
 
-const fetch = require('node-fetch');
 const fs = require('fs-extra');
 const isProduction = process.env.ELEVENTY_ENV;
 
