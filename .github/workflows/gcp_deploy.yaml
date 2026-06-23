@@ -20,10 +20,10 @@ jobs:
           node-version: "22"
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: npm ci
 
       - name: Test current build
-        run: yarn run test-ci
+        run: npm run test-ci
         continue-on-error: true
 
   deploy-stage:
@@ -50,8 +50,8 @@ jobs:
 
       - name: Build the website
         run: |
-          yarn install --immutable
-          yarn build:production
+          npm ci
+          npm run build:production
 
       - name: Build version.json file
         run: |
