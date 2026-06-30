@@ -1,7 +1,6 @@
 {
   "extends": [
     "stylelint-config-standard-scss",
-    "stylelint-config-prettier-scss",
   ],
   "rules": {
     "at-rule-empty-line-before": ["always", {
@@ -24,14 +23,9 @@
         "warn",
       ],
     }],
-    "block-closing-brace-newline-after": ["always", {
-      "ignoreAtRules": ["if", "else"],
-    }],
     "color-function-notation": null,
-    "declaration-colon-newline-after": null,
     "function-url-quotes": ["always"],
     "function-disallowed-list": ["random"],
-    "indentation": null,
     "max-nesting-depth": [5, {
       "ignore": ["blockless-at-rules"],
     }],
@@ -44,7 +38,6 @@
         "after-comment"
       ]
     }],
-    "string-quotes": null,
     "value-keyword-case": [
       "lower",
       {
@@ -52,9 +45,8 @@
       }
     ],
     "selector-not-notation": null,
-    "value-list-comma-newline-after": null,
     "scss/no-global-function-names": null,
-    "scss/at-import-partial-extension": null,
+    "scss/load-partial-extension": null,
     "scss/comment-no-empty": null,
     "scss/dollar-variable-pattern": null,
     "scss/at-mixin-pattern": null,
