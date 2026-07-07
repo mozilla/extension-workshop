@@ -184,7 +184,7 @@ class AssetPipeline {
         } in ${this.getPathRelativeToCWD(origPath)}`
       );
     }
-    for (var i = pathNodes.length; --i >= 0; ) {
+    for (var i = pathNodes.length; --i >= 0;) {
       const node = pathNodes[i];
       const startPos = node.start;
       const endPos = node.end;
