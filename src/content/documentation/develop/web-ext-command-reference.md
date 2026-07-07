@@ -33,8 +33,8 @@ contributors:
     djbrown,
     Robot-Inventor
   ]
-last_updated_by: rebloor
-date: 2024-05-30
+last_updated_by: willdurand
+date: 2026-07-07
 ---
 
 <!-- Page Hero Banner -->
@@ -211,6 +211,19 @@ Environment variable: `$WEB_EXT_PRETTY=true`
 Declares that your extension will be self-hosted.&nbsp;This disables messages related to hosting on [addons.mozilla.org](https://addons.mozilla.org/).
 
 Environment variable: `$WEB_EXT_SELF_HOSTED=true`
+</section>
+
+<section id="enterprise">
+
+#### `--enterprise`
+
+Treats your extension as an enterprise extension when linting.
+
+::: note
+This option is new in web-ext 10.5.0.
+:::
+
+Environment variable: `$WEB_EXT_ENTERPRISE=true`
 </section>
 
 <section id="boring">
@@ -646,8 +659,8 @@ Environment variable: `$WEB_EXT_TIMEOUT`
 The path to a JSON file containing an object with metadata for the extension's [addons.mozilla.org](https://addons.mozilla.org) (AMO) listing.
 
 Metadata is required for the first version of an extension listed on AMO. This metadata can include any of the properties of the [addons.mozilla.org add-on API Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#create). However:
-- `"categories"`, `"summary"` and the version's `"license"` properties must be provided. 
-- [Translated fields](https://mozilla.github.io/addons-server/topics/api/overview.html#api-overview-translations) must include at least one locale. 
+- `"categories"`, `"summary"` and the version's `"license"` properties must be provided.
+- [Translated fields](https://mozilla.github.io/addons-server/topics/api/overview.html#api-overview-translations) must include at least one locale.
 
 A minimal JSON file looks like this:
 
