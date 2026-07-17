@@ -95,9 +95,9 @@ If your extension is not hosted on AMO, you must specify the location of your up
 ```
 
 ::: note
-Once an extension is installed, Firefox continues using the update_url from the installed version to check for updates. If that update manifest becomes unavailable or you need to move it, existing installations cannot discover a new update_url on their own.
+Once an extension is installed, Firefox continues using the `update_url` from the installed version to check for updates. If that update manifest becomes unavailable or you need to move it, existing installations cannot discover a new `update_url` on their own.
 
-[Enterprise Policies](https://firefox-admin-docs.mozilla.org/reference/policies/extensionsettings/) can override an extension's update_url, providing a recovery path by redirecting update checks to a new update manifest so future versions can specify a new update_url.
+[Enterprise Policies](https://firefox-admin-docs.mozilla.org/reference/policies/extensionsettings/) can override an extension's `update_url`, providing a recovery path by redirecting update checks to a new update manifest so future versions can specify a new `update_url`.
 :::
 
 {% endcapture %}
