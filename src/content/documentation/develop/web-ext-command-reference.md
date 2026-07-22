@@ -34,7 +34,7 @@ contributors:
     Robot-Inventor
   ]
 last_updated_by: rebloor
-date: 2024-05-30
+date: 2026-07-18
 ---
 
 <!-- Page Hero Banner -->
@@ -43,7 +43,7 @@ date: 2024-05-30
 
 # web-ext command reference
 
-This page lists all the commands and options available under version 8 of the [web-ext](https://github.com/mozilla/web-ext) command line tool. See [the version 7 command reference](/documentation/develop/web-ext-command-reference-v7/) for documentation of the previous version of the tool.
+This page lists all the commands and options available under version 10 of the [web-ext](https://github.com/mozilla/web-ext) command line tool. See [the version 7 command reference](/documentation/develop/web-ext-command-reference-v7/) for documentation of the version that previewed the feature to list an extension not previously listed with `web-ext sign`.
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -64,9 +64,27 @@ This page lists all the commands and options available under version 8 of the [w
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
 
-## What's changed in Version 8
+## What's new
 
-Released in May 2024, the main change in version 8 of `web-ext` is that `web-ext sign` now creates a listing for an extension not previously listed on [addons.mozilla.org](https://addons.mozilla.org) (AMO) by default. This feature was previewed in version 7 with the [`--use-submission-api`](/documentation/develop/web-ext-command-reference-v7/#use-submission-api) option, which is now removed. This feature is achieved using the submission features of [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html).
+Get details of the main changes in releases from Version 8 onwards.
+
+For more details, see [the release note](https://github.com/mozilla/web-ext/releases).
+
+## What changed in Version 10 (March 2026)
+
+- Now requires Node.js 22 or later.
+- These features are added:
+  - [`web-ext run --chromium-pref`](#chromium-pref) launches Chromium with a custom preference. Added in version 10.2.0.
+  - [`web-ext lint --enterprise`](#enterprise) treats the extension as an enterprise extension when linting. Added in version 10.5.0.
+
+## What changed in Version 9 (September 2025)
+
+- Now requires Node.js 20 or later.
+- No longer accepts `.js` config files. You must rename your config file to `.cjs` or `.mjs` and export the config accordingly.
+
+## What changed in Version 8 (May 2024)
+
+The main change in version 8 of `web-ext` is that `web-ext sign` now creates a listing for an extension not previously listed on [addons.mozilla.org](https://addons.mozilla.org) (AMO) by default. This feature was previewed in version 7 with the [`--use-submission-api`](/documentation/develop/web-ext-command-reference-v7/#use-submission-api) option, which is now removed. This feature is achieved using the submission features of [addons.mozilla.org add-on API v5](https://addons-server.readthedocs.io/en/latest/topics/api/addons.html).
 
 ### Removed
 
@@ -100,6 +118,8 @@ These features are added:
 - [`web-ext dump-config`](#web-ext-dump-config), this new command prints a copy of the configuration data to the terminal.
 - [`web-ext sign --approval-timeout`](#approval-timeout) enables this number of milliseconds to wait for approval before giving up to be set.
 - [`web-ext sign --upload-source-code`](#upload-source-code) enables a file containing human-readable source code to be uploaded.
+
+
 
 </div>
 </article>
@@ -211,6 +231,19 @@ Environment variable: `$WEB_EXT_PRETTY=true`
 Declares that your extension will be self-hosted.&nbsp;This disables messages related to hosting on [addons.mozilla.org](https://addons.mozilla.org/).
 
 Environment variable: `$WEB_EXT_SELF_HOSTED=true`
+</section>
+
+<section id="enterprise">
+
+#### `--enterprise`
+
+Treats your extension as an enterprise extension when linting (forthcoming linter feature).
+
+::: note
+This option is new in web-ext 10.5.0.
+:::
+
+Environment variable: `$WEB_EXT_ENTERPRISE=true`
 </section>
 
 <section id="boring">
@@ -500,6 +533,25 @@ Path or alias to a Chromium executable such as google-chrome, google-chrome.exe,
 If not specified, the default Google Chrome is used.
 </section>
 
+<section id="chromium-pref">
+
+#### `--chromium-pref`
+
+Launch Chromium with a custom preference. Use the equal sign to set values, for example:
+
+```shell
+--chromium-pref=browser.theme.follows_system_colors=false
+```
+
+Specify this option multiple times to set additional preferences.
+
+::: note
+This option is new in web-ext 10.2.0.
+:::
+
+Environment variable: `$WEB_EXT_CHROMIUM_PREF`
+</section>
+
 <section id="chromium-profile">
 
 #### `--chromium-profile`
@@ -646,8 +698,8 @@ Environment variable: `$WEB_EXT_TIMEOUT`
 The path to a JSON file containing an object with metadata for the extension's [addons.mozilla.org](https://addons.mozilla.org) (AMO) listing.
 
 Metadata is required for the first version of an extension listed on AMO. This metadata can include any of the properties of the [addons.mozilla.org add-on API Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#create). However:
-- `"categories"`, `"summary"` and the version's `"license"` properties must be provided. 
-- [Translated fields](https://mozilla.github.io/addons-server/topics/api/overview.html#api-overview-translations) must include at least one locale. 
+- `"categories"`, `"summary"` and the version's `"license"` properties must be provided.
+- [Translated fields](https://mozilla.github.io/addons-server/topics/api/overview.html#api-overview-translations) must include at least one locale.
 
 A minimal JSON file looks like this:
 
