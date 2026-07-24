@@ -6,6 +6,8 @@ on:
       - "20*"
   workflow_dispatch:
 
+permissions: {}
+
 jobs:
   test-website:
     runs-on: ubuntu-latest
@@ -20,6 +22,7 @@ jobs:
         uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3.9.1
         with:
           node-version: "22"
+          package-manager-cache: false
 
       - name: Install dependencies
         run: npm ci
@@ -43,6 +46,8 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3.9.1
+        with:
+          package-manager-cache: false
 
       - name: Set up Google Cloud SDK
         uses: google-github-actions/auth@c200f3691d83b41bf9bbd8638997a462592937ed # v2.1.13
