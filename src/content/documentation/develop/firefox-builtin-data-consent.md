@@ -8,12 +8,13 @@ tags: [data-collection, data-transmission, api, permissions, firefox, guide]
 contributors:
   [
     abyrne-moz,
+    D4n2021,
+    rebloor,
     wagnerand,
     willdurand,
-    rebloor
   ]
 last_updated_by: rebloor
-date: 2026-03-12
+date: 2026-04-25
 ---
 
 <!-- Page Hero Banner -->
@@ -32,7 +33,11 @@ Implementing the built-in consent feature doesn't remove the obligation to creat
 For updates on the rollout and the timeline for AMO accepting submissions using this feature and for tips on how to take advantage of it, see the [community blog](https://blog.mozilla.org/addons/).
 :::
 
-To use Firefox's built-in consent experience, you have to specify what data your extension collects or transmits in the extension’s `manifest.json` file. This information is shown to the user when they first install the extension. A user can then choose to accept or reject the data collection, just as they do with extension permissions. You can also specify that the extension collects no data.
+You use Firefox's built-in consent experience to specify what, if any, data your extension collects or transmits by adding details to your extension's `manifest.json` file. If your extension collects data, this information is shown to the user when they first install the extension and when the extension is updated if the data collected changes. A user can then choose to accept or reject the data collection, just as they do with extension permissions. 
+
+::: note
+You also use this feature to [specify that your extension collects no data](#specifying-no-data-collection).
+:::
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -48,6 +53,14 @@ To use Firefox's built-in consent experience, you have to specify what data your
 ## Taxonomy
 
 Firefox uses categories to standardize data collection information for developers and users. In line with the [policies](/documentation/publish/add-on-policies/), there are two types of data: *Personal data* and *Technical and Interaction data*.
+
+{% endcapture %}
+{% include modules/column-w-toc.liquid,
+    id: "taxonomy"
+    content: content_with_toc
+%}
+
+{% capture content %}
 
 ### Personal data
 
@@ -67,6 +80,13 @@ Personally identifiable information can be actively provided by the user or obta
 | **Search terms**                       | `searchTerms`                                        | Search terms entered into search engines or the browser.                                                                                                                                                        | yes                                                                                                                                               |
 | **Bookmarks**                          | `bookmarksInfo`                                      | Information about Firefox bookmarks, including specific websites, bookmark names, and folder names.                                                                                                             | yes                                                                                                                                               |
 
+{% endcapture %}
+{% include modules/one-column.liquid,
+    id: "taxonomy-personal-data"
+%}
+
+{% capture content %}
+
 ### Technical and interaction data
 
 Technical data describes the environment the user is running, such as browser settings, platform information, and hardware properties. User interaction data includes how the user interacts with Firefox and the installed add-on, metrics for product improvement, and error information.
@@ -76,9 +96,8 @@ Technical data describes the environment the user is running, such as browser se
 | **Technical and interaction data**  | `technicalAndInteraction`                          | Examples: Device and browser info, extension usage and settings data, crash and error reports. |
 
 {% endcapture %}
-{% include modules/column-w-toc.liquid,
-    id: "taxonomy"
-    content: content_with_toc
+{% include modules/one-column.liquid,
+    id: "taxonomy-technical-and-interaction-data"
 %}
 
 <!-- END: Content with Table of Contents -->
@@ -91,9 +110,17 @@ Technical data describes the environment the user is running, such as browser se
 
 You specify the data types your extension transmits in the `browser_specific_settings.gecko.data_collection_permissions` key in the `manifest.json` file. As a reminder, the policies state that data transmission refers to any data collected, used, transferred, shared, or handled outside the add-on or the local browser.
 
+{% endcapture %}
+{% include modules/one-column.liquid,
+    id: "specifying-data-types"
+    content: content
+%}
+
+{% capture content %}
+
 ### Personal data
 
-Personal data permissions can be required or optional, except for `technicalAndInteraction` that cannot be required:
+Personal data permissions can be required or optional, except for `technicalAndInteraction`, which cannot be required:
 
 ```json
 "browser_specific_settings": {
@@ -152,17 +179,33 @@ This installation prompt is the result of a `manifest.json` file that specifies 
 }
 ```
 
-This adds the "required" data collection paragraph to the installation prompt. The data permissions are also listed in `about:addons` like this:
+This manifest adds the "required" data collection paragraph to the installation prompt. `about:addons` also lists these data permissions, like this:
 
 ![The about:addons page shows details of required and optional data collection permissions.](/assets/img/documentation/develop/data-collection-permissions-about-addons.webp)
 
 #### Optional data
 
-Optional data collection permissions are specified using the optional list. These aren’t presented during installation (except for `technicalAndInteraction`), and they aren’t granted by default. The extension can request that the user opts in to this data collection after installation by calling [`permissions.request()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request) in a user-activated event handler, and the user can turn this optional data collection on or off in `about:addons` in the *Permissions and data* section of the extension settings.
+You specify optional data-collection permissions in the optional list. Firefox doesn't present these permissions to the user during installation (except for `technicalAndInteraction`), and doesn't grant them by default. The extension can request that the user opts in to this data collection after installation by calling [`permissions.request()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request) in a user-activated event handler. The user can turn this optional data collection on or off in `about:addons` in the *Permissions and data* section of the extension settings.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+    id: "specifying-personal-data"
+    content: content
+%}
+
+{% capture content %}
 
 ### Technical and interaction data
 
 The `technicalAndInteraction` data type behaves differently from all other data types. This data permission must be optional, but unlike other optional data collection options, the user can turn this permission on or off during the installation flow. This choice is available in the optional settings section of the extension installation prompt.
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+    id: "specifying-technical-and-interaction-data"
+    content: content
+%}
+
+{% capture content %}
 
 ### No data collection
 
@@ -190,15 +233,15 @@ If your extension doesn’t collect or transmit any data, you indicate that by s
 
 When a user attempts to install this extension, Firefox shows the usual installation prompt with the description of the required (API) permissions and a description to indicate that the extension doesn’t collect any data, like this:
 
-![The extension installation prompt shows the no data transmission ar defined in the manifest](/assets/img/documentation/develop/data-collection-permissions-prompt-install-no-transmission.webp)
+![The extension installation prompt shows that the manifest defines that no data is transmitted](/assets/img/documentation/develop/data-collection-permissions-prompt-install-no-transmission.webp)
 
-The "no data collected" type is also listed in the *Permissions and data* tab of the extension in `about:addons`, like this:
+The *Permissions and data* tab for the extension in `about:addons` also lists the "no data collected" type, like this:
 
 ![The  about:addons page shows the "no data collected" permission.](/assets/img/documentation/develop/data-collection-permissions-about-addons-no-transmission.webp)
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-    id: "specifying-data-types"
+    id: "specifying-no-data-collection"
     content: content
 %}
 
@@ -248,7 +291,7 @@ This call displays a message to the user, giving them the choice to opt in to th
 
 ## Updates
 
-When an extension is updated, Firefox only shows the added required data permissions, unless it’s the special `none` data type, because when the extension doesn’t collect any data, that doesn’t need to be notified to the user.
+When an extension is updated, Firefox only shows the required data permissions added. However, Firefox doesn't notify the user of a change to no data collection (`"required": ["none"]`).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
