@@ -10,12 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3.7.0
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3.9.1
         with:
           node-version: "22"
 
@@ -33,20 +34,21 @@ jobs:
     environment: stage
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3.7.0
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3.9.1
 
       - name: Set up Google Cloud SDK
-        uses: google-github-actions/auth@v2
+        uses: google-github-actions/auth@c200f3691d83b41bf9bbd8638997a462592937ed # v2.1.13
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
 
       - name: Set up gcloud
-        uses: google-github-actions/setup-gcloud@v2
+        uses: google-github-actions/setup-gcloud@e427ad8a34f8676edf47cf7d7925499adf3eb74f # v2.2.1
 
       - name: Build the website
         run: |
@@ -64,4 +66,6 @@ jobs:
 
       - name: Deploy the website to stage
         run: |
-          sh ./.utils/gcs-deploy.sh  ${{ vars.EXTENSIONWORKSHOP_BUCKET_STAGE }}
+          sh ./.utils/gcs-deploy.sh  ${VARS_EXTENSIONWORKSHOP_BUCKET_STAGE}
+        env:
+          VARS_EXTENSIONWORKSHOP_BUCKET_STAGE: ${{ vars.EXTENSIONWORKSHOP_BUCKET_STAGE }}
