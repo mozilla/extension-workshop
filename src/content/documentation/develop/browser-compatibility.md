@@ -29,13 +29,15 @@ date: 2019-05-27 6:35:30
 
 While work continues to standardize the APIs used for browser extension development, there remain differences between Chromium-based browsers—such as Chrome, Opera, and the Chromium-based Microsoft Edge—and Firefox. These differences, summarized on this page, include:
 
-- **Namespace**: In Chromium-based browsers, JavaScript APIs are accessed under the `chrome` namespace. In Firefox, they are accessed under the `browser` namespace.
-- **Asynchronous APIs**: In Chromium-based browsers, asynchronous APIs are implemented using callbacks. In Firefox, asynchronous APIs are implemented using promise.
+- **Namespace**:
+- `browser.*`, the standard for the extensions API used by Firefox, Safari, Chrome (from 148), Opera (from 121), and Edge (from 136).
+  - `chrome.*` used by Chrome, Opera, and Edge.
+- **Asynchronous APIs**: Promises are used by Firefox and Safari. Chrome, Opera, and Edge began introducing promises with Manifest V3, and they are available for all relevant APIs in Chrome 152.
 - **API support**: Support for JavaScript APIs differs among browsers.
 - **Manifest key support**: Support for `manifest.json` keys differs among browsers.
 - Variations due to differences in browser behavior.
 
-Firefox is the most compliant with the proposed standard, and is, therefore, your best place to start when developing browser extensions. A simple way of addressing many of these differences is by using the [web extension polyfill library](https://github.com/mozilla/webextension-polyfill). For an introduction to using this tool, see [Building a cross-browser extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension). Note, however, that the polyfill does not support Firefox exclusive APIs that are not available in Chrome.
+For information on building an extension that works on multiple browsers and accounts for these differences, see [Building a cross-browser extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension).
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,

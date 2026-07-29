@@ -37,9 +37,11 @@ All you need to create extensions for Firefox is a [text editor](https://develop
 
 ### Chromium-based browser extensions
 
-Get familiar with the [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) library if you’re planning on developing for both Firefox and Chromium-based browsers.
+Starting with Chrome 148, Chrome supports the `browser` namespace, except in extensions that include a DevTools page. This limitation was removed in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)), and the `browser` namespace became available to all Chrome extensions. This means that all major browsers use the `browser` namespace and return promises for asynchronous functions.
 
-This enables you to switch between the different Firefox and Chromium-based namespaces and asynchronous call handling methods for each type of browser.
+Before Chrome 148, Chrome uses the `chrome` namespace.
+
+If you want to use the `browser.*` namespace with promises and target Chrome 147 or earlier, you can use the [webextension-polyfill](https://github.com/mozilla/webextension-polyfill). This polyfill enables code that uses `browser` and promises to work unchanged in Chrome. This polyfill is a no-op in Chrome 148 and later.
 
 ### web-ext command line tool
 
