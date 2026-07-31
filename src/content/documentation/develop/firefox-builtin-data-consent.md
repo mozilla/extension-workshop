@@ -160,6 +160,15 @@ This adds the "required" data collection paragraph to the installation prompt. T
 
 Optional data collection permissions are specified using the optional list. These aren’t presented during installation (except for `technicalAndInteraction`), and they aren’t granted by default. The extension can request that the user opts in to this data collection after installation by calling [`permissions.request()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request) in a user-activated event handler, and the user can turn this optional data collection on or off in `about:addons` in the *Permissions and data* section of the extension settings.
 
+If your extension **only** collects optional data, it must declare `"required": ["none"]`, to explicitly state that nothing is collected without consent. For example, to declare that an extension has no required data collection but optionally collects website activity data, use:
+
+```json
+"data_collection_permissions": {
+  "required": ["none"],
+  "optional": ["websiteActivity"]
+}
+```
+
 ### Technical and interaction data
 
 The `technicalAndInteraction` data type behaves differently from all other data types. This data permission must be optional, but unlike other optional data collection options, the user can turn this permission on or off during the installation flow. This choice is available in the optional settings section of the extension installation prompt.
