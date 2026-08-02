@@ -31,7 +31,7 @@ While work continues to standardize the APIs used for browser extension developm
 
 - **Namespace**:
 - `browser.*`, the standard for the extensions API used by Firefox, Safari, Chrome (from 148), Opera (from 121), and Edge (from 136).
-  - `chrome.*` used by Chrome, Opera, and Edge.
+  - `chrome.*` supported by all browsers.
 - **Asynchronous APIs**: Promises are used by Firefox and Safari. Chrome, Opera, and Edge began introducing promises with Manifest V3, and they are available for all relevant APIs in Chrome 152.
 - **API support**: Support for JavaScript APIs differs among browsers.
 - **Manifest key support**: Support for `manifest.json` keys differs among browsers.
