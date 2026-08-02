@@ -30,7 +30,7 @@ date: 2019-05-27 6:35:30
 While work continues to standardize the APIs used for browser extension development, there remain differences between Chromium-based browsers—such as Chrome, Opera, and the Chromium-based Microsoft Edge—and Firefox. These differences, summarized on this page, include:
 
 - **Namespace**:
-- `browser.*`, the standard for the extensions API used by Firefox, Safari, Chrome (from 148), Opera (from 121), and Edge (from 136).
+- `browser.*`, the standard for the extensions API used by Firefox, Safari, Chrome (from 148), Opera (from 121), and Edge (from 136). Note: `browser.*` [isn't supported for DevTools extensions](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace) until Chrome 152, Opera 125, and Edge 140. For support, see the [webextension-polyfill](https://github.com/mozilla/webextension-polyfill).
   - `chrome.*` supported by all browsers.
 - **Asynchronous APIs**: Promises are used by Firefox and Safari. Chrome, Opera, and Edge began introducing promises with Manifest V3, and they are available for all relevant APIs in Chrome 152.
 - **API support**: Support for JavaScript APIs differs among browsers.
