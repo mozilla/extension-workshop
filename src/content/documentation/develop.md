@@ -37,7 +37,7 @@ All you need to create extensions for Firefox is a [text editor](https://develop
 
 ### Chromium-based browser extensions
 
-Starting with Chrome 148, Chrome supports the `browser` namespace, except in extensions that include a [DevTools page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page). This limitation was removed in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)), and the `browser` namespace became available to all Chrome extensions. This means that all major browsers use the `browser` namespace and return promises for asynchronous functions.
+Starting with Chrome 148, Chrome supports the `browser` namespace, except in extensions that include a [DevTools page](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page). This limitation was removed in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)), and the `browser` namespace became available to all Chrome extensions. This means that all major browsers use the `browser` namespace and return promises for asynchronous functions.
 
 Before Chrome 148, Chrome supports the `chrome` namespace only.
 
