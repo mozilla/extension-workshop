@@ -19,8 +19,8 @@ contributors:
     kumar303,
     yfdyh000,
   ]
-last_updated_by: jennyevans
-date: 2019-05-19 11:54:36
+last_updated_by: rebloor
+date: 2026-05-19
 ---
 
 <!-- Page Hero Banner -->
@@ -40,7 +40,13 @@ date: 2019-05-19 11:54:36
 
 {% capture content %}
 
-The browser extension APIs are designed to promote cross-browser compatibility among extensions. The WebExtension APIs is therefore, to a large extent, code-compatible with the [extension API](https://developer.chrome.com/extensions) supported by Google Chrome and Opera. Extensions written for these browsers will, in most cases, run in Firefox with just a few changes. Almost all of the [WebExtension APIs](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API) provide support for callback functions under the `chrome` namespace, the same as Chrome. The only APIs that aren't supported in the `chrome` namespace are those that are intentionally incompatible with Chrome. In those cases, the API documentation page states that support is provided only in the `browser` namespace. The process of porting an extension from Chrome or Opera is, therefore, relatively straightforward:
+The browser extension APIs are designed to promote cross-browser compatibility among extensions. The WebExtension APIs are therefore, to a large extent, code-compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Google Chrome and Opera. Extensions written for these browsers, in most cases, run in Firefox with just a few changes.
+
+Starting with Chromium 148, Chrome supports the `browser` namespace and promises (except for extensions with a DevTools page), meaning all major browsers now support the `browser` namespace. For more information, see [Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace).
+
+For Chrome extensions that don't use the `browser` namespace, the [WebExtension APIs](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API) provide support for callback functions under the `chrome` namespace.
+
+The process of porting an extension from Chrome or Opera is, therefore, relatively straightforward:
 
 1. Review your use of `manifest.json` features and Chrome extension APIs against the [Chrome incompatibilities reference](https://developer.mozilla.org/Add-ons/WebExtensions/Chrome_incompatibilities). Mozilla provides a service that can help to automate this step within the [Add-on Developer Hub](https://addons.mozilla.org/developers/addon/validate). If you're using features or APIs that aren't supported in Firefox, you might not be able to port your extension.
 2. Install your extension in Firefox by using [`about:debugging`](https://developer.mozilla.org/docs/Tools/about:debugging) or the [web-ext tool](/documentation/develop/getting-started-with-web-ext#testing-out-an-extension) (similar to Chrome’s command-line tools).
@@ -58,5 +64,3 @@ If you use the Chrome command-line option for loading an unpacked extension, che
 %}
 
 <!-- END: Single Column Body Module -->
-
-

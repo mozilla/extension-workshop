@@ -7,7 +7,7 @@ topic: Develop
 tags: [beginner, extensions, webextensions, compatibility, cross-browser]
 contributors: [rebloor]
 last_updated_by: rebloor
-date: 2019-05-27 6:35:30
+date: 2026-05-19
 ---
 
 <!-- Page Hero Banner -->
@@ -27,10 +27,10 @@ date: 2019-05-27 6:35:30
 
 {% capture content_with_toc %}
 
-While work continues to standardize the APIs used for browser extension development, there remain differences between Chromium-based browsers—such as Chrome, Opera, and the Chromium-based Microsoft Edge—and Firefox. These differences, summarized on this page, include:
+Work is progressing to standardize the APIs used for browser extension development. This page summarizes the differences between Firefox and the Chromium-based browsers, such as Chrome, Opera, and Microsoft Edge. These differences include:
 
-- **Namespace**: In Chromium-based browsers, JavaScript APIs are accessed under the `chrome` namespace. In Firefox, they are accessed under the `browser` namespace.
-- **Asynchronous APIs**: In Chromium-based browsers, asynchronous APIs are implemented using callbacks. In Firefox, asynchronous APIs are implemented using promise.
+- **Namespace**: In Chromium-based browsers, extensions access the JavaScript APIs under the `chrome` namespace. In Firefox (and Safari), extensions access the APIs under the `browser` namespace. However, starting with Chromium 148, Chromium-based browsers also support the `browser` namespace, except for extensions with a DevTools page.
+- **Asynchronous APIs**: In Chromium-based browsers, asynchronous APIs are implemented using callbacks. Firefox (and Safari) implement asynchronous APIs using promises. However, with the introduction of Manifest V3, Chromium has been updated to support promises in all APIs except the tools devtools APIs. For more information, see [Chromium issue 41483013: Support Promises on devtools extension API](https://issues.chromium.org/issues/41483013).
 - **API support**: Support for JavaScript APIs differs among browsers.
 - **Manifest key support**: Support for `manifest.json` keys differs among browsers.
 - Variations due to differences in browser behavior.
@@ -51,12 +51,14 @@ Firefox is the most compliant with the proposed standard, and is, therefore, you
 
 ## Namespace
 
-You reference all extensions API functions using a namespace, for example, `browser.alarms.create({delayInMinutes});` would create an alarm in Firefox that goes off after the time specified in `delayInMinutes`.
+You reference all extensions API functions using a namespace, for example, `browser.alarms.create({delayInMinutes});` creates an alarm in Firefox that goes off after the time specified in `delayInMinutes`.
 
 There are two API namespaces in use:
 
-- `browser`(the proposed standard) is used in Firefox. For example: `browser.browserAction.setIcon({path: "path/to/icon.png"});`
+- `browser` (the proposed standard) is used in Firefox. For example: `browser.browserAction.setIcon({path: "path/to/icon.png"});`
 - `chrome` is used in Chromium-based browsers. For example: `chrome.browserAction.setIcon({path: "path/to/icon.png"});`
+
+Starting with Chromium 148, Chromium-based browsers support the `browser` namespace, except for extensions with a DevTools page. This update means all major browsers now support the `browser` namespace. For more information on Chrome support for the `browser` namespace, see [Transition to browser namespace](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -74,9 +76,9 @@ There are two API namespaces in use:
 
 JavaScript provides several ways in which to handle asynchronous events. The proposed extensions API standard is to use the promise object. The promise approach provides significant advantages when dealing with chained asynchronous event calls.
 
-Firefox uses the promise object for all asynchronous WebExtensions APIs. Chromium-based browsers use callbacks.
+Firefox uses the promise object for all asynchronous WebExtensions APIs. Chromium-based browsers use callbacks. However, with the introduction of Manifest V3, Chromium has been updated to support promises in all APIs except the tools devtools APIs. For more information, see [Chromium issue 41483013: Support Promises on devtools extension API](https://issues.chromium.org/issues/41483013).
 
-As a porting aid, the Firefox WebExtension APIs supports `chrome` using callbacks and `browser` using promise. This means that many Chrome extensions will work in Firefox without changes, unless they are using Chrome specific APIs that don’t exist in Firefox.
+As a porting aid, the Firefox WebExtension APIs support `chrome` using callbacks and `browser` using promise. This means that many Chrome extensions work in Firefox without changes, unless they are using Chrome specific APIs that don’t exist in Firefox.
 
 In Chrome, asynchronous APIs use callbacks to return values, and [`runtime.lastError`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/lastError) to communicate errors:
 
@@ -196,5 +198,3 @@ You can find more detailed information about the differences in the supported br
 %}
 
 <!-- END: Single Column Body Module -->
-
-
