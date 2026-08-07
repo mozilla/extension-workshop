@@ -56,7 +56,7 @@ For information on building an extension that works on multiple browsers and acc
 
 You reference all extensions APIs using a namespace. For example, `browser.alarms.create({delayInMinutes});` creates an alarm that goes off after the time specified in `delayInMinutes`.
 
-From mid-2026, all major browsers support the `browser` namespace and promises for asynchronous methods. Previously, Chromium-based browsers (such as Chrome, Opera, and Microsoft Edge) used only the `chrome` namespace with callbacks.
+All major browsers now support the `browser` namespace and promises for asynchronous methods. Chromium-based browsers (such as Chrome, Opera, and Microsoft Edge) originally used the `chrome` namespace with callbacks. They progressively migrated to the `browser` namespace and promises, completing the full implementation in mid-2026.
 
 ::: note
 As a porting aid, Firefox supports `chrome` using callbacks, alongside `browser` using promises. This means that many older Chrome extensions work in Firefox without changes, unless they use Chrome-specific APIs that don’t exist in Firefox.
