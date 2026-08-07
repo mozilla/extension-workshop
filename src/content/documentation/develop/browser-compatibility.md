@@ -30,7 +30,7 @@ date: 2026-08-05
 All browsers have the same baseline support for namespace (`browser.*`) and promises:
 
 - Firefox and Safari supported the `browser.*` namespace and promises from inception.
-- Chromium-based browsers (such as Chrome, Opera, and Microsoft Edge) introduced promises with Manifest V3, except for DevTools APIs. Support for the `browser.*` namespace was added [in 2026](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace), along with promise support in all asynchronous methods.
+- Chromium-based browsers (such as Chrome, Opera, and Microsoft Edge) introduced promises with Manifest V3 in their `chrome.*` namespace. Support for the `browser.*` namespace was added [in 2026](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace), along with promise support in all asynchronous methods.
 
 While work continues to standardize the browser extension APIs, differences remain among the Firefox, Safari, and Chromium-based browsers. These differences, summarized on this page, include:
 
