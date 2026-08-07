@@ -4,9 +4,9 @@ title: Create extensions for Firefox and Firefox for Android
 description: Deep dive into developing Firefox extensions. Get guides on Manifest V3, cross-browser porting, security best practices, and debugging tools for your add-ons.
 permalink: /documentation/develop/
 tags: []
-contributors: [caitmuenster]
-last_updated_by: caitmuenster
-date: 2019-07-09 09:00:00
+contributors: [caitmuenster, rebloor]
+last_updated_by: rebloor
+date: 2026-08-05
 ---
 
 <!-- Overview Page Hero Banner -->
@@ -34,12 +34,6 @@ Support your development workflow with these straightforward tools and guides.
 ### Development tools
 
 All you need to create extensions for Firefox is a [text editor](https://developer.mozilla.org/docs/Learn/Common_questions/Available_text_editors) and [a version of Firefox](/documentation/develop/choosing-a-firefox-version-for-extension-development/) to support your testing. Mozilla and the Firefox extension developer community have also created a number of [extension development tools](/documentation/develop/browser-extension-development-tools/) that can simplify the coding and testing of your extension.
-
-### Chromium-based browser extensions
-
-Get familiar with the [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) library if you’re planning on developing for both Firefox and Chromium-based browsers.
-
-This enables you to switch between the different Firefox and Chromium-based namespaces and asynchronous call handling methods for each type of browser.
 
 ### web-ext command line tool
 
