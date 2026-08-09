@@ -18,7 +18,7 @@ tags:
   ]
 contributors: [rebloor, hellosct1, ani-sha, ankushduacodes]
 last_updated_by: rebloor
-date: 2023-06-02
+date: 2026-08-05
 ---
 
 <!-- Page Hero Banner -->
@@ -211,9 +211,13 @@ To get started, add the plug-in to your `webpack.config.js`.
 
 ### WebExtension browser API Polyfill
 
-When creating extensions you want to work in Firefox and Chrome, this library enables you to use the Firefox Promise-based APIs and have them run on Google Chrome with few, if any, changes.
+When creating extensions you want to work in Firefox and Chrome, this library enables you to use the Firefox promise-based APIs and have them run on Google Chrome with few, if any, changes.
 
-To get started, install using npm and load the library into the contexts where browser APIs are accessed.
+However, starting with Chrome 148, Chrome supports the `browser` namespace, except in extensions that include a DevTools page. That limitation was removed in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)), and the `browser` namespace became available to all Chrome extensions.
+
+This means that all major browsers use the `browser` namespace and return promises for asynchronous functions. This polyfill is a no-op in Chrome 148 and later.
+
+If you want to enable your extension for Chrome 147 or earlier, get started by installing with npm and loading the library in the contexts where browser APIs are accessed.
 
 [Get started](https://github.com/mozilla/webextension-polyfill/#installation)
 
