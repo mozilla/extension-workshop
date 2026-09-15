@@ -1,6 +1,7 @@
 # exclude everything by default
 *.*
 # exclude these files
+CODEOWNERS
 Dockerfile
 # exclude these directories
 /node_modules/
