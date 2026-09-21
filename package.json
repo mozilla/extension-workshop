@@ -18,7 +18,7 @@
     "jquery": "3.7.1",
     "liquidjs": "10.29.0",
     "lunr": "2.3.9",
-    "slick-carousel": "1.8.1",
+    "slick-carousel": "2.0.0",
     "velocity-animate": "1.5.2",
     "velocity-ui-pack": "1.2.2"
   },
