@@ -16,9 +16,9 @@ tags:
     translation,
     webextensions,
   ]
-contributors: [rebloor, hellosct1, ani-sha, ankushduacodes]
-last_updated_by: rebloor
-date: 2026-08-05
+contributors: [rebloor, hellosct1, ani-sha, ankushduacodes, cezaraugusto]
+last_updated_by: cezaraugusto
+date: 2026-09-16
 ---
 
 <!-- Page Hero Banner -->
@@ -104,6 +104,44 @@ The [webextensions-examples GitHub repository](https://github.com/mdn/webextensi
 
 - [GitHub project](https://github.com/mdn/webextensions-examples)
 - [Examples page on MDN](https://developer.mozilla.org/Add-ons/WebExtensions/Examples)
+
+{% endcapture %}
+{% include modules/one-column.liquid,
+    content: content
+    aside: aside
+%}
+
+<!-- END: Single Column Body Module With Aside -->
+
+<!-- Single Column Body Module With Aside -->
+
+{% capture content %}
+
+### Extension.js
+
+Build and run a browser extension from its manifest.json, with no build configuration. This tool helps:
+
+- start Firefox with your extension loaded and reload it as you make code changes.
+- compile TypeScript, React, Vue, Svelte, and Preact without a bundler config.
+- keep one manifest for Firefox and Chromium, using `firefox:` and `chromium:` prefixed keys.
+- check a production Firefox build with addons-linter and package it for submission to AMO.
+
+To get started, run `npx extension@latest create my-extension`, then `npm run dev -- --browser=firefox`.
+
+{% endcapture %}
+{% capture aside %}
+
+##### Use during:
+
+- Development
+- Testing
+- Publication
+
+##### Resources
+
+- [Extension.js documentation](https://extension.js.org)
+- [Extension.js on npm](https://www.npmjs.com/package/extension)
+- [GitHub project](https://github.com/extension-js/extension.js)
 
 {% endcapture %}
 {% include modules/one-column.liquid,
