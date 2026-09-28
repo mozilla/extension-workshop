@@ -37,7 +37,7 @@
     "fs-extra": "11.4.0",
     "globals": "17.12.0",
     "gray-matter": "4.0.3",
-    "jest": "30.5.1",
+    "jest": "30.5.2",
     "jest-environment-jsdom": "30.5.2",
     "markdown-it": "15.0.2",
     "markdown-it-container": "4.0.0",
