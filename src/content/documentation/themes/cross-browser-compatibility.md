@@ -62,7 +62,7 @@ For more information, see the notes on [Chrome compatibility](https://developer.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-  id: "single-image-themes"
+  id: "header-image-themes"
   content: content
   aside: ""
 %}
