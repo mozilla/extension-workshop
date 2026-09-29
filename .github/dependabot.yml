@@ -7,6 +7,15 @@ updates:
     open-pull-requests-limit: 99
     cooldown:
       default-days: 7
+    groups:
+      jest:
+        patterns:
+          - "jest"
+          - "jest-environment-jsdom"
+      eslint:
+        patterns:
+          - "eslint"
+          - "@eslint/js"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
