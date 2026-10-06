@@ -16,6 +16,11 @@ updates:
         patterns:
           - "eslint"
           - "@eslint/js"
+    ignore:
+      # https://github.com/mozilla/extension-workshop/issues/2473
+      - dependency-name: eslint
+        versions:
+          - ">= 10"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
