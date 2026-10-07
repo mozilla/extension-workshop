@@ -31,7 +31,7 @@ You can code a static theme to customize Firefox's look and feel.
 
 ## Introduction
 
-You specify static themes the same way you do browser extensions: the theme colors and layouts are defined in a manifest.json file and accompanied by any images you use in your theme. You then package the theme and submit it to addons.mozilla.org for signing before distributing and installing it in Firefox.
+You specify static themes in a similar way to browser extensions: define the theme colors and layouts in a manifest.json file and include any theme images in the same folder. Then package the folder's contents and submit it to addons.mozilla.org for signing before distributing and installing it in Firefox.
 
 This article:
 
@@ -114,9 +114,9 @@ The simplest static theme changes only the Firefox interface colors. It doesn't 
 - `"toolbar"` and `"toolbar_text"` are the background and text colors of the toolbars, such as the navigation toolbar.
 - `"toolbar_field"` and `"toolbar_field_text"` are the background and text colors of the address bar.
 
-1. Test your theme in Firefox:
-   1. Enter `about:debugging` in the address bar, and select **This Firefox**.
-   2. Select **Load Temporary Add-on…** and open the `manifest.json` file in your theme's folder.
+3. Test your theme in Firefox:
+   3.1. Enter `about:debugging` in the address bar, and select **This Firefox**.
+   3.2. Select **Load Temporary Add-on…** and open the `manifest.json` file in your theme's folder.
 
  The theme stays applied until you remove it or restart Firefox. You can also use [web-ext](/documentation/develop/getting-started-with-web-ext/) to run the theme.
 
@@ -149,11 +149,9 @@ Nova is the Firefox visual design introduced in Firefox 157. It changes how Fire
 
 ### Accent colors
 
-Your theme should not use the [purple color](https://acorn.firefox.com/latest/desktop/styles/color/full-palette-0YLNaoxC#section-purple-a4). This color is reserved for the themes Mozilla ships.
+The default Firefox theme uses Nova's [purple](https://acorn.firefox.com/latest/desktop/styles/color/full-palette-0YLNaoxC#section-purple-a4) accent. Every other theme, including yours, uses the operating system's accent color for buttons and other accented controls.
 
-::: note
-**TODO:** Will AMO reject these themes, or is another mechanism used to enforce this?
-:::
+Themes cannot set the accent color: your theme cannot show the purple seen in the default theme.
 
 ### Selected tab styling
 
@@ -203,10 +201,6 @@ With the same header and toolbar colors as before, the selected tab now has its 
 
 If your theme uses `theme_frame` or `additional_backgrounds`, check where those images display in the Nova interface. The `backgrounds_area` property controls whether Firefox draws them across the whole window or only in the top toolbars, as described in [Using gradients and images](#using-gradients-and-images).
 
-::: note
-**TODO:** Describe how a `theme_frame` image behaves behind the toolbar and the sidebar in Nova. Cover how the image aligns when the sidebar is open, and whether any part of the image is obscured or stretched.
-:::
-
 ### Sidebar
 
 The sidebar respects these color keys:
@@ -215,10 +209,6 @@ The sidebar respects these color keys:
 - `sidebar_text`: the color of text in the sidebar. Firefox also uses this color, with `sidebar`, to decide whether to render the sidebar's widgets in a light or dark scheme.
 - `sidebar_border`: the color of the sidebar's border.
 - `sidebar_highlight` and `sidebar_highlight_text`: the background and text colors of the selected item in the sidebar.
-
-::: note
-**TODO:** Document the known sidebar limitations, including the hover states in sidebar panels and the behavior with expand-on-hover enabled. Note which keys have no effect in these cases.
-:::
 
 ### Nova examples
 
