@@ -13,7 +13,7 @@ contributors:
     rebloor
   ]
 last_updated_by: rebloor
-date: 2026-03-12
+date: 2026-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -112,7 +112,7 @@ The rest of this section describes each key in the `data_collection_permissions`
 
 When you specify data types in the required list, users must accept this data collection to use the extension; they cannot opt out. So the user can review the data-collection requirements of an extension before installing it, data collection information is presented to the user in the installation prompt, like this:
 
-![The extension installation prompt shows data types as specified in the manifest.](/assets/img/documentation/develop/data-collection-permissions-prompt-install.webp)
+![The install prompt in Firefox Nova showing required data collection and the option to share technical and interaction data](/assets/img/documentation/develop/data-collection-permissions-prompt-install.webp)
 
 If the user doesn’t agree to data collection, they can cancel the extension installation.
 
@@ -154,7 +154,7 @@ This installation prompt is the result of a `manifest.json` file that specifies 
 
 This adds the "required" data collection paragraph to the installation prompt. The data permissions are also listed in `about:addons` like this:
 
-![The about:addons page shows details of required and optional data collection permissions.](/assets/img/documentation/develop/data-collection-permissions-about-addons.webp)
+![The Permissions and data tab in the Firefox Nova Add-ons Manager showing required and optional data collection](/assets/img/documentation/develop/data-collection-permissions-about-addons.webp)
 
 #### Optional data
 
@@ -199,11 +199,11 @@ If your extension doesn’t collect or transmit any data, you indicate that by s
 
 When a user attempts to install this extension, Firefox shows the usual installation prompt with the description of the required (API) permissions and a description to indicate that the extension doesn’t collect any data, like this:
 
-![The extension installation prompt shows the no data transmission ar defined in the manifest](/assets/img/documentation/develop/data-collection-permissions-prompt-install-no-transmission.webp)
+![The install prompt in Firefox Nova for an extension that doesn't collect data](/assets/img/documentation/develop/data-collection-permissions-prompt-install-no-transmission.webp)
 
 The "no data collected" type is also listed in the *Permissions and data* tab of the extension in `about:addons`, like this:
 
-![The  about:addons page shows the "no data collected" permission.](/assets/img/documentation/develop/data-collection-permissions-about-addons-no-transmission.webp)
+![The Permissions and data tab in the Firefox Nova Add-ons Manager for an extension that doesn't collect data](/assets/img/documentation/develop/data-collection-permissions-about-addons-no-transmission.webp)
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -245,7 +245,7 @@ await browser.permissions.request({ data_collection: ["healthInfo"] });
 
 This call displays a message to the user, giving them the choice to opt in to this data collection, like this:
 
-![The prompt for requesting data collection permissions programmatically.](/assets/img/documentation/develop/data-collection-permissions-prompt-programmatic.webp)
+![The prompt in Firefox Nova when an extension requests additional data collection at runtime](/assets/img/documentation/develop/data-collection-permissions-prompt-programmatic.webp)
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -296,4 +296,3 @@ If you choose to implement options 2 or 3, use the technique described in [Acces
     id: "data-collection-experience-on-older-Firefox-versions"
     content: content
 %}
-

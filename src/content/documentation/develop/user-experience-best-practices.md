@@ -17,7 +17,7 @@ contributors:
     bryanyou,
   ]
 last_updated_by: rebloor
-date: 2019-03-18 17:05:14
+date: 2026-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -73,7 +73,7 @@ An extension is best when it is centered around one main use case, and addresses
 <article class="module-content grid-x grid-padding-x">
 <div class="cell small-12">
 
-## 2\. Give users what they need, where they need&nbsp;it
+## 2\. Give users what they need, where they need it
 
 Choosing the right way, or combination of ways, to make your extension's functionality available to the user can have a significant effect on usability. Asking a few simple questions about your extension’s functionality can quickly guide you to the right choices:
 
@@ -83,7 +83,7 @@ If your extension provides the user with features they can use on almost every w
 
 - This might include providing access to your image editor or opening a page from your website.
 
-![](/assets/img/documentation/develop/browser-action.png)
+![An extension's toolbar button, highlighted, in Firefox](/assets/img/documentation/develop/browser-action.png)
 
 Where you have several features you want to give the user access, you can add a [popup](https://developer.mozilla.org/Add-ons/WebExtensions/Popups) to the button (a popup appears like a door hanger that opens when the user selects the browser action button).
 
@@ -93,7 +93,7 @@ If your extension offers a feature for a type of web page or specific domains, g
 
 - This might include providing access to your RSS reader on pages with RSS feeds or providing an extended feature to pages on your website.
 
-![](/assets/img/documentation/develop/page-action.png)
+![An extension's page action button, highlighted, in the Firefox Nova address bar](/assets/img/documentation/develop/page-action.png)
 
 Where you have several features you want to give the user access, you can add a [popup](https://developer.mozilla.org/Add-ons/WebExtensions/Popups) to the button.
 
@@ -103,7 +103,7 @@ If your extension includes information or actions that a user would want immedia
 
 - This might include notes the user can make about a page’s content or a feature offering various font substitutions to improve readability.
 
-![](/assets/img/documentation/develop/bookmarks-sidebar.png)
+![The bookmarks sidebar, highlighted, in Firefox](/assets/img/documentation/develop/bookmarks-sidebar.png)
 
 ### Does my extension offer functionality specific to page content or other browser features?
 
@@ -111,13 +111,13 @@ If your extension offers features the user might want to access in context, **ad
 
 - This might include offering access to an image editor on the image context menu or offering extended copy features on the context menu for selected page content.
 
-![Example of content menu items added by a WebExtension, from the context-menu-demo example](/assets/img/documentation/develop/context_menu_example.png)
+![The page context menu in Firefox Nova with the items added by the context menu demo extension highlighted](/assets/img/documentation/develop/context_menu_example.png)
 
 ### Does my extension have settings the user can adjust?
 
 If your extension enables the user to change and save settings that affect the behavior of the extension, use an **[options page](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) to provide a standard Preferences link to settings** from the Add-on Manager.
 
-![Typical preferences button, to access an extension's settings, from the Add-on Manager](/assets/img/documentation/develop/add-on-manager-preferences-button.png)
+![An extension's options menu in the Firefox Nova Add-ons Manager, with Preferences highlighted](/assets/img/documentation/develop/add-on-manager-preferences-button.png)
 
 ::: note
 In the Windows operating system, the “Preferences” button is labeled “Options”.
@@ -127,13 +127,13 @@ In the Windows operating system, the “Preferences” button is labeled “Opti
 
 Where your extension needs to gather or display significant amounts of information (more than is suitable for an [alert](https://developer.mozilla.org/docs/Web/API/Window/alert) or would benefit from additional formatting) **use [bundled web pages](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages) to deliver forms and similar content.**
 
-![Example of a simple bundled page displayed as a detached panel.](/assets/img/documentation/develop/bundled_page_as_panel.png)
+![An extension page displayed in a separate popup window, highlighted, over Firefox](/assets/img/documentation/develop/bundled_page_as_panel.png)
 
 ### Does my extension try to help the user find web pages or content?
 
 If your extension includes functionality to locate web pages or content, such as offering a site-specific search, use [address bar suggestions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox) to deliver those recommendations.
 
-![Example showing the result of the `firefox_code_search` WebExtension's customization of the address bar suggestions.](/assets/img/documentation/develop/omnibox_example_full.png)
+![Address bar suggestions from an extension's omnibox keyword in Firefox](/assets/img/documentation/develop/omnibox_example_full.png)
 
 ### Does my extension offer tools for developers?
 

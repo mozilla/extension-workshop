@@ -7,8 +7,8 @@ topic: Develop
 tags: [add-ons, beginner, extensions, how-to, intermediate, permissions]
 contributors:
   [caitmuenster, Zearin_Galaurum, rebloor, evilpie, hellosct1, freaktechnik]
-last_updated_by: Zearin_Galaurum
-date: 2021-03-19 
+last_updated_by: rebloor
+date: 2026-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -41,11 +41,11 @@ Or how to avoid permissions discouraging users from installing your extensions.
 
 To inform users of the potential impact of installing an extension, Firefox displays a message showing what [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) an extension is requesting when it's installed. The prompt looks something like this:
 
-![Example of the permissions messages from the Gesturefy extension](/assets/img/documentation/develop/General_permissions_message_example.png)
+![The install permission prompt in Firefox Nova for an extension requesting several permissions](/assets/img/documentation/develop/General_permissions_message_example.png)
 
 Also, if an extension update requires additional permissions the user is prompted to approve the permissions before the updated version is installed:
 
-![Example of the message displayed when an extension update requests additional permissions](/assets/img/documentation/develop/Permissions_update.png)
+![The update permission prompt in Firefox Nova, shown in the Add-ons Manager](/assets/img/documentation/develop/Permissions_update.png)
 
 If the user chooses not to approve the permissions and cancels the update, the previous version remains installed and available for use.
 
@@ -170,7 +170,7 @@ Take an extension you're developing to help color-blind users. At the user's req
 
 Requesting these permissions results in the user getting this advice:
 
-![Example of the "Access your data for all websites" permission message](/assets/img/documentation/develop/All_Websites_permissions.png)
+![The install permission prompt in Firefox Nova showing "Access your data for all websites"](/assets/img/documentation/develop/All_Websites_permissions.png) 
 
 The alternative is to request `"activeTab"`. This permission provides your extension with the same capabilities but only for the active tab and only when run from the extension's UI (that is, from a toolbar button, navigation bar button, context menu, or shortcut key).
 
@@ -178,23 +178,9 @@ Importantly, `"activeTab"` doesn't display a permissions message when installing
 
 ### Avoid host permission "&lt;all_urls&gt;" if you can
 
-As noted in the previous example, requesting host permission `"<all_urls>"` results in the permissions request message "Access your data for all websites". If your extension is designed to work with one or a few websites or domains, narrow the request. Then, when installing your extension, users see details for the first four websites or domains your extension requests access to.
+Requesting host permission `"<all_urls>"` results in the permissions request message "Access your data for all websites". If your extension is designed to work with a few websites or domains, narrow the request. Then, when installing your extension, users see a count and a list, which is scrollable for longer lists, of the websites and domains access requests.
 
-![Example of the permissions message when host permission for four websites is requested.](/assets/img/documentation/develop/Permissions_host_four.png)
-
-If your extension requests access to more than four websites or domains, the message lists the first three and indicates the number of other requests.
-
-![Example of the permissions message when hosts permission for 5 or more website is requested.](/assets/img/documentation/develop/Permissions_host_four_plus.png)
-
-### Avoid the "unlimitedStorage" permission
-
-Only ask for `"unlimitedStorage"` permission if you expect your extension's local data storage to exceed 5MB; if it's not going to exceed that amount, don't ask for it.
-
-![Example of the permission message when requesting access to unlimited client-side data storage.](/assets/img/documentation/develop/Permissions_unlimiteddata.png)
-
-::: note
-Firefox doesn't restrict local storage size, although it does ask users to approve this permission request if you make it. Firefox may add a restriction in the future. If that happens, the limit is unlikely to be less than Chrome's current 5 MB restriction.
-:::
+![The install permission prompt in Firefox Nova listing four domains](/assets/img/documentation/develop/Permissions_host_four.png)
 
 </div>
 </article>
@@ -216,7 +202,7 @@ Permissions that can be requested a runtime are known as [optional permissions](
 
 A typical scenario for using this approach is the `"geoLocation"` permission. Say you've written a note-taking extension that includes the ability to add a minimap of the note-takers location. Requesting location access during installation might leave the user unclear why the extension needs to access location, so they might not install it. However, if permission to use location is requested when the user first tries the feature to add a minimap, they'll get a clearer understanding of why the permission is needed and be more likely to grant it. Should they choose not to grant the permission, the extension can offer a graceful fallback—in this example, not adding the minimap—but the important outcome of this approach is that the user has installed and used your extension.
 
-![Example of an additional or runtime permission request message](/assets/img/documentation/develop/Permissions_optional_request.png)
+![The optional permission request prompt in Firefox Nova](/assets/img/documentation/develop/Permissions_optional_request.png)
 
 Making a runtime permission request is straightforward. Include any permissions you want to request under the `manifest.json` [`optional_permissions`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions) key. Then, pass the permissions you want granted to [`permissions.request`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/request), which prompts the user to grant the permissions. `true` is returned if the user grants the request, `false` if they don't.
 
@@ -245,7 +231,7 @@ There are a couple of things to note:
 
 Users can also grant or revoke optional permissions anytime through an extension's option page. Your extension, therefore, needs to test to determine whether it has the necessary permissions or listen to the [permissions.onAdded](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onAdded) and [permissions.onRemoved](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved) events.
 
-![Example of an extension's options permissions tab highlighting the feature to grant or revoke an optional premission.](/assets/img/documentation/develop/Optional-permissions_in_extension_options_page.png)
+![The Permissions and data tab for an extension in the Firefox Nova Add-ons Manager, with the optional permission highlighted](/assets/img/documentation/develop/Optional-permissions_in_extension_options_page.png)
 
 For more information about optional permissions, see [`optional_permissions`](https://developer.mozilla.org/Add-ons/WebExtensions/manifest.json/optional_permissions) and the [permissions](https://github.com/mdn/webextensions-examples/tree/master/permissions) example.
 
