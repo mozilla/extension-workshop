@@ -143,7 +143,7 @@ Find out best practices for putting your best foot forward with your extension.
 
 {% capture col_1_content %}
 
-![Moble Extensions](/assets/img/documentation/develop/MobleExtensions_promo.png)
+![Enabled and recommended extensions listed in Firefox for Android](/assets/img/documentation/develop/firefox-for-android-extensions.jpg)
 
 {% endcapture %}
 {% capture col_2_content %}
