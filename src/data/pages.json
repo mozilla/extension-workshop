@@ -733,6 +733,70 @@
                 ]
               },
               {
+                "title": "Add-on Policies Preview (Dec 1, 2026)",
+                "url": "/documentation/publish/add-on-policies-preview-2026-12/",
+                "subpageitems": [
+                  {
+                    "title": "No Surprises",
+                    "id": "no-surprises"
+                  },
+                  {
+                    "title": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "title": "Submission Guidelines",
+                    "id": "submission-guidelines"
+                  },
+                  {
+                    "title": "Development Practices",
+                    "id": "development-practices"
+                  },
+                  {
+                    "title": "User Scripts",
+                    "id": "user-scripts"
+                  },
+                  {
+                    "title": "Data Collection and Transmission Disclosure and Control",
+                    "id": "data-collection-and-transmission-disclosure-and-control"
+                  },
+                  {
+                    "title": "Monetization",
+                    "id": "monetization"
+                  },
+                  {
+                    "title": "Security, Compliance and Blocking",
+                    "id": "security-compliance-and-blocking"
+                  }
+                ]
+              },
+              {
+                "title": "Add-on Policies for Enterprise Add-ons Preview (Dec 1, 2026)",
+                "url": "/documentation/publish/add-on-policies-for-enterprise-preview-2026-12/",
+                "subpageitems": [
+                  {
+                    "title": "Preamble",
+                    "id": "preamble"
+                  },
+                  {
+                    "title": "Distribution",
+                    "id": "distribution"
+                  },
+                  {
+                    "title": "Content",
+                    "id": "content"
+                  },
+                  {
+                    "title": "Submission Guidelines",
+                    "id": "submission-guidelines"
+                  },
+                  {
+                    "title": "Security, Compliance and Blocking",
+                    "id": "security-compliance-and-blocking"
+                  }
+                ]
+              },
+              {
                 "title": "Add-on Policies FAQ",
                 "url": "/documentation/publish/add-on-policies-faq/",
                 "subpageitems": [
@@ -801,6 +865,56 @@
                   {
                     "title": "10. Release; indemnification",
                     "id": "release-idemnification"
+                  },
+                  {
+                    "title": "11. General legal terms",
+                    "id": "general-legal-terms"
+                  }
+                ]
+              },
+              {
+                "title": "Firefox Add-on Distribution Agreement Preview (Dec 1, 2026)",
+                "url": "/documentation/publish/firefox-add-on-distribution-agreement-preview-2026-12/",
+                "subpageitems": [
+                  {
+                    "title": "1. Introduction",
+                    "id": "introduction"
+                  },
+                  {
+                    "title": "2. Accounts",
+                    "id": "accounts"
+                  },
+                  {
+                    "title": "3. Privacy Policy",
+                    "id": "privacy-policy"
+                  },
+                  {
+                    "title": "4. Distribution, certificates, & Policies and Review",
+                    "id": "distribution-certificates-and-policies-and-review"
+                  },
+                  {
+                    "title": "5. Your obligations",
+                    "id": "your-obligations"
+                  },
+                  {
+                    "title": "6. Licenses; proprietary rights",
+                    "id": "licenses-proprietary-rights"
+                  },
+                  {
+                    "title": "7. Content removal",
+                    "id": "content-removal"
+                  },
+                  {
+                    "title": "8. Disclaimer of warranties",
+                    "id": "disclaimer-of-warranties"
+                  },
+                  {
+                    "title": "9. Limitation of liability",
+                    "id": "limitation-of-liability"
+                  },
+                  {
+                    "title": "10. Release; indemnification",
+                    "id": "release-indemnification"
                   },
                   {
                     "title": "11. General legal terms",
