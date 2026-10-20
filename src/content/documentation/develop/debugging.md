@@ -25,8 +25,8 @@ contributors:
     abdullahdiaa,
     aroraharsh010
   ]
-last_updated_by: aroraharsh010
-date: 2020-01-24 20:07:00
+last_updated_by: rebloor
+date: 2026-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -58,9 +58,9 @@ You use an implementation of the developer tools called Toolbox to debug extensi
 - in the left-hand menu, click **This Firefox** (or **This Nightly**).
 - click **Inspect** next to your extension.
 
-A new tab opens showing **Inspector** in the Toolbox.
+The Toolbox opens in a new window showing **Inspector**.
 
-![developers tool screenshot](/assets/img/documentation/develop/developing_tools_inspector.png)
+![An extension's Toolbox open in its window in Firefox, showing the Inspector with the Layout view](/assets/img/documentation/develop/developing_tools_inspector.png)
 
 To debug your extension, you use:
 
@@ -74,11 +74,7 @@ There is an overview of all relevant places to look for messages at [Viewing log
 
 For much of the debugging work, it's useful to view **Console** with **Inspector** or **Debugger**. You do this using the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console), press `esc` to activate this mode.
 
-![developers tool split screenshot](/assets/img/documentation/develop/developing_tools_inspector_split.png)
-
-You now drag the toolbox tab to a separate window, so you can place it alongside the window where you're executing the extension.
-
-![developers tool split screenshot](/assets/img/documentation/develop/arranging_tools.png)
+![An extension's toolbox in Firefox showing the Inspector, with the Layout view and the split console open](/assets/img/documentation/develop/developing_tools_inspector_split.png)
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
@@ -141,7 +137,7 @@ To debug background scripts, use the [Toolbox](#developer-tools-toolbox) **Debug
 
 To get started, open your background script in **Sources**.
 
-![background script screenshot](/assets/img/documentation/develop/locate_background_script.png)
+![An extension's background script selected in Sources in the Firefox Debugger](/assets/img/documentation/develop/locate_background_script.png)
 
 As you run your extension, the **Console** displays logged output, including calls to [`console.log()`](https://developer.mozilla.org/docs/Web/API/Console/log) made by the extension's background scripts and any errors the browser raises as it executes these scripts. Note that the console shows all errors raised by the browser, not just errors related to your extension's code.
 
@@ -149,15 +145,15 @@ When you debug a non-persistent background script, the background script won't g
 
 For example, the [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example extension logs a message from its background script when it receives a message from one of its content scripts.
 
-![background script console log screenshot](/assets/img/documentation/develop/background_script_console_log.png)
+![A message logged by an extension's background script, shown in the split console below the Debugger in Firefox](/assets/img/documentation/develop/background_script_console_log.png)
 
 Using the **Console** command line, you can access and modify the objects created by your background scripts. For example, you can call the `notify()` function:
 
-![execute from console screenshot](/assets/img/documentation/develop/execute_from_console.png)
+![Calling an extension's notify() function from the console in Firefox](/assets/img/documentation/develop/execute_from_console.png)
 
 In the **Debugger** you can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger).
 
-![add breakpoint screenshot](/assets/img/documentation/develop/adding_breakpoint.png)
+![A breakpoint set on a line of an extension's background script in the Firefox Debugger](/assets/img/documentation/develop/adding_breakpoint.png)
 
 For more information about using the debugger, see the [Debugger](https://developer.mozilla.org/docs/Tools/Debugger) guide.
 
@@ -188,11 +184,11 @@ To get started:
 - enter `about:addons` in the URL bar, to open Add-ons Manager.
 - open your extension's preferences:
 
-![open preferences screenshot](/assets/img/documentation/develop/open_preferences.png)
+![An extension's options menu in the Firefox Add-ons Manager, with Preferences highlighted](/assets/img/documentation/develop/open_preferences.png)
 
 - locate the options page script in Sources.
 
-![open scripts in debugger screenshot](/assets/img/documentation/develop/options_script_in_debugger.png)
+![An extension's options page script selected in Sources in the Firefox Debugger](/assets/img/documentation/develop/options_script_in_debugger.png)
 
 In the **Debugger** you can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
 
@@ -202,7 +198,7 @@ To debug the options page's HTML and CSS, point the tools at the iframe that hos
 - click the page selector (1).
 - click the options page's HTML item (2).
 
-![open options page HTML screenshot](/assets/img/documentation/develop/open_options_page_HTML.png)
+![The toolbox frame selector in Firefox Nova listing the extension's options page](/assets/img/documentation/develop/open_options_page_HTML.png)
 
 For more information about using **Inspector**, see the [Inspector](https://developer.mozilla.org/docs/Tools/Page_Inspector) guide.
 
@@ -230,7 +226,7 @@ To debug popups, use the [Toolbox](#developer-tools-toolbox) **Debugger** in the
 
 To debug a popup it needs to be visible (so that its HTML document is loaded). However, having opened a popup, if you click outside the popup it closes and its code unloads. This would appear to make debugging rather difficult. To overcome this challenge, in the options menu, click **Disable Popup Auto-Hide**.
 
-![disable popup auto-hide screenshot](/assets/img/documentation/develop/disable_popup_auto_hide.png)
+![The toolbox menu in Firefox Nova with Disable Popup Auto-Hide highlighted](/assets/img/documentation/develop/disable_popup_auto_hide.png)
 
 Now, when you open a popup it stays open and its code remains loaded.
 
@@ -242,11 +238,11 @@ Internally, this option toggles the `ui.popup.disable_autohide` preference, whic
 
 With the popup open, its JavaScript sources are listed in **Debugger**. In the **Debugger** you can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
 
-![popup in debugger screenshot](/assets/img/documentation/develop/popup_in_debugger.png)
+![An extension's popup script selected in Sources in the Firefox Debugger](/assets/img/documentation/develop/popup_in_debugger.png)
 
 To inspect the popup's HTML and CSS, use **Inspector** in the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console) view so you can view the **Console** below **Inspector**. You can [review and modify the popup's HTML and CSS in **Inspector**](https://developer.mozilla.org/docs/Tools/Page_Inspector), as you would with any webpage.
 
-![popup in inspector screenshot](/assets/img/documentation/develop/popup_in_inspector.png)
+![An extension's popup document in the Firefox Inspector with the split console open](/assets/img/documentation/develop/popup_in_inspector.png)
 
 If your extension has multiple HTML documents open, click the page select icon (![pages selector](/assets/img/documentation/develop/page-selector.png)) to open the popup's document.
 
@@ -280,11 +276,11 @@ If you activated the [split console](https://developer.mozilla.org/docs/Tools/We
 
 Content scripts may not be visible by default. If you can't see your extension and its content scripts, click the gear icon in  **Sources** and select **Show content scripts**.
 
-![content script in debug](/assets/img/documentation/develop/content_script_in_debug_enable.png)
+![The Debugger source settings menu in Firefox Nova with Show content scripts highlighted](/assets/img/documentation/develop/content_script_in_debug_enable.png)
 
 Now, select your content scripts in **Sources**.
 
-![content script in debug](/assets/img/documentation/develop/content_script_in_debug.png)
+![An extension's content script listed under the extension in Sources in the Firefox Debugger](/assets/img/documentation/develop/content_script_in_debug.png)
 
 You can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
 
@@ -316,13 +312,13 @@ To debug a sidebar, use the [Toolbox](#developer-tools-toolbox) **Debugger** in 
 
 To debug a sidebar, open the sidebar and locate its JavaScript in **Debugger**.
 
-![sidebar script in debugger](/assets/img/documentation/develop/sidebar_script_in_debugger.png)
+![An extension's sidebar script selected in Sources in the Firefox Debugger](/assets/img/documentation/develop/sidebar_script_in_debugger.png)
 
 In the **Debugger** you can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
 
 To inspect the sidebar's HTML and CSS, use **Inspector** in the [split console](https://developer.mozilla.org/docs/Tools/Web_Console/Split_console) view so you can view the **Console** below **Inspector**. You can [review and modify the sidebar's HTML and CSS in **Inspector**](https://developer.mozilla.org/docs/Tools/Page_Inspector), as you would with any webpage.
 
-![sidebar script in debugger](/assets/img/documentation/develop/sidebar_page_in_inspector.png)
+![An extension's sidebar document in the Firefox Inspector with the split console open](/assets/img/documentation/develop/sidebar_page_in_inspector.png)
 
 If your extension has multiple HTML documents open, click the page select icon (![pages selector](/assets/img/documentation/develop/page-selector.png)) to open the sidebar's document.
 
@@ -346,7 +342,7 @@ We use the [annotate-page](https://github.com/mdn/webextensions-examples/tree/ma
 
 An extension can store data using the [Storage API](https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage). To view this data, in the [Toolbox](#developer-tools-toolbox) open the **Storage** tab and locate **Extension Storage**.
 
-![sidebar script in debugger](/assets/img/documentation/develop/sidebar_data_in_storage.png)
+![An extension's stored data shown under Extension Storage in the Firefox Storage panel](/assets/img/documentation/develop/sidebar_data_in_storage.png)
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -372,7 +368,7 @@ To debug development tools pages and panels, use the [Toolbox](#developer-tools-
 
 To debug additions to the developer tools, open the developer tools and any custom panels, and locate their JavaScript in **Debugger**.
 
-![developer tools in debugger](/assets/img/documentation/develop/developer_tools_in_debugger.png)
+![An extension's developer tools panel script selected in Sources in the Firefox Debugger](/assets/img/documentation/develop/developer_tools_in_debugger.png)
 
 In the **Debugger** you can set breakpoints, step through code, modify the extension's state, and do [everything else you'd expect to be able to do in a debugger](https://developer.mozilla.org/docs/Tools/Debugger). Any messages logged by your code display in **Console**.
 
@@ -382,7 +378,7 @@ To debug the custom developer tools pages' HTML and CSS:
 - click the page selector (1).
 - click the custom development tools page item you want to inspect (2).
 
-![developer tools selecting page in inspector](/assets/img/documentation/develop/developer_tools_selecting_page_in_inspector.png)
+![The toolbox frame selector in Firefox Nova listing an extension's developer tools pages, with the panel page highlighted](/assets/img/documentation/develop/developer_tools_selecting_page_in_inspector.png)
 
 You can [review and modify the custom development tools page HTML and CSS in **Inspector**](https://developer.mozilla.org/docs/Tools/Page_Inspector), as you would with any webpage.
 

@@ -19,7 +19,7 @@ contributors:
     Rob--W,
   ]
 last_updated_by: rebloor
-date: 2023-06-02
+date: 2026-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -56,17 +56,6 @@ The extension installs and remains installed until you remove it or restart Fire
 
 <!-- Single Column Body Module -->
 
-<!-- Video Popup Thumbnail -->
-
-{% include modules/video-popup.liquid,
-    title: "Temporarily Install Extension"
-    youtube_id: "J7el77F1ckg"
-    image: "documentation/develop/temp-install-extension.png"
-    alt: "temporarily install extension"
-%}
-
-<!-- END: Video Popup Thumbnail -->
-
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
   id: "intro"
@@ -83,21 +72,12 @@ The extension installs and remains installed until you remove it or restart Fire
 
 To reload the extension, click "Reload":
 
-![reload-extension](/assets/img/documentation/develop/reload-extension.png)
+![The about:debugging page in Firefox Nova, with the Reload button highlighted on the temporary extension's card](/assets/img/documentation/develop/reload-extension.png)
 
 This:
 
 - reloads any persistent scripts, such as [background scripts](https://developer.mozilla.org/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)
 - parses the `manifest.json` file, so changes to [`permissions`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), [`content_scripts`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), [`browser_action`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), or any other keys take effect.
-
-<!-- Video Popup Thumbnail -->
-
-{% include modules/video-popup.liquid,
-    title: "Reload Temporary Extension"
-    youtube_id: "d3hgLMVJAzY"
-    image: "documentation/develop/reload-temp-extension.png"
-    alt: "reload temporary extension"
-%}
 
 <!-- END: Video Popup Thumbnail -->
 
