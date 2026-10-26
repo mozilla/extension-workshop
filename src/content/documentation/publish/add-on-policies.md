@@ -17,8 +17,8 @@ contributors:
     dotproto,
     bacharakis,
   ]
-last_updated_by: bacharakis
-date: 2026-04-30
+last_updated_by: awagner
+date: 2026-10-20
 ---
 
 <!-- Page Hero Banner -->
@@ -26,6 +26,12 @@ date: 2026-04-30
 {% capture page_hero_banner_content %}
 
 # Add-on Policies
+
+::: note
+Mozilla is updating Add-on Policies on Dec 1, 2026.
+* Preview [Policies for Listed and Self-distributed Add-ons](/documentation/publish/add-on-policies-preview-2026-12).
+* Preview [Policies for Enterprise Add-ons](/documentation/publish/add-on-policies-for-enterprise-preview-2026-12).
+:::
 
 Add-ons extend the core capabilities of Firefox, enabling users to modify and personalize their web experience. A healthy ecosystem, built on trust, is vital for developers to be successful and users to feel safe making Firefox their own. For these reasons, Mozilla requires all add-ons to comply with the following policies. These policies are not intended to serve as legal advice: depending on where you are located, additional requirements may apply.
 
