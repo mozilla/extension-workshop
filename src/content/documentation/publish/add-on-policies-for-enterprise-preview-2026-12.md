@@ -55,10 +55,10 @@ When an add-on is given human review or otherwise assessed by Mozilla, these pol
 
 An Enterprise Add-on is an add-on that self-declares its enterprise status via the specific manifest key
 
-```
-browser_specific_settings: {
-    gecko: {
-        admin_install_only: true
+```json
+"browser_specific_settings": {
+    "gecko": {
+        "admin_install_only": true
     }
 }
 ```
