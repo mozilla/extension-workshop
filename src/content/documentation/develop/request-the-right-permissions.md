@@ -115,7 +115,7 @@ Not all [permissions](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExte
 <!-- END: Table -->
 
 ::: note
-The permissions that display messages and their messages may differ in other browsers. For information about viewing the permission message in Chrome, see [Viewing Warnings.](https://developer.chrome.com/apps/permission_warnings#view_warnings)
+The permissions that display messages and their messages may differ in other browsers. For information about viewing the permission message in Chrome, see [Permissions list](https://developer.chrome.com/docs/extensions/reference/permissions-list).
 :::
 
 These permissions don't get alerted to users:
@@ -129,6 +129,7 @@ These permissions don't get alerted to users:
   - `identity`
   - `idle`
   - `menus`
+  - `scripting`
   - `storage`
   - `theme`
   - `webRequest`
