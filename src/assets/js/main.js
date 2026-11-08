@@ -1129,7 +1129,8 @@ jQuery(document).ready(function ($) {
                   '</small></p>'
                 : '';
             var excerpt =
-              $.trim(item.body)
+              item.body
+                .trim()
                 .substring(0, 300)
                 .split(' ')
                 .slice(0, -1)
