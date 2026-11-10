@@ -18,8 +18,8 @@ contributors:
     Adora,
     kmaglione,
   ]
-last_updated_by: kewisch
-date: 2021-12-01
+last_updated_by: awagner
+date: 2026-10-20
 ---
 
 <!-- Page Hero Banner -->
@@ -27,6 +27,11 @@ date: 2021-12-01
 {% capture page_hero_banner_content %}
 
 # Firefox Add-on Distribution Agreement
+
+::: note
+Mozilla is updating Firefox Add-on Distribution Agreement, becoming effective Dec 1, 2026.
+[Preview the updated agreement](/documentation/publish/firefox-add-on-distribution-agreement-preview-2026-12).
+:::
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -184,7 +189,7 @@ You may cease distribution of Your Add-ons at any time by removing your Add-on f
 **(b) Removal from Distribution by Mozilla.**
 Mozilla reserves the right (though not the obligation) to, in our sole discretion, remove or revoke access to any Listed or Self-distributed Add-ons as well as AMO accounts. This applies, but is not limited to, Add-ons and AMO accounts that, in our reasonable opinion, violate this Agreement or the law, any applicable Mozilla policy, or is in any way harmful or objectionable. In addition, we may at any time remove Your Add-on from AMO; blocklist an Add-on; delete your AMO account; flag, filter, modify related materials (including but not limited to descriptions, screenshots, or metadata); reclassify the Add-on; or take other corrective action.
 
-For example, a Listed Add-on or AMO account may be removed in response to abuse reports from End-Users, in response to a Take-Down Request, or if it comes to Mozilla’s attention that the Add-on or AMO account violates our Conditions of Use. An Self-distributed Add-on may be blocklisted or the Mozilla Certificate revoked if it comes to Mozilla’s attention that it violates the Security Criteria described in our [Review Policies](/documentation/publish/add-on-policies/).
+For example, a Listed Add-on or AMO account may be removed in response to abuse reports from End-Users, in response to a Take-Down Request, or if it comes to Mozilla’s attention that the Add-on or AMO account violates our Conditions of Use. A Self-distributed Add-on may be blocklisted or the Mozilla Certificate revoked if it comes to Mozilla’s attention that it violates the Security Criteria described in our [Review Policies](/documentation/publish/add-on-policies/).
 
 This includes a policy to terminate and ban developers we consider to be repeat infringers. If we determine that You have repeatedly violated this Agreement or the [Review Policies](/documentation/publish/add-on-policies/), we may terminate Your AMO account and its Add-ons as well as any other AMO accounts and Add-ons you own or control. This includes the removal, revocation, and/or corrective action described above. We may also prohibit You from creating any new AMO accounts or Add-ons.
 

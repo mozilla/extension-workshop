@@ -56,29 +56,29 @@ Stylesheet: Full Width Page Stylesheet
       background: transparent no-repeat center/contain;
 
       &.left {
-        background: transparent no-repeat -15% 100%/45%;
+        background: transparent no-repeat -15% 100% / 45%;
       }
 
       &.right {
-        background: transparent no-repeat 110% 100%/65%;
+        background: transparent no-repeat 110% 100% / 65%;
       }
     }
     @include breakpoint(medium only) {
       > .left {
-        background: transparent no-repeat -20% 100%/40%;
+        background: transparent no-repeat -20% 100% / 40%;
       }
 
       > .right {
-        background: transparent no-repeat 115% 100%/60%;
+        background: transparent no-repeat 115% 100% / 60%;
       }
     }
     @include breakpoint(small down) {
       > .left {
-        background: transparent no-repeat -25% 100%/60%;
+        background: transparent no-repeat -25% 100% / 60%;
       }
 
       > .right {
-        background: transparent no-repeat 115% 100%/80%;
+        background: transparent no-repeat 115% 100% / 80%;
       }
     }
   }
@@ -1030,10 +1030,7 @@ Stylesheet: Full Width Page Stylesheet
       #anatomy-of-an-extension-graphic-mobile {
         display: block;
         position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
+        inset: 0;
       }
 
       button {

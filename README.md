@@ -17,29 +17,28 @@ For notes on how to deploy the project on a live system, see [Deployment](#deplo
 ### Prerequisites
 
 - [Node JS](https://nodejs.org/en/). Runnning the LTS release is recommended.
-- [Yarn](https://yarnpkg.com/en/) for package management.
 
 ```
-yarn install
+npm install
 ```
 
 To start local development, run:
 
 ```
-yarn start
+npm start
 ```
 
 **ℹ️ NOTE:** Running locally will show unpublished content that uses the `published: false` convention in frontmatter. Content with `published: false` will not be available on staging or production.
 
 
-### Available yarn commands
+### Available npm commands
 
-| Command                  | Description                                                                             |
-| ------------------------ | --------------------------------------------------------------------------------------- |
-| `yarn start`             | Starts eleventy and includes unpublished content.                                       |
-| `yarn build:production`  | Builds the site for production.                                                         |
-| `yarn build:unpublished` | Builds the site for production with unpublished content.                                |
-| `yarn clean`             | Clears the output directory. (You probably won't need to use this manually.)            |
+| Command                  | Description                                                                            |
+| ------------------------ | -------------------------------------------------------------------------------------- |
+| `npm start`             | Starts eleventy and includes unpublished content.                                       |
+| `npm build:production`  | Builds the site for production.                                                         |
+| `npm build:unpublished` | Builds the site for production with unpublished content.                                |
+| `npm clean`             | Clears the output directory. (You probably won't need to use this manually.)            |
 
 ## How the site is built
 
@@ -49,7 +48,7 @@ The site works in slightly different ways depending on whether you're running th
 
 ### Development builds
 
-When you run `yarn start` the CSS and JS is built in parallel with the eleventy build. Once up and running both eleventy and the JS and CSS build scripts watch for changes. When something changes the site is re-built.
+When you run `npm start` the CSS and JS is built in parallel with the eleventy build. Once up and running both eleventy and the JS and CSS build scripts watch for changes. When something changes the site is re-built.
 
 In development Eleventy knows nothing about the CSS and JavaScript builds. For automatic reloading of the JS and CSS, each script uses a fetch to the public API to tell browserSync there is new code and it reloads it for you.
 
@@ -109,7 +108,7 @@ extensionworkshop.com
 │   ├── includes                 # Components (Liquid)
 │   └── layouts                  # Layout templates
 │
-├── tests                        # Test files run by jest `yarn test`.
+├── tests                        # Test files run by jest `npm test`.
 │
 ├── eleventy.config.js           # Eleventy configuration
 ├── .eleventyignore              # Files ignored by Eleventy
@@ -120,7 +119,6 @@ extensionworkshop.com
 ├── .eslintrc                    # eslint config
 ├── .eslintignore                # Files ignored by eslint
 ├── package.json                 # Node.js package manifest
-├── yarn.lock                    # Package manager lock file
 └── README.md                    # This file
 ```
 

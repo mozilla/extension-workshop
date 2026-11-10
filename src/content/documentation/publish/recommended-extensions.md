@@ -27,7 +27,7 @@ date: 2019-09-19 12:01:01
 
 {% capture content_with_toc %}
 
-[Recommended extensions](https://addons.mozilla.org/firefox/search/?promoted=recommended&type=extension) are curated extensions that meet the highest standards of security, functionality, and user experience. Firefox staff thoroughly evaluate each extension before it receives Recommended status.
+[Recommended extensions](https://addons.mozilla.org/firefox/search/?promoted=recommended&type=extension) are curated extensions that meet the highest standards of security, functionality, and user experience. Firefox staff thoroughly evaluate each extension before it receives Recommended status. They then continue to validate these standards through ongoing checks and periodic technical reviews.
 
 Recommended extensions are easy to identify because of their distinctive “Recommended” badge.
 
@@ -51,7 +51,7 @@ When evaluating nominations, curators are primarily concerned with:
 
 - **Does the extension function at an exemplary level?** All Recommended extensions should not only function as they promise, but function at a very high level. For instance, there are many ad blockers out there, but not all ad blockers are equally effective.
 
-- **Is the extension safe?** We’re committed to helping protect users against third party software that may—intentionally or otherwise—compromise user security. Before an extension receives Recommended status, it undergoes rigorous technical review by staff security experts.
+- **Is the extension safe?** We’re committed to helping protect users against third-party software that may—intentionally or otherwise—compromise user security. Before an extension receives Recommended status, it undergoes rigorous technical review by staff security experts. After receiving Recommended status, safety standards are maintained through automated checks, monitoring, and periodic technical reviews.
 
 - **Does the extension offer an exceptional user experience?** Recommended extensions should be delightful to use. Curators look for content that’s intuitive to manage and well-designed. Common areas of concern include the post-install experience (i.e. once the user installs the extension, is it clear how to use it?), settings management, user interface copy, etc.
 
@@ -79,7 +79,7 @@ Due to the heightened exposure Recommended extensions receive and because Firefo
 - Work with staff to polish user experience issues (e.g. copy edits, user flow optimization, etc.)
 - Address bug fixes in a timely manner.
 
-Because of the program’s priority on security, every new version of a Recommended extension submitted must undergo a full technical review before it will appear on AMO. Depending on the state of the review queue, wait times may take up to two weeks.
+Because the program prioritizes security, Recommended extensions are evaluated through a combination of automated checks, post-publish monitoring, and periodic manual review. New versions are published quickly, so users receive updates promptly. However, updates that raise policy and security signals may be held for technical review.
 
 {% endcapture %}
 {% include modules/one-column.liquid,

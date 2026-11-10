@@ -7,7 +7,7 @@ topic: Publish
 tags: [add-on, distribution, testing, guide, installation]
 contributors: [caitmuenster, irenesmith, jwilk, hellosct1, gray_-_wolf, luanmm, rebloor]
 last_updated_by: rebloor
-date: 2025-03-31
+date: 2026-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -77,17 +77,17 @@ To install an add-on from file in desktop Firefox, send the user the signed add-
 
 3. From the settings cog, open **Install Add-on From File**.
 
-   ![Add-ons Manager setting cog](/assets/img/documentation/publish/install-addon-from-file.png)
+   ![The Add-ons Manager tools menu in Firefox Nova, with Install Add-on From File highlighted](/assets/img/documentation/publish/install-addon-from-file.png)
 
 4. Browse to and open the saved add-on file.
 
 5. When prompted, click **Add**.
 
-   ![add add-on confirmation](/assets/img/documentation/publish/add_add_on_confirmation.png)
+   ![The install prompt for the Borderify extension in Firefox Nova](/assets/img/documentation/publish/add_add_on_confirmation.png)
 
 6. The add-on now appears in the Add-on Manager’s list of installed add-ons and is ready to use.
 
-   ![add-on appears in add-ons manager](/assets/img/documentation/publish/add_on_added.png)
+   ![The Borderify extension listed in the Firefox Nova Add-ons Manager](/assets/img/documentation/publish/add_on_added.png)
 
 {% endcapture %}
 {% include modules/one-column.liquid,

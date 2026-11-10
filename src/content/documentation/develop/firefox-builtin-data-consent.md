@@ -14,7 +14,7 @@ contributors:
     willdurand,
   ]
 last_updated_by: rebloor
-date: 2026-04-25
+date: 2026-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -139,7 +139,7 @@ The rest of this section describes each key in the `data_collection_permissions`
 
 When you specify data types in the required list, users must accept this data collection to use the extension; they cannot opt out. So the user can review the data-collection requirements of an extension before installing it, data collection information is presented to the user in the installation prompt, like this:
 
-![The extension installation prompt shows data types as specified in the manifest.](/assets/img/documentation/develop/data-collection-permissions-prompt-install.webp)
+![The install prompt in Firefox Nova showing required data collection and the option to share technical and interaction data](/assets/img/documentation/develop/data-collection-permissions-prompt-install.webp)
 
 If the user doesn’t agree to data collection, they can cancel the extension installation.
 
@@ -181,7 +181,7 @@ This installation prompt is the result of a `manifest.json` file that specifies 
 
 This manifest adds the "required" data collection paragraph to the installation prompt. `about:addons` also lists these data permissions, like this:
 
-![The about:addons page shows details of required and optional data collection permissions.](/assets/img/documentation/develop/data-collection-permissions-about-addons.webp)
+![The Permissions and data tab in the Firefox Nova Add-ons Manager showing required and optional data collection](/assets/img/documentation/develop/data-collection-permissions-about-addons.webp)
 
 #### Optional data
 
@@ -194,6 +194,15 @@ You specify optional data-collection permissions in the optional list. Firefox d
 %}
 
 {% capture content %}
+
+If your extension **only** collects optional data, it must declare `"required": ["none"]`, to explicitly state that nothing is collected without consent. For example, to declare that an extension has no required data collection but optionally collects website activity data, use:
+
+```json
+"data_collection_permissions": {
+  "required": ["none"],
+  "optional": ["websiteActivity"]
+}
+```
 
 ### Technical and interaction data
 
@@ -233,11 +242,11 @@ If your extension doesn’t collect or transmit any data, you indicate that by s
 
 When a user attempts to install this extension, Firefox shows the usual installation prompt with the description of the required (API) permissions and a description to indicate that the extension doesn’t collect any data, like this:
 
-![The extension installation prompt shows that the manifest defines that no data is transmitted](/assets/img/documentation/develop/data-collection-permissions-prompt-install-no-transmission.webp)
+![The install prompt in Firefox Nova for an extension that doesn't collect data](/assets/img/documentation/develop/data-collection-permissions-prompt-install-no-transmission.webp)
 
 The *Permissions and data* tab for the extension in `about:addons` also lists the "no data collected" type, like this:
 
-![The  about:addons page shows the "no data collected" permission.](/assets/img/documentation/develop/data-collection-permissions-about-addons-no-transmission.webp)
+![The Permissions and data tab in the Firefox Nova Add-ons Manager for an extension that doesn't collect data](/assets/img/documentation/develop/data-collection-permissions-about-addons-no-transmission.webp)
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -279,7 +288,7 @@ await browser.permissions.request({ data_collection: ["healthInfo"] });
 
 This call displays a message to the user, giving them the choice to opt in to this data collection, like this:
 
-![The prompt for requesting data collection permissions programmatically.](/assets/img/documentation/develop/data-collection-permissions-prompt-programmatic.webp)
+![The prompt in Firefox Nova when an extension requests additional data collection at runtime](/assets/img/documentation/develop/data-collection-permissions-prompt-programmatic.webp)
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -330,4 +339,3 @@ If you choose to implement options 2 or 3, use the technique described in [Acces
     id: "data-collection-experience-on-older-Firefox-versions"
     content: content
 %}
-

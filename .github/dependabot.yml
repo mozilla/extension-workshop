@@ -5,3 +5,33 @@ updates:
     schedule:
       interval: "daily"
     open-pull-requests-limit: 99
+    cooldown:
+      default-days: 7
+    groups:
+      jest:
+        patterns:
+          - "jest"
+          - "jest-environment-jsdom"
+      eslint:
+        patterns:
+          - "eslint"
+          - "@eslint/js"
+    ignore:
+      # https://github.com/mozilla/extension-workshop/issues/2473
+      - dependency-name: eslint
+        versions:
+          - ">= 10"
+      - dependency-name: "@eslint/js"
+        versions:
+          - ">= 10"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: daily
+    groups:
+      ssdlc-actions:
+        patterns:
+          - "mozilla/ssdlc-actions/*"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 99

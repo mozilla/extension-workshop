@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const fetch = require('node-fetch');
 const fs = require('fs-extra');
 const util = require('util');
 const sass = require('sass-embedded');

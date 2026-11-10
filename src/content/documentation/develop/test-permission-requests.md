@@ -7,7 +7,7 @@ topic: Develop
 tags: [add-ons, extensions, guide, permissions, testing, webextensions]
 contributors: [rebloor]
 last_updated_by: rebloor
-date: 2019-03-21 12:27:40
+date: 2026-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -62,7 +62,7 @@ To do this with an unsigned `*.xpi` or `*.zip` file you need to:
 
 Then install the extension using **Install Add-on From File** in the Add-on manager (`about:addons`). As the extension installs, the request to grant the install-time permissions displays, similar to this:
 
-![installing unpacked extension](/assets/img/documentation/develop/installing_unpackaged_extension.png)
+![The install prompt in Firefox Nova for an unsigned extension installed from the Add-ons Manager, showing its permissions](/assets/img/documentation/develop/installing_unpackaged_extension.png)
 
 Note that the caution message relates to this being an unsigned extension; this message isn’t displayed during installation from [addons.mozilla.org](https://addons.mozilla.org).
 
@@ -119,14 +119,14 @@ If the packages were generated with `.zip` extensions, change them to `.xpi`; ot
   - set the preference `xpinstall.signatures.required` to `false`.
   - If you’re using [Nightly](https://nightly.mozilla.org/) and hosting your update on an HTTP server, create and set `extensions.checkUpdateSecurity` and `extensions.install.requireSecureOrigin` preferences to `false`. To do this:
     - enter the preference name in the search box.
-    - click **Add**. <br/> ![add preference](/assets/img/documentation/develop/preference_create_2.png)
-    - toggle the preference to set it to `false`. <br/> ![toggle preferences](/assets/img/documentation/develop/preference_toggle_2.png)
+    - click **Add**. <br/> ![Adding a Boolean preference in about:config in Firefox Nova](/assets/img/documentation/develop/preference_create_2.png)
+    - toggle the preference to set it to `false`. <br/> ![A preference set to false in about:config in Firefox Nova, with the toggle and delete buttons](/assets/img/documentation/develop/preference_toggle_2.png)
 
 - open the link to the first XPI file to install it.
 - open `about:addons`, click the gear icon, and click **Check for Updates**.
 - you get a permission warnings prompt, similar to this one, detailing the additional permissions requested:
 
-![permissions prompt](/assets/img/documentation/develop/upgrade_install_2.png)
+![The update permission prompt in Firefox Nova requesting access to browsing history](/assets/img/documentation/develop/upgrade_install_2.png)
 
 ::: note
 If the upgrade doesn't happen, look for `addons.update-checker` logs in the [Browser Console](https://developer.mozilla.org/docs/Tools/Browser_Console). Any errors encountered during the upgrade process are reported in the log.
@@ -150,7 +150,7 @@ To retest your extension’s runtime permission grants and its post-install beha
 
 - remove the extension using `about:debugging` and reinstall it, or restart Firefox.
 
-![remove extension from debugging](/assets/img/documentation/develop/reload_to_retest.png)
+![A temporary extension's card in about:debugging in Firefox, with the Remove button highlighted](/assets/img/documentation/develop/reload_to_retest.png)
 
 - if you’re using [Nightly](https://nightly.mozilla.org/) or [Developer Edition](https://www.mozilla.org/firefox/developer/), use the [Extensions Permission Manager](https://github.com/rpl/dev-webext-permissions-manager) web extension to clear permissions.
 

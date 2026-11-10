@@ -7,8 +7,8 @@ topic: Develop
 tags: [add-ons, beginner, guide, mobile, webextensions]
 contributors:
   [Rob--W, caitmuenster, rebloor, juraj, ExE-Boss, Ding-Fan, andrewtruongmoz]
-last_updated_by: Rob--W
-date: 2023-11-12
+last_updated_by: rebloor
+date: 2026-10-18
 ---
 
 {% capture page_hero_banner_content %}
@@ -212,15 +212,15 @@ You can debug your extension in the web developer tools and view any `manifest.j
 
 With your device connected over USB or Wi-Fi, open `about:debugging` and enable the device connection.
 
-![Enable USB Devices](/assets/img/documentation/develop/enable-device-connection.png)
+![The about:debugging Setup page, with the Enable USB Devices button highlighted](/assets/img/documentation/develop/enable-device-connection.png)
 
-Your device is listed in the left-hand column, click **Connect**.
+Your device is listed in the left-hand column.
 
-![Connect to device](/assets/img/documentation/develop/connect-to-device.png)
+![The about:debugging Setup page, with a connected Android device and its Connect button highlighted in the sidebar](/assets/img/documentation/develop/connect-to-device.png)
 
 If prompted, allow the incoming connection on your Android device. Now start your extension on the Android device using `web-ext run`. You will need to have at least one tab opened in order for your extension to load. Click your device in the left-hand column and scroll down to find **Processes** in the list of active features in the browser.
 
-![Locate processes](/assets/img/documentation/develop/locate-processes.png)
+![The about:debugging runtime page for an Android device, with the Processes section and its Multiprocess Toolbox entry highlighted](/assets/img/documentation/develop/locate-processes.png)
 
 Click **Inspect** next to **Main Process**. The web developer toolbox displays in **Debugger**.
 
@@ -228,7 +228,7 @@ For much of the debugging work, it's useful to be able to view **Console** with 
 
 Load a page in which your extension exercises. Now you can access any of the JavaScript in your extension.
 
-![Device debugging](/assets/img/documentation/develop/on-device-debugging.png)
+![The Multiprocess Toolbox for an Android device, showing an extension's content script in the Debugger and its log messages in the split console](/assets/img/documentation/develop/on-device-debugging.png)
 
 ::: note
 Content scripts can be reached and debugged when connected to the main process or to a tab target where a content script is running.

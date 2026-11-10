@@ -6,8 +6,8 @@ permalink: /documentation/develop/unique-firefox-capabilities/
 topic: Develop
 tags: [getting-started, webextensions, api, firefox]
 contributors: [rebloor, caitmuenster]
-last_updated_by: caitmuenster
-date: 2020-04-24
+last_updated_by: rebloor
+date: 2026-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -48,7 +48,7 @@ Help users separate their browser activities with [Contextual Identities](https:
 
 {% capture col_2_content %}
 
-![Containers-screenshot](/assets/img/documentation/develop/containers.png "A screenshot of a container dropdown menu, which includes Personal, Work, Banking, and Shopping containers, and the option to Manage Containers")
+![The new tab container menu in Firefox Nova, listing the Personal, Work, Banking, and Shopping containers](/assets/img/documentation/develop/containers.png)
 
 {% endcapture %}
 {% include modules/two-column.liquid,
@@ -68,7 +68,7 @@ Record and display additional or complementary information about a web page with
 
 {% capture col_2_content %}
 
-![Sidebar-screenshot](/assets/img/documentation/develop/sidebar.png "A screenshot of the Annotator extension, which adds a sidebar to the browser window and lets users write text in a box")
+![An extension's sidebar, the Annotator example, open in Firefox Nova](/assets/img/documentation/develop/sidebar.png)
 
 {% endcapture %}
 {% include modules/two-column.liquid,
@@ -88,7 +88,7 @@ Better integrate your extension with the browser using the ability to pick up th
 
 {% capture col_2_content %}
 
-![Sidebar-screenshot](/assets/img/documentation/develop/icon_placement.png "A screenshot the Firefox toolbar that shows extension icons. The icon for the Beastify is clicked to show a dropdown menu.")
+![The extensions panel in Firefox Nova, opened from the toolbar, listing the Beastify extension](/assets/img/documentation/develop/icon_placement.png)
 
 {% endcapture %}
 {% include modules/two-column.liquid,
@@ -148,7 +148,7 @@ Add an extra dimension to your themes by [updating the browser theme at runtime]
 
 {% capture col_2_content %}
 
-![Dynamic-theme-screenshot](/assets/img/documentation/develop/dynamic_theme.png "A screenshot a yellow browser theme with a timer that transforms it into an earth-colored browser theme")
+![Firefox Nova with a theme applied by an extension using browser.theme.update()](/assets/img/documentation/develop/dynamic_theme.png)
 
 {% endcapture %}
 {% include modules/two-column.liquid,
@@ -168,7 +168,7 @@ Provide users with control over their browsing experience from your extension wi
 
 {% capture col_2_content %}
 
-![Extension-controlling-settings](/assets/img/documentation/develop/extension_controlling_settings.png "A screenshot of the user preferences screen for New Windows and Tabs, which shows an extension is controlling the user's home page and New Tab page.")
+![The Homepage settings in Firefox Nova, with the new windows and new tabs settings showing the extension that controls them](/assets/img/documentation/develop/extension_controlling_settings.png)
 
 {% endcapture %}
 {% include modules/two-column.liquid,
@@ -229,7 +229,7 @@ Perform additional web tasks such as [resolving domain names](https://developer.
 
 {% capture col_2_content %}
 
-![Proxy-settings-screenshot](/assets/img/documentation/develop/proxy_settings.png "A screenshot of a configuration page for setting proxy access to the Internet")
+![The Connection Settings dialog in Firefox Nova for configuring proxy access to the internet](/assets/img/documentation/develop/proxy_settings.png)
 
 {% endcapture %}
 {% include modules/two-column.liquid,

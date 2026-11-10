@@ -7,7 +7,7 @@ topic: Develop
 tags: [beginner, extensions, webextensions, compatibility, cross-browser]
 contributors: [rebloor]
 last_updated_by: rebloor
-date: 2019-05-27 6:35:30
+date: 2026-08-05
 ---
 
 <!-- Page Hero Banner -->
@@ -27,15 +27,18 @@ date: 2019-05-27 6:35:30
 
 {% capture content_with_toc %}
 
-While work continues to standardize the APIs used for browser extension development, there remain differences between Chromium-based browsers—such as Chrome, Opera, and the Chromium-based Microsoft Edge—and Firefox. These differences, summarized on this page, include:
+All browsers have the same baseline support for namespace (`browser.*`) and promises:
 
-- **Namespace**: In Chromium-based browsers, JavaScript APIs are accessed under the `chrome` namespace. In Firefox, they are accessed under the `browser` namespace.
-- **Asynchronous APIs**: In Chromium-based browsers, asynchronous APIs are implemented using callbacks. In Firefox, asynchronous APIs are implemented using promise.
-- **API support**: Support for JavaScript APIs differs among browsers.
+- Firefox and Safari supported the `browser.*` namespace and promises from inception.
+- Chromium-based browsers (such as Chrome, Opera, and Microsoft Edge) introduced promises with Manifest V3 in their `chrome.*` namespace. Support for the `browser.*` namespace was added [in 2026](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace), along with promise support in all asynchronous methods.
+
+While work continues to standardize the browser extension APIs, differences remain among the Firefox, Safari, and Chromium-based browsers. These differences, summarized on this page, include:
+
+- **API support**: JavaScript API support varies among browsers.
 - **Manifest key support**: Support for `manifest.json` keys differs among browsers.
 - Variations due to differences in browser behavior.
 
-Firefox is the most compliant with the proposed standard, and is, therefore, your best place to start when developing browser extensions. A simple way of addressing many of these differences is by using the [web extension polyfill library](https://github.com/mozilla/webextension-polyfill). For an introduction to using this tool, see [Building a cross-browser extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension). Note, however, that the polyfill does not support Firefox exclusive APIs that are not available in Chrome.
+For information on building an extension that works on multiple browsers and accounts for these differences, see [Building a cross-browser extension](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension).
 
 {% endcapture %}
 {% include modules/column-w-toc.liquid,
@@ -49,14 +52,17 @@ Firefox is the most compliant with the proposed standard, and is, therefore, you
 
 {% capture content %}
 
-## Namespace
+## Namespace and asynchronous methods
 
-You reference all extensions API functions using a namespace, for example, `browser.alarms.create({delayInMinutes});` would create an alarm in Firefox that goes off after the time specified in `delayInMinutes`.
+You reference all extensions APIs using a namespace. For example, `browser.alarms.create({delayInMinutes});` creates an alarm that goes off after the time specified in `delayInMinutes`.
 
-There are two API namespaces in use:
+All major browsers now support the `browser` namespace and promises for asynchronous methods. Chromium-based browsers (such as Chrome, Opera, and Microsoft Edge) originally used the `chrome` namespace with callbacks. They progressively included support for promises in the `chrome` namespace, completing the full implementation along with support for the `browser` namespace in mid-2026.
 
-- `browser`(the proposed standard) is used in Firefox. For example: `browser.browserAction.setIcon({path: "path/to/icon.png"});`
-- `chrome` is used in Chromium-based browsers. For example: `chrome.browserAction.setIcon({path: "path/to/icon.png"});`
+::: note
+As a porting aid, Firefox supports `chrome` using callbacks, alongside `browser` using promises. This means that many older Chrome extensions work in Firefox without changes, unless they use Chrome-specific APIs that don’t exist in Firefox.
+:::
+
+To target older Chromium-based browsers with extensions written using the `browser` namespace and promises, use the [webextension-polyfill](https://github.com/mozilla/webextension-polyfill).
 
 {% endcapture %}
 {% include modules/one-column.liquid,
@@ -70,15 +76,13 @@ There are two API namespaces in use:
 
 {% capture content %}
 
-## Asynchronous
+## Promises
 
-JavaScript provides several ways in which to handle asynchronous events. The proposed extensions API standard is to use the promise object. The promise approach provides significant advantages when dealing with chained asynchronous event calls.
+JavaScript provides several ways to handle asynchronous events. The extensions API standard is to use the promise object. The promise approach offers significant advantages when handling chained asynchronous event calls.
 
-Firefox uses the promise object for all asynchronous WebExtensions APIs. Chromium-based browsers use callbacks.
+Firefox has always used the promise object. Chromium-based browsers historically supported callbacks through the `chrome` namespace, which is why many extensions and samples use callbacks. Chromium-based browsers now support promises through the `browser` namespace, so you no longer need to design around this for current browser versions.
 
-As a porting aid, the Firefox WebExtension APIs supports `chrome` using callbacks and `browser` using promise. This means that many Chrome extensions will work in Firefox without changes, unless they are using Chrome specific APIs that don’t exist in Firefox.
-
-In Chrome, asynchronous APIs use callbacks to return values, and [`runtime.lastError`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/lastError) to communicate errors:
+So, extensions and samples written against the older, callback-only Chrome APIs use the `chrome` namespace, with callbacks to return values, and [`runtime.lastError`](https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/lastError) to communicate errors:
 
 ```js
 function logCookie(c) {
@@ -92,7 +96,7 @@ function logCookie(c) {
 chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
-The equivalent WebExtensions API code using [promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise):
+The equivalent code using the `browser` namespace and [promises](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise):
 
 ```js
 function logCookie(c) {
@@ -121,7 +125,7 @@ If you are unfamiliar with how JavaScript can handle asynchronous events or prom
 
 {% capture content %}
 
-## API Coverage
+## API coverage
 
 The differences in the extensions API function implementations among the browsers fall into two broad categories:
 

@@ -18,7 +18,7 @@ tags:
   ]
 contributors: [rebloor, hellosct1, ani-sha, ankushduacodes]
 last_updated_by: rebloor
-date: 2023-06-02
+date: 2026-10-18
 ---
 
 <!-- Page Hero Banner -->
@@ -211,9 +211,13 @@ To get started, add the plug-in to your `webpack.config.js`.
 
 ### WebExtension browser API Polyfill
 
-When creating extensions you want to work in Firefox and Chrome, this library enables you to use the Firefox Promise-based APIs and have them run on Google Chrome with few, if any, changes.
+When creating extensions you want to work in Firefox and Chrome, this library enables you to use the Firefox promise-based APIs and have them run on Google Chrome with few, if any, changes.
 
-To get started, install using npm and load the library into the contexts where browser APIs are accessed.
+However, starting with Chrome 148, Chrome supports the `browser` namespace, except in extensions that include a DevTools page. That limitation was removed in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)), and the `browser` namespace became available to all Chrome extensions.
+
+This means that all major browsers use the `browser` namespace and return promises for asynchronous functions. This polyfill is a no-op in Chrome 148 and later.
+
+If you want to enable your extension for Chrome 147 or earlier, get started by installing with npm and loading the library in the contexts where browser APIs are accessed.
 
 [Get started](https://github.com/mozilla/webextension-polyfill/#installation)
 
@@ -261,7 +265,7 @@ To get started, install using npm and load the library into the contexts where b
 
 This Firefox page enables you to manually install add-ons into Firefox for testing and to kickoff debugging, using the [Addon Developer Tools](#addon_debugging_window), for any browser extension installed in Firefox.
 
-![The about debugging page](/assets/img/documentation/develop/about-debugging.png)
+![The about:debugging page in Firefox Nova, showing a temporary extension](/assets/img/documentation/develop/about-debugging.png)
 
 To get started, type `about:debugging` in the Firefox address bar.
 
@@ -293,14 +297,14 @@ To get started, type `about:debugging` in the Firefox address bar.
 
 Debug your web extensions with a version of the standard Firefox developer tools. With the developer tools, you get access to a [page inspector](https://developer.mozilla.org/docs/Tools/Page_Inspector), [console](https://developer.mozilla.org/docs/Tools/Browser_Console), [debugger](https://developer.mozilla.org/docs/Tools/Debugger), [network monitor](https://developer.mozilla.org/docs/Tools/Network_Monitor), [style editor](https://developer.mozilla.org/docs/Tools/Style_Editor), [storage inspector](https://developer.mozilla.org/docs/Tools/Storage_Inspector), and [accessibility inspector](https://developer.mozilla.org/docs/Tools/Accessibility_inspector).
 
-![Developer tools for addon debugging](/assets/img/documentation/develop/Addon_Debugging_Window.png)
+![An extension's toolbox in Firefox Nova, showing its background script in the Debugger](/assets/img/documentation/develop/Addon_Debugging_Window.png)
 
 To get started, open `about:debugging` and click inspect next to the extension you want to debug.
 
 {% endcapture %}
 {% capture aside %}
 
-##### Use during:
+##### Use during:e
 
 - Debugging
 
