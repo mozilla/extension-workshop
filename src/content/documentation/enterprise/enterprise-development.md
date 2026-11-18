@@ -31,7 +31,7 @@ As an extension developer, you may want to customize your add-on via policy or m
 
 ## Data collection disclosure and consent for enterprise extensions
 
-If your extension is installed in an enterprise via the `force_installed` or `normal_installed` options in the [ExtensionSettings enterprise policy](https://firefox-admin-docs.mozilla.org/reference/policies/extensionsettings/), you must still implement the disclosure and consent experience in the add-on.
+If you do **not** submit your extension to AMO as an [enterprise add-on](/documentation/publish/add-on-policies-for-enterprise/#definition-of-an-enterprise-add-on) and it is installed in an enterprise via the `force_installed` or `normal_installed` options in the [ExtensionSettings enterprise policy](https://firefox-admin-docs.mozilla.org/reference/policies/extensionsettings/), you must still implement the disclosure and consent experience in the add-on.
 You can set a value via the [3rdparty enterprise policy](https://firefox-admin-docs.mozilla.org/reference/policies/3rdparty/) and read it with `storage.managed` in the add-on to determine if consent is granted. You must display the disclosure and consent experience if the value is not set in `storage.managed`.
 
 {% endcapture %}

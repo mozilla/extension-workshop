@@ -19,7 +19,7 @@ contributors:
     kmaglione,
   ]
 last_updated_by: awagner
-date: 2026-10-20
+date: 2026-12-01
 ---
 
 <!-- Page Hero Banner -->
@@ -28,10 +28,6 @@ date: 2026-10-20
 
 # Firefox Add-on Distribution Agreement
 
-::: note
-Mozilla is updating Firefox Add-on Distribution Agreement, becoming effective Dec 1, 2026.
-[Preview the updated agreement](/documentation/publish/firefox-add-on-distribution-agreement-preview-2026-12).
-:::
 
 {% endcapture %}
 {% include modules/page-hero.liquid,
@@ -44,7 +40,7 @@ Mozilla is updating Firefox Add-on Distribution Agreement, becoming effective De
 
 {% capture content_with_toc %}
 
-Effective December 1, 2021
+Effective December 1, 2026
 
 ### 1. Introduction
 
@@ -64,6 +60,7 @@ This Firefox Add-on Distribution Agreement ("Agreement") governs Your distributi
 - “Mozilla Certificate” means a Mozilla issued certificate to digitally sign an Add-on for use with Firefox.
 - “Signed Add-on” means an Add-on that has been issued a Mozilla Certificate.
 - “Self-distributed Add-on” means Add-ons that are distributed to End-Users via means other than AMO.
+- “Enterprise Add-on” means an Add-on that self-declares its enterprise status via the specific manifest key `browser_specific_settings: { gecko: { admin_install_only: true } }`.
 - “You” means the person or entity entering this Agreement for the purpose of distributing a Firefox Add-on.
 
 {% endcapture %}
@@ -111,26 +108,32 @@ Our [Websites, Communications and Cookies Privacy Notice](https://www.mozilla.or
 
 {% capture content %}
 
-### 4. Distribution, certificates, & review process
+### 4. Distribution, certificates, & Policies and Review
 
 #### (a) Distribution Options
 
 - _Listed Add-ons_: You can request Your Add-on to be listed and distributed on AMO. AMO is a popular site with billions of Add-on downloads. End-Users can search titles, navigate categories, or view promoted, featured, popular, or top rated Add-ons. End-Users can also rate Add-ons and leave comments.
 - _Self-distributed Add-ons_: Add-ons that are distributed by a website or method outside of AMO. Common examples are Add-ons that are distributed from the developer website, when an Add-on isn’t intended for the public or is bundled with another Add-on. For example, some Add-ons are created by a company for employees; created for research purposes by a limited group; or are in development or testing phase and not yet suitable for a general audience.
+- _Enterprise Add-ons_: Add-ons that are distributed via enterprise policies only.
 
 #### (b) Mozilla Certificates
 
 All Add-ons must be signed using a Mozilla Certificate, which is a digital signature that enables the Add-on to be used with Firefox. Mozilla Certificates are incorporated by Mozilla into Your Add-on (this process is also referred to as “signing an Add-on”).
 
-Signed Listed Add-ons are automatically distributed by Mozilla on AMO. Links to Signed Self-distributed Add-ons will be provided to You for distribution.
+Signed Listed Add-ons are automatically distributed by Mozilla on AMO. Links to Signed Self-distributed and Enterprise Add-ons will be provided to You for distribution.
 
-#### (c) Review Process
+#### (c) Policies and Review
 
-All Add-ons, regardless of type or distribution channel, must meet certain review criteria, which are described in our [Review Policies](/documentation/publish/add-on-policies/). Mozilla may at any time monitor, test or review Listed and Self-distributed Add-ons for compliance with this Agreement and the [Review Policies](/documentation/publish/add-on-policies/). The inclusion of an Add-on on AMO or issuance of a Mozilla Certificate is at Mozilla’s sole discretion.
+All Add-ons, regardless of type or distribution channel, must meet certain review criteria:
+
+* [Policies for Listed and Self-distributed Add-ons](/documentation/publish/add-on-policies/)
+* [Policies for Enterprise Add-ons](/documentation/publish/add-on-policies-for-enterprise/)
+
+Mozilla may at any time monitor, test or review Add-ons for compliance with this Agreement and the respective policies. The inclusion of an Add-on on AMO or issuance of a Mozilla Certificate is at Mozilla’s sole discretion.
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-  id: "distribution-certificates-and-review-process"
+  id: "distribution-certificates-and-policies-and-review"
   content: content
 %}
 
@@ -145,7 +148,7 @@ You represent and warrant that:
 
 **(a) Relationship with Mozilla.** You will provide accurate information and updates to Mozilla during registration and any communications with Mozilla in connection with Your Add-ons. The descriptions and other data You provide about the Add-on are true to the best of Your knowledge. Unless You and Mozilla have a written agreement stating otherwise, Your Add-on will not imply in any way that it is produced, sponsored or endorsed by Mozilla.
 
-**(b) Relationship with End-Users.** As between You and Mozilla, You are solely responsible for Your Add-ons and the relationship between You and Your End-Users. You will provide accurate information and updates to Your End-Users about Your Add-ons, including disclosure of all security permissions and End-User data necessary for the Add-on to function. You are solely responsible for providing reasonable technical support to End-Users and You will make appropriate support contact information available.
+**(b) Relationship with End-Users.** As between You and Mozilla, You are solely responsible for Your Add-ons and the relationship between You and Your End-Users. You will provide accurate information and updates to Your End-Users about Your Add-ons, including disclosure of all security permissions and End-User data necessary for the Add-on to function, as required by the applicable Add-on policies. You are solely responsible for providing reasonable technical support to End-Users and You will make appropriate support contact information available.
 
 **(c) Intellectual Property Rights.** You have and will maintain all necessary copyright, trademark, patent or other proprietary or legal rights to post, display, perform, use, reproduce, distribute and transmit Your Add-on, worldwide, as well as the rights to authorize others (including Mozilla) to do the same.
 
@@ -187,11 +190,11 @@ Between Mozilla and You, each party shall own all right, title and interest, inc
 You may cease distribution of Your Add-ons at any time by removing your Add-on from AMO. You agree that ceasing maintenance or distribution of Add-ons does not necessarily remove Your Add-on from End-User machines, hardware, or other devices, or from any part of AMO where Add-ons are stored on behalf of End-Users (if any).
 
 **(b) Removal from Distribution by Mozilla.**
-Mozilla reserves the right (though not the obligation) to, in our sole discretion, remove or revoke access to any Listed or Self-distributed Add-ons as well as AMO accounts. This applies, but is not limited to, Add-ons and AMO accounts that, in our reasonable opinion, violate this Agreement or the law, any applicable Mozilla policy, or is in any way harmful or objectionable. In addition, we may at any time remove Your Add-on from AMO; blocklist an Add-on; delete your AMO account; flag, filter, modify related materials (including but not limited to descriptions, screenshots, or metadata); reclassify the Add-on; or take other corrective action.
+Mozilla reserves the right (though not the obligation) to, in our sole discretion, remove or revoke access to any Add-ons as well as AMO accounts. This applies, but is not limited to, Add-ons and AMO accounts that, in our reasonable opinion, violate this Agreement or the law, any applicable Mozilla policy, or is in any way harmful or objectionable. In addition, we may at any time remove Your Add-on from AMO; blocklist an Add-on; delete your AMO account; flag, filter, modify related materials (including but not limited to descriptions, screenshots, or metadata); reclassify the Add-on; or take other corrective action.
 
-For example, a Listed Add-on or AMO account may be removed in response to abuse reports from End-Users, in response to a Take-Down Request, or if it comes to Mozilla’s attention that the Add-on or AMO account violates our Conditions of Use. A Self-distributed Add-on may be blocklisted or the Mozilla Certificate revoked if it comes to Mozilla’s attention that it violates the Security Criteria described in our [Review Policies](/documentation/publish/add-on-policies/).
+For example, a Listed Add-on or AMO account may be removed in response to abuse reports from End-Users, in response to a Take-Down Request, or if it comes to Mozilla’s attention that the Add-on or AMO account violates our Conditions of Use. A Self-distributed Add-on may be blocklisted or the Mozilla Certificate revoked if it comes to Mozilla’s attention that it violates the Security Criteria described in the applicable Add-on Policies.
 
-This includes a policy to terminate and ban developers we consider to be repeat infringers. If we determine that You have repeatedly violated this Agreement or the [Review Policies](/documentation/publish/add-on-policies/), we may terminate Your AMO account and its Add-ons as well as any other AMO accounts and Add-ons you own or control. This includes the removal, revocation, and/or corrective action described above. We may also prohibit You from creating any new AMO accounts or Add-ons.
+This includes a policy to terminate and ban developers we consider to be repeat infringers. If we determine that You have repeatedly violated this Agreement or the applicable Add-on Policies, we may terminate Your AMO account and its Add-ons as well as any other AMO accounts and Add-ons you own or control. This includes the removal, revocation, and/or corrective action described above. We may also prohibit You from creating any new AMO accounts or Add-ons.
 
 In addition, we may at any time suspend or terminate this Agreement with You if we are no longer going to support the products and services related to Firefox Add-ons or issue Mozilla Certificates.
 
@@ -248,7 +251,7 @@ If any third party brings a claim against Mozilla related to Your use of AMO or 
 
 {% endcapture %}
 {% include modules/one-column.liquid,
-  id: "release-idemnification"
+  id: "release-indemnification"
   content: content
 %}
 
@@ -263,7 +266,7 @@ If any third party brings a claim against Mozilla related to Your use of AMO or 
 
 **(b) Severability; No Waiver.** If any court of law, having the jurisdiction to decide on this matter, rules that any provision of this Agreement are invalid, then that provision will be removed from this Agreement without affecting the rest of the Agreement. The remaining provisions of this Agreement will continue to be valid and enforceable. You agree that if Mozilla does not exercise or enforce any legal right or remedy which is contained in this Agreement (or which Mozilla has the benefit of under any applicable law), this will not be taken to be a formal waiver of Mozilla's rights and that those rights or remedies will still be available to Mozilla.
 
-Entire Agreement. This Agreement constitutes the whole legal agreement between You and Mozilla for distribution of Add-ons, and completely supersedes any other related agreements between You and Mozilla unless You have a separately negotiated and signed agreement in connection with a specific Add-on ("Custom Agreement"), in which case the Custom Agreement controls. Hyperlinked documents in this Agreement, including for example, [Review Policies](/documentation/publish/add-on-policies/), are incorporated herein by reference.
+Entire Agreement. This Agreement constitutes the whole legal agreement between You and Mozilla for distribution of Add-ons, and completely supersedes any other related agreements between You and Mozilla unless You have a separately negotiated and signed agreement in connection with a specific Add-on ("Custom Agreement"), in which case the Custom Agreement controls. Hyperlinked documents in this Agreement, including for example, Add-on Policies, are incorporated herein by reference.
 
 **(c) Termination.** To terminate this Agreement You must provide Mozilla with 30 days prior written notice of such termination. Sections 8-11 of this Agreement shall survive termination.
 
