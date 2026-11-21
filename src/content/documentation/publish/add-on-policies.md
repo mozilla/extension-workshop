@@ -18,7 +18,7 @@ contributors:
     bacharakis,
   ]
 last_updated_by: awagner
-date: 2026-10-20
+date: 2026-12-01
 ---
 
 <!-- Page Hero Banner -->
@@ -27,15 +27,11 @@ date: 2026-10-20
 
 # Add-on Policies
 
-::: note
-Mozilla is updating Add-on Policies on Dec 1, 2026.
-* Preview [Policies for Listed and Self-distributed Add-ons](/documentation/publish/add-on-policies-preview-2026-12).
-* Preview [Policies for Enterprise Add-ons](/documentation/publish/add-on-policies-for-enterprise-preview-2026-12).
-:::
 
-Add-ons extend the core capabilities of Firefox, enabling users to modify and personalize their web experience. A healthy ecosystem, built on trust, is vital for developers to be successful and users to feel safe making Firefox their own. For these reasons, Mozilla requires all add-ons to comply with the following policies. These policies are not intended to serve as legal advice: depending on where you are located, additional requirements may apply.
+Add-ons extend the core capabilities of Firefox, enabling users to modify and personalize their web experience. A healthy ecosystem, built on trust, is vital for developers to be successful and users to feel safe making Firefox their own. For these reasons, Mozilla requires Listed and Self-distributed Add-ons to comply with the following policies. These policies are not intended to serve as legal advice: depending on where you are located, additional requirements may apply.
 
-**All add-ons are subject to these policies, regardless of how they are distributed.**
+**All Listed and Self-distributed Add-ons are subject to these policies.**
+**All Enterprise Add-ons are subject to the [policies for Enterprise Add-ons](/documentation/publish/add-on-policies-for-enterprise/).**
 
 When an add-on is given human review or otherwise assessed by Mozilla, these policies act as guiding principles for those reviews. Add-ons that do not comply with these policies may be rejected or disabled by Mozilla.
 
@@ -86,16 +82,16 @@ Any “unexpected” feature(s) must adhere to all of the following requirements
 
 ## 2. Content
 
-Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Guidelines](https://www.mozilla.org/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “\<Add-on name\> for Firefox”.
+1. Add-ons are subject to Mozilla’s [Acceptable Use Policy](https://www.mozilla.org/about/legal/acceptable-use/).
+2. Add-ons and their content must conform to the laws of the United States. (Add-ons that violate or have content that violates the law in other jurisdictions may also be removed or have access limited.)
+3. Add-ons that make use of Mozilla trademarks must comply with the [Mozilla Trademark Guidelines](https://www.mozilla.org/foundation/trademarks/policy/). If the add-on uses “Firefox” in its name, the naming standard the add-on is expected to follow is “\<Add-on name\> for Firefox”.
 
 In addition, add-ons listed on addons.mozilla.org must adhere to the following policies:
 
-1. All add-ons submitted for listing on addons.mozilla.org are subject to Mozilla’s [Acceptable Use Policy](https://www.mozilla.org/about/legal/acceptable-use/).
-2. Listings must disclose when payment is required to enable any add-on functionality.
-3. Add-ons and their content must conform to the laws of the United States. (Add-ons that violate or have content that violates the law in other jurisdictions may also be removed or have access limited.)
-4. If the add-on is a fork of another add-on, the name must clearly distinguish it from the original and provide a significant difference in functionality and/or code.
-5. Add-ons with the sole purpose of promoting, installing, loading or launching an outside website, application or add-on are not permitted.
-6. Themes that feature low-quality, stretched, or blank images, as well as those themes in which the header image is misaligned, are not permitted. Duplicate themes are not permitted.
+1. Listings must disclose when payment is required to enable any add-on functionality.
+2. If the add-on is a fork of another add-on, the name must clearly distinguish it from the original and provide a significant difference in functionality and/or code.
+3. Add-ons with the sole purpose of promoting, installing, loading or launching an outside website, application or add-on are not permitted.
+4. Themes that feature low-quality, stretched, or blank images, as well as those themes in which the header image is misaligned, are not permitted. Duplicate themes are not permitted.
 
 {% endcapture %}
 {% include modules/one-column.liquid,

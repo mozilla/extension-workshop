@@ -1,8 +1,8 @@
 ---
 layout: sidebar
-title: Add-on Policies for Enterprise Add-ons Preview (Dec 1, 2026)
+title: Add-on Policies for Enterprise Add-ons
 description: The Add-on Policies for Enterprise Add-ons. Ensure your extension complies with all the requirements.
-permalink: /documentation/publish/add-on-policies-for-enterprise-preview-2026-12/
+permalink: /documentation/publish/add-on-policies-for-enterprise/
 topic: Publish
 tags: [add-ons, review, policies, enterprise]
 contributors:
@@ -10,7 +10,7 @@ contributors:
     awagner,
   ]
 last_updated_by: awagner
-date: 2026-10-20
+date: 2026-12-01
 ---
 
 <!-- Page Hero Banner -->
@@ -19,14 +19,10 @@ date: 2026-10-20
 
 # Add-on Policies for Enterprise Add-ons
 
-::: note
-This is a preview of the Add-on Policies for Enterprise Add-ons, becoming effective Dec 1, 2026.
-:::
-
 Add-ons extend the core capabilities of Firefox, enabling users to modify and personalize their web experience. A healthy ecosystem, built on trust, is vital for developers to be successful and users to feel safe making Firefox their own. For these reasons, Mozilla requires Enterprise Add-ons to comply with the following policies. These policies are not intended to serve as legal advice: depending on where you are located, additional requirements may apply.
 
 **All Enterprise Add-ons are subject to these policies.**
-**All Listed and Self-distributed Add-ons are subject to [policies for those distribution channels](/documentation/publish/add-on-policies-preview-2026-12/).**
+**All Listed and Self-distributed Add-ons are subject to [policies for those distribution channels](/documentation/publish/add-on-policies/).**
 
 When an add-on is given human review or otherwise assessed by Mozilla, these policies act as guiding principles for those reviews. Add-ons that do not comply with these policies may be rejected or disabled by Mozilla.
 
