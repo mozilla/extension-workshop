@@ -10,6 +10,7 @@ contributors:
     Jamesllllllllll,
     Sheppy,
     TimWitzdam,
+    aaronanish-t,
     andrewtruongmoz,
     ankushduacodes,
     arai,
@@ -27,8 +28,8 @@ contributors:
     wbamberg,
     willdurand
   ]
-last_updated_by: inan-hira
-date: 2025-09-25
+last_updated_by: aaronanish-t
+date: 2026-10-26
 ---
 
 <!-- Page Hero Banner -->
@@ -371,7 +372,16 @@ When you have confirmed that your extension works as expected, you can publish i
 
 #### Create your metadata file
 
-Metadata is required for the first version of an extension listed on AMO. This metadata can include any of the properties of the [addons.mozilla.org add-on API Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#create). However, the`"categories"` and `"summary"` properties must be provided.
+Metadata is required for the first version of an extension listed on AMO. This metadata can include any of the properties of the [addons.mozilla.org add-on API Create request JSON object](https://mozilla.github.io/addons-server/topics/api/addons.html#create). It must include:
+
+- `"categories"`: the categories to list the extension in, for each application it supports. See the [list of category slugs](https://mozilla.github.io/addons-server/topics/api/categories.html#category-list).
+- a license for the version, as either:
+  - `"version": { "license": "<slug>" }`, using a slug from the [list of extension licenses](https://mozilla.github.io/addons-server/topics/api/licenses.html#license-list-extension), such as `"MPL-2.0"`, or
+  - `"version": { "custom_license": { "name": { "en-US": "…" }, "text": { "en-US": "…" } } }`, for a license that isn't in the list.
+
+  Provide `"license"` or `"custom_license"`, not both.
+
+The `"name"` and `"summary"` properties are optional. If they aren't provided, the values of `"name"` and `"description"` in the extension's manifest.json file are used.
 
 For example:
 
